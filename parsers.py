@@ -10,7 +10,7 @@ from logzero import logger as log
 class Language:
     """Base class for finding comments in programming languages."""
 
-    __slots__ = ["src_file_string", "src_file_path"]
+    __slots__ = ["src_file_string", "src_file_path", "loc", "lo_comment"]
 
     def __init__(self, src_file_string: Optional[str] = None):
         self.src_file_string = src_file_string
@@ -35,6 +35,7 @@ class Language:
             if not match("^[\s]*$", line):
                 loc += 1
         log.info(f"LoC: {loc}")
+        self.loc = loc
         return loc
 
     def load_src_file(self, file_path: str, file_encoding: str = "utf-8"):
@@ -51,9 +52,14 @@ class Language:
 class Python(Language):
     """Python language comment parser class."""
 
-    __slots__ = []
+    __slots__ = ["hash_mark_comments"]
 
-    class HashMarks:  # TODO
+
+    def __init__(self):
+        super().__init__()
+        self.hash_mark_comments = []
+
+    class HashMark:
         """Hash mark comment instance."""
 
         __slots__ = ["line_number", "comment_string", "line_string"]
@@ -67,6 +73,15 @@ class Python(Language):
             self.line_number = line_number
             self.comment_string = comment_string.strip()
             self.line_string = line_string
+
+        def __str__(self):
+            return (
+                f"<HashMark("
+                f"line_number={self.line_number}; "
+                f'comment_string="{self.comment_string}"; '
+                f'line_string="{self.line_string}";'
+                f")>"
+            )
 
     class TripleQuotes:  # TODO
         """Tripe quotes (single/double) docstring instance."""
@@ -131,5 +146,9 @@ class Python(Language):
         for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
             if t_type is tokenize.COMMENT:
                 lo_comment += 1
+                self.hash_mark_comments.append(
+                    self.HashMark(t_xy_start[0], t_string, line)
+                )
         log.info(f"Lines of comment: {lo_comment}")
+        self.lo_comment = lo_comment
         return lo_comment
