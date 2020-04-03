@@ -7,7 +7,7 @@ from typing import Optional
 from logzero import logger as log
 
 
-class Language:
+class LanguageParser:
     """Base class for finding comments in programming languages."""
 
     __slots__ = ["src_file_string", "src_file_path", "loc", "lo_comment"]
@@ -49,7 +49,7 @@ class Language:
         log.info(f"Loaded source file ({file_path})")
 
 
-class Python(Language):
+class PythonParser(LanguageParser):
     """Python language comment parser class."""
 
     __slots__ = ["hash_mark_comments"]

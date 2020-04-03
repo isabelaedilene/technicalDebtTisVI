@@ -3,7 +3,7 @@ from unittest import main, TestCase
 
 from logzero import logger as log
 
-from parsers import Python
+from parsers import PythonParser
 
 
 class TestPythonParser(TestCase):
@@ -14,27 +14,27 @@ class TestPythonParser(TestCase):
         self.assertEqual(self.cwd, getcwd())
 
     def test_check_loaded_string_exception(self):
-        py = Python()
+        py = PythonParser()
         with self.assertRaises(UnboundLocalError):
             py.check_loaded_string()
 
     def test_load_src_file(self):
-        py = Python()
+        py = PythonParser()
         py.load_src_file(self.src_file)
         self.assertEqual(self.src_file, py.src_file_path)
 
     def test_check_loaded_string(self):
-        py = Python()
+        py = PythonParser()
         py.load_src_file(self.src_file)
         self.assertEqual(True, py.check_loaded_string())
 
     def test_get_loc(self):
-        py = Python()
+        py = PythonParser()
         py.load_src_file(self.src_file)
         self.assertEqual(128, py.get_loc())
 
     def test_get_lo_comments(self):
-        py = Python()
+        py = PythonParser()
         py.load_src_file(self.src_file)
         self.assertEqual(2, py.get_lo_comment())
 
