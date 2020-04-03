@@ -1,3 +1,5 @@
+import tokenize
+from io import BytesIO
 from os.path import exists
 from re import match
 from typing import Optional
@@ -6,15 +8,17 @@ from logzero import logger as log
 
 
 class Language:
-    """Base class for programming languages."""
-    __slots__ = ["src_str"]
+    """Base class for finding comments in programming languages."""
 
-    def __init__(self):
-        self.src_str: Optional[str] = None
+    __slots__ = ["src_file_string", "src_file_path"]
 
-    def check_loaded_file(self) -> bool:
+    def __init__(self, src_file_string: Optional[str] = None):
+        self.src_file_string = src_file_string
+        self.src_file_path = None
+
+    def check_loaded_string(self) -> bool:
         """Checks if source file is already loaded before executing methods."""
-        if self.src_str == None or not self.src_str is str:
+        if self.src_file_string == None or not type(self.src_file_string) is str:
             log.error(
                 f"Source file was not loaded yet. "
                 f"Load it using load_src_file() method."
@@ -25,10 +29,10 @@ class Language:
 
     def get_loc(self) -> int:
         """Return LoC for current source file."""
-        self.check_loaded_file()
-        loc: int = 0
-        for line in self.src_str.splitlines():
-            if not match("^\s*$", line):
+        self.check_loaded_string()
+        loc = 0
+        for line in self.src_file_string.splitlines():
+            if not match("^[\s]*$", line):
                 loc += 1
         log.info(f"LoC: {loc}")
         return loc
@@ -39,43 +43,93 @@ class Language:
             log.error(f"Source file not found at provided path ({file_path})")
             raise FileNotFoundError
         with open(file_path, "r", encoding=file_encoding) as src_file:
-            self.src_str = src_file.read()
-        log.debug(f"Loaded source file ({file_path})")
+            self.src_file_string = src_file.read()
+        self.src_file_path = file_path
+        log.info(f"Loaded source file ({file_path})")
 
 
 class Python(Language):
-    """Python language parser class."""
+    """Python language comment parser class."""
+
     __slots__ = []
 
-    class TripleQuotes:
-        """Instantiate an object to identify and isolate triple quotes comments."""
-        __slots__ = ["start_line", "end_line", "start_column", "end_column"]
-        def __init__(self, start_line: Optional[int] = None):
-            self.start_line: Optional[int] = start_line
-            self.end_line: Optional[int] = None
-            self.start_column: Optional[int] = None
-            self.end_column: Optional[int] = None
+    class HashMarks:  # TODO
+        """Hash mark comment instance."""
+
+        __slots__ = ["line_number", "comment_string", "line_string"]
+
+        def __init__(
+                self,
+                line_number: int,
+                comment_string: str,
+                line_string: str,
+        ):
+            self.line_number = line_number
+            self.comment_string = comment_string.strip()
+            self.line_string = line_string
+
+    class TripleQuotes:  # TODO
+        """Tripe quotes (single/double) docstring instance."""
+
+        __slots__ = [
+            "start_line",
+            "end_line",
+            "start_column",
+            "end_column",
+            "type",
+            "string",
+        ]
+
+        def __init__(
+            self,
+            start_line: Optional[int] = None,
+            end_line: Optional[int] = None,
+            start_column: Optional[int] = None,
+            end_column: Optional[int] = None,
+            quote_type: Optional[str] = None,
+            string: Optional[str] = None,
+        ):
+            self.start_line = start_line
+            self.end_line = end_line
+            self.start_column = start_column
+            self.end_column = end_column
+            self.type = quote_type
+            self.string = string
 
         def set_start_line(self, start_line: int):
-            self.start_line: int = start_line
+            self.start_line = start_line
 
         def set_end_line(self, end_line: int):
-            self.end_line: int = end_line
+            self.end_line = end_line
 
         def set_start_column(self, start_column: int):
-            self.start_column: int = start_column
+            self.start_column = start_column
 
         def set_end_column(self, end_column: int):
-            self.end_column: int = end_column
+            self.end_column = end_column
 
-    def find_hash_mark_comments(self):
-        """Find all hash mark comments."""
-        self.check_loaded_file()
-        comment_list = []
-        for i, line in enumerate(self.src_str.splitlines()):
-            if "#" in line:
-                log.debug(f"Found # on line #{i}: {line}")
-                comment_list.append((i, line))
-                if i - 1 >= 0:
-                    pass
+    def find_docstring_comments(self):  # TODO
+        """Find docstring comments."""
+        self.check_loaded_string()
+        docstring_comment_list = []
+        tokenized = tokenize.tokenize(
+            BytesIO(self.src_file_string.encode()).readline
+        )
+        for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
+            if t_type is tokenize.STRING:
+                tmp_token = tokenize.tokenize(
+                    BytesIO(line.encode()).readline
+                )
 
+    def get_lo_comment(self) -> int:
+        """Return lines of comment for current source file."""
+        self.check_loaded_string()
+        lo_comment = 0
+        tokenized = tokenize.tokenize(
+            BytesIO(self.src_file_string.encode()).readline
+        )
+        for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
+            if t_type is tokenize.COMMENT:
+                lo_comment += 1
+        log.info(f"Lines of comment: {lo_comment}")
+        return lo_comment
