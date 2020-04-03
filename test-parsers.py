@@ -31,7 +31,7 @@ class TestPythonParser(TestCase):
     def test_get_loc(self):
         py = Python()
         py.load_src_file(self.src_file)
-        self.assertEqual(112, py.get_loc())
+        self.assertEqual(128, py.get_loc())
 
     def test_get_lo_comments(self):
         py = Python()
