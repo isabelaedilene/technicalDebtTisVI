@@ -1,19 +1,26 @@
+from csv import writer
 from getopt import getopt, GetoptError
+from logging import DEBUG, INFO, WARNING
 from os import walk
 from os.path import basename
 from sys import argv, exit
 from typing import List, Optional
 
+from logzero import setup_logger
+
 from parsers import PythonParser
+
+log = setup_logger(name="project-parser", level=INFO)
 
 usage = (
     f"Syntax:\n"
     f"\n{basename(__file__)} -f <file_path>"
     f"\nOR"
-    f"\n{basename(__file__)} -p <project_root_path>"
+    f"\n{basename(__file__)} -p <project_root_path> [-c <0|1>]"
     f"\n\nArguments:"
     f"\n\t-f  --file=\t\tPath to file"
     f"\n\t-p  --project=\t\tPath to project's root"
+    f"\n\t-c  --csv=\t\t\t0=False/1=True To save analysis to CSV file (default=0)"
 )
 
 
@@ -57,30 +64,56 @@ class Python(Project):
                         if file_.endswith(".py"):
                             self.py_files_list.append(f"{path}/{file_}")
 
+    def export_csv(self):
+        if not self.tree:
+            log.error('Please setup project root using self.set_project_root("path")')
+            return
+        elif self.py_files_list == []:
+            log.error(
+                f"Did not find any Python files in this project ({self.project_root})"
+            )
+            return
+        csv_name = "comments.csv"
+        for file_path in self.py_files_list:
+            py = PythonParser(file_path)
+            py.get_loc()
+            py.get_lo_comment()
+            with open(f"{self.project_root}/{csv_name}", "w") as c:
+                csv = writer(c)
+                csv.writerow(("file path", "line", "comment"))
+                for com in py.hash_mark_comments:
+                    com_tup = com.tuple()
+                    line = com_tup[0]
+                    comment = com_tup[1]
+                    csv.writerow((file_path, line, comment))
+        return csv_name
+
+
 
 def analyze_file(file_path: str):
-    py = PythonParser(file_path)
+    py_file = PythonParser(file_path)
     print(f"File: {file_path}")
-    print(f"LoC:      {py.get_loc()}")
-    print(f"Comments: {py.get_lo_comment()}")
-    if py.lo_comment > 0:
+    print(f"LoC:      {py_file.get_loc()}")
+    print(f"Comments: {py_file.get_lo_comment()}")
+    if py_file.lo_comment > 0:
         print(f"Comments found:")
-        [print(comment.tuple()) for comment in py.hash_mark_comments]
+        [print(comment.tuple()) for comment in py_file.hash_mark_comments]
 
 
 def analyze_project(project_path: str):
-    py = Python(project_path)
+    py_project = Python(project_path)
     print(f"Project analysis:")
-    [analyze_file(f) for f in py.py_files_list]
+    [analyze_file(f) for f in py_project.py_files_list]
 
 
 
 def main(argv):
     file_path = None
     project_path = None
+    csvfy = False
     # Parsing arguments
     try:
-        opts, args = getopt(argv, "hp:f:", ["help", "project=", "file="])
+        opts, args = getopt(argv, "hf:p:c:", ["help", "file=", "project=", "csv="])
     except GetoptError:
         print(usage)
         exit(3)
@@ -89,14 +122,24 @@ def main(argv):
             if opt in ("-h", "--help"):
                 print(usage)
                 exit(3)
-            elif opt in ("-p", "--project"):
-                project_path = arg
             elif opt in ("-f", "--file"):
                 file_path = arg
+            elif opt in ("-p", "--project"):
+                project_path = arg
+            elif opt in ("-c", "--csv"):
+                csvfy = arg
     if file_path:
         analyze_file(file_path)
     elif project_path:
-        analyze_project(project_path)
+        if not csvfy:
+            analyze_project(project_path)
+        else:
+            py_project = Python(project_path)
+            csv_file = py_project.export_csv()
+            if csv_file:
+                log.info(
+                    f"Exported CSV file to {py_project.project_root}/{csv_file}"
+                )
     else:
         print(usage)
         exit(3)
