@@ -1,10 +1,13 @@
 import tokenize
 from io import BytesIO
+from logging import DEBUG, INFO, WARNING
 from os.path import exists
 from re import match
 from typing import Optional
 
-from logzero import logger as log
+from logzero import setup_logger
+
+log = setup_logger(level=WARNING)
 
 
 class LanguageParser:
@@ -12,9 +15,14 @@ class LanguageParser:
 
     __slots__ = ["src_file_string", "src_file_path", "loc", "lo_comment"]
 
-    def __init__(self, src_file_string: Optional[str] = None):
+    def __init__(
+            self,
+            src_file_path: Optional[str] = None,
+            src_file_string: Optional[str] = None,
+    ):
         self.src_file_string = src_file_string
-        self.src_file_path = None
+        if src_file_path:
+            self.load_src_file(src_file_path)
 
     def check_loaded_string(self) -> bool:
         """Checks if source file is already loaded before executing methods."""
@@ -55,8 +63,15 @@ class PythonParser(LanguageParser):
     __slots__ = ["hash_mark_comments"]
 
 
-    def __init__(self):
-        super().__init__()
+    def __init__(
+            self,
+            src_file_path: Optional[str] = None,
+            src_file_string: Optional[str] = None,
+    ):
+        super().__init__(
+            src_file_path=src_file_path,
+            src_file_string=src_file_string
+        )
         self.hash_mark_comments = []
 
     class HashMark:
@@ -74,13 +89,23 @@ class PythonParser(LanguageParser):
             self.comment_string = comment_string.strip()
             self.line_string = line_string
 
-        def __str__(self):
+        def tuple(self):
+            return (self.line_number, self.comment_string, self.line_string)
+
+        def __repr__(self):
             return (
                 f"<HashMark("
                 f"line_number={self.line_number}; "
                 f'comment_string="{self.comment_string}"; '
                 f'line_string="{self.line_string}";'
                 f")>"
+            )
+
+        def __str__(self):
+            return (
+                f"line number: {self.line_number} "
+                f"| comment string: {self.comment_string.strip()} "
+                f"| line string: {self.line_string.strip()}"
             )
 
     class TripleQuotes:  # TODO
