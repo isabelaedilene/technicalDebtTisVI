@@ -86,7 +86,7 @@ class PythonParser(LanguageParser):
                 line_string: str,
         ):
             self.line_number = line_number
-            self.comment_string = comment_string.strip()
+            self.comment_string = comment_string.strip("#").strip()
             self.line_string = line_string
 
         def tuple(self):
