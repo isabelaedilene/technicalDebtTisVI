@@ -76,7 +76,7 @@ class Python(Project):
         csv_name = "comments.csv"
         with open(f"{self.project_root}/{csv_name}", "w") as c:
             csv = writer(c)
-            csv.writerow(("file path", "line", "comment"))
+            csv.writerow(("file path", "line #", "comment", "satd"))
         for file_path in self.py_files_list:
             py = PythonParser(file_path)
             py.get_loc()
