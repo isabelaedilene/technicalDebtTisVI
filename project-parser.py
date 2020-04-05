@@ -74,13 +74,15 @@ class Python(Project):
             )
             return
         csv_name = "comments.csv"
+        with open(f"{self.project_root}/{csv_name}", "w") as c:
+            csv = writer(c)
+            csv.writerow(("file path", "line", "comment"))
         for file_path in self.py_files_list:
             py = PythonParser(file_path)
             py.get_loc()
             py.get_lo_comment()
-            with open(f"{self.project_root}/{csv_name}", "w") as c:
+            with open(f"{self.project_root}/{csv_name}", "a") as c:
                 csv = writer(c)
-                csv.writerow(("file path", "line", "comment"))
                 for com in py.hash_mark_comments:
                     com_tup = com.tuple()
                     line = com_tup[0]
