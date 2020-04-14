@@ -16,9 +16,9 @@ class LanguageParser:
     __slots__ = ["src_file_string", "src_file_path", "loc", "lo_comment"]
 
     def __init__(
-            self,
-            src_file_path: Optional[str] = None,
-            src_file_string: Optional[str] = None,
+        self,
+        src_file_path: Optional[str] = None,
+        src_file_string: Optional[str] = None,
     ):
         self.src_file_string = src_file_string
         if src_file_path:
@@ -62,16 +62,12 @@ class PythonParser(LanguageParser):
 
     __slots__ = ["hash_mark_comments"]
 
-
     def __init__(
-            self,
-            src_file_path: Optional[str] = None,
-            src_file_string: Optional[str] = None,
+        self,
+        src_file_path: Optional[str] = None,
+        src_file_string: Optional[str] = None,
     ):
-        super().__init__(
-            src_file_path=src_file_path,
-            src_file_string=src_file_string
-        )
+        super().__init__(src_file_path=src_file_path, src_file_string=src_file_string)
         self.hash_mark_comments = []
 
     class HashMark:
@@ -80,10 +76,7 @@ class PythonParser(LanguageParser):
         __slots__ = ["line_number", "comment_string", "line_string"]
 
         def __init__(
-                self,
-                line_number: int,
-                comment_string: str,
-                line_string: str,
+            self, line_number: int, comment_string: str, line_string: str,
         ):
             self.line_number = line_number
             self.comment_string = comment_string.strip("#").strip()
@@ -152,22 +145,16 @@ class PythonParser(LanguageParser):
         """Find docstring comments."""
         self.check_loaded_string()
         docstring_comment_list = []
-        tokenized = tokenize.tokenize(
-            BytesIO(self.src_file_string.encode()).readline
-        )
+        tokenized = tokenize.tokenize(BytesIO(self.src_file_string.encode()).readline)
         for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
             if t_type is tokenize.STRING:
-                tmp_token = tokenize.tokenize(
-                    BytesIO(line.encode()).readline
-                )
+                tmp_token = tokenize.tokenize(BytesIO(line.encode()).readline)
 
     def get_lo_comment(self) -> int:
         """Return lines of comment for current source file."""
         self.check_loaded_string()
         lo_comment = 0
-        tokenized = tokenize.tokenize(
-            BytesIO(self.src_file_string.encode()).readline
-        )
+        tokenized = tokenize.tokenize(BytesIO(self.src_file_string.encode()).readline)
         for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
             if t_type is tokenize.COMMENT:
                 lo_comment += 1
