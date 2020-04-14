@@ -1,13 +1,10 @@
 import tokenize
 from io import BytesIO
-from logging import DEBUG, INFO, WARNING
 from os.path import exists
 from re import match
 from typing import Optional
 
-from logzero import setup_logger
-
-log = setup_logger(level=WARNING)
+from logzero import logger as log
 
 
 class LanguageParser:
