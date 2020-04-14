@@ -28,16 +28,16 @@ def satd_detector(comment: str) -> bool:
     """Execute system commands using subprocess.Popen()."""
 
     command = (
-        f'[[ ! $('
-        f'printf "{comment}" | java -jar satd_detector.jar test 2>/dev/null'
-        f') =~ .*Not.* ]] && exit 2 || exit 1'
+        f"[[ ! $("
+        f"echo '{comment}' | java -jar satd_detector.jar test 2>/dev/null"
+        f") =~ .*Not.* ]] && exit 2 || exit 1"
     )
     exit_code = system(command)
     if exit_code == 512:
-        log.info("SATD")
+        log.debug(f"SATD\t | {comment}")
         return True
     elif exit_code == 256:
-        log.info("NOT")
+        log.debug(f"Not SATD\t | {comment}")
         return False
     else:
         log.error(f"IDK! exit={exit_code}")
@@ -60,10 +60,12 @@ class Project:
         self.project_root = root_path
         self.tree = walk(self.project_root)
 
-    def is_not_excluded_dir(self, dir_path: str, excluded_list: Optional[List[str]] = None):
+    def is_not_excluded_dir(
+        self, dir_path: str, excluded_list: Optional[List[str]] = None
+    ):
         if excluded_list == None:
             excluded_list = self.excluded_dirs
-        if dir_path[len(self.project_root)+1:].split("/")[0] in excluded_list:
+        if dir_path[len(self.project_root) + 1 :].split("/")[0] in excluded_list:
             return False
         return True
 
@@ -107,9 +109,9 @@ class Python(Project):
                     com_tup = com.tuple()
                     line = com_tup[0]
                     comment = com_tup[1]
-                    csv.writerow((file_path, line, comment))
+                    satd = satd_detector(comment)
+                    csv.writerow((file_path, line, comment, satd))
         return csv_name
-
 
 
 def analyze_file(file_path: str):
@@ -126,7 +128,6 @@ def analyze_project(project_path: str):
     py_project = Python(project_path)
     print(f"Project analysis:")
     [analyze_file(f) for f in py_project.py_files_list]
-
 
 
 def main(argv):
@@ -159,9 +160,7 @@ def main(argv):
             py_project = Python(project_path)
             csv_file = py_project.export_csv()
             if csv_file:
-                log.info(
-                    f"Exported CSV file to {py_project.project_root}/{csv_file}"
-                )
+                log.info(f"Exported CSV file to {py_project.project_root}/{csv_file}")
     else:
         print(usage)
         exit(3)
