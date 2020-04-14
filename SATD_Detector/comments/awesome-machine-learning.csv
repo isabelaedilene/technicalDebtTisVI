@@ -1,0 +1,4 @@
+file path,line #,comment,satd
+awesome-machine-learning/scripts/pull_R_packages.py,1,!/usr/bin/python,
+awesome-machine-learning/scripts/pull_R_packages.py,29,"print(""* [%s](%s) - %s"" % (package_name,package_link,",
+awesome-machine-learning/scripts/pull_R_packages.py,30,package_description)),
