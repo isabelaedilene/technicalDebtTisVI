@@ -56,16 +56,15 @@ for i, repo in enumerate(zip(df["name"], df["url"])):
     log.info(f"#{i}\t | Project: {repo_name}")
     project_path = clone_repository(i, repo_name, repo_url, repos_path)
     get_comments(i, repo_name)
-df.close()
 log.info("Done cloning repositories and indexing comments")
 
 # Detecting SATDs in comments
 with open(f"{getcwd()}/ALL_comments.csv", "w") as f:
     csv_w = writer(f)
     csv_w.writerow(("project name", "file path", "line #", "comment", "satd"))
-    for csv in listdir(comment_path):
-        log.info(f"SATD detection on {csv}")
-        df = pd.read_csv(csv)
+    for i, csv in enumerate(listdir(comment_path)):
+        log.info(f"#{i}\t | SATD detection on project: {csv.strip('.csv')}")
+        df = pd.read_csv(f"{comment_path}/{csv}")
         for comment in df["comment"]:
             satd = satd_detector(comment)
             csv_w.writerow(
