@@ -51,7 +51,7 @@ class LanguageParser:
         with open(file_path, "r", encoding=file_encoding) as src_file:
             self.src_file_string = src_file.read()
         self.src_file_path = file_path
-        log.info(f"Loaded source file ({file_path})")
+        log.debug(f"Loaded source file ({file_path})")
 
 
 class PythonParser(LanguageParser):
