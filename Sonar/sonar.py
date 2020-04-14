@@ -28,6 +28,11 @@ def requestSonarDelete(projectKey):
     )
 
 
+with open("analiseSonar.csv", "w") as csv_file:
+    csv = writer(csv_file)
+    csv.writerow(("project name", "code smells", "sqale index", "sqale debt ratio", "file path"))
+
+
 for projectKey in projects:
     print(f"Analisando {projectKey}...")
 
