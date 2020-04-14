@@ -1,7 +1,7 @@
 from csv import writer
 from getopt import getopt, GetoptError
 from logging import DEBUG, INFO, WARNING
-from os import walk
+from os import system, walk
 from os.path import basename
 from sys import argv, exit
 from typing import List, Optional
@@ -10,7 +10,7 @@ from logzero import setup_logger
 
 from parsers import PythonParser
 
-log = setup_logger(name="project-parser", level=INFO)
+log = setup_logger(name="project-parser", level=DEBUG)
 
 usage = (
     f"Syntax:\n"
@@ -22,6 +22,26 @@ usage = (
     f"\n\t-p  --project=\t\tPath to project's root"
     f"\n\t-c  --csv=\t\t\t0=False/1=True To save analysis to CSV file (default=0)"
 )
+
+
+def satd_detector(comment: str) -> bool:
+    """Execute system commands using subprocess.Popen()."""
+
+    command = (
+        f'[[ ! $('
+        f'printf "{comment}" | java -jar satd_detector.jar test 2>/dev/null'
+        f') =~ .*Not.* ]] && exit 2 || exit 1'
+    )
+    exit_code = system(command)
+    if exit_code == 512:
+        log.info("SATD")
+        return True
+    elif exit_code == 256:
+        log.info("NOT")
+        return False
+    else:
+        log.error(f"IDK! exit={exit_code}")
+        raise RuntimeError
 
 
 class Project:
