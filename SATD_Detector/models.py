@@ -19,6 +19,7 @@ class Project:
         self.project_root = project_root
         if self.project_root:
             self.tree = walk(self.project_root)
+            self.project_name = self.project_root.split("/").pop()
 
     def set_project_root(self, root_path: str):
         self.project_root = root_path
@@ -67,18 +68,18 @@ class Python(Project):
         with open(file_path, "w") as c:
             csv = writer(c)
             csv.writerow(("file path", "line #", "comment", "satd"))
-        for file_path in self.py_files_list:
-            py = PythonParser(file_path)
-            py.get_loc()
-            py.get_lo_comment()
-            with open(file_path, "a") as c:
-                csv = writer(c)
+            for file_ in self.py_files_list:
+                py = PythonParser(file_)
+                py.get_loc()
+                py.get_lo_comment()
                 for com in py.hash_mark_comments:
                     com_tup = com.tuple()
                     line = com_tup[0]
                     comment = com_tup[1]
                     # satd = satd_detector(comment)
-                    csv.writerow((file_path, line, comment, None))
+                    short_path = self.project_name
+                    short_path += file_.split(self.project_name)[1]
+                    csv.writerow((short_path, line, comment, None))
                     # csv.writerow((file_path, line, comment, satd))
 
         return file_path
