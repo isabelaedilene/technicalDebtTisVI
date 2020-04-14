@@ -168,7 +168,12 @@ class PythonParser(LanguageParser):
         if not self.check_loaded_string():
             return -1
         lo_comment = 0
-        tokenized = tokenize.tokenize(BytesIO(self.src_file_string.encode()).readline)
+        try:
+            tokenized = tokenize.tokenize(BytesIO(self.src_file_string.encode()).readline)
+        except SyntaxError as e:
+            encoding = sys_cmd(["file", "-bi", self.src_file_path]).split("charset=")[1].strip()
+            log.warning(f"Encoding LookupError. Found charset={encoding} | {e}")
+            return -1
         for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
             if t_type is tokenize.COMMENT:
                 lo_comment += 1
