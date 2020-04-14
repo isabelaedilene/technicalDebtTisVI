@@ -4,6 +4,7 @@ from shutil import rmtree
 from socket import gethostname
 from subprocess import Popen, PIPE
 from sys import exit
+from typing import List
 
 from git import Git
 from git.exc import GitCommandError
@@ -16,7 +17,7 @@ def notify_owner(message: str):
         system(f"st '{message}'")
 
 
-def sys_cmd(cmd: list) -> str:
+def sys_cmd(cmd: List[str]) -> str:
     """Execute system commands using subprocess.Popen()."""
 
     out, err = Popen(cmd, stdout=PIPE, stderr=PIPE).communicate()
