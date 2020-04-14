@@ -6,6 +6,8 @@ from typing import Optional
 
 from logzero import logger as log
 
+from tools import sys_cmd
+
 
 class LanguageParser:
     """Base class for finding comments in programming languages."""
@@ -29,12 +31,15 @@ class LanguageParser:
                 f"Load it using load_src_file() method."
             )
             raise UnboundLocalError
+        elif self.src_file_string == "__character_encoding_error__":
+            return False
         else:
             return True
 
     def get_loc(self) -> int:
         """Return LoC for current source file."""
-        self.check_loaded_string()
+        if not self.check_loaded_string():
+            return -1
         loc = 0
         for line in self.src_file_string.splitlines():
             if not match("^[\s]*$", line):
@@ -48,10 +53,21 @@ class LanguageParser:
         if not exists(file_path):
             log.error(f"Source file not found at provided path ({file_path})")
             raise FileNotFoundError
-        with open(file_path, "r", encoding=file_encoding) as src_file:
-            self.src_file_string = src_file.read()
-        self.src_file_path = file_path
-        log.debug(f"Loaded source file ({file_path})")
+        log.debug(f"Loading source file ({file_path})")
+        try:
+            with open(file_path, "r", encoding=file_encoding) as src_file:
+                self.src_file_string = src_file.read()
+        except UnicodeDecodeError as e:
+            log.warning(
+                f"Failed to load due to different character encoding. | {e}"
+            )
+            encoding = sys_cmd(["file", "-bi", file_path]).split("charset=")[1].strip()
+            log.debug(f"Trying to load ({file_path}) using coding: {encoding}")
+            with open(file_path, "r", encoding=encoding) as src_file:
+                self.src_file_string = src_file.read()
+        finally:
+            self.src_file_path = file_path
+
 
 
 class PythonParser(LanguageParser):
@@ -149,7 +165,8 @@ class PythonParser(LanguageParser):
 
     def get_lo_comment(self) -> int:
         """Return lines of comment for current source file."""
-        self.check_loaded_string()
+        if not self.check_loaded_string():
+            return -1
         lo_comment = 0
         tokenized = tokenize.tokenize(BytesIO(self.src_file_string.encode()).readline)
         for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
