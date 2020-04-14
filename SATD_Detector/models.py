@@ -1,3 +1,13 @@
+from csv import writer
+from os import walk
+from typing import List, Optional
+
+from logzero import logger as log
+
+from parsers import PythonParser
+from tools import satd_detector
+
+
 class Project:
     """Base class for project directory tree mapping."""
 
@@ -66,3 +76,5 @@ class Python(Project):
                     comment = com_tup[1]
                     satd = satd_detector(comment)
                     csv.writerow((file_path, line, comment, satd))
+
+        return file_path
