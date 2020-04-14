@@ -11,7 +11,7 @@ from tools import satd_detector
 class Project:
     """Base class for project directory tree mapping."""
 
-    __slots__ = ["project_root", "tree"]
+    __slots__ = ["project_root", "tree", "project_name"]
 
     excluded_dirs = [".idea", ".git", "venv", "__pycache__"]
 
@@ -23,6 +23,7 @@ class Project:
     def set_project_root(self, root_path: str):
         self.project_root = root_path
         self.tree = walk(self.project_root)
+        self.project_name = self.project_root.split("/").pop()
 
     def is_not_excluded_dir(
         self, dir_path: str, excluded_list: Optional[List[str]] = None
