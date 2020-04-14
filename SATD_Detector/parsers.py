@@ -39,7 +39,7 @@ class LanguageParser:
         for line in self.src_file_string.splitlines():
             if not match("^[\s]*$", line):
                 loc += 1
-        log.info(f"LoC: {loc}")
+        log.debug(f"LoC: {loc}")
         self.loc = loc
         return loc
 
@@ -158,6 +158,6 @@ class PythonParser(LanguageParser):
                 self.hash_mark_comments.append(
                     self.HashMark(t_xy_start[0], t_string, line)
                 )
-        log.info(f"Lines of comment: {lo_comment}")
+        log.debug(f"Lines of comment: {lo_comment}")
         self.lo_comment = lo_comment
         return lo_comment
