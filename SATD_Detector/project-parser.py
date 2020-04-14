@@ -86,7 +86,9 @@ class Python(Project):
                         if file_.endswith(".py"):
                             self.py_files_list.append(f"{path}/{file_}")
 
-    def export_csv(self):
+    def export_csv(self, file_path: Optional[str] = None):
+        if file_path == None:
+            file_path = f"{self.project_root}/comments.csv"
         if not self.tree:
             log.error('Please setup project root using self.set_project_root("path")')
             return
@@ -95,15 +97,14 @@ class Python(Project):
                 f"Did not find any Python files in this project ({self.project_root})"
             )
             return
-        csv_name = "comments.csv"
-        with open(f"{self.project_root}/{csv_name}", "w") as c:
+        with open(file_path, "w") as c:
             csv = writer(c)
             csv.writerow(("file path", "line #", "comment", "satd"))
         for file_path in self.py_files_list:
             py = PythonParser(file_path)
             py.get_loc()
             py.get_lo_comment()
-            with open(f"{self.project_root}/{csv_name}", "a") as c:
+            with open(file_path, "a") as c:
                 csv = writer(c)
                 for com in py.hash_mark_comments:
                     com_tup = com.tuple()
@@ -111,7 +112,6 @@ class Python(Project):
                     comment = com_tup[1]
                     satd = satd_detector(comment)
                     csv.writerow((file_path, line, comment, satd))
-        return csv_name
 
 
 def analyze_file(file_path: str):
