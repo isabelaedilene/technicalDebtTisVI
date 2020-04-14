@@ -69,8 +69,8 @@ class Python(Project):
             csv.writerow(("file path", "line #", "comment", "satd"))
         for file_path in self.py_files_list:
             py = PythonParser(file_path)
-            # py.get_loc()
-            # py.get_lo_comment()
+            py.get_loc()
+            py.get_lo_comment()
             with open(file_path, "a") as c:
                 csv = writer(c)
                 for com in py.hash_mark_comments:
