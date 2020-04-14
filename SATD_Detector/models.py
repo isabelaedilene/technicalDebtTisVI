@@ -53,6 +53,8 @@ class Python(Project):
     def export_csv(self, file_path: Optional[str] = None):
         if file_path == None:
             file_path = f"{self.project_root}/comments.csv"
+        elif not file_path.endswith(".csv"):
+            file_path += ".csv"
         if not self.tree:
             log.error('Please setup project root using self.set_project_root("path")')
             return
@@ -66,15 +68,16 @@ class Python(Project):
             csv.writerow(("file path", "line #", "comment", "satd"))
         for file_path in self.py_files_list:
             py = PythonParser(file_path)
-            py.get_loc()
-            py.get_lo_comment()
+            # py.get_loc()
+            # py.get_lo_comment()
             with open(file_path, "a") as c:
                 csv = writer(c)
                 for com in py.hash_mark_comments:
                     com_tup = com.tuple()
                     line = com_tup[0]
                     comment = com_tup[1]
-                    satd = satd_detector(comment)
-                    csv.writerow((file_path, line, comment, satd))
+                    # satd = satd_detector(comment)
+                    csv.writerow((file_path, line, comment, None))
+                    # csv.writerow((file_path, line, comment, satd))
 
         return file_path
