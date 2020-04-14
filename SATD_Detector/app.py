@@ -49,6 +49,9 @@ def get_comments(index: int, name: str, repo_path: str = repos_path):
 df = pd.read_csv("python_repositories.csv")
 for i, repo in enumerate(zip(df["name"], df["url"])):
     repo_name = repo[0]
+    if f"{repo_name}.csv" in listdir(comment_path):
+        log.debug(f"Skipping {repo_name}. Already cloned and indexed.")
+        continue
     repo_url = repo[1]
     log.info(f"#{i}\t | Project: {repo_name}")
     project_path = clone_repository(i, repo_name, repo_url, repos_path)
