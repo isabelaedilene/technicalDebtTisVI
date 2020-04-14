@@ -61,12 +61,10 @@ def clone_repository(index: int, name: str, url: str, repos_path: str) -> str:
             raise GitCommandError
         elif " already exists and is not an empty directory." in str(e):
             log.warning(f"Repository directory already exists and it's not empty.")
-            if remove_directory(f"{repos_path}/{name}"):
+            if remove_directory(f"{repos_path}/{name}", "n"):
                 Git(repos_path).clone(f"{url.replace('https', 'git')}.git")
             else:
-                log.error("OSError | Exiting...")
-                notify_owner(f"OSError @ {repos_path}/{name} #{index}")
-                raise OSError
+                log.warning(f"Repository directory not errased. Using it as it is.")
         else:
             log.exception(f"Unindentified error! | {e}")
             notify_owner(f"#{index} | Unindentified error! | {e}")
