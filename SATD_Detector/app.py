@@ -59,20 +59,27 @@ for i, repo in enumerate(zip(df["name"], df["url"])):
 log.info("Done cloning repositories and indexing comments")
 
 # Detecting SATDs in comments
-with open(f"{getcwd()}/ALL_comments.csv", "w") as f:
-    csv_w = writer(f)
+with open(f"{getcwd()}/ALL_comments.csv", "w") as final_csv:
+    csv_w = writer(final_csv)
     csv_w.writerow(("project name", "file path", "line #", "comment", "satd"))
     for i, csv in enumerate(listdir(comment_path)):
         log.info(f"#{i}\t | SATD detection on project: {csv.strip('.csv')}")
         df = pd.read_csv(f"{comment_path}/{csv}")
-        for comment in df["comment"]:
-            satd = satd_detector(comment)
+        if df["comment"].to_string(header = False, index = False) == "Series([], )":
+            log.warning("No comments registered! Skipping...")
+            continue
+        with open(f"{comment_path}/{csv.replace('.csv', '.txt')}", "w") as cf:
+            cf.write(df["comment"].to_string(header = False, index = False))
+        satd_detector(f"{comment_path}/{csv.replace('.csv', '.txt')}")
+        with open(f"{comment_path}/{csv.replace('.csv', '.txt.result')}", "r") as cf:
+            satd_result = cf.read().splitlines()
+        for i, satd in enumerate(satd_result):
             csv_w.writerow(
                 (
                     csv.strip(".csv"),
-                    df["file path"],
-                    df["line #"],
-                    df["comment"],
+                    df["file path"][i],
+                    df["line #"][i],
+                    df["comment"][i],
                     satd
                 )
             )

@@ -78,7 +78,8 @@ class Python(Project):
                     comment = com_tup[1]
                     # satd = satd_detector(comment)
                     short_path = self.project_name
-                    short_path += file_.split(self.project_name)[1]
+                    split_point = file_.count(self.project_name)
+                    short_path += file_.split(self.project_name)[split_point]
                     csv.writerow((short_path, line, comment, None))
                     # csv.writerow((file_path, line, comment, satd))
 

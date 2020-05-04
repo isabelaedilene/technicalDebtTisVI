@@ -79,21 +79,11 @@ def clone_repository(index: int, name: str, url: str, repos_path: str) -> str:
     return f"{repos_path}/{name}"
 
 
-def satd_detector(comment: str) -> bool:
-    """Execute system commands using subprocess.Popen()."""
+def satd_detector(comment_file: str) -> int:
+    """Call satd_detector.jar to analyze comments in provided text file."""
 
     command = (
-        f"[[ ! $("
-        f"echo '{comment}' | java -jar satd_detector.jar test 2>/dev/null"
-        f") =~ .*Not.* ]] && exit 2 || exit 1"
+        f"java -jar satd_detector/satd_detector.jar test -comment_file {comment_file} 2> /dev/null"
     )
     exit_code = system(command)
-    if exit_code == 512:
-        log.debug(f"SATD\t | {comment}")
-        return True
-    elif exit_code == 256:
-        log.debug(f"Not SATD\t | {comment}")
-        return False
-    else:
-        log.error(f"IDK! exit={exit_code}")
-        raise RuntimeError
+    return exit_code
