@@ -4,3 +4,4 @@ venv/
 .DS_Store
 *.csv
 *.log
+!/SATD_Detector/ALL_comments.csv
