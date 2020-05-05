@@ -8,14 +8,14 @@ from csv import writer
 from json import dumps
 from requests.auth import HTTPBasicAuth
 
-BASE_PATH = "C:\\Users\\Isabela Edilene\\technicalDebtTisVI\\Sonar\\Repositorios"
+BASE_PATH = "C:\\Users\\Isabela Edilene\\technicalDebtTisVI\\Sonar"
 
 def createSonarProject(name, url): 
-	print(f"# Clonando o repositório {name}...")
+	print(f"INFO: Clonando o repositório {name}")
 	git.Git(BASE_PATH).clone(url)
 
-	print(f"# Criando projeto no SonarQube...")
-	os.chdir(f"{BASE_PATH}\\{name}") 
+	print(f"INFO: Criando projeto {name} no Sonar")
+	os.chdir(f"{BASE_PATH}\\Repositorio\\{name}") 
 	subprocess.call(f'sonar-scanner.bat -D"sonar.projectKey={name}" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=dc9559a7c6abfe40fcf7fc218bd80729d4f12ed6" -D"sonar.exclusions=**/*.java"', shell= True)
 
 def requestSonarComponents(projectKey, page):
@@ -36,7 +36,7 @@ def requestSonarDelete(projectKey):
 	            params = {f'project' : {projectKey}})
 
 def analyzeSonarComponents(projectKey):
-	print(f"# ANALISANDO O PROJETO {projectKey}...")
+	print(f"INFO: Analisando projeto {projectKey}")
 
 	# First Request
 	response = requestSonarComponents(projectKey, 1)
@@ -51,18 +51,25 @@ def analyzeSonarComponents(projectKey):
 			response = requestSonarComponents(projectKey, i)
 			allResults += response["components"]
 
-	with open('C:\\Users\\Isabela Edilene\\technicalDebtTisVI\\Sonar\\analiseSonar.csv','a') as csv_file:
-		for component in allResults:
-			if component["measures"][0]["value"] != "0" and (".py" in component["path"]):
-				csv = writer(csv_file)  
-				csv.writerow([projectKey, component["measures"][0]["value"], component["measures"][1]["value"], component["measures"][2]["value"], component["path"] ])
+	if(allResults.length() == 0):
+		log(f"O projeto {projectKey} não retornou resultados. \n")
+	else:
+		with open(f'{BASE_PATH}\\analiseSonar.csv','a') as csv_file:
+			for component in allResults:
+				if component["measures"][0]["value"] != "0" and (".py" in component["path"]):
+					csv = writer(csv_file)  
+					csv.writerow([projectKey, f'{projectKey}/{component["path"]}'])
 
 def deleteFolder(name):
-	print("# Apagando a pasta do computador...")
-	shutil.rmtree(f"{BASE_PATH}\\{name}", ignore_errors=True)
+	print("INFO: Apagando a pasta do computador")
+	shutil.rmtree(f"{BASE_PATH}\\Repositorio\\{name}", ignore_errors=True)
+
+def log(msg):
+	with open(f"{BASE_PATH}\\log.txt", "a", encoding="utf-8") as arquivo:
+		arquivo.write(msg)
 
 def sonarAnalysis():
-	with open("C:\\Users\\Isabela Edilene\\technicalDebtTisVI\\Sonar\\repositoriosPython.csv", "r", encoding="utf-8") as f:
+	with open(f"{BASE_PATH}\\repositoriosPython.csv", "r", encoding="utf-8") as f:
 		comments = f.read()
 		for line in comments.splitlines():
 			repositorio = line.replace('"', '').split(',')
@@ -75,9 +82,7 @@ def sonarAnalysis():
 				analyzeSonarComponents(name)
 				requestSonarDelete(name)	
 			except Exception as e: 
-				with open("C:\\Users\\Isabela Edilene\\technicalDebtTisVI\\Sonar\\log.csv", "a", encoding="utf-8") as csv_file:
-					csv = writer(csv_file)  
-					csv.writerow(f"Não foi possível analisar o projeto {name}, {url}. ERRO: {e}")
+				log(f"Projeto: {name} - {url} - ERRO: {e} \n")
 
 sonarAnalysis()
 
