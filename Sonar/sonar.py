@@ -12,10 +12,10 @@ BASE_PATH = "C:\\Users\\Isabela Edilene\\technicalDebtTisVI\\Sonar"
 
 def createSonarProject(name, url): 
 	print(f"INFO: Clonando o repositório {name}")
-	git.Git(BASE_PATH).clone(url)
+	git.Git(f"{BASE_PATH}\\Reositorios").clone(url)
 
 	print(f"INFO: Criando projeto {name} no Sonar")
-	os.chdir(f"{BASE_PATH}\\Repositorio\\{name}") 
+	os.chdir(f"{BASE_PATH}\\Repositorios\\{name}") 
 	subprocess.call(f'sonar-scanner.bat -D"sonar.projectKey={name}" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=dc9559a7c6abfe40fcf7fc218bd80729d4f12ed6" -D"sonar.exclusions=**/*.java"', shell= True)
 
 def requestSonarComponents(projectKey, page):
@@ -51,7 +51,7 @@ def analyzeSonarComponents(projectKey):
 			response = requestSonarComponents(projectKey, i)
 			allResults += response["components"]
 
-	if(allResults.length() == 0):
+	if(len(allResults) == 0):
 		log(f"O projeto {projectKey} não retornou resultados. \n")
 	else:
 		with open(f'{BASE_PATH}\\analiseSonar.csv','a') as csv_file:
@@ -62,7 +62,7 @@ def analyzeSonarComponents(projectKey):
 
 def deleteFolder(name):
 	print("INFO: Apagando a pasta do computador")
-	shutil.rmtree(f"{BASE_PATH}\\Repositorio\\{name}", ignore_errors=True)
+	shutil.rmtree(f"{BASE_PATH}\\Repositorios\\{name}", ignore_errors=True)
 
 def log(msg):
 	with open(f"{BASE_PATH}\\log.txt", "a", encoding="utf-8") as arquivo:
