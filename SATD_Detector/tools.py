@@ -70,9 +70,11 @@ def clone_repository(index: int, name: str, url: str, repos_path: str) -> str:
             notify_owner(f"#{index} | Unindentified error! | {e}")
             raise RuntimeError
 
-    tdelta = str(dt.now() - dt_clone).split('.')[0]
+    tdelta = str(dt.now() - dt_clone).split(".")[0]
     size = sys_cmd(["du", "-hs", f"{repos_path}/{name}"])
-    log_msg = f"#{index} | Cloned: {name} || Size: {size.split()[0]} | Timedelta: {tdelta}"
+    log_msg = (
+        f"#{index} | Cloned: {name} || Size: {size.split()[0]} | Timedelta: {tdelta}"
+    )
     log.info(log_msg.replace("||", "|"))
     notify_owner(log_msg.replace(" || ", "\n"))
 
@@ -82,8 +84,6 @@ def clone_repository(index: int, name: str, url: str, repos_path: str) -> str:
 def satd_detector(comment_file: str) -> int:
     """Call satd_detector.jar to analyze comments in provided text file."""
 
-    command = (
-        f"java -jar satd_detector/satd_detector.jar test -comment_file {comment_file} 2> /dev/null"
-    )
+    command = f"java -jar satd_detector/satd_detector.jar test -comment_file {comment_file} 2> /dev/null"
     exit_code = system(command)
     return exit_code

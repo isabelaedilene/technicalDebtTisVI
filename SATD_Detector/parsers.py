@@ -58,16 +58,13 @@ class LanguageParser:
             with open(file_path, "r", encoding=file_encoding) as src_file:
                 self.src_file_string = src_file.read()
         except UnicodeDecodeError as e:
-            log.warning(
-                f"Failed to load due to different character encoding. | {e}"
-            )
+            log.warning(f"Failed to load due to different character encoding. | {e}")
             encoding = sys_cmd(["file", "-bi", file_path]).split("charset=")[1].strip()
             log.debug(f"Trying to load ({file_path}) using coding: {encoding}")
             with open(file_path, "r", encoding=encoding) as src_file:
                 self.src_file_string = src_file.read()
         finally:
             self.src_file_path = file_path
-
 
 
 class PythonParser(LanguageParser):
@@ -169,9 +166,15 @@ class PythonParser(LanguageParser):
             return -1
         lo_comment = 0
         try:
-            tokenized = tokenize.tokenize(BytesIO(self.src_file_string.encode()).readline)
+            tokenized = tokenize.tokenize(
+                BytesIO(self.src_file_string.encode()).readline
+            )
         except SyntaxError as e:
-            encoding = sys_cmd(["file", "-bi", self.src_file_path]).split("charset=")[1].strip()
+            encoding = (
+                sys_cmd(["file", "-bi", self.src_file_path])
+                .split("charset=")[1]
+                .strip()
+            )
             log.warning(f"Encoding LookupError. Found charset={encoding} | {e}")
             return -1
         for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
