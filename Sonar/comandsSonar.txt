@@ -1,5 +1,0 @@
-****OPTION 1
-sonar-scanner.bat -D"sonar.projectKey={REPLACE-ME!}" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=dc9559a7c6abfe40fcf7fc218bd80729d4f12ed6"
-
-****OPTION 2
-sonar-scanner.bat -D"sonar.projectKey={REPLACE-ME!}" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=dc9559a7c6abfe40fcf7fc218bd80729d4f12ed6" -D"sonar.exclusions=**/*.java"
