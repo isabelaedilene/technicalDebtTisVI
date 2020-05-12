@@ -170,6 +170,9 @@ class PythonParser(LanguageParser):
             tokenized = tokenize.tokenize(
                 BytesIO(self.src_file_string.encode()).readline
             )
+        except IndentationError as e:
+            log.error(f"IndentationError. File may not be a Python code file. | {e}")
+            return -1
         except SyntaxError as e:
             encoding = (
                 sys_cmd(["file", "-bi", self.src_file_path])
@@ -177,9 +180,6 @@ class PythonParser(LanguageParser):
                 .strip()
             )
             log.warning(f"Encoding LookupError. Found charset={encoding} | {e}")
-            return -1
-        except IndentationError as e:
-            log.error(f"IndentationError. File may not be a Python code file. | {e}")
             return -1
         for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
             if t_type is tokenize.COMMENT:
