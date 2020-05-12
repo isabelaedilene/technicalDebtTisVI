@@ -51,8 +51,9 @@ class LanguageParser:
     def load_src_file(self, file_path: str, file_encoding: str = "utf-8"):
         """Loads programming language source file."""
         if not exists(file_path):
-            log.error(f"Source file not found at provided path ({file_path})")
-            raise FileNotFoundError
+            error_msg = f"Source file not found at provided path ({file_path})"
+            log.error(error_msg)
+            raise FileNotFoundError(error_msg)
         log.debug(f"Loading source file ({file_path})")
         try:
             with open(file_path, "r", encoding=file_encoding) as src_file:
@@ -176,6 +177,9 @@ class PythonParser(LanguageParser):
                 .strip()
             )
             log.warning(f"Encoding LookupError. Found charset={encoding} | {e}")
+            return -1
+        except IndentationError as e:
+            log.error(f"IndentationError. File may not be a Python code file. | {e}")
             return -1
         for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
             if t_type is tokenize.COMMENT:
