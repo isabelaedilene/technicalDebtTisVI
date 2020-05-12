@@ -1,5 +1,6 @@
 from csv import writer
 from os import system, walk
+from re import sub
 from typing import List, Optional
 
 from logzero import logger as log
@@ -79,9 +80,9 @@ class Python(Project):
                     com_tup = com.tuple()
                     line = com_tup[0]
                     comment = com_tup[1]
-                    short_path = self.project_name
-                    split_point = file_.count(self.project_name)
-                    short_path += file_.split(self.project_name)[split_point]
+                    short_path = sub(
+                        f"^{self.project_root}", self.project_name, file_
+                    )
                     csv.writerow((short_path, line, comment, None))
 
         return file_path
