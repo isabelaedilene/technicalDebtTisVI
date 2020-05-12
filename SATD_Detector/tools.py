@@ -53,12 +53,14 @@ def clone_repository(index: int, name: str, url: str, repos_path: str) -> str:
             log_msg = f"#{index} | Repository not found!"
             log.error(log_msg)
             notify_owner(log_msg)
-            raise GitCommandError
+            # raise GitCommandError
+            return False
         elif "Please make sure you have the correct access rights" in str(e):
             log_msg = f"#{index} | Repository access is restricted!"
             log.error(log_msg)
             notify_owner(log_msg)
-            raise GitCommandError
+            # raise GitCommandError
+            return False
         elif " already exists and is not an empty directory." in str(e):
             log.warning(f"Repository directory already exists and it's not empty.")
             if remove_directory(f"{repos_path}/{name}", "n"):
