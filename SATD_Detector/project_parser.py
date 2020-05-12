@@ -68,7 +68,7 @@ def main(argv):
             py_project = Python(project_path)
             csv_file = py_project.export_csv()
             if csv_file:
-                log.info(f"Exported CSV file to {py_project.project_root}/{csv_file}")
+                log.info(f"Exported CSV file to {csv_file}")
     else:
         print(usage)
         exit(3)
