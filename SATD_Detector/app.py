@@ -44,10 +44,21 @@ def get_comments(index: int, name: str, repo_path: str = repos_path):
     return True
 
 
-# Cloning repositories and getting its comments
+# Checking CSV type
 df = pd.read_csv("python_repos.csv")
-for i, repo in enumerate(zip(df["name"], df["url"])):
-    repo_name = repo[0]
+try:
+    df["name"]
+except KeyError:
+    field = "nameWithOwner"
+else:
+    field = "name"
+
+# Cloning repositories and getting its comments
+for i, repo in enumerate(zip(df[field], df["url"])):
+    if field == "nameWithOwner":
+        repo_name = repo[0].split("/")[1]
+    else:
+        repo_name = repo[0]
     if f"{repo_name}.csv" in listdir(comment_path):
         log.debug(f"Skipping {repo_name}. Already cloned and indexed.")
         continue
@@ -65,6 +76,8 @@ log.info("Done cloning repositories and indexing comments")
 # Detecting SATDs in comments
 for i, file_ in enumerate(listdir(comment_path)):
     if not file_.endswith(".csv"):
+        continue
+    elif file_.replace("csv", "txt.result") in listdir(comment_path):
         continue
 
     try:
@@ -91,3 +104,4 @@ for i, file_ in enumerate(listdir(comment_path)):
     df.to_csv(f"{comment_path}/{file_}", mode="w", index=False)
 
 log.info("Finished everything.")
+
