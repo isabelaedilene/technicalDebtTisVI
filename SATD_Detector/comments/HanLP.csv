@@ -1,1159 +1,1159 @@
 file path,line #,comment,satd
-HanLP/setup.py,1,-*- coding:utf-8 -*-,
-HanLP/setup.py,2,Author: hankcs,
-HanLP/setup.py,3,Date: 2019-12-28 19:26,
-HanLP/setup.py,40,entry_points={,
-HanLP/setup.py,41,'console_scripts': [,
-HanLP/setup.py,42,"'hanlp=pyhanlp.main:main',",
-HanLP/setup.py,43,"],",
-HanLP/setup.py,44,"},",
-HanLP/hanlp/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/__init__.py,2,Author: hankcs,
-HanLP/hanlp/__init__.py,3,Date: 2019-06-13 18:05,
-HanLP/hanlp/__init__.py,13,prevent exporting _warn_preinit_stderr,
-HanLP/hanlp/version.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/version.py,2,Author: hankcs,
-HanLP/hanlp/version.py,3,Date: 2019-12-28 19:26,
-HanLP/hanlp/transform/tsv.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/transform/tsv.py,2,Author: hankcs,
-HanLP/hanlp/transform/tsv.py,3,Date: 2019-06-13 21:15,
-HanLP/hanlp/transform/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/transform/__init__.py,2,Author: hankcs,
-HanLP/hanlp/transform/__init__.py,3,Date: 2019-12-29 22:24,
-HanLP/hanlp/transform/table.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/transform/table.py,2,Author: hankcs,
-HanLP/hanlp/transform/table.py,3,Date: 2019-11-10 21:00,
-HanLP/hanlp/transform/table.py,59,the second one regardless of t is pair or triple,
-HanLP/hanlp/transform/table.py,65,It's crucial to use tuple instead of list for all the three,
-HanLP/hanlp/transform/text.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/transform/text.py,2,Author: hankcs,
-HanLP/hanlp/transform/text.py,3,Date: 2019-12-04 11:46,
-HanLP/hanlp/transform/txt.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/transform/txt.py,2,Author: hankcs,
-HanLP/hanlp/transform/txt.py,3,Date: 2019-10-24 15:07,
-HanLP/hanlp/transform/txt.py,74,TODO: optimize ngram generation using https://www.tensorflow.org/api_docs/python/tf/strings/ngrams,
-HanLP/hanlp/transform/txt.py,77,"x, y",
-HanLP/hanlp/transform/txt.py,107,single char,
-HanLP/hanlp/transform/txt.py,111,bi chars,
-HanLP/hanlp/transform/txt.py,115,tri chars,
-HanLP/hanlp/transform/txt.py,123,four chars,
-HanLP/hanlp/transform/txt.py,200,allow for [CLS] and [SEP],
-HanLP/hanlp/datasets/glue.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/glue.py,2,Author: hankcs,
-HanLP/hanlp/datasets/glue.py,3,Date: 2019-11-10 11:47,
-HanLP/hanlp/datasets/glue.py,28,_test_sst2(),
-HanLP/hanlp/datasets/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/__init__.py,2,Author: hankcs,
-HanLP/hanlp/datasets/__init__.py,3,Date: 2019-06-13 18:15,
-HanLP/hanlp/datasets/cws/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/cws/__init__.py,2,Author: hankcs,
-HanLP/hanlp/datasets/cws/__init__.py,3,Date: 2019-12-21 15:40,
-HanLP/hanlp/datasets/cws/ctb.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/cws/ctb.py,2,Author: hankcs,
-HanLP/hanlp/datasets/cws/ctb.py,3,Date: 2019-12-28 22:19,
-HanLP/hanlp/datasets/cws/sighan2005/msr.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/cws/sighan2005/msr.py,2,Author: hankcs,
-HanLP/hanlp/datasets/cws/sighan2005/msr.py,3,Date: 2019-12-21 15:42,
-HanLP/hanlp/datasets/cws/sighan2005/pku.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/cws/sighan2005/pku.py,2,Author: hankcs,
-HanLP/hanlp/datasets/cws/sighan2005/pku.py,3,Date: 2019-12-21 15:42,
-HanLP/hanlp/datasets/cws/sighan2005/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/cws/sighan2005/__init__.py,2,Author: hankcs,
-HanLP/hanlp/datasets/cws/sighan2005/__init__.py,3,Date: 2019-12-21 15:42,
-HanLP/hanlp/datasets/parsing/semeval2016.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/parsing/semeval2016.py,2,Author: hankcs,
-HanLP/hanlp/datasets/parsing/semeval2016.py,3,Date: 2019-12-28 00:51,
-HanLP/hanlp/datasets/parsing/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/parsing/__init__.py,2,Author: hankcs,
-HanLP/hanlp/datasets/parsing/__init__.py,3,Date: 2019-12-28 00:51,
-HanLP/hanlp/datasets/parsing/ctb.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/parsing/ctb.py,2,Author: hankcs,
-HanLP/hanlp/datasets/parsing/ctb.py,3,Date: 2019-12-28 18:44,
-HanLP/hanlp/datasets/classification/sentiment.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/classification/sentiment.py,2,Author: hankcs,
-HanLP/hanlp/datasets/classification/sentiment.py,3,Date: 2019-12-30 21:03,
-HanLP/hanlp/datasets/classification/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/classification/__init__.py,2,Author: hankcs,
-HanLP/hanlp/datasets/classification/__init__.py,3,Date: 2019-11-10 11:49,
-HanLP/hanlp/datasets/ner/conll03.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/ner/conll03.py,2,Author: hankcs,
-HanLP/hanlp/datasets/ner/conll03.py,3,Date: 2019-12-06 15:31,
-HanLP/hanlp/datasets/ner/msra.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/ner/msra.py,2,Author: hankcs,
-HanLP/hanlp/datasets/ner/msra.py,3,Date: 2019-12-28 23:13,
-HanLP/hanlp/datasets/ner/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/ner/__init__.py,2,Author: hankcs,
-HanLP/hanlp/datasets/ner/__init__.py,3,Date: 2019-12-06 15:32,
-HanLP/hanlp/datasets/pos/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/pos/__init__.py,2,Author: hankcs,
-HanLP/hanlp/datasets/pos/__init__.py,3,Date: 2019-12-28 22:50,
-HanLP/hanlp/datasets/pos/ctb.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/datasets/pos/ctb.py,2,Author: hankcs,
-HanLP/hanlp/datasets/pos/ctb.py,3,Date: 2019-12-28 22:51,
-HanLP/hanlp/utils/log_util.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/log_util.py,2,Author: hankcs,
-HanLP/hanlp/utils/log_util.py,3,Date: 2019-08-24 22:12,
-HanLP/hanlp/utils/log_util.py,64,shut_up_python_logging(),
-HanLP/hanlp/utils/log_util.py,66,shut up tensorflow,
-HanLP/hanlp/utils/log_util.py,67,set_tf_loglevel(),
-HanLP/hanlp/utils/util.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/util.py,2,Author: hankcs,
-HanLP/hanlp/utils/util.py,3,Date: 2019-10-27 19:09,
-HanLP/hanlp/utils/util.py,54,infer whitespace after field,
-HanLP/hanlp/utils/util.py,102,final json output,
-HanLP/hanlp/utils/util.py,103,accumulation list for sublevel entries,
-HanLP/hanlp/utils/util.py,104,holder for consecutive entries at exact indent level,
-HanLP/hanlp/utils/util.py,108,"found a line indented further than the indent level, so add",
-HanLP/hanlp/utils/util.py,109,it to the sublevel list,
-HanLP/hanlp/utils/util.py,111,the first item in the sublevel will be the pending item,
-HanLP/hanlp/utils/util.py,112,that was the previous line in the json,
-HanLP/hanlp/utils/util.py,120,found a line at the exact indent level *and* we have sublevel,
-HanLP/hanlp/utils/util.py,121,items. This means the sublevel items have come to an end,
-HanLP/hanlp/utils/util.py,126,found a line at the exact indent level but no items indented,
-HanLP/hanlp/utils/util.py,127,"further, so possibly start a new sub-level",
-HanLP/hanlp/utils/util.py,129,"if there is already a pending item, it means that",
-HanLP/hanlp/utils/util.py,130,consecutive entries in the json had the exact same,
-HanLP/hanlp/utils/util.py,131,indentation and that last pending item was not the start,
-HanLP/hanlp/utils/util.py,132,of a new sublevel.,
-HanLP/hanlp/utils/util.py,137,it's possible that an item will be pending but not added to,
-HanLP/hanlp/utils/util.py,138,"the output yet, so make sure it's not forgotten.",
-HanLP/hanlp/utils/tf_util.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/tf_util.py,2,Author: hankcs,
-HanLP/hanlp/utils/tf_util.py,3,Date: 2019-08-27 01:27,
-HanLP/hanlp/utils/tf_util.py,57,Virtual devices must be set before GPUs have been initialized,
-HanLP/hanlp/utils/tf_util.py,58,print(e),
-HanLP/hanlp/utils/tf_util.py,71,"Currently, memory growth needs to be the same across GPUs",
-HanLP/hanlp/utils/tf_util.py,75,Memory growth must be set before GPUs have been initialized,
-HanLP/hanlp/utils/tf_util.py,76,print(e),
-HanLP/hanlp/utils/tf_util.py,106,"if tf_inspect.isclass(arg) and not hasattr(arg, 'get_config'):",
-HanLP/hanlp/utils/tf_util.py,107,raise ValueError(,
-HanLP/hanlp/utils/tf_util.py,108,'Cannot register a class that does not have a get_config() method.'),
-HanLP/hanlp/utils/component_util.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/component_util.py,2,Author: hankcs,
-HanLP/hanlp/utils/component_util.py,3,Date: 2019-12-31 19:24,
-HanLP/hanlp/utils/component_util.py,42,noinspection PyUnresolvedReferences,
-HanLP/hanlp/utils/reflection.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/reflection.py,2,Author: hankcs,
-HanLP/hanlp/utils/reflection.py,3,Date: 2019-12-28 16:41,
-HanLP/hanlp/utils/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/__init__.py,2,Author: hankcs,
-HanLP/hanlp/utils/__init__.py,3,Date: 2019-08-24 22:12,
-HanLP/hanlp/utils/english_tokenizer.py,1,!/usr/bin/env python,
-HanLP/hanlp/utils/english_tokenizer.py,22,"Note that Unicode the category Pd is NOT a good set for valid word-breaking hyphens,",
-HanLP/hanlp/utils/english_tokenizer.py,23,because it contains many dashes that should not be considered part of a word.,
-HanLP/hanlp/utils/english_tokenizer.py,263,splice the sentence terminal off the last word/token if it has any at its borders,
-HanLP/hanlp/utils/english_tokenizer.py,264,only look for the sentence terminal in the last three tokens,
-HanLP/hanlp/utils/english_tokenizer.py,271,"any case of ""..."" or any single char (last == 0)",
-HanLP/hanlp/utils/english_tokenizer.py,272,leave the token as it is,
-HanLP/hanlp/utils/english_tokenizer.py,274,"""stuff.""",
-HanLP/hanlp/utils/english_tokenizer.py,278,""".stuff""",
-HanLP/hanlp/utils/english_tokenizer.py,284,keep splicing off any dangling commas and (semi-) colons,
-HanLP/hanlp/utils/english_tokenizer.py,291,the dangling comma/colon,
-HanLP/hanlp/utils/english_tokenizer.py,298,restart check to avoid index errors,
-HanLP/hanlp/utils/english_tokenizer.py,300,split concat words,
-HanLP/hanlp/utils/english_tokenizer.py,312,split APOSTROPHE,
-HanLP/hanlp/utils/time_util.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/time_util.py,2,Author: hankcs,
-HanLP/hanlp/utils/time_util.py,3,Date: 2019-08-27 00:01,
-HanLP/hanlp/utils/io_util.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/io_util.py,2,Author: hankcs,
-HanLP/hanlp/utils/io_util.py,3,Date: 2019-08-26 15:02,
-HanLP/hanlp/utils/io_util.py,115,This is the fix,
-HanLP/hanlp/utils/io_util.py,241,assert path.endswith('.zip'),
-HanLP/hanlp/utils/io_util.py,251,"only one file, root_of_folder = ''",
-HanLP/hanlp/utils/io_util.py,253,"only one folder, unzip to the same dir",
-HanLP/hanlp/utils/io_util.py,256,assume zip contains more than one files or folders,
-HanLP/hanlp/utils/io_util.py,261,move root to match folder name,
-HanLP/hanlp/utils/io_util.py,306,check if resource is there,
-HanLP/hanlp/utils/io_util.py,309,indicates the folder name has to be polished,
-HanLP/hanlp/utils/io_util.py,329,realpath is where its path after exaction,
-HanLP/hanlp/utils/io_util.py,352,remove the relative path in prefix,
-HanLP/hanlp/utils/io_util.py,363,KB,
-HanLP/hanlp/utils/io_util.py,365,MB,
-HanLP/hanlp/utils/io_util.py,367,GB,
-HanLP/hanlp/utils/io_util.py,457,if len(cells) != 2:,
-HanLP/hanlp/utils/io_util.py,458,print(line),
-HanLP/hanlp/utils/io_util.py,472,try to split the sequence to make it fit into max_seq_length,
-HanLP/hanlp/utils/io_util.py,547,This doesn't play well with windows,
-HanLP/hanlp/utils/io_util.py,556,copy stdout_fd before it is overwritten,
-HanLP/hanlp/utils/io_util.py,557,NOTE: `copied` is inheritable on Windows when duplicating a standard stream,
-HanLP/hanlp/utils/io_util.py,559,flush library buffers that dup2 knows nothing about,
-HanLP/hanlp/utils/io_util.py,561,$ exec >&to,
-HanLP/hanlp/utils/io_util.py,562,filename,
-HanLP/hanlp/utils/io_util.py,564,$ exec > to,
-HanLP/hanlp/utils/io_util.py,566,allow code to be run with the redirected stdout,
-HanLP/hanlp/utils/io_util.py,568,restore stdout to its previous value,
-HanLP/hanlp/utils/io_util.py,569,NOTE: dup2 makes stdout_fd inheritable unconditionally,
-HanLP/hanlp/utils/io_util.py,572,$ exec >&copied,
-HanLP/hanlp/utils/io_util.py,574,This is the best we can do,
-HanLP/hanlp/utils/string_util.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/string_util.py,2,Author: hankcs,
-HanLP/hanlp/utils/string_util.py,3,Date: 2019-08-25 00:19,
-HanLP/hanlp/utils/string_util.py,26,treat every token as punct,
-HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,1,!/usr/bin/env python,
-HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,2,-*- coding: utf-8 -*-,
-HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,11,any encodings that are backward compatible with ascii should work,
-HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,101,"Using binary mode, because some encodings such as ""utf-8"" use variable number of",
-HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,102,bytes to encode different Unicode points.,
-HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,103,"Without using binary mode, we would probably need to understand each encoding more",
-HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,104,and do the seek operations to find the proper boundary before issuing read,
-HanLP/hanlp/utils/file_read_backwards/__init__.py,1,-*- coding: utf-8 -*-,
-HanLP/hanlp/utils/file_read_backwards/__init__.py,3,noqa: F401,
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,1,!/usr/bin/env python,
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,2,-*- coding: utf-8 -*-,
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,9,we only support encodings that's backward compat with ascii,
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,25,set the previously read position to the,
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,52,we have read in entire file and have some unprocessed lines,
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,73,"the case where we have read in entire file and at the ""last"" line",
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,127,"examples: say, our new_lines are potentially ""\r\n"", ""\n"", ""\r""",
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,128,"find a reading point where it is not ""\n"", rewind further if necessary",
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,129,"if we have ""\r\n"" and we read in ""\n"",",
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,130,"the next iteration would treat ""\r"" as a different new line.",
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,131,"Q: why don't I just check if it is b""\n"", but use a function ?",
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,132,"A: so that we can potentially expand this into generic sets of separators, later on.",
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,137,"as we rewind further, let's make sure we read more to compensate",
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,141,take care of special case when we are back to the beginnin of the file,
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,152,replace only 1 instance of newline,
-HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,153,"match longest line first (hence the reverse=True), we want to match ""\r\n"" rather than ""\n"" if we can",
-HanLP/hanlp/utils/lang/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/lang/__init__.py,2,Author: hankcs,
-HanLP/hanlp/utils/lang/__init__.py,3,Date: 2020-01-09 18:46,
-HanLP/hanlp/utils/lang/zh/char_table.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/lang/zh/char_table.py,2,Author: hankcs,
-HanLP/hanlp/utils/lang/zh/char_table.py,3,Date: 2020-01-09 19:07,
-HanLP/hanlp/utils/lang/zh/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/utils/lang/zh/__init__.py,2,Author: hankcs,
-HanLP/hanlp/utils/lang/zh/__init__.py,3,Date: 2020-01-09 18:47,
-HanLP/hanlp/pretrained/classifiers.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/pretrained/classifiers.py,2,Author: hankcs,
-HanLP/hanlp/pretrained/classifiers.py,3,Date: 2020-01-01 03:51,
-HanLP/hanlp/pretrained/dep.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/pretrained/dep.py,2,Author: hankcs,
-HanLP/hanlp/pretrained/dep.py,3,Date: 2019-12-29 02:55,
-HanLP/hanlp/pretrained/word2vec.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/pretrained/word2vec.py,2,Author: hankcs,
-HanLP/hanlp/pretrained/word2vec.py,3,Date: 2019-12-21 18:25,
-HanLP/hanlp/pretrained/rnnlm.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/pretrained/rnnlm.py,2,Author: hankcs,
-HanLP/hanlp/pretrained/rnnlm.py,3,Date: 2019-12-19 03:47,
-HanLP/hanlp/pretrained/glove.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/pretrained/glove.py,2,Author: hankcs,
-HanLP/hanlp/pretrained/glove.py,3,Date: 2019-08-27 20:42,
-HanLP/hanlp/pretrained/cws.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/pretrained/cws.py,2,Author: hankcs,
-HanLP/hanlp/pretrained/cws.py,3,Date: 2019-12-28 21:12,
-HanLP/hanlp/pretrained/cws.py,8,SIGHAN2005_MSR_BERT_BASE = HANLP_URL + 'cws/cws_bert_base_msra_20191230_194627.zip',
-HanLP/hanlp/pretrained/cws.py,10,CTB6_BERT_BASE = HANLP_URL + 'cws/cws_bert_base_ctb6_20191230_185536.zip',
-HanLP/hanlp/pretrained/cws.py,13,Will be filled up during runtime,
-HanLP/hanlp/pretrained/sdp.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/pretrained/sdp.py,2,Author: hankcs,
-HanLP/hanlp/pretrained/sdp.py,3,Date: 2019-12-31 23:54,
-HanLP/hanlp/pretrained/fasttext.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/pretrained/fasttext.py,2,Author: hankcs,
-HanLP/hanlp/pretrained/fasttext.py,3,Date: 2019-12-30 18:57,
-HanLP/hanlp/pretrained/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/pretrained/__init__.py,2,Author: hankcs,
-HanLP/hanlp/pretrained/__init__.py,3,Date: 2019-12-28 19:10,
-HanLP/hanlp/pretrained/__init__.py,14,Will be filled up during runtime,
-HanLP/hanlp/pretrained/ner.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/pretrained/ner.py,2,Author: hankcs,
-HanLP/hanlp/pretrained/ner.py,3,Date: 2019-12-30 20:07,
-HanLP/hanlp/pretrained/pos.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/pretrained/pos.py,2,Author: hankcs,
-HanLP/hanlp/pretrained/pos.py,3,Date: 2019-12-29 01:57,
-HanLP/hanlp/metrics/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/metrics/__init__.py,2,Author: hankcs,
-HanLP/hanlp/metrics/__init__.py,3,Date: 2019-09-14 21:55,
-HanLP/hanlp/metrics/parsing/labeled_f1.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/metrics/parsing/labeled_f1.py,2,Author: hankcs,
-HanLP/hanlp/metrics/parsing/labeled_f1.py,3,Date: 2019-12-27 21:42,
-HanLP/hanlp/metrics/parsing/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/metrics/parsing/__init__.py,2,Author: hankcs,
-HanLP/hanlp/metrics/parsing/__init__.py,3,Date: 2019-12-27 00:48,
-HanLP/hanlp/metrics/parsing/labeled_score.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/metrics/parsing/labeled_score.py,2,Author: hankcs,
-HanLP/hanlp/metrics/parsing/labeled_score.py,3,Date: 2019-12-27 00:49,
-HanLP/hanlp/metrics/chunking/conlleval.py,1,!/usr/bin/env python,
-HanLP/hanlp/metrics/chunking/conlleval.py,3,Python version of the evaluation script from CoNLL'00-,
-HanLP/hanlp/metrics/chunking/conlleval.py,5,Intentional differences:,
-HanLP/hanlp/metrics/chunking/conlleval.py,6,- accept any space as delimiter by default,
-HanLP/hanlp/metrics/chunking/conlleval.py,7,- optional file argument (default STDIN),
-HanLP/hanlp/metrics/chunking/conlleval.py,8,- option to set boundary (-b argument),
-HanLP/hanlp/metrics/chunking/conlleval.py,9,- LaTeX output (-l argument) not supported,
-HanLP/hanlp/metrics/chunking/conlleval.py,10,- raw tags (-r argument) not supported,
-HanLP/hanlp/metrics/chunking/conlleval.py,30,number of correctly identified chunks,
-HanLP/hanlp/metrics/chunking/conlleval.py,31,number of correct chunk tags,
-HanLP/hanlp/metrics/chunking/conlleval.py,32,number of chunks in corpus,
-HanLP/hanlp/metrics/chunking/conlleval.py,33,number of identified chunks,
-HanLP/hanlp/metrics/chunking/conlleval.py,34,token counter (ignores sentence breaks),
-HanLP/hanlp/metrics/chunking/conlleval.py,36,counts by type,
-HanLP/hanlp/metrics/chunking/conlleval.py,46,number of correctly identified chunks,
-HanLP/hanlp/metrics/chunking/conlleval.py,47,number of correct chunk tags,
-HanLP/hanlp/metrics/chunking/conlleval.py,48,number of chunks in corpus,
-HanLP/hanlp/metrics/chunking/conlleval.py,49,number of identified chunks,
-HanLP/hanlp/metrics/chunking/conlleval.py,50,token counter (ignores sentence breaks),
-HanLP/hanlp/metrics/chunking/conlleval.py,120,currently processed chunks is correct until now,
-HanLP/hanlp/metrics/chunking/conlleval.py,121,previous chunk tag in corpus,
-HanLP/hanlp/metrics/chunking/conlleval.py,122,type of previously identified chunk tag,
-HanLP/hanlp/metrics/chunking/conlleval.py,123,previously identified chunk tag,
-HanLP/hanlp/metrics/chunking/conlleval.py,124,type of previous chunk tag in corpus,
-HanLP/hanlp/metrics/chunking/conlleval.py,242,check if a chunk ended between the previous and current word,
-HanLP/hanlp/metrics/chunking/conlleval.py,243,"arguments: previous and current chunk tags, previous and current types",
-HanLP/hanlp/metrics/chunking/conlleval.py,259,check if a chunk started between the previous and current word,
-HanLP/hanlp/metrics/chunking/conlleval.py,260,"arguments: previous and current chunk tags, previous and current types",
-HanLP/hanlp/metrics/chunking/conlleval.py,274,corrected 1998-12-22: these chunks are assumed to have length 1,
-HanLP/hanlp/metrics/chunking/conlleval.py,276,"print(""startOfChunk?"", prevTag, tag, prevType, type)",
-HanLP/hanlp/metrics/chunking/conlleval.py,277,print(chunkStart),
-HanLP/hanlp/metrics/chunking/iobes.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/metrics/chunking/iobes.py,2,Author: hankcs,
-HanLP/hanlp/metrics/chunking/iobes.py,3,Date: 2019-09-14 21:55,
-HanLP/hanlp/metrics/chunking/iobes.py,17,true_tags = list(itertools.chain.from_iterable(true_tags)),
-HanLP/hanlp/metrics/chunking/iobes.py,18,pred_tags = list(itertools.chain.from_iterable(pred_tags)),
-HanLP/hanlp/metrics/chunking/iobes.py,19,"self.state.update_state(true_tags, pred_tags)",
-HanLP/hanlp/metrics/chunking/f1.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/metrics/chunking/f1.py,2,Author: hankcs,
-HanLP/hanlp/metrics/chunking/f1.py,3,Date: 2019-12-29 23:09,
-HanLP/hanlp/metrics/chunking/f1.py,21,"in this case, the model doesn't compute mask but provide a masking index, it's ok to",
-HanLP/hanlp/metrics/chunking/f1.py,47,"If model predicts <pad>, it will fail most metrics. So replace it with a valid one",
-HanLP/hanlp/metrics/chunking/sequence_labeling.py,15,might be Chinese,
-HanLP/hanlp/metrics/chunking/sequence_labeling.py,37,for nested list,
-HanLP/hanlp/metrics/chunking/sequence_labeling.py,365,compute averages,
-HanLP/hanlp/metrics/chunking/bmes.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/metrics/chunking/bmes.py,2,Author: hankcs,
-HanLP/hanlp/metrics/chunking/bmes.py,3,Date: 2019-09-14 21:55,
-HanLP/hanlp/metrics/chunking/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/metrics/chunking/__init__.py,2,Author: hankcs,
-HanLP/hanlp/metrics/chunking/__init__.py,3,Date: 2019-12-21 03:49,
-HanLP/hanlp/common/structure.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/common/structure.py,2,Author: hankcs,
-HanLP/hanlp/common/structure.py,3,Date: 2019-08-26 14:58,
-HanLP/hanlp/common/structure.py,69,@abstractmethod,
-HanLP/hanlp/common/structure.py,72,"raise NotImplementedError('%s.%s()' % (self.__class__.__name__, inspect.stack()[0][3]))",
-HanLP/hanlp/common/vocab.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/common/vocab.py,2,Author: hankcs,
-HanLP/hanlp/common/vocab.py,3,Date: 2019-06-13 22:42,
-HanLP/hanlp/common/vocab.py,130,"self.idx_to_token_table = index_to_string_table_from_tensor(self.idx_to_token, self.safe_unk_token)",
-HanLP/hanlp/common/vocab.py,167,report = 'Length: {}\n'.format(len(self)),
-HanLP/hanlp/common/vocab.py,168,"report += 'Samples: {}\n'.format(str(list(self.token_to_idx.keys())[:min(50, len(self))]))",
-HanLP/hanlp/common/vocab.py,169,report += 'Mutable: {}'.format(self.mutable),
-HanLP/hanlp/common/vocab.py,170,report = report.strip(),
-HanLP/hanlp/common/document.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/common/document.py,2,Author: hankcs,
-HanLP/hanlp/common/document.py,3,Date: 2019-12-31 04:16,
-HanLP/hanlp/common/document.py,33,self.sentences = [],
-HanLP/hanlp/common/document.py,34,self.tokens = [],
-HanLP/hanlp/common/document.py,35,self.part_of_speech_tags = [],
-HanLP/hanlp/common/document.py,36,self.named_entities = [],
-HanLP/hanlp/common/document.py,37,self.syntactic_dependencies = [],
-HanLP/hanlp/common/document.py,38,self.semantic_dependencies = [],
-HanLP/hanlp/common/document.py,57,try to find if any field is conll type,
-HanLP/hanlp/common/component.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/common/component.py,2,Author: hankcs,
-HanLP/hanlp/common/component.py,3,Date: 2019-08-26 14:45,
-HanLP/hanlp/common/component.py,78,"share config with transform for convenience, so we don't need to pass args around",
-HanLP/hanlp/common/component.py,139,out.write('x\ty_true\ty_pred\n'),
-HanLP/hanlp/common/component.py,260,allow for different,
-HanLP/hanlp/common/component.py,276,batch + X.shape,
-HanLP/hanlp/common/component.py,330,"assert num_examples, 'You forgot to return the number of training examples in your build_vocab'",
-HanLP/hanlp/common/component.py,342,"need to know #batches, otherwise progbar crashes",
-HanLP/hanlp/common/component.py,360,noinspection PyTypeChecker,
-HanLP/hanlp/common/component.py,376,restore best model,
-HanLP/hanlp/common/component.py,386,type:tf.keras.callbacks.History,
-HanLP/hanlp/common/component.py,406,"verbose=1,",
-HanLP/hanlp/common/component.py,460,"if data is a generator, it's usually one-time, not able to transform into a list",
-HanLP/hanlp/common/component.py,520,free memory,
-HanLP/hanlp/common/transform.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/common/transform.py,2,Author: hankcs,
-HanLP/hanlp/common/transform.py,3,Date: 2019-10-27 14:22,
-HanLP/hanlp/common/transform.py,55,"We prefer list over shape here, as it's easier to type [] than ()",
-HanLP/hanlp/common/transform.py,56,"if isinstance(self.output_shapes, tuple):",
-HanLP/hanlp/common/transform.py,57,self.output_shapes = list(self.output_shapes),
-HanLP/hanlp/common/transform.py,58,"for i, shapes in enumerate(self.output_shapes):",
-HanLP/hanlp/common/transform.py,59,"if isinstance(shapes, tuple):",
-HanLP/hanlp/common/transform.py,60,self.output_shapes[i] = list(shapes),
-HanLP/hanlp/common/transform.py,61,"for j, shape in enumerate(shapes):",
-HanLP/hanlp/common/transform.py,62,"if isinstance(shape, tuple):",
-HanLP/hanlp/common/transform.py,63,shapes[j] = list(shape),
-HanLP/hanlp/common/transform.py,134,debug,
-HanLP/hanlp/common/transform.py,135,for sample in self.file_to_samples(filepath):,
-HanLP/hanlp/common/transform.py,136,pass,
-HanLP/hanlp/common/transform.py,149,debug,
-HanLP/hanlp/common/transform.py,150,for sample in self.inputs_to_samples(inputs):,
-HanLP/hanlp/common/transform.py,151,pass,
-HanLP/hanlp/common/transform.py,166,print('Did you forget to call build_config() on your transform?'),
-HanLP/hanlp/common/transform.py,171,if not callable(samples):,
-HanLP/hanlp/common/transform.py,172,samples = Transform.generator_to_callable(samples),
-HanLP/hanlp/common/transform.py,221,tag vocab comes last usually,
-HanLP/hanlp/common/trie.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/common/trie.py,2,Author: hankcs,
-HanLP/hanlp/common/trie.py,3,Date: 2020-01-04 23:46,
-HanLP/hanlp/common/constant.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/common/constant.py,2,Author: hankcs,
-HanLP/hanlp/common/constant.py,3,Date: 2019-06-13 22:41,
-HanLP/hanlp/common/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/common/__init__.py,2,Author: hankcs,
-HanLP/hanlp/common/__init__.py,3,Date: 2019-08-26 14:45,
-HanLP/hanlp/layers/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/__init__.py,2,Author: hankcs,
-HanLP/hanlp/layers/__init__.py,3,Date: 2019-10-26 00:50,
-HanLP/hanlp/layers/weight_normalization.py,1,Copyright 2019 The TensorFlow Authors. All Rights Reserved.,
-HanLP/hanlp/layers/weight_normalization.py,2,,
-HanLP/hanlp/layers/weight_normalization.py,3,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-HanLP/hanlp/layers/weight_normalization.py,4,you may not use this file except in compliance with the License.,
-HanLP/hanlp/layers/weight_normalization.py,5,You may obtain a copy of the License at,
-HanLP/hanlp/layers/weight_normalization.py,6,,
-HanLP/hanlp/layers/weight_normalization.py,7,http://www.apache.org/licenses/LICENSE-2.0,
-HanLP/hanlp/layers/weight_normalization.py,8,,
-HanLP/hanlp/layers/weight_normalization.py,9,"Unless required by applicable law or agreed to in writing, software",
-HanLP/hanlp/layers/weight_normalization.py,10,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-HanLP/hanlp/layers/weight_normalization.py,11,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-HanLP/hanlp/layers/weight_normalization.py,12,See the License for the specific language governing permissions and,
-HanLP/hanlp/layers/weight_normalization.py,13,limitations under the License.,
-HanLP/hanlp/layers/weight_normalization.py,14,=============================================================================,
-HanLP/hanlp/layers/weight_normalization.py,81,The kernel's filter or unit dimension is -1,
-HanLP/hanlp/layers/weight_normalization.py,101,Used for data initialization in self._data_dep_init.,
-HanLP/hanlp/layers/weight_normalization.py,123,Ensure we read `self.g` after _update_weights.,
-HanLP/hanlp/layers/weight_normalization.py,131,Replace kernel by normalized weight variable.,
-HanLP/hanlp/layers/weight_normalization.py,135,Ensure we calculate result after updating kernel.,
-HanLP/hanlp/layers/weight_normalization.py,152,pylint: disable=bad-continuation,
-HanLP/hanlp/layers/weight_normalization.py,175,Generate data dependent init values,
-HanLP/hanlp/layers/weight_normalization.py,181,Assign data dependent init values,
-HanLP/hanlp/layers/crf/crf_layer.py,1,******************************************************************************,
-HanLP/hanlp/layers/crf/crf_layer.py,2,Copyright 2017-2018 Intel Corporation,
-HanLP/hanlp/layers/crf/crf_layer.py,3,,
-HanLP/hanlp/layers/crf/crf_layer.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-HanLP/hanlp/layers/crf/crf_layer.py,5,you may not use this file except in compliance with the License.,
-HanLP/hanlp/layers/crf/crf_layer.py,6,You may obtain a copy of the License at,
-HanLP/hanlp/layers/crf/crf_layer.py,7,,
-HanLP/hanlp/layers/crf/crf_layer.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-HanLP/hanlp/layers/crf/crf_layer.py,9,,
-HanLP/hanlp/layers/crf/crf_layer.py,10,"Unless required by applicable law or agreed to in writing, software",
-HanLP/hanlp/layers/crf/crf_layer.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-HanLP/hanlp/layers/crf/crf_layer.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-HanLP/hanlp/layers/crf/crf_layer.py,13,See the License for the specific language governing permissions and,
-HanLP/hanlp/layers/crf/crf_layer.py,14,limitations under the License.,
-HanLP/hanlp/layers/crf/crf_layer.py,15,******************************************************************************,
-HanLP/hanlp/layers/crf/crf_layer.py,47,num of output labels,
-HanLP/hanlp/layers/crf/crf_layer.py,81,"Just pass the received mask from previous layer, to the next layer or",
-HanLP/hanlp/layers/crf/crf_layer.py,82,manipulate it if this layer changes the shape of the input,
-HanLP/hanlp/layers/crf/crf_layer.py,85,pylint: disable=arguments-differ,
-HanLP/hanlp/layers/crf/crf_layer.py,102,"def loss(self, y_true, y_pred):",
-HanLP/hanlp/layers/crf/crf_layer.py,103,"y_pred = tf.convert_to_tensor(y_pred, dtype=self.dtype)",
-HanLP/hanlp/layers/crf/crf_layer.py,104,"log_likelihood, self.transitions = \",
-HanLP/hanlp/layers/crf/crf_layer.py,105,"crf_log_likelihood(y_pred,",
-HanLP/hanlp/layers/crf/crf_layer.py,106,"tf.cast(y_true, dtype=tf.int32),",
-HanLP/hanlp/layers/crf/crf_layer.py,107,"sequence_lengths,",
-HanLP/hanlp/layers/crf/crf_layer.py,108,transition_params=self.transitions),
-HanLP/hanlp/layers/crf/crf_layer.py,109,return tf.reduce_mean(-log_likelihood),
-HanLP/hanlp/layers/crf/crf.py,1,Copyright 2019 The TensorFlow Authors. All Rights Reserved.,
-HanLP/hanlp/layers/crf/crf.py,2,,
-HanLP/hanlp/layers/crf/crf.py,3,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-HanLP/hanlp/layers/crf/crf.py,4,you may not use this file except in compliance with the License.,
-HanLP/hanlp/layers/crf/crf.py,5,You may obtain a copy of the License at,
-HanLP/hanlp/layers/crf/crf.py,6,,
-HanLP/hanlp/layers/crf/crf.py,7,http://www.apache.org/licenses/LICENSE-2.0,
-HanLP/hanlp/layers/crf/crf.py,8,,
-HanLP/hanlp/layers/crf/crf.py,9,"Unless required by applicable law or agreed to in writing, software",
-HanLP/hanlp/layers/crf/crf.py,10,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-HanLP/hanlp/layers/crf/crf.py,11,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-HanLP/hanlp/layers/crf/crf.py,12,See the License for the specific language governing permissions and,
-HanLP/hanlp/layers/crf/crf.py,13,limitations under the License.,
-HanLP/hanlp/layers/crf/crf.py,14,==============================================================================,
-HanLP/hanlp/layers/crf/crf.py,23,TODO: Wrap functions in @tf.function once,
-HanLP/hanlp/layers/crf/crf.py,24,https://github.com/tensorflow/tensorflow/issues/29075 is resolved,
-HanLP/hanlp/layers/crf/crf.py,44,"If max_seq_len is 1, we skip the score calculation and simply gather the",
-HanLP/hanlp/layers/crf/crf.py,45,unary potentials of the single tag.,
-HanLP/hanlp/layers/crf/crf.py,60,Compute the scores of the given tag sequence.,
-HanLP/hanlp/layers/crf/crf.py,102,"If max_seq_len is 1, we skip the score calculation and simply gather the",
-HanLP/hanlp/layers/crf/crf.py,103,unary potentials of all active tags.,
-HanLP/hanlp/layers/crf/crf.py,109,Compute the logsumexp of all scores of sequences matching the given tags.,
-HanLP/hanlp/layers/crf/crf.py,133,Split up the first and rest of the inputs in preparation for the forward,
-HanLP/hanlp/layers/crf/crf.py,134,algorithm.,
-HanLP/hanlp/layers/crf/crf.py,138,"If max_seq_len is 1, we skip the algorithm and simply reduce_logsumexp over",
-HanLP/hanlp/layers/crf/crf.py,139,"the ""initial state"" (the unary potentials).",
-HanLP/hanlp/layers/crf/crf.py,142,Mask `log_norm` of the sequences with length <= zero.,
-HanLP/hanlp/layers/crf/crf.py,151,Compute the alpha values in the forward algorithm in order to get the,
-HanLP/hanlp/layers/crf/crf.py,152,partition function.,
-HanLP/hanlp/layers/crf/crf.py,157,Mask `log_norm` of the sequences with length <= zero.,
-HanLP/hanlp/layers/crf/crf.py,191,cast type to handle different types,
-HanLP/hanlp/layers/crf/crf.py,204,Normalize the scores to get the log-likelihood per example.,
-HanLP/hanlp/layers/crf/crf.py,231,Use int32 or int64 based on tag_indices' dtype.,
-HanLP/hanlp/layers/crf/crf.py,263,Truncate by one on each side of the sequence to get the start and end,
-HanLP/hanlp/layers/crf/crf.py,264,indices of each transition.,
-HanLP/hanlp/layers/crf/crf.py,268,Encode the indices in a flattened representation.,
-HanLP/hanlp/layers/crf/crf.py,273,Get the binary scores based on the flattened representation.,
-HanLP/hanlp/layers/crf/crf.py,464,"If max_seq_len is 1, we skip the algorithm and simply return the argmax tag",
-HanLP/hanlp/layers/crf/crf.py,465,and the max activation.,
-HanLP/hanlp/layers/crf/crf.py,474,Computes forward decoding. Get last score and backpointers.,
-HanLP/hanlp/layers/crf/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/crf/__init__.py,2,Author: hankcs,
-HanLP/hanlp/layers/crf/__init__.py,3,Date: 2019-12-18 22:55,
-HanLP/hanlp/layers/embeddings/char_rnn.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/embeddings/char_rnn.py,2,Author: hankcs,
-HanLP/hanlp/layers/embeddings/char_rnn.py,3,Date: 2019-12-20 17:02,
-HanLP/hanlp/layers/embeddings/char_rnn.py,49,hidden = output,
-HanLP/hanlp/layers/embeddings/contextual_string_embedding.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/embeddings/contextual_string_embedding.py,2,Author: hankcs,
-HanLP/hanlp/layers/embeddings/contextual_string_embedding.py,3,Date: 2019-12-19 03:24,
-HanLP/hanlp/layers/embeddings/contextual_string_embedding.py,49,discard dense layer,
-HanLP/hanlp/layers/embeddings/fast_text.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/embeddings/fast_text.py,2,Author: hankcs,
-HanLP/hanlp/layers/embeddings/fast_text.py,3,Date: 2019-10-29 13:14,
-HanLP/hanlp/layers/embeddings/fast_text.py,33,fasttext print a blank line here,
-HanLP/hanlp/layers/embeddings/fast_text.py,45,"vf = np.vectorize(self.embed, otypes=[np.ndarray])",
-HanLP/hanlp/layers/embeddings/fast_text.py,73,placeholder tensor,
-HanLP/hanlp/layers/embeddings/fast_text.py,78,seq_len = inputs.shape[-1],
-HanLP/hanlp/layers/embeddings/fast_text.py,79,if not seq_len:,
-HanLP/hanlp/layers/embeddings/fast_text.py,80,seq_len = 1,
-HanLP/hanlp/layers/embeddings/fast_text.py,81,"return tf.zeros([1, seq_len, self.output_dim])",
-HanLP/hanlp/layers/embeddings/char_cnn.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/embeddings/char_cnn.py,2,Author: hankcs,
-HanLP/hanlp/layers/embeddings/char_cnn.py,3,Date: 2019-12-20 21:15,
-HanLP/hanlp/layers/embeddings/char_cnn.py,81,Get shape and parameters,
-HanLP/hanlp/layers/embeddings/char_cnn.py,88,Reshape weights,
-HanLP/hanlp/layers/embeddings/char_cnn.py,92,Reshape input and apply weights,
-HanLP/hanlp/layers/embeddings/char_cnn.py,97,Apply convolution,
-HanLP/hanlp/layers/embeddings/char_cnn.py,101,Reduce max -- set to zero if all padded,
-HanLP/hanlp/layers/embeddings/char_cnn.py,105,Reshape the output,
-HanLP/hanlp/layers/embeddings/word2vec.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/embeddings/word2vec.py,2,Author: hankcs,
-HanLP/hanlp/layers/embeddings/word2vec.py,3,Date: 2019-08-24 21:49,
-HanLP/hanlp/layers/embeddings/word2vec.py,63,if vec is not None:,
-HanLP/hanlp/layers/embeddings/word2vec.py,64,vec += bias,
-HanLP/hanlp/layers/embeddings/word2vec.py,66,"vec = np.random.uniform(-scale, scale, [dim])",
-HanLP/hanlp/layers/embeddings/word2vec.py,69,noinspection PyTypeChecker,
-HanLP/hanlp/layers/embeddings/word2vec.py,123,"if the `unk` token exists in the pretrained,",
-HanLP/hanlp/layers/embeddings/word2vec.py,124,"then replace it with a self-defined one, usually the one in word vocab",
-HanLP/hanlp/layers/embeddings/word2vec.py,136,init matrix,
-HanLP/hanlp/layers/embeddings/word2vec.py,141,insert to pret_embs,
-HanLP/hanlp/layers/embeddings/word2vec.py,144,Retry lower case,
-HanLP/hanlp/layers/embeddings/word2vec.py,189,"inputs._keras_mask = tf.not_equal(inputs, self.vocab.pad_idx)",
-HanLP/hanlp/layers/embeddings/concat_embedding.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/embeddings/concat_embedding.py,2,Author: hankcs,
-HanLP/hanlp/layers/embeddings/concat_embedding.py,3,Date: 2019-12-20 17:08,
-HanLP/hanlp/layers/embeddings/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/embeddings/__init__.py,2,Author: hankcs,
-HanLP/hanlp/layers/embeddings/__init__.py,3,Date: 2019-08-24 21:48,
-HanLP/hanlp/layers/embeddings/__init__.py,25,Embeddings need vocab,
-HanLP/hanlp/layers/embeddings/__init__.py,27,Vocab won't present in the dict,
-HanLP/hanlp/layers/embeddings/__init__.py,34,Embedding specific configuration,
-HanLP/hanlp/layers/embeddings/__init__.py,36,fasttext can only run in eager mode,
-HanLP/hanlp/layers/embeddings/__init__.py,38,fasttext accept string instead of int,
-HanLP/hanlp/layers/embeddings/__init__.py,42,those embeddings require string as input,
-HanLP/hanlp/layers/embeddings/__init__.py,44,use the string version of Word2VecEmbedding instead,
-HanLP/hanlp/layers/embeddings/__init__.py,51,word_vocab.unlock(),
-HanLP/hanlp/layers/transformers/loader.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/transformers/loader.py,2,Author: hankcs,
-HanLP/hanlp/layers/transformers/loader.py,3,Date: 2020-01-04 06:05,
-HanLP/hanlp/layers/transformers/loader.py,70,"(bert_weight, value_from_ckpt)",
-HanLP/hanlp/layers/transformers/loader.py,105,noinspection PyTypeChecker,
-HanLP/hanlp/layers/transformers/loader.py,137,noinspection PyUnboundLocalVariable,
-HanLP/hanlp/layers/transformers/loader.py,140,noinspection PyUnboundLocalVariable,
-HanLP/hanlp/layers/transformers/albert_tokenization.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/transformers/albert_tokenization.py,2,Author: hankcs,
-HanLP/hanlp/layers/transformers/albert_tokenization.py,3,Date: 2020-01-22 19:31,
-HanLP/hanlp/layers/transformers/albert_tokenization.py,19,"Note(mingdachen): For the purpose of consisent API, we are",
-HanLP/hanlp/layers/transformers/albert_tokenization.py,20,generating a vocabulary for the sentence piece tokenizer.,
-HanLP/hanlp/layers/transformers/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/layers/transformers/__init__.py,2,Author: hankcs,
-HanLP/hanlp/layers/transformers/__init__.py,3,Date: 2019-12-29 15:17,
-HanLP/hanlp/optimizers/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/optimizers/__init__.py,2,Author: hankcs,
-HanLP/hanlp/optimizers/__init__.py,3,Date: 2019-11-11 18:44,
-HanLP/hanlp/optimizers/adamw/optimization.py,1,Copyright 2019 The TensorFlow Authors. All Rights Reserved.,
-HanLP/hanlp/optimizers/adamw/optimization.py,2,,
-HanLP/hanlp/optimizers/adamw/optimization.py,3,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-HanLP/hanlp/optimizers/adamw/optimization.py,4,you may not use this file except in compliance with the License.,
-HanLP/hanlp/optimizers/adamw/optimization.py,5,You may obtain a copy of the License at,
-HanLP/hanlp/optimizers/adamw/optimization.py,6,,
-HanLP/hanlp/optimizers/adamw/optimization.py,7,http://www.apache.org/licenses/LICENSE-2.0,
-HanLP/hanlp/optimizers/adamw/optimization.py,8,,
-HanLP/hanlp/optimizers/adamw/optimization.py,9,"Unless required by applicable law or agreed to in writing, software",
-HanLP/hanlp/optimizers/adamw/optimization.py,10,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-HanLP/hanlp/optimizers/adamw/optimization.py,11,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-HanLP/hanlp/optimizers/adamw/optimization.py,12,See the License for the specific language governing permissions and,
-HanLP/hanlp/optimizers/adamw/optimization.py,13,limitations under the License.,
-HanLP/hanlp/optimizers/adamw/optimization.py,14,==============================================================================,
-HanLP/hanlp/optimizers/adamw/optimization.py,45,"Implements polynomial warmup. i.e., if global_step < warmup_steps, the",
-HanLP/hanlp/optimizers/adamw/optimization.py,46,learning rate will be `global_step/num_warmup_steps * init_lr`.,
-HanLP/hanlp/optimizers/adamw/optimization.py,70,Implements linear decay of the learning rate.,
-HanLP/hanlp/optimizers/adamw/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/optimizers/adamw/__init__.py,2,Author: hankcs,
-HanLP/hanlp/optimizers/adamw/__init__.py,3,Date: 2019-11-11 18:44,
-HanLP/hanlp/optimizers/adamw/__init__.py,8,from hanlp.optimization.adamw.optimizers_v2 import AdamW,
-HanLP/hanlp/optimizers/adamw/__init__.py,9,from hanlp.optimization.adamw.utils import get_weight_decays,
-HanLP/hanlp/optimizers/adamw/__init__.py,12,"def create_optimizer(model, init_lr, num_train_steps, num_warmup_steps):",
-HanLP/hanlp/optimizers/adamw/__init__.py,13,"""""""Creates an optimizer with learning rate schedule.""""""",
-HanLP/hanlp/optimizers/adamw/__init__.py,14,wd_dict = get_weight_decays(model),
-HanLP/hanlp/optimizers/adamw/__init__.py,15,,
-HanLP/hanlp/optimizers/adamw/__init__.py,16,# Implements linear decay of the learning rate.,
-HanLP/hanlp/optimizers/adamw/__init__.py,17,learning_rate_fn = tf.keras.optimizers.schedules.PolynomialDecay(,
-HanLP/hanlp/optimizers/adamw/__init__.py,18,"initial_learning_rate=init_lr,",
-HanLP/hanlp/optimizers/adamw/__init__.py,19,"decay_steps=num_train_steps,",
-HanLP/hanlp/optimizers/adamw/__init__.py,20,end_learning_rate=0.0),
-HanLP/hanlp/optimizers/adamw/__init__.py,21,if num_warmup_steps:,
-HanLP/hanlp/optimizers/adamw/__init__.py,22,"learning_rate_fn = WarmUp(initial_learning_rate=init_lr,",
-HanLP/hanlp/optimizers/adamw/__init__.py,23,"decay_schedule_fn=learning_rate_fn,",
-HanLP/hanlp/optimizers/adamw/__init__.py,24,warmup_steps=num_warmup_steps),
-HanLP/hanlp/optimizers/adamw/__init__.py,25,optimizer = AdamW(,
-HanLP/hanlp/optimizers/adamw/__init__.py,26,"learning_rate=learning_rate_fn,",
-HanLP/hanlp/optimizers/adamw/__init__.py,27,"weight_decay_rate=0.01,",
-HanLP/hanlp/optimizers/adamw/__init__.py,28,"beta_1=0.9,",
-HanLP/hanlp/optimizers/adamw/__init__.py,29,"beta_2=0.999,",
-HanLP/hanlp/optimizers/adamw/__init__.py,30,"epsilon=1e-6,",
-HanLP/hanlp/optimizers/adamw/__init__.py,31,"exclude_from_weight_decay=['layer_norm', 'bias'])",
-HanLP/hanlp/optimizers/adamw/__init__.py,32,return optimizer,
-HanLP/hanlp/optimizers/adamw/__init__.py,37,Implements linear decay of the learning rate.,
-HanLP/hanlp/optimizers/adamw/__init__.py,58,"{'LayerNorm/gamma:0', 'LayerNorm/beta:0'}",
-HanLP/hanlp/losses/sparse_categorical_crossentropy.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/losses/sparse_categorical_crossentropy.py,2,Author: hankcs,
-HanLP/hanlp/losses/sparse_categorical_crossentropy.py,3,Date: 2019-12-20 01:29,
-HanLP/hanlp/losses/sparse_categorical_crossentropy.py,18,This is equivalent to SUM_OVER_BATCH_SIZE,
-HanLP/hanlp/losses/sparse_categorical_crossentropy.py,19,"loss /= tf.reduce_sum(tf.ones_like(sample_weight, dtype=loss.dtype))",
-HanLP/hanlp/losses/sparse_categorical_crossentropy.py,20,This one is SUM_BY_NONZERO_WEIGHTS,
-HanLP/hanlp/losses/sparse_categorical_crossentropy.py,31,"could use sum of sample_weight[:,0] too",
-HanLP/hanlp/losses/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/losses/__init__.py,2,Author: hankcs,
-HanLP/hanlp/losses/__init__.py,3,Date: 2019-12-20 01:28,
-HanLP/hanlp/callbacks/fine_csv_logger.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/callbacks/fine_csv_logger.py,2,Author: hankcs,
-HanLP/hanlp/callbacks/fine_csv_logger.py,3,Date: 2019-12-05 02:12,
-HanLP/hanlp/callbacks/fine_csv_logger.py,57,We set NA so that csv parsers do not fail for this last epoch.,
-HanLP/hanlp/callbacks/fine_csv_logger.py,60,feed them twice to decide the actual width,
-HanLP/hanlp/callbacks/fine_csv_logger.py,63,print headers and bars,
-HanLP/hanlp/callbacks/fine_csv_logger.py,65,bars for markdown style,
-HanLP/hanlp/callbacks/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/callbacks/__init__.py,2,Author: hankcs,
-HanLP/hanlp/callbacks/__init__.py,3,Date: 2019-12-05 02:10,
-HanLP/hanlp/components/rnn_language_model.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/rnn_language_model.py,2,Author: hankcs,
-HanLP/hanlp/components/rnn_language_model.py,3,Date: 2019-12-04 17:28,
-HanLP/hanlp/components/rnn_language_model.py,53,noinspection PyMethodOverriding,
-HanLP/hanlp/components/rnn_language_model.py,73,A slow implementation. Might better to let LSTM return states.,
-HanLP/hanlp/components/rnn_language_model.py,74,"But anyway, this interface is for fun so let's take it easy",
-HanLP/hanlp/components/tok.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/tok.py,2,Author: hankcs,
-HanLP/hanlp/components/tok.py,3,Date: 2019-10-27 14:30,
-HanLP/hanlp/components/tok.py,36,bigram_only = false,
-HanLP/hanlp/components/lambda_wrapper.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/lambda_wrapper.py,2,Author: hankcs,
-HanLP/hanlp/components/lambda_wrapper.py,3,Date: 2019-12-31 18:36,
-HanLP/hanlp/components/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/__init__.py,2,Author: hankcs,
-HanLP/hanlp/components/__init__.py,3,Date: 2019-08-26 16:10,
-HanLP/hanlp/components/pipeline.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/pipeline.py,2,Author: hankcs,
-HanLP/hanlp/components/pipeline.py,3,Date: 2019-12-31 00:22,
-HanLP/hanlp/components/pipeline.py,30,noinspection PyShadowingBuiltins,
-HanLP/hanlp/components/pipeline.py,36,assume functions take multiple arguments,
-HanLP/hanlp/components/ner.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/ner.py,2,Author: hankcs,
-HanLP/hanlp/components/ner.py,3,Date: 2019-09-14 20:33,
-HanLP/hanlp/components/ner.py,43,"assert kwargs.get('run_eagerly', True), 'This component can only run eagerly'",
-HanLP/hanlp/components/ner.py,44,kwargs['run_eagerly'] = True,
-HanLP/hanlp/components/pos.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/pos.py,2,Author: hankcs,
-HanLP/hanlp/components/pos.py,3,Date: 2019-12-05 23:05,
-HanLP/hanlp/components/parsers/biaffine_parser.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/parsers/biaffine_parser.py,2,Author: hankcs,
-HanLP/hanlp/components/parsers/biaffine_parser.py,3,Date: 2019-12-22 12:47,
-HanLP/hanlp/components/parsers/biaffine_parser.py,28,keras will use cuda lstm when config.lstm_dropout is 0,
-HanLP/hanlp/components/parsers/biaffine_parser.py,82,noinspection PyMethodOverriding,
-HanLP/hanlp/components/parsers/biaffine_parser.py,88,because we are customizing batching,
-HanLP/hanlp/components/parsers/biaffine_parser.py,90,progbar: tf.keras.callbacks.ProgbarLogger = callbacks[-1],
-HanLP/hanlp/components/parsers/biaffine_parser.py,117,evaluate on dev,
-HanLP/hanlp/components/parsers/biaffine_parser.py,159,ignore all punctuation if not specified,
-HanLP/hanlp/components/parsers/biaffine_parser.py,196,noinspection PyMethodOverriding,
-HanLP/hanlp/components/parsers/biaffine_parser.py,217,noinspection PyMethodOverriding,
-HanLP/hanlp/components/parsers/biaffine_parser.py,236,"arc_preds = eisner(arc_scores, mask)",
-HanLP/hanlp/components/parsers/biaffine_parser.py,254,otherwise AttributeError: 'ProgbarLogger' object has no attribute 'verbose',
-HanLP/hanlp/components/parsers/biaffine_parser.py,297,noinspection PyTypeChecker,
-HanLP/hanlp/components/parsers/biaffine_parser.py,327,"arc_preds = eisner(arc_scores, mask)",
-HanLP/hanlp/components/parsers/conll.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/parsers/conll.py,2,Author: hankcs,
-HanLP/hanlp/components/parsers/conll.py,3,Date: 2019-12-26 15:37,
-HanLP/hanlp/components/parsers/conll.py,232,"custom bucketing, load corpus into memory",
-HanLP/hanlp/components/parsers/conll.py,243,"the number of chunks in each bucket, which is clipped by",
-HanLP/hanlp/components/parsers/conll.py,244,"range [1, len(bucket)]",
-HanLP/hanlp/components/parsers/conll.py,290,"insert root word with arbitrary fields, anyway it will be masked",
-HanLP/hanlp/components/parsers/conll.py,291,"form, cpos, head, deprel = sample[0]",
-HanLP/hanlp/components/parsers/conll.py,314,"make root the 2ed elements while 0th is pad, 1st is unk",
-HanLP/hanlp/components/parsers/conll.py,354,heuristic to find the orphan relation,
-HanLP/hanlp/components/parsers/conll.py,373,found end of token,
-HanLP/hanlp/components/parsers/conll.py,385,"make root the 2ed elements while 0th is pad, 1st is unk",
-HanLP/hanlp/components/parsers/conll.py,414,"insert root word with arbitrary fields, anyway it will be masked",
-HanLP/hanlp/components/parsers/conll.py,422,"custom bucketing, load corpus into memory",
-HanLP/hanlp/components/parsers/conll.py,433,"the number of chunks in each bucket, which is clipped by",
-HanLP/hanlp/components/parsers/conll.py,434,"range [1, len(bucket)]",
-HanLP/hanlp/components/parsers/conll.py,473,for x in generator():,
-HanLP/hanlp/components/parsers/conll.py,474,print(len(x[-1][-1])),
-HanLP/hanlp/components/parsers/conll.py,498,orphan,
-HanLP/hanlp/components/parsers/alg.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/parsers/alg.py,2,Author: hankcs,
-HanLP/hanlp/components/parsers/alg.py,3,Date: 2019-12-26 19:49,
-HanLP/hanlp/components/parsers/alg.py,4,Ported from the PyTorch implementation https://github.com/zysite/biaffine-parser,
-HanLP/hanlp/components/parsers/alg.py,40,count the frequency of each datapoint,
-HanLP/hanlp/components/parsers/alg.py,43,calculate the sum of the values of the same datapoints,
-HanLP/hanlp/components/parsers/alg.py,45,initialize k centroids randomly,
-HanLP/hanlp/components/parsers/alg.py,47,assign labels to each datapoint based on centroids,
-HanLP/hanlp/components/parsers/alg.py,51,make sure number of datapoints is greater than that of clusters,
-HanLP/hanlp/components/parsers/alg.py,55,"if an empty cluster is encountered,",
-HanLP/hanlp/components/parsers/alg.py,56,choose the farthest datapoint from the biggest cluster,
-HanLP/hanlp/components/parsers/alg.py,57,and move that the empty one,
-HanLP/hanlp/components/parsers/alg.py,66,update the centroids,
-HanLP/hanlp/components/parsers/alg.py,69,re-assign all datapoints to clusters,
-HanLP/hanlp/components/parsers/alg.py,73,assign all datapoints to the new-generated clusters,
-HanLP/hanlp/components/parsers/alg.py,74,without considering the empty ones,
-HanLP/hanlp/components/parsers/alg.py,76,get the centroids of the assigned clusters,
-HanLP/hanlp/components/parsers/alg.py,78,map all values of datapoints to buckets,
-HanLP/hanlp/components/parsers/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/parsers/__init__.py,2,Author: hankcs,
-HanLP/hanlp/components/parsers/__init__.py,3,Date: 2019-12-22 12:46,
-HanLP/hanlp/components/parsers/biaffine/model.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/parsers/biaffine/model.py,2,Author: hankcs,
-HanLP/hanlp/components/parsers/biaffine/model.py,3,Date: 2019-12-26 23:04,
-HanLP/hanlp/components/parsers/biaffine/model.py,22,the embedding layer,
-HanLP/hanlp/components/parsers/biaffine/model.py,35,the word-lstm layer,
-HanLP/hanlp/components/parsers/biaffine/model.py,44,turns out to hinder performance,
-HanLP/hanlp/components/parsers/biaffine/model.py,48,the MLP layers,
-HanLP/hanlp/components/parsers/biaffine/model.py,58,the Biaffine layers,
-HanLP/hanlp/components/parsers/biaffine/model.py,71,noinspection PyMethodOverriding,
-HanLP/hanlp/components/parsers/biaffine/model.py,74,"batch_size, seq_len = words.shape",
-HanLP/hanlp/components/parsers/biaffine/model.py,75,get the mask and lengths of given batch,
-HanLP/hanlp/components/parsers/biaffine/model.py,76,mask = words.ne(self.pad_index),
-HanLP/hanlp/components/parsers/biaffine/model.py,78,set the indices larger than num_embeddings to unk_index,
-HanLP/hanlp/components/parsers/biaffine/model.py,79,ext_mask = words.ge(self.word_embed.num_embeddings),
-HanLP/hanlp/components/parsers/biaffine/model.py,83,get outputs from embedding layers,
-HanLP/hanlp/components/parsers/biaffine/model.py,89,concatenate the word and feat representations,
-HanLP/hanlp/components/parsers/biaffine/model.py,95,apply MLPs to the BiLSTM output states,
-HanLP/hanlp/components/parsers/biaffine/model.py,101,get arc and rel scores from the bilinear attention,
-HanLP/hanlp/components/parsers/biaffine/model.py,102,"[batch_size, seq_len, seq_len]",
-HanLP/hanlp/components/parsers/biaffine/model.py,104,"[batch_size, seq_len, seq_len, n_rels]",
-HanLP/hanlp/components/parsers/biaffine/model.py,106,set the scores that exceed the length of each sentence to -inf,
-HanLP/hanlp/components/parsers/biaffine/layers.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/parsers/biaffine/layers.py,2,Author: hankcs,
-HanLP/hanlp/components/parsers/biaffine/layers.py,3,Date: 2019-12-26 23:05,
-HanLP/hanlp/components/parsers/biaffine/layers.py,4,Ported from the PyTorch implementation https://github.com/zysite/biaffine-parser,
-HanLP/hanlp/components/parsers/biaffine/layers.py,36,noinspection PyMethodOverriding,
-HanLP/hanlp/components/parsers/biaffine/layers.py,42,"[batch_size, n_out, seq_len, seq_len]",
-HanLP/hanlp/components/parsers/biaffine/layers.py,44,remove dim 1 if n_out == 1,
-HanLP/hanlp/components/parsers/biaffine/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/parsers/biaffine/__init__.py,2,Author: hankcs,
-HanLP/hanlp/components/parsers/biaffine/__init__.py,3,Date: 2019-12-26 23:03,
-HanLP/hanlp/components/taggers/tagger.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/taggers/tagger.py,2,Author: hankcs,
-HanLP/hanlp/components/taggers/tagger.py,3,Date: 2019-10-25 21:49,
-HanLP/hanlp/components/taggers/cnn_tagger.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/taggers/cnn_tagger.py,2,Author: hankcs,
-HanLP/hanlp/components/taggers/cnn_tagger.py,3,Date: 2019-10-31 13:52,
-HanLP/hanlp/components/taggers/cnn_tagger.py,77,if inputs.shape_h[0] is None:,
-HanLP/hanlp/components/taggers/cnn_tagger.py,78,return tf.zeros_like(),
-HanLP/hanlp/components/taggers/cnn_tagger.py,79,print(inputs),
-HanLP/hanlp/components/taggers/cnn_tagger.py,99,refine the type,
-HanLP/hanlp/components/taggers/cnn_tagger.py,108,"model.build((None, None, 3))",
-HanLP/hanlp/components/taggers/cnn_tagger.py,111,noinspection PyMethodOverriding,
-HanLP/hanlp/components/taggers/rnn_tagger.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/taggers/rnn_tagger.py,2,Author: hankcs,
-HanLP/hanlp/components/taggers/rnn_tagger.py,3,Date: 2019-09-14 20:30,
-HanLP/hanlp/components/taggers/rnn_tagger.py,50,remove the pre-trained embedding,
-HanLP/hanlp/components/taggers/rnn_tagger.py,80,You cannot build your model by calling `build` if your layers do not support float type inputs.,
-HanLP/hanlp/components/taggers/rnn_tagger.py,81,"Instead, in order to instantiate and build your model, `call` your model on real tensor data (of the",
-HanLP/hanlp/components/taggers/rnn_tagger.py,82,correct dtype).,
-HanLP/hanlp/components/taggers/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/taggers/__init__.py,2,Author: hankcs,
-HanLP/hanlp/components/taggers/__init__.py,3,Date: 2019-08-28 15:39,
-HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,2,Author: hankcs,
-HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,3,Date: 2019-10-25 00:04,
-HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,91,self.concat = tf.keras.layers.Concatenate(axis=2),
-HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,132,Mask paddings.,
-HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,135,dirty hack,
-HanLP/hanlp/components/taggers/ngram_conv/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/taggers/ngram_conv/__init__.py,2,Author: hankcs,
-HanLP/hanlp/components/taggers/ngram_conv/__init__.py,3,Date: 2019-12-29 22:18,
-HanLP/hanlp/components/taggers/transformers/transformer_transform.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/taggers/transformers/transformer_transform.py,2,Author: hankcs,
-HanLP/hanlp/components/taggers/transformers/transformer_transform.py,3,Date: 2019-12-29 15:14,
-HanLP/hanlp/components/taggers/transformers/transformer_transform.py,29,-2 for special tokens [CLS] and [SEP],
-HanLP/hanlp/components/taggers/transformers/transformer_transform.py,40,English albert use <pad> instead of [PAD],
-HanLP/hanlp/components/taggers/transformers/transformer_transform.py,58,"(input_ids, input_mask, segment_ids), label_ids",
-HanLP/hanlp/components/taggers/transformers/transformer_transform.py,88,xlnet has a cls token at the end,
-HanLP/hanlp/components/taggers/transformers/transformer_transform.py,93,"roberta uses an extra separator b/w pairs of sentences, cf. github.com/pytorch/fairseq/commit/1684e166e3da03f5b600dbb7855cb98ddfcd0805",
-HanLP/hanlp/components/taggers/transformers/transformer_transform.py,95,pad on the left for xlnet,
-HanLP/hanlp/components/taggers/transformers/utils.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/taggers/transformers/utils.py,2,Author: hankcs,
-HanLP/hanlp/components/taggers/transformers/utils.py,3,Date: 2019-12-29 15:32,
-HanLP/hanlp/components/taggers/transformers/utils.py,44,some wired chars cause the tagger to return empty list,
-HanLP/hanlp/components/taggers/transformers/utils.py,47,"Use the real label id for the first token of the word, and padding ids for the remaining tokens",
-HanLP/hanlp/components/taggers/transformers/utils.py,50,"Account for [CLS] and [SEP] with ""- 2"" and with ""- 3"" for RoBERTa.",
-HanLP/hanlp/components/taggers/transformers/utils.py,61,The convention in BERT is:,
-HanLP/hanlp/components/taggers/transformers/utils.py,62,(a) For sequence pairs:,
-HanLP/hanlp/components/taggers/transformers/utils.py,63,tokens:   [CLS] is this jack ##son ##ville ? [SEP] no it is not . [SEP],
-HanLP/hanlp/components/taggers/transformers/utils.py,64,type_ids:   0   0  0    0    0     0       0   0   1  1  1  1   1   1,
-HanLP/hanlp/components/taggers/transformers/utils.py,65,(b) For single sequences:,
-HanLP/hanlp/components/taggers/transformers/utils.py,66,tokens:   [CLS] the dog is hairy . [SEP],
-HanLP/hanlp/components/taggers/transformers/utils.py,67,type_ids:   0   0   0   0  0     0   0,
-HanLP/hanlp/components/taggers/transformers/utils.py,68,,
-HanLP/hanlp/components/taggers/transformers/utils.py,69,"Where ""type_ids"" are used to indicate whether this is the first",
-HanLP/hanlp/components/taggers/transformers/utils.py,70,sequence or the second sequence. The embedding vectors for `type=0` and,
-HanLP/hanlp/components/taggers/transformers/utils.py,71,`type=1` were learned during pre-training and are added to the wordpiece,
-HanLP/hanlp/components/taggers/transformers/utils.py,72,embedding vector (and position vector). This is not *strictly* necessary,
-HanLP/hanlp/components/taggers/transformers/utils.py,73,"since the [SEP] token unambiguously separates the sequences, but it makes",
-HanLP/hanlp/components/taggers/transformers/utils.py,74,it easier for the model to learn the concept of sequences.,
-HanLP/hanlp/components/taggers/transformers/utils.py,75,,
-HanLP/hanlp/components/taggers/transformers/utils.py,76,"For classification tasks, the first vector (corresponding to [CLS]) is",
-HanLP/hanlp/components/taggers/transformers/utils.py,77,"used as as the ""sentence vector"". Note that this only makes sense because",
-HanLP/hanlp/components/taggers/transformers/utils.py,78,the entire model is fine-tuned.,
-HanLP/hanlp/components/taggers/transformers/utils.py,82,roberta uses an extra separator b/w pairs of sentences,
-HanLP/hanlp/components/taggers/transformers/utils.py,98,The mask has 1 for real tokens and 0 for padding tokens. Only real,
-HanLP/hanlp/components/taggers/transformers/utils.py,99,tokens are attended to.,
-HanLP/hanlp/components/taggers/transformers/utils.py,102,Zero-pad up to the sequence length.,
-HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,2,Author: hankcs,
-HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,3,Date: 2019-12-29 13:55,
-HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,59,noinspection PyMethodOverriding,
-HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,68,"opt = tfa.optimizers.AdamW(learning_rate=3e-5, epsilon=1e-08, weight_decay=0.01)",
-HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,69,"opt = tf.keras.optimizers.Adam(learning_rate=3e-5, epsilon=1e-08)",
-HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,78,loss scaling is currently required when using mixed precision,
-HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,94,mask out padding labels,
-HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,95,class_weight=dict(,
-HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,96,"(i, 0 if i == 0 else 1) for i in range(len(self.transform.tag_vocab)))",
-HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,97,type:tf.keras.callbacks.History,
-HanLP/hanlp/components/taggers/transformers/metrics.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/taggers/transformers/metrics.py,2,Author: hankcs,
-HanLP/hanlp/components/taggers/transformers/metrics.py,3,Date: 2019-12-30 16:33,
-HanLP/hanlp/components/taggers/transformers/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/taggers/transformers/__init__.py,2,Author: hankcs,
-HanLP/hanlp/components/taggers/transformers/__init__.py,3,Date: 2019-12-29 13:57,
-HanLP/hanlp/components/classifiers/transformer_classifier.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/classifiers/transformer_classifier.py,2,Author: hankcs,
-HanLP/hanlp/components/classifiers/transformer_classifier.py,3,Date: 2019-11-10 13:19,
-HanLP/hanlp/components/classifiers/transformer_classifier.py,100,noinspection PyMethodOverriding,
-HanLP/hanlp/components/classifiers/transformer_classifier.py,114,fix sub-word generated by BERT tagger,
-HanLP/hanlp/components/classifiers/transformer_classifier.py,132,noinspection PyMethodOverriding,
-HanLP/hanlp/components/classifiers/transformer_classifier.py,136,"opt = tfa.optimizers.AdamW(learning_rate=3e-5, epsilon=1e-08, weight_decay=0.01)",
-HanLP/hanlp/components/classifiers/transformer_classifier.py,137,"opt = tf.keras.optimizers.Adam(learning_rate=3e-5, epsilon=1e-08)",
-HanLP/hanlp/components/classifiers/transformer_classifier.py,146,loss scaling is currently required when using mixed precision,
-HanLP/hanlp/components/classifiers/transformer_classifier.py,150,noinspection PyMethodOverriding,
-HanLP/hanlp/components/classifiers/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/hanlp/components/classifiers/__init__.py,2,Author: hankcs,
-HanLP/hanlp/components/classifiers/__init__.py,3,Date: 2019-11-10 13:18,
-HanLP/tests/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/__init__.py,2,Author: hankcs,
-HanLP/tests/__init__.py,3,Date: 2019-06-13 23:43,
-HanLP/tests/train/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/__init__.py,2,Author: hankcs,
-HanLP/tests/train/__init__.py,3,Date: 2019-12-28 22:22,
-HanLP/tests/train/zh/train_chnsenticorp_bert.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/train_chnsenticorp_bert.py,2,Author: hankcs,
-HanLP/tests/train/zh/train_chnsenticorp_bert.py,3,Date: 2019-12-30 21:01,
-HanLP/tests/train/zh/train_msra_ner_rnn.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/train_msra_ner_rnn.py,2,Author: hankcs,
-HanLP/tests/train/zh/train_msra_ner_rnn.py,3,Date: 2019-12-28 23:15,
-HanLP/tests/train/zh/train_semeval16_text.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/train_semeval16_text.py,2,Author: hankcs,
-HanLP/tests/train/zh/train_semeval16_text.py,3,Date: 2019-12-26 23:20,
-HanLP/tests/train/zh/train_ctb7_dep.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/train_ctb7_dep.py,2,Author: hankcs,
-HanLP/tests/train/zh/train_ctb7_dep.py,3,Date: 2019-12-28 18:33,
-HanLP/tests/train/zh/train_ctb7_dep.py,11,"parser.fit(CTB7_DEP_TRAIN, CTB7_DEP_VALID, save_dir,",
-HanLP/tests/train/zh/train_ctb7_dep.py,12,"pretrained_embed={'class_name': 'HanLP>Word2VecEmbedding',",
-HanLP/tests/train/zh/train_ctb7_dep.py,13,'config': {,
-HanLP/tests/train/zh/train_ctb7_dep.py,14,"'trainable': False,",
-HanLP/tests/train/zh/train_ctb7_dep.py,15,"'embeddings_initializer': 'zero',",
-HanLP/tests/train/zh/train_ctb7_dep.py,16,"'filepath': CIP_W2V_100_CN,",
-HanLP/tests/train/zh/train_ctb7_dep.py,17,"'expand_vocab': True,",
-HanLP/tests/train/zh/train_ctb7_dep.py,18,"'lowercase': True,",
-HanLP/tests/train/zh/train_ctb7_dep.py,19,"'normalize': True,",
-HanLP/tests/train/zh/train_ctb7_dep.py,20,"}},",
-HanLP/tests/train/zh/train_ctb7_dep.py,21,),
-HanLP/tests/train/zh/train_ctb5_dep.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/train_ctb5_dep.py,2,Author: hankcs,
-HanLP/tests/train/zh/train_ctb5_dep.py,3,Date: 2019-12-28 18:33,
-HanLP/tests/train/zh/train_ctb5_dep.py,12,"parser.fit(CTB5_DEP_TRAIN, CTB5_DEP_VALID, save_dir,",
-HanLP/tests/train/zh/train_ctb5_dep.py,13,"pretrained_embed={'class_name': 'HanLP>Word2VecEmbedding',",
-HanLP/tests/train/zh/train_ctb5_dep.py,14,'config': {,
-HanLP/tests/train/zh/train_ctb5_dep.py,15,"'trainable': False,",
-HanLP/tests/train/zh/train_ctb5_dep.py,16,"'embeddings_initializer': 'zero',",
-HanLP/tests/train/zh/train_ctb5_dep.py,17,"'filepath': CTB5_FASTTEXT_300_CN,",
-HanLP/tests/train/zh/train_ctb5_dep.py,18,"'expand_vocab': True,",
-HanLP/tests/train/zh/train_ctb5_dep.py,19,"'lowercase': True,",
-HanLP/tests/train/zh/train_ctb5_dep.py,20,"'normalize': True,",
-HanLP/tests/train/zh/train_ctb5_dep.py,21,"}},",
-HanLP/tests/train/zh/train_ctb5_dep.py,22,),
-HanLP/tests/train/zh/train_msra_ner_bert.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/train_msra_ner_bert.py,2,Author: hankcs,
-HanLP/tests/train/zh/train_msra_ner_bert.py,3,Date: 2019-12-28 23:15,
-HanLP/tests/train/zh/train_msra_ner_bert.py,12,accuracy is faster,
-HanLP/tests/train/zh/train_ctb5_pos_rnn.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/train_ctb5_pos_rnn.py,2,Author: hankcs,
-HanLP/tests/train/zh/train_ctb5_pos_rnn.py,3,Date: 2019-12-28 22:46,
-HanLP/tests/train/zh/train_msra_ner_ngram_conv.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/train_msra_ner_ngram_conv.py,2,Author: hankcs,
-HanLP/tests/train/zh/train_msra_ner_ngram_conv.py,3,Date: 2019-12-28 23:15,
-HanLP/tests/train/zh/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/__init__.py,2,Author: hankcs,
-HanLP/tests/train/zh/__init__.py,3,Date: 2020-01-01 18:24,
-HanLP/tests/train/zh/train_semeval16_news.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/train_semeval16_news.py,2,Author: hankcs,
-HanLP/tests/train/zh/train_semeval16_news.py,3,Date: 2019-12-26 23:20,
-HanLP/tests/train/zh/train_msra_ner_albert.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/train_msra_ner_albert.py,2,Author: hankcs,
-HanLP/tests/train/zh/train_msra_ner_albert.py,3,Date: 2019-12-28 23:15,
-HanLP/tests/train/zh/cws/train_pku980106_conv_cws.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_pku980106_conv_cws.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_pku980106_conv_cws.py,3,Date: 2019-12-21 15:39,
-HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv.py,3,Date: 2019-12-21 15:39,
-HanLP/tests/train/zh/cws/train_ctb6_cws_convseg.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_ctb6_cws_convseg.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_ctb6_cws_convseg.py,3,Date: 2019-12-28 22:22,
-HanLP/tests/train/zh/cws/train_ctb6_cws_albert.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_ctb6_cws_albert.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_ctb6_cws_albert.py,3,Date: 2019-12-28 22:22,
-HanLP/tests/train/zh/cws/train_pku_conv_cws.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_pku_conv_cws.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_pku_conv_cws.py,3,Date: 2019-12-21 15:39,
-HanLP/tests/train/zh/cws/train_pku_conv_cws.py,32,print(tagger.tag(list('中央民族乐团离开北京前往维也纳'))),
-HanLP/tests/train/zh/cws/train_pku_conv_cws.py,33,print(tagger.predict('中央民族乐团离开北京前往维也纳')),
-HanLP/tests/train/zh/cws/train_large_conv_cws.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_large_conv_cws.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_large_conv_cws.py,3,Date: 2019-12-29 21:58,
-HanLP/tests/train/zh/cws/train_pku980106_rnn_cws.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_pku980106_rnn_cws.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_pku980106_rnn_cws.py,3,Date: 2019-12-21 15:39,
-HanLP/tests/train/zh/cws/train_large_bert_cws.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_large_bert_cws.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_large_bert_cws.py,3,Date: 2019-12-21 15:39,
-HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv_embed.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv_embed.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv_embed.py,3,Date: 2019-12-21 15:39,
-HanLP/tests/train/zh/cws/train_msr_cws_bert.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_msr_cws_bert.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_msr_cws_bert.py,3,Date: 2019-12-21 15:39,
-HanLP/tests/train/zh/cws/train_msr_cws_bert.py,13,tokenizer.load(save_dir),
-HanLP/tests/train/zh/cws/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/__init__.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/__init__.py,3,Date: 2020-01-01 20:55,
-HanLP/tests/train/zh/cws/train_ctb6_cws_bert.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_ctb6_cws_bert.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_ctb6_cws_bert.py,3,Date: 2019-12-28 22:22,
-HanLP/tests/train/zh/cws/train_ctb6_cws_bert.py,14,tokenizer.load(save_dir),
-HanLP/tests/train/zh/cws/train_large_rnn_cws.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/zh/cws/train_large_rnn_cws.py,2,Author: hankcs,
-HanLP/tests/train/zh/cws/train_large_rnn_cws.py,3,Date: 2019-12-21 15:39,
-HanLP/tests/train/en/train_semeval15_psd.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/en/train_semeval15_psd.py,2,Author: hankcs,
-HanLP/tests/train/en/train_semeval15_psd.py,3,Date: 2020-01-01 18:26,
-HanLP/tests/train/en/train_semeval15_psd.py,22,disable variational dropout during evaluation so as to use CudaLSTM,
-HanLP/tests/train/en/train_sst2_albert_base.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/en/train_sst2_albert_base.py,2,Author: hankcs,
-HanLP/tests/train/en/train_sst2_albert_base.py,3,Date: 2019-11-10 17:41,
-HanLP/tests/train/en/train_sst2_bert_base.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/en/train_sst2_bert_base.py,2,Author: hankcs,
-HanLP/tests/train/en/train_sst2_bert_base.py,3,Date: 2020-01-03 23:00,
-HanLP/tests/train/en/train_semeval15_dm.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/en/train_semeval15_dm.py,2,Author: hankcs,
-HanLP/tests/train/en/train_semeval15_dm.py,3,Date: 2020-01-01 18:26,
-HanLP/tests/train/en/train_semeval15_dm.py,22,disable variational dropout during evaluation so as to use CudaLSTM,
-HanLP/tests/train/en/train_conll03_ner_flair.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/en/train_conll03_ner_flair.py,2,Author: hankcs,
-HanLP/tests/train/en/train_conll03_ner_flair.py,3,Date: 2019-10-25 21:34,
-HanLP/tests/train/en/train_conll03_ner_flair.py,48,"print(tagger.predict([['This', 'is', 'an', 'old', 'story'],",
-HanLP/tests/train/en/train_conll03_ner_flair.py,49,"['Not', 'this', 'year', '.']]))",
-HanLP/tests/train/en/train_conll03_ner_flair.py,50,"[['DT', 'VBZ', 'DT', 'JJ', 'NN'], ['RB', 'DT', 'NN', '.']]",
-HanLP/tests/train/en/train_conll03_ner_flair.py,51,tagger.load(save_dir),
-HanLP/tests/train/en/train_conll03_ner_bert.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/en/train_conll03_ner_bert.py,2,Author: hankcs,
-HanLP/tests/train/en/train_conll03_ner_bert.py,3,Date: 2019-10-25 21:34,
-HanLP/tests/train/en/train_semeval15_pas.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/en/train_semeval15_pas.py,2,Author: hankcs,
-HanLP/tests/train/en/train_semeval15_pas.py,3,Date: 2020-01-01 18:26,
-HanLP/tests/train/en/train_semeval15_pas.py,22,disable variational dropout during evaluation so as to use CudaLSTM,
-HanLP/tests/train/en/train_ptb_pos_rnn_fasttext.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/en/train_ptb_pos_rnn_fasttext.py,2,Author: hankcs,
-HanLP/tests/train/en/train_ptb_pos_rnn_fasttext.py,3,Date: 2019-10-25 21:34,
-HanLP/tests/train/en/train_ptb_pos_rnn_fasttext.py,16,optimizer = 'adam',
-HanLP/tests/train/en/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/train/en/__init__.py,2,Author: hankcs,
-HanLP/tests/train/en/__init__.py,3,Date: 2020-01-01 18:24,
-HanLP/tests/debug/test_trie.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/debug/test_trie.py,2,Author: hankcs,
-HanLP/tests/debug/test_trie.py,3,Date: 2020-01-05 22:47,
-HanLP/tests/debug/debug_transformer_transform.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/debug/debug_transformer_transform.py,2,Author: hankcs,
-HanLP/tests/debug/debug_transformer_transform.py,3,Date: 2020-01-11 18:37,
-HanLP/tests/debug/break_long_sents.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/debug/break_long_sents.py,2,Author: hankcs,
-HanLP/tests/debug/break_long_sents.py,3,Date: 2020-04-03 20:33,
-HanLP/tests/debug/debug_conll_sent.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/debug/debug_conll_sent.py,2,Author: hankcs,
-HanLP/tests/debug/debug_conll_sent.py,3,Date: 2020-01-29 16:55,
-HanLP/tests/debug/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/debug/__init__.py,2,Author: hankcs,
-HanLP/tests/debug/__init__.py,3,Date: 2020-01-01 17:33,
-HanLP/tests/debug/debug_bert_ner.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/debug/debug_bert_ner.py,2,Author: hankcs,
-HanLP/tests/debug/debug_bert_ner.py,3,Date: 2020-01-09 00:06,
-HanLP/tests/script/evaluate_sdp.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/script/evaluate_sdp.py,2,Author: hankcs,
-HanLP/tests/script/evaluate_sdp.py,3,Date: 2020-01-10 21:27,
-HanLP/tests/script/evaluate_dep.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/script/evaluate_dep.py,2,Author: hankcs,
-HanLP/tests/script/evaluate_dep.py,3,Date: 2020-01-10 21:27,
-HanLP/tests/script/convert_ptb_dep.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/script/convert_ptb_dep.py,2,Author: hankcs,
-HanLP/tests/script/convert_ptb_dep.py,3,Date: 2019-12-26 23:20,
-HanLP/tests/script/convert_ptb_dep.py,11,"parser.fit('data/ptb-dep/train.auto.conllx', 'data/ptb-dep/dev.auto.conllx', save_dir,",
-HanLP/tests/script/convert_ptb_dep.py,12,"pretrained_embed={'class_name': 'HanLP>Word2VecEmbedding',",
-HanLP/tests/script/convert_ptb_dep.py,13,'config': {,
-HanLP/tests/script/convert_ptb_dep.py,14,"'trainable': False,",
-HanLP/tests/script/convert_ptb_dep.py,15,"'embeddings_initializer': 'zero',",
-HanLP/tests/script/convert_ptb_dep.py,16,"'filepath': GLOVE_6B_100D,",
-HanLP/tests/script/convert_ptb_dep.py,17,"'expand_vocab': True,",
-HanLP/tests/script/convert_ptb_dep.py,18,"'lowercase': False,",
-HanLP/tests/script/convert_ptb_dep.py,19,"'unk': 'unk',",
-HanLP/tests/script/convert_ptb_dep.py,20,"'normalize': True,",
-HanLP/tests/script/convert_ptb_dep.py,21,'name': 'glove.6B.100d',
-HanLP/tests/script/convert_ptb_dep.py,22,"}},",
-HanLP/tests/script/convert_ptb_dep.py,23,"# lstm_dropout=0,",
-HanLP/tests/script/convert_ptb_dep.py,24,"# mlp_dropout=0,",
-HanLP/tests/script/convert_ptb_dep.py,25,"# embed_dropout=0,",
-HanLP/tests/script/convert_ptb_dep.py,26,epochs=1,
-HanLP/tests/script/convert_ptb_dep.py,27,),
-HanLP/tests/script/convert_ptb_dep.py,28,exit(1),
-HanLP/tests/script/convert_dm_sdp.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/script/convert_dm_sdp.py,2,Author: hankcs,
-HanLP/tests/script/convert_dm_sdp.py,3,Date: 2019-12-26 23:20,
-HanLP/tests/script/convert_dm_sdp.py,11,"parser.fit('data/semeval15/en.dm.train.conll', 'data/semeval15/en.dm.dev.conll', save_dir,",
-HanLP/tests/script/convert_dm_sdp.py,12,"pretrained_embed={'class_name': 'HanLP>Word2VecEmbedding',",
-HanLP/tests/script/convert_dm_sdp.py,13,'config': {,
-HanLP/tests/script/convert_dm_sdp.py,14,"'trainable': False,",
-HanLP/tests/script/convert_dm_sdp.py,15,"'embeddings_initializer': 'zero',",
-HanLP/tests/script/convert_dm_sdp.py,16,"'filepath': GLOVE_6B_100D,",
-HanLP/tests/script/convert_dm_sdp.py,17,"'expand_vocab': True,",
-HanLP/tests/script/convert_dm_sdp.py,18,"'lowercase': False,",
-HanLP/tests/script/convert_dm_sdp.py,19,"'unk': 'unk',",
-HanLP/tests/script/convert_dm_sdp.py,20,"'normalize': True,",
-HanLP/tests/script/convert_dm_sdp.py,21,'name': 'glove.6B.100d',
-HanLP/tests/script/convert_dm_sdp.py,22,"}},",
-HanLP/tests/script/convert_dm_sdp.py,23,"# lstm_dropout=0,",
-HanLP/tests/script/convert_dm_sdp.py,24,"# mlp_dropout=0,",
-HanLP/tests/script/convert_dm_sdp.py,25,"# embed_dropout=0,",
-HanLP/tests/script/convert_dm_sdp.py,26,epochs=1,
-HanLP/tests/script/convert_dm_sdp.py,27,),
-HanLP/tests/script/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/script/__init__.py,2,Author: hankcs,
-HanLP/tests/script/__init__.py,3,Date: 2020-01-01 17:34,
-HanLP/tests/script/convert_psd_sdp.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/script/convert_psd_sdp.py,2,Author: hankcs,
-HanLP/tests/script/convert_psd_sdp.py,3,Date: 2019-12-26 23:20,
-HanLP/tests/script/convert_psd_sdp.py,11,"parser.fit('data/semeval15/en.psd.train.conll', 'data/semeval15/en.psd.dev.conll', save_dir,",
-HanLP/tests/script/convert_psd_sdp.py,12,"pretrained_embed={'class_name': 'HanLP>Word2VecEmbedding',",
-HanLP/tests/script/convert_psd_sdp.py,13,'config': {,
-HanLP/tests/script/convert_psd_sdp.py,14,"'trainable': False,",
-HanLP/tests/script/convert_psd_sdp.py,15,"'embeddings_initializer': 'zero',",
-HanLP/tests/script/convert_psd_sdp.py,16,"'filepath': GLOVE_6B_100D,",
-HanLP/tests/script/convert_psd_sdp.py,17,"'expand_vocab': True,",
-HanLP/tests/script/convert_psd_sdp.py,18,"'lowercase': False,",
-HanLP/tests/script/convert_psd_sdp.py,19,"'unk': 'unk',",
-HanLP/tests/script/convert_psd_sdp.py,20,"'normalize': True,",
-HanLP/tests/script/convert_psd_sdp.py,21,'name': 'glove.6B.100d',
-HanLP/tests/script/convert_psd_sdp.py,22,"}},",
-HanLP/tests/script/convert_psd_sdp.py,23,"# lstm_dropout=0,",
-HanLP/tests/script/convert_psd_sdp.py,24,"# mlp_dropout=0,",
-HanLP/tests/script/convert_psd_sdp.py,25,"# embed_dropout=0,",
-HanLP/tests/script/convert_psd_sdp.py,26,epochs=1,
-HanLP/tests/script/convert_psd_sdp.py,27,),
-HanLP/tests/demo/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/__init__.py,2,Author: hankcs,
-HanLP/tests/demo/__init__.py,3,Date: 2019-12-30 18:01,
-HanLP/tests/demo/zh/demo_client.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/demo_client.py,2,Author: hankcs,
-HanLP/tests/demo/zh/demo_client.py,3,Date: 2020-01-08 04:43,
-HanLP/tests/demo/zh/demo_client.py,4,pip3 install tensorflow-serving-api-gpu,
-HanLP/tests/demo/zh/demo_client.py,29,10 secs timeout,
-HanLP/tests/demo/zh/demo_cws_trie.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/demo_cws_trie.py,2,Author: hankcs,
-HanLP/tests/demo/zh/demo_cws_trie.py,3,Date: 2019-12-28 21:25,
-HanLP/tests/demo/zh/demo_cws_trie.py,38,"In case you need the tag, use the following line instead",
-HanLP/tests/demo/zh/demo_cws_trie.py,39,"items += [(start, [(word, value)]) for (word, value, start, end) in words]",
-HanLP/tests/demo/zh/demo_dep.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/demo_dep.py,2,Author: hankcs,
-HanLP/tests/demo/zh/demo_dep.py,3,Date: 2019-12-28 21:25,
-HanLP/tests/demo/zh/demo_pipeline.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/demo_pipeline.py,2,Author: hankcs,
-HanLP/tests/demo/zh/demo_pipeline.py,3,Date: 2019-12-31 03:24,
-HanLP/tests/demo/zh/demo_pipeline.py,27,"By default the doc is json serializable, it holds true if your pipes output json serializable object too.",
-HanLP/tests/demo/zh/demo_pipeline.py,28,"print(json.dumps(doc, ensure_ascii=False, indent=2))",
-HanLP/tests/demo/zh/demo_pipeline.py,30,You can save the config to disk for deploying or sharing.,
-HanLP/tests/demo/zh/demo_pipeline.py,32,Then load it smoothly.,
-HanLP/tests/demo/zh/demo_classifier.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/demo_classifier.py,2,Author: hankcs,
-HanLP/tests/demo/zh/demo_classifier.py,3,Date: 2020-01-01 03:52,
-HanLP/tests/demo/zh/demo_classifier.py,11,predict a whole file in batch mode,
-HanLP/tests/demo/zh/demo_serving.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/demo_serving.py,2,Author: hankcs,
-HanLP/tests/demo/zh/demo_serving.py,3,Date: 2020-01-06 20:23,
-HanLP/tests/demo/zh/demo_ner.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/demo_ner.py,2,Author: hankcs,
-HanLP/tests/demo/zh/demo_ner.py,3,Date: 2019-12-30 19:52,
-HanLP/tests/demo/zh/demo_multiprocess.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/demo_multiprocess.py,2,Author: hankcs,
-HanLP/tests/demo/zh/demo_multiprocess.py,3,Date: 2020-02-15 11:30,
-HanLP/tests/demo/zh/demo_multiprocess.py,17,Important! The python multiprocessing package defaults to just call fork when creating a child process.,
-HanLP/tests/demo/zh/demo_multiprocess.py,18,This cannot work when the child process calls async code (i.e TensorFlow is multithreaded).,
-HanLP/tests/demo/zh/demo_multiprocess.py,19,See https://github.com/tensorflow/tensorflow/issues/8220#issuecomment-302826884,
-HanLP/tests/demo/zh/demo_multiprocess.py,20,See https://sefiks.com/2019/03/20/tips-and-tricks-for-gpu-and-multiprocessing-in-tensorflow/,
-HanLP/tests/demo/zh/demo_multiprocess.py,21,only spawn works with TensorFlow,
-HanLP/tests/demo/zh/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/__init__.py,2,Author: hankcs,
-HanLP/tests/demo/zh/__init__.py,3,Date: 2020-01-01 17:53,
-HanLP/tests/demo/zh/demo_sdp.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/demo_sdp.py,2,Author: hankcs,
-HanLP/tests/demo/zh/demo_sdp.py,3,Date: 2019-12-31 23:55,
-HanLP/tests/demo/zh/demo_cws.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/demo_cws.py,2,Author: hankcs,
-HanLP/tests/demo/zh/demo_cws.py,3,Date: 2019-12-28 21:25,
-HanLP/tests/demo/zh/demo_cws.py,19,We use regular expression for the sake of simplicity.,
-HanLP/tests/demo/zh/demo_cws.py,20,"However, you should use some trie trees for production",
-HanLP/tests/demo/zh/demo_pos.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/zh/demo_pos.py,2,Author: hankcs,
-HanLP/tests/demo/zh/demo_pos.py,3,Date: 2019-12-28 21:25,
-HanLP/tests/demo/en/demo_dep.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/en/demo_dep.py,2,Author: hankcs,
-HanLP/tests/demo/en/demo_dep.py,3,Date: 2020-01-01 17:55,
-HanLP/tests/demo/en/demo_pipeline.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/en/demo_pipeline.py,2,Author: hankcs,
-HanLP/tests/demo/en/demo_pipeline.py,3,Date: 2020-01-04 21:05,
-HanLP/tests/demo/en/demo_pipeline.py,26,You can save the config to disk for deploying or sharing.,
-HanLP/tests/demo/en/demo_pipeline.py,28,Then load it smoothly.,
-HanLP/tests/demo/en/demo_lm.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/en/demo_lm.py,2,Author: hankcs,
-HanLP/tests/demo/en/demo_lm.py,3,Date: 2020-02-11 09:14,
-HanLP/tests/demo/en/demo_sentiment_analysis.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/en/demo_sentiment_analysis.py,2,Author: hankcs,
-HanLP/tests/demo/en/demo_sentiment_analysis.py,3,Date: 2020-01-01 03:52,
-HanLP/tests/demo/en/demo_ner.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/en/demo_ner.py,2,Author: hankcs,
-HanLP/tests/demo/en/demo_ner.py,3,Date: 2020-01-03 22:50,
-HanLP/tests/demo/en/__init__.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/en/__init__.py,2,Author: hankcs,
-HanLP/tests/demo/en/__init__.py,3,Date: 2020-01-01 17:55,
-HanLP/tests/demo/en/demo_emotion_prediction.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/en/demo_emotion_prediction.py,2,Author: hankcs,
-HanLP/tests/demo/en/demo_emotion_prediction.py,3,Date: 2020-01-01 03:52,
-HanLP/tests/demo/en/demo_tok.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/en/demo_tok.py,2,Author: hankcs,
-HanLP/tests/demo/en/demo_tok.py,3,Date: 2020-01-02 19:41,
-HanLP/tests/demo/en/demo_sdp.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/en/demo_sdp.py,2,Author: hankcs,
-HanLP/tests/demo/en/demo_sdp.py,3,Date: 2020-01-03 15:26,
-HanLP/tests/demo/en/demo_sdp.py,7,semeval15 offers three independent annotations over the Penn Treebank (PTB),
-HanLP/tests/demo/en/demo_sdp.py,9,semantic_parser = hanlp.load(hanlp.pretrained.sdp.SEMEVAL15_DM_BIAFFINE_EN),
-HanLP/tests/demo/en/demo_sdp.py,10,semantic_parser = hanlp.load(hanlp.pretrained.sdp.SEMEVAL15_PSD_BIAFFINE_EN),
-HanLP/tests/demo/en/demo_sdp.py,19,type:CoNLLSentence,
-HanLP/tests/demo/en/demo_pos.py,1,-*- coding:utf-8 -*-,
-HanLP/tests/demo/en/demo_pos.py,2,Author: hankcs,
-HanLP/tests/demo/en/demo_pos.py,3,Date: 2020-01-03 22:16,
+HanLP/setup.py,1,-*- coding:utf-8 -*-,not
+HanLP/setup.py,2,Author: hankcs,not
+HanLP/setup.py,3,Date: 2019-12-28 19:26,not
+HanLP/setup.py,40,entry_points={,not
+HanLP/setup.py,41,'console_scripts': [,not
+HanLP/setup.py,42,"'hanlp=pyhanlp.main:main',",not
+HanLP/setup.py,43,"],",not
+HanLP/setup.py,44,"},",not
+HanLP/hanlp/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/__init__.py,3,Date: 2019-06-13 18:05,not
+HanLP/hanlp/__init__.py,13,prevent exporting _warn_preinit_stderr,not
+HanLP/hanlp/version.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/version.py,2,Author: hankcs,not
+HanLP/hanlp/version.py,3,Date: 2019-12-28 19:26,not
+HanLP/hanlp/transform/tsv.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/transform/tsv.py,2,Author: hankcs,not
+HanLP/hanlp/transform/tsv.py,3,Date: 2019-06-13 21:15,not
+HanLP/hanlp/transform/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/transform/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/transform/__init__.py,3,Date: 2019-12-29 22:24,not
+HanLP/hanlp/transform/table.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/transform/table.py,2,Author: hankcs,not
+HanLP/hanlp/transform/table.py,3,Date: 2019-11-10 21:00,not
+HanLP/hanlp/transform/table.py,59,the second one regardless of t is pair or triple,not
+HanLP/hanlp/transform/table.py,65,It's crucial to use tuple instead of list for all the three,not
+HanLP/hanlp/transform/text.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/transform/text.py,2,Author: hankcs,not
+HanLP/hanlp/transform/text.py,3,Date: 2019-12-04 11:46,not
+HanLP/hanlp/transform/txt.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/transform/txt.py,2,Author: hankcs,not
+HanLP/hanlp/transform/txt.py,3,Date: 2019-10-24 15:07,not
+HanLP/hanlp/transform/txt.py,74,TODO: optimize ngram generation using https://www.tensorflow.org/api_docs/python/tf/strings/ngrams,SATD
+HanLP/hanlp/transform/txt.py,77,"x, y",not
+HanLP/hanlp/transform/txt.py,107,single char,not
+HanLP/hanlp/transform/txt.py,111,bi chars,not
+HanLP/hanlp/transform/txt.py,115,tri chars,not
+HanLP/hanlp/transform/txt.py,123,four chars,not
+HanLP/hanlp/transform/txt.py,200,allow for [CLS] and [SEP],not
+HanLP/hanlp/datasets/glue.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/glue.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/glue.py,3,Date: 2019-11-10 11:47,not
+HanLP/hanlp/datasets/glue.py,28,_test_sst2(),not
+HanLP/hanlp/datasets/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/__init__.py,3,Date: 2019-06-13 18:15,not
+HanLP/hanlp/datasets/cws/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/cws/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/cws/__init__.py,3,Date: 2019-12-21 15:40,not
+HanLP/hanlp/datasets/cws/ctb.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/cws/ctb.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/cws/ctb.py,3,Date: 2019-12-28 22:19,not
+HanLP/hanlp/datasets/cws/sighan2005/msr.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/cws/sighan2005/msr.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/cws/sighan2005/msr.py,3,Date: 2019-12-21 15:42,not
+HanLP/hanlp/datasets/cws/sighan2005/pku.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/cws/sighan2005/pku.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/cws/sighan2005/pku.py,3,Date: 2019-12-21 15:42,not
+HanLP/hanlp/datasets/cws/sighan2005/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/cws/sighan2005/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/cws/sighan2005/__init__.py,3,Date: 2019-12-21 15:42,not
+HanLP/hanlp/datasets/parsing/semeval2016.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/parsing/semeval2016.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/parsing/semeval2016.py,3,Date: 2019-12-28 00:51,not
+HanLP/hanlp/datasets/parsing/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/parsing/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/parsing/__init__.py,3,Date: 2019-12-28 00:51,not
+HanLP/hanlp/datasets/parsing/ctb.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/parsing/ctb.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/parsing/ctb.py,3,Date: 2019-12-28 18:44,not
+HanLP/hanlp/datasets/classification/sentiment.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/classification/sentiment.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/classification/sentiment.py,3,Date: 2019-12-30 21:03,not
+HanLP/hanlp/datasets/classification/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/classification/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/classification/__init__.py,3,Date: 2019-11-10 11:49,not
+HanLP/hanlp/datasets/ner/conll03.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/ner/conll03.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/ner/conll03.py,3,Date: 2019-12-06 15:31,not
+HanLP/hanlp/datasets/ner/msra.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/ner/msra.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/ner/msra.py,3,Date: 2019-12-28 23:13,not
+HanLP/hanlp/datasets/ner/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/ner/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/ner/__init__.py,3,Date: 2019-12-06 15:32,not
+HanLP/hanlp/datasets/pos/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/pos/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/pos/__init__.py,3,Date: 2019-12-28 22:50,not
+HanLP/hanlp/datasets/pos/ctb.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/datasets/pos/ctb.py,2,Author: hankcs,not
+HanLP/hanlp/datasets/pos/ctb.py,3,Date: 2019-12-28 22:51,not
+HanLP/hanlp/utils/log_util.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/log_util.py,2,Author: hankcs,not
+HanLP/hanlp/utils/log_util.py,3,Date: 2019-08-24 22:12,not
+HanLP/hanlp/utils/log_util.py,64,shut_up_python_logging(),not
+HanLP/hanlp/utils/log_util.py,66,shut up tensorflow,not
+HanLP/hanlp/utils/log_util.py,67,set_tf_loglevel(),not
+HanLP/hanlp/utils/util.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/util.py,2,Author: hankcs,not
+HanLP/hanlp/utils/util.py,3,Date: 2019-10-27 19:09,not
+HanLP/hanlp/utils/util.py,54,infer whitespace after field,not
+HanLP/hanlp/utils/util.py,102,final json output,not
+HanLP/hanlp/utils/util.py,103,accumulation list for sublevel entries,not
+HanLP/hanlp/utils/util.py,104,holder for consecutive entries at exact indent level,not
+HanLP/hanlp/utils/util.py,108,"found a line indented further than the indent level, so add",not
+HanLP/hanlp/utils/util.py,109,it to the sublevel list,not
+HanLP/hanlp/utils/util.py,111,the first item in the sublevel will be the pending item,not
+HanLP/hanlp/utils/util.py,112,that was the previous line in the json,not
+HanLP/hanlp/utils/util.py,120,found a line at the exact indent level *and* we have sublevel,not
+HanLP/hanlp/utils/util.py,121,items. This means the sublevel items have come to an end,not
+HanLP/hanlp/utils/util.py,126,found a line at the exact indent level but no items indented,not
+HanLP/hanlp/utils/util.py,127,"further, so possibly start a new sub-level",not
+HanLP/hanlp/utils/util.py,129,"if there is already a pending item, it means that",not
+HanLP/hanlp/utils/util.py,130,consecutive entries in the json had the exact same,not
+HanLP/hanlp/utils/util.py,131,indentation and that last pending item was not the start,not
+HanLP/hanlp/utils/util.py,132,of a new sublevel.,not
+HanLP/hanlp/utils/util.py,137,it's possible that an item will be pending but not added to,not
+HanLP/hanlp/utils/util.py,138,"the output yet, so make sure it's not forgotten.",not
+HanLP/hanlp/utils/tf_util.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/tf_util.py,2,Author: hankcs,not
+HanLP/hanlp/utils/tf_util.py,3,Date: 2019-08-27 01:27,not
+HanLP/hanlp/utils/tf_util.py,57,Virtual devices must be set before GPUs have been initialized,not
+HanLP/hanlp/utils/tf_util.py,58,print(e),not
+HanLP/hanlp/utils/tf_util.py,71,"Currently, memory growth needs to be the same across GPUs",not
+HanLP/hanlp/utils/tf_util.py,75,Memory growth must be set before GPUs have been initialized,not
+HanLP/hanlp/utils/tf_util.py,76,print(e),not
+HanLP/hanlp/utils/tf_util.py,106,"if tf_inspect.isclass(arg) and not hasattr(arg, 'get_config'):",not
+HanLP/hanlp/utils/tf_util.py,107,raise ValueError(,not
+HanLP/hanlp/utils/tf_util.py,108,'Cannot register a class that does not have a get_config() method.'),not
+HanLP/hanlp/utils/component_util.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/component_util.py,2,Author: hankcs,not
+HanLP/hanlp/utils/component_util.py,3,Date: 2019-12-31 19:24,not
+HanLP/hanlp/utils/component_util.py,42,noinspection PyUnresolvedReferences,not
+HanLP/hanlp/utils/reflection.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/reflection.py,2,Author: hankcs,not
+HanLP/hanlp/utils/reflection.py,3,Date: 2019-12-28 16:41,not
+HanLP/hanlp/utils/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/utils/__init__.py,3,Date: 2019-08-24 22:12,not
+HanLP/hanlp/utils/english_tokenizer.py,1,!/usr/bin/env python,not
+HanLP/hanlp/utils/english_tokenizer.py,22,"Note that Unicode the category Pd is NOT a good set for valid word-breaking hyphens,",not
+HanLP/hanlp/utils/english_tokenizer.py,23,because it contains many dashes that should not be considered part of a word.,not
+HanLP/hanlp/utils/english_tokenizer.py,263,splice the sentence terminal off the last word/token if it has any at its borders,not
+HanLP/hanlp/utils/english_tokenizer.py,264,only look for the sentence terminal in the last three tokens,not
+HanLP/hanlp/utils/english_tokenizer.py,271,"any case of ""..."" or any single char (last == 0)",not
+HanLP/hanlp/utils/english_tokenizer.py,272,leave the token as it is,not
+HanLP/hanlp/utils/english_tokenizer.py,274,"""stuff.""",not
+HanLP/hanlp/utils/english_tokenizer.py,278,""".stuff""",not
+HanLP/hanlp/utils/english_tokenizer.py,284,keep splicing off any dangling commas and (semi-) colons,not
+HanLP/hanlp/utils/english_tokenizer.py,291,the dangling comma/colon,not
+HanLP/hanlp/utils/english_tokenizer.py,298,restart check to avoid index errors,not
+HanLP/hanlp/utils/english_tokenizer.py,300,split concat words,not
+HanLP/hanlp/utils/english_tokenizer.py,312,split APOSTROPHE,not
+HanLP/hanlp/utils/time_util.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/time_util.py,2,Author: hankcs,not
+HanLP/hanlp/utils/time_util.py,3,Date: 2019-08-27 00:01,not
+HanLP/hanlp/utils/io_util.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/io_util.py,2,Author: hankcs,not
+HanLP/hanlp/utils/io_util.py,3,Date: 2019-08-26 15:02,not
+HanLP/hanlp/utils/io_util.py,115,This is the fix,not
+HanLP/hanlp/utils/io_util.py,241,assert path.endswith('.zip'),not
+HanLP/hanlp/utils/io_util.py,251,"only one file, root_of_folder = ''",not
+HanLP/hanlp/utils/io_util.py,253,"only one folder, unzip to the same dir",not
+HanLP/hanlp/utils/io_util.py,256,assume zip contains more than one files or folders,not
+HanLP/hanlp/utils/io_util.py,261,move root to match folder name,not
+HanLP/hanlp/utils/io_util.py,306,check if resource is there,not
+HanLP/hanlp/utils/io_util.py,309,indicates the folder name has to be polished,not
+HanLP/hanlp/utils/io_util.py,329,realpath is where its path after exaction,not
+HanLP/hanlp/utils/io_util.py,352,remove the relative path in prefix,not
+HanLP/hanlp/utils/io_util.py,363,KB,not
+HanLP/hanlp/utils/io_util.py,365,MB,not
+HanLP/hanlp/utils/io_util.py,367,GB,not
+HanLP/hanlp/utils/io_util.py,457,if len(cells) != 2:,not
+HanLP/hanlp/utils/io_util.py,458,print(line),not
+HanLP/hanlp/utils/io_util.py,472,try to split the sequence to make it fit into max_seq_length,not
+HanLP/hanlp/utils/io_util.py,547,This doesn't play well with windows,not
+HanLP/hanlp/utils/io_util.py,556,copy stdout_fd before it is overwritten,not
+HanLP/hanlp/utils/io_util.py,557,NOTE: `copied` is inheritable on Windows when duplicating a standard stream,not
+HanLP/hanlp/utils/io_util.py,559,flush library buffers that dup2 knows nothing about,not
+HanLP/hanlp/utils/io_util.py,561,$ exec >&to,not
+HanLP/hanlp/utils/io_util.py,562,filename,not
+HanLP/hanlp/utils/io_util.py,564,$ exec > to,not
+HanLP/hanlp/utils/io_util.py,566,allow code to be run with the redirected stdout,not
+HanLP/hanlp/utils/io_util.py,568,restore stdout to its previous value,not
+HanLP/hanlp/utils/io_util.py,569,NOTE: dup2 makes stdout_fd inheritable unconditionally,not
+HanLP/hanlp/utils/io_util.py,572,$ exec >&copied,not
+HanLP/hanlp/utils/io_util.py,574,This is the best we can do,not
+HanLP/hanlp/utils/string_util.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/string_util.py,2,Author: hankcs,not
+HanLP/hanlp/utils/string_util.py,3,Date: 2019-08-25 00:19,not
+HanLP/hanlp/utils/string_util.py,26,treat every token as punct,not
+HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,1,!/usr/bin/env python,not
+HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,2,-*- coding: utf-8 -*-,not
+HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,11,any encodings that are backward compatible with ascii should work,not
+HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,101,"Using binary mode, because some encodings such as ""utf-8"" use variable number of",not
+HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,102,bytes to encode different Unicode points.,not
+HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,103,"Without using binary mode, we would probably need to understand each encoding more",not
+HanLP/hanlp/utils/file_read_backwards/file_read_backwards.py,104,and do the seek operations to find the proper boundary before issuing read,not
+HanLP/hanlp/utils/file_read_backwards/__init__.py,1,-*- coding: utf-8 -*-,not
+HanLP/hanlp/utils/file_read_backwards/__init__.py,3,noqa: F401,not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,1,!/usr/bin/env python,not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,2,-*- coding: utf-8 -*-,not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,9,we only support encodings that's backward compat with ascii,not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,25,set the previously read position to the,not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,52,we have read in entire file and have some unprocessed lines,not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,73,"the case where we have read in entire file and at the ""last"" line",not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,127,"examples: say, our new_lines are potentially ""\r\n"", ""\n"", ""\r""",not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,128,"find a reading point where it is not ""\n"", rewind further if necessary",not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,129,"if we have ""\r\n"" and we read in ""\n"",",not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,130,"the next iteration would treat ""\r"" as a different new line.",not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,131,"Q: why don't I just check if it is b""\n"", but use a function ?",SATD
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,132,"A: so that we can potentially expand this into generic sets of separators, later on.",not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,137,"as we rewind further, let's make sure we read more to compensate",not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,141,take care of special case when we are back to the beginnin of the file,SATD
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,152,replace only 1 instance of newline,not
+HanLP/hanlp/utils/file_read_backwards/buffer_work_space.py,153,"match longest line first (hence the reverse=True), we want to match ""\r\n"" rather than ""\n"" if we can",not
+HanLP/hanlp/utils/lang/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/lang/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/utils/lang/__init__.py,3,Date: 2020-01-09 18:46,not
+HanLP/hanlp/utils/lang/zh/char_table.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/lang/zh/char_table.py,2,Author: hankcs,not
+HanLP/hanlp/utils/lang/zh/char_table.py,3,Date: 2020-01-09 19:07,not
+HanLP/hanlp/utils/lang/zh/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/utils/lang/zh/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/utils/lang/zh/__init__.py,3,Date: 2020-01-09 18:47,not
+HanLP/hanlp/pretrained/classifiers.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/pretrained/classifiers.py,2,Author: hankcs,not
+HanLP/hanlp/pretrained/classifiers.py,3,Date: 2020-01-01 03:51,not
+HanLP/hanlp/pretrained/dep.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/pretrained/dep.py,2,Author: hankcs,not
+HanLP/hanlp/pretrained/dep.py,3,Date: 2019-12-29 02:55,not
+HanLP/hanlp/pretrained/word2vec.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/pretrained/word2vec.py,2,Author: hankcs,not
+HanLP/hanlp/pretrained/word2vec.py,3,Date: 2019-12-21 18:25,not
+HanLP/hanlp/pretrained/rnnlm.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/pretrained/rnnlm.py,2,Author: hankcs,not
+HanLP/hanlp/pretrained/rnnlm.py,3,Date: 2019-12-19 03:47,not
+HanLP/hanlp/pretrained/glove.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/pretrained/glove.py,2,Author: hankcs,not
+HanLP/hanlp/pretrained/glove.py,3,Date: 2019-08-27 20:42,not
+HanLP/hanlp/pretrained/cws.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/pretrained/cws.py,2,Author: hankcs,not
+HanLP/hanlp/pretrained/cws.py,3,Date: 2019-12-28 21:12,not
+HanLP/hanlp/pretrained/cws.py,8,SIGHAN2005_MSR_BERT_BASE = HANLP_URL + 'cws/cws_bert_base_msra_20191230_194627.zip',not
+HanLP/hanlp/pretrained/cws.py,10,CTB6_BERT_BASE = HANLP_URL + 'cws/cws_bert_base_ctb6_20191230_185536.zip',not
+HanLP/hanlp/pretrained/cws.py,13,Will be filled up during runtime,not
+HanLP/hanlp/pretrained/sdp.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/pretrained/sdp.py,2,Author: hankcs,not
+HanLP/hanlp/pretrained/sdp.py,3,Date: 2019-12-31 23:54,not
+HanLP/hanlp/pretrained/fasttext.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/pretrained/fasttext.py,2,Author: hankcs,not
+HanLP/hanlp/pretrained/fasttext.py,3,Date: 2019-12-30 18:57,not
+HanLP/hanlp/pretrained/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/pretrained/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/pretrained/__init__.py,3,Date: 2019-12-28 19:10,not
+HanLP/hanlp/pretrained/__init__.py,14,Will be filled up during runtime,not
+HanLP/hanlp/pretrained/ner.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/pretrained/ner.py,2,Author: hankcs,not
+HanLP/hanlp/pretrained/ner.py,3,Date: 2019-12-30 20:07,not
+HanLP/hanlp/pretrained/pos.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/pretrained/pos.py,2,Author: hankcs,not
+HanLP/hanlp/pretrained/pos.py,3,Date: 2019-12-29 01:57,not
+HanLP/hanlp/metrics/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/metrics/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/metrics/__init__.py,3,Date: 2019-09-14 21:55,not
+HanLP/hanlp/metrics/parsing/labeled_f1.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/metrics/parsing/labeled_f1.py,2,Author: hankcs,not
+HanLP/hanlp/metrics/parsing/labeled_f1.py,3,Date: 2019-12-27 21:42,not
+HanLP/hanlp/metrics/parsing/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/metrics/parsing/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/metrics/parsing/__init__.py,3,Date: 2019-12-27 00:48,not
+HanLP/hanlp/metrics/parsing/labeled_score.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/metrics/parsing/labeled_score.py,2,Author: hankcs,not
+HanLP/hanlp/metrics/parsing/labeled_score.py,3,Date: 2019-12-27 00:49,not
+HanLP/hanlp/metrics/chunking/conlleval.py,1,!/usr/bin/env python,not
+HanLP/hanlp/metrics/chunking/conlleval.py,3,Python version of the evaluation script from CoNLL'00-,not
+HanLP/hanlp/metrics/chunking/conlleval.py,5,Intentional differences:,not
+HanLP/hanlp/metrics/chunking/conlleval.py,6,- accept any space as delimiter by default,not
+HanLP/hanlp/metrics/chunking/conlleval.py,7,- optional file argument (default STDIN),not
+HanLP/hanlp/metrics/chunking/conlleval.py,8,- option to set boundary (-b argument),not
+HanLP/hanlp/metrics/chunking/conlleval.py,9,- LaTeX output (-l argument) not supported,not
+HanLP/hanlp/metrics/chunking/conlleval.py,10,- raw tags (-r argument) not supported,not
+HanLP/hanlp/metrics/chunking/conlleval.py,30,number of correctly identified chunks,not
+HanLP/hanlp/metrics/chunking/conlleval.py,31,number of correct chunk tags,not
+HanLP/hanlp/metrics/chunking/conlleval.py,32,number of chunks in corpus,not
+HanLP/hanlp/metrics/chunking/conlleval.py,33,number of identified chunks,not
+HanLP/hanlp/metrics/chunking/conlleval.py,34,token counter (ignores sentence breaks),not
+HanLP/hanlp/metrics/chunking/conlleval.py,36,counts by type,not
+HanLP/hanlp/metrics/chunking/conlleval.py,46,number of correctly identified chunks,not
+HanLP/hanlp/metrics/chunking/conlleval.py,47,number of correct chunk tags,not
+HanLP/hanlp/metrics/chunking/conlleval.py,48,number of chunks in corpus,not
+HanLP/hanlp/metrics/chunking/conlleval.py,49,number of identified chunks,not
+HanLP/hanlp/metrics/chunking/conlleval.py,50,token counter (ignores sentence breaks),not
+HanLP/hanlp/metrics/chunking/conlleval.py,120,currently processed chunks is correct until now,not
+HanLP/hanlp/metrics/chunking/conlleval.py,121,previous chunk tag in corpus,not
+HanLP/hanlp/metrics/chunking/conlleval.py,122,type of previously identified chunk tag,not
+HanLP/hanlp/metrics/chunking/conlleval.py,123,previously identified chunk tag,not
+HanLP/hanlp/metrics/chunking/conlleval.py,124,type of previous chunk tag in corpus,not
+HanLP/hanlp/metrics/chunking/conlleval.py,242,check if a chunk ended between the previous and current word,not
+HanLP/hanlp/metrics/chunking/conlleval.py,243,"arguments: previous and current chunk tags, previous and current types",not
+HanLP/hanlp/metrics/chunking/conlleval.py,259,check if a chunk started between the previous and current word,not
+HanLP/hanlp/metrics/chunking/conlleval.py,260,"arguments: previous and current chunk tags, previous and current types",not
+HanLP/hanlp/metrics/chunking/conlleval.py,274,corrected 1998-12-22: these chunks are assumed to have length 1,not
+HanLP/hanlp/metrics/chunking/conlleval.py,276,"print(""startOfChunk?"", prevTag, tag, prevType, type)",not
+HanLP/hanlp/metrics/chunking/conlleval.py,277,print(chunkStart),not
+HanLP/hanlp/metrics/chunking/iobes.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/metrics/chunking/iobes.py,2,Author: hankcs,not
+HanLP/hanlp/metrics/chunking/iobes.py,3,Date: 2019-09-14 21:55,not
+HanLP/hanlp/metrics/chunking/iobes.py,17,true_tags = list(itertools.chain.from_iterable(true_tags)),not
+HanLP/hanlp/metrics/chunking/iobes.py,18,pred_tags = list(itertools.chain.from_iterable(pred_tags)),not
+HanLP/hanlp/metrics/chunking/iobes.py,19,"self.state.update_state(true_tags, pred_tags)",not
+HanLP/hanlp/metrics/chunking/f1.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/metrics/chunking/f1.py,2,Author: hankcs,not
+HanLP/hanlp/metrics/chunking/f1.py,3,Date: 2019-12-29 23:09,not
+HanLP/hanlp/metrics/chunking/f1.py,21,"in this case, the model doesn't compute mask but provide a masking index, it's ok to",not
+HanLP/hanlp/metrics/chunking/f1.py,47,"If model predicts <pad>, it will fail most metrics. So replace it with a valid one",not
+HanLP/hanlp/metrics/chunking/sequence_labeling.py,15,might be Chinese,not
+HanLP/hanlp/metrics/chunking/sequence_labeling.py,37,for nested list,not
+HanLP/hanlp/metrics/chunking/sequence_labeling.py,365,compute averages,not
+HanLP/hanlp/metrics/chunking/bmes.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/metrics/chunking/bmes.py,2,Author: hankcs,not
+HanLP/hanlp/metrics/chunking/bmes.py,3,Date: 2019-09-14 21:55,not
+HanLP/hanlp/metrics/chunking/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/metrics/chunking/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/metrics/chunking/__init__.py,3,Date: 2019-12-21 03:49,not
+HanLP/hanlp/common/structure.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/common/structure.py,2,Author: hankcs,not
+HanLP/hanlp/common/structure.py,3,Date: 2019-08-26 14:58,not
+HanLP/hanlp/common/structure.py,69,@abstractmethod,not
+HanLP/hanlp/common/structure.py,72,"raise NotImplementedError('%s.%s()' % (self.__class__.__name__, inspect.stack()[0][3]))",not
+HanLP/hanlp/common/vocab.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/common/vocab.py,2,Author: hankcs,not
+HanLP/hanlp/common/vocab.py,3,Date: 2019-06-13 22:42,not
+HanLP/hanlp/common/vocab.py,130,"self.idx_to_token_table = index_to_string_table_from_tensor(self.idx_to_token, self.safe_unk_token)",not
+HanLP/hanlp/common/vocab.py,167,report = 'Length: {}\n'.format(len(self)),not
+HanLP/hanlp/common/vocab.py,168,"report += 'Samples: {}\n'.format(str(list(self.token_to_idx.keys())[:min(50, len(self))]))",not
+HanLP/hanlp/common/vocab.py,169,report += 'Mutable: {}'.format(self.mutable),not
+HanLP/hanlp/common/vocab.py,170,report = report.strip(),not
+HanLP/hanlp/common/document.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/common/document.py,2,Author: hankcs,not
+HanLP/hanlp/common/document.py,3,Date: 2019-12-31 04:16,not
+HanLP/hanlp/common/document.py,33,self.sentences = [],not
+HanLP/hanlp/common/document.py,34,self.tokens = [],not
+HanLP/hanlp/common/document.py,35,self.part_of_speech_tags = [],not
+HanLP/hanlp/common/document.py,36,self.named_entities = [],not
+HanLP/hanlp/common/document.py,37,self.syntactic_dependencies = [],not
+HanLP/hanlp/common/document.py,38,self.semantic_dependencies = [],not
+HanLP/hanlp/common/document.py,57,try to find if any field is conll type,not
+HanLP/hanlp/common/component.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/common/component.py,2,Author: hankcs,not
+HanLP/hanlp/common/component.py,3,Date: 2019-08-26 14:45,not
+HanLP/hanlp/common/component.py,78,"share config with transform for convenience, so we don't need to pass args around",not
+HanLP/hanlp/common/component.py,139,out.write('x\ty_true\ty_pred\n'),not
+HanLP/hanlp/common/component.py,260,allow for different,not
+HanLP/hanlp/common/component.py,276,batch + X.shape,not
+HanLP/hanlp/common/component.py,330,"assert num_examples, 'You forgot to return the number of training examples in your build_vocab'",not
+HanLP/hanlp/common/component.py,342,"need to know #batches, otherwise progbar crashes",not
+HanLP/hanlp/common/component.py,360,noinspection PyTypeChecker,not
+HanLP/hanlp/common/component.py,376,restore best model,not
+HanLP/hanlp/common/component.py,386,type:tf.keras.callbacks.History,not
+HanLP/hanlp/common/component.py,406,"verbose=1,",not
+HanLP/hanlp/common/component.py,460,"if data is a generator, it's usually one-time, not able to transform into a list",not
+HanLP/hanlp/common/component.py,520,free memory,not
+HanLP/hanlp/common/transform.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/common/transform.py,2,Author: hankcs,not
+HanLP/hanlp/common/transform.py,3,Date: 2019-10-27 14:22,not
+HanLP/hanlp/common/transform.py,55,"We prefer list over shape here, as it's easier to type [] than ()",not
+HanLP/hanlp/common/transform.py,56,"if isinstance(self.output_shapes, tuple):",not
+HanLP/hanlp/common/transform.py,57,self.output_shapes = list(self.output_shapes),not
+HanLP/hanlp/common/transform.py,58,"for i, shapes in enumerate(self.output_shapes):",not
+HanLP/hanlp/common/transform.py,59,"if isinstance(shapes, tuple):",not
+HanLP/hanlp/common/transform.py,60,self.output_shapes[i] = list(shapes),not
+HanLP/hanlp/common/transform.py,61,"for j, shape in enumerate(shapes):",not
+HanLP/hanlp/common/transform.py,62,"if isinstance(shape, tuple):",not
+HanLP/hanlp/common/transform.py,63,shapes[j] = list(shape),not
+HanLP/hanlp/common/transform.py,134,debug,not
+HanLP/hanlp/common/transform.py,135,for sample in self.file_to_samples(filepath):,not
+HanLP/hanlp/common/transform.py,136,pass,not
+HanLP/hanlp/common/transform.py,149,debug,not
+HanLP/hanlp/common/transform.py,150,for sample in self.inputs_to_samples(inputs):,not
+HanLP/hanlp/common/transform.py,151,pass,not
+HanLP/hanlp/common/transform.py,166,print('Did you forget to call build_config() on your transform?'),not
+HanLP/hanlp/common/transform.py,171,if not callable(samples):,not
+HanLP/hanlp/common/transform.py,172,samples = Transform.generator_to_callable(samples),not
+HanLP/hanlp/common/transform.py,221,tag vocab comes last usually,not
+HanLP/hanlp/common/trie.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/common/trie.py,2,Author: hankcs,not
+HanLP/hanlp/common/trie.py,3,Date: 2020-01-04 23:46,not
+HanLP/hanlp/common/constant.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/common/constant.py,2,Author: hankcs,not
+HanLP/hanlp/common/constant.py,3,Date: 2019-06-13 22:41,not
+HanLP/hanlp/common/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/common/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/common/__init__.py,3,Date: 2019-08-26 14:45,not
+HanLP/hanlp/layers/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/layers/__init__.py,3,Date: 2019-10-26 00:50,not
+HanLP/hanlp/layers/weight_normalization.py,1,Copyright 2019 The TensorFlow Authors. All Rights Reserved.,not
+HanLP/hanlp/layers/weight_normalization.py,2,,not
+HanLP/hanlp/layers/weight_normalization.py,3,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+HanLP/hanlp/layers/weight_normalization.py,4,you may not use this file except in compliance with the License.,not
+HanLP/hanlp/layers/weight_normalization.py,5,You may obtain a copy of the License at,not
+HanLP/hanlp/layers/weight_normalization.py,6,,not
+HanLP/hanlp/layers/weight_normalization.py,7,http://www.apache.org/licenses/LICENSE-2.0,not
+HanLP/hanlp/layers/weight_normalization.py,8,,not
+HanLP/hanlp/layers/weight_normalization.py,9,"Unless required by applicable law or agreed to in writing, software",not
+HanLP/hanlp/layers/weight_normalization.py,10,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+HanLP/hanlp/layers/weight_normalization.py,11,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+HanLP/hanlp/layers/weight_normalization.py,12,See the License for the specific language governing permissions and,not
+HanLP/hanlp/layers/weight_normalization.py,13,limitations under the License.,not
+HanLP/hanlp/layers/weight_normalization.py,14,=============================================================================,not
+HanLP/hanlp/layers/weight_normalization.py,81,The kernel's filter or unit dimension is -1,not
+HanLP/hanlp/layers/weight_normalization.py,101,Used for data initialization in self._data_dep_init.,not
+HanLP/hanlp/layers/weight_normalization.py,123,Ensure we read `self.g` after _update_weights.,not
+HanLP/hanlp/layers/weight_normalization.py,131,Replace kernel by normalized weight variable.,not
+HanLP/hanlp/layers/weight_normalization.py,135,Ensure we calculate result after updating kernel.,not
+HanLP/hanlp/layers/weight_normalization.py,152,pylint: disable=bad-continuation,not
+HanLP/hanlp/layers/weight_normalization.py,175,Generate data dependent init values,not
+HanLP/hanlp/layers/weight_normalization.py,181,Assign data dependent init values,not
+HanLP/hanlp/layers/crf/crf_layer.py,1,******************************************************************************,not
+HanLP/hanlp/layers/crf/crf_layer.py,2,Copyright 2017-2018 Intel Corporation,not
+HanLP/hanlp/layers/crf/crf_layer.py,3,,not
+HanLP/hanlp/layers/crf/crf_layer.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+HanLP/hanlp/layers/crf/crf_layer.py,5,you may not use this file except in compliance with the License.,not
+HanLP/hanlp/layers/crf/crf_layer.py,6,You may obtain a copy of the License at,not
+HanLP/hanlp/layers/crf/crf_layer.py,7,,not
+HanLP/hanlp/layers/crf/crf_layer.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+HanLP/hanlp/layers/crf/crf_layer.py,9,,not
+HanLP/hanlp/layers/crf/crf_layer.py,10,"Unless required by applicable law or agreed to in writing, software",not
+HanLP/hanlp/layers/crf/crf_layer.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+HanLP/hanlp/layers/crf/crf_layer.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+HanLP/hanlp/layers/crf/crf_layer.py,13,See the License for the specific language governing permissions and,not
+HanLP/hanlp/layers/crf/crf_layer.py,14,limitations under the License.,not
+HanLP/hanlp/layers/crf/crf_layer.py,15,******************************************************************************,not
+HanLP/hanlp/layers/crf/crf_layer.py,47,num of output labels,not
+HanLP/hanlp/layers/crf/crf_layer.py,81,"Just pass the received mask from previous layer, to the next layer or",not
+HanLP/hanlp/layers/crf/crf_layer.py,82,manipulate it if this layer changes the shape of the input,not
+HanLP/hanlp/layers/crf/crf_layer.py,85,pylint: disable=arguments-differ,not
+HanLP/hanlp/layers/crf/crf_layer.py,102,"def loss(self, y_true, y_pred):",not
+HanLP/hanlp/layers/crf/crf_layer.py,103,"y_pred = tf.convert_to_tensor(y_pred, dtype=self.dtype)",not
+HanLP/hanlp/layers/crf/crf_layer.py,104,"log_likelihood, self.transitions = \",not
+HanLP/hanlp/layers/crf/crf_layer.py,105,"crf_log_likelihood(y_pred,",not
+HanLP/hanlp/layers/crf/crf_layer.py,106,"tf.cast(y_true, dtype=tf.int32),",not
+HanLP/hanlp/layers/crf/crf_layer.py,107,"sequence_lengths,",not
+HanLP/hanlp/layers/crf/crf_layer.py,108,transition_params=self.transitions),not
+HanLP/hanlp/layers/crf/crf_layer.py,109,return tf.reduce_mean(-log_likelihood),not
+HanLP/hanlp/layers/crf/crf.py,1,Copyright 2019 The TensorFlow Authors. All Rights Reserved.,not
+HanLP/hanlp/layers/crf/crf.py,2,,not
+HanLP/hanlp/layers/crf/crf.py,3,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+HanLP/hanlp/layers/crf/crf.py,4,you may not use this file except in compliance with the License.,not
+HanLP/hanlp/layers/crf/crf.py,5,You may obtain a copy of the License at,not
+HanLP/hanlp/layers/crf/crf.py,6,,not
+HanLP/hanlp/layers/crf/crf.py,7,http://www.apache.org/licenses/LICENSE-2.0,not
+HanLP/hanlp/layers/crf/crf.py,8,,not
+HanLP/hanlp/layers/crf/crf.py,9,"Unless required by applicable law or agreed to in writing, software",not
+HanLP/hanlp/layers/crf/crf.py,10,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+HanLP/hanlp/layers/crf/crf.py,11,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+HanLP/hanlp/layers/crf/crf.py,12,See the License for the specific language governing permissions and,not
+HanLP/hanlp/layers/crf/crf.py,13,limitations under the License.,not
+HanLP/hanlp/layers/crf/crf.py,14,==============================================================================,not
+HanLP/hanlp/layers/crf/crf.py,23,TODO: Wrap functions in @tf.function once,SATD
+HanLP/hanlp/layers/crf/crf.py,24,https://github.com/tensorflow/tensorflow/issues/29075 is resolved,not
+HanLP/hanlp/layers/crf/crf.py,44,"If max_seq_len is 1, we skip the score calculation and simply gather the",not
+HanLP/hanlp/layers/crf/crf.py,45,unary potentials of the single tag.,not
+HanLP/hanlp/layers/crf/crf.py,60,Compute the scores of the given tag sequence.,not
+HanLP/hanlp/layers/crf/crf.py,102,"If max_seq_len is 1, we skip the score calculation and simply gather the",not
+HanLP/hanlp/layers/crf/crf.py,103,unary potentials of all active tags.,not
+HanLP/hanlp/layers/crf/crf.py,109,Compute the logsumexp of all scores of sequences matching the given tags.,not
+HanLP/hanlp/layers/crf/crf.py,133,Split up the first and rest of the inputs in preparation for the forward,not
+HanLP/hanlp/layers/crf/crf.py,134,algorithm.,not
+HanLP/hanlp/layers/crf/crf.py,138,"If max_seq_len is 1, we skip the algorithm and simply reduce_logsumexp over",not
+HanLP/hanlp/layers/crf/crf.py,139,"the ""initial state"" (the unary potentials).",not
+HanLP/hanlp/layers/crf/crf.py,142,Mask `log_norm` of the sequences with length <= zero.,not
+HanLP/hanlp/layers/crf/crf.py,151,Compute the alpha values in the forward algorithm in order to get the,not
+HanLP/hanlp/layers/crf/crf.py,152,partition function.,not
+HanLP/hanlp/layers/crf/crf.py,157,Mask `log_norm` of the sequences with length <= zero.,not
+HanLP/hanlp/layers/crf/crf.py,191,cast type to handle different types,not
+HanLP/hanlp/layers/crf/crf.py,204,Normalize the scores to get the log-likelihood per example.,not
+HanLP/hanlp/layers/crf/crf.py,231,Use int32 or int64 based on tag_indices' dtype.,not
+HanLP/hanlp/layers/crf/crf.py,263,Truncate by one on each side of the sequence to get the start and end,not
+HanLP/hanlp/layers/crf/crf.py,264,indices of each transition.,not
+HanLP/hanlp/layers/crf/crf.py,268,Encode the indices in a flattened representation.,not
+HanLP/hanlp/layers/crf/crf.py,273,Get the binary scores based on the flattened representation.,not
+HanLP/hanlp/layers/crf/crf.py,464,"If max_seq_len is 1, we skip the algorithm and simply return the argmax tag",not
+HanLP/hanlp/layers/crf/crf.py,465,and the max activation.,not
+HanLP/hanlp/layers/crf/crf.py,474,Computes forward decoding. Get last score and backpointers.,not
+HanLP/hanlp/layers/crf/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/crf/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/layers/crf/__init__.py,3,Date: 2019-12-18 22:55,not
+HanLP/hanlp/layers/embeddings/char_rnn.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/embeddings/char_rnn.py,2,Author: hankcs,not
+HanLP/hanlp/layers/embeddings/char_rnn.py,3,Date: 2019-12-20 17:02,not
+HanLP/hanlp/layers/embeddings/char_rnn.py,49,hidden = output,not
+HanLP/hanlp/layers/embeddings/contextual_string_embedding.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/embeddings/contextual_string_embedding.py,2,Author: hankcs,not
+HanLP/hanlp/layers/embeddings/contextual_string_embedding.py,3,Date: 2019-12-19 03:24,not
+HanLP/hanlp/layers/embeddings/contextual_string_embedding.py,49,discard dense layer,not
+HanLP/hanlp/layers/embeddings/fast_text.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/embeddings/fast_text.py,2,Author: hankcs,not
+HanLP/hanlp/layers/embeddings/fast_text.py,3,Date: 2019-10-29 13:14,not
+HanLP/hanlp/layers/embeddings/fast_text.py,33,fasttext print a blank line here,not
+HanLP/hanlp/layers/embeddings/fast_text.py,45,"vf = np.vectorize(self.embed, otypes=[np.ndarray])",not
+HanLP/hanlp/layers/embeddings/fast_text.py,73,placeholder tensor,not
+HanLP/hanlp/layers/embeddings/fast_text.py,78,seq_len = inputs.shape[-1],not
+HanLP/hanlp/layers/embeddings/fast_text.py,79,if not seq_len:,not
+HanLP/hanlp/layers/embeddings/fast_text.py,80,seq_len = 1,not
+HanLP/hanlp/layers/embeddings/fast_text.py,81,"return tf.zeros([1, seq_len, self.output_dim])",not
+HanLP/hanlp/layers/embeddings/char_cnn.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/embeddings/char_cnn.py,2,Author: hankcs,not
+HanLP/hanlp/layers/embeddings/char_cnn.py,3,Date: 2019-12-20 21:15,not
+HanLP/hanlp/layers/embeddings/char_cnn.py,81,Get shape and parameters,not
+HanLP/hanlp/layers/embeddings/char_cnn.py,88,Reshape weights,not
+HanLP/hanlp/layers/embeddings/char_cnn.py,92,Reshape input and apply weights,not
+HanLP/hanlp/layers/embeddings/char_cnn.py,97,Apply convolution,not
+HanLP/hanlp/layers/embeddings/char_cnn.py,101,Reduce max -- set to zero if all padded,not
+HanLP/hanlp/layers/embeddings/char_cnn.py,105,Reshape the output,not
+HanLP/hanlp/layers/embeddings/word2vec.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/embeddings/word2vec.py,2,Author: hankcs,not
+HanLP/hanlp/layers/embeddings/word2vec.py,3,Date: 2019-08-24 21:49,not
+HanLP/hanlp/layers/embeddings/word2vec.py,63,if vec is not None:,not
+HanLP/hanlp/layers/embeddings/word2vec.py,64,vec += bias,not
+HanLP/hanlp/layers/embeddings/word2vec.py,66,"vec = np.random.uniform(-scale, scale, [dim])",not
+HanLP/hanlp/layers/embeddings/word2vec.py,69,noinspection PyTypeChecker,not
+HanLP/hanlp/layers/embeddings/word2vec.py,123,"if the `unk` token exists in the pretrained,",not
+HanLP/hanlp/layers/embeddings/word2vec.py,124,"then replace it with a self-defined one, usually the one in word vocab",not
+HanLP/hanlp/layers/embeddings/word2vec.py,136,init matrix,not
+HanLP/hanlp/layers/embeddings/word2vec.py,141,insert to pret_embs,not
+HanLP/hanlp/layers/embeddings/word2vec.py,144,Retry lower case,not
+HanLP/hanlp/layers/embeddings/word2vec.py,189,"inputs._keras_mask = tf.not_equal(inputs, self.vocab.pad_idx)",not
+HanLP/hanlp/layers/embeddings/concat_embedding.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/embeddings/concat_embedding.py,2,Author: hankcs,not
+HanLP/hanlp/layers/embeddings/concat_embedding.py,3,Date: 2019-12-20 17:08,not
+HanLP/hanlp/layers/embeddings/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/embeddings/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/layers/embeddings/__init__.py,3,Date: 2019-08-24 21:48,not
+HanLP/hanlp/layers/embeddings/__init__.py,25,Embeddings need vocab,not
+HanLP/hanlp/layers/embeddings/__init__.py,27,Vocab won't present in the dict,not
+HanLP/hanlp/layers/embeddings/__init__.py,34,Embedding specific configuration,not
+HanLP/hanlp/layers/embeddings/__init__.py,36,fasttext can only run in eager mode,not
+HanLP/hanlp/layers/embeddings/__init__.py,38,fasttext accept string instead of int,not
+HanLP/hanlp/layers/embeddings/__init__.py,42,those embeddings require string as input,not
+HanLP/hanlp/layers/embeddings/__init__.py,44,use the string version of Word2VecEmbedding instead,not
+HanLP/hanlp/layers/embeddings/__init__.py,51,word_vocab.unlock(),not
+HanLP/hanlp/layers/transformers/loader.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/transformers/loader.py,2,Author: hankcs,not
+HanLP/hanlp/layers/transformers/loader.py,3,Date: 2020-01-04 06:05,not
+HanLP/hanlp/layers/transformers/loader.py,70,"(bert_weight, value_from_ckpt)",not
+HanLP/hanlp/layers/transformers/loader.py,105,noinspection PyTypeChecker,not
+HanLP/hanlp/layers/transformers/loader.py,137,noinspection PyUnboundLocalVariable,not
+HanLP/hanlp/layers/transformers/loader.py,140,noinspection PyUnboundLocalVariable,not
+HanLP/hanlp/layers/transformers/albert_tokenization.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/transformers/albert_tokenization.py,2,Author: hankcs,not
+HanLP/hanlp/layers/transformers/albert_tokenization.py,3,Date: 2020-01-22 19:31,not
+HanLP/hanlp/layers/transformers/albert_tokenization.py,19,"Note(mingdachen): For the purpose of consisent API, we are",not
+HanLP/hanlp/layers/transformers/albert_tokenization.py,20,generating a vocabulary for the sentence piece tokenizer.,not
+HanLP/hanlp/layers/transformers/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/layers/transformers/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/layers/transformers/__init__.py,3,Date: 2019-12-29 15:17,not
+HanLP/hanlp/optimizers/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/optimizers/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/optimizers/__init__.py,3,Date: 2019-11-11 18:44,not
+HanLP/hanlp/optimizers/adamw/optimization.py,1,Copyright 2019 The TensorFlow Authors. All Rights Reserved.,not
+HanLP/hanlp/optimizers/adamw/optimization.py,2,,not
+HanLP/hanlp/optimizers/adamw/optimization.py,3,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+HanLP/hanlp/optimizers/adamw/optimization.py,4,you may not use this file except in compliance with the License.,not
+HanLP/hanlp/optimizers/adamw/optimization.py,5,You may obtain a copy of the License at,not
+HanLP/hanlp/optimizers/adamw/optimization.py,6,,not
+HanLP/hanlp/optimizers/adamw/optimization.py,7,http://www.apache.org/licenses/LICENSE-2.0,not
+HanLP/hanlp/optimizers/adamw/optimization.py,8,,not
+HanLP/hanlp/optimizers/adamw/optimization.py,9,"Unless required by applicable law or agreed to in writing, software",not
+HanLP/hanlp/optimizers/adamw/optimization.py,10,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+HanLP/hanlp/optimizers/adamw/optimization.py,11,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+HanLP/hanlp/optimizers/adamw/optimization.py,12,See the License for the specific language governing permissions and,not
+HanLP/hanlp/optimizers/adamw/optimization.py,13,limitations under the License.,not
+HanLP/hanlp/optimizers/adamw/optimization.py,14,==============================================================================,not
+HanLP/hanlp/optimizers/adamw/optimization.py,45,"Implements polynomial warmup. i.e., if global_step < warmup_steps, the",not
+HanLP/hanlp/optimizers/adamw/optimization.py,46,learning rate will be `global_step/num_warmup_steps * init_lr`.,not
+HanLP/hanlp/optimizers/adamw/optimization.py,70,Implements linear decay of the learning rate.,not
+HanLP/hanlp/optimizers/adamw/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/optimizers/adamw/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/optimizers/adamw/__init__.py,3,Date: 2019-11-11 18:44,not
+HanLP/hanlp/optimizers/adamw/__init__.py,8,from hanlp.optimization.adamw.optimizers_v2 import AdamW,not
+HanLP/hanlp/optimizers/adamw/__init__.py,9,from hanlp.optimization.adamw.utils import get_weight_decays,not
+HanLP/hanlp/optimizers/adamw/__init__.py,12,"def create_optimizer(model, init_lr, num_train_steps, num_warmup_steps):",not
+HanLP/hanlp/optimizers/adamw/__init__.py,13,"""""""Creates an optimizer with learning rate schedule.""""""",not
+HanLP/hanlp/optimizers/adamw/__init__.py,14,wd_dict = get_weight_decays(model),not
+HanLP/hanlp/optimizers/adamw/__init__.py,15,,not
+HanLP/hanlp/optimizers/adamw/__init__.py,16,# Implements linear decay of the learning rate.,not
+HanLP/hanlp/optimizers/adamw/__init__.py,17,learning_rate_fn = tf.keras.optimizers.schedules.PolynomialDecay(,not
+HanLP/hanlp/optimizers/adamw/__init__.py,18,"initial_learning_rate=init_lr,",not
+HanLP/hanlp/optimizers/adamw/__init__.py,19,"decay_steps=num_train_steps,",not
+HanLP/hanlp/optimizers/adamw/__init__.py,20,end_learning_rate=0.0),not
+HanLP/hanlp/optimizers/adamw/__init__.py,21,if num_warmup_steps:,not
+HanLP/hanlp/optimizers/adamw/__init__.py,22,"learning_rate_fn = WarmUp(initial_learning_rate=init_lr,",not
+HanLP/hanlp/optimizers/adamw/__init__.py,23,"decay_schedule_fn=learning_rate_fn,",not
+HanLP/hanlp/optimizers/adamw/__init__.py,24,warmup_steps=num_warmup_steps),not
+HanLP/hanlp/optimizers/adamw/__init__.py,25,optimizer = AdamW(,not
+HanLP/hanlp/optimizers/adamw/__init__.py,26,"learning_rate=learning_rate_fn,",not
+HanLP/hanlp/optimizers/adamw/__init__.py,27,"weight_decay_rate=0.01,",not
+HanLP/hanlp/optimizers/adamw/__init__.py,28,"beta_1=0.9,",not
+HanLP/hanlp/optimizers/adamw/__init__.py,29,"beta_2=0.999,",not
+HanLP/hanlp/optimizers/adamw/__init__.py,30,"epsilon=1e-6,",not
+HanLP/hanlp/optimizers/adamw/__init__.py,31,"exclude_from_weight_decay=['layer_norm', 'bias'])",not
+HanLP/hanlp/optimizers/adamw/__init__.py,32,return optimizer,not
+HanLP/hanlp/optimizers/adamw/__init__.py,37,Implements linear decay of the learning rate.,not
+HanLP/hanlp/optimizers/adamw/__init__.py,58,"{'LayerNorm/gamma:0', 'LayerNorm/beta:0'}",not
+HanLP/hanlp/losses/sparse_categorical_crossentropy.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/losses/sparse_categorical_crossentropy.py,2,Author: hankcs,not
+HanLP/hanlp/losses/sparse_categorical_crossentropy.py,3,Date: 2019-12-20 01:29,not
+HanLP/hanlp/losses/sparse_categorical_crossentropy.py,18,This is equivalent to SUM_OVER_BATCH_SIZE,not
+HanLP/hanlp/losses/sparse_categorical_crossentropy.py,19,"loss /= tf.reduce_sum(tf.ones_like(sample_weight, dtype=loss.dtype))",not
+HanLP/hanlp/losses/sparse_categorical_crossentropy.py,20,This one is SUM_BY_NONZERO_WEIGHTS,not
+HanLP/hanlp/losses/sparse_categorical_crossentropy.py,31,"could use sum of sample_weight[:,0] too",SATD
+HanLP/hanlp/losses/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/losses/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/losses/__init__.py,3,Date: 2019-12-20 01:28,not
+HanLP/hanlp/callbacks/fine_csv_logger.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/callbacks/fine_csv_logger.py,2,Author: hankcs,not
+HanLP/hanlp/callbacks/fine_csv_logger.py,3,Date: 2019-12-05 02:12,not
+HanLP/hanlp/callbacks/fine_csv_logger.py,57,We set NA so that csv parsers do not fail for this last epoch.,not
+HanLP/hanlp/callbacks/fine_csv_logger.py,60,feed them twice to decide the actual width,not
+HanLP/hanlp/callbacks/fine_csv_logger.py,63,print headers and bars,not
+HanLP/hanlp/callbacks/fine_csv_logger.py,65,bars for markdown style,not
+HanLP/hanlp/callbacks/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/callbacks/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/callbacks/__init__.py,3,Date: 2019-12-05 02:10,not
+HanLP/hanlp/components/rnn_language_model.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/rnn_language_model.py,2,Author: hankcs,not
+HanLP/hanlp/components/rnn_language_model.py,3,Date: 2019-12-04 17:28,not
+HanLP/hanlp/components/rnn_language_model.py,53,noinspection PyMethodOverriding,not
+HanLP/hanlp/components/rnn_language_model.py,73,A slow implementation. Might better to let LSTM return states.,SATD
+HanLP/hanlp/components/rnn_language_model.py,74,"But anyway, this interface is for fun so let's take it easy",not
+HanLP/hanlp/components/tok.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/tok.py,2,Author: hankcs,not
+HanLP/hanlp/components/tok.py,3,Date: 2019-10-27 14:30,not
+HanLP/hanlp/components/tok.py,36,bigram_only = false,not
+HanLP/hanlp/components/lambda_wrapper.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/lambda_wrapper.py,2,Author: hankcs,not
+HanLP/hanlp/components/lambda_wrapper.py,3,Date: 2019-12-31 18:36,not
+HanLP/hanlp/components/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/components/__init__.py,3,Date: 2019-08-26 16:10,not
+HanLP/hanlp/components/pipeline.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/pipeline.py,2,Author: hankcs,not
+HanLP/hanlp/components/pipeline.py,3,Date: 2019-12-31 00:22,not
+HanLP/hanlp/components/pipeline.py,30,noinspection PyShadowingBuiltins,not
+HanLP/hanlp/components/pipeline.py,36,assume functions take multiple arguments,not
+HanLP/hanlp/components/ner.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/ner.py,2,Author: hankcs,not
+HanLP/hanlp/components/ner.py,3,Date: 2019-09-14 20:33,not
+HanLP/hanlp/components/ner.py,43,"assert kwargs.get('run_eagerly', True), 'This component can only run eagerly'",not
+HanLP/hanlp/components/ner.py,44,kwargs['run_eagerly'] = True,not
+HanLP/hanlp/components/pos.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/pos.py,2,Author: hankcs,not
+HanLP/hanlp/components/pos.py,3,Date: 2019-12-05 23:05,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,2,Author: hankcs,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,3,Date: 2019-12-22 12:47,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,28,keras will use cuda lstm when config.lstm_dropout is 0,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,82,noinspection PyMethodOverriding,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,88,because we are customizing batching,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,90,progbar: tf.keras.callbacks.ProgbarLogger = callbacks[-1],not
+HanLP/hanlp/components/parsers/biaffine_parser.py,117,evaluate on dev,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,159,ignore all punctuation if not specified,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,196,noinspection PyMethodOverriding,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,217,noinspection PyMethodOverriding,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,236,"arc_preds = eisner(arc_scores, mask)",not
+HanLP/hanlp/components/parsers/biaffine_parser.py,254,otherwise AttributeError: 'ProgbarLogger' object has no attribute 'verbose',not
+HanLP/hanlp/components/parsers/biaffine_parser.py,297,noinspection PyTypeChecker,not
+HanLP/hanlp/components/parsers/biaffine_parser.py,327,"arc_preds = eisner(arc_scores, mask)",not
+HanLP/hanlp/components/parsers/conll.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/parsers/conll.py,2,Author: hankcs,not
+HanLP/hanlp/components/parsers/conll.py,3,Date: 2019-12-26 15:37,not
+HanLP/hanlp/components/parsers/conll.py,232,"custom bucketing, load corpus into memory",not
+HanLP/hanlp/components/parsers/conll.py,243,"the number of chunks in each bucket, which is clipped by",not
+HanLP/hanlp/components/parsers/conll.py,244,"range [1, len(bucket)]",not
+HanLP/hanlp/components/parsers/conll.py,290,"insert root word with arbitrary fields, anyway it will be masked",not
+HanLP/hanlp/components/parsers/conll.py,291,"form, cpos, head, deprel = sample[0]",not
+HanLP/hanlp/components/parsers/conll.py,314,"make root the 2ed elements while 0th is pad, 1st is unk",not
+HanLP/hanlp/components/parsers/conll.py,354,heuristic to find the orphan relation,not
+HanLP/hanlp/components/parsers/conll.py,373,found end of token,not
+HanLP/hanlp/components/parsers/conll.py,385,"make root the 2ed elements while 0th is pad, 1st is unk",not
+HanLP/hanlp/components/parsers/conll.py,414,"insert root word with arbitrary fields, anyway it will be masked",not
+HanLP/hanlp/components/parsers/conll.py,422,"custom bucketing, load corpus into memory",not
+HanLP/hanlp/components/parsers/conll.py,433,"the number of chunks in each bucket, which is clipped by",not
+HanLP/hanlp/components/parsers/conll.py,434,"range [1, len(bucket)]",not
+HanLP/hanlp/components/parsers/conll.py,473,for x in generator():,not
+HanLP/hanlp/components/parsers/conll.py,474,print(len(x[-1][-1])),not
+HanLP/hanlp/components/parsers/conll.py,498,orphan,not
+HanLP/hanlp/components/parsers/alg.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/parsers/alg.py,2,Author: hankcs,not
+HanLP/hanlp/components/parsers/alg.py,3,Date: 2019-12-26 19:49,not
+HanLP/hanlp/components/parsers/alg.py,4,Ported from the PyTorch implementation https://github.com/zysite/biaffine-parser,not
+HanLP/hanlp/components/parsers/alg.py,40,count the frequency of each datapoint,not
+HanLP/hanlp/components/parsers/alg.py,43,calculate the sum of the values of the same datapoints,not
+HanLP/hanlp/components/parsers/alg.py,45,initialize k centroids randomly,not
+HanLP/hanlp/components/parsers/alg.py,47,assign labels to each datapoint based on centroids,not
+HanLP/hanlp/components/parsers/alg.py,51,make sure number of datapoints is greater than that of clusters,not
+HanLP/hanlp/components/parsers/alg.py,55,"if an empty cluster is encountered,",not
+HanLP/hanlp/components/parsers/alg.py,56,choose the farthest datapoint from the biggest cluster,not
+HanLP/hanlp/components/parsers/alg.py,57,and move that the empty one,not
+HanLP/hanlp/components/parsers/alg.py,66,update the centroids,not
+HanLP/hanlp/components/parsers/alg.py,69,re-assign all datapoints to clusters,not
+HanLP/hanlp/components/parsers/alg.py,73,assign all datapoints to the new-generated clusters,not
+HanLP/hanlp/components/parsers/alg.py,74,without considering the empty ones,not
+HanLP/hanlp/components/parsers/alg.py,76,get the centroids of the assigned clusters,not
+HanLP/hanlp/components/parsers/alg.py,78,map all values of datapoints to buckets,not
+HanLP/hanlp/components/parsers/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/parsers/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/components/parsers/__init__.py,3,Date: 2019-12-22 12:46,not
+HanLP/hanlp/components/parsers/biaffine/model.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/parsers/biaffine/model.py,2,Author: hankcs,not
+HanLP/hanlp/components/parsers/biaffine/model.py,3,Date: 2019-12-26 23:04,not
+HanLP/hanlp/components/parsers/biaffine/model.py,22,the embedding layer,not
+HanLP/hanlp/components/parsers/biaffine/model.py,35,the word-lstm layer,not
+HanLP/hanlp/components/parsers/biaffine/model.py,44,turns out to hinder performance,not
+HanLP/hanlp/components/parsers/biaffine/model.py,48,the MLP layers,not
+HanLP/hanlp/components/parsers/biaffine/model.py,58,the Biaffine layers,not
+HanLP/hanlp/components/parsers/biaffine/model.py,71,noinspection PyMethodOverriding,not
+HanLP/hanlp/components/parsers/biaffine/model.py,74,"batch_size, seq_len = words.shape",not
+HanLP/hanlp/components/parsers/biaffine/model.py,75,get the mask and lengths of given batch,not
+HanLP/hanlp/components/parsers/biaffine/model.py,76,mask = words.ne(self.pad_index),not
+HanLP/hanlp/components/parsers/biaffine/model.py,78,set the indices larger than num_embeddings to unk_index,not
+HanLP/hanlp/components/parsers/biaffine/model.py,79,ext_mask = words.ge(self.word_embed.num_embeddings),not
+HanLP/hanlp/components/parsers/biaffine/model.py,83,get outputs from embedding layers,not
+HanLP/hanlp/components/parsers/biaffine/model.py,89,concatenate the word and feat representations,not
+HanLP/hanlp/components/parsers/biaffine/model.py,95,apply MLPs to the BiLSTM output states,not
+HanLP/hanlp/components/parsers/biaffine/model.py,101,get arc and rel scores from the bilinear attention,not
+HanLP/hanlp/components/parsers/biaffine/model.py,102,"[batch_size, seq_len, seq_len]",not
+HanLP/hanlp/components/parsers/biaffine/model.py,104,"[batch_size, seq_len, seq_len, n_rels]",not
+HanLP/hanlp/components/parsers/biaffine/model.py,106,set the scores that exceed the length of each sentence to -inf,not
+HanLP/hanlp/components/parsers/biaffine/layers.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/parsers/biaffine/layers.py,2,Author: hankcs,not
+HanLP/hanlp/components/parsers/biaffine/layers.py,3,Date: 2019-12-26 23:05,not
+HanLP/hanlp/components/parsers/biaffine/layers.py,4,Ported from the PyTorch implementation https://github.com/zysite/biaffine-parser,not
+HanLP/hanlp/components/parsers/biaffine/layers.py,36,noinspection PyMethodOverriding,not
+HanLP/hanlp/components/parsers/biaffine/layers.py,42,"[batch_size, n_out, seq_len, seq_len]",not
+HanLP/hanlp/components/parsers/biaffine/layers.py,44,remove dim 1 if n_out == 1,not
+HanLP/hanlp/components/parsers/biaffine/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/parsers/biaffine/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/components/parsers/biaffine/__init__.py,3,Date: 2019-12-26 23:03,not
+HanLP/hanlp/components/taggers/tagger.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/taggers/tagger.py,2,Author: hankcs,not
+HanLP/hanlp/components/taggers/tagger.py,3,Date: 2019-10-25 21:49,not
+HanLP/hanlp/components/taggers/cnn_tagger.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/taggers/cnn_tagger.py,2,Author: hankcs,not
+HanLP/hanlp/components/taggers/cnn_tagger.py,3,Date: 2019-10-31 13:52,not
+HanLP/hanlp/components/taggers/cnn_tagger.py,77,if inputs.shape_h[0] is None:,not
+HanLP/hanlp/components/taggers/cnn_tagger.py,78,return tf.zeros_like(),not
+HanLP/hanlp/components/taggers/cnn_tagger.py,79,print(inputs),not
+HanLP/hanlp/components/taggers/cnn_tagger.py,99,refine the type,not
+HanLP/hanlp/components/taggers/cnn_tagger.py,108,"model.build((None, None, 3))",not
+HanLP/hanlp/components/taggers/cnn_tagger.py,111,noinspection PyMethodOverriding,not
+HanLP/hanlp/components/taggers/rnn_tagger.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/taggers/rnn_tagger.py,2,Author: hankcs,not
+HanLP/hanlp/components/taggers/rnn_tagger.py,3,Date: 2019-09-14 20:30,not
+HanLP/hanlp/components/taggers/rnn_tagger.py,50,remove the pre-trained embedding,not
+HanLP/hanlp/components/taggers/rnn_tagger.py,80,You cannot build your model by calling `build` if your layers do not support float type inputs.,not
+HanLP/hanlp/components/taggers/rnn_tagger.py,81,"Instead, in order to instantiate and build your model, `call` your model on real tensor data (of the",not
+HanLP/hanlp/components/taggers/rnn_tagger.py,82,correct dtype).,not
+HanLP/hanlp/components/taggers/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/taggers/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/components/taggers/__init__.py,3,Date: 2019-08-28 15:39,not
+HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,2,Author: hankcs,not
+HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,3,Date: 2019-10-25 00:04,not
+HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,91,self.concat = tf.keras.layers.Concatenate(axis=2),not
+HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,132,Mask paddings.,not
+HanLP/hanlp/components/taggers/ngram_conv/ngram_conv_tagger.py,135,dirty hack,SATD
+HanLP/hanlp/components/taggers/ngram_conv/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/taggers/ngram_conv/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/components/taggers/ngram_conv/__init__.py,3,Date: 2019-12-29 22:18,not
+HanLP/hanlp/components/taggers/transformers/transformer_transform.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/taggers/transformers/transformer_transform.py,2,Author: hankcs,not
+HanLP/hanlp/components/taggers/transformers/transformer_transform.py,3,Date: 2019-12-29 15:14,not
+HanLP/hanlp/components/taggers/transformers/transformer_transform.py,29,-2 for special tokens [CLS] and [SEP],not
+HanLP/hanlp/components/taggers/transformers/transformer_transform.py,40,English albert use <pad> instead of [PAD],not
+HanLP/hanlp/components/taggers/transformers/transformer_transform.py,58,"(input_ids, input_mask, segment_ids), label_ids",not
+HanLP/hanlp/components/taggers/transformers/transformer_transform.py,88,xlnet has a cls token at the end,not
+HanLP/hanlp/components/taggers/transformers/transformer_transform.py,93,"roberta uses an extra separator b/w pairs of sentences, cf. github.com/pytorch/fairseq/commit/1684e166e3da03f5b600dbb7855cb98ddfcd0805",not
+HanLP/hanlp/components/taggers/transformers/transformer_transform.py,95,pad on the left for xlnet,not
+HanLP/hanlp/components/taggers/transformers/utils.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/taggers/transformers/utils.py,2,Author: hankcs,not
+HanLP/hanlp/components/taggers/transformers/utils.py,3,Date: 2019-12-29 15:32,not
+HanLP/hanlp/components/taggers/transformers/utils.py,44,some wired chars cause the tagger to return empty list,not
+HanLP/hanlp/components/taggers/transformers/utils.py,47,"Use the real label id for the first token of the word, and padding ids for the remaining tokens",not
+HanLP/hanlp/components/taggers/transformers/utils.py,50,"Account for [CLS] and [SEP] with ""- 2"" and with ""- 3"" for RoBERTa.",not
+HanLP/hanlp/components/taggers/transformers/utils.py,61,The convention in BERT is:,not
+HanLP/hanlp/components/taggers/transformers/utils.py,62,(a) For sequence pairs:,not
+HanLP/hanlp/components/taggers/transformers/utils.py,63,tokens:   [CLS] is this jack ##son ##ville ? [SEP] no it is not . [SEP],not
+HanLP/hanlp/components/taggers/transformers/utils.py,64,type_ids:   0   0  0    0    0     0       0   0   1  1  1  1   1   1,not
+HanLP/hanlp/components/taggers/transformers/utils.py,65,(b) For single sequences:,not
+HanLP/hanlp/components/taggers/transformers/utils.py,66,tokens:   [CLS] the dog is hairy . [SEP],not
+HanLP/hanlp/components/taggers/transformers/utils.py,67,type_ids:   0   0   0   0  0     0   0,not
+HanLP/hanlp/components/taggers/transformers/utils.py,68,,not
+HanLP/hanlp/components/taggers/transformers/utils.py,69,"Where ""type_ids"" are used to indicate whether this is the first",not
+HanLP/hanlp/components/taggers/transformers/utils.py,70,sequence or the second sequence. The embedding vectors for `type=0` and,not
+HanLP/hanlp/components/taggers/transformers/utils.py,71,`type=1` were learned during pre-training and are added to the wordpiece,not
+HanLP/hanlp/components/taggers/transformers/utils.py,72,embedding vector (and position vector). This is not *strictly* necessary,not
+HanLP/hanlp/components/taggers/transformers/utils.py,73,"since the [SEP] token unambiguously separates the sequences, but it makes",not
+HanLP/hanlp/components/taggers/transformers/utils.py,74,it easier for the model to learn the concept of sequences.,not
+HanLP/hanlp/components/taggers/transformers/utils.py,75,,not
+HanLP/hanlp/components/taggers/transformers/utils.py,76,"For classification tasks, the first vector (corresponding to [CLS]) is",not
+HanLP/hanlp/components/taggers/transformers/utils.py,77,"used as as the ""sentence vector"". Note that this only makes sense because",not
+HanLP/hanlp/components/taggers/transformers/utils.py,78,the entire model is fine-tuned.,not
+HanLP/hanlp/components/taggers/transformers/utils.py,82,roberta uses an extra separator b/w pairs of sentences,not
+HanLP/hanlp/components/taggers/transformers/utils.py,98,The mask has 1 for real tokens and 0 for padding tokens. Only real,not
+HanLP/hanlp/components/taggers/transformers/utils.py,99,tokens are attended to.,not
+HanLP/hanlp/components/taggers/transformers/utils.py,102,Zero-pad up to the sequence length.,not
+HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,2,Author: hankcs,not
+HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,3,Date: 2019-12-29 13:55,not
+HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,59,noinspection PyMethodOverriding,not
+HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,68,"opt = tfa.optimizers.AdamW(learning_rate=3e-5, epsilon=1e-08, weight_decay=0.01)",not
+HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,69,"opt = tf.keras.optimizers.Adam(learning_rate=3e-5, epsilon=1e-08)",not
+HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,78,loss scaling is currently required when using mixed precision,not
+HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,94,mask out padding labels,not
+HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,95,class_weight=dict(,not
+HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,96,"(i, 0 if i == 0 else 1) for i in range(len(self.transform.tag_vocab)))",not
+HanLP/hanlp/components/taggers/transformers/transformer_tagger.py,97,type:tf.keras.callbacks.History,not
+HanLP/hanlp/components/taggers/transformers/metrics.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/taggers/transformers/metrics.py,2,Author: hankcs,not
+HanLP/hanlp/components/taggers/transformers/metrics.py,3,Date: 2019-12-30 16:33,not
+HanLP/hanlp/components/taggers/transformers/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/taggers/transformers/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/components/taggers/transformers/__init__.py,3,Date: 2019-12-29 13:57,not
+HanLP/hanlp/components/classifiers/transformer_classifier.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/classifiers/transformer_classifier.py,2,Author: hankcs,not
+HanLP/hanlp/components/classifiers/transformer_classifier.py,3,Date: 2019-11-10 13:19,not
+HanLP/hanlp/components/classifiers/transformer_classifier.py,100,noinspection PyMethodOverriding,not
+HanLP/hanlp/components/classifiers/transformer_classifier.py,114,fix sub-word generated by BERT tagger,not
+HanLP/hanlp/components/classifiers/transformer_classifier.py,132,noinspection PyMethodOverriding,not
+HanLP/hanlp/components/classifiers/transformer_classifier.py,136,"opt = tfa.optimizers.AdamW(learning_rate=3e-5, epsilon=1e-08, weight_decay=0.01)",not
+HanLP/hanlp/components/classifiers/transformer_classifier.py,137,"opt = tf.keras.optimizers.Adam(learning_rate=3e-5, epsilon=1e-08)",not
+HanLP/hanlp/components/classifiers/transformer_classifier.py,146,loss scaling is currently required when using mixed precision,not
+HanLP/hanlp/components/classifiers/transformer_classifier.py,150,noinspection PyMethodOverriding,not
+HanLP/hanlp/components/classifiers/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/hanlp/components/classifiers/__init__.py,2,Author: hankcs,not
+HanLP/hanlp/components/classifiers/__init__.py,3,Date: 2019-11-10 13:18,not
+HanLP/tests/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/__init__.py,2,Author: hankcs,not
+HanLP/tests/__init__.py,3,Date: 2019-06-13 23:43,not
+HanLP/tests/train/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/__init__.py,2,Author: hankcs,not
+HanLP/tests/train/__init__.py,3,Date: 2019-12-28 22:22,not
+HanLP/tests/train/zh/train_chnsenticorp_bert.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/train_chnsenticorp_bert.py,2,Author: hankcs,not
+HanLP/tests/train/zh/train_chnsenticorp_bert.py,3,Date: 2019-12-30 21:01,not
+HanLP/tests/train/zh/train_msra_ner_rnn.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/train_msra_ner_rnn.py,2,Author: hankcs,not
+HanLP/tests/train/zh/train_msra_ner_rnn.py,3,Date: 2019-12-28 23:15,not
+HanLP/tests/train/zh/train_semeval16_text.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/train_semeval16_text.py,2,Author: hankcs,not
+HanLP/tests/train/zh/train_semeval16_text.py,3,Date: 2019-12-26 23:20,not
+HanLP/tests/train/zh/train_ctb7_dep.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/train_ctb7_dep.py,2,Author: hankcs,not
+HanLP/tests/train/zh/train_ctb7_dep.py,3,Date: 2019-12-28 18:33,not
+HanLP/tests/train/zh/train_ctb7_dep.py,11,"parser.fit(CTB7_DEP_TRAIN, CTB7_DEP_VALID, save_dir,",not
+HanLP/tests/train/zh/train_ctb7_dep.py,12,"pretrained_embed={'class_name': 'HanLP>Word2VecEmbedding',",not
+HanLP/tests/train/zh/train_ctb7_dep.py,13,'config': {,not
+HanLP/tests/train/zh/train_ctb7_dep.py,14,"'trainable': False,",not
+HanLP/tests/train/zh/train_ctb7_dep.py,15,"'embeddings_initializer': 'zero',",not
+HanLP/tests/train/zh/train_ctb7_dep.py,16,"'filepath': CIP_W2V_100_CN,",not
+HanLP/tests/train/zh/train_ctb7_dep.py,17,"'expand_vocab': True,",not
+HanLP/tests/train/zh/train_ctb7_dep.py,18,"'lowercase': True,",not
+HanLP/tests/train/zh/train_ctb7_dep.py,19,"'normalize': True,",not
+HanLP/tests/train/zh/train_ctb7_dep.py,20,"}},",not
+HanLP/tests/train/zh/train_ctb7_dep.py,21,),not
+HanLP/tests/train/zh/train_ctb5_dep.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/train_ctb5_dep.py,2,Author: hankcs,not
+HanLP/tests/train/zh/train_ctb5_dep.py,3,Date: 2019-12-28 18:33,not
+HanLP/tests/train/zh/train_ctb5_dep.py,12,"parser.fit(CTB5_DEP_TRAIN, CTB5_DEP_VALID, save_dir,",not
+HanLP/tests/train/zh/train_ctb5_dep.py,13,"pretrained_embed={'class_name': 'HanLP>Word2VecEmbedding',",not
+HanLP/tests/train/zh/train_ctb5_dep.py,14,'config': {,not
+HanLP/tests/train/zh/train_ctb5_dep.py,15,"'trainable': False,",not
+HanLP/tests/train/zh/train_ctb5_dep.py,16,"'embeddings_initializer': 'zero',",not
+HanLP/tests/train/zh/train_ctb5_dep.py,17,"'filepath': CTB5_FASTTEXT_300_CN,",not
+HanLP/tests/train/zh/train_ctb5_dep.py,18,"'expand_vocab': True,",not
+HanLP/tests/train/zh/train_ctb5_dep.py,19,"'lowercase': True,",not
+HanLP/tests/train/zh/train_ctb5_dep.py,20,"'normalize': True,",not
+HanLP/tests/train/zh/train_ctb5_dep.py,21,"}},",not
+HanLP/tests/train/zh/train_ctb5_dep.py,22,),not
+HanLP/tests/train/zh/train_msra_ner_bert.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/train_msra_ner_bert.py,2,Author: hankcs,not
+HanLP/tests/train/zh/train_msra_ner_bert.py,3,Date: 2019-12-28 23:15,not
+HanLP/tests/train/zh/train_msra_ner_bert.py,12,accuracy is faster,not
+HanLP/tests/train/zh/train_ctb5_pos_rnn.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/train_ctb5_pos_rnn.py,2,Author: hankcs,not
+HanLP/tests/train/zh/train_ctb5_pos_rnn.py,3,Date: 2019-12-28 22:46,not
+HanLP/tests/train/zh/train_msra_ner_ngram_conv.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/train_msra_ner_ngram_conv.py,2,Author: hankcs,not
+HanLP/tests/train/zh/train_msra_ner_ngram_conv.py,3,Date: 2019-12-28 23:15,not
+HanLP/tests/train/zh/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/__init__.py,2,Author: hankcs,not
+HanLP/tests/train/zh/__init__.py,3,Date: 2020-01-01 18:24,not
+HanLP/tests/train/zh/train_semeval16_news.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/train_semeval16_news.py,2,Author: hankcs,not
+HanLP/tests/train/zh/train_semeval16_news.py,3,Date: 2019-12-26 23:20,not
+HanLP/tests/train/zh/train_msra_ner_albert.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/train_msra_ner_albert.py,2,Author: hankcs,not
+HanLP/tests/train/zh/train_msra_ner_albert.py,3,Date: 2019-12-28 23:15,not
+HanLP/tests/train/zh/cws/train_pku980106_conv_cws.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_pku980106_conv_cws.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_pku980106_conv_cws.py,3,Date: 2019-12-21 15:39,not
+HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv.py,3,Date: 2019-12-21 15:39,not
+HanLP/tests/train/zh/cws/train_ctb6_cws_convseg.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_ctb6_cws_convseg.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_ctb6_cws_convseg.py,3,Date: 2019-12-28 22:22,not
+HanLP/tests/train/zh/cws/train_ctb6_cws_albert.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_ctb6_cws_albert.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_ctb6_cws_albert.py,3,Date: 2019-12-28 22:22,not
+HanLP/tests/train/zh/cws/train_pku_conv_cws.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_pku_conv_cws.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_pku_conv_cws.py,3,Date: 2019-12-21 15:39,not
+HanLP/tests/train/zh/cws/train_pku_conv_cws.py,32,print(tagger.tag(list('中央民族乐团离开北京前往维也纳'))),not
+HanLP/tests/train/zh/cws/train_pku_conv_cws.py,33,print(tagger.predict('中央民族乐团离开北京前往维也纳')),not
+HanLP/tests/train/zh/cws/train_large_conv_cws.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_large_conv_cws.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_large_conv_cws.py,3,Date: 2019-12-29 21:58,not
+HanLP/tests/train/zh/cws/train_pku980106_rnn_cws.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_pku980106_rnn_cws.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_pku980106_rnn_cws.py,3,Date: 2019-12-21 15:39,not
+HanLP/tests/train/zh/cws/train_large_bert_cws.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_large_bert_cws.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_large_bert_cws.py,3,Date: 2019-12-21 15:39,not
+HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv_embed.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv_embed.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_msr_cws_ngram_conv_embed.py,3,Date: 2019-12-21 15:39,not
+HanLP/tests/train/zh/cws/train_msr_cws_bert.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_msr_cws_bert.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_msr_cws_bert.py,3,Date: 2019-12-21 15:39,not
+HanLP/tests/train/zh/cws/train_msr_cws_bert.py,13,tokenizer.load(save_dir),not
+HanLP/tests/train/zh/cws/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/__init__.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/__init__.py,3,Date: 2020-01-01 20:55,not
+HanLP/tests/train/zh/cws/train_ctb6_cws_bert.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_ctb6_cws_bert.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_ctb6_cws_bert.py,3,Date: 2019-12-28 22:22,not
+HanLP/tests/train/zh/cws/train_ctb6_cws_bert.py,14,tokenizer.load(save_dir),not
+HanLP/tests/train/zh/cws/train_large_rnn_cws.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/zh/cws/train_large_rnn_cws.py,2,Author: hankcs,not
+HanLP/tests/train/zh/cws/train_large_rnn_cws.py,3,Date: 2019-12-21 15:39,not
+HanLP/tests/train/en/train_semeval15_psd.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/en/train_semeval15_psd.py,2,Author: hankcs,not
+HanLP/tests/train/en/train_semeval15_psd.py,3,Date: 2020-01-01 18:26,not
+HanLP/tests/train/en/train_semeval15_psd.py,22,disable variational dropout during evaluation so as to use CudaLSTM,not
+HanLP/tests/train/en/train_sst2_albert_base.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/en/train_sst2_albert_base.py,2,Author: hankcs,not
+HanLP/tests/train/en/train_sst2_albert_base.py,3,Date: 2019-11-10 17:41,not
+HanLP/tests/train/en/train_sst2_bert_base.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/en/train_sst2_bert_base.py,2,Author: hankcs,not
+HanLP/tests/train/en/train_sst2_bert_base.py,3,Date: 2020-01-03 23:00,not
+HanLP/tests/train/en/train_semeval15_dm.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/en/train_semeval15_dm.py,2,Author: hankcs,not
+HanLP/tests/train/en/train_semeval15_dm.py,3,Date: 2020-01-01 18:26,not
+HanLP/tests/train/en/train_semeval15_dm.py,22,disable variational dropout during evaluation so as to use CudaLSTM,not
+HanLP/tests/train/en/train_conll03_ner_flair.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/en/train_conll03_ner_flair.py,2,Author: hankcs,not
+HanLP/tests/train/en/train_conll03_ner_flair.py,3,Date: 2019-10-25 21:34,not
+HanLP/tests/train/en/train_conll03_ner_flair.py,48,"print(tagger.predict([['This', 'is', 'an', 'old', 'story'],",not
+HanLP/tests/train/en/train_conll03_ner_flair.py,49,"['Not', 'this', 'year', '.']]))",not
+HanLP/tests/train/en/train_conll03_ner_flair.py,50,"[['DT', 'VBZ', 'DT', 'JJ', 'NN'], ['RB', 'DT', 'NN', '.']]",not
+HanLP/tests/train/en/train_conll03_ner_flair.py,51,tagger.load(save_dir),not
+HanLP/tests/train/en/train_conll03_ner_bert.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/en/train_conll03_ner_bert.py,2,Author: hankcs,not
+HanLP/tests/train/en/train_conll03_ner_bert.py,3,Date: 2019-10-25 21:34,not
+HanLP/tests/train/en/train_semeval15_pas.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/en/train_semeval15_pas.py,2,Author: hankcs,not
+HanLP/tests/train/en/train_semeval15_pas.py,3,Date: 2020-01-01 18:26,not
+HanLP/tests/train/en/train_semeval15_pas.py,22,disable variational dropout during evaluation so as to use CudaLSTM,not
+HanLP/tests/train/en/train_ptb_pos_rnn_fasttext.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/en/train_ptb_pos_rnn_fasttext.py,2,Author: hankcs,not
+HanLP/tests/train/en/train_ptb_pos_rnn_fasttext.py,3,Date: 2019-10-25 21:34,not
+HanLP/tests/train/en/train_ptb_pos_rnn_fasttext.py,16,optimizer = 'adam',not
+HanLP/tests/train/en/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/train/en/__init__.py,2,Author: hankcs,not
+HanLP/tests/train/en/__init__.py,3,Date: 2020-01-01 18:24,not
+HanLP/tests/debug/test_trie.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/debug/test_trie.py,2,Author: hankcs,not
+HanLP/tests/debug/test_trie.py,3,Date: 2020-01-05 22:47,not
+HanLP/tests/debug/debug_transformer_transform.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/debug/debug_transformer_transform.py,2,Author: hankcs,not
+HanLP/tests/debug/debug_transformer_transform.py,3,Date: 2020-01-11 18:37,not
+HanLP/tests/debug/break_long_sents.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/debug/break_long_sents.py,2,Author: hankcs,not
+HanLP/tests/debug/break_long_sents.py,3,Date: 2020-04-03 20:33,not
+HanLP/tests/debug/debug_conll_sent.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/debug/debug_conll_sent.py,2,Author: hankcs,not
+HanLP/tests/debug/debug_conll_sent.py,3,Date: 2020-01-29 16:55,not
+HanLP/tests/debug/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/debug/__init__.py,2,Author: hankcs,not
+HanLP/tests/debug/__init__.py,3,Date: 2020-01-01 17:33,not
+HanLP/tests/debug/debug_bert_ner.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/debug/debug_bert_ner.py,2,Author: hankcs,not
+HanLP/tests/debug/debug_bert_ner.py,3,Date: 2020-01-09 00:06,not
+HanLP/tests/script/evaluate_sdp.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/script/evaluate_sdp.py,2,Author: hankcs,not
+HanLP/tests/script/evaluate_sdp.py,3,Date: 2020-01-10 21:27,not
+HanLP/tests/script/evaluate_dep.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/script/evaluate_dep.py,2,Author: hankcs,not
+HanLP/tests/script/evaluate_dep.py,3,Date: 2020-01-10 21:27,not
+HanLP/tests/script/convert_ptb_dep.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/script/convert_ptb_dep.py,2,Author: hankcs,not
+HanLP/tests/script/convert_ptb_dep.py,3,Date: 2019-12-26 23:20,not
+HanLP/tests/script/convert_ptb_dep.py,11,"parser.fit('data/ptb-dep/train.auto.conllx', 'data/ptb-dep/dev.auto.conllx', save_dir,",not
+HanLP/tests/script/convert_ptb_dep.py,12,"pretrained_embed={'class_name': 'HanLP>Word2VecEmbedding',",not
+HanLP/tests/script/convert_ptb_dep.py,13,'config': {,not
+HanLP/tests/script/convert_ptb_dep.py,14,"'trainable': False,",not
+HanLP/tests/script/convert_ptb_dep.py,15,"'embeddings_initializer': 'zero',",not
+HanLP/tests/script/convert_ptb_dep.py,16,"'filepath': GLOVE_6B_100D,",not
+HanLP/tests/script/convert_ptb_dep.py,17,"'expand_vocab': True,",not
+HanLP/tests/script/convert_ptb_dep.py,18,"'lowercase': False,",not
+HanLP/tests/script/convert_ptb_dep.py,19,"'unk': 'unk',",not
+HanLP/tests/script/convert_ptb_dep.py,20,"'normalize': True,",not
+HanLP/tests/script/convert_ptb_dep.py,21,'name': 'glove.6B.100d',not
+HanLP/tests/script/convert_ptb_dep.py,22,"}},",not
+HanLP/tests/script/convert_ptb_dep.py,23,"# lstm_dropout=0,",not
+HanLP/tests/script/convert_ptb_dep.py,24,"# mlp_dropout=0,",not
+HanLP/tests/script/convert_ptb_dep.py,25,"# embed_dropout=0,",not
+HanLP/tests/script/convert_ptb_dep.py,26,epochs=1,not
+HanLP/tests/script/convert_ptb_dep.py,27,),not
+HanLP/tests/script/convert_ptb_dep.py,28,exit(1),not
+HanLP/tests/script/convert_dm_sdp.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/script/convert_dm_sdp.py,2,Author: hankcs,not
+HanLP/tests/script/convert_dm_sdp.py,3,Date: 2019-12-26 23:20,not
+HanLP/tests/script/convert_dm_sdp.py,11,"parser.fit('data/semeval15/en.dm.train.conll', 'data/semeval15/en.dm.dev.conll', save_dir,",not
+HanLP/tests/script/convert_dm_sdp.py,12,"pretrained_embed={'class_name': 'HanLP>Word2VecEmbedding',",not
+HanLP/tests/script/convert_dm_sdp.py,13,'config': {,not
+HanLP/tests/script/convert_dm_sdp.py,14,"'trainable': False,",not
+HanLP/tests/script/convert_dm_sdp.py,15,"'embeddings_initializer': 'zero',",not
+HanLP/tests/script/convert_dm_sdp.py,16,"'filepath': GLOVE_6B_100D,",not
+HanLP/tests/script/convert_dm_sdp.py,17,"'expand_vocab': True,",not
+HanLP/tests/script/convert_dm_sdp.py,18,"'lowercase': False,",not
+HanLP/tests/script/convert_dm_sdp.py,19,"'unk': 'unk',",not
+HanLP/tests/script/convert_dm_sdp.py,20,"'normalize': True,",not
+HanLP/tests/script/convert_dm_sdp.py,21,'name': 'glove.6B.100d',not
+HanLP/tests/script/convert_dm_sdp.py,22,"}},",not
+HanLP/tests/script/convert_dm_sdp.py,23,"# lstm_dropout=0,",not
+HanLP/tests/script/convert_dm_sdp.py,24,"# mlp_dropout=0,",not
+HanLP/tests/script/convert_dm_sdp.py,25,"# embed_dropout=0,",not
+HanLP/tests/script/convert_dm_sdp.py,26,epochs=1,not
+HanLP/tests/script/convert_dm_sdp.py,27,),not
+HanLP/tests/script/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/script/__init__.py,2,Author: hankcs,not
+HanLP/tests/script/__init__.py,3,Date: 2020-01-01 17:34,not
+HanLP/tests/script/convert_psd_sdp.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/script/convert_psd_sdp.py,2,Author: hankcs,not
+HanLP/tests/script/convert_psd_sdp.py,3,Date: 2019-12-26 23:20,not
+HanLP/tests/script/convert_psd_sdp.py,11,"parser.fit('data/semeval15/en.psd.train.conll', 'data/semeval15/en.psd.dev.conll', save_dir,",not
+HanLP/tests/script/convert_psd_sdp.py,12,"pretrained_embed={'class_name': 'HanLP>Word2VecEmbedding',",not
+HanLP/tests/script/convert_psd_sdp.py,13,'config': {,not
+HanLP/tests/script/convert_psd_sdp.py,14,"'trainable': False,",not
+HanLP/tests/script/convert_psd_sdp.py,15,"'embeddings_initializer': 'zero',",not
+HanLP/tests/script/convert_psd_sdp.py,16,"'filepath': GLOVE_6B_100D,",not
+HanLP/tests/script/convert_psd_sdp.py,17,"'expand_vocab': True,",not
+HanLP/tests/script/convert_psd_sdp.py,18,"'lowercase': False,",not
+HanLP/tests/script/convert_psd_sdp.py,19,"'unk': 'unk',",not
+HanLP/tests/script/convert_psd_sdp.py,20,"'normalize': True,",not
+HanLP/tests/script/convert_psd_sdp.py,21,'name': 'glove.6B.100d',not
+HanLP/tests/script/convert_psd_sdp.py,22,"}},",not
+HanLP/tests/script/convert_psd_sdp.py,23,"# lstm_dropout=0,",not
+HanLP/tests/script/convert_psd_sdp.py,24,"# mlp_dropout=0,",not
+HanLP/tests/script/convert_psd_sdp.py,25,"# embed_dropout=0,",not
+HanLP/tests/script/convert_psd_sdp.py,26,epochs=1,not
+HanLP/tests/script/convert_psd_sdp.py,27,),not
+HanLP/tests/demo/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/__init__.py,2,Author: hankcs,not
+HanLP/tests/demo/__init__.py,3,Date: 2019-12-30 18:01,not
+HanLP/tests/demo/zh/demo_client.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/demo_client.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/demo_client.py,3,Date: 2020-01-08 04:43,not
+HanLP/tests/demo/zh/demo_client.py,4,pip3 install tensorflow-serving-api-gpu,not
+HanLP/tests/demo/zh/demo_client.py,29,10 secs timeout,not
+HanLP/tests/demo/zh/demo_cws_trie.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/demo_cws_trie.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/demo_cws_trie.py,3,Date: 2019-12-28 21:25,not
+HanLP/tests/demo/zh/demo_cws_trie.py,38,"In case you need the tag, use the following line instead",not
+HanLP/tests/demo/zh/demo_cws_trie.py,39,"items += [(start, [(word, value)]) for (word, value, start, end) in words]",not
+HanLP/tests/demo/zh/demo_dep.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/demo_dep.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/demo_dep.py,3,Date: 2019-12-28 21:25,not
+HanLP/tests/demo/zh/demo_pipeline.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/demo_pipeline.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/demo_pipeline.py,3,Date: 2019-12-31 03:24,not
+HanLP/tests/demo/zh/demo_pipeline.py,27,"By default the doc is json serializable, it holds true if your pipes output json serializable object too.",not
+HanLP/tests/demo/zh/demo_pipeline.py,28,"print(json.dumps(doc, ensure_ascii=False, indent=2))",not
+HanLP/tests/demo/zh/demo_pipeline.py,30,You can save the config to disk for deploying or sharing.,not
+HanLP/tests/demo/zh/demo_pipeline.py,32,Then load it smoothly.,not
+HanLP/tests/demo/zh/demo_classifier.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/demo_classifier.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/demo_classifier.py,3,Date: 2020-01-01 03:52,not
+HanLP/tests/demo/zh/demo_classifier.py,11,predict a whole file in batch mode,not
+HanLP/tests/demo/zh/demo_serving.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/demo_serving.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/demo_serving.py,3,Date: 2020-01-06 20:23,not
+HanLP/tests/demo/zh/demo_ner.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/demo_ner.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/demo_ner.py,3,Date: 2019-12-30 19:52,not
+HanLP/tests/demo/zh/demo_multiprocess.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/demo_multiprocess.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/demo_multiprocess.py,3,Date: 2020-02-15 11:30,not
+HanLP/tests/demo/zh/demo_multiprocess.py,17,Important! The python multiprocessing package defaults to just call fork when creating a child process.,not
+HanLP/tests/demo/zh/demo_multiprocess.py,18,This cannot work when the child process calls async code (i.e TensorFlow is multithreaded).,not
+HanLP/tests/demo/zh/demo_multiprocess.py,19,See https://github.com/tensorflow/tensorflow/issues/8220#issuecomment-302826884,not
+HanLP/tests/demo/zh/demo_multiprocess.py,20,See https://sefiks.com/2019/03/20/tips-and-tricks-for-gpu-and-multiprocessing-in-tensorflow/,not
+HanLP/tests/demo/zh/demo_multiprocess.py,21,only spawn works with TensorFlow,not
+HanLP/tests/demo/zh/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/__init__.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/__init__.py,3,Date: 2020-01-01 17:53,not
+HanLP/tests/demo/zh/demo_sdp.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/demo_sdp.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/demo_sdp.py,3,Date: 2019-12-31 23:55,not
+HanLP/tests/demo/zh/demo_cws.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/demo_cws.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/demo_cws.py,3,Date: 2019-12-28 21:25,not
+HanLP/tests/demo/zh/demo_cws.py,19,We use regular expression for the sake of simplicity.,not
+HanLP/tests/demo/zh/demo_cws.py,20,"However, you should use some trie trees for production",not
+HanLP/tests/demo/zh/demo_pos.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/zh/demo_pos.py,2,Author: hankcs,not
+HanLP/tests/demo/zh/demo_pos.py,3,Date: 2019-12-28 21:25,not
+HanLP/tests/demo/en/demo_dep.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/en/demo_dep.py,2,Author: hankcs,not
+HanLP/tests/demo/en/demo_dep.py,3,Date: 2020-01-01 17:55,not
+HanLP/tests/demo/en/demo_pipeline.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/en/demo_pipeline.py,2,Author: hankcs,not
+HanLP/tests/demo/en/demo_pipeline.py,3,Date: 2020-01-04 21:05,not
+HanLP/tests/demo/en/demo_pipeline.py,26,You can save the config to disk for deploying or sharing.,not
+HanLP/tests/demo/en/demo_pipeline.py,28,Then load it smoothly.,not
+HanLP/tests/demo/en/demo_lm.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/en/demo_lm.py,2,Author: hankcs,not
+HanLP/tests/demo/en/demo_lm.py,3,Date: 2020-02-11 09:14,not
+HanLP/tests/demo/en/demo_sentiment_analysis.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/en/demo_sentiment_analysis.py,2,Author: hankcs,not
+HanLP/tests/demo/en/demo_sentiment_analysis.py,3,Date: 2020-01-01 03:52,not
+HanLP/tests/demo/en/demo_ner.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/en/demo_ner.py,2,Author: hankcs,not
+HanLP/tests/demo/en/demo_ner.py,3,Date: 2020-01-03 22:50,not
+HanLP/tests/demo/en/__init__.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/en/__init__.py,2,Author: hankcs,not
+HanLP/tests/demo/en/__init__.py,3,Date: 2020-01-01 17:55,not
+HanLP/tests/demo/en/demo_emotion_prediction.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/en/demo_emotion_prediction.py,2,Author: hankcs,not
+HanLP/tests/demo/en/demo_emotion_prediction.py,3,Date: 2020-01-01 03:52,not
+HanLP/tests/demo/en/demo_tok.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/en/demo_tok.py,2,Author: hankcs,not
+HanLP/tests/demo/en/demo_tok.py,3,Date: 2020-01-02 19:41,not
+HanLP/tests/demo/en/demo_sdp.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/en/demo_sdp.py,2,Author: hankcs,not
+HanLP/tests/demo/en/demo_sdp.py,3,Date: 2020-01-03 15:26,not
+HanLP/tests/demo/en/demo_sdp.py,7,semeval15 offers three independent annotations over the Penn Treebank (PTB),not
+HanLP/tests/demo/en/demo_sdp.py,9,semantic_parser = hanlp.load(hanlp.pretrained.sdp.SEMEVAL15_DM_BIAFFINE_EN),not
+HanLP/tests/demo/en/demo_sdp.py,10,semantic_parser = hanlp.load(hanlp.pretrained.sdp.SEMEVAL15_PSD_BIAFFINE_EN),not
+HanLP/tests/demo/en/demo_sdp.py,19,type:CoNLLSentence,not
+HanLP/tests/demo/en/demo_pos.py,1,-*- coding:utf-8 -*-,not
+HanLP/tests/demo/en/demo_pos.py,2,Author: hankcs,not
+HanLP/tests/demo/en/demo_pos.py,3,Date: 2020-01-03 22:16,not

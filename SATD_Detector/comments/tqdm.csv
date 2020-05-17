@@ -1,725 +1,734 @@
 file path,line #,comment,satd
-tqdm/setup.py,1,!/usr/bin/env python,
-tqdm/setup.py,2,-*- coding: utf-8 -*-,
-tqdm/setup.py,10,"os.walk -> list[(dirname, list[subdirs], list[files])]",
-tqdm/setup.py,17,Get version from tqdm/_version.py,
-tqdm/setup.py,24,Executing makefile commands if specified,
-tqdm/setup.py,27,Filename of the makefile,
-tqdm/setup.py,30,Stop to avoid setup.py raising non-standard command error,
-tqdm/setup.py,61,Trove classifiers,
-tqdm/setup.py,62,(https://pypi.org/pypi?%3Aaction=list_classifiers),
-tqdm/benchmarks/benchmarks.py,1,Write the benchmarking functions here.,
-tqdm/benchmarks/benchmarks.py,2,"See ""Writing benchmarks"" in the asv docs for more information.",
-tqdm/benchmarks/benchmarks.py,39,"TODO: miniters=None, mininterval=0.1, smoothing=0)]",
-tqdm/,10,future division is important to divide integers and get as,
-tqdm/,11,a result precise floating numbers (instead of truncated int),
-tqdm/,13,import compatibility functions and utilities,
-tqdm/,16,to inherit from the tqdm class,
-tqdm/,20,pragma: no cover,
-tqdm/,21,import IPython/Jupyter base widget and display utilities,
-tqdm/,24,IPython 4.x,
-tqdm/,29,__version__ may not exist in old versions,
-tqdm/,31,IPython 3.x / 2.x,
-tqdm/,43,IPython 4.x / 3.x,
-tqdm/,52,IPython 2.x,
-tqdm/,61,", clear_output",
-tqdm/,65,HTML encoding,
-tqdm/,66,Py3,
-tqdm/,68,Py2,
-tqdm/,86,Fallback to text bar if there's no total,
-tqdm/,87,DEPRECATED: replaced with an 'info' style bar,
-tqdm/,88,if not total:,
-tqdm/,89,"return super(tqdm_notebook, tqdm_notebook).status_printer(file)",
-tqdm/,91,fp = file,
-tqdm/,93,Prepare IPython progress bar,
-tqdm/,97,No total? Show info style bar with no progress tqdm status,
-tqdm/,102,#187 #451 #558,
-tqdm/,112,Prepare status text,
-tqdm/,114,Only way to place text to the right of the bar is to use a container,
-tqdm/,116,Prepare layout,
-tqdm/,117,use default style of ipywidgets,
-tqdm/,118,"ncols could be 100, ""100px"", ""100%""",
-tqdm/,119,ipywidgets only accepts string,
-tqdm/,121,isnumeric and positive,
-tqdm/,134,additional signals,
-tqdm/,136,"Note: contrary to native tqdm, msg='' does NOT clear bar",
-tqdm/,137,goal is to keep all infos if error happens so user knows,
-tqdm/,138,at which iteration the loop failed.,
-tqdm/,140,Clear previous output (really necessary?),
-tqdm/,141,clear_output(wait=1),
-tqdm/,150,html escape special characters (like '&'),
-tqdm/,156,remove inesthetical pipes,
-tqdm/,162,Update description,
-tqdm/,167,never clear the bar (signal: msg=''),
-tqdm/,171,Change bar style,
-tqdm/,173,Hack-ish way to avoid the danger bar_style being overridden by,
-tqdm/,174,success because the bar gets closed after the error...,
-tqdm/,178,Special signal to close the bar,
-tqdm/,179,hide only if no error,
-tqdm/,186,Setup default output,
-tqdm/,189,avoid the red block in IPython,
-tqdm/,191,Initialize parent class + avoid printing by using gui=True,
-tqdm/,195,convert disable = None to False,
-tqdm/,202,Get bar width,
-tqdm/,205,Replace with IPython progress bar display (with correct total),
-tqdm/,212,Print initial bar state,
-tqdm/,219,return super(tqdm...) will not catch exception,
-tqdm/,221,NB: except ... [ as ...] breaks IPython async KeyboardInterrupt,
-tqdm/,222,NOQA,
-tqdm/,225,NB: don't `finally: close()`,
-tqdm/,226,since this could be a shared bar which the user will `reset()`,
-tqdm/,231,NB: except ... [ as ...] breaks IPython async KeyboardInterrupt,
-tqdm/,232,NOQA,
-tqdm/,233,cannot catch KeyboardInterrupt when using manual tqdm,
-tqdm/,234,as the interrupt will most likely happen on another statement,
-tqdm/,237,NB: don't `finally: close()`,
-tqdm/,238,since this could be a shared bar which the user will `reset()`,
-tqdm/,242,Try to detect if there was an error or KeyboardInterrupt,
-tqdm/,243,"in manual mode: if n < total, things probably got wrong",
-tqdm/,253,void -> avoid extraneous `\n` in IPython output cell,
-tqdm/,280,Aliases,
-tqdm/,1,NOQA,
-tqdm/,17,Py2/3 compat. Empty conditional to avoid coverage,
-tqdm/,18,pragma: no cover,
-tqdm/,57,"py>=2.7,>=3.1",
-tqdm/,60,older Python versions with backported ordereddict lib,
-tqdm/,62,older Python versions without ordereddict lib,
-tqdm/,63,"Py2.6,3.0 compat, from PEP 372",
-tqdm/,67,Methods with direct access to underlying attributes,
-tqdm/,108,Methods with indirect access via the above methods,
-tqdm/,178,py2,
-tqdm/,197,pylint: disable=too-few-public-methods,
-tqdm/,241,pragma: no cover,
-tqdm/,243,pragma: no cover,
-tqdm/,268,pragma: no cover,
-tqdm/,283,pragma: no cover,
-tqdm/,289,assume stderr,
-tqdm/,301,+1,
-tqdm/,307,pragma: no cover,
-tqdm/,318,pragma: no cover,
-tqdm/,337,pragma: no cover,
-tqdm/,355,pragma: no cover,
-tqdm/,360,TODO consider using wcswidth third-party package for 0-width characters,
-tqdm/,386,carefully delete one char at a time,
-tqdm/,389,assume ANSI reset is required,
-tqdm/,2,NOQA,
-tqdm/,20,sys.stderr.write('\ndebug | `val:type`: `' + val + ':' + typ + '`.\n'),
-tqdm/,38,pragma: no cover,
-tqdm/,49,tmp = '',
-tqdm/,54,flush at EOF,
-tqdm/,56,pragma: no cover,
-tqdm/,61,return,
-tqdm/,64,n = 0,
-tqdm/,68,flush at EOF,
-tqdm/,72,n += 1 + buf.count(delim),
-tqdm/,73,pragma: no cover,
-tqdm/,74,n,
-tqdm/,84,n += 1,
-tqdm/,89,"((opt, type), ... )",
-tqdm/,91,better split method assuming no positional args,
-tqdm/,94,TODO: add custom support for some of the following?,
-tqdm/,97,The 8 leading spaces are required for consistency,
-tqdm/,138,argv.pop(log),
-tqdm/,139,logLevel = argv.pop(log),
-tqdm/,149,opt_types['delim'] = 'chr',
-tqdm/,156,"d = RE_OPTS.sub(r'  --\1=<\1>  : \2', d)",
-tqdm/,171,"opts = docopt(d, version=__version__)",
-tqdm/,10,future division is important to divide integers and get as,
-tqdm/,11,a result precise floating numbers (instead of truncated int),
-tqdm/,13,import compatibility functions and utilities,
-tqdm/,15,to inherit from the tqdm class,
-tqdm/,25,pragma: no cover,
-tqdm/,30,TODO: @classmethod: write() on GUI?,
-tqdm/,40,Initialize the GUI display,
-tqdm/,49,Remember if external environment uses toolbars,
-tqdm/,55,self.fig.subplots_adjust(bottom=0.2),
-tqdm/,73,progressbar,
-tqdm/,77,"ax.set_xlim(-60, 0)",
-tqdm/,83,ax.set_xlabel('seconds'),
-tqdm/,90,Remember if external environment is interactive,
-tqdm/,96,TODO: somehow allow the following:,
-tqdm/,97,if not self.gui:,
-tqdm/,98,"return super(tqdm_gui, self).__iter__()",
-tqdm/,105,ncols = self.ncols,
-tqdm/,113,dynamic_ncols = self.dynamic_ncols,
-tqdm/,120,Update and possibly print the progressbar.,
-tqdm/,121,Note: does not call self.update(1) for speed optimisation.,
-tqdm/,123,check counter first to avoid calls to time(),
-tqdm/,125,watch monitoring thread changes,
-tqdm/,130,EMA (not just overall average),
-tqdm/,139,"If no `miniters` was specified, adjust automatically",
-tqdm/,140,to the max iteration rate seen so far between 2 prints,
-tqdm/,143,Adjust miniters to time interval by rule of 3,
-tqdm/,145,Set miniters to correspond to mininterval,
-tqdm/,148,Set miniters to correspond to maxinterval,
-tqdm/,151,EMA-weight miniters to converge,
-tqdm/,152,towards the timeframe of mininterval,
-tqdm/,158,Maximum nb of iterations between 2 prints,
-tqdm/,161,Store old values for next call,
-tqdm/,166,Closing the progress bar.,
-tqdm/,167,Update some internal variables for close().,
-tqdm/,174,if not self.gui:,
-tqdm/,175,"return super(tqdm_gui, self).close()",
-tqdm/,180,for auto-refresh logic to work,
-tqdm/,183,check counter first to reduce calls to time(),
-tqdm/,188,>= n,
-tqdm/,189,elapsed = cur_t - self.start_t,
-tqdm/,190,EMA (not just overall average),
-tqdm/,198,"If no `miniters` was specified, adjust automatically to the",
-tqdm/,199,maximum iteration rate seen so far between two prints.,
-tqdm/,200,"e.g.: After running `tqdm.update(5)`, subsequent",
-tqdm/,201,calls to `tqdm.update()` will only cause an update after,
-tqdm/,202,at least 5 more iterations.,
-tqdm/,220,Store old values for next call,
-tqdm/,225,if not self.gui:,
-tqdm/,226,"return super(tqdm_gui, self).close()",
-tqdm/,235,Restore toolbars,
-tqdm/,237,Return to non-interactive mode,
-tqdm/,250,Inline due to multiple calls,
-tqdm/,258,instantaneous rate,
-tqdm/,260,overall rate,
-tqdm/,262,update line data,
-tqdm/,267,Discard old values,
-tqdm/,268,"xmin, xmax = ax.get_xlim()",
-tqdm/,269,if (not total) and elapsed > xmin * 1.1:,
-tqdm/,319,Aliases,
-tqdm/,1,NOQA,
-tqdm/,2,NOQA,
-tqdm/,11,compatibility functions and utilities,
-tqdm/,17,native libraries,
-tqdm/,22,For parallelism safety,
-tqdm/,61,not suppressed if raised,
-tqdm/,80,Create global parallelism locks to avoid racing issues with parallel,
-tqdm/,81,"bars works only if fork available (Linux/MacOSX, but not Windows)",
-tqdm/,92,Release in inverse order of acquisition,
-tqdm/,106,multiprocessing lock,
-tqdm/,107,pragma: no cover,
-tqdm/,109,pragma: no cover,
-tqdm/,116,thread lock,
-tqdm/,117,pragma: no cover,
-tqdm/,121,Create a thread lock before instantiation so that no setup needs to be done,
-tqdm/,122,before running in a multithreaded environment.,
-tqdm/,123,Do not create the multiprocessing lock because it sets the multiprocessing,
-tqdm/,124,context and does not allow the user to use 'spawn' or 'forkserver' methods.,
-tqdm/,180,whitespace padding,
-tqdm/,194,set to 0 to disable the thread,
-tqdm/,295,pragma: no cover,
-tqdm/,375,sanity check: total,
-tqdm/,376,allow float imprecision (#849),
-tqdm/,379,apply custom scale if necessary,
-tqdm/,385,by default rate = 1 / self.avg_time,
-tqdm/,390,"if unspecified, attempt to use rate = average speed",
-tqdm/,391,(we allow manual override since predicting time is an arcane art),
-tqdm/,420,format the stats displayed to the left and right sides of the bar,
-tqdm/,422,old prefix setup work around,
-tqdm/,431,Custom bar formatting,
-tqdm/,432,Populate a dict with all available progress indicators,
-tqdm/,434,slight extension of self.format_dict,
-tqdm/,443,plus more useful definitions,
-tqdm/,448,total is known: we can predict some stats,
-tqdm/,450,fractional and percentage progress,
-tqdm/,463,auto-remove colon for empty `desc`,
-tqdm/,476,"no {bar}, we can just format and return",
-tqdm/,479,Formatting progress bar space available for bar's display,
-tqdm/,491,user-specified bar_format but no total,
-tqdm/,506,"no total: no progressbar, ETA, just progress stats",
-tqdm/,512,Create a new instance,
-tqdm/,514,Construct the lock if it does not exist,
-tqdm/,516,Add to the list of instances,
-tqdm/,520,Create the monitoring thread,
-tqdm/,525,pragma: nocover,
-tqdm/,530,Return the instance,
-tqdm/,554,if not instance.gui:  # pragma: no cover,
-tqdm/,555,raise,
-tqdm/,556,py2: maybe magically removed already,
-tqdm/,557,else:,
-tqdm/,560,find unfixed (`pos >= 0`) overflow (`pos >= nrows - 1`),
-tqdm/,564,set first found to current `pos`,
-tqdm/,569,Kill monitor if no instances are left,
-tqdm/,574,pragma: nocover,
-tqdm/,584,Write the message,
-tqdm/,599,Clear all bars,
-tqdm/,602,Clear instance if in the target output file,
-tqdm/,603,or if write output + tqdm output are both either,
-tqdm/,604,sys.stdout or sys.stderr (because both are mixed in terminal),
-tqdm/,610,Force refresh display of bars we cleared,
-tqdm/,667,TODO: pandas>0.25.2,
-tqdm/,669,pandas>=1.0.0,
-tqdm/,672,pandas>=0.18.0,
-tqdm/,674,pragma: no cover,
-tqdm/,676,pandas>=0.25.0,
-tqdm/,678,", NDFrameGroupBy",
-tqdm/,680,pandas>=0.23.0,
-tqdm/,686,pandas>=0.23.0,
-tqdm/,691,pandas>=0.23.0,
-tqdm/,696,pandas>=0.25.0,
-tqdm/,714,Precompute total iterations,
-tqdm/,716,not grouped,
-tqdm/,723,DataFrame or Panel,
-tqdm/,729,"when axis=0, total is shape[axis1]",
-tqdm/,732,Init bar,
-tqdm/,740,"*args intentionally not supported (see #244, #299)",
-tqdm/,753,Define bar updating wrapper,
-tqdm/,755,update tbar correctly,
-tqdm/,756,it seems `pandas apply` calls `func` twice,
-tqdm/,757,on the first column/row to decide whether it can,
-tqdm/,758,take a fast or slow code path; so stop when t.total==t.n,
-tqdm/,762,Apply the provided function (in **kwargs),
-tqdm/,763,on the df using our wrapper (which provides bar updating),
-tqdm/,771,Monkeypatch pandas to provide easy methods,
-tqdm/,772,Enable custom tqdm progress in pandas!,
-tqdm/,791,pragma: no cover,
-tqdm/,922,"Despite coercing unicode into bytes, py2 sys.std* streams",
-tqdm/,923,should have bytes written to them.,
-tqdm/,936,"Infinite iterations, behave same as unknown",
-tqdm/,963,Preprocess the arguments,
-tqdm/,966,pragma: no cover,
-tqdm/,996,Convert bar format into unicode since terminal uses unicode,
-tqdm/,1002,Store the arguments,
-tqdm/,1033,Init the iterations counters,
-tqdm/,1037,"if nested, at initial sp() call we replace '\r' by '\n' to",
-tqdm/,1038,not overwrite the outer progress bar,
-tqdm/,1042,mark fixed positions as negative,
-tqdm/,1046,Initialize the screen printer,
-tqdm/,1050,Init the time counter,
-tqdm/,1052,NB: Avoid race conditions by setting start_t at the very end of init,
-tqdm/,1078,maybe eager thread cleanup upon external error,
-tqdm/,1099,Inlining instance variables as locals (speed optimisation),
-tqdm/,1102,"If the bar is disabled, then just walk the iterable",
-tqdm/,1103,(note: keep this check outside the loop for performance),
-tqdm/,1129,Update and possibly print the progressbar.,
-tqdm/,1130,Note: does not call self.update(1) for speed optimisation.,
-tqdm/,1132,check counter first to avoid calls to time(),
-tqdm/,1134,watch monitoring thread changes,
-tqdm/,1139,EMA (not just overall average),
-tqdm/,1148,"If no `miniters` was specified, adjust automatically",
-tqdm/,1149,to the max iteration rate seen so far between 2 prints,
-tqdm/,1152,Adjust miniters to time interval by rule of 3,
-tqdm/,1154,Set miniters to correspond to mininterval,
-tqdm/,1157,Set miniters to correspond to maxinterval,
-tqdm/,1160,EMA-weight miniters to converge,
-tqdm/,1161,towards the timeframe of mininterval,
-tqdm/,1167,Maximum nb of iterations between 2 prints,
-tqdm/,1170,Store old values for next call,
-tqdm/,1175,Closing the progress bar.,
-tqdm/,1176,Update some internal variables for close().,
-tqdm/,1203,N.B.: see __iter__() for more comments.,
-tqdm/,1208,for auto-refresh logic to work,
-tqdm/,1211,check counter first to reduce calls to time(),
-tqdm/,1216,>= n,
-tqdm/,1217,elapsed = cur_t - self.start_t,
-tqdm/,1218,EMA (not just overall average),
-tqdm/,1232,"If no `miniters` was specified, adjust automatically to the",
-tqdm/,1233,maximum iteration rate seen so far between two prints.,
-tqdm/,1234,"e.g.: After running `tqdm.update(5)`, subsequent",
-tqdm/,1235,calls to `tqdm.update()` will only cause an update after,
-tqdm/,1236,at least 5 more iterations.,
-tqdm/,1254,Store old values for next call,
-tqdm/,1263,Prevent multiple closures,
-tqdm/,1266,decrement instance pos and remove from internal set,
-tqdm/,1270,GUI mode,
-tqdm/,1274,"annoyingly, _supports_unicode isn't good enough",
-tqdm/,1283,pragma: no cover,
-tqdm/,1289,stats for overall rate (no weighted average),
-tqdm/,1294,clear previous display,
-tqdm/,1309,place cursor back at the beginning of line,
-tqdm/,1395,Sort in alphabetical order to be more deterministic,
-tqdm/,1399,Preprocess stats according to datatype,
-tqdm/,1401,Number: limit the length of the string,
-tqdm/,1404,"Else for any other type, try to get the string conversion",
-tqdm/,1407,"Else if it's a string, don't need to preprocess anything",
-tqdm/,1408,Stitch together to get the final postfix,
-tqdm/,1423,TODO: private method,
-tqdm/,1464,override at `nrows - 1`,
-tqdm/,1,NOQA,
-tqdm/,2,NOQA,
-tqdm/,1,NOQA,
-tqdm/,2,NOQA,
-tqdm/,1,NOQA,
-tqdm/,2,NOQA,
-tqdm/,37,delayed adapter case,
-tqdm/,2,TODO: remove in v5.0.0,
-tqdm/,3,TODO: remove in v5.0.0,
-tqdm/,5,TODO: remove in v5.0.0,
-tqdm/,7,NOQA,
-tqdm/,21,pragma: no cover,
-tqdm/,31,pragma: no cover,
-tqdm/,1,Definition of the version number,
-tqdm/,7,"major, minor, patch, -extra",
-tqdm/,10,Nice string for the version,
-tqdm/,14,auto -extra based on commit hash (if not tagged as release),
-tqdm/,17,pragma: nocover,
-tqdm/,19,Open config file to check if we are in tqdm project,
-tqdm/,22,Open the HEAD file,
-tqdm/,25,in a branch => HEAD points to file containing last commit,
-tqdm/,27,reference file path,
-tqdm/,32,check that we are in git folder,
-tqdm/,33,(by stripping the git folder from the ref file path),
-tqdm/,36,out of git folder,
-tqdm/,39,open the ref file,
-tqdm/,46,"detached HEAD mode, already have commit hash",
-tqdm/,50,Append commit hash (and branch) to version string if not tagged,
-tqdm/,5,pragma: no cover,
-tqdm/,7,pragma: no cover,
-tqdm/,11,pragma: no cover,
-tqdm/,28,internal vars for unit testing,
-tqdm/,34,kill thread when main killed (KeyboardInterrupt),
-tqdm/,36,"last time woken up, to sync with monitor",
-tqdm/,57,returns a copy of started `tqdm_cls` instances,
-tqdm/,59,Avoid race by checking that the instance started,
-tqdm/,65,"After processing and before sleeping, notify that we woke",
-tqdm/,66,Need to be done just before sleeping,
-tqdm/,68,Sleep some time...,
-tqdm/,70,Quit if killed,
-tqdm/,73,Then monitor!,
-tqdm/,74,Acquire lock (to access _instances),
-tqdm/,77,Check tqdm instances are waiting too long to print,
-tqdm/,80,Check event in loop to reduce blocking time on exit,
-tqdm/,83,Only if mininterval > 1 (else iterations are just slow),
-tqdm/,84,and last refresh exceeded maxinterval,
-tqdm/,88,force bypassing miniters on next iteration,
-tqdm/,89,(dynamic_miniters adjusts mininterval automatically),
-tqdm/,91,Refresh now! (works only for manual tqdm),
-tqdm/,93,pragma: nocover,
-tqdm/,49,share lock in case workers are already using `tqdm`,
-tqdm/,97,default `chunksize=1` has poor performance for large iterables,
-tqdm/,98,(most time spent dispatching items to workers).,
-tqdm/,19,Avoid print() second call (useless \n),
-tqdm/,30,"WARNING: this should be the last test as it messes with sys.stdin, argv",
-tqdm/,41,actual test:,
-tqdm/,45,semi-fake test which gets coverage:,
-tqdm/,52,sys.stdin.write(b'\xff')  # TODO,
-tqdm/,59,NOQA,
-tqdm/,71,test --log,
-tqdm/,75,with closing(UnicodeIO()) as fp:,
-tqdm/,77,"assert ""DEBUG:"" in sys.stdout.getvalue()",
-tqdm/,80,clean up,
-tqdm/,133,test SystemExits,
-tqdm/,143,clean up,
-tqdm/,1,-*- coding: utf-8 -*-,
-tqdm/,2,Advice: use repr(our_file.read()) to print the full output of tqdm,
-tqdm/,3,(else '\r' will replace the previous lines and you'll see only the latest.,
-tqdm/,28,to support unicode strings,
-tqdm/,35,Ensure we can use `with closing(...) as ... :` syntax,
-tqdm/,56,NOQA,
-tqdm/,60,Regex definitions,
-tqdm/,61,List of control characters,
-tqdm/,62,Need to escape [ for regex,
-tqdm/,63,Regular expressions compilation,
-tqdm/,65,Match control chars,
-tqdm/,66,Match and exclude ctrl chars,
-tqdm/,77,bar position,
-tqdm/,78,simple comparison,
-tqdm/,79,start matches,
-tqdm/,81,move up at end (maybe less due to closing bars),
-tqdm/,84,bar,
-tqdm/,85,cleared,
-tqdm/,86,completed bar,
-tqdm/,87,final bar,
-tqdm/,88,too many moves up,
-tqdm/,125,setcheckinterval is deprecated,
-tqdm/,150,"io.StringIO supports unicode, but no encoding",
-tqdm/,180,Split according to any used control characters,
-tqdm/,182,filter out empty splits,
-tqdm/,192,Init variables,
-tqdm/,193,current line in our fake terminal,
-tqdm/,194,state of our fake terminal,
-tqdm/,196,Split input string by control codes,
-tqdm/,198,filter out empty splits,
-tqdm/,200,For each control character or message,
-tqdm/,202,"If it's a control character, apply it",
-tqdm/,204,Carriage return,
-tqdm/,205,Go to the beginning of the line,
-tqdm/,206,simplified here: we just empty the string,
-tqdm/,209,Newline,
-tqdm/,210,Go to the next line,
-tqdm/,212,"If already exists, just move cursor",
-tqdm/,215,Else the new line is created,
-tqdm/,219,Move cursor up,
-tqdm/,224,"Else, it is a message, we print it on current line",
-tqdm/,260,"If not implementing any changes to _tqdm.py, set prefix='desc'",
-tqdm/,261,"or else "": : "" will be in output, so assertion should change",
-tqdm/,277,"ncols is small, l_bar is too large",
-tqdm/,278,l_bar gets chopped,
-tqdm/,279,no bar,
-tqdm/,280,no r_bar,
-tqdm/,284,10/12 stars since ncols is 10,
-tqdm/,287,n_cols allows for l_bar and some of bar,
-tqdm/,288,l_bar displays,
-tqdm/,289,bar gets chopped,
-tqdm/,290,no r_bar,
-tqdm/,294,all 12 stars and 8/10 bar parts,
-tqdm/,297,"n_cols allows for l_bar, bar, and some of r_bar",
-tqdm/,298,l_bar displays,
-tqdm/,299,bar displays,
-tqdm/,300,r_bar gets chopped,
-tqdm/,305,"all 12 stars and 10 bar parts, but only 8/10 dollar signs",
-tqdm/,308,trim left ANSI; escape is before trim zone,
-tqdm/,313,"we only know it has ANSI codes, so we append an END code anyway",
-tqdm/,316,trim left ANSI; escape is at trim zone,
-tqdm/,323,trim left ANSI; escape is after trim zone,
-tqdm/,329,Check that bar_format correctly adapts {bar} size to the rest,
-tqdm/,336,Check wide characters,
-tqdm/,342,Check that bar_format can print only {bar} or just one side,
-tqdm/,366,`format_meter` inserts an extra END for safety,
-tqdm/,416,restore stdout/stderr output for `nosetest` interface,
-tqdm/,417,try:,
-tqdm/,418,sys.stderr.write('\x1b[A'),
-tqdm/,419,except:,
-tqdm/,420,pass,
-tqdm/,442,py2 behaviour,
-tqdm/,459,specified file (and bytes),
-tqdm/,463,unspecified file (and unicode),
-tqdm/,476,Create a test csv pseudo file,
-tqdm/,483,Test that nothing fails if we iterate over rows,
-tqdm/,509,not '\r',
-tqdm/,547,Test without maxinterval,
-tqdm/,551,with maxinterval but higher than loop sleep time,
-tqdm/,556,without maxinterval,
-tqdm/,564,Increase 10 iterations at once,
-tqdm/,567,The next iterations should not trigger maxinterval (step 10),
-tqdm/,572,because PyPy doesn't gc immediately,
-tqdm/,573,as above,
-tqdm/,578,Test with maxinterval effect,
-tqdm/,585,Increase 10 iterations at once,
-tqdm/,587,The next iterations should trigger maxinterval (step 5),
-tqdm/,594,Test iteration based tqdm with maxinterval effect,
-tqdm/,610,Test different behavior with and without mininterval,
-tqdm/,624,"Fast iterations, check if dynamic_miniters triggers",
-tqdm/,625,to force update for t1,
-tqdm/,630,"Slow iterations, check different miniters if mininterval",
-tqdm/,638,Same with iterable based tqdm,
-tqdm/,639,need 2 timers for each bar because zip not work,
-tqdm/,683,assume automatic mininterval = 0 means intermediate output,
-tqdm/,696,Increase 3 iterations,
-tqdm/,698,The next two iterations should be skipped because of dynamic_miniters,
-tqdm/,701,The third iteration should be displayed,
-tqdm/,706,simulate immediate del gc,
-tqdm/,714,"Check with smoothing=0, miniters should be set to max update seen so far",
-tqdm/,722,this should be stored as miniters,
-tqdm/,732,Check iterable based tqdm,
-tqdm/,740,No smoothing,
-tqdm/,748,No dynamic_miniters (miniters is fixed manually),
-tqdm/,781,Increase 10 iterations at once,
-tqdm/,783,The next iterations should be partially skipped,
-tqdm/,806,"In this test, `miniters` should gradually decline",
-tqdm/,810,Test manual updating tqdm,
-tqdm/,824,Test iteration-based tqdm,
-tqdm/,839,assert '12%' not in out and '12%' in out2,
-tqdm/,849,unittest.mock is a 3.3+ feature,
-tqdm/,852,Use 'spawn' instead of 'fork' so that the process does not inherit any,
-tqdm/,853,globals that have been constructed by running other tests,
-tqdm/,856,The pool will propagate the error if the target method fails,
-tqdm/,865,Patch the RLock class/method but use the original implementation,
-tqdm/,867,Importing the module should not create a lock,
-tqdm/,870,Creating a progress bar should initialize the lock,
-tqdm/,872,NOQA,
-tqdm/,875,Creating a progress bar again should reuse the lock,
-tqdm/,877,NOQA,
-tqdm/,932,Test ascii autodetection,
-tqdm/,935,TODO: this may fail in the future,
-tqdm/,937,Test ascii bar,
-tqdm/,947,Test unicode bar,
-tqdm/,957,Test custom bar,
-tqdm/,991,With `leave` option,
-tqdm/,995,Should be blank,
-tqdm/,1001,Without `leave` option,
-tqdm/,1006,Should be blank,
-tqdm/,1008,With all updates,
-tqdm/,1016,Should be blank,
-tqdm/,1018,close() called,
-tqdm/,1029,Closing after the output stream has closed,
-tqdm/,1042,-- Test disabling smoothing,
-tqdm/,1051,-- Test smoothing,
-tqdm/,1052,Compile the regex to find the rate,
-tqdm/,1053,1st case: no smoothing (only use average),
-tqdm/,1065,Sleep more for first iteration and,
-tqdm/,1066,see how quickly rate is updated,
-tqdm/,1070,Need to sleep in all iterations,
-tqdm/,1071,to calculate smoothed rate,
-tqdm/,1072,(else delta_t is 0!),
-tqdm/,1078,Get result for iter-based bar,
-tqdm/,1080,Get result for manually updated bar,
-tqdm/,1083,2nd case: use max smoothing (= instant rate),
-tqdm/,1101,Get result for iter-based bar,
-tqdm/,1103,Get result for manually updated bar,
-tqdm/,1106,3rd case: use medium smoothing,
-tqdm/,1125,Get result for iter-based bar,
-tqdm/,1127,Get result for manually updated bar,
-tqdm/,1130,Check that medium smoothing's rate is between no and max smoothing rates,
-tqdm/,1140,TODO: test degradation on windows without colorama?,
-tqdm/,1142,Artificially test nested loop printing,
-tqdm/,1143,Without leave,
-tqdm/,1159,NOQA,
-tqdm/,1165,Test unicode string auto conversion,
-tqdm/,1203,longer wait time,
-tqdm/,1236,Artificially test nested loop printing,
-tqdm/,1237,Without leave,
-tqdm/,1251,Test iteration-based tqdm positioning,
-tqdm/,1291,Test manual tqdm positioning,
-tqdm/,1318,Test auto repositioning of bars when a bar is prematurely closed,
-tqdm/,1319,tqdm._instances.clear()  # reset number of instances,
-tqdm/,1364,without refresh,
-tqdm/,1374,unicode,
-tqdm/,1383,Check: StatusPrinter iff gui is disabled,
-tqdm/,1399,t.close(),
-tqdm/,1400,len(tqdm._instances) += 1  # undo the close() decrement,
-tqdm/,1416,t.close(),
-tqdm/,1417,len(tqdm._instances) += 1  # undo the close() decrement,
-tqdm/,1504,Check that refreshing indeed forced the display to use realtime state,
-tqdm/,1526,Change format to keep only left part w/o bar and it/s rate,
-tqdm/,1538,Write msg and see if bars are correctly redrawn below the msg,
-tqdm/,1539,call as an instance method,
-tqdm/,1540,call as a class method,
-tqdm/,1552,Check that no bar clearing if different file,
-tqdm/,1568,Test stdout/stderr anti-mixup strategy,
-tqdm/,1569,Backup stdout/stderr,
-tqdm/,1572,Mock stdout/stderr,
-tqdm/,1599,Restore stdout and stderr,
-tqdm/,1653,no need for OrderedDict,
-tqdm/,1658,Test postfix set at init,
-tqdm/,1665,Test postfix set after init,
-tqdm/,1673,"Order of items in dict may change, so need a loop to check per item",
-tqdm/,1678,Test postfix (with ordered dict and no refresh) set after init,
-tqdm/,1683,explicit external refresh,
-tqdm/,1689,Test postfix (with ordered dict and refresh) set after init,
-tqdm/,1694,double refresh,
-tqdm/,1700,Test setting postfix string directly,
-tqdm/,1738,Relay exceptions,
-tqdm/,1741,Always restore sys.stdout/err if necessary,
-tqdm/,1750,Redirect stdout to tqdm.write(),
-tqdm/,1764,Redirect stdout to tqdm.write(),
-tqdm/,1766,classmethod should be able to recreate lock,
-tqdm/,1796,TODO: test interleaved output #445,
-tqdm/,1828,test with and without disable,
-tqdm/,1895,ncols,
-tqdm/,1903,"no second/third bar, leave=False",
-tqdm/,1920,double-check ncols,
-tqdm/,1924,"all bars, leave=True",
-tqdm/,1943,double-check ncols,
-tqdm/,1947,"second bar becomes first, leave=False",
-tqdm/,21,sleep a bit to interrupt (instead of pass),
-tqdm/,58,Setup a discrete timer,
-tqdm/,61,And a fake sleeper,
-tqdm/,65,Instanciate the monitor,
-tqdm/,67,"Test if alive, then killed",
-tqdm/,70,need to go out of the sleep to die,
-tqdm/,72,"assert not monitor.is_alive()  # not working dunno why, thread not killed",
-tqdm/,79,"Note: should fix miniters for these tests, else with dynamic_miniters",
-tqdm/,80,it's too complicated to handle with monitoring update and maxinterval...,
-tqdm/,84,Setup a discrete timer,
-tqdm/,86,And a fake sleeper,
-tqdm/,88,Setup TMonitor to use the timer,
-tqdm/,91,Set monitor interval,
-tqdm/,97,Do a lot of iterations in a small timeframe,
-tqdm/,98,(smaller than monitor interval),
-tqdm/,99,monitor won't wake up,
-tqdm/,101,check that our fixed miniters is still there,
-tqdm/,103,"Then do 1 it after monitor interval, so that monitor kicks in",
-tqdm/,106,Wait for the monitor to get out of sleep's loop and update tqdm..,
-tqdm/,109,Force monitor to wake up if it woken too soon,
-tqdm/,110,sleep to allow interrupt (instead of pass),
-tqdm/,111,check that monitor corrected miniters,
-tqdm/,112,"Note: at this point, there may be a race condition: monitor saved",
-tqdm/,113,current woken time but timer.sleep() happen just before monitor,
-tqdm/,114,"sleep. To fix that, either sleep here or increase time in a loop",
-tqdm/,115,to ensure that monitor wakes up at some point.,
-tqdm/,117,Try again but already at miniters = 1 so nothing will be done,
-tqdm/,122,Force monitor to wake up if it woken too soon,
-tqdm/,124,Wait for the monitor to get out of sleep's loop and update tqdm..,
-tqdm/,125,check that monitor corrected miniters,
-tqdm/,127,Check that class var monitor is deleted if no instance left,
-tqdm/,135,"Note: should fix miniters for these tests, else with dynamic_miniters",
-tqdm/,136,it's too complicated to handle with monitoring update and maxinterval...,
-tqdm/,140,Setup a discrete timer,
-tqdm/,142,And a fake sleeper,
-tqdm/,144,Setup TMonitor to use the timer,
-tqdm/,147,Set monitor interval,
-tqdm/,152,Set high maxinterval for t2 so monitor does not need to adjust it,
-tqdm/,157,Do a lot of iterations in a small timeframe,
-tqdm/,163,"Then do 1 it after monitor interval, so that monitor kicks in",
-tqdm/,167,Wait for the monitor to get out of sleep and update tqdm,
-tqdm/,172,check that monitor corrected miniters,
-tqdm/,173,check that t2 was not adjusted,
-tqdm/,175,Check that class var monitor is deleted if no instance left,
-tqdm/,193,py2: locks won't propagate to incr_bar so may cause `AttributeError`,
-tqdm/,20,1D autoencoder,
-tqdm/,40,just epoch (no batch) progress,
-tqdm/,61,full (epoch and batch) progress,
-tqdm/,84,auto-detect epochs and batches,
-tqdm/,8,must have at least Major.minor.patch,
-tqdm/,44,123-10+1,
-tqdm/,101,applymap,
-tqdm/,106,apply unhashable,
-tqdm/,111,apply,
-tqdm/,123,"apply_map, apply axis=0, apply axis=1",
-tqdm/,159,don't expect final output since no `leave` and,
-tqdm/,160,high dynamic `miniters`,
-tqdm/,232,1 shall cause a warning,
-tqdm/,233,Check deprecation message,
-tqdm/,254,Check deprecation message,
-tqdm/,262,Check deprecation message,
-tqdm/,15,Use relative/cpu timer to have reliable timings when there is a sudden load,
-tqdm/,38,First test that sleeping does not consume cputime,
-tqdm/,43,secondly check by comparing to cpusleep (where we actually do something),
-tqdm/,66,NOQA,
-tqdm/,99,use a closure,
-tqdm/,120,last_t[0] == current time,
-tqdm/,135,"bar = ""#"" * int(frac * width)",
-tqdm/examples/7zx.py,1,-*- coding: utf-8 -*-,
-tqdm/examples/7zx.py,47,Get compressed sizes,
-tqdm/examples/7zx.py,51,size|compressed|name,
-tqdm/examples/7zx.py,53,builtin test: last line should be total sizes,
-tqdm/examples/7zx.py,56,log.debug(totals),
-tqdm/examples/7zx.py,57,size|compressed totals,
-tqdm/examples/7zx.py,64,log.debug(fcomp),
-tqdm/examples/7zx.py,65,zips  : {'zipname' : {'filename' : int(size)}},
-tqdm/examples/7zx.py,68,Extract,
-tqdm/examples/7zx.py,80,"subprocess.PIPE,",
-tqdm/examples/7zx.py,86,disabled,
-tqdm/examples/7zx.py,96,0 is likely folders,
-tqdm/examples/simple_examples.py,54,Simple demo,
-tqdm/examples/simple_examples.py,59,Profiling/overhead tests,
-tqdm/examples/include_no_requirements.py,1,How to import tqdm in any frontend without enforcing it as a dependency,
-tqdm/examples/pandas_progress_apply.py,7,Register `pandas.progress_apply` and `pandas.Series.map_apply` with `tqdm`,
-tqdm/examples/pandas_progress_apply.py,8,"(can use `tqdm.gui.tqdm`, `tqdm.notebook.tqdm`, optional kwargs, etc.)",
-tqdm/examples/pandas_progress_apply.py,11,Now you can use `progress_apply` instead of `apply`,
-tqdm/examples/pandas_progress_apply.py,12,and `progress_map` instead of `map`,
-tqdm/examples/pandas_progress_apply.py,14,can also groupby:,
-tqdm/examples/pandas_progress_apply.py,15,df.groupby(0).progress_apply(lambda x: x**2),
-tqdm/examples/pandas_progress_apply.py,17,-- Source code for `tqdm_pandas` (really simple!),
-tqdm/examples/pandas_progress_apply.py,18,def tqdm_pandas(t):,
-tqdm/examples/pandas_progress_apply.py,19,from pandas.core.frame import DataFrame,
-tqdm/examples/pandas_progress_apply.py,20,"def inner(df, func, *args, **kwargs):",
-tqdm/examples/pandas_progress_apply.py,21,t.total = groups.size // len(groups),
-tqdm/examples/pandas_progress_apply.py,22,"def wrapper(*args, **kwargs):",
-tqdm/examples/pandas_progress_apply.py,23,t.update(1),
-tqdm/examples/pandas_progress_apply.py,24,"return func(*args, **kwargs)",
-tqdm/examples/pandas_progress_apply.py,25,"result = df.apply(wrapper, *args, **kwargs)",
-tqdm/examples/pandas_progress_apply.py,26,t.close(),
-tqdm/examples/pandas_progress_apply.py,27,return result,
-tqdm/examples/pandas_progress_apply.py,28,DataFrame.progress_apply = inner,
-tqdm/examples/redirect_print.py,25,sys.stdout = sys.stderr = DummyTqdmFile(orig_out_err[0]),
-tqdm/examples/redirect_print.py,28,Relay exceptions,
-tqdm/examples/redirect_print.py,31,Always restore sys.stdout/err if necessary,
-tqdm/examples/redirect_print.py,40,Redirect stdout to tqdm.write(),
-tqdm/examples/redirect_print.py,42,tqdm needs the original stdout,
-tqdm/examples/redirect_print.py,43,and dynamic_ncols=True to autodetect console width,
-tqdm/examples/redirect_print.py,45,order of the following two lines should not matter,
-tqdm/examples/redirect_print.py,49,"After the `with`, printing is restored",
-tqdm/examples/,82,will also set self.n = b * bsize,
-tqdm/examples/,90,"with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1,",
-tqdm/examples/,91,desc=eg_file) as t:  # all optional kwargs,
-tqdm/examples/,92,"urllib.urlretrieve(eg_link, filename=eg_out,",
-tqdm/examples/,93,"reporthook=my_hook(t), data=None)",
-tqdm/examples/,95,all optional kwargs,
-tqdm/examples/,99,Even simpler progress by wrapping the output file's `write()`,
-tqdm/examples/parallel_bars.py,25,NB: may not clear instances with higher `position` upon completion,
-tqdm/examples/parallel_bars.py,26,since this worker may not know about other bars #796,
-tqdm/examples/parallel_bars.py,28,we think we know about other bars (currently only py3 threading),
-tqdm/examples/parallel_bars.py,35,for Windows support,
-tqdm/examples/parallel_bars.py,53,unfortunately need ncols,
-tqdm/examples/parallel_bars.py,54,to print spaces over leftover multi-processing bars (#796),
-tqdm/examples/parallel_bars.py,59,explicitly set just threading lock for nonblocking progress,
-tqdm/.meta/mkdocs.py,4,NOQA,
-tqdm/.meta/mkdocs.py,60,special cases,
+tqdm/setup.py,1,!/usr/bin/env python,not
+tqdm/setup.py,2,-*- coding: utf-8 -*-,not
+tqdm/setup.py,10,"os.walk -> list[(dirname, list[subdirs], list[files])]",not
+tqdm/setup.py,17,Get version from tqdm/_version.py,not
+tqdm/setup.py,24,Executing makefile commands if specified,not
+tqdm/setup.py,27,Filename of the makefile,not
+tqdm/setup.py,30,Stop to avoid setup.py raising non-standard command error,not
+tqdm/setup.py,61,Trove classifiers,not
+tqdm/setup.py,62,(https://pypi.org/pypi?%3Aaction=list_classifiers),not
+tqdm/benchmarks/benchmarks.py,1,Write the benchmarking functions here.,not
+tqdm/benchmarks/benchmarks.py,2,"See ""Writing benchmarks"" in the asv docs for more information.",not
+tqdm/benchmarks/benchmarks.py,39,"TODO: miniters=None, mininterval=0.1, smoothing=0)]",SATD
+tqdm/tqdm/notebook.py,10,future division is important to divide integers and get as,not
+tqdm/tqdm/notebook.py,11,a result precise floating numbers (instead of truncated int),not
+tqdm/tqdm/notebook.py,13,import compatibility functions and utilities,not
+tqdm/tqdm/notebook.py,16,to inherit from the tqdm class,not
+tqdm/tqdm/notebook.py,20,pragma: no cover,not
+tqdm/tqdm/notebook.py,21,import IPython/Jupyter base widget and display utilities,not
+tqdm/tqdm/notebook.py,24,IPython 4.x,not
+tqdm/tqdm/notebook.py,29,__version__ may not exist in old versions,not
+tqdm/tqdm/notebook.py,31,IPython 3.x / 2.x,not
+tqdm/tqdm/notebook.py,43,IPython 4.x / 3.x,not
+tqdm/tqdm/notebook.py,52,IPython 2.x,not
+tqdm/tqdm/notebook.py,61,", clear_output",not
+tqdm/tqdm/notebook.py,65,HTML encoding,not
+tqdm/tqdm/notebook.py,66,Py3,not
+tqdm/tqdm/notebook.py,68,Py2,not
+tqdm/tqdm/notebook.py,86,Fallback to text bar if there's no total,not
+tqdm/tqdm/notebook.py,87,DEPRECATED: replaced with an 'info' style bar,not
+tqdm/tqdm/notebook.py,88,if not total:,not
+tqdm/tqdm/notebook.py,89,"return super(tqdm_notebook, tqdm_notebook).status_printer(file)",not
+tqdm/tqdm/notebook.py,91,fp = file,not
+tqdm/tqdm/notebook.py,93,Prepare IPython progress bar,not
+tqdm/tqdm/notebook.py,97,No total? Show info style bar with no progress tqdm status,not
+tqdm/tqdm/notebook.py,102,#187 #451 #558,not
+tqdm/tqdm/notebook.py,112,Prepare status text,not
+tqdm/tqdm/notebook.py,114,Only way to place text to the right of the bar is to use a container,not
+tqdm/tqdm/notebook.py,116,Prepare layout,not
+tqdm/tqdm/notebook.py,117,use default style of ipywidgets,not
+tqdm/tqdm/notebook.py,118,"ncols could be 100, ""100px"", ""100%""",not
+tqdm/tqdm/notebook.py,119,ipywidgets only accepts string,not
+tqdm/tqdm/notebook.py,121,isnumeric and positive,not
+tqdm/tqdm/notebook.py,134,additional signals,not
+tqdm/tqdm/notebook.py,136,"Note: contrary to native tqdm, msg='' does NOT clear bar",not
+tqdm/tqdm/notebook.py,137,goal is to keep all infos if error happens so user knows,not
+tqdm/tqdm/notebook.py,138,at which iteration the loop failed.,not
+tqdm/tqdm/notebook.py,140,Clear previous output (really necessary?),not
+tqdm/tqdm/notebook.py,141,clear_output(wait=1),not
+tqdm/tqdm/notebook.py,150,html escape special characters (like '&'),not
+tqdm/tqdm/notebook.py,156,remove inesthetical pipes,not
+tqdm/tqdm/notebook.py,162,Update description,not
+tqdm/tqdm/notebook.py,167,never clear the bar (signal: msg=''),not
+tqdm/tqdm/notebook.py,171,Change bar style,not
+tqdm/tqdm/notebook.py,173,Hack-ish way to avoid the danger bar_style being overridden by,SATD
+tqdm/tqdm/notebook.py,174,success because the bar gets closed after the error...,not
+tqdm/tqdm/notebook.py,178,Special signal to close the bar,not
+tqdm/tqdm/notebook.py,179,hide only if no error,not
+tqdm/tqdm/notebook.py,186,Setup default output,not
+tqdm/tqdm/notebook.py,189,avoid the red block in IPython,not
+tqdm/tqdm/notebook.py,191,Initialize parent class + avoid printing by using gui=True,not
+tqdm/tqdm/notebook.py,195,convert disable = None to False,not
+tqdm/tqdm/notebook.py,202,Get bar width,not
+tqdm/tqdm/notebook.py,205,Replace with IPython progress bar display (with correct total),not
+tqdm/tqdm/notebook.py,212,Print initial bar state,not
+tqdm/tqdm/notebook.py,219,return super(tqdm...) will not catch exception,not
+tqdm/tqdm/notebook.py,221,NB: except ... [ as ...] breaks IPython async KeyboardInterrupt,not
+tqdm/tqdm/notebook.py,222,NOQA,not
+tqdm/tqdm/notebook.py,225,NB: don't `finally: close()`,not
+tqdm/tqdm/notebook.py,226,since this could be a shared bar which the user will `reset()`,not
+tqdm/tqdm/notebook.py,231,NB: except ... [ as ...] breaks IPython async KeyboardInterrupt,not
+tqdm/tqdm/notebook.py,232,NOQA,not
+tqdm/tqdm/notebook.py,233,cannot catch KeyboardInterrupt when using manual tqdm,not
+tqdm/tqdm/notebook.py,234,as the interrupt will most likely happen on another statement,not
+tqdm/tqdm/notebook.py,237,NB: don't `finally: close()`,not
+tqdm/tqdm/notebook.py,238,since this could be a shared bar which the user will `reset()`,not
+tqdm/tqdm/notebook.py,242,Try to detect if there was an error or KeyboardInterrupt,not
+tqdm/tqdm/notebook.py,243,"in manual mode: if n < total, things probably got wrong",not
+tqdm/tqdm/notebook.py,253,void -> avoid extraneous `\n` in IPython output cell,not
+tqdm/tqdm/notebook.py,280,Aliases,not
+tqdm/tqdm/_utils.py,1,NOQA,not
+tqdm/tqdm/utils.py,17,Py2/3 compat. Empty conditional to avoid coverage,not
+tqdm/tqdm/utils.py,18,pragma: no cover,not
+tqdm/tqdm/utils.py,57,"py>=2.7,>=3.1",not
+tqdm/tqdm/utils.py,60,older Python versions with backported ordereddict lib,not
+tqdm/tqdm/utils.py,62,older Python versions without ordereddict lib,not
+tqdm/tqdm/utils.py,63,"Py2.6,3.0 compat, from PEP 372",not
+tqdm/tqdm/utils.py,67,Methods with direct access to underlying attributes,not
+tqdm/tqdm/utils.py,108,Methods with indirect access via the above methods,not
+tqdm/tqdm/utils.py,178,py2,not
+tqdm/tqdm/utils.py,197,pylint: disable=too-few-public-methods,not
+tqdm/tqdm/utils.py,241,pragma: no cover,not
+tqdm/tqdm/utils.py,243,pragma: no cover,not
+tqdm/tqdm/utils.py,268,pragma: no cover,not
+tqdm/tqdm/utils.py,283,pragma: no cover,not
+tqdm/tqdm/utils.py,289,assume stderr,not
+tqdm/tqdm/utils.py,301,+1,not
+tqdm/tqdm/utils.py,307,pragma: no cover,not
+tqdm/tqdm/utils.py,318,pragma: no cover,not
+tqdm/tqdm/utils.py,337,pragma: no cover,not
+tqdm/tqdm/utils.py,355,pragma: no cover,not
+tqdm/tqdm/utils.py,360,TODO consider using wcswidth third-party package for 0-width characters,SATD
+tqdm/tqdm/utils.py,386,carefully delete one char at a time,not
+tqdm/tqdm/utils.py,389,assume ANSI reset is required,not
+tqdm/tqdm/cli.py,2,NOQA,not
+tqdm/tqdm/cli.py,20,sys.stderr.write('\ndebug | `val:type`: `' + val + ':' + typ + '`.\n'),not
+tqdm/tqdm/cli.py,38,pragma: no cover,not
+tqdm/tqdm/cli.py,49,tmp = '',not
+tqdm/tqdm/cli.py,54,flush at EOF,not
+tqdm/tqdm/cli.py,56,pragma: no cover,not
+tqdm/tqdm/cli.py,61,return,not
+tqdm/tqdm/cli.py,64,n = 0,not
+tqdm/tqdm/cli.py,68,flush at EOF,not
+tqdm/tqdm/cli.py,72,n += 1 + buf.count(delim),not
+tqdm/tqdm/cli.py,73,pragma: no cover,not
+tqdm/tqdm/cli.py,74,n,not
+tqdm/tqdm/cli.py,84,n += 1,not
+tqdm/tqdm/cli.py,89,"((opt, type), ... )",not
+tqdm/tqdm/cli.py,91,better split method assuming no positional args,SATD
+tqdm/tqdm/cli.py,94,TODO: add custom support for some of the following?,SATD
+tqdm/tqdm/cli.py,97,The 8 leading spaces are required for consistency,not
+tqdm/tqdm/cli.py,140,argv.pop(log),not
+tqdm/tqdm/cli.py,141,logLevel = argv.pop(log),not
+tqdm/tqdm/cli.py,151,opt_types['delim'] = 'chr',not
+tqdm/tqdm/cli.py,158,"d = RE_OPTS.sub(r'  --\1=<\1>  : \2', d)",not
+tqdm/tqdm/cli.py,173,"opts = docopt(d, version=__version__)",not
+tqdm/tqdm/gui.py,10,future division is important to divide integers and get as,not
+tqdm/tqdm/gui.py,11,a result precise floating numbers (instead of truncated int),not
+tqdm/tqdm/gui.py,13,import compatibility functions and utilities,not
+tqdm/tqdm/gui.py,15,to inherit from the tqdm class,not
+tqdm/tqdm/gui.py,25,pragma: no cover,not
+tqdm/tqdm/gui.py,30,TODO: @classmethod: write() on GUI?,SATD
+tqdm/tqdm/gui.py,40,Initialize the GUI display,not
+tqdm/tqdm/gui.py,49,Remember if external environment uses toolbars,not
+tqdm/tqdm/gui.py,55,self.fig.subplots_adjust(bottom=0.2),not
+tqdm/tqdm/gui.py,73,progressbar,not
+tqdm/tqdm/gui.py,77,"ax.set_xlim(-60, 0)",not
+tqdm/tqdm/gui.py,83,ax.set_xlabel('seconds'),not
+tqdm/tqdm/gui.py,90,Remember if external environment is interactive,not
+tqdm/tqdm/gui.py,96,TODO: somehow allow the following:,SATD
+tqdm/tqdm/gui.py,97,if not self.gui:,not
+tqdm/tqdm/gui.py,98,"return super(tqdm_gui, self).__iter__()",not
+tqdm/tqdm/gui.py,105,ncols = self.ncols,not
+tqdm/tqdm/gui.py,113,dynamic_ncols = self.dynamic_ncols,not
+tqdm/tqdm/gui.py,120,Update and possibly print the progressbar.,not
+tqdm/tqdm/gui.py,121,Note: does not call self.update(1) for speed optimisation.,not
+tqdm/tqdm/gui.py,123,check counter first to avoid calls to time(),not
+tqdm/tqdm/gui.py,125,watch monitoring thread changes,not
+tqdm/tqdm/gui.py,130,EMA (not just overall average),not
+tqdm/tqdm/gui.py,139,"If no `miniters` was specified, adjust automatically",not
+tqdm/tqdm/gui.py,140,to the max iteration rate seen so far between 2 prints,not
+tqdm/tqdm/gui.py,143,Adjust miniters to time interval by rule of 3,not
+tqdm/tqdm/gui.py,145,Set miniters to correspond to mininterval,not
+tqdm/tqdm/gui.py,148,Set miniters to correspond to maxinterval,not
+tqdm/tqdm/gui.py,151,EMA-weight miniters to converge,not
+tqdm/tqdm/gui.py,152,towards the timeframe of mininterval,not
+tqdm/tqdm/gui.py,158,Maximum nb of iterations between 2 prints,not
+tqdm/tqdm/gui.py,161,Store old values for next call,not
+tqdm/tqdm/gui.py,166,Closing the progress bar.,not
+tqdm/tqdm/gui.py,167,Update some internal variables for close().,not
+tqdm/tqdm/gui.py,174,if not self.gui:,not
+tqdm/tqdm/gui.py,175,"return super(tqdm_gui, self).close()",not
+tqdm/tqdm/gui.py,180,for auto-refresh logic to work,not
+tqdm/tqdm/gui.py,183,check counter first to reduce calls to time(),not
+tqdm/tqdm/gui.py,188,>= n,not
+tqdm/tqdm/gui.py,189,elapsed = cur_t - self.start_t,not
+tqdm/tqdm/gui.py,190,EMA (not just overall average),not
+tqdm/tqdm/gui.py,198,"If no `miniters` was specified, adjust automatically to the",not
+tqdm/tqdm/gui.py,199,maximum iteration rate seen so far between two prints.,not
+tqdm/tqdm/gui.py,200,"e.g.: After running `tqdm.update(5)`, subsequent",not
+tqdm/tqdm/gui.py,201,calls to `tqdm.update()` will only cause an update after,not
+tqdm/tqdm/gui.py,202,at least 5 more iterations.,not
+tqdm/tqdm/gui.py,220,Store old values for next call,not
+tqdm/tqdm/gui.py,225,if not self.gui:,not
+tqdm/tqdm/gui.py,226,"return super(tqdm_gui, self).close()",not
+tqdm/tqdm/gui.py,235,Restore toolbars,not
+tqdm/tqdm/gui.py,237,Return to non-interactive mode,not
+tqdm/tqdm/gui.py,250,Inline due to multiple calls,not
+tqdm/tqdm/gui.py,258,instantaneous rate,not
+tqdm/tqdm/gui.py,260,overall rate,not
+tqdm/tqdm/gui.py,262,update line data,not
+tqdm/tqdm/gui.py,267,Discard old values,not
+tqdm/tqdm/gui.py,268,"xmin, xmax = ax.get_xlim()",not
+tqdm/tqdm/gui.py,269,if (not total) and elapsed > xmin * 1.1:,not
+tqdm/tqdm/gui.py,319,Aliases,not
+tqdm/tqdm/_tqdm_gui.py,1,NOQA,not
+tqdm/tqdm/_tqdm_gui.py,2,NOQA,not
+tqdm/tqdm/std.py,11,compatibility functions and utilities,not
+tqdm/tqdm/std.py,17,native libraries,not
+tqdm/tqdm/std.py,22,For parallelism safety,not
+tqdm/tqdm/std.py,61,not suppressed if raised,not
+tqdm/tqdm/std.py,80,Create global parallelism locks to avoid racing issues with parallel,not
+tqdm/tqdm/std.py,81,"bars works only if fork available (Linux/MacOSX, but not Windows)",not
+tqdm/tqdm/std.py,92,Release in inverse order of acquisition,not
+tqdm/tqdm/std.py,106,multiprocessing lock,not
+tqdm/tqdm/std.py,107,pragma: no cover,not
+tqdm/tqdm/std.py,109,pragma: no cover,not
+tqdm/tqdm/std.py,116,thread lock,not
+tqdm/tqdm/std.py,117,pragma: no cover,not
+tqdm/tqdm/std.py,121,Create a thread lock before instantiation so that no setup needs to be done,not
+tqdm/tqdm/std.py,122,before running in a multithreaded environment.,not
+tqdm/tqdm/std.py,123,Do not create the multiprocessing lock because it sets the multiprocessing,not
+tqdm/tqdm/std.py,124,context and does not allow the user to use 'spawn' or 'forkserver' methods.,not
+tqdm/tqdm/std.py,180,whitespace padding,not
+tqdm/tqdm/std.py,194,set to 0 to disable the thread,not
+tqdm/tqdm/std.py,295,pragma: no cover,not
+tqdm/tqdm/std.py,375,sanity check: total,not
+tqdm/tqdm/std.py,376,allow float imprecision (#849),not
+tqdm/tqdm/std.py,379,apply custom scale if necessary,not
+tqdm/tqdm/std.py,385,by default rate = 1 / self.avg_time,not
+tqdm/tqdm/std.py,390,"if unspecified, attempt to use rate = average speed",not
+tqdm/tqdm/std.py,391,(we allow manual override since predicting time is an arcane art),not
+tqdm/tqdm/std.py,420,format the stats displayed to the left and right sides of the bar,not
+tqdm/tqdm/std.py,422,old prefix setup work around,not
+tqdm/tqdm/std.py,431,Custom bar formatting,not
+tqdm/tqdm/std.py,432,Populate a dict with all available progress indicators,not
+tqdm/tqdm/std.py,434,slight extension of self.format_dict,not
+tqdm/tqdm/std.py,443,plus more useful definitions,not
+tqdm/tqdm/std.py,448,total is known: we can predict some stats,not
+tqdm/tqdm/std.py,450,fractional and percentage progress,not
+tqdm/tqdm/std.py,463,auto-remove colon for empty `desc`,not
+tqdm/tqdm/std.py,476,"no {bar}, we can just format and return",not
+tqdm/tqdm/std.py,479,Formatting progress bar space available for bar's display,not
+tqdm/tqdm/std.py,491,user-specified bar_format but no total,not
+tqdm/tqdm/std.py,506,"no total: no progressbar, ETA, just progress stats",not
+tqdm/tqdm/std.py,512,Create a new instance,not
+tqdm/tqdm/std.py,514,Construct the lock if it does not exist,not
+tqdm/tqdm/std.py,516,Add to the list of instances,not
+tqdm/tqdm/std.py,520,Create the monitoring thread,not
+tqdm/tqdm/std.py,525,pragma: nocover,not
+tqdm/tqdm/std.py,530,Return the instance,not
+tqdm/tqdm/std.py,554,if not instance.gui:  # pragma: no cover,not
+tqdm/tqdm/std.py,555,raise,not
+tqdm/tqdm/std.py,556,py2: maybe magically removed already,not
+tqdm/tqdm/std.py,557,else:,not
+tqdm/tqdm/std.py,560,find unfixed (`pos >= 0`) overflow (`pos >= nrows - 1`),not
+tqdm/tqdm/std.py,564,set first found to current `pos`,not
+tqdm/tqdm/std.py,569,Kill monitor if no instances are left,not
+tqdm/tqdm/std.py,574,pragma: nocover,not
+tqdm/tqdm/std.py,584,Write the message,not
+tqdm/tqdm/std.py,600,Clear all bars,not
+tqdm/tqdm/std.py,603,Clear instance if in the target output file,not
+tqdm/tqdm/std.py,604,or if write output + tqdm output are both either,not
+tqdm/tqdm/std.py,605,sys.stdout or sys.stderr (because both are mixed in terminal),not
+tqdm/tqdm/std.py,611,Force refresh display of bars we cleared,not
+tqdm/tqdm/std.py,669,TODO: pandas>0.25.2,SATD
+tqdm/tqdm/std.py,671,pandas>=1.0.0,not
+tqdm/tqdm/std.py,674,pandas>=0.18.0,not
+tqdm/tqdm/std.py,676,pragma: no cover,not
+tqdm/tqdm/std.py,678,pandas>=0.25.0,not
+tqdm/tqdm/std.py,680,", NDFrameGroupBy",not
+tqdm/tqdm/std.py,682,pandas>=0.23.0,not
+tqdm/tqdm/std.py,688,pandas>=0.23.0,not
+tqdm/tqdm/std.py,693,pandas>=0.23.0,not
+tqdm/tqdm/std.py,698,pandas>=0.25.0,not
+tqdm/tqdm/std.py,716,Precompute total iterations,not
+tqdm/tqdm/std.py,718,not grouped,not
+tqdm/tqdm/std.py,725,DataFrame or Panel,not
+tqdm/tqdm/std.py,731,"when axis=0, total is shape[axis1]",not
+tqdm/tqdm/std.py,734,Init bar,not
+tqdm/tqdm/std.py,742,"*args intentionally not supported (see #244, #299)",not
+tqdm/tqdm/std.py,755,Define bar updating wrapper,not
+tqdm/tqdm/std.py,757,update tbar correctly,not
+tqdm/tqdm/std.py,758,it seems `pandas apply` calls `func` twice,not
+tqdm/tqdm/std.py,759,on the first column/row to decide whether it can,not
+tqdm/tqdm/std.py,760,take a fast or slow code path; so stop when t.total==t.n,not
+tqdm/tqdm/std.py,764,Apply the provided function (in **kwargs),not
+tqdm/tqdm/std.py,765,on the df using our wrapper (which provides bar updating),not
+tqdm/tqdm/std.py,773,Monkeypatch pandas to provide easy methods,not
+tqdm/tqdm/std.py,774,Enable custom tqdm progress in pandas!,not
+tqdm/tqdm/std.py,793,pragma: no cover,not
+tqdm/tqdm/std.py,924,"Despite coercing unicode into bytes, py2 sys.std* streams",not
+tqdm/tqdm/std.py,925,should have bytes written to them.,not
+tqdm/tqdm/std.py,938,"Infinite iterations, behave same as unknown",not
+tqdm/tqdm/std.py,965,Preprocess the arguments,not
+tqdm/tqdm/std.py,968,pragma: no cover,not
+tqdm/tqdm/std.py,998,Convert bar format into unicode since terminal uses unicode,not
+tqdm/tqdm/std.py,1004,Store the arguments,not
+tqdm/tqdm/std.py,1035,Init the iterations counters,not
+tqdm/tqdm/std.py,1039,"if nested, at initial sp() call we replace '\r' by '\n' to",not
+tqdm/tqdm/std.py,1040,not overwrite the outer progress bar,not
+tqdm/tqdm/std.py,1044,mark fixed positions as negative,not
+tqdm/tqdm/std.py,1048,Initialize the screen printer,not
+tqdm/tqdm/std.py,1052,Init the time counter,not
+tqdm/tqdm/std.py,1054,NB: Avoid race conditions by setting start_t at the very end of init,not
+tqdm/tqdm/std.py,1080,maybe eager thread cleanup upon external error,not
+tqdm/tqdm/std.py,1101,Inlining instance variables as locals (speed optimisation),not
+tqdm/tqdm/std.py,1104,"If the bar is disabled, then just walk the iterable",not
+tqdm/tqdm/std.py,1105,(note: keep this check outside the loop for performance),not
+tqdm/tqdm/std.py,1131,Update and possibly print the progressbar.,not
+tqdm/tqdm/std.py,1132,Note: does not call self.update(1) for speed optimisation.,not
+tqdm/tqdm/std.py,1134,check counter first to avoid calls to time(),not
+tqdm/tqdm/std.py,1136,watch monitoring thread changes,not
+tqdm/tqdm/std.py,1141,EMA (not just overall average),not
+tqdm/tqdm/std.py,1150,"If no `miniters` was specified, adjust automatically",not
+tqdm/tqdm/std.py,1151,to the max iteration rate seen so far between 2 prints,not
+tqdm/tqdm/std.py,1154,Adjust miniters to time interval by rule of 3,not
+tqdm/tqdm/std.py,1156,Set miniters to correspond to mininterval,not
+tqdm/tqdm/std.py,1159,Set miniters to correspond to maxinterval,not
+tqdm/tqdm/std.py,1162,EMA-weight miniters to converge,not
+tqdm/tqdm/std.py,1163,towards the timeframe of mininterval,not
+tqdm/tqdm/std.py,1169,Maximum nb of iterations between 2 prints,not
+tqdm/tqdm/std.py,1172,Store old values for next call,not
+tqdm/tqdm/std.py,1177,Closing the progress bar.,not
+tqdm/tqdm/std.py,1178,Update some internal variables for close().,not
+tqdm/tqdm/std.py,1205,N.B.: see __iter__() for more comments.,not
+tqdm/tqdm/std.py,1210,for auto-refresh logic to work,not
+tqdm/tqdm/std.py,1213,check counter first to reduce calls to time(),not
+tqdm/tqdm/std.py,1218,>= n,not
+tqdm/tqdm/std.py,1219,elapsed = cur_t - self.start_t,not
+tqdm/tqdm/std.py,1220,EMA (not just overall average),not
+tqdm/tqdm/std.py,1234,"If no `miniters` was specified, adjust automatically to the",not
+tqdm/tqdm/std.py,1235,maximum iteration rate seen so far between two prints.,not
+tqdm/tqdm/std.py,1236,"e.g.: After running `tqdm.update(5)`, subsequent",not
+tqdm/tqdm/std.py,1237,calls to `tqdm.update()` will only cause an update after,not
+tqdm/tqdm/std.py,1238,at least 5 more iterations.,not
+tqdm/tqdm/std.py,1256,Store old values for next call,not
+tqdm/tqdm/std.py,1265,Prevent multiple closures,not
+tqdm/tqdm/std.py,1268,decrement instance pos and remove from internal set,not
+tqdm/tqdm/std.py,1272,GUI mode,not
+tqdm/tqdm/std.py,1276,"annoyingly, _supports_unicode isn't good enough",not
+tqdm/tqdm/std.py,1285,pragma: no cover,not
+tqdm/tqdm/std.py,1291,stats for overall rate (no weighted average),not
+tqdm/tqdm/std.py,1296,clear previous display,not
+tqdm/tqdm/std.py,1311,place cursor back at the beginning of line,not
+tqdm/tqdm/std.py,1397,Sort in alphabetical order to be more deterministic,not
+tqdm/tqdm/std.py,1401,Preprocess stats according to datatype,not
+tqdm/tqdm/std.py,1403,Number: limit the length of the string,not
+tqdm/tqdm/std.py,1406,"Else for any other type, try to get the string conversion",not
+tqdm/tqdm/std.py,1409,"Else if it's a string, don't need to preprocess anything",not
+tqdm/tqdm/std.py,1410,Stitch together to get the final postfix,not
+tqdm/tqdm/std.py,1425,TODO: private method,SATD
+tqdm/tqdm/std.py,1466,override at `nrows - 1`,not
+tqdm/tqdm/_tqdm_notebook.py,1,NOQA,not
+tqdm/tqdm/_tqdm_notebook.py,2,NOQA,not
+tqdm/tqdm/_main.py,1,NOQA,not
+tqdm/tqdm/_main.py,2,NOQA,not
+tqdm/tqdm/_tqdm.py,1,NOQA,not
+tqdm/tqdm/_tqdm.py,2,NOQA,not
+tqdm/tqdm/_tqdm_pandas.py,37,delayed adapter case,not
+tqdm/tqdm/__init__.py,2,TODO: remove in v5.0.0,SATD
+tqdm/tqdm/__init__.py,3,TODO: remove in v5.0.0,SATD
+tqdm/tqdm/__init__.py,5,TODO: remove in v5.0.0,SATD
+tqdm/tqdm/__init__.py,7,NOQA,not
+tqdm/tqdm/__init__.py,21,pragma: no cover,not
+tqdm/tqdm/__init__.py,31,pragma: no cover,not
+tqdm/tqdm/_version.py,1,Definition of the version number,not
+tqdm/tqdm/_version.py,7,"major, minor, patch, -extra",not
+tqdm/tqdm/_version.py,10,Nice string for the version,not
+tqdm/tqdm/_version.py,14,auto -extra based on commit hash (if not tagged as release),not
+tqdm/tqdm/_version.py,17,pragma: nocover,not
+tqdm/tqdm/_version.py,19,Open config file to check if we are in tqdm project,not
+tqdm/tqdm/_version.py,22,Open the HEAD file,not
+tqdm/tqdm/_version.py,25,in a branch => HEAD points to file containing last commit,not
+tqdm/tqdm/_version.py,27,reference file path,not
+tqdm/tqdm/_version.py,32,check that we are in git folder,not
+tqdm/tqdm/_version.py,33,(by stripping the git folder from the ref file path),not
+tqdm/tqdm/_version.py,36,out of git folder,not
+tqdm/tqdm/_version.py,39,open the ref file,not
+tqdm/tqdm/_version.py,46,"detached HEAD mode, already have commit hash",not
+tqdm/tqdm/_version.py,50,Append commit hash (and branch) to version string if not tagged,not
+tqdm/tqdm/autonotebook.py,5,pragma: no cover,not
+tqdm/tqdm/autonotebook.py,7,pragma: no cover,not
+tqdm/tqdm/autonotebook.py,11,pragma: no cover,not
+tqdm/tqdm/_monitor.py,28,internal vars for unit testing,not
+tqdm/tqdm/_monitor.py,34,kill thread when main killed (KeyboardInterrupt),not
+tqdm/tqdm/_monitor.py,36,"last time woken up, to sync with monitor",not
+tqdm/tqdm/_monitor.py,57,returns a copy of started `tqdm_cls` instances,not
+tqdm/tqdm/_monitor.py,59,Avoid race by checking that the instance started,not
+tqdm/tqdm/_monitor.py,65,"After processing and before sleeping, notify that we woke",not
+tqdm/tqdm/_monitor.py,66,Need to be done just before sleeping,not
+tqdm/tqdm/_monitor.py,68,Sleep some time...,not
+tqdm/tqdm/_monitor.py,70,Quit if killed,not
+tqdm/tqdm/_monitor.py,73,Then monitor!,not
+tqdm/tqdm/_monitor.py,74,Acquire lock (to access _instances),not
+tqdm/tqdm/_monitor.py,77,Check tqdm instances are waiting too long to print,not
+tqdm/tqdm/_monitor.py,80,Check event in loop to reduce blocking time on exit,not
+tqdm/tqdm/_monitor.py,83,Only if mininterval > 1 (else iterations are just slow),not
+tqdm/tqdm/_monitor.py,84,and last refresh exceeded maxinterval,not
+tqdm/tqdm/_monitor.py,88,force bypassing miniters on next iteration,not
+tqdm/tqdm/_monitor.py,89,(dynamic_miniters adjusts mininterval automatically),not
+tqdm/tqdm/_monitor.py,91,Refresh now! (works only for manual tqdm),not
+tqdm/tqdm/_monitor.py,93,pragma: nocover,not
+tqdm/tqdm/contrib/concurrent.py,49,share lock in case workers are already using `tqdm`,not
+tqdm/tqdm/contrib/concurrent.py,97,default `chunksize=1` has poor performance for large iterables,not
+tqdm/tqdm/contrib/concurrent.py,98,(most time spent dispatching items to workers).,not
+tqdm/tqdm/contrib/__init__.py,19,Avoid print() second call (useless \n),not
+tqdm/tqdm/contrib/telegram.py,43,avoid duplicate message Bot error,not
+tqdm/tqdm/contrib/telegram.py,118,`tqdm_auto` may have been changed so update,not
+tqdm/tqdm/contrib/telegram.py,134,Aliases,not
+tqdm/tqdm/tests/tests_main.py,31,"WARNING: this should be the last test as it messes with sys.stdin, argv",not
+tqdm/tqdm/tests/tests_main.py,42,actual test:,not
+tqdm/tqdm/tests/tests_main.py,46,semi-fake test which gets coverage:,not
+tqdm/tqdm/tests/tests_main.py,53,sys.stdin.write(b'\xff')  # TODO,SATD
+tqdm/tqdm/tests/tests_main.py,60,NOQA,not
+tqdm/tqdm/tests/tests_main.py,72,test --log,not
+tqdm/tqdm/tests/tests_main.py,76,with closing(UnicodeIO()) as fp:,not
+tqdm/tqdm/tests/tests_main.py,78,"assert ""DEBUG:"" in sys.stdout.getvalue()",not
+tqdm/tqdm/tests/tests_main.py,81,clean up,not
+tqdm/tqdm/tests/tests_main.py,117,check most important options appear,SATD
+tqdm/tqdm/tests/tests_main.py,161,test SystemExits,not
+tqdm/tqdm/tests/tests_main.py,171,clean up,not
+tqdm/tqdm/tests/tests_tqdm.py,1,-*- coding: utf-8 -*-,not
+tqdm/tqdm/tests/tests_tqdm.py,2,Advice: use repr(our_file.read()) to print the full output of tqdm,not
+tqdm/tqdm/tests/tests_tqdm.py,3,(else '\r' will replace the previous lines and you'll see only the latest.,not
+tqdm/tqdm/tests/tests_tqdm.py,28,to support unicode strings,not
+tqdm/tqdm/tests/tests_tqdm.py,35,Ensure we can use `with closing(...) as ... :` syntax,not
+tqdm/tqdm/tests/tests_tqdm.py,56,NOQA,not
+tqdm/tqdm/tests/tests_tqdm.py,60,Regex definitions,not
+tqdm/tqdm/tests/tests_tqdm.py,61,List of control characters,not
+tqdm/tqdm/tests/tests_tqdm.py,62,Need to escape [ for regex,not
+tqdm/tqdm/tests/tests_tqdm.py,63,Regular expressions compilation,not
+tqdm/tqdm/tests/tests_tqdm.py,65,Match control chars,not
+tqdm/tqdm/tests/tests_tqdm.py,66,Match and exclude ctrl chars,not
+tqdm/tqdm/tests/tests_tqdm.py,77,bar position,not
+tqdm/tqdm/tests/tests_tqdm.py,78,simple comparison,not
+tqdm/tqdm/tests/tests_tqdm.py,79,start matches,not
+tqdm/tqdm/tests/tests_tqdm.py,81,move up at end (maybe less due to closing bars),SATD
+tqdm/tqdm/tests/tests_tqdm.py,84,bar,not
+tqdm/tqdm/tests/tests_tqdm.py,85,cleared,not
+tqdm/tqdm/tests/tests_tqdm.py,86,completed bar,not
+tqdm/tqdm/tests/tests_tqdm.py,87,final bar,not
+tqdm/tqdm/tests/tests_tqdm.py,88,too many moves up,not
+tqdm/tqdm/tests/tests_tqdm.py,125,setcheckinterval is deprecated,not
+tqdm/tqdm/tests/tests_tqdm.py,150,"io.StringIO supports unicode, but no encoding",not
+tqdm/tqdm/tests/tests_tqdm.py,180,Split according to any used control characters,not
+tqdm/tqdm/tests/tests_tqdm.py,182,filter out empty splits,not
+tqdm/tqdm/tests/tests_tqdm.py,192,Init variables,not
+tqdm/tqdm/tests/tests_tqdm.py,193,current line in our fake terminal,not
+tqdm/tqdm/tests/tests_tqdm.py,194,state of our fake terminal,not
+tqdm/tqdm/tests/tests_tqdm.py,196,Split input string by control codes,not
+tqdm/tqdm/tests/tests_tqdm.py,198,filter out empty splits,not
+tqdm/tqdm/tests/tests_tqdm.py,200,For each control character or message,not
+tqdm/tqdm/tests/tests_tqdm.py,202,"If it's a control character, apply it",not
+tqdm/tqdm/tests/tests_tqdm.py,204,Carriage return,not
+tqdm/tqdm/tests/tests_tqdm.py,205,Go to the beginning of the line,not
+tqdm/tqdm/tests/tests_tqdm.py,206,simplified here: we just empty the string,not
+tqdm/tqdm/tests/tests_tqdm.py,209,Newline,not
+tqdm/tqdm/tests/tests_tqdm.py,210,Go to the next line,not
+tqdm/tqdm/tests/tests_tqdm.py,212,"If already exists, just move cursor",not
+tqdm/tqdm/tests/tests_tqdm.py,215,Else the new line is created,not
+tqdm/tqdm/tests/tests_tqdm.py,219,Move cursor up,SATD
+tqdm/tqdm/tests/tests_tqdm.py,224,"Else, it is a message, we print it on current line",not
+tqdm/tqdm/tests/tests_tqdm.py,260,"If not implementing any changes to _tqdm.py, set prefix='desc'",not
+tqdm/tqdm/tests/tests_tqdm.py,261,"or else "": : "" will be in output, so assertion should change",not
+tqdm/tqdm/tests/tests_tqdm.py,277,"ncols is small, l_bar is too large",not
+tqdm/tqdm/tests/tests_tqdm.py,278,l_bar gets chopped,not
+tqdm/tqdm/tests/tests_tqdm.py,279,no bar,not
+tqdm/tqdm/tests/tests_tqdm.py,280,no r_bar,not
+tqdm/tqdm/tests/tests_tqdm.py,284,10/12 stars since ncols is 10,not
+tqdm/tqdm/tests/tests_tqdm.py,287,n_cols allows for l_bar and some of bar,not
+tqdm/tqdm/tests/tests_tqdm.py,288,l_bar displays,not
+tqdm/tqdm/tests/tests_tqdm.py,289,bar gets chopped,not
+tqdm/tqdm/tests/tests_tqdm.py,290,no r_bar,not
+tqdm/tqdm/tests/tests_tqdm.py,294,all 12 stars and 8/10 bar parts,not
+tqdm/tqdm/tests/tests_tqdm.py,297,"n_cols allows for l_bar, bar, and some of r_bar",not
+tqdm/tqdm/tests/tests_tqdm.py,298,l_bar displays,not
+tqdm/tqdm/tests/tests_tqdm.py,299,bar displays,not
+tqdm/tqdm/tests/tests_tqdm.py,300,r_bar gets chopped,not
+tqdm/tqdm/tests/tests_tqdm.py,305,"all 12 stars and 10 bar parts, but only 8/10 dollar signs",not
+tqdm/tqdm/tests/tests_tqdm.py,308,trim left ANSI; escape is before trim zone,not
+tqdm/tqdm/tests/tests_tqdm.py,313,"we only know it has ANSI codes, so we append an END code anyway",not
+tqdm/tqdm/tests/tests_tqdm.py,316,trim left ANSI; escape is at trim zone,not
+tqdm/tqdm/tests/tests_tqdm.py,323,trim left ANSI; escape is after trim zone,not
+tqdm/tqdm/tests/tests_tqdm.py,329,Check that bar_format correctly adapts {bar} size to the rest,not
+tqdm/tqdm/tests/tests_tqdm.py,336,Check wide characters,not
+tqdm/tqdm/tests/tests_tqdm.py,342,Check that bar_format can print only {bar} or just one side,not
+tqdm/tqdm/tests/tests_tqdm.py,366,`format_meter` inserts an extra END for safety,not
+tqdm/tqdm/tests/tests_tqdm.py,416,restore stdout/stderr output for `nosetest` interface,not
+tqdm/tqdm/tests/tests_tqdm.py,417,try:,not
+tqdm/tqdm/tests/tests_tqdm.py,418,sys.stderr.write('\x1b[A'),not
+tqdm/tqdm/tests/tests_tqdm.py,419,except:,not
+tqdm/tqdm/tests/tests_tqdm.py,420,pass,not
+tqdm/tqdm/tests/tests_tqdm.py,442,py2 behaviour,not
+tqdm/tqdm/tests/tests_tqdm.py,459,specified file (and bytes),not
+tqdm/tqdm/tests/tests_tqdm.py,463,unspecified file (and unicode),not
+tqdm/tqdm/tests/tests_tqdm.py,476,Create a test csv pseudo file,not
+tqdm/tqdm/tests/tests_tqdm.py,483,Test that nothing fails if we iterate over rows,not
+tqdm/tqdm/tests/tests_tqdm.py,509,not '\r',not
+tqdm/tqdm/tests/tests_tqdm.py,547,Test without maxinterval,not
+tqdm/tqdm/tests/tests_tqdm.py,551,with maxinterval but higher than loop sleep time,not
+tqdm/tqdm/tests/tests_tqdm.py,556,without maxinterval,not
+tqdm/tqdm/tests/tests_tqdm.py,564,Increase 10 iterations at once,not
+tqdm/tqdm/tests/tests_tqdm.py,567,The next iterations should not trigger maxinterval (step 10),not
+tqdm/tqdm/tests/tests_tqdm.py,572,because PyPy doesn't gc immediately,not
+tqdm/tqdm/tests/tests_tqdm.py,573,as above,not
+tqdm/tqdm/tests/tests_tqdm.py,578,Test with maxinterval effect,not
+tqdm/tqdm/tests/tests_tqdm.py,585,Increase 10 iterations at once,not
+tqdm/tqdm/tests/tests_tqdm.py,587,The next iterations should trigger maxinterval (step 5),not
+tqdm/tqdm/tests/tests_tqdm.py,594,Test iteration based tqdm with maxinterval effect,not
+tqdm/tqdm/tests/tests_tqdm.py,610,Test different behavior with and without mininterval,not
+tqdm/tqdm/tests/tests_tqdm.py,624,"Fast iterations, check if dynamic_miniters triggers",not
+tqdm/tqdm/tests/tests_tqdm.py,625,to force update for t1,not
+tqdm/tqdm/tests/tests_tqdm.py,630,"Slow iterations, check different miniters if mininterval",not
+tqdm/tqdm/tests/tests_tqdm.py,638,Same with iterable based tqdm,not
+tqdm/tqdm/tests/tests_tqdm.py,639,need 2 timers for each bar because zip not work,not
+tqdm/tqdm/tests/tests_tqdm.py,683,assume automatic mininterval = 0 means intermediate output,not
+tqdm/tqdm/tests/tests_tqdm.py,696,Increase 3 iterations,not
+tqdm/tqdm/tests/tests_tqdm.py,698,The next two iterations should be skipped because of dynamic_miniters,not
+tqdm/tqdm/tests/tests_tqdm.py,701,The third iteration should be displayed,not
+tqdm/tqdm/tests/tests_tqdm.py,706,simulate immediate del gc,not
+tqdm/tqdm/tests/tests_tqdm.py,714,"Check with smoothing=0, miniters should be set to max update seen so far",not
+tqdm/tqdm/tests/tests_tqdm.py,722,this should be stored as miniters,not
+tqdm/tqdm/tests/tests_tqdm.py,732,Check iterable based tqdm,not
+tqdm/tqdm/tests/tests_tqdm.py,740,No smoothing,not
+tqdm/tqdm/tests/tests_tqdm.py,748,No dynamic_miniters (miniters is fixed manually),not
+tqdm/tqdm/tests/tests_tqdm.py,781,Increase 10 iterations at once,not
+tqdm/tqdm/tests/tests_tqdm.py,783,The next iterations should be partially skipped,not
+tqdm/tqdm/tests/tests_tqdm.py,806,"In this test, `miniters` should gradually decline",not
+tqdm/tqdm/tests/tests_tqdm.py,810,Test manual updating tqdm,not
+tqdm/tqdm/tests/tests_tqdm.py,824,Test iteration-based tqdm,not
+tqdm/tqdm/tests/tests_tqdm.py,839,assert '12%' not in out and '12%' in out2,not
+tqdm/tqdm/tests/tests_tqdm.py,849,unittest.mock is a 3.3+ feature,not
+tqdm/tqdm/tests/tests_tqdm.py,852,Use 'spawn' instead of 'fork' so that the process does not inherit any,not
+tqdm/tqdm/tests/tests_tqdm.py,853,globals that have been constructed by running other tests,not
+tqdm/tqdm/tests/tests_tqdm.py,856,The pool will propagate the error if the target method fails,not
+tqdm/tqdm/tests/tests_tqdm.py,865,Patch the RLock class/method but use the original implementation,not
+tqdm/tqdm/tests/tests_tqdm.py,867,Importing the module should not create a lock,not
+tqdm/tqdm/tests/tests_tqdm.py,870,Creating a progress bar should initialize the lock,not
+tqdm/tqdm/tests/tests_tqdm.py,872,NOQA,not
+tqdm/tqdm/tests/tests_tqdm.py,875,Creating a progress bar again should reuse the lock,not
+tqdm/tqdm/tests/tests_tqdm.py,877,NOQA,not
+tqdm/tqdm/tests/tests_tqdm.py,932,Test ascii autodetection,not
+tqdm/tqdm/tests/tests_tqdm.py,935,TODO: this may fail in the future,SATD
+tqdm/tqdm/tests/tests_tqdm.py,937,Test ascii bar,not
+tqdm/tqdm/tests/tests_tqdm.py,947,Test unicode bar,not
+tqdm/tqdm/tests/tests_tqdm.py,957,Test custom bar,not
+tqdm/tqdm/tests/tests_tqdm.py,991,With `leave` option,not
+tqdm/tqdm/tests/tests_tqdm.py,995,Should be blank,not
+tqdm/tqdm/tests/tests_tqdm.py,1001,Without `leave` option,not
+tqdm/tqdm/tests/tests_tqdm.py,1006,Should be blank,not
+tqdm/tqdm/tests/tests_tqdm.py,1008,With all updates,not
+tqdm/tqdm/tests/tests_tqdm.py,1016,Should be blank,not
+tqdm/tqdm/tests/tests_tqdm.py,1018,close() called,not
+tqdm/tqdm/tests/tests_tqdm.py,1029,Closing after the output stream has closed,not
+tqdm/tqdm/tests/tests_tqdm.py,1042,-- Test disabling smoothing,not
+tqdm/tqdm/tests/tests_tqdm.py,1051,-- Test smoothing,not
+tqdm/tqdm/tests/tests_tqdm.py,1052,Compile the regex to find the rate,not
+tqdm/tqdm/tests/tests_tqdm.py,1053,1st case: no smoothing (only use average),not
+tqdm/tqdm/tests/tests_tqdm.py,1065,Sleep more for first iteration and,not
+tqdm/tqdm/tests/tests_tqdm.py,1066,see how quickly rate is updated,not
+tqdm/tqdm/tests/tests_tqdm.py,1070,Need to sleep in all iterations,not
+tqdm/tqdm/tests/tests_tqdm.py,1071,to calculate smoothed rate,not
+tqdm/tqdm/tests/tests_tqdm.py,1072,(else delta_t is 0!),not
+tqdm/tqdm/tests/tests_tqdm.py,1078,Get result for iter-based bar,not
+tqdm/tqdm/tests/tests_tqdm.py,1080,Get result for manually updated bar,not
+tqdm/tqdm/tests/tests_tqdm.py,1083,2nd case: use max smoothing (= instant rate),not
+tqdm/tqdm/tests/tests_tqdm.py,1101,Get result for iter-based bar,not
+tqdm/tqdm/tests/tests_tqdm.py,1103,Get result for manually updated bar,not
+tqdm/tqdm/tests/tests_tqdm.py,1106,3rd case: use medium smoothing,not
+tqdm/tqdm/tests/tests_tqdm.py,1125,Get result for iter-based bar,not
+tqdm/tqdm/tests/tests_tqdm.py,1127,Get result for manually updated bar,not
+tqdm/tqdm/tests/tests_tqdm.py,1130,Check that medium smoothing's rate is between no and max smoothing rates,not
+tqdm/tqdm/tests/tests_tqdm.py,1140,TODO: test degradation on windows without colorama?,SATD
+tqdm/tqdm/tests/tests_tqdm.py,1142,Artificially test nested loop printing,not
+tqdm/tqdm/tests/tests_tqdm.py,1143,Without leave,not
+tqdm/tqdm/tests/tests_tqdm.py,1159,NOQA,not
+tqdm/tqdm/tests/tests_tqdm.py,1165,Test unicode string auto conversion,not
+tqdm/tqdm/tests/tests_tqdm.py,1203,longer wait time,not
+tqdm/tqdm/tests/tests_tqdm.py,1236,Artificially test nested loop printing,not
+tqdm/tqdm/tests/tests_tqdm.py,1237,Without leave,not
+tqdm/tqdm/tests/tests_tqdm.py,1251,Test iteration-based tqdm positioning,not
+tqdm/tqdm/tests/tests_tqdm.py,1291,Test manual tqdm positioning,not
+tqdm/tqdm/tests/tests_tqdm.py,1318,Test auto repositioning of bars when a bar is prematurely closed,not
+tqdm/tqdm/tests/tests_tqdm.py,1319,tqdm._instances.clear()  # reset number of instances,not
+tqdm/tqdm/tests/tests_tqdm.py,1364,without refresh,not
+tqdm/tqdm/tests/tests_tqdm.py,1374,unicode,not
+tqdm/tqdm/tests/tests_tqdm.py,1383,Check: StatusPrinter iff gui is disabled,not
+tqdm/tqdm/tests/tests_tqdm.py,1399,t.close(),not
+tqdm/tqdm/tests/tests_tqdm.py,1400,len(tqdm._instances) += 1  # undo the close() decrement,not
+tqdm/tqdm/tests/tests_tqdm.py,1416,t.close(),not
+tqdm/tqdm/tests/tests_tqdm.py,1417,len(tqdm._instances) += 1  # undo the close() decrement,not
+tqdm/tqdm/tests/tests_tqdm.py,1504,Check that refreshing indeed forced the display to use realtime state,not
+tqdm/tqdm/tests/tests_tqdm.py,1526,Change format to keep only left part w/o bar and it/s rate,not
+tqdm/tqdm/tests/tests_tqdm.py,1538,Write msg and see if bars are correctly redrawn below the msg,not
+tqdm/tqdm/tests/tests_tqdm.py,1539,call as an instance method,not
+tqdm/tqdm/tests/tests_tqdm.py,1540,call as a class method,not
+tqdm/tqdm/tests/tests_tqdm.py,1552,Check that no bar clearing if different file,not
+tqdm/tqdm/tests/tests_tqdm.py,1568,Test stdout/stderr anti-mixup strategy,not
+tqdm/tqdm/tests/tests_tqdm.py,1569,Backup stdout/stderr,not
+tqdm/tqdm/tests/tests_tqdm.py,1572,Mock stdout/stderr,not
+tqdm/tqdm/tests/tests_tqdm.py,1599,Restore stdout and stderr,not
+tqdm/tqdm/tests/tests_tqdm.py,1653,no need for OrderedDict,not
+tqdm/tqdm/tests/tests_tqdm.py,1658,Test postfix set at init,not
+tqdm/tqdm/tests/tests_tqdm.py,1665,Test postfix set after init,not
+tqdm/tqdm/tests/tests_tqdm.py,1673,"Order of items in dict may change, so need a loop to check per item",not
+tqdm/tqdm/tests/tests_tqdm.py,1678,Test postfix (with ordered dict and no refresh) set after init,not
+tqdm/tqdm/tests/tests_tqdm.py,1683,explicit external refresh,not
+tqdm/tqdm/tests/tests_tqdm.py,1689,Test postfix (with ordered dict and refresh) set after init,not
+tqdm/tqdm/tests/tests_tqdm.py,1694,double refresh,not
+tqdm/tqdm/tests/tests_tqdm.py,1700,Test setting postfix string directly,not
+tqdm/tqdm/tests/tests_tqdm.py,1738,Relay exceptions,not
+tqdm/tqdm/tests/tests_tqdm.py,1741,Always restore sys.stdout/err if necessary,not
+tqdm/tqdm/tests/tests_tqdm.py,1750,Redirect stdout to tqdm.write(),not
+tqdm/tqdm/tests/tests_tqdm.py,1764,Redirect stdout to tqdm.write(),not
+tqdm/tqdm/tests/tests_tqdm.py,1766,classmethod should be able to recreate lock,not
+tqdm/tqdm/tests/tests_tqdm.py,1796,TODO: test interleaved output #445,SATD
+tqdm/tqdm/tests/tests_tqdm.py,1828,test with and without disable,not
+tqdm/tqdm/tests/tests_tqdm.py,1895,ncols,not
+tqdm/tqdm/tests/tests_tqdm.py,1903,"no second/third bar, leave=False",not
+tqdm/tqdm/tests/tests_tqdm.py,1920,double-check ncols,not
+tqdm/tqdm/tests/tests_tqdm.py,1924,"all bars, leave=True",not
+tqdm/tqdm/tests/tests_tqdm.py,1943,double-check ncols,not
+tqdm/tqdm/tests/tests_tqdm.py,1947,"second bar becomes first, leave=False",not
+tqdm/tqdm/tests/tests_synchronisation.py,21,sleep a bit to interrupt (instead of pass),SATD
+tqdm/tqdm/tests/tests_synchronisation.py,58,Setup a discrete timer,not
+tqdm/tqdm/tests/tests_synchronisation.py,61,And a fake sleeper,not
+tqdm/tqdm/tests/tests_synchronisation.py,65,Instanciate the monitor,not
+tqdm/tqdm/tests/tests_synchronisation.py,67,"Test if alive, then killed",not
+tqdm/tqdm/tests/tests_synchronisation.py,70,need to go out of the sleep to die,not
+tqdm/tqdm/tests/tests_synchronisation.py,72,"assert not monitor.is_alive()  # not working dunno why, thread not killed",not
+tqdm/tqdm/tests/tests_synchronisation.py,79,"Note: should fix miniters for these tests, else with dynamic_miniters",SATD
+tqdm/tqdm/tests/tests_synchronisation.py,80,it's too complicated to handle with monitoring update and maxinterval...,not
+tqdm/tqdm/tests/tests_synchronisation.py,84,Setup a discrete timer,not
+tqdm/tqdm/tests/tests_synchronisation.py,86,And a fake sleeper,not
+tqdm/tqdm/tests/tests_synchronisation.py,88,Setup TMonitor to use the timer,not
+tqdm/tqdm/tests/tests_synchronisation.py,91,Set monitor interval,not
+tqdm/tqdm/tests/tests_synchronisation.py,97,Do a lot of iterations in a small timeframe,not
+tqdm/tqdm/tests/tests_synchronisation.py,98,(smaller than monitor interval),not
+tqdm/tqdm/tests/tests_synchronisation.py,99,monitor won't wake up,not
+tqdm/tqdm/tests/tests_synchronisation.py,101,check that our fixed miniters is still there,not
+tqdm/tqdm/tests/tests_synchronisation.py,103,"Then do 1 it after monitor interval, so that monitor kicks in",not
+tqdm/tqdm/tests/tests_synchronisation.py,106,Wait for the monitor to get out of sleep's loop and update tqdm..,not
+tqdm/tqdm/tests/tests_synchronisation.py,109,Force monitor to wake up if it woken too soon,not
+tqdm/tqdm/tests/tests_synchronisation.py,110,sleep to allow interrupt (instead of pass),not
+tqdm/tqdm/tests/tests_synchronisation.py,111,check that monitor corrected miniters,not
+tqdm/tqdm/tests/tests_synchronisation.py,112,"Note: at this point, there may be a race condition: monitor saved",not
+tqdm/tqdm/tests/tests_synchronisation.py,113,current woken time but timer.sleep() happen just before monitor,not
+tqdm/tqdm/tests/tests_synchronisation.py,114,"sleep. To fix that, either sleep here or increase time in a loop",not
+tqdm/tqdm/tests/tests_synchronisation.py,115,to ensure that monitor wakes up at some point.,not
+tqdm/tqdm/tests/tests_synchronisation.py,117,Try again but already at miniters = 1 so nothing will be done,not
+tqdm/tqdm/tests/tests_synchronisation.py,122,Force monitor to wake up if it woken too soon,not
+tqdm/tqdm/tests/tests_synchronisation.py,124,Wait for the monitor to get out of sleep's loop and update tqdm..,not
+tqdm/tqdm/tests/tests_synchronisation.py,125,check that monitor corrected miniters,not
+tqdm/tqdm/tests/tests_synchronisation.py,127,Check that class var monitor is deleted if no instance left,not
+tqdm/tqdm/tests/tests_synchronisation.py,135,"Note: should fix miniters for these tests, else with dynamic_miniters",SATD
+tqdm/tqdm/tests/tests_synchronisation.py,136,it's too complicated to handle with monitoring update and maxinterval...,not
+tqdm/tqdm/tests/tests_synchronisation.py,140,Setup a discrete timer,not
+tqdm/tqdm/tests/tests_synchronisation.py,142,And a fake sleeper,not
+tqdm/tqdm/tests/tests_synchronisation.py,144,Setup TMonitor to use the timer,not
+tqdm/tqdm/tests/tests_synchronisation.py,147,Set monitor interval,not
+tqdm/tqdm/tests/tests_synchronisation.py,152,Set high maxinterval for t2 so monitor does not need to adjust it,not
+tqdm/tqdm/tests/tests_synchronisation.py,157,Do a lot of iterations in a small timeframe,not
+tqdm/tqdm/tests/tests_synchronisation.py,163,"Then do 1 it after monitor interval, so that monitor kicks in",not
+tqdm/tqdm/tests/tests_synchronisation.py,167,Wait for the monitor to get out of sleep and update tqdm,not
+tqdm/tqdm/tests/tests_synchronisation.py,172,check that monitor corrected miniters,not
+tqdm/tqdm/tests/tests_synchronisation.py,173,check that t2 was not adjusted,not
+tqdm/tqdm/tests/tests_synchronisation.py,175,Check that class var monitor is deleted if no instance left,not
+tqdm/tqdm/tests/tests_synchronisation.py,193,py2: locks won't propagate to incr_bar so may cause `AttributeError`,not
+tqdm/tqdm/tests/tests_keras.py,20,1D autoencoder,not
+tqdm/tqdm/tests/tests_keras.py,40,just epoch (no batch) progress,not
+tqdm/tqdm/tests/tests_keras.py,61,full (epoch and batch) progress,not
+tqdm/tqdm/tests/tests_keras.py,84,auto-detect epochs and batches,not
+tqdm/tqdm/tests/tests_version.py,8,must have at least Major.minor.patch,not
+tqdm/tqdm/tests/tests_pandas.py,44,123-10+1,not
+tqdm/tqdm/tests/tests_pandas.py,101,applymap,not
+tqdm/tqdm/tests/tests_pandas.py,106,apply unhashable,not
+tqdm/tqdm/tests/tests_pandas.py,111,apply,not
+tqdm/tqdm/tests/tests_pandas.py,123,"apply_map, apply axis=0, apply axis=1",not
+tqdm/tqdm/tests/tests_pandas.py,159,don't expect final output since no `leave` and,not
+tqdm/tqdm/tests/tests_pandas.py,160,high dynamic `miniters`,not
+tqdm/tqdm/tests/tests_pandas.py,232,1 shall cause a warning,not
+tqdm/tqdm/tests/tests_pandas.py,233,Check deprecation message,not
+tqdm/tqdm/tests/tests_pandas.py,254,Check deprecation message,not
+tqdm/tqdm/tests/tests_pandas.py,262,Check deprecation message,not
+tqdm/tqdm/tests/tests_perf.py,15,Use relative/cpu timer to have reliable timings when there is a sudden load,not
+tqdm/tqdm/tests/tests_perf.py,38,First test that sleeping does not consume cputime,not
+tqdm/tqdm/tests/tests_perf.py,43,secondly check by comparing to cpusleep (where we actually do something),not
+tqdm/tqdm/tests/tests_perf.py,66,NOQA,not
+tqdm/tqdm/tests/tests_perf.py,99,use a closure,not
+tqdm/tqdm/tests/tests_perf.py,120,last_t[0] == current time,not
+tqdm/tqdm/tests/tests_perf.py,135,"bar = ""#"" * int(frac * width)",not
+tqdm/examples/7zx.py,1,-*- coding: utf-8 -*-,not
+tqdm/examples/7zx.py,47,Get compressed sizes,not
+tqdm/examples/7zx.py,51,size|compressed|name,not
+tqdm/examples/7zx.py,53,builtin test: last line should be total sizes,not
+tqdm/examples/7zx.py,56,log.debug(totals),not
+tqdm/examples/7zx.py,57,size|compressed totals,not
+tqdm/examples/7zx.py,64,log.debug(fcomp),not
+tqdm/examples/7zx.py,65,zips  : {'zipname' : {'filename' : int(size)}},not
+tqdm/examples/7zx.py,68,Extract,not
+tqdm/examples/7zx.py,80,"subprocess.PIPE,",not
+tqdm/examples/7zx.py,86,disabled,not
+tqdm/examples/7zx.py,96,0 is likely folders,not
+tqdm/examples/simple_examples.py,54,Simple demo,not
+tqdm/examples/simple_examples.py,59,Profiling/overhead tests,not
+tqdm/examples/include_no_requirements.py,1,How to import tqdm in any frontend without enforcing it as a dependency,not
+tqdm/examples/pandas_progress_apply.py,7,Register `pandas.progress_apply` and `pandas.Series.map_apply` with `tqdm`,not
+tqdm/examples/pandas_progress_apply.py,8,"(can use `tqdm.gui.tqdm`, `tqdm.notebook.tqdm`, optional kwargs, etc.)",not
+tqdm/examples/pandas_progress_apply.py,11,Now you can use `progress_apply` instead of `apply`,not
+tqdm/examples/pandas_progress_apply.py,12,and `progress_map` instead of `map`,not
+tqdm/examples/pandas_progress_apply.py,14,can also groupby:,not
+tqdm/examples/pandas_progress_apply.py,15,df.groupby(0).progress_apply(lambda x: x**2),not
+tqdm/examples/pandas_progress_apply.py,17,-- Source code for `tqdm_pandas` (really simple!),not
+tqdm/examples/pandas_progress_apply.py,18,def tqdm_pandas(t):,not
+tqdm/examples/pandas_progress_apply.py,19,from pandas.core.frame import DataFrame,not
+tqdm/examples/pandas_progress_apply.py,20,"def inner(df, func, *args, **kwargs):",not
+tqdm/examples/pandas_progress_apply.py,21,t.total = groups.size // len(groups),not
+tqdm/examples/pandas_progress_apply.py,22,"def wrapper(*args, **kwargs):",not
+tqdm/examples/pandas_progress_apply.py,23,t.update(1),not
+tqdm/examples/pandas_progress_apply.py,24,"return func(*args, **kwargs)",not
+tqdm/examples/pandas_progress_apply.py,25,"result = df.apply(wrapper, *args, **kwargs)",not
+tqdm/examples/pandas_progress_apply.py,26,t.close(),not
+tqdm/examples/pandas_progress_apply.py,27,return result,not
+tqdm/examples/pandas_progress_apply.py,28,DataFrame.progress_apply = inner,not
+tqdm/examples/tqdm_requests.py,33,all optional kwargs,not
+tqdm/examples/tqdm_requests.py,41,Even simpler progress by wrapping the output file's `write()`,not
+tqdm/examples/redirect_print.py,25,sys.stdout = sys.stderr = DummyTqdmFile(orig_out_err[0]),not
+tqdm/examples/redirect_print.py,28,Relay exceptions,not
+tqdm/examples/redirect_print.py,31,Always restore sys.stdout/err if necessary,not
+tqdm/examples/redirect_print.py,40,Redirect stdout to tqdm.write(),not
+tqdm/examples/redirect_print.py,42,tqdm needs the original stdout,not
+tqdm/examples/redirect_print.py,43,and dynamic_ncols=True to autodetect console width,not
+tqdm/examples/redirect_print.py,45,order of the following two lines should not matter,not
+tqdm/examples/redirect_print.py,49,"After the `with`, printing is restored",not
+tqdm/examples/tqdm_wget.py,84,will also set self.n = b * bsize,not
+tqdm/examples/tqdm_wget.py,92,"with tqdm(unit='B', unit_scale=True, unit_divisor=1024, miniters=1,",not
+tqdm/examples/tqdm_wget.py,93,desc=eg_file) as t:  # all optional kwargs,not
+tqdm/examples/tqdm_wget.py,94,"urllib.urlretrieve(eg_link, filename=eg_out,",not
+tqdm/examples/tqdm_wget.py,95,"reporthook=my_hook(t), data=None)",not
+tqdm/examples/tqdm_wget.py,97,all optional kwargs,not
+tqdm/examples/tqdm_wget.py,102,Even simpler progress by wrapping the output file's `write()`,not
+tqdm/examples/parallel_bars.py,25,NB: may not clear instances with higher `position` upon completion,not
+tqdm/examples/parallel_bars.py,26,since this worker may not know about other bars #796,not
+tqdm/examples/parallel_bars.py,28,we think we know about other bars (currently only py3 threading),SATD
+tqdm/examples/parallel_bars.py,35,for Windows support,not
+tqdm/examples/parallel_bars.py,53,unfortunately need ncols,not
+tqdm/examples/parallel_bars.py,54,to print spaces over leftover multi-processing bars (#796),not
+tqdm/examples/parallel_bars.py,59,explicitly set just threading lock for nonblocking progress,not
+tqdm/.meta/mkdocs.py,10,NOQA,not
+tqdm/.meta/mkdocs.py,64,special cases,not
+tqdm/.meta/mkcompletion.py,10,NOQA,not
+tqdm/.meta/mkcompletion.py,29,CLI options,not
+tqdm/.meta/mkcompletion.py,38,manually dealt with,not

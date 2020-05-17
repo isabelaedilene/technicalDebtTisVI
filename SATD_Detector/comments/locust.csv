@@ -1,419 +1,404 @@
 file path,line #,comment,satd
-locust/setup.py,1,-*- coding: utf-8 -*-,
-locust/setup.py,9,parse version from locust/__init__.py,
-locust/,1,-*- coding: utf-8 -*-,
-locust/,79,"since we have mulitple Locust classes with different host attributes, we'll",
-locust/,80,inform that specifying host will override the host for all Locust classes,
-locust/,178,Truncate the total number of stats and errors displayed since a large number of rows will cause the app,
-locust/,179,to render extremely slowly. Aggregate stats should be preserved.,
-locust/,57,Start with making sure the current working dir is in the sys.path,
-locust/,59,Get directory and locustfile name,
-locust/,61,"If the directory isn't in the PYTHONPATH, add it so our import will work",
-locust/,67,"If the directory IS in the PYTHONPATH, move it to the front temporarily,",
-locust/,68,otherwise other locustfiles -- like Locusts's own -- may scoop the intended,
-locust/,69,one.,
-locust/,73,Store index for later restoration,
-locust/,75,"Add to front, then remove from original position",
-locust/,78,Perform the import,
-locust/,80,Remove directory from path if we added it ourselves (just to be neat),
-locust/,83,Put back in original index if we moved it,
-locust/,87,Return our two-tuple,
-locust/,107,"find specified locustfile and make sure it exists, using a very simplified",
-locust/,108,command line parser that is only used to parse the -f option,
-locust/,111,import the locustfile,
-locust/,114,parse all command line options,
-locust/,121,setup logging,
-locust/,142,make sure specified Locust exists,
-locust/,152,list() call is needed to consume the dict_view object in Python 3,
-locust/,155,create locust Environment,
-locust/,209,"main_greenlet is pointing to runners.greenlet by default, it will point the web greenlet later if in web mode",
-locust/,231,start Web UI,
-locust/,233,spawn web greenlet,
-locust/,246,Fire locust init event which can be used by end-users' code to run setup code that,
-locust/,247,"need access to the Environment, Runner or WebUI",
-locust/,251,headless mode,
-locust/,253,what for worker nodes to connect,
-locust/,259,start the test,
-locust/,270,spawn stats printing greenlet,
-locust/,297,install SIGTERM handler,
-locust/,49,if a file has been specified add a file logging handler and set,
-locust/,50,the locust and root loggers to use it,
-locust/,55,Check for basic authentication,
-locust/,62,remove username and password from the base_url,
-locust/,64,configure requests to use basic auth,
-locust/,104,prepend url with hostname unless it's already an absolute URL,
-locust/,107,store meta data that is used when reporting the request to locust's statistics,
-locust/,110,set up pre_request hook for attaching meta data to the request object,
-locust/,116,record the consumed time,
-locust/,122,"get the length of the content, but if the argument stream is set to True, we take",
-locust/,123,"the size from the content-length header, in order to not trigger fetching of the body",
-locust/,134,"Since we use the Exception message when grouping failures, in order to not get",
-locust/,135,"multiple failure entries for different URLs for the same name argument, we need",
-locust/,136,to temporarily override the reponse.url attribute,
-locust/,173,"with this status_code, content returns None",
-locust/,191,copy data from response to this object,
-locust/,201,if the user has already manually marked this response as failure or success,
-locust/,202,we can ignore the default haviour of letting the response code determine the outcome,
-locust/,16,first get tasks from base classes,
-locust/,21,we want to insert tasks from the tasks attribute at the point of it's declaration,
-locust/,22,compared to methods declared with @task,
-locust/,29,method decorated with @task,
-locust/,1,-*- coding: utf-8 -*-,
-locust/,50,set up event listeners for recording requests,
-locust/,62,register listener that resets stats when hatching is complete,
-locust/,71,don't leave any stray greenlets if runner is removed,
-locust/,102,create locusts depending on weight,
-locust/,106,used to keep track of the amount of rounding was done if we need,
-locust/,107,to add/remove some instances from bucket,
-locust/,110,"We got too few locust classes in the bucket, so we need to create a few extra locusts,",
-locust/,111,and we do this by iterating over each of the Locust classes - starting with the one,
-locust/,112,where the residual from the rounding was the largest - and creating one of each until,
-locust/,113,we get the correct amount,
-locust/,117,We've got too many locusts due to rounding errors so we need to remove some,
-locust/,182,"Locust.stop() returns False if the greenlet was not killed, so we'll need",
-locust/,183,to add it's greenlet to our dying Group so we can wait for it to finish it's task,
-locust/,208,Dynamically changing the locust count,
-locust/,212,Kill some locusts,
-locust/,216,Spawn some locusts,
-locust/,252,if we are currently hatching locusts we need to kill the hatching greenlet first,
-locust/,275,register listener thats logs the exception for the local runner,
-locust/,286,if we're not already running we'll fire the test_start event,
-locust/,290,kill existing hatching_greenlet before we start a new one,
-locust/,349,listener that gathers info on how many locust users the worker has spawned,
-locust/,358,register listener that sends quit message to worker nodes,
-locust/,421,fire test_stop event if state isn't already stopped,
-locust/,426,wait for final stats report from all workers,
-locust/,467,balance the load distribution when new client joins,
-locust/,469,emit a warning if the worker's clock seem to be out of sync with our clock,
-locust/,470,"if abs(time() - msg.data[""time""]) > 5.0:",
-locust/,471,"warnings.warn(""The worker node's clock seem to be out of sync. For the statistics to be correct the different locust servers need to have synchronized clocks."")",
-locust/,482,used to fail the test in the end,
-locust/,483,used to suppress logging for this node,
-locust/,511,Create a new RequestStats with use_response_times_cache set to False to save some memory,
-locust/,512,and CPU cycles. We need to create the new RequestStats before we call super() (since int's,
-locust/,513,used in the constructor of DistributedLocustRunner),
-locust/,528,"register listener for when all locust users have hatched, and report it to the master node",
-locust/,534,register listener that adds the current number of spawned locusts to the report that is sent to the master node,
-locust/,539,register listener that sends quit message to master,
-locust/,544,register listener thats sends locust exceptions to master,
-locust/,582,kill existing hatching greenlet before we launch new one,
-locust/,594,"send a final report, in case there were any samples not yet reported",
-locust/,32,get percentage,
-locust/,29,Obtain env value,
-locust/,31,Create .py version if necessary,
-locust/,34,Does the name contain path elements?,
-locust/,36,"If so, expand home-directory markers and test for existence",
-locust/,43,"Otherwise, start in cwd and work downwards towards filesystem root",
-locust/,53,we've reached the root path which has been checked this iteration,
-locust/,56,Implicit 'return None' if nothing was found,
-locust/,72,"epilog="""",",
-locust/,106,if --help or --version is specified we'll call parse_options which will print the help/version message,
-locust/,130,Number of Locust users,
-locust/,138,User hatch rate,
-locust/,145,Time limit of the test run,
-locust/,150,List locust commands found in loaded locust files/source files,
-locust/,170,if we should print stats in the console,
-locust/,188,if locust should be run in distributed mode as master,
-locust/,224,if locust should be run in distributed mode as worker,
-locust/,235,master host options,
-locust/,249,A file that contains the current request stats.,
-locust/,255,Adds each stats entry at every iteration to the _stats_history.csv file.,
-locust/,263,if we should print stats in the console,
-locust/,269,only print summary stats,
-locust/,282,skip logging setup,
-locust/,290,log level,
-locust/,296,log file,
-locust/,303,Enable Step Load mode,
-locust/,309,Number of clients to incease by Step,
-locust/,316,Time limit of each step,
-locust/,324,Display ratio table of all tasks,
-locust/,330,Display ratio table of all tasks in JSON format,
-locust/,336,Version number (optparse gives you --version but we have to do it,
-locust/,337,ourselves to get -V too. sigh),
-locust/,344,set the exit code to post on errors,
-locust/,369,get a parser that is only able to parse the -f argument,
-locust/,371,add all the other supported arguments,
-locust/,373,fire event to provide a hook for locustscripts and plugins to add command line arguments,
-locust/,380,parse command line and return options,
-locust/,70,if all response times were None,
-locust/,134,store error in errors dict,
-locust/,270,get the time,
-locust/,275,see if we shall make a copy of the respone_times dict and store in the cache,
-locust/,282,increase total content-length,
-locust/,303,to avoid to much data that has to be transfered to the master node when,
-locust/,304,"running in distributed mode, we save the response time rounded in a dict",
-locust/,305,"so that 147 becomes 150, 3432 becomes 3400 and 58760 becomes 59000",
-locust/,315,increase request count for the rounded key in response time dict,
-locust/,347,Since we only use two digits of precision when calculating the median response time,
-locust/,348,"while still using the exact values for min and max response times, the following checks",
-locust/,349,makes sure that we don't report a median > max or median < min when a StatsEntry only,
-locust/,350,have one (or very few) really slow requests,
-locust/,406,"save the old last_request_timestamp, to see if we should store a new copy",
-locust/,407,of the response times in the response times cache,
-locust/,424,"this means self.min_response_time is None, so we can safely replace it",
-locust/,436,"If we've entered a new second, we'll cache the response times. Note that there",
-locust/,437,might still be reports from other worker nodes - that contains requests for the same,
-locust/,438,time periods - that hasn't been received/accounted for yet. This will cause the cache to,
-locust/,439,"lag behind a second or two, but since StatsEntry.current_response_time_percentile()",
-locust/,440,(which is what the response times cache is used for) uses an approximation of the,
-locust/,441,"last 10 seconds anyway, it should be fine to ignore this.",
-locust/,536,"First, we want to determine which of the cached response_times dicts we should",
-locust/,537,use to get response_times for approximately 10 seconds ago.,
-locust/,539,Since we can't be sure that the cache contains an entry for every second.,
-locust/,540,We'll construct a list of timestamps which we consider acceptable keys to be used,
-locust/,541,when trying to fetch the cached response_times. We construct this list in such a way,
-locust/,542,"that it's ordered by preference by starting to add t-10, then t-11, t-9, t-12, t-8,",
-locust/,543,and so on,
-locust/,556,"If we fond an acceptable cached response times, we'll calculate a new response",
-locust/,557,times dict of the last 10 seconds (approximately) by diffing it with the current,
-locust/,558,total response times. Then we'll use that to calculate a response time percentile,
-locust/,559,for that timeframe,
-locust/,594,We'll use a cache size of CURRENT_RESPONSE_TIME_PERCENTILE_WINDOW + 10 since - in the extreme case -,
-locust/,595,we might still use response times (from the cache) for t-CURRENT_RESPONSE_TIME_PERCENTILE_WINDOW-10,
-locust/,596,"to calculate the current response time percentile, if we're missing cached values for the subsequent",
-locust/,597,20 seconds,
-locust/,601,only keep the latest 20 response_times dicts,
-locust/,10,"The monkey patching must run before requests is imported, or else",
-locust/,11,we'll get an infinite recursion when doing SSL/HTTPS requests.,
-locust/,12,See: https://github.com/requests/requests/issues/3752#issuecomment-294608002,
-locust/,180,check if deprecated wait API is used,
-locust/,195,"if this class doesn't have a min_wait, max_wait or wait_function defined, copy it from Locust",
-locust/,264,"check if the function is a method bound to the current locust, and if so, don't pass self as first argument",
-locust/,266,task is a bound method on self,
-locust/,269,task is another (nested) TaskSet class,
-locust/,272,task is a function,
-locust/,370,task is  (nested) TaskSet class,
-locust/,373,task is a function,
-locust/,383,gather any tasks that is declared on the class (or it's bases),
-locust/,388,Not a base class,
-locust/,391,check if class uses deprecated task_set attribute,
-locust/,468,check if deprecated wait API is used,
-locust/,488,"run the task_set on_start method, if it has one",
-locust/,493,"run the on_stop method, if it has one",
-locust/,6,some methods take a named parameter called json,
-locust/,23,Monkey patch geventhttpclient.useragent.CompatRequest so that Cookiejar works with Python >= 3.3,
-locust/,24,More info: https://github.com/requests/requests/pull/871,
-locust/,27,Workaround for AttributeError: 'CompatRequest' object has no attribute 'type' in Cookiejar,
-locust/,28,https://github.com/locustio/locust/issues/1138,
-locust/,29,Might allow secure cookies over non-secure connections but that is a minor concern in a load testing tool,
-locust/,32,Regexp for checking if an absolute URL was specified,
-locust/,35,"List of exceptions that can be raised by geventhttpclient when sending an HTTP request,",
-locust/,36,and that should result in a Locust failure,
-locust/,69,Below are various UserAgent settings. Change these in your subclass to alter FastHttpLocust's behaviour.,
-locust/,70,"It needs to be done before FastHttpLocust is instantiated, changing them later will have no effect",
-locust/,113,Check for basic authentication,
-locust/,120,remove username and password from the base_url,
-locust/,122,store authentication header (we construct this by using _basic_auth_str() function from requests.auth),
-locust/,176,prepend url with hostname unless it's already an absolute URL,
-locust/,179,store meta data that is used when reporting the request to locust's statistics,
-locust/,181,set up pre_request hook for attaching meta data to the request object,
-locust/,201,"send request, and catch any exceptions",
-locust/,204,"get the length of the content, but if the argument stream is set to True, we take",
-locust/,205,"the size from the content-length header, in order to not trigger fetching of the body",
-locust/,211,Record the consumed time,
-locust/,212,"Note: This is intentionally placed after we record the content_size above, since",
-locust/,213,we'll then trigger fetching of the body (unless stream=True),
-locust/,357,copy data from response to this object,
-locust/,360,store reference to locust Environment,
-locust/,368,if the user has already manually marked this response as failure or success,
-locust/,369,we can ignore the default haviour of letting the response code determine the outcome,
-locust/,51,verify that the time reported includes the download time of the whole streamed response,
-locust/,55,"verify that response time does NOT include whole download time, when using stream=True",
-locust/,60,download the content of the streaming response (so we don't get an ugly exception in the log),
-locust/,1,-*- coding: utf-8 -*-,
-locust/,70,one entry plus Aggregated,
-locust/,85,one entry plus Aggregated,
-locust/,87,add another entry,
-locust/,90,old value should be cached now,
-locust/,95,this should no longer be cached,
-locust/,117,check that the Locust can be run,
-locust/,522,stop Locust instance gracefully,
-locust/,525,make sure instance is not killed right away,
-locust/,529,check that locust instance has now died and that the task got to finish,
-locust/,550,stop Locust instance gracefully,
-locust/,553,"make sure instance is killed right away, and that the task did NOT get to finish",
-locust/,46,verify that the time reported includes the download time of the whole streamed response,
-locust/,50,"verify that response time does NOT include whole download time, when using stream=True",
-locust/,55,download the content of the streaming response (so we don't get an ugly exception in the log),
-locust/,292,"max_redirects and max_retries are funny names, because they are actually max attempts",
-locust/,84,Construct a {LocustClass => count} dict from a list of locust classes,
-locust/,340,start a Master runner,
-locust/,344,start 3 Worker runners,
-locust/,351,give workers time to connect,
-locust/,353,issue start command that should trigger TestUsers to be spawned in the Workers,
-locust/,356,check that slave nodes have started locusts,
-locust/,359,"give time for users to generate stats, and stats to be sent to master",
-locust/,362,make sure users are killed,
-locust/,366,check that stats are present in master,
-locust/,377,self._worker_report_event_handlers = [h for h in events.worker_report._handlers],
-locust/,384,events.worker_report._handlers = self._worker_report_event_handlers,
-locust/,452,print(master.clients['fake_client'].__dict__),
-locust/,542,"let 10 second pass, do some more requests, send it to the master and make",
-locust/,543,sure the current response time percentiles only accounts for these new requests,
-locust/,570,let another worker connect,
-locust/,614,change number of users and check that test_start isn't fired again,
-locust/,618,stop and start to make sure test_start is fired again,
-locust/,737,"start a new swarming in Step Load mode: total locust count of 10, hatch rate of 2, step locust count of 5, step duration of 2s",
-locust/,740,make sure the first step run is started,
-locust/,751,make sure the first step run is complete,
-locust/,803,set config to catch exceptions in locust users,
-locust/,808,make sure HeyAnException isn't raised,
-locust/,811,make sure we got two entries in the error log,
-locust/,814,make sure exception was stored,
-locust/,838,self._report_to_master_event_handlers = [h for h in events.report_to_master._handlers],
-locust/,841,events.report_to_master._handlers = self._report_to_master_event_handlers,
-locust/,874,"print(""outbox:"", client.outbox)",
-locust/,875,wait for worker to hatch locusts,
-locust/,879,check that locust has started running,
-locust/,882,send stop message,
-locust/,885,check that locust user got to finish,
-locust/,887,make sure the test_start was never fired on the worker,
-locust/,913,"print(""outbox:"", client.outbox)",
-locust/,914,wait for worker to hatch locusts,
-locust/,918,check that locust has started running,
-locust/,921,send stop message,
-locust/,924,check that locust user did not get to finish,
-locust/,976,should only run when run time + stop_timeout is > short_time,
-locust/,978,should only run when run time + stop_timeout is > short_time * 2,
-locust/,992,exit with timeout,
-locust/,999,"allow task iteration to complete, with some margin",
-locust/,1057,sleep to make sure locust has had time to start waiting,
-locust/,1134,should only run when run time + stop_timeout is > short_time,
-locust/,1136,should only run when run time + stop_timeout is > short_time * 2,
-locust/,1150,exit with timeout,
-locust/,1158,"allow task iteration to complete, with some margin",
-locust/,46,overridden,
-locust/,75,check default arg,
-locust/,166,(rounded 120) min,
-locust/,167,(rounded 990) max,
-locust/,168,(rounded 140),
-locust/,169,(rounded 550),
-locust/,170,(rounded 560),
-locust/,171,(rounded 390),
-locust/,172,(rounded 560),
-locust/,173,(rounded 980),
-locust/,224,(rounded 120) min,
-locust/,230,(rounded 130) min,
-locust/,235,reset stats,
-locust/,250,reset stats,
-locust/,284,check that headline contains same number of column as the value rows,
-locust/,361,Failing test for: https://github.com/locustio/locust/issues/1315,
-locust/,392,spawn a user every 0.2 second,
-locust/,27,"Gevent outputs all unhandled exceptions to stderr, so we'll suppress that in this test",
-locust/,81,check that custom message of root logger is also printed,
-locust/,137,make sure print still appears in output,
-locust/,140,check that log messages don't go into output,
-locust/,144,check that log messages goes into file,
-locust/,157,check that message of custom logger also went into log file,
-locust/,34,We have to wait for the client to finish connecting,
-locust/,35,before sending a msg to it.,
-locust/,129,Prevent args passed to test runner from being passed to Locust,
-locust/,136,When running the tests in Python 3 we get warnings about unclosed sockets.,
-locust/,137,"This causes tests that depends on calls to sys.stderr to fail, so we'll",
-locust/,138,suppress those warnings. For more info see:,
-locust/,139,https://github.com/requests/requests/issues/1882,
-locust/,143,"ResourceWarning doesn't exist in Python 2, but since the warning only appears",
-locust/,144,on Python 3 we don't need to mock it. Instead we can happily ignore the exception,
-locust/,147,set up mocked logging handler,
-locust/,157,restore logging class,
-locust/,20,cache miss,
-locust/,13,if an int is specified we assume they want seconds,
-locust/,4,Show deprecation warnings,
-locust/,9,check if deprecated wait API is used,
-locust/,15,"If wait_function has been declared, and custom wait_time has NOT been declared,",
-locust/,16,we'll add a wait_time function that just calls wait_function and divides the,
-locust/,17,returned value by 1000.0,
-locust/examples/use_as_lib.py,25,setup Environment and Runner,
-locust/examples/use_as_lib.py,28,start a WebUI instance,
-locust/examples/use_as_lib.py,33,TODO: fix,
-locust/examples/use_as_lib.py,34,"def on_request_success(request_type, name, response_time, response_length, **kwargs):",
-locust/examples/use_as_lib.py,35,"report_to_grafana(""%_%s"" % (request_type, name), response_time)",
-locust/examples/use_as_lib.py,36,env.events.request_succes.add_listener(on_request_success),
-locust/examples/use_as_lib.py,38,start a greenlet that periodically outputs the current stats,
-locust/examples/use_as_lib.py,41,start the test,
-locust/examples/use_as_lib.py,43,wait for the greenlets (indefinitely),
-locust/examples/basic.py,11,one can specify tasks like this,
-locust/examples/basic.py,14,but it might be convenient to use the @task decorator,
-locust/examples/dynamice_user_credentials.py,1,locustfile.py,
-locust/examples/dynamice_user_credentials.py,19,user should be logged in here (unless the USER_CREDENTIALS ran out),
-locust/examples/browse_docs_sequence_test.py,1,This locust test script example will simulate a user,
-locust/examples/browse_docs_sequence_test.py,2,browsing the Locust documentation on https://docs.locust.io/,
-locust/examples/browse_docs_sequence_test.py,13,assume all users arrive at the index page,
-locust/examples/browse_docs_sequence_test.py,43,"we assume someone who is browsing the Locust docs,",
-locust/examples/browse_docs_sequence_test.py,44,generally has a quite long waiting time (between,
-locust/examples/browse_docs_sequence_test.py,45,"20 and 600 seconds), since there's a bunch of text",
-locust/examples/browse_docs_sequence_test.py,46,on each page,
-locust/examples/browse_docs_test.py,1,This locust test script example will simulate a user,
-locust/examples/browse_docs_test.py,2,browsing the Locust documentation on https://docs.locust.io/,
-locust/examples/browse_docs_test.py,11,assume all users arrive at the index page,
-locust/examples/browse_docs_test.py,44,"we assume someone who is browsing the Locust docs,",
-locust/examples/browse_docs_test.py,45,generally has a quite long waiting time (between,
-locust/examples/browse_docs_test.py,46,"20 and 600 seconds), since there's a bunch of text",
-locust/examples/browse_docs_test.py,47,on each page,
-locust/examples/events.py,1,-*- coding: utf-8 -*-,
-locust/examples/events.py,39,this code is only run on the master node (the web_ui instance doesn't exist on workers),
-locust/examples/custom_wait_function.py,11,one can specify tasks like this,
-locust/examples/custom_wait_function.py,14,but it might be convenient to use the @task decorator,
-locust/examples/custom_wait_function.py,24,Most task inter-arrival times approximate to exponential distributions,
-locust/examples/custom_wait_function.py,25,We will model this wait time as exponentially distributed with a mean of 1 second,
-locust/examples/multiple_hosts.py,15,but it might be convenient to use the @task decorator,
-locust/examples/custom_xmlrpc_client/xmlrpc_,28,"In this example, I've hardcoded response_length=0. If we would want the response length to be",
-locust/examples/custom_xmlrpc_client/xmlrpc_,29,"reported correctly in the statistics, we would probably need to hook in at a lower level",
-locust/docs/conf.py,1,-*- coding: utf-8 -*-,
-locust/docs/conf.py,2,,
-locust/docs/conf.py,3,This file is execfile()d with the current directory set to its containing dir.,
-locust/docs/conf.py,4,,
-locust/docs/conf.py,5,"The contents of this file are pickled, so don't put values in the namespace",
-locust/docs/conf.py,6,"that aren't pickleable (module imports are okay, they're removed automatically).",
-locust/docs/conf.py,7,,
-locust/docs/conf.py,8,All configuration values have a default value; values that are commented out,
-locust/docs/conf.py,9,serve to show the default value.,
-locust/docs/conf.py,16,Run command `locust --help` and store output in cli-help-output.txt which is included in the docs,
-locust/docs/conf.py,24,"The default replacements for |version| and |release|, also used in various",
-locust/docs/conf.py,25,other places throughout the built documents.,
-locust/docs/conf.py,26,,
-locust/docs/conf.py,27,The short X.Y version.,
-locust/docs/conf.py,30,General configuration,
-locust/docs/conf.py,31,---------------------,
-locust/docs/conf.py,33,"Add any Sphinx extension module names here, as strings. They can be extensions",
-locust/docs/conf.py,34,coming with Sphinx (named 'sphinx.ext.*') or your custom ones.,
-locust/docs/conf.py,37,autoclass options,
-locust/docs/conf.py,38,"autoclass_content = ""both""",
-locust/docs/conf.py,40,I would have liked to use 'description' but unfortunately it too is very verbose,
-locust/docs/conf.py,42,"Add any paths that contain templates here, relative to this directory.",
-locust/docs/conf.py,43,"templates_path = [""_templates""]",
-locust/docs/conf.py,45,The suffix of source filenames.,
-locust/docs/conf.py,48,The master toctree document.,
-locust/docs/conf.py,51,General substitutions.,
-locust/docs/conf.py,53,copyright = '',
-locust/docs/conf.py,55,Intersphinx config,
-locust/docs/conf.py,61,"The full version, including alpha/beta/rc tags.",
-locust/docs/conf.py,64,"There are two options for replacing |today|: either, you set today to some",
-locust/docs/conf.py,65,"non-false value, then it is used:",
-locust/docs/conf.py,66,today = '',
-locust/docs/conf.py,67,"Else, today_fmt is used as the format for a strftime call.",
-locust/docs/conf.py,70,List of documents that shouldn't be included in the build.,
-locust/docs/conf.py,71,unused_docs = [],
-locust/docs/conf.py,73,"If true, '()' will be appended to :func: etc. cross-reference text.",
-locust/docs/conf.py,76,"If true, the current module name will be prepended to all description",
-locust/docs/conf.py,77,unit titles (such as .. function::).,
-locust/docs/conf.py,80,"If true, sectionauthor and moduleauthor directives will be shown in the",
-locust/docs/conf.py,81,output. They are ignored by default.,
-locust/docs/conf.py,84,Sphinx will recurse into subversion configuration folders and try to read,
-locust/docs/conf.py,85,any document file within. These should be ignored.,
-locust/docs/conf.py,86,Note: exclude_dirnames is new in Sphinx 0.5,
-locust/docs/conf.py,89,Options for HTML output,
-locust/docs/conf.py,90,-----------------------,
-locust/docs/conf.py,96,"on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org",
-locust/docs/conf.py,99,only import and set the theme if we're building docs locally,
-locust/docs/conf.py,105,Custom CSS overrides,
-locust/docs/conf.py,112,HTML theme,
-locust/docs/conf.py,113,"html_theme = ""haiku""",
-locust/docs/conf.py,115,"html_theme = ""default""",
-locust/docs/conf.py,116,html_theme_options = {,
-locust/docs/conf.py,117,"""rightsidebar"": ""true"",",
-locust/docs/conf.py,118,"""codebgcolor"": ""#fafcfa"",",
-locust/docs/conf.py,119,"""bodyfont"": ""Arial"",",
-locust/docs/conf.py,120,},
-locust/docs/conf.py,122,The name of the Pygments (syntax highlighting) style to use.,
-locust/docs/conf.py,123,pygments_style = 'trac',
+locust/setup.py,1,-*- coding: utf-8 -*-,not
+locust/setup.py,9,parse version from locust/__init__.py,not
+locust/locust/web.py,1,-*- coding: utf-8 -*-,not
+locust/locust/web.py,118,"since we have mulitple User classes with different host attributes, we'll",not
+locust/locust/web.py,119,inform that specifying host will override the host for all User classes,not
+locust/locust/web.py,222,Truncate the total number of stats and errors displayed since a large number of rows will cause the app,not
+locust/locust/web.py,223,to render extremely slowly. Aggregate stats should be preserved.,not
+locust/locust/web.py,279,start the web server,not
+locust/locust/main.py,55,Start with making sure the current working dir is in the sys.path,not
+locust/locust/main.py,57,Get directory and locustfile name,not
+locust/locust/main.py,59,"If the directory isn't in the PYTHONPATH, add it so our import will work",not
+locust/locust/main.py,65,"If the directory IS in the PYTHONPATH, move it to the front temporarily,",SATD
+locust/locust/main.py,66,otherwise other locustfiles -- like Locusts's own -- may scoop the intended,not
+locust/locust/main.py,67,one.,not
+locust/locust/main.py,71,Store index for later restoration,not
+locust/locust/main.py,73,"Add to front, then remove from original position",not
+locust/locust/main.py,76,Perform the import,not
+locust/locust/main.py,78,Remove directory from path if we added it ourselves (just to be neat),not
+locust/locust/main.py,81,Put back in original index if we moved it,not
+locust/locust/main.py,85,Return our two-tuple,not
+locust/locust/main.py,108,"find specified locustfile and make sure it exists, using a very simplified",not
+locust/locust/main.py,109,command line parser that is only used to parse the -f option,not
+locust/locust/main.py,112,import the locustfile,not
+locust/locust/main.py,115,parse all command line options,not
+locust/locust/main.py,122,setup logging,not
+locust/locust/main.py,143,make sure specified User exists,not
+locust/locust/main.py,153,list() call is needed to consume the dict_view object in Python 3,not
+locust/locust/main.py,156,create locust Environment,not
+locust/locust/main.py,203,"main_greenlet is pointing to runners.greenlet by default, it will point the web greenlet later if in web mode",not
+locust/locust/main.py,225,start Web UI,not
+locust/locust/main.py,227,spawn web greenlet,not
+locust/locust/main.py,232,"special check for ""*"" so that we're consistent with --master-bind-host",not
+locust/locust/main.py,251,Fire locust init event which can be used by end-users' code to run setup code that,not
+locust/locust/main.py,252,"need access to the Environment, Runner or WebUI",not
+locust/locust/main.py,256,headless mode,not
+locust/locust/main.py,258,wait for worker nodes to connect,not
+locust/locust/main.py,264,apply headless mode defaults,not
+locust/locust/main.py,272,start the test,not
+locust/locust/main.py,283,spawn stats printing greenlet,not
+locust/locust/main.py,310,install SIGTERM handler,not
+locust/locust/log.py,7,Global flag that we set to True if any unhandled exception occurs in a greenlet,not
+locust/locust/log.py,8,Used by main.py to set the process return code to non-zero,not
+locust/locust/log.py,54,if a file has been specified add a file logging handler and set,not
+locust/locust/log.py,55,the locust and root loggers to use it,not
+locust/locust/clients.py,55,Check for basic authentication,not
+locust/locust/clients.py,62,remove username and password from the base_url,not
+locust/locust/clients.py,64,configure requests to use basic auth,not
+locust/locust/clients.py,104,prepend url with hostname unless it's already an absolute URL,not
+locust/locust/clients.py,107,store meta data that is used when reporting the request to locust's statistics,not
+locust/locust/clients.py,110,set up pre_request hook for attaching meta data to the request object,not
+locust/locust/clients.py,116,record the consumed time,not
+locust/locust/clients.py,122,"get the length of the content, but if the argument stream is set to True, we take",not
+locust/locust/clients.py,123,"the size from the content-length header, in order to not trigger fetching of the body",not
+locust/locust/clients.py,134,"Since we use the Exception message when grouping failures, in order to not get",not
+locust/locust/clients.py,135,"multiple failure entries for different URLs for the same name argument, we need",not
+locust/locust/clients.py,136,to temporarily override the reponse.url attribute,not
+locust/locust/clients.py,173,"with this status_code, content returns None",not
+locust/locust/clients.py,191,copy data from response to this object,not
+locust/locust/clients.py,206,if the user has already manually marked this response as failure or success,not
+locust/locust/clients.py,207,we can ignore the default haviour of letting the response code determine the outcome,not
+locust/locust/clients.py,214,we want other unknown exceptions to be raised,not
+locust/locust/runners.py,1,-*- coding: utf-8 -*-,not
+locust/locust/runners.py,57,set up event listeners for recording requests,not
+locust/locust/runners.py,69,register listener that resets stats when hatching is complete,not
+locust/locust/runners.py,78,don't leave any stray greenlets if runner is removed,not
+locust/locust/runners.py,120,create users depending on weight,not
+locust/locust/runners.py,124,used to keep track of the amount of rounding was done if we need,not
+locust/locust/runners.py,125,to add/remove some instances from bucket,not
+locust/locust/runners.py,128,"We got too few User classes in the bucket, so we need to create a few extra users,",not
+locust/locust/runners.py,129,and we do this by iterating over each of the User classes - starting with the one,not
+locust/locust/runners.py,130,where the residual from the rounding was the largest - and creating one of each until,not
+locust/locust/runners.py,131,we get the correct amount,not
+locust/locust/runners.py,135,We've got too many users due to rounding errors so we need to remove some,not
+locust/locust/runners.py,200,"User.stop() returns False if the greenlet was not stopped, so we'll need",not
+locust/locust/runners.py,201,to add it's greenlet to our stopping Group so we can wait for it to finish it's task,not
+locust/locust/runners.py,236,Dynamically changing the user count,not
+locust/locust/runners.py,240,Stop some users,not
+locust/locust/runners.py,244,Spawn some users,not
+locust/locust/runners.py,283,if we are currently hatching users we need to kill the hatching greenlet first,not
+locust/locust/runners.py,315,register listener thats logs the exception for the local runner,not
+locust/locust/runners.py,327,if we're not already running we'll fire the test_start event,not
+locust/locust/runners.py,331,kill existing hatching_greenlet before we start a new one,not
+locust/locust/runners.py,406,listener that gathers info on how many users the worker has spawned,not
+locust/locust/runners.py,415,register listener that sends quit message to worker nodes,not
+locust/locust/runners.py,479,fire test_stop event if state isn't already stopped,not
+locust/locust/runners.py,484,wait for final stats report from all workers,not
+locust/locust/runners.py,535,balance the load distribution when new client joins,not
+locust/locust/runners.py,537,emit a warning if the worker's clock seem to be out of sync with our clock,not
+locust/locust/runners.py,538,"if abs(time() - msg.data[""time""]) > 5.0:",not
+locust/locust/runners.py,539,"warnings.warn(""The worker node's clock seem to be out of sync. For the statistics to be correct the different locust servers need to have synchronized clocks."")",not
+locust/locust/runners.py,550,used to fail the test in the end,not
+locust/locust/runners.py,551,used to suppress logging for this node,not
+locust/locust/runners.py,606,"register listener for when all users have hatched, and report it to the master node",not
+locust/locust/runners.py,612,register listener that adds the current number of spawned users to the report that is sent to the master node,not
+locust/locust/runners.py,617,register listener that sends quit message to master,not
+locust/locust/runners.py,622,register listener thats sends user exceptions to master,not
+locust/locust/runners.py,661,kill existing hatching greenlet before we launch new one,not
+locust/locust/runners.py,673,"send a final report, in case there were any samples not yet reported",not
+locust/locust/env.py,122,Create a new RequestStats with use_response_times_cache set to False to save some memory,not
+locust/locust/env.py,123,"and CPU cycles, since the response_times_cache is not needed for Worker nodes",not
+locust/locust/argument_parser.py,29,Obtain env value,not
+locust/locust/argument_parser.py,31,Create .py version if necessary,not
+locust/locust/argument_parser.py,34,Does the name contain path elements?,not
+locust/locust/argument_parser.py,36,"If so, expand home-directory markers and test for existence",not
+locust/locust/argument_parser.py,43,"Otherwise, start in cwd and work downwards towards filesystem root",not
+locust/locust/argument_parser.py,53,we've reached the root path which has been checked this iteration,not
+locust/locust/argument_parser.py,56,Implicit 'return None' if nothing was found,not
+locust/locust/argument_parser.py,71,"epilog="""",",not
+locust/locust/argument_parser.py,108,if --help or --version is specified we'll call parse_options which will print the help/version message,not
+locust/locust/argument_parser.py,203,if locust should be run in distributed mode as master,not
+locust/locust/argument_parser.py,243,if locust should be run in distributed mode as worker,not
+locust/locust/argument_parser.py,255,master host options,not
+locust/locust/argument_parser.py,377,optparse gives you --version but we have to do it ourselves to get -V too,not
+locust/locust/argument_parser.py,410,get a parser that is only able to parse the -f argument,not
+locust/locust/argument_parser.py,412,add all the other supported arguments,not
+locust/locust/argument_parser.py,414,fire event to provide a hook for locustscripts and plugins to add command line arguments,not
+locust/locust/__init__.py,1,Apply Gevent monkey patching of stdlib,not
+locust/locust/stats.py,70,if all response times were None,not
+locust/locust/stats.py,134,store error in errors dict,not
+locust/locust/stats.py,270,get the time,not
+locust/locust/stats.py,275,see if we shall make a copy of the respone_times dict and store in the cache,not
+locust/locust/stats.py,282,increase total content-length,not
+locust/locust/stats.py,303,to avoid to much data that has to be transfered to the master node when,not
+locust/locust/stats.py,304,"running in distributed mode, we save the response time rounded in a dict",not
+locust/locust/stats.py,305,"so that 147 becomes 150, 3432 becomes 3400 and 58760 becomes 59000",not
+locust/locust/stats.py,315,increase request count for the rounded key in response time dict,not
+locust/locust/stats.py,347,Since we only use two digits of precision when calculating the median response time,not
+locust/locust/stats.py,348,"while still using the exact values for min and max response times, the following checks",not
+locust/locust/stats.py,349,makes sure that we don't report a median > max or median < min when a StatsEntry only,not
+locust/locust/stats.py,350,have one (or very few) really slow requests,not
+locust/locust/stats.py,406,"save the old last_request_timestamp, to see if we should store a new copy",not
+locust/locust/stats.py,407,of the response times in the response times cache,not
+locust/locust/stats.py,424,"this means self.min_response_time is None, so we can safely replace it",not
+locust/locust/stats.py,436,"If we've entered a new second, we'll cache the response times. Note that there",not
+locust/locust/stats.py,437,might still be reports from other worker nodes - that contains requests for the same,not
+locust/locust/stats.py,438,time periods - that hasn't been received/accounted for yet. This will cause the cache to,not
+locust/locust/stats.py,439,"lag behind a second or two, but since StatsEntry.current_response_time_percentile()",not
+locust/locust/stats.py,440,(which is what the response times cache is used for) uses an approximation of the,not
+locust/locust/stats.py,441,"last 10 seconds anyway, it should be fine to ignore this.",not
+locust/locust/stats.py,536,"First, we want to determine which of the cached response_times dicts we should",not
+locust/locust/stats.py,537,use to get response_times for approximately 10 seconds ago.,not
+locust/locust/stats.py,539,Since we can't be sure that the cache contains an entry for every second.,not
+locust/locust/stats.py,540,We'll construct a list of timestamps which we consider acceptable keys to be used,not
+locust/locust/stats.py,541,when trying to fetch the cached response_times. We construct this list in such a way,not
+locust/locust/stats.py,542,"that it's ordered by preference by starting to add t-10, then t-11, t-9, t-12, t-8,",not
+locust/locust/stats.py,543,and so on,not
+locust/locust/stats.py,557,"If we fond an acceptable cached response times, we'll calculate a new response",not
+locust/locust/stats.py,558,times dict of the last 10 seconds (approximately) by diffing it with the current,not
+locust/locust/stats.py,559,total response times. Then we'll use that to calculate a response time percentile,not
+locust/locust/stats.py,560,for that timeframe,not
+locust/locust/stats.py,595,We'll use a cache size of CURRENT_RESPONSE_TIME_PERCENTILE_WINDOW + 10 since - in the extreme case -,not
+locust/locust/stats.py,596,we might still use response times (from the cache) for t-CURRENT_RESPONSE_TIME_PERCENTILE_WINDOW-10,not
+locust/locust/stats.py,597,"to calculate the current response time percentile, if we're missing cached values for the subsequent",not
+locust/locust/stats.py,598,20 seconds,not
+locust/locust/stats.py,602,only keep the latest 20 response_times dicts,not
+locust/locust/user/users.py,25,gather any tasks that is declared on the class (or it's bases),not
+locust/locust/user/users.py,30,Not a base class,not
+locust/locust/user/users.py,33,check if class uses deprecated task_set attribute,not
+locust/locust/user/users.py,128,"run the task_set on_start method, if it has one",not
+locust/locust/user/users.py,133,"run the on_stop method, if it has one",not
+locust/locust/user/task.py,241,"if this class doesn't have a min_wait, max_wait or wait_function defined, copy it from Locust",not
+locust/locust/user/task.py,306,"check if the function is a method bound to the current locust, and if so, don't pass self as first argument",not
+locust/locust/user/task.py,308,task is a bound method on self,not
+locust/locust/user/task.py,311,task is another (nested) TaskSet class,not
+locust/locust/user/task.py,314,task is a function,not
+locust/locust/user/task.py,411,task is  (nested) TaskSet class,not
+locust/locust/user/task.py,414,task is a function,not
+locust/locust/user/inspectuser.py,33,get percentage,not
+locust/locust/user/sequential_taskset.py,16,first get tasks from base classes,not
+locust/locust/user/sequential_taskset.py,21,we want to insert tasks from the tasks attribute at the point of it's declaration,not
+locust/locust/user/sequential_taskset.py,22,compared to methods declared with @task,not
+locust/locust/user/sequential_taskset.py,29,method decorated with @task,not
+locust/locust/contrib/fasthttp.py,6,some methods take a named parameter called json,not
+locust/locust/contrib/fasthttp.py,23,Monkey patch geventhttpclient.useragent.CompatRequest so that Cookiejar works with Python >= 3.3,not
+locust/locust/contrib/fasthttp.py,24,More info: https://github.com/requests/requests/pull/871,not
+locust/locust/contrib/fasthttp.py,27,Workaround for AttributeError: 'CompatRequest' object has no attribute 'type' in Cookiejar,SATD
+locust/locust/contrib/fasthttp.py,28,https://github.com/locustio/locust/issues/1138,not
+locust/locust/contrib/fasthttp.py,29,Might allow secure cookies over non-secure connections but that is a minor concern in a load testing tool,not
+locust/locust/contrib/fasthttp.py,32,Regexp for checking if an absolute URL was specified,not
+locust/locust/contrib/fasthttp.py,35,"List of exceptions that can be raised by geventhttpclient when sending an HTTP request,",not
+locust/locust/contrib/fasthttp.py,36,and that should result in a Locust failure,not
+locust/locust/contrib/fasthttp.py,69,Below are various UserAgent settings. Change these in your subclass to alter FastHttpUser's behaviour.,not
+locust/locust/contrib/fasthttp.py,70,"It needs to be done before FastHttpUser is instantiated, changing them later will have no effect",not
+locust/locust/contrib/fasthttp.py,133,Check for basic authentication,not
+locust/locust/contrib/fasthttp.py,140,remove username and password from the base_url,not
+locust/locust/contrib/fasthttp.py,142,store authentication header (we construct this by using _basic_auth_str() function from requests.auth),not
+locust/locust/contrib/fasthttp.py,196,prepend url with hostname unless it's already an absolute URL,not
+locust/locust/contrib/fasthttp.py,199,store meta data that is used when reporting the request to locust's statistics,not
+locust/locust/contrib/fasthttp.py,201,set up pre_request hook for attaching meta data to the request object,not
+locust/locust/contrib/fasthttp.py,225,"send request, and catch any exceptions",not
+locust/locust/contrib/fasthttp.py,231,"get the length of the content, but if the argument stream is set to True, we take",not
+locust/locust/contrib/fasthttp.py,232,"the size from the content-length header, in order to not trigger fetching of the body",not
+locust/locust/contrib/fasthttp.py,238,Record the consumed time,not
+locust/locust/contrib/fasthttp.py,239,"Note: This is intentionally placed after we record the content_size above, since",not
+locust/locust/contrib/fasthttp.py,240,we'll then trigger fetching of the body (unless stream=True),not
+locust/locust/contrib/fasthttp.py,384,copy data from response to this object,not
+locust/locust/contrib/fasthttp.py,387,store reference to locust Environment,not
+locust/locust/contrib/fasthttp.py,400,if the user has already manually marked this response as failure or success,not
+locust/locust/contrib/fasthttp.py,401,we can ignore the default haviour of letting the response code determine the outcome,not
+locust/locust/test/test_client.py,52,verify that the time reported includes the download time of the whole streamed response,not
+locust/locust/test/test_client.py,56,"verify that response time does NOT include whole download time, when using stream=True",not
+locust/locust/test/test_client.py,61,download the content of the streaming response (so we don't get an ugly exception in the log),not
+locust/locust/test/test_tags.py,52,"when tagging taskset, its tasks recieve the tag",not
+locust/locust/test/test_tags.py,56,tagging inner task receives both,not
+locust/locust/test/test_tags.py,60,"when tagging nested taskset, its tasks receives both",not
+locust/locust/test/test_tags.py,69,task is tagged without parens,not
+locust/locust/test/test_tags.py,72,task is tagged with empty parens,not
+locust/locust/test/test_web.py,1,-*- coding: utf-8 -*-,not
+locust/locust/test/test_web.py,70,"Test that setting each hatch option individually populates the corresponding field in the html, and none of the others",not
+locust/locust/test/test_web.py,97,one entry plus Aggregated,not
+locust/locust/test/test_web.py,112,one entry plus Aggregated,not
+locust/locust/test/test_web.py,114,add another entry,not
+locust/locust/test/test_web.py,117,old value should be cached now,not
+locust/locust/test/test_web.py,122,this should no longer be cached,not
+locust/locust/test/test_web.py,344,Suppress only the single warning from urllib3 needed.,not
+locust/locust/test/test_locust_class.py,116,check that the User can be run,not
+locust/locust/test/test_locust_class.py,479,stop User gracefully,not
+locust/locust/test/test_locust_class.py,482,make sure instance is not killed right away,not
+locust/locust/test/test_locust_class.py,486,check that locust instance has now died and that the task got to finish,not
+locust/locust/test/test_locust_class.py,507,stop User gracefully,not
+locust/locust/test/test_locust_class.py,510,"make sure instance is killed right away, and that the task did NOT get to finish",not
+locust/locust/test/test_fasthttp.py,51,verify that the time reported includes the download time of the whole streamed response,not
+locust/locust/test/test_fasthttp.py,55,"verify that response time does NOT include whole download time, when using stream=True",not
+locust/locust/test/test_fasthttp.py,60,download the content of the streaming response (so we don't get an ugly exception in the log),not
+locust/locust/test/test_fasthttp.py,353,"max_redirects and max_retries are funny names, because they are actually max attempts",not
+locust/locust/test/test_fasthttp.py,366,ensure redirect still works,not
+locust/locust/test/test_runners.py,88,Construct a {UserClass => count} dict from a list of user classes,not
+locust/locust/test/test_runners.py,343,start a Master runner,not
+locust/locust/test/test_runners.py,347,start 3 Worker runners,not
+locust/locust/test/test_runners.py,354,give workers time to connect,not
+locust/locust/test/test_runners.py,356,issue start command that should trigger TestUsers to be spawned in the Workers,not
+locust/locust/test/test_runners.py,359,check that slave nodes have started locusts,not
+locust/locust/test/test_runners.py,362,"give time for users to generate stats, and stats to be sent to master",not
+locust/locust/test/test_runners.py,365,make sure users are killed,not
+locust/locust/test/test_runners.py,369,check that stats are present in master,not
+locust/locust/test/test_runners.py,450,print(master.clients['fake_client'].__dict__),not
+locust/locust/test/test_runners.py,582,"let 10 second pass, do some more requests, send it to the master and make",not
+locust/locust/test/test_runners.py,583,sure the current response time percentiles only accounts for these new requests,not
+locust/locust/test/test_runners.py,610,let another worker connect,not
+locust/locust/test/test_runners.py,654,change number of users and check that test_start isn't fired again,not
+locust/locust/test/test_runners.py,658,stop and start to make sure test_start is fired again,not
+locust/locust/test/test_runners.py,777,"start a new swarming in Step Load mode: total locust count of 10, hatch rate of 2, step locust count of 5, step duration of 2s",not
+locust/locust/test/test_runners.py,780,make sure the first step run is started,not
+locust/locust/test/test_runners.py,791,make sure the first step run is complete,not
+locust/locust/test/test_runners.py,841,set config to catch exceptions in locust users,not
+locust/locust/test/test_runners.py,847,make sure HeyAnException isn't raised,not
+locust/locust/test/test_runners.py,850,make sure we got two entries in the error log,not
+locust/locust/test/test_runners.py,853,make sure exception was stored,not
+locust/locust/test/test_runners.py,877,self._report_to_master_event_handlers = [h for h in events.report_to_master._handlers],not
+locust/locust/test/test_runners.py,880,events.report_to_master._handlers = self._report_to_master_event_handlers,not
+locust/locust/test/test_runners.py,914,"print(""outbox:"", client.outbox)",not
+locust/locust/test/test_runners.py,915,wait for worker to hatch locusts,not
+locust/locust/test/test_runners.py,919,check that locust has started running,not
+locust/locust/test/test_runners.py,922,send stop message,not
+locust/locust/test/test_runners.py,925,check that locust user got to finish,not
+locust/locust/test/test_runners.py,927,make sure the test_start was never fired on the worker,not
+locust/locust/test/test_runners.py,951,"print(""outbox:"", client.outbox)",not
+locust/locust/test/test_runners.py,952,wait for worker to hatch locusts,not
+locust/locust/test/test_runners.py,956,check that locust has started running,not
+locust/locust/test/test_runners.py,959,send stop message,not
+locust/locust/test/test_runners.py,962,check that locust user did not get to finish,not
+locust/locust/test/test_runners.py,1012,should only run when run time + stop_timeout is > short_time,not
+locust/locust/test/test_runners.py,1014,should only run when run time + stop_timeout is > short_time * 2,not
+locust/locust/test/test_runners.py,1027,exit with timeout,not
+locust/locust/test/test_runners.py,1035,"allow task iteration to complete, with some margin",not
+locust/locust/test/test_runners.py,1092,sleep to make sure locust has had time to start waiting,not
+locust/locust/test/test_runners.py,1169,should only run when run time + stop_timeout is > short_time,not
+locust/locust/test/test_runners.py,1171,should only run when run time + stop_timeout is > short_time * 2,not
+locust/locust/test/test_runners.py,1186,exit with timeout,not
+locust/locust/test/test_runners.py,1195,"allow task iteration to complete, with some margin",not
+locust/locust/test/test_parser.py,46,overridden,not
+locust/locust/test/test_parser.py,75,check default arg,not
+locust/locust/test/test_stats.py,164,(rounded 120) min,not
+locust/locust/test/test_stats.py,165,(rounded 990) max,not
+locust/locust/test/test_stats.py,166,(rounded 140),not
+locust/locust/test/test_stats.py,167,(rounded 550),not
+locust/locust/test/test_stats.py,168,(rounded 560),not
+locust/locust/test/test_stats.py,169,(rounded 390),not
+locust/locust/test/test_stats.py,170,(rounded 560),not
+locust/locust/test/test_stats.py,171,(rounded 980),not
+locust/locust/test/test_stats.py,222,(rounded 120) min,not
+locust/locust/test/test_stats.py,228,(rounded 130) min,not
+locust/locust/test/test_stats.py,233,reset stats,not
+locust/locust/test/test_stats.py,248,reset stats,not
+locust/locust/test/test_stats.py,282,check that headline contains same number of column as the value rows,not
+locust/locust/test/test_stats.py,359,Failing test for: https://github.com/locustio/locust/issues/1315,not
+locust/locust/test/test_stats.py,392,spawn a user every 0.2 second,not
+locust/locust/test/test_log.py,17,"Gevent outputs all unhandled exceptions to stderr, so we'll suppress that in this test",not
+locust/locust/test/test_log.py,76,check that custom message of root logger is also printed,not
+locust/locust/test/test_log.py,81,check that custom message of custom_logger is also printed,not
+locust/locust/test/test_log.py,137,make sure print still appears in output,not
+locust/locust/test/test_log.py,140,check that log messages don't go into output,not
+locust/locust/test/test_log.py,144,check that log messages goes into file,not
+locust/locust/test/test_log.py,157,check that message of custom logger also went into log file,not
+locust/locust/test/test_zmqrpc.py,34,We have to wait for the client to finish connecting,not
+locust/locust/test/test_zmqrpc.py,35,before sending a msg to it.,not
+locust/locust/test/testcases.py,129,Prevent args passed to test runner from being passed to Locust,not
+locust/locust/test/testcases.py,136,When running the tests in Python 3 we get warnings about unclosed sockets.,not
+locust/locust/test/testcases.py,137,"This causes tests that depends on calls to sys.stderr to fail, so we'll",not
+locust/locust/test/testcases.py,138,suppress those warnings. For more info see:,not
+locust/locust/test/testcases.py,139,https://github.com/requests/requests/issues/1882,not
+locust/locust/test/testcases.py,143,"ResourceWarning doesn't exist in Python 2, but since the warning only appears",not
+locust/locust/test/testcases.py,144,on Python 3 we don't need to mock it. Instead we can happily ignore the exception,not
+locust/locust/test/testcases.py,147,set up mocked logging handler,not
+locust/locust/test/testcases.py,156,set unandled exception flag to False,not
+locust/locust/test/testcases.py,160,restore logging class,not
+locust/locust/test/test_main.py,172,MacOS only sets up the loopback interface for 127.0.0.1 and not for 127.*.*.*,not
+locust/locust/util/cache.py,20,cache miss,not
+locust/locust/util/timespan.py,13,if an int is specified we assume they want seconds,not
+locust/locust/util/deprecation.py,4,Show deprecation warnings,not
+locust/examples/use_as_lib.py,22,setup Environment and Runner,not
+locust/examples/use_as_lib.py,26,start a WebUI instance,not
+locust/examples/use_as_lib.py,29,start a greenlet that periodically outputs the current stats,not
+locust/examples/use_as_lib.py,32,start the test,not
+locust/examples/use_as_lib.py,35,in 60 seconds stop the runner,not
+locust/examples/use_as_lib.py,38,wait for the greenlets,not
+locust/examples/use_as_lib.py,41,stop the web server for good measures,not
+locust/examples/basic.py,11,one can specify tasks like this,not
+locust/examples/basic.py,14,but it might be convenient to use the @task decorator,not
+locust/examples/dynamice_user_credentials.py,1,locustfile.py,not
+locust/examples/dynamice_user_credentials.py,19,user should be logged in here (unless the USER_CREDENTIALS ran out),not
+locust/examples/browse_docs_sequence_test.py,1,This locust test script example will simulate a user,not
+locust/examples/browse_docs_sequence_test.py,2,browsing the Locust documentation on https://docs.locust.io/,not
+locust/examples/browse_docs_sequence_test.py,13,assume all users arrive at the index page,not
+locust/examples/browse_docs_sequence_test.py,43,"we assume someone who is browsing the Locust docs,",not
+locust/examples/browse_docs_sequence_test.py,44,generally has a quite long waiting time (between,not
+locust/examples/browse_docs_sequence_test.py,45,"20 and 600 seconds), since there's a bunch of text",not
+locust/examples/browse_docs_sequence_test.py,46,on each page,not
+locust/examples/browse_docs_test.py,1,This locust test script example will simulate a user,not
+locust/examples/browse_docs_test.py,2,browsing the Locust documentation on https://docs.locust.io/,not
+locust/examples/browse_docs_test.py,11,assume all users arrive at the index page,not
+locust/examples/browse_docs_test.py,44,"we assume someone who is browsing the Locust docs,",not
+locust/examples/browse_docs_test.py,45,generally has a quite long waiting time (between,not
+locust/examples/browse_docs_test.py,46,"20 and 600 seconds), since there's a bunch of text",not
+locust/examples/browse_docs_test.py,47,on each page,not
+locust/examples/events.py,1,-*- coding: utf-8 -*-,not
+locust/examples/events.py,39,this code is only run on the master node (the web_ui instance doesn't exist on workers),not
+locust/examples/custom_wait_function.py,11,one can specify tasks like this,not
+locust/examples/custom_wait_function.py,14,but it might be convenient to use the @task decorator,not
+locust/examples/custom_wait_function.py,24,Most task inter-arrival times approximate to exponential distributions,not
+locust/examples/custom_wait_function.py,25,We will model this wait time as exponentially distributed with a mean of 1 second,not
+locust/examples/multiple_hosts.py,15,but it might be convenient to use the @task decorator,not
+locust/examples/custom_xmlrpc_client/xmlrpc_locustfile.py,28,"In this example, I've hardcoded response_length=0. If we would want the response length to be",not
+locust/examples/custom_xmlrpc_client/xmlrpc_locustfile.py,29,"reported correctly in the statistics, we would probably need to hook in at a lower level",not
+locust/docs/conf.py,1,-*- coding: utf-8 -*-,not
+locust/docs/conf.py,2,,not
+locust/docs/conf.py,3,This file is execfile()d with the current directory set to its containing dir.,not
+locust/docs/conf.py,4,,not
+locust/docs/conf.py,5,"The contents of this file are pickled, so don't put values in the namespace",not
+locust/docs/conf.py,6,"that aren't pickleable (module imports are okay, they're removed automatically).",not
+locust/docs/conf.py,7,,not
+locust/docs/conf.py,8,All configuration values have a default value; values that are commented out,not
+locust/docs/conf.py,9,serve to show the default value.,not
+locust/docs/conf.py,17,Run command `locust --help` and store output in cli-help-output.txt which is included in the docs,not
+locust/docs/conf.py,27,Generate RST table with help/descriptions for all available environment variables,not
+locust/docs/conf.py,61,"The default replacements for |version| and |release|, also used in various",not
+locust/docs/conf.py,62,other places throughout the built documents.,not
+locust/docs/conf.py,63,,not
+locust/docs/conf.py,64,The short X.Y version.,not
+locust/docs/conf.py,67,General configuration,not
+locust/docs/conf.py,68,---------------------,not
+locust/docs/conf.py,70,"Add any Sphinx extension module names here, as strings. They can be extensions",not
+locust/docs/conf.py,71,coming with Sphinx (named 'sphinx.ext.*') or your custom ones.,not
+locust/docs/conf.py,74,autoclass options,not
+locust/docs/conf.py,75,"autoclass_content = ""both""",not
+locust/docs/conf.py,77,I would have liked to use 'description' but unfortunately it too is very verbose,not
+locust/docs/conf.py,79,"Add any paths that contain templates here, relative to this directory.",not
+locust/docs/conf.py,80,"templates_path = [""_templates""]",not
+locust/docs/conf.py,82,The suffix of source filenames.,not
+locust/docs/conf.py,85,The master toctree document.,not
+locust/docs/conf.py,88,General substitutions.,not
+locust/docs/conf.py,90,copyright = '',not
+locust/docs/conf.py,92,Intersphinx config,not
+locust/docs/conf.py,98,"The full version, including alpha/beta/rc tags.",not
+locust/docs/conf.py,101,"There are two options for replacing |today|: either, you set today to some",not
+locust/docs/conf.py,102,"non-false value, then it is used:",not
+locust/docs/conf.py,103,today = '',not
+locust/docs/conf.py,104,"Else, today_fmt is used as the format for a strftime call.",not
+locust/docs/conf.py,107,List of documents that shouldn't be included in the build.,not
+locust/docs/conf.py,108,unused_docs = [],not
+locust/docs/conf.py,110,"If true, '()' will be appended to :func: etc. cross-reference text.",not
+locust/docs/conf.py,113,"If true, the current module name will be prepended to all description",not
+locust/docs/conf.py,114,unit titles (such as .. function::).,not
+locust/docs/conf.py,117,"If true, sectionauthor and moduleauthor directives will be shown in the",not
+locust/docs/conf.py,118,output. They are ignored by default.,not
+locust/docs/conf.py,121,Sphinx will recurse into subversion configuration folders and try to read,not
+locust/docs/conf.py,122,any document file within. These should be ignored.,not
+locust/docs/conf.py,123,Note: exclude_dirnames is new in Sphinx 0.5,not
+locust/docs/conf.py,126,Options for HTML output,not
+locust/docs/conf.py,127,-----------------------,not
+locust/docs/conf.py,133,"on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org",not
+locust/docs/conf.py,136,only import and set the theme if we're building docs locally,not
+locust/docs/conf.py,142,Custom CSS overrides,not
+locust/docs/conf.py,149,HTML theme,not
+locust/docs/conf.py,150,"html_theme = ""haiku""",not
+locust/docs/conf.py,152,"html_theme = ""default""",not
+locust/docs/conf.py,153,html_theme_options = {,not
+locust/docs/conf.py,154,"""rightsidebar"": ""true"",",not
+locust/docs/conf.py,155,"""codebgcolor"": ""#fafcfa"",",not
+locust/docs/conf.py,156,"""bodyfont"": ""Arial"",",not
+locust/docs/conf.py,157,},not
+locust/docs/conf.py,159,The name of the Pygments (syntax highlighting) style to use.,not
+locust/docs/conf.py,160,pygments_style = 'trac',not

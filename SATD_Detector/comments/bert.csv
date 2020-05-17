@@ -1,627 +1,627 @@
 file path,line #,comment,satd
-bert/extract_features.py,1,coding=utf-8,
-bert/extract_features.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/extract_features.py,3,,
-bert/extract_features.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/extract_features.py,5,you may not use this file except in compliance with the License.,
-bert/extract_features.py,6,You may obtain a copy of the License at,
-bert/extract_features.py,7,,
-bert/extract_features.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/extract_features.py,9,,
-bert/extract_features.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/extract_features.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/extract_features.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/extract_features.py,13,See the License for the specific language governing permissions and,
-bert/extract_features.py,14,limitations under the License.,
-bert/extract_features.py,120,This is for demo purposes and does NOT scale to large data sets. We do,
-bert/extract_features.py,121,not use Dataset.from_generator() because that uses tf.py_func which is,
-bert/extract_features.py,122,not TPU compatible. The right way to load data is with TFRecordReader.,
-bert/extract_features.py,152,pylint: disable=unused-argument,
-bert/extract_features.py,222,Modifies `tokens_a` and `tokens_b` in place so that the total,
-bert/extract_features.py,223,length is less than the specified length.,
-bert/extract_features.py,224,"Account for [CLS], [SEP], [SEP] with ""- 3""",
-bert/extract_features.py,227,"Account for [CLS] and [SEP] with ""- 2""",
-bert/extract_features.py,231,The convention in BERT is:,
-bert/extract_features.py,232,(a) For sequence pairs:,
-bert/extract_features.py,233,tokens:   [CLS] is this jack ##son ##ville ? [SEP] no it is not . [SEP],
-bert/extract_features.py,234,type_ids: 0     0  0    0    0     0       0 0     1  1  1  1   1 1,
-bert/extract_features.py,235,(b) For single sequences:,
-bert/extract_features.py,236,tokens:   [CLS] the dog is hairy . [SEP],
-bert/extract_features.py,237,type_ids: 0     0   0   0  0     0 0,
-bert/extract_features.py,238,,
-bert/extract_features.py,239,"Where ""type_ids"" are used to indicate whether this is the first",
-bert/extract_features.py,240,sequence or the second sequence. The embedding vectors for `type=0` and,
-bert/extract_features.py,241,`type=1` were learned during pre-training and are added to the wordpiece,
-bert/extract_features.py,242,embedding vector (and position vector). This is not *strictly* necessary,
-bert/extract_features.py,243,"since the [SEP] token unambiguously separates the sequences, but it makes",
-bert/extract_features.py,244,it easier for the model to learn the concept of sequences.,
-bert/extract_features.py,245,,
-bert/extract_features.py,246,"For classification tasks, the first vector (corresponding to [CLS]) is",
-bert/extract_features.py,247,"used as as the ""sentence vector"". Note that this only makes sense because",
-bert/extract_features.py,248,the entire model is fine-tuned.,
-bert/extract_features.py,268,The mask has 1 for real tokens and 0 for padding tokens. Only real,
-bert/extract_features.py,269,tokens are attended to.,
-bert/extract_features.py,272,Zero-pad up to the sequence length.,
-bert/extract_features.py,305,This is a simple heuristic which will always truncate the longer sequence,
-bert/extract_features.py,306,one token at a time. This makes more sense than truncating an equal percent,
-bert/extract_features.py,307,"of tokens from each, since if one sequence is very short then each token",
-bert/extract_features.py,308,that's truncated likely contains more information than a longer sequence.,
-bert/extract_features.py,376,"If TPU is not available, this will fall back to normal Estimator on CPU",
-bert/extract_features.py,377,or GPU.,
-bert/tokenization.py,1,coding=utf-8,
-bert/tokenization.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/tokenization.py,3,,
-bert/tokenization.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/tokenization.py,5,you may not use this file except in compliance with the License.,
-bert/tokenization.py,6,You may obtain a copy of the License at,
-bert/tokenization.py,7,,
-bert/tokenization.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/tokenization.py,9,,
-bert/tokenization.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/tokenization.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/tokenization.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/tokenization.py,13,See the License for the specific language governing permissions and,
-bert/tokenization.py,14,limitations under the License.,
-bert/tokenization.py,31,The casing has to be passed in by the user and there is no explicit check,
-bert/tokenization.py,32,as to whether it matches the checkpoint. The casing information probably,
-bert/tokenization.py,33,"should have been stored in the bert_config.json file, but it's not, so",
-bert/tokenization.py,34,we have to heuristically detect it to validate.,
-bert/tokenization.py,101,"These functions want `str` for both Python2 and Python3, but in one case",
-bert/tokenization.py,102,it's a Unicode string and in the other it's a byte string.,
-bert/tokenization.py,201,"This was added on November 1st, 2018 for the multilingual and Chinese",
-bert/tokenization.py,202,"models. This is also applied to the English models now, but it doesn't",
-bert/tokenization.py,203,matter since the English models were not trained on any Chinese data,
-bert/tokenization.py,204,and generally don't have any Chinese data in them (there are Chinese,
-bert/tokenization.py,205,characters in the vocabulary because Wikipedia does have some Chinese,
-bert/tokenization.py,206,words in the English Wikipedia.).,
-bert/tokenization.py,266,"This defines a ""chinese character"" as anything in the CJK Unicode block:",
-bert/tokenization.py,267,https://en.wikipedia.org/wiki/CJK_Unified_Ideographs_(Unicode_block),
-bert/tokenization.py,268,,
-bert/tokenization.py,269,"Note that the CJK Unicode block is NOT all Japanese and Korean characters,",
-bert/tokenization.py,270,"despite its name. The modern Korean Hangul alphabet is a different block,",
-bert/tokenization.py,271,as is Japanese Hiragana and Katakana. Those alphabets are used to write,
-bert/tokenization.py,272,"space-separated words, so they are not treated specially and handled",
-bert/tokenization.py,273,like the all of the other languages.,
-bert/tokenization.py,274,,
-bert/tokenization.py,275,,
-bert/tokenization.py,276,,
-bert/tokenization.py,277,,
-bert/tokenization.py,278,,
-bert/tokenization.py,280,,
-bert/tokenization.py,281,,
-bert/tokenization.py,364,"\t, \n, and \r are technically contorl characters but we treat them",
-bert/tokenization.py,365,as whitespace since they are generally considered as such.,
-bert/tokenization.py,376,These are technically control characters but we count them as whitespace,
-bert/tokenization.py,377,characters.,
-bert/tokenization.py,389,We treat all non-letter/number ASCII as punctuation.,
-bert/tokenization.py,390,"Characters such as ""^"", ""$"", and ""`"" are not in the Unicode",
-bert/tokenization.py,391,"Punctuation class but we treat them as punctuation anyways, for",
-bert/tokenization.py,392,consistency.,
-bert/run_squad.py,1,coding=utf-8,
-bert/run_squad.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/run_squad.py,3,,
-bert/run_squad.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/run_squad.py,5,you may not use this file except in compliance with the License.,
-bert/run_squad.py,6,You may obtain a copy of the License at,
-bert/run_squad.py,7,,
-bert/run_squad.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/run_squad.py,9,,
-bert/run_squad.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/run_squad.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/run_squad.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/run_squad.py,13,See the License for the specific language governing permissions and,
-bert/run_squad.py,14,limitations under the License.,
-bert/run_squad.py,36,Required parameters,
-bert/run_squad.py,49,Other parameters,
-bert/run_squad.py,277,Only add answers where the text can be exactly recovered from the,
-bert/run_squad.py,278,document. If this CAN'T happen it's likely due to weird Unicode,
-bert/run_squad.py,279,stuff so we will just skip the example.,
-bert/run_squad.py,280,,
-bert/run_squad.py,281,"Note that this means for training mode, every example is NOT",
-bert/run_squad.py,282,guaranteed to be preserved.,
-bert/run_squad.py,347,"The -3 accounts for [CLS], [SEP] and [SEP]",
-bert/run_squad.py,350,We can have documents that are longer than the maximum sequence length.,
-bert/run_squad.py,351,"To deal with this we do a sliding window approach, where we take chunks",
-bert/run_squad.py,352,of the up to our max length with a stride of `doc_stride`.,
-bert/run_squad.py,353,pylint: disable=invalid-name,
-bert/run_squad.py,393,The mask has 1 for real tokens and 0 for padding tokens. Only real,
-bert/run_squad.py,394,tokens are attended to.,
-bert/run_squad.py,397,Zero-pad up to the sequence length.,
-bert/run_squad.py,410,"For training, if our document chunk does not contain an annotation",
-bert/run_squad.py,411,"we throw it out, since there is nothing to predict.",
-bert/run_squad.py,470,Run callback,
-bert/run_squad.py,480,The SQuAD annotations are character based. We first project them to,
-bert/run_squad.py,481,"whitespace-tokenized words. But then after WordPiece tokenization, we can",
-bert/run_squad.py,482,"often find a ""better match"". For example:",
-bert/run_squad.py,483,,
-bert/run_squad.py,484,Question: What year was John Smith born?,
-bert/run_squad.py,485,Context: The leader was John Smith (1895-1943).,
-bert/run_squad.py,486,Answer: 1895,
-bert/run_squad.py,487,,
-bert/run_squad.py,488,"The original whitespace-tokenized answer will be ""(1895-1943)."". However",
-bert/run_squad.py,489,"after tokenization, our tokens will be ""( 1895 - 1943 ) ."". So we can match",
-bert/run_squad.py,490,"the exact answer, 1895.",
-bert/run_squad.py,491,,
-bert/run_squad.py,492,"However, this is not always possible. Consider the following:",
-bert/run_squad.py,493,,
-bert/run_squad.py,494,Question: What country is the top exporter of electornics?,
-bert/run_squad.py,495,Context: The Japanese electronics industry is the lagest in the world.,
-bert/run_squad.py,496,Answer: Japan,
-bert/run_squad.py,497,,
-bert/run_squad.py,498,"In this case, the annotator chose ""Japan"" as a character sub-span of",
-bert/run_squad.py,499,"the word ""Japanese"". Since our WordPiece tokenizer does not split",
-bert/run_squad.py,500,"""Japanese"", we just use ""Japanese"" as the annotation. This is fairly rare",
-bert/run_squad.py,501,"in SQuAD, but does happen.",
-bert/run_squad.py,516,"Because of the sliding window approach taken to scoring documents, a single",
-bert/run_squad.py,517,token can appear in multiple documents. E.g.,
-bert/run_squad.py,518,Doc: the man went to the store and bought a gallon of milk,
-bert/run_squad.py,519,Span A: the man went to the,
-bert/run_squad.py,520,Span B: to the store and bought,
-bert/run_squad.py,521,Span C: and bought a gallon of,
-bert/run_squad.py,522,...,
-bert/run_squad.py,523,,
-bert/run_squad.py,524,Now the word 'bought' will have two scores from spans B and C. We only,
-bert/run_squad.py,525,"want to consider the score with ""maximum context"", which we define as",
-bert/run_squad.py,526,the *minimum* of its left and right context (the *sum* of left and,
-bert/run_squad.py,527,"right context will always be the same, of course).",
-bert/run_squad.py,528,,
-bert/run_squad.py,529,In the example the maximum context for 'bought' would be span C since,
-bert/run_squad.py,530,"it has 1 left context and 3 right context, while span B has 4 left context",
-bert/run_squad.py,531,and 0 right context.,
-bert/run_squad.py,595,pylint: disable=unused-argument,
-bert/run_squad.py,705,"tf.Example only supports tf.int64, but the TPU only supports tf.int32.",
-bert/run_squad.py,706,So cast all int64 to int32.,
-bert/run_squad.py,719,"For training, we want a lot of parallel reading and shuffling.",
-bert/run_squad.py,720,"For eval, we want no shuffling and parallel reading doesn't matter.",
-bert/run_squad.py,756,pylint: disable=invalid-name,
-bert/run_squad.py,768,keep track of the minimum score of null start+end of position 0,
-bert/run_squad.py,769,large and positive,
-bert/run_squad.py,770,the paragraph slice with min mull score,
-bert/run_squad.py,771,the start logit at the slice with min null score,
-bert/run_squad.py,772,the end logit at the slice with min null score,
-bert/run_squad.py,777,"if we could have irrelevant answers, get the min score of irrelevant",
-bert/run_squad.py,787,"We could hypothetically create invalid predictions, e.g., predict",
-bert/run_squad.py,788,that the start of the span is in the question. We throw out all,
-bert/run_squad.py,789,invalid predictions.,
-bert/run_squad.py,826,pylint: disable=invalid-name,
-bert/run_squad.py,835,this is a non-null prediction,
-bert/run_squad.py,842,De-tokenize WordPieces that have been split off.,
-bert/run_squad.py,846,Clean whitespace,
-bert/run_squad.py,866,"if we didn't inlude the empty option in the n-best, inlcude it",
-bert/run_squad.py,873,In very rare edge cases we could have no valid predictions. So we,
-bert/run_squad.py,874,just create a nonce prediction in this case to avoid failure.,
-bert/run_squad.py,905,"predict """" iff the null score - the score of best non-null > threshold",
-bert/run_squad.py,930,"When we created the data, we kept track of the alignment between original",
-bert/run_squad.py,931,(whitespace tokenized) tokens and our WordPiece tokenized tokens. So,
-bert/run_squad.py,932,now `orig_text` contains the span of our original text corresponding to the,
-bert/run_squad.py,933,span that we predicted.,
-bert/run_squad.py,934,,
-bert/run_squad.py,935,"However, `orig_text` may contain extra characters that we don't want in",
-bert/run_squad.py,936,our prediction.,
-bert/run_squad.py,937,,
-bert/run_squad.py,938,"For example, let's say:",
-bert/run_squad.py,939,pred_text = steve smith,
-bert/run_squad.py,940,orig_text = Steve Smith's,
-bert/run_squad.py,941,,
-bert/run_squad.py,942,"We don't want to return `orig_text` because it contains the extra ""'s"".",
-bert/run_squad.py,943,,
-bert/run_squad.py,944,We don't want to return `pred_text` because it's already been normalized,
-bert/run_squad.py,945,(the SQuAD eval script also does punctuation stripping/lower casing but,
-bert/run_squad.py,946,our tokenizer does additional normalization like stripping accent,
-bert/run_squad.py,947,characters).,
-bert/run_squad.py,948,,
-bert/run_squad.py,949,"What we really want to return is ""Steve Smith"".",
-bert/run_squad.py,950,,
-bert/run_squad.py,951,"Therefore, we have to apply a semi-complicated alignment heruistic between",
-bert/run_squad.py,952,`pred_text` and `orig_text` to get a character-to-charcter alignment. This,
-bert/run_squad.py,953,can fail in certain cases in which case we just return `orig_text`.,
-bert/run_squad.py,966,"We first tokenize `orig_text`, strip whitespace from the result",
-bert/run_squad.py,967,"and `pred_text`, and check if they are the same length. If they are",
-bert/run_squad.py,968,"NOT the same length, the heuristic has failed. If they are the same",
-bert/run_squad.py,969,"length, we assume the characters are one-to-one aligned.",
-bert/run_squad.py,991,We then project the characters in `pred_text` back to `orig_text` using,
-bert/run_squad.py,992,the character-to-character alignment.,
-bert/run_squad.py,1164,Pre-shuffle the input to avoid having to make a very large shuffle,
-bert/run_squad.py,1165,buffer in in the `input_fn`.,
-bert/run_squad.py,1178,"If TPU is not available, this will fall back to normal Estimator on CPU",
-bert/run_squad.py,1179,or GPU.,
-bert/run_squad.py,1188,We write to a temporary file to avoid storing very large constant tensors,
-bert/run_squad.py,1189,in memory.,
-bert/run_squad.py,1253,"If running eval on the TPU, you will need to specify the number of",
-bert/run_squad.py,1254,steps.,
-bert/modeling_test.py,1,coding=utf-8,
-bert/modeling_test.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/modeling_test.py,3,,
-bert/modeling_test.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/modeling_test.py,5,you may not use this file except in compliance with the License.,
-bert/modeling_test.py,6,You may obtain a copy of the License at,
-bert/modeling_test.py,7,,
-bert/modeling_test.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/modeling_test.py,9,,
-bert/modeling_test.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/modeling_test.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/modeling_test.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/modeling_test.py,13,See the License for the specific language governing permissions and,
-bert/modeling_test.py,14,limitations under the License.,
-bert/optimization_test.py,1,coding=utf-8,
-bert/optimization_test.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/optimization_test.py,3,,
-bert/optimization_test.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/optimization_test.py,5,you may not use this file except in compliance with the License.,
-bert/optimization_test.py,6,You may obtain a copy of the License at,
-bert/optimization_test.py,7,,
-bert/optimization_test.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/optimization_test.py,9,,
-bert/optimization_test.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/optimization_test.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/optimization_test.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/optimization_test.py,13,See the License for the specific language governing permissions and,
-bert/optimization_test.py,14,limitations under the License.,
-bert/tokenization_test.py,1,coding=utf-8,
-bert/tokenization_test.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/tokenization_test.py,3,,
-bert/tokenization_test.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/tokenization_test.py,5,you may not use this file except in compliance with the License.,
-bert/tokenization_test.py,6,You may obtain a copy of the License at,
-bert/tokenization_test.py,7,,
-bert/tokenization_test.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/tokenization_test.py,9,,
-bert/tokenization_test.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/tokenization_test.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/tokenization_test.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/tokenization_test.py,13,See the License for the specific language governing permissions and,
-bert/tokenization_test.py,14,limitations under the License.,
-bert/optimization.py,1,coding=utf-8,
-bert/optimization.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/optimization.py,3,,
-bert/optimization.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/optimization.py,5,you may not use this file except in compliance with the License.,
-bert/optimization.py,6,You may obtain a copy of the License at,
-bert/optimization.py,7,,
-bert/optimization.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/optimization.py,9,,
-bert/optimization.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/optimization.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/optimization.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/optimization.py,13,See the License for the specific language governing permissions and,
-bert/optimization.py,14,limitations under the License.,
-bert/optimization.py,31,Implements linear decay of the learning rate.,
-bert/optimization.py,40,"Implements linear warmup. I.e., if global_step < num_warmup_steps, the",
-bert/optimization.py,41,learning rate will be `global_step/num_warmup_steps * init_lr`.,
-bert/optimization.py,56,"It is recommended that you use this optimizer for fine tuning, since this",
-bert/optimization.py,57,is how the model was trained (note that the Adam m/v variables are NOT,
-bert/optimization.py,58,loaded from init_checkpoint.),
-bert/optimization.py,73,This is how the model was pre-trained.,
-bert/optimization.py,79,Normally the global step update is done inside of `apply_gradients`.,
-bert/optimization.py,80,"However, `AdamWeightDecayOptimizer` doesn't do this. But if you use",
-bert/optimization.py,81,"a different optimizer, you should probably take this line out.",
-bert/optimization.py,130,Standard Adam update.,
-bert/optimization.py,139,Just adding the square of the weights to the loss function is *not*,
-bert/optimization.py,140,"the correct way of using L2 regularization/weight decay with Adam,",
-bert/optimization.py,141,since that will interact with the m and v parameters in strange ways.,
-bert/optimization.py,142,,
-bert/optimization.py,143,Instead we want ot decay the weights in a manner that doesn't interact,
-bert/optimization.py,144,with the m/v parameters. This is equivalent to adding the square,
-bert/optimization.py,145,of the weights to the loss with plain (non-momentum) SGD.,
-bert/run_classifier.py,1,coding=utf-8,
-bert/run_classifier.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/run_classifier.py,3,,
-bert/run_classifier.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/run_classifier.py,5,you may not use this file except in compliance with the License.,
-bert/run_classifier.py,6,You may obtain a copy of the License at,
-bert/run_classifier.py,7,,
-bert/run_classifier.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/run_classifier.py,9,,
-bert/run_classifier.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/run_classifier.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/run_classifier.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/run_classifier.py,13,See the License for the specific language governing permissions and,
-bert/run_classifier.py,14,limitations under the License.,
-bert/run_classifier.py,33,Required parameters,
-bert/run_classifier.py,53,Other parameters,
-bert/run_classifier.py,362,Only the test set has a header,
-bert/run_classifier.py,399,Modifies `tokens_a` and `tokens_b` in place so that the total,
-bert/run_classifier.py,400,length is less than the specified length.,
-bert/run_classifier.py,401,"Account for [CLS], [SEP], [SEP] with ""- 3""",
-bert/run_classifier.py,404,"Account for [CLS] and [SEP] with ""- 2""",
-bert/run_classifier.py,408,The convention in BERT is:,
-bert/run_classifier.py,409,(a) For sequence pairs:,
-bert/run_classifier.py,410,tokens:   [CLS] is this jack ##son ##ville ? [SEP] no it is not . [SEP],
-bert/run_classifier.py,411,type_ids: 0     0  0    0    0     0       0 0     1  1  1  1   1 1,
-bert/run_classifier.py,412,(b) For single sequences:,
-bert/run_classifier.py,413,tokens:   [CLS] the dog is hairy . [SEP],
-bert/run_classifier.py,414,type_ids: 0     0   0   0  0     0 0,
-bert/run_classifier.py,415,,
-bert/run_classifier.py,416,"Where ""type_ids"" are used to indicate whether this is the first",
-bert/run_classifier.py,417,sequence or the second sequence. The embedding vectors for `type=0` and,
-bert/run_classifier.py,418,`type=1` were learned during pre-training and are added to the wordpiece,
-bert/run_classifier.py,419,embedding vector (and position vector). This is not *strictly* necessary,
-bert/run_classifier.py,420,"since the [SEP] token unambiguously separates the sequences, but it makes",
-bert/run_classifier.py,421,it easier for the model to learn the concept of sequences.,
-bert/run_classifier.py,422,,
-bert/run_classifier.py,423,"For classification tasks, the first vector (corresponding to [CLS]) is",
-bert/run_classifier.py,424,"used as the ""sentence vector"". Note that this only makes sense because",
-bert/run_classifier.py,425,the entire model is fine-tuned.,
-bert/run_classifier.py,445,The mask has 1 for real tokens and 0 for padding tokens. Only real,
-bert/run_classifier.py,446,tokens are attended to.,
-bert/run_classifier.py,449,Zero-pad up to the sequence length.,
-bert/run_classifier.py,525,"tf.Example only supports tf.int64, but the TPU only supports tf.int32.",
-bert/run_classifier.py,526,So cast all int64 to int32.,
-bert/run_classifier.py,539,"For training, we want a lot of parallel reading and shuffling.",
-bert/run_classifier.py,540,"For eval, we want no shuffling and parallel reading doesn't matter.",
-bert/run_classifier.py,560,This is a simple heuristic which will always truncate the longer sequence,
-bert/run_classifier.py,561,one token at a time. This makes more sense than truncating an equal percent,
-bert/run_classifier.py,562,"of tokens from each, since if one sequence is very short then each token",
-bert/run_classifier.py,563,that's truncated likely contains more information than a longer sequence.,
-bert/run_classifier.py,585,"In the demo, we are doing a simple classification task on the entire",
-bert/run_classifier.py,586,segment.,
-bert/run_classifier.py,587,,
-bert/run_classifier.py,588,"If you want to use the token-level output, use model.get_sequence_output()",
-bert/run_classifier.py,589,instead.,
-bert/run_classifier.py,603,"I.e., 0.1 dropout",
-bert/run_classifier.py,624,pylint: disable=unused-argument,
-bert/run_classifier.py,711,This function is not used by this file but is still used by the Colab and,
-bert/run_classifier.py,712,people who depend on it.,
-bert/run_classifier.py,733,This is for demo purposes and does NOT scale to large data sets. We do,
-bert/run_classifier.py,734,not use Dataset.from_generator() because that uses tf.py_func which is,
-bert/run_classifier.py,735,not TPU compatible. The right way to load data is with TFRecordReader.,
-bert/run_classifier.py,765,This function is not used by this file but is still used by the Colab and,
-bert/run_classifier.py,766,people who depend on it.,
-bert/run_classifier.py,857,"If TPU is not available, this will fall back to normal Estimator on CPU",
-bert/run_classifier.py,858,or GPU.,
-bert/run_classifier.py,886,"TPU requires a fixed batch size for all batches, therefore the number",
-bert/run_classifier.py,887,"of examples must be a multiple of the batch size, or else examples",
-bert/run_classifier.py,888,will get dropped. So we pad with fake examples which are ignored,
-bert/run_classifier.py,889,later on. These do NOT count towards the metric (all tf.metrics,
-bert/run_classifier.py,890,"support a per-instance weight, and these get a weight of 0.0).",
-bert/run_classifier.py,904,This tells the estimator to run through the entire set.,
-bert/run_classifier.py,906,"However, if running eval on the TPU, you will need to specify the",
-bert/run_classifier.py,907,number of steps.,
-bert/run_classifier.py,932,"TPU requires a fixed batch size for all batches, therefore the number",
-bert/run_classifier.py,933,"of examples must be a multiple of the batch size, or else examples",
-bert/run_classifier.py,934,will get dropped. So we pad with fake examples which are ignored,
-bert/run_classifier.py,935,later on.,
-bert/modeling.py,1,coding=utf-8,
-bert/modeling.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/modeling.py,3,,
-bert/modeling.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/modeling.py,5,you may not use this file except in compliance with the License.,
-bert/modeling.py,6,You may obtain a copy of the License at,
-bert/modeling.py,7,,
-bert/modeling.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/modeling.py,9,,
-bert/modeling.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/modeling.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/modeling.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/modeling.py,13,See the License for the specific language governing permissions and,
-bert/modeling.py,14,limitations under the License.,
-bert/modeling.py,173,Perform embedding lookup on the word ids.,
-bert/modeling.py,182,"Add positional embeddings and token type embeddings, then layer",
-bert/modeling.py,183,normalize and perform dropout.,
-bert/modeling.py,197,"This converts a 2D mask of shape [batch_size, seq_length] to a 3D",
-bert/modeling.py,198,"mask of shape [batch_size, seq_length, seq_length] which is used",
-bert/modeling.py,199,for the attention scores.,
-bert/modeling.py,203,Run the stacked transformer.,
-bert/modeling.py,204,"`sequence_output` shape = [batch_size, seq_length, hidden_size].",
-bert/modeling.py,219,"The ""pooler"" converts the encoded sequence tensor of shape",
-bert/modeling.py,220,"[batch_size, seq_length, hidden_size] to a tensor of shape",
-bert/modeling.py,221,"[batch_size, hidden_size]. This is necessary for segment-level",
-bert/modeling.py,222,(or segment-pair-level) classification tasks where we need a fixed,
-bert/modeling.py,223,dimensional representation of the segment.,
-bert/modeling.py,225,"We ""pool"" the model by simply taking the hidden state corresponding",
-bert/modeling.py,226,to the first token. We assume that this has been pre-trained,
-bert/modeling.py,296,"We assume that anything that""s not a string is already an activation",
-bert/modeling.py,297,"function, so we just return it.",
-bert/modeling.py,401,"This function assumes that the input is of shape [batch_size, seq_length,",
-bert/modeling.py,402,num_inputs].,
-bert/modeling.py,403,,
-bert/modeling.py,404,"If the input is a 2D tensor of shape [batch_size, seq_length], we",
-bert/modeling.py,405,"reshape to [batch_size, seq_length, 1].",
-bert/modeling.py,480,"This vocab will be small so we always do one-hot here, since it is always",
-bert/modeling.py,481,faster for a small vocabulary.,
-bert/modeling.py,496,"Since the position embedding table is a learned variable, we create it",
-bert/modeling.py,497,using a (long) sequence length `max_position_embeddings`. The actual,
-bert/modeling.py,498,"sequence length might be shorter than this, for faster training of",
-bert/modeling.py,499,tasks that do not have long sequences.,
-bert/modeling.py,500,,
-bert/modeling.py,501,So `full_position_embeddings` is effectively an embedding table,
-bert/modeling.py,502,"for position [0, 1, 2, ..., max_position_embeddings-1], and the current",
-bert/modeling.py,503,"sequence has positions [0, 1, 2, ... seq_length-1], so we can just",
-bert/modeling.py,504,perform a slice.,
-bert/modeling.py,509,"Only the last two dimensions are relevant (`seq_length` and `width`), so",
-bert/modeling.py,510,"we broadcast among the first dimensions, which is typically just",
-bert/modeling.py,511,the batch size.,
-bert/modeling.py,544,We don't assume that `from_tensor` is a mask (although it could be). We,
-bert/modeling.py,545,don't actually care if we attend *from* padding tokens (only *to* padding),
-bert/modeling.py,546,tokens so we create a tensor of all ones.,
-bert/modeling.py,547,,
-bert/modeling.py,548,"`broadcast_ones` = [batch_size, from_seq_length, 1]",
-bert/modeling.py,552,Here we broadcast along two dimensions to create the mask.,
-bert/modeling.py,655,Scalar dimensions referenced here:,
-bert/modeling.py,656,B = batch size (number of sequences),
-bert/modeling.py,657,F = `from_tensor` sequence length,
-bert/modeling.py,658,T = `to_tensor` sequence length,
-bert/modeling.py,659,N = `num_attention_heads`,
-bert/modeling.py,660,H = `size_per_head`,
-bert/modeling.py,665,"`query_layer` = [B*F, N*H]",
-bert/modeling.py,673,"`key_layer` = [B*T, N*H]",
-bert/modeling.py,681,"`value_layer` = [B*T, N*H]",
-bert/modeling.py,689,"`query_layer` = [B, N, F, H]",
-bert/modeling.py,694,"`key_layer` = [B, N, T, H]",
-bert/modeling.py,698,"Take the dot product between ""query"" and ""key"" to get the raw",
-bert/modeling.py,699,attention scores.,
-bert/modeling.py,700,"`attention_scores` = [B, N, F, T]",
-bert/modeling.py,706,"`attention_mask` = [B, 1, F, T]",
-bert/modeling.py,709,Since attention_mask is 1.0 for positions we want to attend and 0.0 for,
-bert/modeling.py,710,"masked positions, this operation will create a tensor which is 0.0 for",
-bert/modeling.py,711,positions we want to attend and -10000.0 for masked positions.,
-bert/modeling.py,714,"Since we are adding it to the raw scores before the softmax, this is",
-bert/modeling.py,715,effectively the same as removing these entirely.,
-bert/modeling.py,718,Normalize the attention scores to probabilities.,
-bert/modeling.py,719,"`attention_probs` = [B, N, F, T]",
-bert/modeling.py,722,"This is actually dropping out entire tokens to attend to, which might",
-bert/modeling.py,723,"seem a bit unusual, but is taken from the original Transformer paper.",
-bert/modeling.py,726,"`value_layer` = [B, T, N, H]",
-bert/modeling.py,731,"`value_layer` = [B, N, T, H]",
-bert/modeling.py,734,"`context_layer` = [B, N, F, H]",
-bert/modeling.py,737,"`context_layer` = [B, F, N, H]",
-bert/modeling.py,741,"`context_layer` = [B*F, N*H]",
-bert/modeling.py,746,"`context_layer` = [B, F, N*H]",
-bert/modeling.py,813,The Transformer performs sum residuals on all layers so the input needs,
-bert/modeling.py,814,to be the same as the hidden size.,
-bert/modeling.py,819,We keep the representation as a 2D tensor to avoid re-shaping it back and,
-bert/modeling.py,820,forth from a 3D tensor to a 2D tensor. Re-shapes are normally free on,
-bert/modeling.py,821,"the GPU/CPU but may not be free on the TPU, so we want to minimize them to",
-bert/modeling.py,822,help the optimizer.,
-bert/modeling.py,851,"In the case where we have other sequences, we just concatenate",
-bert/modeling.py,852,them to the self-attention head before the projection.,
-bert/modeling.py,855,Run a linear projection of `hidden_size` then add a residual,
-bert/modeling.py,856,with `layer_input`.,
-bert/modeling.py,865,"The activation is only applied to the ""intermediate"" hidden layer.",
-bert/modeling.py,873,Down-project back to `hidden_size` then add the residual.,
-bert/run_pretraining.py,1,coding=utf-8,
-bert/run_pretraining.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/run_pretraining.py,3,,
-bert/run_pretraining.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/run_pretraining.py,5,you may not use this file except in compliance with the License.,
-bert/run_pretraining.py,6,You may obtain a copy of the License at,
-bert/run_pretraining.py,7,,
-bert/run_pretraining.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/run_pretraining.py,9,,
-bert/run_pretraining.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/run_pretraining.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/run_pretraining.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/run_pretraining.py,13,See the License for the specific language governing permissions and,
-bert/run_pretraining.py,14,limitations under the License.,
-bert/run_pretraining.py,30,Required parameters,
-bert/run_pretraining.py,44,Other parameters,
-bert/run_pretraining.py,114,pylint: disable=unused-argument,
-bert/run_pretraining.py,246,We apply one more non-linear transformation before the output layer.,
-bert/run_pretraining.py,247,This matrix is not used after pre-training.,
-bert/run_pretraining.py,257,"The output weights are the same as the input embeddings, but there is",
-bert/run_pretraining.py,258,an output-only bias for each token.,
-bert/run_pretraining.py,273,The `positions` tensor might be zero-padded (if the sequence is too,
-bert/run_pretraining.py,274,short to have the maximum number of predictions). The `label_weights`,
-bert/run_pretraining.py,275,tensor has a value of 1.0 for every real prediction and 0.0 for the,
-bert/run_pretraining.py,276,padding predictions.,
-bert/run_pretraining.py,288,"Simple binary classification. Note that 0 is ""next sentence"" and 1 is",
-bert/run_pretraining.py,289,"""random sentence"". This weight matrix is not used after pre-training.",
-bert/run_pretraining.py,352,"For training, we want a lot of parallel reading and shuffling.",
-bert/run_pretraining.py,353,"For eval, we want no shuffling and parallel reading doesn't matter.",
-bert/run_pretraining.py,359,`cycle_length` is the number of parallel files that get read.,
-bert/run_pretraining.py,362,`sloppy` mode means that the interleaving is not exact. This adds,
-bert/run_pretraining.py,363,even more randomness to the training pipeline.,
-bert/run_pretraining.py,372,Since we evaluate for a fixed number of steps we don't want to encounter,
-bert/run_pretraining.py,373,out-of-range exceptions.,
-bert/run_pretraining.py,376,We must `drop_remainder` on training because the TPU requires fixed,
-bert/run_pretraining.py,377,"size dimensions. For eval, we assume we are evaluating on the CPU or GPU",
-bert/run_pretraining.py,378,"and we *don't* want to drop the remainder, otherwise we wont cover",
-bert/run_pretraining.py,379,every sample.,
-bert/run_pretraining.py,395,"tf.Example only supports tf.int64, but the TPU only supports tf.int32.",
-bert/run_pretraining.py,396,So cast all int64 to int32.,
-bert/run_pretraining.py,449,"If TPU is not available, this will fall back to normal Estimator on CPU",
-bert/run_pretraining.py,450,or GPU.,
-bert/__init__.py,1,coding=utf-8,
-bert/__init__.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/__init__.py,3,,
-bert/__init__.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/__init__.py,5,you may not use this file except in compliance with the License.,
-bert/__init__.py,6,You may obtain a copy of the License at,
-bert/__init__.py,7,,
-bert/__init__.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/__init__.py,9,,
-bert/__init__.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/__init__.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/__init__.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/__init__.py,13,See the License for the specific language governing permissions and,
-bert/__init__.py,14,limitations under the License.,
-bert/create_pretraining_data.py,1,coding=utf-8,
-bert/create_pretraining_data.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/create_pretraining_data.py,3,,
-bert/create_pretraining_data.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/create_pretraining_data.py,5,you may not use this file except in compliance with the License.,
-bert/create_pretraining_data.py,6,You may obtain a copy of the License at,
-bert/create_pretraining_data.py,7,,
-bert/create_pretraining_data.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/create_pretraining_data.py,9,,
-bert/create_pretraining_data.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/create_pretraining_data.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/create_pretraining_data.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/create_pretraining_data.py,13,See the License for the specific language governing permissions and,
-bert/create_pretraining_data.py,14,limitations under the License.,
-bert/create_pretraining_data.py,185,Input file format:,
-bert/create_pretraining_data.py,186,"(1) One sentence per line. These should ideally be actual sentences, not",
-bert/create_pretraining_data.py,187,entire paragraphs or arbitrary spans of text. (Because we use the,
-bert/create_pretraining_data.py,188,"sentence boundaries for the ""next sentence prediction"" task).",
-bert/create_pretraining_data.py,189,(2) Blank lines between documents. Document boundaries are needed so,
-bert/create_pretraining_data.py,190,"that the ""next sentence prediction"" task doesn't span between documents.",
-bert/create_pretraining_data.py,199,Empty lines are used as document delimiters,
-bert/create_pretraining_data.py,206,Remove empty documents,
-bert/create_pretraining_data.py,229,"Account for [CLS], [SEP], [SEP]",
-bert/create_pretraining_data.py,232,We *usually* want to fill up the entire sequence since we are padding,
-bert/create_pretraining_data.py,233,"to `max_seq_length` anyways, so short sequences are generally wasted",
-bert/create_pretraining_data.py,234,"computation. However, we *sometimes*",
-bert/create_pretraining_data.py,235,"(i.e., short_seq_prob == 0.1 == 10% of the time) want to use shorter",
-bert/create_pretraining_data.py,236,sequences to minimize the mismatch between pre-training and fine-tuning.,
-bert/create_pretraining_data.py,237,"The `target_seq_length` is just a rough target however, whereas",
-bert/create_pretraining_data.py,238,`max_seq_length` is a hard limit.,
-bert/create_pretraining_data.py,243,We DON'T just concatenate all of the tokens from a document into a long,
-bert/create_pretraining_data.py,244,sequence and choose an arbitrary split point because this would make the,
-bert/create_pretraining_data.py,245,"next sentence prediction task too easy. Instead, we split the input into",
-bert/create_pretraining_data.py,246,"segments ""A"" and ""B"" based on the actual ""sentences"" provided by the user",
-bert/create_pretraining_data.py,247,input.,
-bert/create_pretraining_data.py,258,`a_end` is how many segments from `current_chunk` go into the `A`,
-bert/create_pretraining_data.py,259,(first) sentence.,
-bert/create_pretraining_data.py,269,Random next,
-bert/create_pretraining_data.py,275,This should rarely go for more than one iteration for large,
-bert/create_pretraining_data.py,276,"corpora. However, just to be careful, we try to make sure that",
-bert/create_pretraining_data.py,277,the random document is not the same as the document,
-bert/create_pretraining_data.py,278,we're processing.,
-bert/create_pretraining_data.py,290,"We didn't actually use these segments so we ""put them back"" so",
-bert/create_pretraining_data.py,291,they don't go to waste.,
-bert/create_pretraining_data.py,294,Actual next,
-bert/create_pretraining_data.py,350,Whole Word Masking means that if we mask all of the wordpieces,
-bert/create_pretraining_data.py,351,corresponding to an original word. When a word has been split into,
-bert/create_pretraining_data.py,352,"WordPieces, the first token does not have any marker and any subsequence",
-bert/create_pretraining_data.py,353,"tokens are prefixed with ##. So whenever we see the ## token, we",
-bert/create_pretraining_data.py,354,append it to the previous set of word indexes.,
-bert/create_pretraining_data.py,355,,
-bert/create_pretraining_data.py,356,Note that Whole Word Masking does *not* change the training code,
-bert/create_pretraining_data.py,357,"at all -- we still predict each WordPiece independently, softmaxed",
-bert/create_pretraining_data.py,358,over the entire vocabulary.,
-bert/create_pretraining_data.py,377,If adding a whole-word mask would exceed the maximum number of,
-bert/create_pretraining_data.py,378,"predictions, then just skip this candidate.",
-bert/create_pretraining_data.py,392,"80% of the time, replace with [MASK]",
-bert/create_pretraining_data.py,396,"10% of the time, keep original",
-bert/create_pretraining_data.py,399,"10% of the time, replace with random word",
-bert/create_pretraining_data.py,428,We want to sometimes truncate from the front and sometimes from the,
-bert/create_pretraining_data.py,429,back to add more randomness and avoid biases.,
-bert/run_classifier_with_tfhub.py,1,coding=utf-8,
-bert/run_classifier_with_tfhub.py,2,Copyright 2018 The Google AI Language Team Authors.,
-bert/run_classifier_with_tfhub.py,3,,
-bert/run_classifier_with_tfhub.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-bert/run_classifier_with_tfhub.py,5,you may not use this file except in compliance with the License.,
-bert/run_classifier_with_tfhub.py,6,You may obtain a copy of the License at,
-bert/run_classifier_with_tfhub.py,7,,
-bert/run_classifier_with_tfhub.py,8,http://www.apache.org/licenses/LICENSE-2.0,
-bert/run_classifier_with_tfhub.py,9,,
-bert/run_classifier_with_tfhub.py,10,"Unless required by applicable law or agreed to in writing, software",
-bert/run_classifier_with_tfhub.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-bert/run_classifier_with_tfhub.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-bert/run_classifier_with_tfhub.py,13,See the License for the specific language governing permissions and,
-bert/run_classifier_with_tfhub.py,14,limitations under the License.,
-bert/run_classifier_with_tfhub.py,53,"In the demo, we are doing a simple classification task on the entire",
-bert/run_classifier_with_tfhub.py,54,segment.,
-bert/run_classifier_with_tfhub.py,55,,
-bert/run_classifier_with_tfhub.py,56,"If you want to use the token-level output, use",
-bert/run_classifier_with_tfhub.py,57,"bert_outputs[""sequence_output""] instead.",
-bert/run_classifier_with_tfhub.py,71,"I.e., 0.1 dropout",
-bert/run_classifier_with_tfhub.py,91,pylint: disable=unused-argument,
-bert/run_classifier_with_tfhub.py,216,"If TPU is not available, this will fall back to normal Estimator on CPU",
-bert/run_classifier_with_tfhub.py,217,or GPU.,
-bert/run_classifier_with_tfhub.py,249,This tells the estimator to run through the entire set.,
-bert/run_classifier_with_tfhub.py,251,"However, if running eval on the TPU, you will need to specify the",
-bert/run_classifier_with_tfhub.py,252,number of steps.,
-bert/run_classifier_with_tfhub.py,254,Eval will be slightly WRONG on the TPU because it will truncate,
-bert/run_classifier_with_tfhub.py,255,the last batch.,
-bert/run_classifier_with_tfhub.py,277,Discard batch remainder if running on TPU,
+bert/extract_features.py,1,coding=utf-8,not
+bert/extract_features.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/extract_features.py,3,,not
+bert/extract_features.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/extract_features.py,5,you may not use this file except in compliance with the License.,not
+bert/extract_features.py,6,You may obtain a copy of the License at,not
+bert/extract_features.py,7,,not
+bert/extract_features.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/extract_features.py,9,,not
+bert/extract_features.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/extract_features.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/extract_features.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/extract_features.py,13,See the License for the specific language governing permissions and,not
+bert/extract_features.py,14,limitations under the License.,not
+bert/extract_features.py,120,This is for demo purposes and does NOT scale to large data sets. We do,not
+bert/extract_features.py,121,not use Dataset.from_generator() because that uses tf.py_func which is,not
+bert/extract_features.py,122,not TPU compatible. The right way to load data is with TFRecordReader.,not
+bert/extract_features.py,152,pylint: disable=unused-argument,not
+bert/extract_features.py,222,Modifies `tokens_a` and `tokens_b` in place so that the total,not
+bert/extract_features.py,223,length is less than the specified length.,not
+bert/extract_features.py,224,"Account for [CLS], [SEP], [SEP] with ""- 3""",not
+bert/extract_features.py,227,"Account for [CLS] and [SEP] with ""- 2""",not
+bert/extract_features.py,231,The convention in BERT is:,not
+bert/extract_features.py,232,(a) For sequence pairs:,not
+bert/extract_features.py,233,tokens:   [CLS] is this jack ##son ##ville ? [SEP] no it is not . [SEP],not
+bert/extract_features.py,234,type_ids: 0     0  0    0    0     0       0 0     1  1  1  1   1 1,not
+bert/extract_features.py,235,(b) For single sequences:,not
+bert/extract_features.py,236,tokens:   [CLS] the dog is hairy . [SEP],not
+bert/extract_features.py,237,type_ids: 0     0   0   0  0     0 0,not
+bert/extract_features.py,238,,not
+bert/extract_features.py,239,"Where ""type_ids"" are used to indicate whether this is the first",not
+bert/extract_features.py,240,sequence or the second sequence. The embedding vectors for `type=0` and,not
+bert/extract_features.py,241,`type=1` were learned during pre-training and are added to the wordpiece,not
+bert/extract_features.py,242,embedding vector (and position vector). This is not *strictly* necessary,not
+bert/extract_features.py,243,"since the [SEP] token unambiguously separates the sequences, but it makes",not
+bert/extract_features.py,244,it easier for the model to learn the concept of sequences.,not
+bert/extract_features.py,245,,not
+bert/extract_features.py,246,"For classification tasks, the first vector (corresponding to [CLS]) is",not
+bert/extract_features.py,247,"used as as the ""sentence vector"". Note that this only makes sense because",not
+bert/extract_features.py,248,the entire model is fine-tuned.,not
+bert/extract_features.py,268,The mask has 1 for real tokens and 0 for padding tokens. Only real,not
+bert/extract_features.py,269,tokens are attended to.,not
+bert/extract_features.py,272,Zero-pad up to the sequence length.,not
+bert/extract_features.py,305,This is a simple heuristic which will always truncate the longer sequence,not
+bert/extract_features.py,306,one token at a time. This makes more sense than truncating an equal percent,not
+bert/extract_features.py,307,"of tokens from each, since if one sequence is very short then each token",not
+bert/extract_features.py,308,that's truncated likely contains more information than a longer sequence.,not
+bert/extract_features.py,376,"If TPU is not available, this will fall back to normal Estimator on CPU",not
+bert/extract_features.py,377,or GPU.,not
+bert/tokenization.py,1,coding=utf-8,not
+bert/tokenization.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/tokenization.py,3,,not
+bert/tokenization.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/tokenization.py,5,you may not use this file except in compliance with the License.,not
+bert/tokenization.py,6,You may obtain a copy of the License at,not
+bert/tokenization.py,7,,not
+bert/tokenization.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/tokenization.py,9,,not
+bert/tokenization.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/tokenization.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/tokenization.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/tokenization.py,13,See the License for the specific language governing permissions and,not
+bert/tokenization.py,14,limitations under the License.,not
+bert/tokenization.py,31,The casing has to be passed in by the user and there is no explicit check,not
+bert/tokenization.py,32,as to whether it matches the checkpoint. The casing information probably,not
+bert/tokenization.py,33,"should have been stored in the bert_config.json file, but it's not, so",not
+bert/tokenization.py,34,we have to heuristically detect it to validate.,not
+bert/tokenization.py,101,"These functions want `str` for both Python2 and Python3, but in one case",not
+bert/tokenization.py,102,it's a Unicode string and in the other it's a byte string.,not
+bert/tokenization.py,201,"This was added on November 1st, 2018 for the multilingual and Chinese",not
+bert/tokenization.py,202,"models. This is also applied to the English models now, but it doesn't",not
+bert/tokenization.py,203,matter since the English models were not trained on any Chinese data,not
+bert/tokenization.py,204,and generally don't have any Chinese data in them (there are Chinese,not
+bert/tokenization.py,205,characters in the vocabulary because Wikipedia does have some Chinese,not
+bert/tokenization.py,206,words in the English Wikipedia.).,not
+bert/tokenization.py,266,"This defines a ""chinese character"" as anything in the CJK Unicode block:",not
+bert/tokenization.py,267,https://en.wikipedia.org/wiki/CJK_Unified_Ideographs_(Unicode_block),not
+bert/tokenization.py,268,,not
+bert/tokenization.py,269,"Note that the CJK Unicode block is NOT all Japanese and Korean characters,",not
+bert/tokenization.py,270,"despite its name. The modern Korean Hangul alphabet is a different block,",not
+bert/tokenization.py,271,as is Japanese Hiragana and Katakana. Those alphabets are used to write,not
+bert/tokenization.py,272,"space-separated words, so they are not treated specially and handled",not
+bert/tokenization.py,273,like the all of the other languages.,not
+bert/tokenization.py,274,,not
+bert/tokenization.py,275,,not
+bert/tokenization.py,276,,not
+bert/tokenization.py,277,,not
+bert/tokenization.py,278,,not
+bert/tokenization.py,280,,not
+bert/tokenization.py,281,,not
+bert/tokenization.py,364,"\t, \n, and \r are technically contorl characters but we treat them",not
+bert/tokenization.py,365,as whitespace since they are generally considered as such.,not
+bert/tokenization.py,376,These are technically control characters but we count them as whitespace,not
+bert/tokenization.py,377,characters.,not
+bert/tokenization.py,389,We treat all non-letter/number ASCII as punctuation.,not
+bert/tokenization.py,390,"Characters such as ""^"", ""$"", and ""`"" are not in the Unicode",not
+bert/tokenization.py,391,"Punctuation class but we treat them as punctuation anyways, for",not
+bert/tokenization.py,392,consistency.,not
+bert/run_squad.py,1,coding=utf-8,not
+bert/run_squad.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/run_squad.py,3,,not
+bert/run_squad.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/run_squad.py,5,you may not use this file except in compliance with the License.,not
+bert/run_squad.py,6,You may obtain a copy of the License at,not
+bert/run_squad.py,7,,not
+bert/run_squad.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/run_squad.py,9,,not
+bert/run_squad.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/run_squad.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/run_squad.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/run_squad.py,13,See the License for the specific language governing permissions and,not
+bert/run_squad.py,14,limitations under the License.,not
+bert/run_squad.py,36,Required parameters,not
+bert/run_squad.py,49,Other parameters,not
+bert/run_squad.py,277,Only add answers where the text can be exactly recovered from the,not
+bert/run_squad.py,278,document. If this CAN'T happen it's likely due to weird Unicode,not
+bert/run_squad.py,279,stuff so we will just skip the example.,not
+bert/run_squad.py,280,,not
+bert/run_squad.py,281,"Note that this means for training mode, every example is NOT",not
+bert/run_squad.py,282,guaranteed to be preserved.,not
+bert/run_squad.py,347,"The -3 accounts for [CLS], [SEP] and [SEP]",not
+bert/run_squad.py,350,We can have documents that are longer than the maximum sequence length.,not
+bert/run_squad.py,351,"To deal with this we do a sliding window approach, where we take chunks",not
+bert/run_squad.py,352,of the up to our max length with a stride of `doc_stride`.,not
+bert/run_squad.py,353,pylint: disable=invalid-name,not
+bert/run_squad.py,393,The mask has 1 for real tokens and 0 for padding tokens. Only real,not
+bert/run_squad.py,394,tokens are attended to.,not
+bert/run_squad.py,397,Zero-pad up to the sequence length.,not
+bert/run_squad.py,410,"For training, if our document chunk does not contain an annotation",not
+bert/run_squad.py,411,"we throw it out, since there is nothing to predict.",not
+bert/run_squad.py,470,Run callback,not
+bert/run_squad.py,480,The SQuAD annotations are character based. We first project them to,not
+bert/run_squad.py,481,"whitespace-tokenized words. But then after WordPiece tokenization, we can",not
+bert/run_squad.py,482,"often find a ""better match"". For example:",SATD
+bert/run_squad.py,483,,not
+bert/run_squad.py,484,Question: What year was John Smith born?,not
+bert/run_squad.py,485,Context: The leader was John Smith (1895-1943).,not
+bert/run_squad.py,486,Answer: 1895,not
+bert/run_squad.py,487,,not
+bert/run_squad.py,488,"The original whitespace-tokenized answer will be ""(1895-1943)."". However",not
+bert/run_squad.py,489,"after tokenization, our tokens will be ""( 1895 - 1943 ) ."". So we can match",not
+bert/run_squad.py,490,"the exact answer, 1895.",not
+bert/run_squad.py,491,,not
+bert/run_squad.py,492,"However, this is not always possible. Consider the following:",not
+bert/run_squad.py,493,,not
+bert/run_squad.py,494,Question: What country is the top exporter of electornics?,not
+bert/run_squad.py,495,Context: The Japanese electronics industry is the lagest in the world.,not
+bert/run_squad.py,496,Answer: Japan,not
+bert/run_squad.py,497,,not
+bert/run_squad.py,498,"In this case, the annotator chose ""Japan"" as a character sub-span of",not
+bert/run_squad.py,499,"the word ""Japanese"". Since our WordPiece tokenizer does not split",not
+bert/run_squad.py,500,"""Japanese"", we just use ""Japanese"" as the annotation. This is fairly rare",not
+bert/run_squad.py,501,"in SQuAD, but does happen.",not
+bert/run_squad.py,516,"Because of the sliding window approach taken to scoring documents, a single",not
+bert/run_squad.py,517,token can appear in multiple documents. E.g.,not
+bert/run_squad.py,518,Doc: the man went to the store and bought a gallon of milk,not
+bert/run_squad.py,519,Span A: the man went to the,not
+bert/run_squad.py,520,Span B: to the store and bought,not
+bert/run_squad.py,521,Span C: and bought a gallon of,not
+bert/run_squad.py,522,...,not
+bert/run_squad.py,523,,not
+bert/run_squad.py,524,Now the word 'bought' will have two scores from spans B and C. We only,not
+bert/run_squad.py,525,"want to consider the score with ""maximum context"", which we define as",not
+bert/run_squad.py,526,the *minimum* of its left and right context (the *sum* of left and,not
+bert/run_squad.py,527,"right context will always be the same, of course).",not
+bert/run_squad.py,528,,not
+bert/run_squad.py,529,In the example the maximum context for 'bought' would be span C since,not
+bert/run_squad.py,530,"it has 1 left context and 3 right context, while span B has 4 left context",not
+bert/run_squad.py,531,and 0 right context.,not
+bert/run_squad.py,595,pylint: disable=unused-argument,not
+bert/run_squad.py,705,"tf.Example only supports tf.int64, but the TPU only supports tf.int32.",not
+bert/run_squad.py,706,So cast all int64 to int32.,not
+bert/run_squad.py,719,"For training, we want a lot of parallel reading and shuffling.",not
+bert/run_squad.py,720,"For eval, we want no shuffling and parallel reading doesn't matter.",not
+bert/run_squad.py,756,pylint: disable=invalid-name,not
+bert/run_squad.py,768,keep track of the minimum score of null start+end of position 0,not
+bert/run_squad.py,769,large and positive,not
+bert/run_squad.py,770,the paragraph slice with min mull score,not
+bert/run_squad.py,771,the start logit at the slice with min null score,not
+bert/run_squad.py,772,the end logit at the slice with min null score,not
+bert/run_squad.py,777,"if we could have irrelevant answers, get the min score of irrelevant",not
+bert/run_squad.py,787,"We could hypothetically create invalid predictions, e.g., predict",not
+bert/run_squad.py,788,that the start of the span is in the question. We throw out all,not
+bert/run_squad.py,789,invalid predictions.,not
+bert/run_squad.py,826,pylint: disable=invalid-name,not
+bert/run_squad.py,835,this is a non-null prediction,not
+bert/run_squad.py,842,De-tokenize WordPieces that have been split off.,not
+bert/run_squad.py,846,Clean whitespace,not
+bert/run_squad.py,866,"if we didn't inlude the empty option in the n-best, inlcude it",not
+bert/run_squad.py,873,In very rare edge cases we could have no valid predictions. So we,not
+bert/run_squad.py,874,just create a nonce prediction in this case to avoid failure.,not
+bert/run_squad.py,905,"predict """" iff the null score - the score of best non-null > threshold",not
+bert/run_squad.py,930,"When we created the data, we kept track of the alignment between original",not
+bert/run_squad.py,931,(whitespace tokenized) tokens and our WordPiece tokenized tokens. So,not
+bert/run_squad.py,932,now `orig_text` contains the span of our original text corresponding to the,not
+bert/run_squad.py,933,span that we predicted.,not
+bert/run_squad.py,934,,not
+bert/run_squad.py,935,"However, `orig_text` may contain extra characters that we don't want in",not
+bert/run_squad.py,936,our prediction.,not
+bert/run_squad.py,937,,not
+bert/run_squad.py,938,"For example, let's say:",not
+bert/run_squad.py,939,pred_text = steve smith,not
+bert/run_squad.py,940,orig_text = Steve Smith's,not
+bert/run_squad.py,941,,not
+bert/run_squad.py,942,"We don't want to return `orig_text` because it contains the extra ""'s"".",not
+bert/run_squad.py,943,,not
+bert/run_squad.py,944,We don't want to return `pred_text` because it's already been normalized,not
+bert/run_squad.py,945,(the SQuAD eval script also does punctuation stripping/lower casing but,not
+bert/run_squad.py,946,our tokenizer does additional normalization like stripping accent,not
+bert/run_squad.py,947,characters).,not
+bert/run_squad.py,948,,not
+bert/run_squad.py,949,"What we really want to return is ""Steve Smith"".",not
+bert/run_squad.py,950,,not
+bert/run_squad.py,951,"Therefore, we have to apply a semi-complicated alignment heruistic between",not
+bert/run_squad.py,952,`pred_text` and `orig_text` to get a character-to-charcter alignment. This,not
+bert/run_squad.py,953,can fail in certain cases in which case we just return `orig_text`.,not
+bert/run_squad.py,966,"We first tokenize `orig_text`, strip whitespace from the result",not
+bert/run_squad.py,967,"and `pred_text`, and check if they are the same length. If they are",not
+bert/run_squad.py,968,"NOT the same length, the heuristic has failed. If they are the same",not
+bert/run_squad.py,969,"length, we assume the characters are one-to-one aligned.",not
+bert/run_squad.py,991,We then project the characters in `pred_text` back to `orig_text` using,not
+bert/run_squad.py,992,the character-to-character alignment.,not
+bert/run_squad.py,1164,Pre-shuffle the input to avoid having to make a very large shuffle,not
+bert/run_squad.py,1165,buffer in in the `input_fn`.,not
+bert/run_squad.py,1178,"If TPU is not available, this will fall back to normal Estimator on CPU",not
+bert/run_squad.py,1179,or GPU.,not
+bert/run_squad.py,1188,We write to a temporary file to avoid storing very large constant tensors,not
+bert/run_squad.py,1189,in memory.,not
+bert/run_squad.py,1253,"If running eval on the TPU, you will need to specify the number of",not
+bert/run_squad.py,1254,steps.,not
+bert/modeling_test.py,1,coding=utf-8,not
+bert/modeling_test.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/modeling_test.py,3,,not
+bert/modeling_test.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/modeling_test.py,5,you may not use this file except in compliance with the License.,not
+bert/modeling_test.py,6,You may obtain a copy of the License at,not
+bert/modeling_test.py,7,,not
+bert/modeling_test.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/modeling_test.py,9,,not
+bert/modeling_test.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/modeling_test.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/modeling_test.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/modeling_test.py,13,See the License for the specific language governing permissions and,not
+bert/modeling_test.py,14,limitations under the License.,not
+bert/optimization_test.py,1,coding=utf-8,not
+bert/optimization_test.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/optimization_test.py,3,,not
+bert/optimization_test.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/optimization_test.py,5,you may not use this file except in compliance with the License.,not
+bert/optimization_test.py,6,You may obtain a copy of the License at,not
+bert/optimization_test.py,7,,not
+bert/optimization_test.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/optimization_test.py,9,,not
+bert/optimization_test.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/optimization_test.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/optimization_test.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/optimization_test.py,13,See the License for the specific language governing permissions and,not
+bert/optimization_test.py,14,limitations under the License.,not
+bert/tokenization_test.py,1,coding=utf-8,not
+bert/tokenization_test.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/tokenization_test.py,3,,not
+bert/tokenization_test.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/tokenization_test.py,5,you may not use this file except in compliance with the License.,not
+bert/tokenization_test.py,6,You may obtain a copy of the License at,not
+bert/tokenization_test.py,7,,not
+bert/tokenization_test.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/tokenization_test.py,9,,not
+bert/tokenization_test.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/tokenization_test.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/tokenization_test.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/tokenization_test.py,13,See the License for the specific language governing permissions and,not
+bert/tokenization_test.py,14,limitations under the License.,not
+bert/optimization.py,1,coding=utf-8,not
+bert/optimization.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/optimization.py,3,,not
+bert/optimization.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/optimization.py,5,you may not use this file except in compliance with the License.,not
+bert/optimization.py,6,You may obtain a copy of the License at,not
+bert/optimization.py,7,,not
+bert/optimization.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/optimization.py,9,,not
+bert/optimization.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/optimization.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/optimization.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/optimization.py,13,See the License for the specific language governing permissions and,not
+bert/optimization.py,14,limitations under the License.,not
+bert/optimization.py,31,Implements linear decay of the learning rate.,not
+bert/optimization.py,40,"Implements linear warmup. I.e., if global_step < num_warmup_steps, the",not
+bert/optimization.py,41,learning rate will be `global_step/num_warmup_steps * init_lr`.,not
+bert/optimization.py,56,"It is recommended that you use this optimizer for fine tuning, since this",not
+bert/optimization.py,57,is how the model was trained (note that the Adam m/v variables are NOT,not
+bert/optimization.py,58,loaded from init_checkpoint.),not
+bert/optimization.py,73,This is how the model was pre-trained.,not
+bert/optimization.py,79,Normally the global step update is done inside of `apply_gradients`.,not
+bert/optimization.py,80,"However, `AdamWeightDecayOptimizer` doesn't do this. But if you use",not
+bert/optimization.py,81,"a different optimizer, you should probably take this line out.",not
+bert/optimization.py,130,Standard Adam update.,not
+bert/optimization.py,139,Just adding the square of the weights to the loss function is *not*,not
+bert/optimization.py,140,"the correct way of using L2 regularization/weight decay with Adam,",not
+bert/optimization.py,141,since that will interact with the m and v parameters in strange ways.,not
+bert/optimization.py,142,,not
+bert/optimization.py,143,Instead we want ot decay the weights in a manner that doesn't interact,not
+bert/optimization.py,144,with the m/v parameters. This is equivalent to adding the square,not
+bert/optimization.py,145,of the weights to the loss with plain (non-momentum) SGD.,not
+bert/run_classifier.py,1,coding=utf-8,not
+bert/run_classifier.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/run_classifier.py,3,,not
+bert/run_classifier.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/run_classifier.py,5,you may not use this file except in compliance with the License.,not
+bert/run_classifier.py,6,You may obtain a copy of the License at,not
+bert/run_classifier.py,7,,not
+bert/run_classifier.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/run_classifier.py,9,,not
+bert/run_classifier.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/run_classifier.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/run_classifier.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/run_classifier.py,13,See the License for the specific language governing permissions and,not
+bert/run_classifier.py,14,limitations under the License.,not
+bert/run_classifier.py,33,Required parameters,not
+bert/run_classifier.py,53,Other parameters,not
+bert/run_classifier.py,362,Only the test set has a header,not
+bert/run_classifier.py,399,Modifies `tokens_a` and `tokens_b` in place so that the total,not
+bert/run_classifier.py,400,length is less than the specified length.,not
+bert/run_classifier.py,401,"Account for [CLS], [SEP], [SEP] with ""- 3""",not
+bert/run_classifier.py,404,"Account for [CLS] and [SEP] with ""- 2""",not
+bert/run_classifier.py,408,The convention in BERT is:,not
+bert/run_classifier.py,409,(a) For sequence pairs:,not
+bert/run_classifier.py,410,tokens:   [CLS] is this jack ##son ##ville ? [SEP] no it is not . [SEP],not
+bert/run_classifier.py,411,type_ids: 0     0  0    0    0     0       0 0     1  1  1  1   1 1,not
+bert/run_classifier.py,412,(b) For single sequences:,not
+bert/run_classifier.py,413,tokens:   [CLS] the dog is hairy . [SEP],not
+bert/run_classifier.py,414,type_ids: 0     0   0   0  0     0 0,not
+bert/run_classifier.py,415,,not
+bert/run_classifier.py,416,"Where ""type_ids"" are used to indicate whether this is the first",not
+bert/run_classifier.py,417,sequence or the second sequence. The embedding vectors for `type=0` and,not
+bert/run_classifier.py,418,`type=1` were learned during pre-training and are added to the wordpiece,not
+bert/run_classifier.py,419,embedding vector (and position vector). This is not *strictly* necessary,not
+bert/run_classifier.py,420,"since the [SEP] token unambiguously separates the sequences, but it makes",not
+bert/run_classifier.py,421,it easier for the model to learn the concept of sequences.,not
+bert/run_classifier.py,422,,not
+bert/run_classifier.py,423,"For classification tasks, the first vector (corresponding to [CLS]) is",not
+bert/run_classifier.py,424,"used as the ""sentence vector"". Note that this only makes sense because",not
+bert/run_classifier.py,425,the entire model is fine-tuned.,not
+bert/run_classifier.py,445,The mask has 1 for real tokens and 0 for padding tokens. Only real,not
+bert/run_classifier.py,446,tokens are attended to.,not
+bert/run_classifier.py,449,Zero-pad up to the sequence length.,not
+bert/run_classifier.py,525,"tf.Example only supports tf.int64, but the TPU only supports tf.int32.",not
+bert/run_classifier.py,526,So cast all int64 to int32.,not
+bert/run_classifier.py,539,"For training, we want a lot of parallel reading and shuffling.",not
+bert/run_classifier.py,540,"For eval, we want no shuffling and parallel reading doesn't matter.",not
+bert/run_classifier.py,560,This is a simple heuristic which will always truncate the longer sequence,not
+bert/run_classifier.py,561,one token at a time. This makes more sense than truncating an equal percent,not
+bert/run_classifier.py,562,"of tokens from each, since if one sequence is very short then each token",not
+bert/run_classifier.py,563,that's truncated likely contains more information than a longer sequence.,not
+bert/run_classifier.py,585,"In the demo, we are doing a simple classification task on the entire",not
+bert/run_classifier.py,586,segment.,not
+bert/run_classifier.py,587,,not
+bert/run_classifier.py,588,"If you want to use the token-level output, use model.get_sequence_output()",not
+bert/run_classifier.py,589,instead.,not
+bert/run_classifier.py,603,"I.e., 0.1 dropout",not
+bert/run_classifier.py,624,pylint: disable=unused-argument,not
+bert/run_classifier.py,711,This function is not used by this file but is still used by the Colab and,not
+bert/run_classifier.py,712,people who depend on it.,not
+bert/run_classifier.py,733,This is for demo purposes and does NOT scale to large data sets. We do,not
+bert/run_classifier.py,734,not use Dataset.from_generator() because that uses tf.py_func which is,not
+bert/run_classifier.py,735,not TPU compatible. The right way to load data is with TFRecordReader.,not
+bert/run_classifier.py,765,This function is not used by this file but is still used by the Colab and,not
+bert/run_classifier.py,766,people who depend on it.,not
+bert/run_classifier.py,857,"If TPU is not available, this will fall back to normal Estimator on CPU",not
+bert/run_classifier.py,858,or GPU.,not
+bert/run_classifier.py,886,"TPU requires a fixed batch size for all batches, therefore the number",not
+bert/run_classifier.py,887,"of examples must be a multiple of the batch size, or else examples",not
+bert/run_classifier.py,888,will get dropped. So we pad with fake examples which are ignored,not
+bert/run_classifier.py,889,later on. These do NOT count towards the metric (all tf.metrics,not
+bert/run_classifier.py,890,"support a per-instance weight, and these get a weight of 0.0).",not
+bert/run_classifier.py,904,This tells the estimator to run through the entire set.,not
+bert/run_classifier.py,906,"However, if running eval on the TPU, you will need to specify the",not
+bert/run_classifier.py,907,number of steps.,not
+bert/run_classifier.py,932,"TPU requires a fixed batch size for all batches, therefore the number",not
+bert/run_classifier.py,933,"of examples must be a multiple of the batch size, or else examples",not
+bert/run_classifier.py,934,will get dropped. So we pad with fake examples which are ignored,not
+bert/run_classifier.py,935,later on.,not
+bert/modeling.py,1,coding=utf-8,not
+bert/modeling.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/modeling.py,3,,not
+bert/modeling.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/modeling.py,5,you may not use this file except in compliance with the License.,not
+bert/modeling.py,6,You may obtain a copy of the License at,not
+bert/modeling.py,7,,not
+bert/modeling.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/modeling.py,9,,not
+bert/modeling.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/modeling.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/modeling.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/modeling.py,13,See the License for the specific language governing permissions and,not
+bert/modeling.py,14,limitations under the License.,not
+bert/modeling.py,173,Perform embedding lookup on the word ids.,not
+bert/modeling.py,182,"Add positional embeddings and token type embeddings, then layer",not
+bert/modeling.py,183,normalize and perform dropout.,not
+bert/modeling.py,197,"This converts a 2D mask of shape [batch_size, seq_length] to a 3D",not
+bert/modeling.py,198,"mask of shape [batch_size, seq_length, seq_length] which is used",not
+bert/modeling.py,199,for the attention scores.,not
+bert/modeling.py,203,Run the stacked transformer.,not
+bert/modeling.py,204,"`sequence_output` shape = [batch_size, seq_length, hidden_size].",not
+bert/modeling.py,219,"The ""pooler"" converts the encoded sequence tensor of shape",not
+bert/modeling.py,220,"[batch_size, seq_length, hidden_size] to a tensor of shape",not
+bert/modeling.py,221,"[batch_size, hidden_size]. This is necessary for segment-level",not
+bert/modeling.py,222,(or segment-pair-level) classification tasks where we need a fixed,not
+bert/modeling.py,223,dimensional representation of the segment.,not
+bert/modeling.py,225,"We ""pool"" the model by simply taking the hidden state corresponding",not
+bert/modeling.py,226,to the first token. We assume that this has been pre-trained,not
+bert/modeling.py,296,"We assume that anything that""s not a string is already an activation",not
+bert/modeling.py,297,"function, so we just return it.",not
+bert/modeling.py,401,"This function assumes that the input is of shape [batch_size, seq_length,",not
+bert/modeling.py,402,num_inputs].,not
+bert/modeling.py,403,,not
+bert/modeling.py,404,"If the input is a 2D tensor of shape [batch_size, seq_length], we",not
+bert/modeling.py,405,"reshape to [batch_size, seq_length, 1].",not
+bert/modeling.py,480,"This vocab will be small so we always do one-hot here, since it is always",not
+bert/modeling.py,481,faster for a small vocabulary.,not
+bert/modeling.py,496,"Since the position embedding table is a learned variable, we create it",not
+bert/modeling.py,497,using a (long) sequence length `max_position_embeddings`. The actual,not
+bert/modeling.py,498,"sequence length might be shorter than this, for faster training of",not
+bert/modeling.py,499,tasks that do not have long sequences.,not
+bert/modeling.py,500,,not
+bert/modeling.py,501,So `full_position_embeddings` is effectively an embedding table,not
+bert/modeling.py,502,"for position [0, 1, 2, ..., max_position_embeddings-1], and the current",not
+bert/modeling.py,503,"sequence has positions [0, 1, 2, ... seq_length-1], so we can just",not
+bert/modeling.py,504,perform a slice.,not
+bert/modeling.py,509,"Only the last two dimensions are relevant (`seq_length` and `width`), so",not
+bert/modeling.py,510,"we broadcast among the first dimensions, which is typically just",not
+bert/modeling.py,511,the batch size.,not
+bert/modeling.py,544,We don't assume that `from_tensor` is a mask (although it could be). We,not
+bert/modeling.py,545,don't actually care if we attend *from* padding tokens (only *to* padding),not
+bert/modeling.py,546,tokens so we create a tensor of all ones.,not
+bert/modeling.py,547,,not
+bert/modeling.py,548,"`broadcast_ones` = [batch_size, from_seq_length, 1]",not
+bert/modeling.py,552,Here we broadcast along two dimensions to create the mask.,not
+bert/modeling.py,655,Scalar dimensions referenced here:,not
+bert/modeling.py,656,B = batch size (number of sequences),not
+bert/modeling.py,657,F = `from_tensor` sequence length,not
+bert/modeling.py,658,T = `to_tensor` sequence length,not
+bert/modeling.py,659,N = `num_attention_heads`,not
+bert/modeling.py,660,H = `size_per_head`,not
+bert/modeling.py,665,"`query_layer` = [B*F, N*H]",not
+bert/modeling.py,673,"`key_layer` = [B*T, N*H]",not
+bert/modeling.py,681,"`value_layer` = [B*T, N*H]",not
+bert/modeling.py,689,"`query_layer` = [B, N, F, H]",not
+bert/modeling.py,694,"`key_layer` = [B, N, T, H]",not
+bert/modeling.py,698,"Take the dot product between ""query"" and ""key"" to get the raw",not
+bert/modeling.py,699,attention scores.,not
+bert/modeling.py,700,"`attention_scores` = [B, N, F, T]",not
+bert/modeling.py,706,"`attention_mask` = [B, 1, F, T]",not
+bert/modeling.py,709,Since attention_mask is 1.0 for positions we want to attend and 0.0 for,not
+bert/modeling.py,710,"masked positions, this operation will create a tensor which is 0.0 for",not
+bert/modeling.py,711,positions we want to attend and -10000.0 for masked positions.,not
+bert/modeling.py,714,"Since we are adding it to the raw scores before the softmax, this is",not
+bert/modeling.py,715,effectively the same as removing these entirely.,not
+bert/modeling.py,718,Normalize the attention scores to probabilities.,not
+bert/modeling.py,719,"`attention_probs` = [B, N, F, T]",not
+bert/modeling.py,722,"This is actually dropping out entire tokens to attend to, which might",not
+bert/modeling.py,723,"seem a bit unusual, but is taken from the original Transformer paper.",not
+bert/modeling.py,726,"`value_layer` = [B, T, N, H]",not
+bert/modeling.py,731,"`value_layer` = [B, N, T, H]",not
+bert/modeling.py,734,"`context_layer` = [B, N, F, H]",not
+bert/modeling.py,737,"`context_layer` = [B, F, N, H]",not
+bert/modeling.py,741,"`context_layer` = [B*F, N*H]",not
+bert/modeling.py,746,"`context_layer` = [B, F, N*H]",not
+bert/modeling.py,813,The Transformer performs sum residuals on all layers so the input needs,not
+bert/modeling.py,814,to be the same as the hidden size.,not
+bert/modeling.py,819,We keep the representation as a 2D tensor to avoid re-shaping it back and,not
+bert/modeling.py,820,forth from a 3D tensor to a 2D tensor. Re-shapes are normally free on,not
+bert/modeling.py,821,"the GPU/CPU but may not be free on the TPU, so we want to minimize them to",not
+bert/modeling.py,822,help the optimizer.,not
+bert/modeling.py,851,"In the case where we have other sequences, we just concatenate",not
+bert/modeling.py,852,them to the self-attention head before the projection.,not
+bert/modeling.py,855,Run a linear projection of `hidden_size` then add a residual,not
+bert/modeling.py,856,with `layer_input`.,not
+bert/modeling.py,865,"The activation is only applied to the ""intermediate"" hidden layer.",not
+bert/modeling.py,873,Down-project back to `hidden_size` then add the residual.,not
+bert/run_pretraining.py,1,coding=utf-8,not
+bert/run_pretraining.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/run_pretraining.py,3,,not
+bert/run_pretraining.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/run_pretraining.py,5,you may not use this file except in compliance with the License.,not
+bert/run_pretraining.py,6,You may obtain a copy of the License at,not
+bert/run_pretraining.py,7,,not
+bert/run_pretraining.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/run_pretraining.py,9,,not
+bert/run_pretraining.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/run_pretraining.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/run_pretraining.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/run_pretraining.py,13,See the License for the specific language governing permissions and,not
+bert/run_pretraining.py,14,limitations under the License.,not
+bert/run_pretraining.py,30,Required parameters,not
+bert/run_pretraining.py,44,Other parameters,not
+bert/run_pretraining.py,114,pylint: disable=unused-argument,not
+bert/run_pretraining.py,246,We apply one more non-linear transformation before the output layer.,not
+bert/run_pretraining.py,247,This matrix is not used after pre-training.,not
+bert/run_pretraining.py,257,"The output weights are the same as the input embeddings, but there is",not
+bert/run_pretraining.py,258,an output-only bias for each token.,not
+bert/run_pretraining.py,273,The `positions` tensor might be zero-padded (if the sequence is too,not
+bert/run_pretraining.py,274,short to have the maximum number of predictions). The `label_weights`,not
+bert/run_pretraining.py,275,tensor has a value of 1.0 for every real prediction and 0.0 for the,not
+bert/run_pretraining.py,276,padding predictions.,not
+bert/run_pretraining.py,288,"Simple binary classification. Note that 0 is ""next sentence"" and 1 is",not
+bert/run_pretraining.py,289,"""random sentence"". This weight matrix is not used after pre-training.",not
+bert/run_pretraining.py,352,"For training, we want a lot of parallel reading and shuffling.",not
+bert/run_pretraining.py,353,"For eval, we want no shuffling and parallel reading doesn't matter.",not
+bert/run_pretraining.py,359,`cycle_length` is the number of parallel files that get read.,not
+bert/run_pretraining.py,362,`sloppy` mode means that the interleaving is not exact. This adds,not
+bert/run_pretraining.py,363,even more randomness to the training pipeline.,not
+bert/run_pretraining.py,372,Since we evaluate for a fixed number of steps we don't want to encounter,not
+bert/run_pretraining.py,373,out-of-range exceptions.,not
+bert/run_pretraining.py,376,We must `drop_remainder` on training because the TPU requires fixed,not
+bert/run_pretraining.py,377,"size dimensions. For eval, we assume we are evaluating on the CPU or GPU",not
+bert/run_pretraining.py,378,"and we *don't* want to drop the remainder, otherwise we wont cover",not
+bert/run_pretraining.py,379,every sample.,not
+bert/run_pretraining.py,395,"tf.Example only supports tf.int64, but the TPU only supports tf.int32.",not
+bert/run_pretraining.py,396,So cast all int64 to int32.,not
+bert/run_pretraining.py,449,"If TPU is not available, this will fall back to normal Estimator on CPU",not
+bert/run_pretraining.py,450,or GPU.,not
+bert/__init__.py,1,coding=utf-8,not
+bert/__init__.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/__init__.py,3,,not
+bert/__init__.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/__init__.py,5,you may not use this file except in compliance with the License.,not
+bert/__init__.py,6,You may obtain a copy of the License at,not
+bert/__init__.py,7,,not
+bert/__init__.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/__init__.py,9,,not
+bert/__init__.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/__init__.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/__init__.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/__init__.py,13,See the License for the specific language governing permissions and,not
+bert/__init__.py,14,limitations under the License.,not
+bert/create_pretraining_data.py,1,coding=utf-8,not
+bert/create_pretraining_data.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/create_pretraining_data.py,3,,not
+bert/create_pretraining_data.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/create_pretraining_data.py,5,you may not use this file except in compliance with the License.,not
+bert/create_pretraining_data.py,6,You may obtain a copy of the License at,not
+bert/create_pretraining_data.py,7,,not
+bert/create_pretraining_data.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/create_pretraining_data.py,9,,not
+bert/create_pretraining_data.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/create_pretraining_data.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/create_pretraining_data.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/create_pretraining_data.py,13,See the License for the specific language governing permissions and,not
+bert/create_pretraining_data.py,14,limitations under the License.,not
+bert/create_pretraining_data.py,185,Input file format:,not
+bert/create_pretraining_data.py,186,"(1) One sentence per line. These should ideally be actual sentences, not",not
+bert/create_pretraining_data.py,187,entire paragraphs or arbitrary spans of text. (Because we use the,not
+bert/create_pretraining_data.py,188,"sentence boundaries for the ""next sentence prediction"" task).",not
+bert/create_pretraining_data.py,189,(2) Blank lines between documents. Document boundaries are needed so,not
+bert/create_pretraining_data.py,190,"that the ""next sentence prediction"" task doesn't span between documents.",not
+bert/create_pretraining_data.py,199,Empty lines are used as document delimiters,not
+bert/create_pretraining_data.py,206,Remove empty documents,not
+bert/create_pretraining_data.py,229,"Account for [CLS], [SEP], [SEP]",not
+bert/create_pretraining_data.py,232,We *usually* want to fill up the entire sequence since we are padding,not
+bert/create_pretraining_data.py,233,"to `max_seq_length` anyways, so short sequences are generally wasted",not
+bert/create_pretraining_data.py,234,"computation. However, we *sometimes*",not
+bert/create_pretraining_data.py,235,"(i.e., short_seq_prob == 0.1 == 10% of the time) want to use shorter",not
+bert/create_pretraining_data.py,236,sequences to minimize the mismatch between pre-training and fine-tuning.,not
+bert/create_pretraining_data.py,237,"The `target_seq_length` is just a rough target however, whereas",not
+bert/create_pretraining_data.py,238,`max_seq_length` is a hard limit.,not
+bert/create_pretraining_data.py,243,We DON'T just concatenate all of the tokens from a document into a long,not
+bert/create_pretraining_data.py,244,sequence and choose an arbitrary split point because this would make the,not
+bert/create_pretraining_data.py,245,"next sentence prediction task too easy. Instead, we split the input into",not
+bert/create_pretraining_data.py,246,"segments ""A"" and ""B"" based on the actual ""sentences"" provided by the user",not
+bert/create_pretraining_data.py,247,input.,not
+bert/create_pretraining_data.py,258,`a_end` is how many segments from `current_chunk` go into the `A`,not
+bert/create_pretraining_data.py,259,(first) sentence.,not
+bert/create_pretraining_data.py,269,Random next,not
+bert/create_pretraining_data.py,275,This should rarely go for more than one iteration for large,not
+bert/create_pretraining_data.py,276,"corpora. However, just to be careful, we try to make sure that",not
+bert/create_pretraining_data.py,277,the random document is not the same as the document,not
+bert/create_pretraining_data.py,278,we're processing.,not
+bert/create_pretraining_data.py,290,"We didn't actually use these segments so we ""put them back"" so",not
+bert/create_pretraining_data.py,291,they don't go to waste.,not
+bert/create_pretraining_data.py,294,Actual next,not
+bert/create_pretraining_data.py,350,Whole Word Masking means that if we mask all of the wordpieces,not
+bert/create_pretraining_data.py,351,corresponding to an original word. When a word has been split into,not
+bert/create_pretraining_data.py,352,"WordPieces, the first token does not have any marker and any subsequence",not
+bert/create_pretraining_data.py,353,"tokens are prefixed with ##. So whenever we see the ## token, we",not
+bert/create_pretraining_data.py,354,append it to the previous set of word indexes.,not
+bert/create_pretraining_data.py,355,,not
+bert/create_pretraining_data.py,356,Note that Whole Word Masking does *not* change the training code,not
+bert/create_pretraining_data.py,357,"at all -- we still predict each WordPiece independently, softmaxed",not
+bert/create_pretraining_data.py,358,over the entire vocabulary.,not
+bert/create_pretraining_data.py,377,If adding a whole-word mask would exceed the maximum number of,not
+bert/create_pretraining_data.py,378,"predictions, then just skip this candidate.",not
+bert/create_pretraining_data.py,392,"80% of the time, replace with [MASK]",not
+bert/create_pretraining_data.py,396,"10% of the time, keep original",not
+bert/create_pretraining_data.py,399,"10% of the time, replace with random word",not
+bert/create_pretraining_data.py,428,We want to sometimes truncate from the front and sometimes from the,not
+bert/create_pretraining_data.py,429,back to add more randomness and avoid biases.,not
+bert/run_classifier_with_tfhub.py,1,coding=utf-8,not
+bert/run_classifier_with_tfhub.py,2,Copyright 2018 The Google AI Language Team Authors.,not
+bert/run_classifier_with_tfhub.py,3,,not
+bert/run_classifier_with_tfhub.py,4,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+bert/run_classifier_with_tfhub.py,5,you may not use this file except in compliance with the License.,not
+bert/run_classifier_with_tfhub.py,6,You may obtain a copy of the License at,not
+bert/run_classifier_with_tfhub.py,7,,not
+bert/run_classifier_with_tfhub.py,8,http://www.apache.org/licenses/LICENSE-2.0,not
+bert/run_classifier_with_tfhub.py,9,,not
+bert/run_classifier_with_tfhub.py,10,"Unless required by applicable law or agreed to in writing, software",not
+bert/run_classifier_with_tfhub.py,11,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+bert/run_classifier_with_tfhub.py,12,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+bert/run_classifier_with_tfhub.py,13,See the License for the specific language governing permissions and,not
+bert/run_classifier_with_tfhub.py,14,limitations under the License.,not
+bert/run_classifier_with_tfhub.py,53,"In the demo, we are doing a simple classification task on the entire",not
+bert/run_classifier_with_tfhub.py,54,segment.,not
+bert/run_classifier_with_tfhub.py,55,,not
+bert/run_classifier_with_tfhub.py,56,"If you want to use the token-level output, use",not
+bert/run_classifier_with_tfhub.py,57,"bert_outputs[""sequence_output""] instead.",not
+bert/run_classifier_with_tfhub.py,71,"I.e., 0.1 dropout",not
+bert/run_classifier_with_tfhub.py,91,pylint: disable=unused-argument,not
+bert/run_classifier_with_tfhub.py,216,"If TPU is not available, this will fall back to normal Estimator on CPU",not
+bert/run_classifier_with_tfhub.py,217,or GPU.,not
+bert/run_classifier_with_tfhub.py,249,This tells the estimator to run through the entire set.,not
+bert/run_classifier_with_tfhub.py,251,"However, if running eval on the TPU, you will need to specify the",not
+bert/run_classifier_with_tfhub.py,252,number of steps.,not
+bert/run_classifier_with_tfhub.py,254,Eval will be slightly WRONG on the TPU because it will truncate,not
+bert/run_classifier_with_tfhub.py,255,the last batch.,not
+bert/run_classifier_with_tfhub.py,277,Discard batch remainder if running on TPU,not

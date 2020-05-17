@@ -1,47 +1,47 @@
 file path,line #,comment,satd
-interactive-coding-challenges/stacks_queues/queue_list/test_queue_list.py,6,TODO: It would be better if we had unit tests for each,
-interactive-coding-challenges/stacks_queues/queue_list/test_queue_list.py,7,method in addition to the following end-to-end test,
-interactive-coding-challenges/stacks_queues/queue_list/queue_list.py,16,Empty list,
-interactive-coding-challenges/stacks_queues/queue_list/queue_list.py,25,Empty list,
-interactive-coding-challenges/stacks_queues/queue_list/queue_list.py,29,Remove only element from a one element list,
-interactive-coding-challenges/stacks_queues/stack/test_stack.py,6,TODO: It would be better if we had unit tests for each,
-interactive-coding-challenges/stacks_queues/stack/test_stack.py,7,method in addition to the following end-to-end test,
-interactive-coding-challenges/sorting_searching/selection_sort/test_selection_sort.py,31,Alternate solutions are only defined,
-interactive-coding-challenges/sorting_searching/selection_sort/test_selection_sort.py,32,in the solutions file,
-interactive-coding-challenges/staging/sorting_searching/group_ordered/test_group_ordered.py,26,Alternate solutions are only defined,
-interactive-coding-challenges/staging/sorting_searching/group_ordered/test_group_ordered.py,27,in the solutions file,
-interactive-coding-challenges/staging/graphs_trees/binary_tree/binary_search_tree.py,32,returns false if the item to be deleted is not on the tree,
-interactive-coding-challenges/linked_lists/partition/test_partition.py,23,Partition = 10,
-interactive-coding-challenges/linked_lists/partition/test_partition.py,24,"Input: 4, 3, 13, 8, 10, 1, 14, 10, 12",
-interactive-coding-challenges/linked_lists/partition/test_partition.py,25,"Output: 4, 3, 8, 1, 10, 10, 13, 14, 12",
-interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,13,Input 1: 6->5->None,
-interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,14,Input 2: 9->8->7,
-interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,15,Result: 5->4->8,
-interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,25,Input 1: 6->5->4,
-interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,26,Input 2: 9->8->7,
-interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,27,Result: 5->4->2->1,
-interactive-coding-challenges/math_probability/add_digits/test_add_digits.py,23,Alternate solutions are only defined,
-interactive-coding-challenges/math_probability/add_digits/test_add_digits.py,24,in the solutions file,
-interactive-coding-challenges/graphs_trees/utils/results.py,7,TODO: Clean this up,
-interactive-coding-challenges/graphs_trees/utils/results.py,8,Simplifies challenge coding and unit testing,
-interactive-coding-challenges/graphs_trees/utils/results.py,9,but makes this function look less appealing,
-interactive-coding-challenges/graphs_trees/graph/graph.py,1,Python 2 users: Run pip install enum34,
-interactive-coding-challenges/graphs_trees/graph/graph.py,16,"Key = key, val = Node",
-interactive-coding-challenges/graphs_trees/graph/graph.py,17,"Key = key, val = weight",
-interactive-coding-challenges/graphs_trees/graph/graph.py,45,"Key = key, val = Node",
-interactive-coding-challenges/graphs_trees/trie/trie.py,51,As we are propagating the delete up the,
-interactive-coding-challenges/graphs_trees/trie/trie.py,52,"parents, if this node has children, stop",
-interactive-coding-challenges/graphs_trees/trie/trie.py,53,here to prevent orphaning its children.,
-interactive-coding-challenges/graphs_trees/trie/trie.py,54,Or,
-interactive-coding-challenges/graphs_trees/trie/trie.py,55,if this node is a terminating node that is,
-interactive-coding-challenges/graphs_trees/trie/trie.py,56,"not the terminating node of the input word,",
-interactive-coding-challenges/graphs_trees/trie/trie.py,57,stop to prevent removing the associated word.,
-interactive-coding-challenges/graphs_trees/min_heap/min_heap.py,20,Move the last element to the root,
-interactive-coding-challenges/graphs_trees/min_heap/min_heap.py,39,Swap the indices and recurse,
-interactive-coding-challenges/graphs_trees/min_heap/min_heap.py,49,Swap the indices and recurse,
-interactive-coding-challenges/arrays_strings/unique_chars/test_unique_chars.py,24,Alternate solutions are only defined,
-interactive-coding-challenges/arrays_strings/unique_chars/test_unique_chars.py,25,in the solutions file,
-interactive-coding-challenges/arrays_strings/permutation/test_permutation_solution.py,24,Alternate solutions are only defined,
-interactive-coding-challenges/arrays_strings/permutation/test_permutation_solution.py,25,in the solutions file,
-interactive-coding-challenges/arrays_strings/hash_map/test_hash_map.py,6,TODO: It would be better if we had unit tests for each,
-interactive-coding-challenges/arrays_strings/hash_map/test_hash_map.py,7,method in addition to the following end-to-end test,
+interactive-coding-challenges/stacks_queues/queue_list/test_queue_list.py,6,TODO: It would be better if we had unit tests for each,SATD
+interactive-coding-challenges/stacks_queues/queue_list/test_queue_list.py,7,method in addition to the following end-to-end test,not
+interactive-coding-challenges/stacks_queues/queue_list/queue_list.py,16,Empty list,not
+interactive-coding-challenges/stacks_queues/queue_list/queue_list.py,25,Empty list,not
+interactive-coding-challenges/stacks_queues/queue_list/queue_list.py,29,Remove only element from a one element list,not
+interactive-coding-challenges/stacks_queues/stack/test_stack.py,6,TODO: It would be better if we had unit tests for each,SATD
+interactive-coding-challenges/stacks_queues/stack/test_stack.py,7,method in addition to the following end-to-end test,not
+interactive-coding-challenges/sorting_searching/selection_sort/test_selection_sort.py,31,Alternate solutions are only defined,not
+interactive-coding-challenges/sorting_searching/selection_sort/test_selection_sort.py,32,in the solutions file,not
+interactive-coding-challenges/staging/sorting_searching/group_ordered/test_group_ordered.py,26,Alternate solutions are only defined,not
+interactive-coding-challenges/staging/sorting_searching/group_ordered/test_group_ordered.py,27,in the solutions file,not
+interactive-coding-challenges/staging/graphs_trees/binary_tree/binary_search_tree.py,32,returns false if the item to be deleted is not on the tree,not
+interactive-coding-challenges/linked_lists/partition/test_partition.py,23,Partition = 10,not
+interactive-coding-challenges/linked_lists/partition/test_partition.py,24,"Input: 4, 3, 13, 8, 10, 1, 14, 10, 12",not
+interactive-coding-challenges/linked_lists/partition/test_partition.py,25,"Output: 4, 3, 8, 1, 10, 10, 13, 14, 12",not
+interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,13,Input 1: 6->5->None,not
+interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,14,Input 2: 9->8->7,not
+interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,15,Result: 5->4->8,not
+interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,25,Input 1: 6->5->4,not
+interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,26,Input 2: 9->8->7,not
+interactive-coding-challenges/linked_lists/add_reverse/test_add_reverse.py,27,Result: 5->4->2->1,not
+interactive-coding-challenges/math_probability/add_digits/test_add_digits.py,23,Alternate solutions are only defined,not
+interactive-coding-challenges/math_probability/add_digits/test_add_digits.py,24,in the solutions file,not
+interactive-coding-challenges/graphs_trees/utils/results.py,7,TODO: Clean this up,SATD
+interactive-coding-challenges/graphs_trees/utils/results.py,8,Simplifies challenge coding and unit testing,not
+interactive-coding-challenges/graphs_trees/utils/results.py,9,but makes this function look less appealing,not
+interactive-coding-challenges/graphs_trees/graph/graph.py,1,Python 2 users: Run pip install enum34,not
+interactive-coding-challenges/graphs_trees/graph/graph.py,16,"Key = key, val = Node",not
+interactive-coding-challenges/graphs_trees/graph/graph.py,17,"Key = key, val = weight",not
+interactive-coding-challenges/graphs_trees/graph/graph.py,45,"Key = key, val = Node",not
+interactive-coding-challenges/graphs_trees/trie/trie.py,51,As we are propagating the delete up the,not
+interactive-coding-challenges/graphs_trees/trie/trie.py,52,"parents, if this node has children, stop",not
+interactive-coding-challenges/graphs_trees/trie/trie.py,53,here to prevent orphaning its children.,not
+interactive-coding-challenges/graphs_trees/trie/trie.py,54,Or,not
+interactive-coding-challenges/graphs_trees/trie/trie.py,55,if this node is a terminating node that is,not
+interactive-coding-challenges/graphs_trees/trie/trie.py,56,"not the terminating node of the input word,",not
+interactive-coding-challenges/graphs_trees/trie/trie.py,57,stop to prevent removing the associated word.,not
+interactive-coding-challenges/graphs_trees/min_heap/min_heap.py,20,Move the last element to the root,not
+interactive-coding-challenges/graphs_trees/min_heap/min_heap.py,39,Swap the indices and recurse,not
+interactive-coding-challenges/graphs_trees/min_heap/min_heap.py,49,Swap the indices and recurse,not
+interactive-coding-challenges/arrays_strings/unique_chars/test_unique_chars.py,24,Alternate solutions are only defined,not
+interactive-coding-challenges/arrays_strings/unique_chars/test_unique_chars.py,25,in the solutions file,not
+interactive-coding-challenges/arrays_strings/permutation/test_permutation_solution.py,24,Alternate solutions are only defined,not
+interactive-coding-challenges/arrays_strings/permutation/test_permutation_solution.py,25,in the solutions file,not
+interactive-coding-challenges/arrays_strings/hash_map/test_hash_map.py,6,TODO: It would be better if we had unit tests for each,SATD
+interactive-coding-challenges/arrays_strings/hash_map/test_hash_map.py,7,method in addition to the following end-to-end test,not

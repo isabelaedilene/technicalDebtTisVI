@@ -1,125 +1,126 @@
 file path,line #,comment,satd
-hosts/makeHosts.py,1,!/usr/bin/env python,
-hosts/makeHosts.py,3,Script by gfyoung,
-hosts/makeHosts.py,4,https://github.com/gfyoung,
-hosts/makeHosts.py,5,,
-hosts/makeHosts.py,6,This Python script will generate hosts files and update the readme file.,
-hosts/makeHosts.py,143,Update the readme files.,
-hosts/updateReadme.py,1,!/usr/bin/env python,
-hosts/updateReadme.py,3,Script by Steven Black,
-hosts/updateReadme.py,4,https://github.com/StevenBlack,
-hosts/updateReadme.py,5,,
-hosts/updateReadme.py,6,This Python script will update the readme files in this repo.,
-hosts/updateReadme.py,13,Project Settings,
-hosts/updateReadme.py,34,Sort by the number of en-dashes in the key,
-hosts/updateReadme.py,35,and then by the key string itself.,
-hosts/updateHostsFile.py,1,!/usr/bin/env python3,
-hosts/updateHostsFile.py,3,Script by Ben Limmer,
-hosts/updateHostsFile.py,4,https://github.com/l1m5,
-hosts/updateHostsFile.py,5,,
-hosts/updateHostsFile.py,6,This Python script will combine all the host files you provide,
-hosts/updateHostsFile.py,7,"as sources into one, unique host file to keep your internet browsing happy.",
-hosts/updateHostsFile.py,24,noqa: F401,
-hosts/updateHostsFile.py,27,Detecting Python 3 for version-dependent implementations,
-hosts/updateHostsFile.py,35,"Syntactic sugar for ""sudo"" command in UNIX / Linux",
-hosts/updateHostsFile.py,42,Project Settings,
-hosts/updateHostsFile.py,86,End Project Settings,
-hosts/updateHostsFile.py,235,All our extensions folders...,
-hosts/updateHostsFile.py,239,"... intersected with the extensions passed-in as arguments, then sorted.",
-hosts/updateHostsFile.py,326,We only flush the DNS cache if we have,
-hosts/updateHostsFile.py,327,moved a new hosts file into place.,
-hosts/updateHostsFile.py,334,Prompt the User,
-hosts/updateHostsFile.py,356,Create a hosts file if it doesn't exist.,
-hosts/updateHostsFile.py,363,"Starting in Python 3.3, IOError is aliased",
-hosts/updateHostsFile.py,364,"OSError. However, we have to catch both for",
-hosts/updateHostsFile.py,365,Python 2.x failures.,
-hosts/updateHostsFile.py,474,End Prompt the User,
-hosts/updateHostsFile.py,477,Exclusion logic,
-hosts/updateHostsFile.py,539,We continue running this while-loop until the user,
-hosts/updateHostsFile.py,540,says that they have no more domains to exclude.,
-hosts/updateHostsFile.py,615,End Exclusion Logic,
-hosts/updateHostsFile.py,618,Update Logic,
-hosts/updateHostsFile.py,695,The transforms we support,
-hosts/updateHostsFile.py,714,spin the transforms as required,
-hosts/updateHostsFile.py,718,get rid of carriage-return symbols,
-hosts/updateHostsFile.py,731,End Update Logic,
-hosts/updateHostsFile.py,734,File Logic,
-hosts/updateHostsFile.py,742,spin the sources for the base file,
-hosts/updateHostsFile.py,751,spin the sources for extensions to the base file,
-hosts/updateHostsFile.py,786,reset file pointer,
-hosts/updateHostsFile.py,798,noqa: E203,
-hosts/updateHostsFile.py,826,reset file pointer,
-hosts/updateHostsFile.py,878,reset file pointer,
-hosts/updateHostsFile.py,885,Explicit encoding,
-hosts/updateHostsFile.py,888,replace tabs with space,
-hosts/updateHostsFile.py,891,"see gh-271: trim trailing whitespace, periods",
-hosts/updateHostsFile.py,894,Testing the first character doesn't require startswith,
-hosts/updateHostsFile.py,901,strip comments,
-hosts/updateHostsFile.py,905,Normalize rule,
-hosts/updateHostsFile.py,959,Explicitly lowercase and trim the hostname.,
-hosts/updateHostsFile.py,979,Explicitly trim the ip host.,
-hosts/updateHostsFile.py,1015,just return blank,
-hosts/updateHostsFile.py,1039,Reset file pointer.,
-hosts/updateHostsFile.py,1040,Save content.,
-hosts/updateHostsFile.py,1042,Write at the top.,
-hosts/updateHostsFile.py,1201,noqa: W605,
-hosts/updateHostsFile.py,1215,noqa: W605,
-hosts/updateHostsFile.py,1313,"Create if already removed, so remove won't raise an error.",
-hosts/updateHostsFile.py,1321,"Make a backup copy, marking the date in which the list was updated",
-hosts/updateHostsFile.py,1326,Create new empty hosts file,
-hosts/updateHostsFile.py,1330,End File Logic,
-hosts/updateHostsFile.py,1412,Helper Functions,
-hosts/updateHostsFile.py,1586,gh-316: this will avoid invalid unicode comparisons in Python 2.x,
-hosts/updateHostsFile.py,1618,gh-316: joining unicode and str can be saddening in Python 2.x,
-hosts/updateHostsFile.py,1629,Colors,
-hosts/updateHostsFile.py,1715,End Helper Functions,
-hosts/testUpdateHostsFile.py,1,!/usr/bin/env python,
-hosts/testUpdateHostsFile.py,3,Script by gfyoung,
-hosts/testUpdateHostsFile.py,4,https://github.com/gfyoung,
-hosts/testUpdateHostsFile.py,5,,
-hosts/testUpdateHostsFile.py,6,Python script for testing updateHostFiles.py,
-hosts/testUpdateHostsFile.py,56,Test Helper Objects,
-hosts/testUpdateHostsFile.py,91,End Test Helper Objects,
-hosts/testUpdateHostsFile.py,94,Project Settings,
-hosts/testUpdateHostsFile.py,131,End Project Settings,
-hosts/testUpdateHostsFile.py,134,Prompt the User,
-hosts/testUpdateHostsFile.py,419,End Prompt the User,
-hosts/testUpdateHostsFile.py,422,Exclusion Logic,
-hosts/testUpdateHostsFile.py,469,Can only test in the invalid domain case,
-hosts/testUpdateHostsFile.py,470,because of the settings global variable.,
-hosts/testUpdateHostsFile.py,563,End Exclusion Logic,
-hosts/testUpdateHostsFile.py,566,Update Logic,
-hosts/testUpdateHostsFile.py,727,End Update Logic,
-hosts/testUpdateHostsFile.py,730,File Logic,
-hosts/testUpdateHostsFile.py,761,Nothing gets printed if there's a match.,
-hosts/testUpdateHostsFile.py,781,Nothing gets printed if there's a match.,
-hosts/testUpdateHostsFile.py,797,Nothing gets printed if there's a match.,
-hosts/testUpdateHostsFile.py,860,Expected contents.,
-hosts/testUpdateHostsFile.py,870,Expected non-contents.,
-hosts/testUpdateHostsFile.py,891,Expected contents.,
-hosts/testUpdateHostsFile.py,903,Expected non-contents.,
-hosts/testUpdateHostsFile.py,921,Expected contents.,
-hosts/testUpdateHostsFile.py,936,Expected non-contents.,
-hosts/testUpdateHostsFile.py,952,Expected contents.,
-hosts/testUpdateHostsFile.py,964,Expected non-contents.,
-hosts/testUpdateHostsFile.py,991,Expected contents.,
-hosts/testUpdateHostsFile.py,1002,Expected non-contents.,
-hosts/testUpdateHostsFile.py,1327,End File Logic,
-hosts/testUpdateHostsFile.py,1330,Helper Functions,
-hosts/testUpdateHostsFile.py,1425,Test with a space as separator.,
-hosts/testUpdateHostsFile.py,1434,Test with a tabulation as separator.,
-hosts/testUpdateHostsFile.py,1444,Test with multiple space as separator.,
-hosts/testUpdateHostsFile.py,1454,Test with multiple tabls as separator.,
-hosts/testUpdateHostsFile.py,1464,Test with a space as separator.,
-hosts/testUpdateHostsFile.py,1473,Test with a tabulation as separator.,
-hosts/testUpdateHostsFile.py,1482,Test with tabulation as separator of domain and comment.,
-hosts/testUpdateHostsFile.py,1493,Test with space as separator of domain and tabulation as separator,
-hosts/testUpdateHostsFile.py,1494,of comments.,
-hosts/testUpdateHostsFile.py,1505,Test with multiple space as seprator of domain and space and,
-hosts/testUpdateHostsFile.py,1506,tabulation as separator or comments.,
-hosts/testUpdateHostsFile.py,1517,Test with multiple tabulations as seprator of domain and space and,
-hosts/testUpdateHostsFile.py,1518,tabulation as separator or comments.,
-hosts/testUpdateHostsFile.py,1646,"The first time, we respond ""yes""",
-hosts/testUpdateHostsFile.py,1654,"The second time, we respond ""no""",
-hosts/testUpdateHostsFile.py,1821,Colors,
-hosts/testUpdateHostsFile.py,1943,End Helper Functions,
+hosts/makeHosts.py,1,!/usr/bin/env python,not
+hosts/makeHosts.py,3,Script by gfyoung,not
+hosts/makeHosts.py,4,https://github.com/gfyoung,not
+hosts/makeHosts.py,5,,not
+hosts/makeHosts.py,6,This Python script will generate hosts files and update the readme file.,not
+hosts/makeHosts.py,143,Update the readme files.,not
+hosts/updateReadme.py,1,!/usr/bin/env python,not
+hosts/updateReadme.py,3,Script by Steven Black,not
+hosts/updateReadme.py,4,https://github.com/StevenBlack,not
+hosts/updateReadme.py,5,,not
+hosts/updateReadme.py,6,This Python script will update the readme files in this repo.,not
+hosts/updateReadme.py,13,Project Settings,not
+hosts/updateReadme.py,34,Sort by the number of en-dashes in the key,not
+hosts/updateReadme.py,35,and then by the key string itself.,not
+hosts/updateHostsFile.py,1,!/usr/bin/env python3,not
+hosts/updateHostsFile.py,3,Script by Ben Limmer,not
+hosts/updateHostsFile.py,4,https://github.com/l1m5,not
+hosts/updateHostsFile.py,5,,not
+hosts/updateHostsFile.py,6,This Python script will combine all the host files you provide,not
+hosts/updateHostsFile.py,7,"as sources into one, unique host file to keep your internet browsing happy.",not
+hosts/updateHostsFile.py,24,noqa: F401,not
+hosts/updateHostsFile.py,27,Detecting Python 3 for version-dependent implementations,not
+hosts/updateHostsFile.py,35,"Syntactic sugar for ""sudo"" command in UNIX / Linux",not
+hosts/updateHostsFile.py,42,Project Settings,not
+hosts/updateHostsFile.py,86,End Project Settings,not
+hosts/updateHostsFile.py,230,All our extensions folders...,not
+hosts/updateHostsFile.py,234,"... intersected with the extensions passed-in as arguments, then sorted.",not
+hosts/updateHostsFile.py,321,We only flush the DNS cache if we have,not
+hosts/updateHostsFile.py,322,moved a new hosts file into place.,not
+hosts/updateHostsFile.py,329,Prompt the User,not
+hosts/updateHostsFile.py,351,Create a hosts file if it doesn't exist.,not
+hosts/updateHostsFile.py,358,"Starting in Python 3.3, IOError is aliased",not
+hosts/updateHostsFile.py,359,"OSError. However, we have to catch both for",not
+hosts/updateHostsFile.py,360,Python 2.x failures.,not
+hosts/updateHostsFile.py,469,End Prompt the User,not
+hosts/updateHostsFile.py,489,Steven Black's repositories/files/lists should be on top!,not
+hosts/updateHostsFile.py,500,Exclusion logic,not
+hosts/updateHostsFile.py,562,We continue running this while-loop until the user,not
+hosts/updateHostsFile.py,563,says that they have no more domains to exclude.,not
+hosts/updateHostsFile.py,638,End Exclusion Logic,not
+hosts/updateHostsFile.py,641,Update Logic,not
+hosts/updateHostsFile.py,722,The transforms we support,not
+hosts/updateHostsFile.py,741,spin the transforms as required,not
+hosts/updateHostsFile.py,745,get rid of carriage-return symbols,not
+hosts/updateHostsFile.py,758,End Update Logic,not
+hosts/updateHostsFile.py,761,File Logic,not
+hosts/updateHostsFile.py,769,spin the sources for the base file,not
+hosts/updateHostsFile.py,780,spin the sources for extensions to the base file,not
+hosts/updateHostsFile.py,817,reset file pointer,not
+hosts/updateHostsFile.py,829,noqa: E203,not
+hosts/updateHostsFile.py,857,reset file pointer,not
+hosts/updateHostsFile.py,909,reset file pointer,not
+hosts/updateHostsFile.py,916,Explicit encoding,not
+hosts/updateHostsFile.py,919,replace tabs with space,not
+hosts/updateHostsFile.py,922,"see gh-271: trim trailing whitespace, periods",not
+hosts/updateHostsFile.py,925,Testing the first character doesn't require startswith,not
+hosts/updateHostsFile.py,932,strip comments,not
+hosts/updateHostsFile.py,936,Normalize rule,not
+hosts/updateHostsFile.py,990,Explicitly lowercase and trim the hostname.,not
+hosts/updateHostsFile.py,1010,Explicitly trim the ip host.,not
+hosts/updateHostsFile.py,1046,just return blank,not
+hosts/updateHostsFile.py,1070,Reset file pointer.,not
+hosts/updateHostsFile.py,1071,Save content.,not
+hosts/updateHostsFile.py,1073,Write at the top.,not
+hosts/updateHostsFile.py,1232,noqa: W605,not
+hosts/updateHostsFile.py,1246,noqa: W605,not
+hosts/updateHostsFile.py,1344,"Create if already removed, so remove won't raise an error.",not
+hosts/updateHostsFile.py,1352,"Make a backup copy, marking the date in which the list was updated",not
+hosts/updateHostsFile.py,1357,Create new empty hosts file,not
+hosts/updateHostsFile.py,1361,End File Logic,not
+hosts/updateHostsFile.py,1443,Helper Functions,not
+hosts/updateHostsFile.py,1617,gh-316: this will avoid invalid unicode comparisons in Python 2.x,not
+hosts/updateHostsFile.py,1649,gh-316: joining unicode and str can be saddening in Python 2.x,not
+hosts/updateHostsFile.py,1660,Colors,not
+hosts/updateHostsFile.py,1746,End Helper Functions,not
+hosts/testUpdateHostsFile.py,1,!/usr/bin/env python,not
+hosts/testUpdateHostsFile.py,3,Script by gfyoung,not
+hosts/testUpdateHostsFile.py,4,https://github.com/gfyoung,not
+hosts/testUpdateHostsFile.py,5,,not
+hosts/testUpdateHostsFile.py,6,Python script for testing updateHostFiles.py,not
+hosts/testUpdateHostsFile.py,57,Test Helper Objects,not
+hosts/testUpdateHostsFile.py,92,End Test Helper Objects,not
+hosts/testUpdateHostsFile.py,95,Project Settings,not
+hosts/testUpdateHostsFile.py,132,End Project Settings,not
+hosts/testUpdateHostsFile.py,209,Prompt the User,not
+hosts/testUpdateHostsFile.py,494,End Prompt the User,not
+hosts/testUpdateHostsFile.py,497,Exclusion Logic,not
+hosts/testUpdateHostsFile.py,544,Can only test in the invalid domain case,not
+hosts/testUpdateHostsFile.py,545,because of the settings global variable.,not
+hosts/testUpdateHostsFile.py,638,End Exclusion Logic,not
+hosts/testUpdateHostsFile.py,641,Update Logic,not
+hosts/testUpdateHostsFile.py,802,End Update Logic,not
+hosts/testUpdateHostsFile.py,805,File Logic,not
+hosts/testUpdateHostsFile.py,836,Nothing gets printed if there's a match.,not
+hosts/testUpdateHostsFile.py,856,Nothing gets printed if there's a match.,not
+hosts/testUpdateHostsFile.py,872,Nothing gets printed if there's a match.,not
+hosts/testUpdateHostsFile.py,935,Expected contents.,not
+hosts/testUpdateHostsFile.py,945,Expected non-contents.,not
+hosts/testUpdateHostsFile.py,966,Expected contents.,not
+hosts/testUpdateHostsFile.py,978,Expected non-contents.,not
+hosts/testUpdateHostsFile.py,996,Expected contents.,not
+hosts/testUpdateHostsFile.py,1011,Expected non-contents.,not
+hosts/testUpdateHostsFile.py,1027,Expected contents.,not
+hosts/testUpdateHostsFile.py,1039,Expected non-contents.,not
+hosts/testUpdateHostsFile.py,1066,Expected contents.,not
+hosts/testUpdateHostsFile.py,1077,Expected non-contents.,not
+hosts/testUpdateHostsFile.py,1402,End File Logic,not
+hosts/testUpdateHostsFile.py,1405,Helper Functions,not
+hosts/testUpdateHostsFile.py,1500,Test with a space as separator.,not
+hosts/testUpdateHostsFile.py,1509,Test with a tabulation as separator.,not
+hosts/testUpdateHostsFile.py,1519,Test with multiple space as separator.,not
+hosts/testUpdateHostsFile.py,1529,Test with multiple tabls as separator.,not
+hosts/testUpdateHostsFile.py,1539,Test with a space as separator.,not
+hosts/testUpdateHostsFile.py,1548,Test with a tabulation as separator.,not
+hosts/testUpdateHostsFile.py,1557,Test with tabulation as separator of domain and comment.,not
+hosts/testUpdateHostsFile.py,1568,Test with space as separator of domain and tabulation as separator,not
+hosts/testUpdateHostsFile.py,1569,of comments.,not
+hosts/testUpdateHostsFile.py,1580,Test with multiple space as seprator of domain and space and,not
+hosts/testUpdateHostsFile.py,1581,tabulation as separator or comments.,not
+hosts/testUpdateHostsFile.py,1592,Test with multiple tabulations as seprator of domain and space and,not
+hosts/testUpdateHostsFile.py,1593,tabulation as separator or comments.,not
+hosts/testUpdateHostsFile.py,1721,"The first time, we respond ""yes""",not
+hosts/testUpdateHostsFile.py,1729,"The second time, we respond ""no""",not
+hosts/testUpdateHostsFile.py,1896,Colors,not
+hosts/testUpdateHostsFile.py,2018,End Helper Functions,not

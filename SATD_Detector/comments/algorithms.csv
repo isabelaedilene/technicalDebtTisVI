@@ -1,1301 +1,1301 @@
 file path,line #,comment,satd
-algorithms/tests/test_matrix.py,122,example taken from https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/04LinearAlgebra/cholesky/,
-algorithms/tests/test_maths.py,251,def test_key_generator(self):  # this test takes a while!,
-algorithms/tests/test_maths.py,252,for i in range(100):,
-algorithms/tests/test_maths.py,253,"print(""step {0}"".format(i))",
-algorithms/tests/test_maths.py,254,"n, e, d = generate_key(26)",
-algorithms/tests/test_maths.py,255,data = 2,
-algorithms/tests/test_maths.py,256,"en = encrypt(data, e, n)",
-algorithms/tests/test_maths.py,257,"dec = decrypt(en, d, n)",
-algorithms/tests/test_maths.py,258,"self.assertEqual(data,dec)",
-algorithms/tests/test_backtrack.py,31,"""123"", 6 -> [""1+2+3"", ""1*2*3""]",
-algorithms/tests/test_backtrack.py,35,"""232"", 8 -> [""2*3+2"", ""2+3*2""]",
-algorithms/tests/test_queues.py,22,test __iter__(),
-algorithms/tests/test_queues.py,29,test __len__(),
-algorithms/tests/test_queues.py,32,test is_empty(),
-algorithms/tests/test_queues.py,35,test peek(),
-algorithms/tests/test_queues.py,38,test dequeue(),
-algorithms/tests/test_queues.py,51,test __iter__(),
-algorithms/tests/test_queues.py,58,test __len__(),
-algorithms/tests/test_queues.py,61,test is_empty(),
-algorithms/tests/test_queues.py,64,test peek(),
-algorithms/tests/test_queues.py,67,test dequeue(),
-algorithms/tests/test_unix.py,18,Test full path relative,
-algorithms/tests/test_unix.py,21,Test full path with expanding user,
-algorithms/tests/test_unix.py,22,~/file_name,
-algorithms/tests/test_unix.py,27,Test url path,
-algorithms/tests/test_unix.py,32,Test file path,
-algorithms/tests/test_bit.py,42,8 -> 1000,
-algorithms/tests/test_bit.py,45,109 -> 1101101,
-algorithms/tests/test_bit.py,48,63 -> 111111,
-algorithms/tests/test_bit.py,51,0 -> 0,
-algorithms/tests/test_bit.py,56,8 -> 1000,
-algorithms/tests/test_bit.py,59,109 -> 1101101,
-algorithms/tests/test_bit.py,62,63 -> 111111,
-algorithms/tests/test_bit.py,65,0 -> 0,
-algorithms/tests/test_bit.py,69,29: 11101 and 15: 01111,
-algorithms/tests/test_bit.py,71,45: 0000101101 and 987: 1111011011,
-algorithms/tests/test_bit.py,73,34: 100010,
-algorithms/tests/test_bit.py,75,34: 100010 and 53: 110101,
-algorithms/tests/test_bit.py,99,1775: 11011101111,
-algorithms/tests/test_bit.py,101,5: 101,
-algorithms/tests/test_bit.py,103,71: 1000111,
-algorithms/tests/test_bit.py,105,0: 0,
-algorithms/tests/test_bit.py,122,bin(0) => 00000000000000000000000000000000,
-algorithms/tests/test_bit.py,125,bin(2**32 - 1) => 11111111111111111111111111111111,
-algorithms/tests/test_bit.py,137,nums contains pairs of random integers,
-algorithms/tests/test_bit.py,148,nums contains triplets of random integers,
-algorithms/tests/test_bit.py,170,22 = 10110,
-algorithms/tests/test_bit.py,175,22 = 10110  --> after set bit at 3th position: 30 = 11110,
-algorithms/tests/test_bit.py,179,22 = 10110 --> after clear bit at 2nd position: 20 = 10010,
-algorithms/tests/test_bit.py,183,22 = 10110 --> after update bit at 3th position with value 1: 30 = 11110,
-algorithms/tests/test_bit.py,185,22 = 10110 --> after update bit at 2nd position with value 0: 20 = 10010,
-algorithms/tests/test_bit.py,201,22: 10110  --> 41: 101001,
-algorithms/tests/test_bit.py,203,10: 1010   --> 5 : 0101,
-algorithms/tests/test_bit.py,257,22 = 10110,
-algorithms/tests/test_bit.py,259,6 = 110,
-algorithms/tests/test_bit.py,261,8 = 1000,
-algorithms/tests/test_bit.py,263,145 = 10010001,
-algorithms/tests/test_ml.py,10,train set for the AND-function,
-algorithms/tests/test_ml.py,13,train set for light or dark colors,
-algorithms/tests/test_ml.py,18,AND-function,
-algorithms/tests/test_ml.py,22,dark/light color test,
-algorithms/tests/test_linkedlist.py,22,Convert from linked list Node to list for testing,
-algorithms/tests/test_linkedlist.py,35,list test for palindrome,
-algorithms/tests/test_linkedlist.py,65,head -> -2 -> 2 -> 2 -> 4 -> 9,
-algorithms/tests/test_linkedlist.py,72,head -> 1 -> 2 -> 8 -> 4 -> 6,
-algorithms/tests/test_linkedlist.py,76,Test case: middle case.,
-algorithms/tests/test_linkedlist.py,82,Expect output: 0 4,
-algorithms/tests/test_linkedlist.py,85,Test case: taking out the front node,
-algorithms/tests/test_linkedlist.py,91,Expect output: 2 3 4,
-algorithms/tests/test_linkedlist.py,94,Test case: removing all the nodes,
-algorithms/tests/test_linkedlist.py,107,Expect output : 2 --> 1 --> 4 --> 3,
-algorithms/tests/test_linkedlist.py,111,Given 1->2->3->4->5->NULL,
-algorithms/tests/test_linkedlist.py,117,K = 2. Expect output: 4->5->1->2->3->NULL.,
-algorithms/tests/test_linkedlist.py,121,create linked list => A -> B -> C -> D -> E -> C,
-algorithms/tests/test_linkedlist.py,135,create linked list 1 -> 2 -> 3 -> 4,
-algorithms/tests/test_linkedlist.py,156,Test recursive,
-algorithms/tests/test_bfs.py,37,hit -> hot -> dot -> dog -> cog,
-algorithms/tests/test_bfs.py,40,pick -> sick -> sink -> sank -> tank == 5,
-algorithms/tests/test_bfs.py,44,"live -> life == 1, no matter what is the word_list.",
-algorithms/tests/test_bfs.py,47,0 length from ate -> ate,
-algorithms/tests/test_bfs.py,50,not possible to reach !,
-algorithms/tests/test_sort.py,116,print(res),
-algorithms/tests/test_stack.py,25,"Test case: bottom [6, 3, 5, 1, 2, 4] top",
-algorithms/tests/test_stack.py,31,"Test case: bottom [2, 8, 3, -6, 7, 3] top",
-algorithms/tests/test_stack.py,33,"Test case: 2 smallest value [2, 8, 3, 7, 3]",
-algorithms/tests/test_stack.py,37,"Test case: bottom [3, 7, 1, 14, 9] top",
-algorithms/tests/test_stack.py,44,Test case: even number of values in stack,
-algorithms/tests/test_stack.py,45,"bottom [3, 8, 17, 9, 1, 10] top",
-algorithms/tests/test_stack.py,50,Test case: odd number of values in stack,
-algorithms/tests/test_stack.py,51,"bottom [3, 8, 17, 9, 1] top",
-algorithms/tests/test_stack.py,77,test __iter__(),
-algorithms/tests/test_stack.py,84,test __len__(),
-algorithms/tests/test_stack.py,87,test __str__(),
-algorithms/tests/test_stack.py,90,test is_empty(),
-algorithms/tests/test_stack.py,93,test peek(),
-algorithms/tests/test_stack.py,96,test pop(),
-algorithms/tests/test_stack.py,110,test __iter__(),
-algorithms/tests/test_stack.py,117,test __len__(),
-algorithms/tests/test_stack.py,120,test __str__(),
-algorithms/tests/test_stack.py,123,test is_empty(),
-algorithms/tests/test_stack.py,126,test peek(),
-algorithms/tests/test_stack.py,129,test pop(),
-algorithms/tests/test_search.py,37,Test binary_search_recur,
-algorithms/tests/test_search.py,67,test two_sum,
-algorithms/tests/test_search.py,70,test two_sum1,
-algorithms/tests/test_search.py,73,test two_sum2,
-algorithms/tests/test_search.py,88,Test find min using recursion,
-algorithms/tests/test_graph.py,26,Graph from https://en.wikipedia.org/wiki/File:Scc.png,
-algorithms/tests/test_graph.py,42,Graph from https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm#/media/File:Tarjan%27s_Algorithm_Animation.gif,
-algorithms/tests/test_graph.py,231,adjacency list representation of graph,
-algorithms/tests/test_map.py,35,and does not search forever,
-algorithms/tests/test_strings.py,176,'Otto' is a old german name.,
-algorithms/tests/test_strings.py,181,'Otto' is a old german name.,
-algorithms/tests/test_strings.py,186,'Otto' is a old german name.,
-algorithms/tests/test_strings.py,191,'Otto' is a old german name.,
-algorithms/tests/test_strings.py,379,class TestStripUrlParams(unittest.TestCase):,
-algorithms/tests/test_strings.py,380,"""""""[summary]",
-algorithms/tests/test_strings.py,381,Test for the file strip_urls_params.py,
-algorithms/tests/test_strings.py,383,Arguments:,
-algorithms/tests/test_strings.py,384,unittest {[type]} -- [description],
-algorithms/tests/test_strings.py,385,"""""""",
-algorithms/tests/test_strings.py,387,def test_strip_url_params1(self):,
-algorithms/tests/test_strings.py,388,"self.assertEqual(strip_url_params1(""www.saadbenn.com?a=1&b=2&a=2""), ""www.saadbenn.com?a=1&b=2"")",
-algorithms/tests/test_strings.py,389,"self.assertEqual(strip_url_params1(""www.saadbenn.com?a=1&b=2"", ['b']), ""www.saadbenn.com?a=1"")",
-algorithms/tests/test_strings.py,390,def test_strip_url_params2(self):,
-algorithms/tests/test_strings.py,391,"self.assertEqual(strip_url_params2(""www.saadbenn.com?a=1&b=2&a=2""), ""www.saadbenn.com?a=1&b=2"")",
-algorithms/tests/test_strings.py,392,"self.assertEqual(strip_url_params2(""www.saadbenn.com?a=1&b=2"", ['b']), ""www.saadbenn.com?a=1"")",
-algorithms/tests/test_strings.py,393,def test_strip_url_params3(self):,
-algorithms/tests/test_strings.py,394,"self.assertEqual(strip_url_params3(""www.saadbenn.com?a=1&b=2&a=2""), ""www.saadbenn.com?a=1&b=2"")",
-algorithms/tests/test_strings.py,395,"self.assertEqual(strip_url_params3(""www.saadbenn.com?a=1&b=2"", ['b']), ""www.saadbenn.com?a=1"")",
-algorithms/tests/test_strings.py,502,Test first solution,
-algorithms/tests/test_strings.py,505,Test second solution,
-algorithms/tests/test_strings.py,508,Test third solution,
-algorithms/tests/test_heap.py,26,"Before insert 2: [0, 4, 50, 7, 55, 90, 87]",
-algorithms/tests/test_heap.py,27,"After insert:  [0, 2, 50, 4, 55, 90, 87, 7]",
-algorithms/tests/test_heap.py,35,"Before remove_min : [0, 4, 50, 7, 55, 90, 87]",
-algorithms/tests/test_heap.py,36,"After remove_min: [7, 50, 87, 55, 90]",
-algorithms/tests/test_heap.py,37,Test return value,
-algorithms/tests/test_heap.py,48,Expect output,
-algorithms/tests/test_array.py,387,noqa: E501,
-algorithms/tests/test_array.py,388,noqa: E501,
-algorithms/tests/test_array.py,389,noqa: E501,
-algorithms/tests/test_array.py,390,noqa: E501,
-algorithms/tests/test_array.py,391,noqa: E501,
-algorithms/tests/test_array.py,393,noqa: E501,
-algorithms/tests/test_array.py,394,noqa: E501,
-algorithms/tests/test_array.py,395,noqa: E501,
-algorithms/tests/test_array.py,396,noqa: E501,
-algorithms/tests/test_array.py,397,noqa: E501,
-algorithms/tests/test_array.py,398,noqa: E501,
-algorithms/tests/test_array.py,399,noqa: E501,
-algorithms/tests/test_array.py,400,noqa: E501,
-algorithms/tests/test_array.py,401,noqa: E501,
-algorithms/tests/test_array.py,402,noqa: E501,
-algorithms/tests/test_array.py,403,noqa: E501,
-algorithms/,10,Assuming s2 has all unique chars,
-algorithms/,19,keys,
-algorithms/,20,values,
-algorithms/,27,can assign to hash_ index,
-algorithms/,33,"key already exists here, assign over",
-algorithms/,41,table is full,
-algorithms/,48,That key was never assigned,
-algorithms/,51,key found,
-algorithms/,56,table is full and wrapped around,
-algorithms/,63,That key was never assigned,
-algorithms/,66,"key found, assign with deleted sentinel",
-algorithms/,74,table is full and wrapped around,
-algorithms/,107,increase size of dict * 2 if filled >= 2/3 size (like python dict),
-algorithms/,113,this will be the new size,
-algorithms/,24,unused variable is not a problem,
-algorithms/,9,return list,
-algorithms/,15,tail-recursion,
-algorithms/,17,produce the result,
-algorithms/,21,returns iterator,
-algorithms/,14,list starts with 0 index,
-algorithms/,18,hash index to every 3rd,
-algorithms/,37,prevent changes in original 'initial',
-algorithms/,38,list of each step in sequence,
-algorithms/,42,"if zero isn't where it should be,",
-algorithms/,43,"what should be where zero is,",
-algorithms/,44,and where is it?,
-algorithms/,55,"e.g.:  4, [{0, 2, 3, 1, 4}, {2, 0, 3, 1, 4},",
-algorithms/,56,"{2, 3, 0, 1, 4}, {0, 3, 2, 1, 4}]",
-algorithms/,16,"/100 for easy calculation by *, and /2 for easy adaption to best and worst parts.",
-algorithms/,18,sum value to be calculated to trimmean.,
-algorithms/,12,Time complexity O(n^2),
-algorithms/,21,"Time Complexity O(n), using hash tables.",
-algorithms/,24,keep track of occurrences,
-algorithms/,17,reserve each value which first appears on keys,
-algorithms/,18,reserve how many time each value appears by index number on values,
-algorithms/,15,tl:dr -- array slicing by value,
-algorithms/,36,found three sum,
-algorithms/,39,remove duplicates,
-algorithms/,19,"after done iterating thru array,",
-algorithms/,20,append remainder to list,
-algorithms/,29,"If current element is 0,",
-algorithms/,30,then calculate the difference,
-algorithms/,31,between curr and prev_prev_zero,
-algorithms/,11,False == 0 is True,
-algorithms/,17,"not using `not i` to avoid `False`, `[]`, etc.",
-algorithms/,49,"get functions of above, returning the max_len and substring",
-algorithms/,68,want answers with only 2 terms? easy!,
-algorithms/,80,recursive call,
-algorithms/,81,a,
-algorithms/,82,b,
-algorithms/,83,c,
-algorithms/,84,"x = n_sum( a, b, c )",
-algorithms/,85,n_minus1_results = x,
-algorithms/,1,invert a binary tree,
-algorithms/,16,iterative,
-algorithms/,1,a -> Adam -> Book -> 4,
-algorithms/,2,b -> Bill -> Computer -> 5,
-algorithms/,3,-> TV -> 6,
-algorithms/,4,Jill -> Sports -> 1,
-algorithms/,5,c -> Bill -> Sports -> 3,
-algorithms/,6,d -> Adam -> Computer -> 3,
-algorithms/,7,Quin -> Computer -> 3,
-algorithms/,8,e -> Quin -> Book -> 5,
-algorithms/,9,-> TV -> 2,
-algorithms/,10,f -> Adam -> Computer -> 7,
-algorithms/,17,end=' ' prevents a newline character,
-algorithms/,18,"multiple lookups is expensive, even amortized O(1)!",
-algorithms/,21,OP wants indenting after digits,
-algorithms/,22,newline and a space to match indenting,
-algorithms/,23,forces a newline,
-algorithms/,22,TC: O(b) SC: O(log n),
-algorithms/,42,popleft,
-algorithms/,1,"Given a binary tree, find the deepest node",
-algorithms/,2,that is the left child of its parent node.,
-algorithms/,4,Example:,
-algorithms/,6,1,
-algorithms/,7,/   \,
-algorithms/,8,2     3,
-algorithms/,9,/ \     \,
-algorithms/,10,4   5     6,
-algorithms/,11,\,
-algorithms/,12,7,
-algorithms/,13,should return 4.,
-algorithms/,22,self.is_leaf = is_leaf,
-algorithms/,48,child is left child of parent after splitting,
-algorithms/,58,"overflow, tree increases in height",
-algorithms/,69,find position where insert key,
-algorithms/,75,overflow,
-algorithms/,77,decide which child is going to have a new key,
-algorithms/,110,key not found in node,
-algorithms/,113,key not found,
-algorithms/,117,decide in which subtree may be key,
-algorithms/,128,The leaf/node is correct,
-algorithms/,136,0 <-- 1,
-algorithms/,141,merge child with brother on the left,
-algorithms/,144,merge child with brother on the right,
-algorithms/,160,make ownerless_child as a new biggest child (with highest key) -> transfer from right subtree to left subtree,
-algorithms/,174,make ownerless_child as a new lowest child (with lowest key) -> transfer from left subtree to right subtree,
-algorithms/,211,"self._repair_tree(node, ch_index)",
-algorithms/,221,"self._repair_tree(node, ch_index)",
-algorithms/,25,def is_balanced(root):,
-algorithms/,26,"""""""",
-algorithms/,27,O(N^2) solution,
-algorithms/,28,"""""""",
-algorithms/,29,left = max_height(root.left),
-algorithms/,30,right = max_height(root.right),
-algorithms/,31,return abs(left-right) <= 1 and is_balanced(root.left) and is_balanced(root.right),
-algorithms/,33,def max_height(root):,
-algorithms/,34,if root is None:,
-algorithms/,35,return 0,
-algorithms/,36,"return max(max_height(root.left), max_height(root.right)) + 1",
-algorithms/,40,DFS with stack,
-algorithms/,57,BFS with queue,
-algorithms/,64,popleft,
-algorithms/,17,"Time Complexity O(min(N,M))",
-algorithms/,18,where N and M are the number of nodes for the trees.,
-algorithms/,20,"Space Complexity O(min(height1, height2))",
-algorithms/,21,levels of recursion is the mininum height between the two trees.,
-algorithms/,32,DFS with stack,
-algorithms/,49,BFS with queue,
-algorithms/,55,popleft,
-algorithms/,8,def max_height(root):,
-algorithms/,9,if not root:,
-algorithms/,10,return 0,
-algorithms/,11,"return max(maxDepth(root.left), maxDepth(root.right)) + 1",
-algorithms/,13,iterative,
-algorithms/,20,set the node as the left child node of the current node's right node,
-algorithms/,25,right node's left node become the right node of current node,
-algorithms/,30,check the parent case,
-algorithms/,41,set the node as the right child node of the current node's left node,
-algorithms/,46,left node's right  node become the left node of current node,
-algorithms/,51,check the parent case,
-algorithms/,62,the inserted node's color is default is red,
-algorithms/,65,find the position of inserted node,
-algorithms/,72,set the n ode's parent node,
-algorithms/,75,case 1  inserted tree is null,
-algorithms/,78,case 2 not null and find left or right,
-algorithms/,85,fix the tree to,
-algorithms/,89,"case 1 the parent is null, then set the inserted node as root and color = 0",
-algorithms/,94,"case 2 the parent color is black, do nothing",
-algorithms/,95,case 3 the parent color is red,
-algorithms/,100,case 3.1 the uncle node is red,
-algorithms/,101,then set parent and uncle color is black and grandparent is red,
-algorithms/,102,then node => node.parent,
-algorithms/,109,"case 3.2 the uncle node is black or null, and the node is right of parent",
-algorithms/,110,then set his parent node is current node,
-algorithms/,111,left rotate the node and continue the next,
-algorithms/,114,case 3.3 the uncle node is black and parent node is left,
-algorithms/,115,then parent node set black and grandparent set red,
-algorithms/,122,case 3.1 the uncle node is red,
-algorithms/,123,then set parent and uncle color is black and grandparent is red,
-algorithms/,124,then node => node.parent,
-algorithms/,131,"case 3.2 the uncle node is black or null, and the node is right of parent",
-algorithms/,132,then set his parent node is current node,
-algorithms/,133,left rotate the node and continue the next,
-algorithms/,136,case 3.3 the uncle node is black and parent node is left,
-algorithms/,137,then parent node set black and grandparent set red,
-algorithms/,156,check is node_v is None,
-algorithms/,183,find the node position,
-algorithms/,192,"both child exits ,and find minimum child of right child",
-algorithms/,196,,
-algorithms/,205,"when node is black, then need to fix it with 4 cases",
-algorithms/,210,4 cases,
-algorithms/,212,node is not root and color is black,
-algorithms/,214,node is left node,
-algorithms/,217,"case 1: node's red, can not get black node",
-algorithms/,218,set brother is black and parent is red,
-algorithms/,225,"case 2: brother node is black, and its children node is both black",
-algorithms/,232,"case 3: brother node is black , and its left child node is red and right is black",
-algorithms/,239,"case 4: brother node is black, and right is red, and left is any color",
-algorithms/,10,Root node of the tree.,
-algorithms/,19,Create new node,
-algorithms/,41,if dot,
-algorithms/,43,if last character,
-algorithms/,52,if letter,
-algorithms/,73,match xx.xx.x with yyyyyyy,
-algorithms/,31,Recursive Implementation,
-algorithms/,28,Recursive Implementation,
-algorithms/,27,Recursive Implementation,
-algorithms/,49,Go to right root,
-algorithms/,51,Go to left root,
-algorithms/,66,The data is already there,
-algorithms/,68,Go to left root,
-algorithms/,69,If left root is a node,
-algorithms/,71,left root is a None,
-algorithms/,74,Go to right root,
-algorithms/,75,If right root is a node,
-algorithms/,51,Find the right most leaf of the left sub-tree,
-algorithms/,55,Attach right child to the right of that leaf,
-algorithms/,57,"Return left child instead of root, a.k.a delete root",
-algorithms/,61,"If left or right child got deleted, the returned root is the child of the deleted node.",
-algorithms/,1,"Given a non-empty binary search tree and a target value,",
-algorithms/,2,find the value in the BST that is closest to the target.,
-algorithms/,4,Note:,
-algorithms/,5,Given target value is a floating point.,
-algorithms/,6,You are guaranteed to have only one unique value in the BST,
-algorithms/,7,that is closest to the target.,
-algorithms/,10,Definition for a binary tree node.,
-algorithms/,11,class TreeNode(object):,
-algorithms/,12,"def __init__(self, x):",
-algorithms/,13,self.val = x,
-algorithms/,14,self.left = None,
-algorithms/,15,self.right = None,
-algorithms/,23,backtracking,
-algorithms/,28,all digits have to be used,
-algorithms/,27,take,
-algorithms/,32,don't take,
-algorithms/,39,Iterative:,
-algorithms/,52,Recursive:,
-algorithms/,17,add the current word,
-algorithms/,21,skip the current word,
-algorithms/,55,make a trie structure that is essentially dictionaries of dictionaries,
-algorithms/,56,that map each character to a potential next character,
-algorithms/,66,result is a set of found words since we do not want repeats,
-algorithms/,43,DFS Version,
-algorithms/,23,handles duplication,
-algorithms/,30,take nums[pos],
-algorithms/,34,dont take nums[pos],
-algorithms/,54,Iteratively,
-algorithms/,19,Takt the origin path without the last part,
-algorithms/,21,Take the last element of list,
-algorithms/,13,Remove / trailing,
-algorithms/,15,Remove / leading,
-algorithms/,54,valid choice,
-algorithms/,55,keep solving,
-algorithms/,57,invalid choice or didn't solve it => undo,
-algorithms/,31,out of bounds,
-algorithms/,33,crossed,
-algorithms/,1,Given an m x n matrix of non-negative integers representing,
-algorithms/,2,"the height of each unit cell in a continent,",
-algorithms/,3,"the ""Pacific ocean"" touches the left and top edges of the matrix",
-algorithms/,4,"and the ""Atlantic ocean"" touches the right and bottom edges.",
-algorithms/,6,"Water can only flow in four directions (up, down, left, or right)",
-algorithms/,7,from a cell to another one with height equal or lower.,
-algorithms/,9,Find the list of grid coordinates where water can flow to both the,
-algorithms/,10,Pacific and Atlantic ocean.,
-algorithms/,12,Note:,
-algorithms/,13,The order of returned grid coordinates does not matter.,
-algorithms/,14,Both m and n are less than 150.,
-algorithms/,15,Example:,
-algorithms/,17,Given the following 5x5 matrix:,
-algorithms/,19,Pacific ~   ~   ~   ~   ~,
-algorithms/,20,~  1   2   2   3  (5) *,
-algorithms/,21,~  3   2   3  (4) (4) *,
-algorithms/,22,~  2   4  (5)  3   1  *,
-algorithms/,23,~ (6) (7)  1   4   5  *,
-algorithms/,24,~ (5)  1   1   2   4  *,
-algorithms/,25,*   *   *   *   * Atlantic,
-algorithms/,27,Return:,
-algorithms/,29,"[[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]",
-algorithms/,30,(positions with parentheses in above matrix).,
-algorithms/,14,Time: O(k+(n-k)logk),
-algorithms/,15,Space: O(k),
-algorithms/,30,heappushpop does conditional check,
-algorithms/,40,return points in heap,
-algorithms/,61,Swap value of child with value of its parent,
-algorithms/,82,No right child,
-algorithms/,85,left child > right child,
-algorithms/,95,Swap min child with parent,
-algorithms/,106,the smallest value at beginning,
-algorithms/,107,Repalce it by the last value,
-algorithms/,10,Definition for singly-linked list.,
-algorithms/,24,only change heap size when necessary,
-algorithms/,41,These two lines seem to,
-algorithms/,42,be equivalent to :-   curr = q.get()[1],
-algorithms/,1,-*- coding: utf-8 -*-,
-algorithms/,22,create a result matrix,
-algorithms/,1,,
-algorithms/,2,Count the number of unique paths from a[0][0] to a[m-1][n-1],
-algorithms/,3,We are allowed to move either right or down from a cell in the matrix.,
-algorithms/,4,Approaches-,
-algorithms/,5,"(i) Recursion- Recurse starting from a[m-1][n-1], upwards and leftwards,",
-algorithms/,6,add the path count of both recursions and return count.,
-algorithms/,7,(ii) Dynamic Programming- Start from a[0][0].Store the count in a count,
-algorithms/,8,matrix. Return count[m-1][n-1],
-algorithms/,9,"T(n)- O(mn), S(n)- O(mn)",
-algorithms/,10,,
-algorithms/,18,Taking care of the edge cases- matrix of size 1xn or mx1,
-algorithms/,26,Number of ways to reach a[i][j] = number of ways to reach,
-algorithms/,27,a[i-1][j] + a[i][j-1],
-algorithms/,28,Error conditions,
-algorithms/,42,Calculation,
-algorithms/,44,simple case,
-algorithms/,54,"get matrix of minors w/ ""checkerboard"" signs",
-algorithms/,57,calculate determinant (we need to know 1/det),
-algorithms/,60,adjugate (swap on diagonals) and multiply by 1/det,
-algorithms/,69,trivial case,
-algorithms/,1,! /usr/bin/env python3,
-algorithms/,40,10,
-algorithms/,1,,
-algorithms/,2,Search a key in a row wise and column wise sorted (non-decreasing) matrix.,
-algorithms/,3,m- Number of rows in the matrix,
-algorithms/,4,n- Number of columns in the matrix,
-algorithms/,5,T(n)- O(m+n),
-algorithms/,6,,
-algorithms/,1,Function to find sum of all,
-algorithms/,2,sub-squares of size k x k in a given,
-algorithms/,3,square matrix of size n x n,
-algorithms/,15,Calculate and print sum of current sub-square,
-algorithms/,25,iterates over all cells in the grid,
-algorithms/,28,makes sure we are next to a wall.,
-algorithms/,31,makes sure we are next to a wall.,
-algorithms/,34,makes sure the cell contains a 0,
-algorithms/,36,updates the variable,
-algorithms/,41,calculate killed enemies for row i from column j,
-algorithms/,51,calculate killed enemies for  column j from row i,
-algorithms/,63,----------------- TESTS -------------------------,
-algorithms/,8,Using dict/hash-table,
-algorithms/,40,Without hash-table/dict,
-algorithms/,43,check rows,
-algorithms/,48,check columns,
-algorithms/,53,check regions,
-algorithms/,63,if everything correct,
-algorithms/,67,Using set,
-algorithms/,11,clockwise rotate,
-algorithms/,12,"first reverse up to down, then swap the symmetry",
-algorithms/,13,1 2 3     7 8 9     7 4 1,
-algorithms/,14,4 5 6  => 4 5 6  => 8 5 2,
-algorithms/,15,7 8 9     1 2 3     9 6 3,
-algorithms/,26,Python solution without table (~156ms):,
-algorithms/,46,Python solution with only one table for B (~196ms):,
-algorithms/,70,Python solution with two tables (~196ms):,
-algorithms/,62,"going to left node, right push on stack",
-algorithms/,165,"""1"" indicates that tree ended (it will be needed to load the tree)",
-algorithms/,179,overwrite first three bits,
-algorithms/,187,"buffer is empty, no need to append extra ""0""",
-algorithms/,250,read whole code,
-algorithms/,253,There is last byte in buffer to parse,
-algorithms/,256,"remove additional ""0"" used to fill byte",
-algorithms/,270,leave space to save how many bits will be appended to fill the last byte,
-algorithms/,317,root,
-algorithms/,13,Calculates the binary number,
-algorithms/,18,Calculates the unary number,
-algorithms/,24,Check If the subsequent character does not match,
-algorithms/,26,Add the count and character,
-algorithms/,29,Reset the count and set the character,
-algorithms/,33,Otherwise increment the counter,
-algorithms/,50,If not numerical,
-algorithms/,52,Expand it for the decoding,
-algorithms/,56,Add it in the counter,
-algorithms/,59,Recursion technique,
-algorithms/,64,found element,
-algorithms/,68,Search left,
-algorithms/,70,Search right,
-algorithms/,73,Search right,
-algorithms/,75,Search left,
-algorithms/,18,Using binary search technique,
-algorithms/,32,Using dictionary as a hash table,
-algorithms/,40,Using two pointers,
-algorithms/,42,pointer 1 holds from left of array numbers,
-algorithms/,43,pointer 2 holds from right of array numbers,
-algorithms/,1,,
-algorithms/,2,Find last occurance of a number in a sorted array (increasing order),
-algorithms/,3,Approach- Binary Search,
-algorithms/,4,T(n)- O(log n),
-algorithms/,5,,
-algorithms/,1,,
-algorithms/,2,Binary search works for a sorted array.,
-algorithms/,3,Note: The code logic is written for an array sorted in,
-algorithms/,4,increasing order.,
-algorithms/,5,T(n): O(log n),
-algorithms/,6,,
-algorithms/,21,error case,
-algorithms/,1,,
-algorithms/,2,Find first occurance of a number in a sorted array (increasing order),
-algorithms/,3,Approach- Binary Search,
-algorithms/,4,T(n)- O(log n),
-algorithms/,5,,
-algorithms/,10,"print(""lo: "", lo, "" hi: "", hi, "" mid: "", mid)",
-algorithms/,19,return -1 means that array doesn't contain target value,
-algorithms/,20,find block that contains target value,
-algorithms/,28,find target value in block,
-algorithms/,35,"if there is target value in array, return it",
-algorithms/,1,,
-algorithms/,2,Linear search works in any array.,
-algorithms/,3,,
-algorithms/,4,T(n): O(n),
-algorithms/,5,,
-algorithms/,1,Minimum spanning tree (MST) is going to use an undirected graph,
-algorithms/,2,,
-algorithms/,3,The disjoint set is represented with an list <n> of integers where,
-algorithms/,4,<n[i]> is the parent of the node at position <i>.,
-algorithms/,5,"If <n[i]> = <i>, <i> it's a root, or a head, of a set",
-algorithms/,17,Args:,
-algorithms/,18,n (int): Number of vertices in the graph,
-algorithms/,20,Contains wich node is the parent of the node at poisition <i>,
-algorithms/,21,"Contains size of node at index <i>, used to optimize merge",
-algorithms/,23,"Make all nodes his own parent, creating n sets.",
-algorithms/,26,Args:,
-algorithms/,27,"a, b (int): Indexes of nodes whose sets will be merged.",
-algorithms/,29,Get the set of nodes at position <a> and <b>,
-algorithms/,30,"If <a> and <b> are the roots, this will be constant O(1)",
-algorithms/,34,"Join the shortest node to the longest, minimizing tree size (faster find)",
-algorithms/,36,Merge set(a) and set(b),
-algorithms/,37,Add size of old set(a) to set(b),
-algorithms/,39,Merge set(b) and set(a),
-algorithms/,40,Add size of old set(b) to set(a),
-algorithms/,44,"Very important, memoize result of the",
-algorithms/,45,recursion in the list to optimize next,
-algorithms/,46,"calls and make this operation practically constant, O(1)",
-algorithms/,49,"node <a> it's the set root, so we can return that index",
-algorithms/,54,Args:,
-algorithms/,55,n (int): Number of vertices in the graph,
-algorithms/,56,edges (list of Edge): Edges of the graph,
-algorithms/,57,ds (DisjointSet): DisjointSet of the vertices,
-algorithms/,58,Returns:,
-algorithms/,59,int: sum of weights of the minnimum spanning tree,
-algorithms/,60,,
-algorithms/,61,Kruskal algorithm:,
-algorithms/,62,This algorithm will find the optimal graph with less edges and less,
-algorithms/,63,"total weight to connect all vertices (MST), the MST will always contain",
-algorithms/,64,n-1 edges because it's the minimum required to connect n vertices.,
-algorithms/,65,,
-algorithms/,66,Procedure:,
-algorithms/,67,Sort the edges (criteria: less weight).,
-algorithms/,68,Only take edges of nodes in different sets.,
-algorithms/,69,"If we take a edge, we need to merge the sets to discard these.",
-algorithms/,70,"After repeat this until select n-1 edges, we will have the complete MST.",
-algorithms/,73,"List of edges taken, minimum spanning tree",
-algorithms/,76,Set of the node <u>,
-algorithms/,77,Set of the node <v>,
-algorithms/,82,"If we have selected n-1 edges, all the other",
-algorithms/,83,"edges will be discarted, so, we can stop here",
-algorithms/,92,Test. How input works:,
-algorithms/,93,"Input consists of different weighted, connected, undirected graphs.",
-algorithms/,94,line 1:,
-algorithms/,95,"integers n, m",
-algorithms/,96,lines 2..m+2:,
-algorithms/,97,"edge with the format -> node index u, node index v, integer weight",
-algorithms/,98,,
-algorithms/,99,Samples of input:,
-algorithms/,100,,
-algorithms/,101,5 6,
-algorithms/,102,1 2 3,
-algorithms/,103,1 3 8,
-algorithms/,104,2 4 5,
-algorithms/,105,3 4 2,
-algorithms/,106,3 5 4,
-algorithms/,107,4 5 6,
-algorithms/,108,,
-algorithms/,109,3 3,
-algorithms/,110,2 1 20,
-algorithms/,111,3 1 20,
-algorithms/,112,2 3 100,
-algorithms/,113,,
-algorithms/,114,Sum of weights of the optimal paths:,
-algorithms/,115,"14, 40",
-algorithms/,120,Create list of size <m>,
-algorithms/,122,Read <m> edges from input,
-algorithms/,125,Convert from 1-indexed to 0-indexed,
-algorithms/,126,Convert from 1-indexed to 0-indexed,
-algorithms/,129,"After finish input and graph creation, use Kruskal algorithm for MST:",
-algorithms/,1,takes dict of sets,
-algorithms/,2,each key is a vertex,
-algorithms/,3,value is set of all edges connected to vertex,
-algorithms/,4,returns list of lists (each sub list is a maximal clique),
-algorithms/,5,implementation of the basic algorithm described in:,
-algorithms/,6,"Bron, Coen; Kerbosch, Joep (1973), ""Algorithm 457: finding all cliques of an undirected graph"",",
-algorithms/,14,DFS function for ford_fulkerson algorithm.,
-algorithms/,28,Computes maximum flow from source to sink using DFS.,
-algorithms/,29,Time Complexity : O(Ef),
-algorithms/,30,E is the number of edges and f is the maximum flow in the graph.,
-algorithms/,44,Computes maximum flow from source to sink using BFS.,
-algorithms/,45,Time complexity : O(V*E^2),
-algorithms/,46,V is the number of vertices and E is the number of edges.,
-algorithms/,57,Finds new flow using BFS.,
-algorithms/,74,Update flow array following parent starting from sink.,
-algorithms/,83,BFS function for Dinic algorithm.,
-algorithms/,84,Check whether sink is reachable only using edges that is not full.,
-algorithms/,99,DFS function for Dinic algorithm.,
-algorithms/,100,Finds new flow using edges that is not full.,
-algorithms/,116,Computes maximum flow from source to sink using Dinic algorithm.,
-algorithms/,117,Time complexity : O(V^2*E),
-algorithms/,118,V is the number of vertices and E is the number of edges.,
-algorithms/,1,This class represents a directed graph using adjacency,
-algorithms/,4,No. of vertices,
-algorithms/,7,default dictionary to store graph,
-algorithms/,10,To store transitive closure,
-algorithms/,13,function to add an edge to graph,
-algorithms/,20,A recursive DFS traversal function that finds,
-algorithms/,21,all reachable vertices for s,
-algorithms/,24,Mark reachability from s to v as true.,
-algorithms/,27,Find all the vertices reachable through v,
-algorithms/,32,The function to find transitive closure. It uses,
-algorithms/,33,recursive dfs_util(),
-algorithms/,36,Call the recursive helper function to print DFS,
-algorithms/,37,traversal starting from all vertices one by one,
-algorithms/,43,g = Graph(4),
-algorithms/,44,"g.add_edge(0, 1)",
-algorithms/,45,"g.add_edge(0, 2)",
-algorithms/,46,"g.add_edge(1, 2)",
-algorithms/,47,"g.add_edge(2, 0)",
-algorithms/,48,"g.add_edge(2, 3)",
-algorithms/,49,"g.add_edge(3, 3)",
-algorithms/,51,"print(""Transitive closure matrix is"")",
-algorithms/,52,g.transitive_closure(),
-algorithms/,91,No. of vertices,
-algorithms/,94,default dictionary to store graph,
-algorithms/,97,To store transitive closure,
-algorithms/,100,function to add an edge to graph,
-algorithms/,107,g = Graph(4),
-algorithms/,108,"g.add_edge(0, 1)",
-algorithms/,109,"g.add_edge(0, 2)",
-algorithms/,110,"g.add_edge(1, 2)",
-algorithms/,111,"g.add_edge(2, 0)",
-algorithms/,112,"g.add_edge(2, 3)",
-algorithms/,113,"g.add_edge(3, 3)",
-algorithms/,15,Divide vertexes in the graph into set_type 1 and 2,
-algorithms/,16,Initialize all set_types as -1,
-algorithms/,25,"If there is a self-loop, it cannot be bipartite",
-algorithms/,34,set type of u opposite of v,
-algorithms/,1,Dijkstra's single source shortest path algorithm,
-algorithms/,25,minimum distance vertex that is not processed,
-algorithms/,28,put minimum distance vertex in shortest tree,
-algorithms/,31,Update dist value of the adjacent vertices,
-algorithms/,70,Each dfs will visit exactly one component,
-algorithms/,99,The formula is contradictory,
-algorithms/,101,An arbitrary representant from each component,
-algorithms/,107,True/False value for each strongly connected component,
-algorithms/,8,find path from start to end using recursion with backtracking,
-algorithms/,21,find all path,
-algorithms/,52,"print(find_shortest_path(myGraph, 'A', 'D'))",
-algorithms/,28,initial setting,
-algorithms/,33,setting min to max_value,
-algorithms/,35,save visited nodes,
-algorithms/,37,save parent nodes,
-algorithms/,40,initialize stack for DFS,
-algorithms/,43,initial setting,
-algorithms/,47,DFS to find path,
-algorithms/,49,pop from queue,
-algorithms/,52,checking capacity and visit,
-algorithms/,54,"if not, put into queue and chage to visit and save path",
-algorithms/,59,if there is no path from src to sink,
-algorithms/,63,initial setting,
-algorithms/,66,Get minimum flow,
-algorithms/,68,find minimum flow,
-algorithms/,73,initial setting,
-algorithms/,76,reduce capacity,
-algorithms/,8,dfs and bfs are the ultimately same except that they are visiting nodes in,
-algorithms/,9,different order. To simulate this ordering we would use stack for dfs and,
-algorithms/,10,queue for bfs.,
-algorithms/,11,,
-algorithms/,24,"print(dfs_traverse(graph, 'A'))",
-algorithms/,38,"print(bfs_traverse(graph, 'A'))",
-algorithms/,49,"print(dfs_traverse_recursive(graph, 'A'))",
-algorithms/,51,"def find_path(graph, start, end, visited=[]):",
-algorithms/,52,# basecase,
-algorithms/,53,visitied = visited + [start],
-algorithms/,54,if start == end:,
-algorithms/,55,return visited,
-algorithms/,56,if start not in graph:,
-algorithms/,57,return None,
-algorithms/,58,for node in graph[start]:,
-algorithms/,59,if node not in visited:,
-algorithms/,60,"new_visited = find_path(graph, node, end, visited)",
-algorithms/,61,return new_visited,
-algorithms/,62,return None,
-algorithms/,64,"print(find_path(graph, 'A', 'F'))",
-algorithms/,1,count connected no of component using DFS,
-algorithms/,20,Code is Here,
-algorithms/,45,Driver code,
-algorithms/,31,Create a graph given in the above diagram,
-algorithms/,29,initial setting,
-algorithms/,34,setting min to max_value,
-algorithms/,36,save visited nodes,
-algorithms/,38,save parent nodes,
-algorithms/,41,initialize queue for BFS,
-algorithms/,44,initial setting,
-algorithms/,48,BFS to find path,
-algorithms/,50,pop from queue,
-algorithms/,53,checking capacity and visit,
-algorithms/,55,"if not, put into queue and chage to visit and save path",
-algorithms/,60,if there is no path from src to sink,
-algorithms/,64,initial setting,
-algorithms/,67,Get minimum flow,
-algorithms/,69,find minimum flow,
-algorithms/,74,initial setting,
-algorithms/,77,reduce capacity,
-algorithms/,15,Runs Tarjan,
-algorithms/,16,Set all node index to None,
-algorithms/,26,Set the depth index for v to the smallest unused index,
-algorithms/,33,Consider successors of v,
-algorithms/,36,Successor w has not yet been visited; recurse on it,
-algorithms/,40,Successor w is in stack S and hence in the current SCC,
-algorithms/,41,"If w is not on stack, then (v, w) is a cross-edge in the DFS tree and must be ignored",
-algorithms/,42,Note: The next line may look odd - but is correct.,
-algorithms/,43,It says w.index not w.lowlink; that is deliberate and from the original paper,
-algorithms/,46,"If v is a root node, pop the stack and generate an SCC",
-algorithms/,48,start a new strongly connected component,
-algorithms/,32,Definition for a undirected graph node,
-algorithms/,39,BFS,
-algorithms/,49,neighbor is not visited,
-algorithms/,59,DFS iteratively,
-algorithms/,79,DFS recursively,
-algorithms/,1,! /usr/bin/env python3,
-algorithms/,23,element -> index,
-algorithms/,55,Remove a half,
-algorithms/,71,elements don't cover universe -> invalid input for set cover,
-algorithms/,75,track elements of universe covered,
-algorithms/,82,find set with minimum cost:elements_added ratio,
-algorithms/,85,set may have same elements as already covered -> new_elements = 0,
-algorithms/,86,check to avoid division by 0 error,
-algorithms/,93,union,
-algorithms/,43,"only '10', '20' is valid",
-algorithms/,47,'01 - 09' is not allowed,
-algorithms/,50,"other case '01, 09, 27'",
-algorithms/,31,dist[i] stores minimum cost from 0 --> i.,
-algorithms/,34,cost from 0 --> 0 is zero.,
-algorithms/,44,cost[i][j] is the cost of,
-algorithms/,45,going from i --> j,
-algorithms/,47,cost[i][j] = -1 for i > j,
-algorithms/,52,EDIT: The above solution is top-down. How about a bottom-up one?,
-algorithms/,36,Time: O(m*n),
-algorithms/,37,Space: O(m*n),
-algorithms/,54,this is the same as edit[m][n],
-algorithms/,23,TC: O(N^2)  SC: O(N),
-algorithms/,12,O(n) space,
-algorithms/,25,the above function can be optimized as:,
-algorithms/,26,O(1) space,
-algorithms/,19,initialize dp array and set base case as 1,
-algorithms/,22,fill dp in a bottom up manner,
-algorithms/,28,Match empty string with empty pattern,
-algorithms/,31,Match empty string with .*,
-algorithms/,38,The previous character has matched and the current one,
-algorithms/,39,has to be matched. Two possible matches: the same or .,
-algorithms/,43,Horizontal look up [j - 2].,
-algorithms/,44,Not use the character before *.,
-algorithms/,47,Vertical look up [i - 1].,
-algorithms/,48,Use at least one character before *.,
-algorithms/,49,p a b *,
-algorithms/,50,s 1 0 0 0,
-algorithms/,51,a 0 1 0 1,
-algorithms/,52,b 0 0 1 1,
-algorithms/,53,b 0 0 0 ?,
-algorithms/,96,E.g.,
-algorithms/,97,s a b b,
-algorithms/,98,p 1 0 0 0,
-algorithms/,99,a 0 1 0 0,
-algorithms/,100,b 0 0 1 0,
-algorithms/,101,* 0 1 1 1,
-algorithms/,24,A Dynamic Programming based Python Program for the Egg Dropping Puzzle,
-algorithms/,28,A 2D table where entery eggFloor[i][j] will represent minimum,
-algorithms/,29,number of trials needed for i eggs and j floors.,
-algorithms/,32,We need one trial for one floor and 0 trials for 0 floors,
-algorithms/,37,We always need j trials for one egg and j floors.,
-algorithms/,41,Fill rest of the entries in table using optimal substructure,
-algorithms/,42,property,
-algorithms/,51,eggFloor[n][k] holds the result,
-algorithms/,1,Python program for weighted job scheduling using Dynamic,
-algorithms/,2,Programming and Binary Search,
-algorithms/,4,Class to represent a job,
-algorithms/,12,A Binary Search based function to find the latest job,
-algorithms/,13,(before current job) that doesn't conflict with current,
-algorithms/,14,"job.  ""index"" is index of the current job.  This function",
-algorithms/,15,returns -1 if all jobs before index conflict with it.,
-algorithms/,16,The array jobs[] is sorted in increasing order of finish,
-algorithms/,17,time.,
-algorithms/,20,Initialize 'lo' and 'hi' for Binary Search,
-algorithms/,24,Perform binary Search iteratively,
-algorithms/,36,The main function that returns the maximum possible,
-algorithms/,37,profit from given array of jobs,
-algorithms/,40,Sort jobs according to finish time,
-algorithms/,43,Create an array to store solutions of subproblems.  table[i],
-algorithms/,44,stores the profit for jobs till arr[i] (including arr[i]),
-algorithms/,50,Fill entries in table[] using recursive property,
-algorithms/,53,Find profit including the current job,
-algorithms/,59,Store maximum of including and excluding,
-algorithms/,23,O(n^2) time,
-algorithms/,36,O(n) time,
-algorithms/,14,precondition,
-algorithms/,22,print(fib_recursive(35)) # => 9227465 (slow),
-algorithms/,37,precondition,
-algorithms/,45,print(fib_list(100)) # => 354224848179261915075,
-algorithms/,58,precondition,
-algorithms/,72,print(fib_iter(100)) # => 354224848179261915075,
-algorithms/,24,Print order of matrix with Ai as matrix,
-algorithms/,38,Size of matrix created from above array will be,
-algorithms/,39,30*35 35*15 15*5 5*10 10*20 20*25,
-algorithms/,1,A Dynamic Programming solution for Rod cutting problem,
-algorithms/,4,Returns the best obtainable price for a rod of length n and,
-algorithms/,5,price[] as prices of different pieces,
-algorithms/,10,Build the table val[] in bottom up manner and return,
-algorithms/,11,the last entry from the table,
-algorithms/,20,Driver program to test above functions,
-algorithms/,24,This code is contributed by Bhavya Jain,
-algorithms/,32,"We hit the end of one of the lists, set a flag for this",
-algorithms/,40,Mark the length of the longer of the two lists,
-algorithms/,53,"force the longer of the two lists to ""catch up""",
-algorithms/,58,"The nodes match, return the node",
-algorithms/,71,create linked list as:,
-algorithms/,72,1 -> 3 -> 5,
-algorithms/,73,\,
-algorithms/,74,7 -> 9 -> 11,
-algorithms/,75,/,
-algorithms/,76,2 -> 4 -> 6,
-algorithms/,28,recursively,
-algorithms/,4,split the list to two parts,
-algorithms/,10,Don't forget here! But forget still works!,
-algorithms/,11,reverse the second part,
-algorithms/,18,compare two parts,
-algorithms/,19,second part has the same or one less node,
-algorithms/,32,1. Get the midpoint (slow),
-algorithms/,37,2. Push the second half into the stack,
-algorithms/,43,3. Comparison,
-algorithms/,90,1. test case,
-algorithms/,100,2. test case,
-algorithms/,110,3. test case,
-algorithms/,116,4. test case,
-algorithms/,44,A A B C D C F G,
-algorithms/,8,,
-algorithms/,9,Iterative solution,
-algorithms/,10,T(n)- O(n),
-algorithms/,11,,
-algorithms/,28,,
-algorithms/,29,Recursive solution,
-algorithms/,30,T(n)- O(n),
-algorithms/,31,,
-algorithms/,49,cache previous value in case it needs to be pointed elsewhere,
-algorithms/,34,O(n),
-algorithms/,29,make linkedlist 1 -> 2 -> 3 -> 4,
-algorithms/,36,node3 = 3,
-algorithms/,39,after delete_node => 1 -> 2 -> 4,
-algorithms/,1,Pros,
-algorithms/,2,"Linked Lists have constant-time insertions and deletions in any position,",
-algorithms/,3,"in comparison, arrays require O(n) time to do the same thing.",
-algorithms/,4,Linked lists can continue to expand without having to specify,
-algorithms/,5,their size ahead of time (remember our lectures on Array sizing,
-algorithms/,6,form the Array Sequence section of the course!),
-algorithms/,8,Cons,
-algorithms/,9,"To access an element in a linked list, you need to take O(k) time",
-algorithms/,10,to go from the head of the list to the kth element.,
-algorithms/,11,"In contrast, arrays have constant time operations to access",
-algorithms/,12,elements in an array.,
-algorithms/,44,create linked list => A -> B -> C -> D -> E -> C,
-algorithms/,10,Definition for singly-linked list.,
-algorithms/,11,class ListNode(object):,
-algorithms/,12,"def __init__(self, x):",
-algorithms/,13,self.val = x,
-algorithms/,14,self.next = None,
-algorithms/,27,count length of the list,
-algorithms/,31,make it circular,
-algorithms/,34,rotate until length-k,
-algorithms/,56,"Went too far, k is not valid",
-algorithms/,75,def make_test_li,
-algorithms/,76,A A B C D C F G,
-algorithms/,94,test kth_to_last_eval,
-algorithms/,102,test kth_to_last_dict,
-algorithms/,110,test kth_to_last,
-algorithms/,14,Case: remove node at head,
-algorithms/,21,Move pointer to start position,
-algorithms/,24,Remove data until the end,
-algorithms/,34,"If x is even, exclude x from list (-1):",
-algorithms/,36,Sieve,
-algorithms/,37,List of Primes,
-algorithms/,39,2 is prime by default,
-algorithms/,36,Calculate the dot product of two vectors,
-algorithms/,18,function is only defined for n>=k,
-algorithms/,20,"C(n,0) = C(n,n) = 1, so this is our base case.",
-algorithms/,23,"C(n,k) = C(n,n-k), so if n/2 is sufficiently small, we can reduce the problem size.",
-algorithms/,26,"else, we know C(n,k) = (n/k)C(n-1,k-1), so we can use this to reduce our problem size.",
-algorithms/,11,"If the last bit is 1, add 2^k.",
-algorithms/,15,Utilize modular multiplication properties to combine the computed mod C values.,
-algorithms/,16,set to 1,
-algorithms/,17,set to 1,
-algorithms/,20,parse the string into individual digits,
-algorithms/,31,Some test cases:,
-algorithms/,41,precondition n >= 5,
-algorithms/,43,True for prime,
-algorithms/,58,size in bits of p and q need to add up to the size of n,
-algorithms/,62,"in many cases, e is also chosen to be a small constant",
-algorithms/,75,calculate totient function,
-algorithms/,90,sample usage:,
-algorithms/,91,"n,e,d = generate_key(16)",
-algorithms/,92,data = 20,
-algorithms/,93,"encrypted = pow(data,e,n)",
-algorithms/,94,"decrypted = pow(encrypted,d,n)",
-algorithms/,95,assert decrypted == data,
-algorithms/,14,Another way:,
-algorithms/,34,no such number exists,
-algorithms/,43,prefer slicing instead of reversed(digits[idx:]),
-algorithms/,1,def lengthLongestPath(input):,
-algorithms/,2,maxlen = 0,
-algorithms/,3,pathlen = {0: 0},
-algorithms/,4,for line in input.splitlines():,
-algorithms/,5,"print(""---------------"")",
-algorithms/,6,"print(""line:"", line)",
-algorithms/,7,name = line.strip('\t'),
-algorithms/,8,"print(""name:"", name)",
-algorithms/,9,depth = len(line) - len(name),
-algorithms/,10,"print(""depth:"", depth)",
-algorithms/,11,if '.' in name:,
-algorithms/,12,"maxlen = max(maxlen, pathlen[depth] + len(name))",
-algorithms/,13,else:,
-algorithms/,14,pathlen[depth + 1] = pathlen[depth] + len(name) + 1,
-algorithms/,15,"print(""maxlen:"", maxlen)",
-algorithms/,16,return maxlen,
-algorithms/,18,def lengthLongestPath(input):,
-algorithms/,19,"paths = input.split(""\n"")",
-algorithms/,20,level = [0] * 10,
-algorithms/,21,maxLength = 0,
-algorithms/,22,for path in paths:,
-algorithms/,23,"print(""-------------"")",
-algorithms/,24,"levelIdx = path.rfind(""\t"")",
-algorithms/,25,"print(""Path: "", path)",
-algorithms/,26,"print(""path.rfind(\\t)"", path.rfind(""\t""))",
-algorithms/,27,"print(""levelIdx: "", levelIdx)",
-algorithms/,28,"print(""level: "", level)",
-algorithms/,29,level[levelIdx + 1] = level[levelIdx] + len(path) - levelIdx + 1,
-algorithms/,30,"print(""level: "", level)",
-algorithms/,31,"if ""."" in path:",
-algorithms/,32,"maxLength = max(maxLength, level[levelIdx+1] - 1)",
-algorithms/,33,"print(""maxlen: "", maxLength)",
-algorithms/,34,return maxLength,
-algorithms/,41,running length and max length,
-algorithms/,42,keep track of the name length,
-algorithms/,46,the depth of current dir or file,
-algorithms/,50,go back to the correct depth,
-algorithms/,52,1 is the length of '/',
-algorithms/,53,increase current length,
-algorithms/,56,update maxlen only when it is a file,
-algorithms/,57,-1 is to minus one '/',
-algorithms/,91,double the size of the array,
-algorithms/,25,Case odd number of values in stack,
-algorithms/,28,Not consecutive,
-algorithms/,30,Backup second value,
-algorithms/,33,Back up stack from storage stack,
-algorithms/,42,Case odd number of values in stack,
-algorithms/,45,Not consecutive,
-algorithms/,47,Backup second value,
-algorithms/,50,Back up stack from queue,
-algorithms/,26,Backup stack,
-algorithms/,31,case: odd number of values in stack,
-algorithms/,41,Put all values into queue from stack,
-algorithms/,44,Put values back into stack from queue,
-algorithms/,47,"Now, stack is reverse, put all values into queue from stack",
-algorithms/,50,Swap pairs by appending the 2nd value before appending 1st value,
-algorithms/,55,case: odd number of values in stack,
-algorithms/,13,Stack is empty,
-algorithms/,15,Find the smallest value,
-algorithms/,23,Back up stack and remove min value,
-algorithms/,1,The stack remains always ordered such that the highest value is at the top and the lowest at the bottom,
-algorithms/,13,push method to maintain order when pushing new elements,
-algorithms/,29,Put all values into queue from stack,
-algorithms/,32,Put values back into stack from queue,
-algorithms/,35,"Now, stack is reverse, put all values into queue from stack",
-algorithms/,38,Put 2 times value into stack from queue,
-algorithms/,1,"Given an encoded string, return it's decoded string.",
-algorithms/,3,"The encoding rule is: k[encoded_string], where the encoded_string",
-algorithms/,4,inside the square brackets is being repeated exactly k times.,
-algorithms/,5,Note that k is guaranteed to be a positive integer.,
-algorithms/,7,"You may assume that the input string is always valid; No extra white spaces,",
-algorithms/,8,"square brackets are well-formed, etc.",
-algorithms/,10,"Furthermore, you may assume that the original data does not contain any",
-algorithms/,11,"digits and that digits are only for those repeat numbers, k.",
-algorithms/,12,"For example, there won't be input like 3a or 2[4].",
-algorithms/,14,Examples:,
-algorithms/,16,"s = ""3[a]2[bc]"", return ""aaabcbc"".",
-algorithms/,17,"s = ""3[a2[c]]"", return ""accaccacc"".",
-algorithms/,18,"s = ""2[abc]3[cd]ef"", return ""abcabccdcdcdef"".",
-algorithms/,13,Here is a very non-pythonic grotesque solution,
-algorithms/,19,final result to be returned,
-algorithms/,24,add the '?' to our result if it is in the url,
-algorithms/,30,logic for removing duplicate query strings,
-algorithms/,31,build up the list by splitting the query_string using digits,
-algorithms/,41,logic for checking whether we should add the string to our result,
-algorithms/,70,A very friendly pythonic solution (easy to follow),
-algorithms/,84,Here is my friend's solution using python's builtin libraries,
-algorithms/,40,reversely sort the symbols according to their lengths.,
-algorithms/,45,"once match, append the `word_replaced` to res, process next word",
-algorithms/,50,"if this word matches no symbol, append it.",
-algorithms/,28,TODO: Using dynamic programming,
-algorithms/,14,Recursive Solution,
-algorithms/,29,An iterative approach,
-algorithms/,54,Variation 1,
-algorithms/,61,can also get rid of the string_reverse function and just do this return s == s[::-1] in one line.,
-algorithms/,67,Variation 2,
-algorithms/,77,Variation 3,
-algorithms/,6,Implement the encode and decode methods.,
-algorithms/,16,making pi table,
-algorithms/,23,finding pattern,
-algorithms/,10,arr is list of words,
-algorithms/,1,Following program is the python implementation of,
-algorithms/,2,Rabin Karp Algorithm,
-algorithms/,11,ord maps the character to a number,
-algorithms/,12,"subtract out the ASCII value of ""a"" to start the indexing at zero",
-algorithms/,15,start index of current window,
-algorithms/,17,end of index window,
-algorithms/,22,remove left letter from hash value,
-algorithms/,40,word_hash.move_window(),
-algorithms/,30,Validate the input,
-algorithms/,49,Alternative solution,
-algorithms/,12,Non pythonic way,
-algorithms/,14,grab only the non http(s) part,
-algorithms/,16,grab the actual one depending on the len of the list,
-algorithms/,19,case when www is in the url,
-algorithms/,22,case when www is not in the url,
-algorithms/,26,pythonic one liner,
-algorithms/,20,I'll be adding my attempt as well as my friend's solution (took us ~ 1 hour),
-algorithms/,22,my attempt,
-algorithms/,38,friends solutions,
-algorithms/,47,using regular expression,
-algorithms/,31,modify,
-algorithms/,33,insertion,
-algorithms/,34,Return the minimum number of characters to make the password strong,
-algorithms/,40,return value,
-algorithms/,41,current length of strs in a row,
-algorithms/,42,current words in a row,
-algorithms/,43,the index of current word in words,
-algorithms/,44,is current word the first in a row,
-algorithms/,53,"except for the first word, each word should have at least a ' ' before it.",
-algorithms/,60,"here we have already got a row of str , then we should supplement enough ' ' to make sure the length is max_width.",
-algorithms/,62,if the row is the last,
-algorithms/,68,not the last row and more than one word,
-algorithms/,80,row with only one word,
-algorithms/,85,"after a row , reset those value",
-algorithms/,9,time complexity O(n),
-algorithms/,1,"Given a set of words (without duplicates),",
-algorithms/,2,find all word squares you can build from them.,
-algorithms/,4,A sequence of words forms a valid word square,
-algorithms/,5,"if the kth row and column read the exact same string,",
-algorithms/,6,"where 0 ≤ k < max(numRows, numColumns).",
-algorithms/,8,"For example, the word sequence [""ball"",""area"",""lead"",""lady""] forms",
-algorithms/,9,a word square because each word reads the same both horizontally,
-algorithms/,10,and vertically.,
-algorithms/,12,b a l l,
-algorithms/,13,a r e a,
-algorithms/,14,l e a d,
-algorithms/,15,l a d y,
-algorithms/,16,Note:,
-algorithms/,17,There are at least 1 and at most 1000 words.,
-algorithms/,18,All words will have the exact same length.,
-algorithms/,19,Word length is at least 1 and at most 5.,
-algorithms/,20,Each word contains only lowercase English alphabet a-z.,
-algorithms/,22,Example 1:,
-algorithms/,24,Input:,
-algorithms/,25,"[""area"",""lead"",""wall"",""lady"",""ball""]",
-algorithms/,27,Output:,
-algorithms/,28,[,
-algorithms/,29,"[ ""wall"",",
-algorithms/,30,"""area"",",
-algorithms/,31,"""lead"",",
-algorithms/,32,"""lady""",
-algorithms/,33,"],",
-algorithms/,34,"[ ""ball"",",
-algorithms/,35,"""area"",",
-algorithms/,36,"""lead"",",
-algorithms/,37,"""lady""",
-algorithms/,38,],
-algorithms/,39,],
-algorithms/,41,Explanation:,
-algorithms/,42,The output consists of two word squares. The order of output does not matter,
-algorithms/,43,(just the order of words in each word square matters).,
-algorithms/,25,ord(ch) return an integer representing the Unicode code point of that character,
-algorithms/,27,chr(i) Return the string representing a character whose Unicode code point is the integer i,
-algorithms/,31,Create mask,
-algorithms/,35,Keep the bit from 0 position to i position,
-algorithms/,19,Time Complexity - O(number of bits in n),
-algorithms/,34,Time Complexity - O(1),
-algorithms/,36,for bits ending with zero (...1010),
-algorithms/,37,for bits ending with one  (...0101),
-algorithms/,7,"list.insert(0, ...) is inefficient",
-algorithms/,17,last digit is 1,
-algorithms/,20,last digit is 0,
-algorithms/,21,second last digit is 0,
-algorithms/,28,right shift num,
-algorithms/,34,isolate a^b from pairs using XOR,
-algorithms/,39,isolate right most bit from a^b,
-algorithms/,42,isolate a and b from a^b,
-algorithms/,21,Another awesome answer,
-algorithms/,17,odd bit arithmetic right shift 1 bit,
-algorithms/,19,even bit left shift 1 bit,
-algorithms/,18,原方法为 binary_gap，但通过实验发现算法有误，不论是什么数，输出值最多为2。,
-algorithms/,19,改进方法为binary_gap_improved。,
-algorithms/,20,"The original method is binary_gap,",
-algorithms/,21,"but the experimental results show that the algorithm seems to be wrong,",
-algorithms/,22,"regardless of the number, the output value is up to 2.",
-algorithms/,23,The improved method is binary_gap_improved.,
-algorithms/,14,count number of ones in diff,
-algorithms/,22,"Given a stream of integers and a window size,",
-algorithms/,23,calculate the moving average of all integers in the sliding window.,
-algorithms/,1,Suppose you have a random list of people standing in a queue.,
-algorithms/,2,"Each person is described by a pair of integers (h, k),",
-algorithms/,3,where h is the height of the person and k is the number of people,
-algorithms/,4,in front of this person who have a height greater than or equal to h.,
-algorithms/,5,Write an algorithm to reconstruct the queue.,
-algorithms/,7,Note:,
-algorithms/,8,"The number of people is less than 1,100.",
-algorithms/,10,Example,
-algorithms/,12,Input:,
-algorithms/,13,"[[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]",
-algorithms/,15,Output:,
-algorithms/,16,"[[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]]",
-algorithms/,22,queue storing indexes of elements,
-algorithms/,48,when traversed complete queue,
-algorithms/,54,remove and return the first node from the queue,
-algorithms/,33,not possible,
-algorithms/,38,when only differ by 1 character,
-algorithms/,62,print(begin_set),
-algorithms/,63,print(result),
-algorithms/,15,count how many building we have visited,
-algorithms/,35,only the position be visited by count times will append to queue,
-algorithms/,13,"""Select"" the correct value",
-algorithms/,6,Initialize size of the gap,
-algorithms/,5,Our recursive base case,
-algorithms/,9,Perform merge_sort recursively on both halves,
-algorithms/,12,Merge each side together,
-algorithms/,23,Sort each one and place into the result,
-algorithms/,30,Add the left overs if there's any left to the result,
-algorithms/,33,Add the left overs if there's any left to the result,
-algorithms/,37,Return result,
-algorithms/,15,check the array is inorder,
-algorithms/,30,end of function(compare and bitionic_merge) definition,
-algorithms/,34,checks if n is power of two,
-algorithms/,14,Finding cycle to rotate.,
-algorithms/,18,Finding an indx to put items in.,
-algorithms/,24,Case of there is not a cycle,
-algorithms/,28,Putting the item immediately right after the duplicate item or on the right.,
-algorithms/,33,Rotating the remaining cycle.,
-algorithms/,36,Finding where to put the item.,
-algorithms/,42,"After item is duplicated, put it in place or put it there.",
-algorithms/,11,print(node),
-algorithms/,13,"in case there are negative elements, change the array to all positive element",
-algorithms/,16,"save the change, so that we can convert the array back to all positive number",
-algorithms/,24,temp_array[i] contain the times the number i appear in arr,
-algorithms/,28,temp_array[i] contain the number of element less than or equal i in arr,
-algorithms/,31,creating a result_arr an put the element in a correct positon,
-algorithms/,6,The number of buckets and make buckets,
-algorithms/,9,Assign values into bucket_sort,
-algorithms/,13,Sort,
-algorithms/,20,We will use insertion sort here.,
-algorithms/,15,Start our two recursive calls,
-algorithms/,28,last is the pivot,
-algorithms/,23,Iterate from last parent to first,
-algorithms/,27,Iterate from current_parent to last_parent,
-algorithms/,29,Find greatest child of current_parent,
-algorithms/,34,Swap if child is greater than parent,
-algorithms/,41,"If no swap occured, no need to keep iterating",
-algorithms/,64,Offset last_parent by the start (last_parent calculated as if start index was 0),
-algorithms/,65,All array accesses need to be offset by start,
-algorithms/,69,Iterate from last parent to first,
-algorithms/,73,Iterate from current_parent to last_parent,
-algorithms/,75,Find lesser child of current_parent,
-algorithms/,81,Swap if child is less than parent,
-algorithms/,89,"If no swap occured, no need to keep iterating",
-algorithms/,16,Finding index of maximum number in arr,
-algorithms/,19,Needs moving,
-algorithms/,21,reverse from 0 to index_max,
-algorithms/,23,Reverse list,
-algorithms/,15,Swap the number down the list,
-algorithms/,18,Break and do the final swap,
-algorithms/,23,Create dict to store histogram,
-algorithms/,25,"For each list value, add one to the respective histogram dict position",
-algorithms/docs/source/conf.py,1,!/usr/bin/env python3,
-algorithms/docs/source/conf.py,2,-*- coding: utf-8 -*-,
-algorithms/docs/source/conf.py,3,,
-algorithms/docs/source/conf.py,4,"algorithms documentation build configuration file, created by",
-algorithms/docs/source/conf.py,5,sphinx-quickstart on Wed Jun  6 01:17:26 2018.,
-algorithms/docs/source/conf.py,6,,
-algorithms/docs/source/conf.py,7,This file is execfile()d with the current directory set to its,
-algorithms/docs/source/conf.py,8,containing dir.,
-algorithms/docs/source/conf.py,9,,
-algorithms/docs/source/conf.py,10,Note that not all possible configuration values are present in this,
-algorithms/docs/source/conf.py,11,autogenerated file.,
-algorithms/docs/source/conf.py,12,,
-algorithms/docs/source/conf.py,13,All configuration values have a default; values that are commented out,
-algorithms/docs/source/conf.py,14,serve to show the default.,
-algorithms/docs/source/conf.py,16,"If extensions (or modules to document with autodoc) are in another directory,",
-algorithms/docs/source/conf.py,17,add these directories to sys.path here. If the directory is relative to the,
-algorithms/docs/source/conf.py,18,"documentation root, use os.path.abspath to make it absolute, like shown here.",
-algorithms/docs/source/conf.py,19,,
-algorithms/docs/source/conf.py,20,import os,
-algorithms/docs/source/conf.py,21,import sys,
-algorithms/docs/source/conf.py,22,"sys.path.insert(0, os.path.abspath('.'))",
-algorithms/docs/source/conf.py,25,-- General configuration ------------------------------------------------,
-algorithms/docs/source/conf.py,27,"If your documentation needs a minimal Sphinx version, state it here.",
-algorithms/docs/source/conf.py,28,,
-algorithms/docs/source/conf.py,29,needs_sphinx = '1.0',
-algorithms/docs/source/conf.py,31,"Add any Sphinx extension module names here, as strings. They can be",
-algorithms/docs/source/conf.py,32,extensions coming with Sphinx (named 'sphinx.ext.*') or your custom,
-algorithms/docs/source/conf.py,33,ones.,
-algorithms/docs/source/conf.py,43,"Add any paths that contain templates here, relative to this directory.",
-algorithms/docs/source/conf.py,46,The suffix(es) of source filenames.,
-algorithms/docs/source/conf.py,47,You can specify multiple suffix as a list of string:,
-algorithms/docs/source/conf.py,48,,
-algorithms/docs/source/conf.py,54,The master toctree document.,
-algorithms/docs/source/conf.py,57,General information about the project.,
-algorithms/docs/source/conf.py,62,"The version info for the project you're documenting, acts as replacement for",
-algorithms/docs/source/conf.py,63,"|version| and |release|, also used in various other places throughout the",
-algorithms/docs/source/conf.py,64,built documents.,
-algorithms/docs/source/conf.py,65,,
-algorithms/docs/source/conf.py,66,The short X.Y version.,
-algorithms/docs/source/conf.py,68,"The full version, including alpha/beta/rc tags.",
-algorithms/docs/source/conf.py,71,The language for content autogenerated by Sphinx. Refer to documentation,
-algorithms/docs/source/conf.py,72,for a list of supported languages.,
-algorithms/docs/source/conf.py,73,,
-algorithms/docs/source/conf.py,74,This is also used if you do content translation via gettext catalogs.,
-algorithms/docs/source/conf.py,75,"Usually you set ""language"" from the command line for these cases.",
-algorithms/docs/source/conf.py,78,"List of patterns, relative to source directory, that match files and",
-algorithms/docs/source/conf.py,79,directories to ignore when looking for source files.,
-algorithms/docs/source/conf.py,80,This patterns also effect to html_static_path and html_extra_path,
-algorithms/docs/source/conf.py,83,The name of the Pygments (syntax highlighting) style to use.,
-algorithms/docs/source/conf.py,86,"If true, `todo` and `todoList` produce output, else they produce nothing.",
-algorithms/docs/source/conf.py,90,-- Options for HTML output ----------------------------------------------,
-algorithms/docs/source/conf.py,92,The theme to use for HTML and HTML Help pages.  See the documentation for,
-algorithms/docs/source/conf.py,93,a list of builtin themes.,
-algorithms/docs/source/conf.py,94,,
-algorithms/docs/source/conf.py,97,Theme options are theme-specific and customize the look and feel of a theme,
-algorithms/docs/source/conf.py,98,"further.  For a list of options available for each theme, see the",
-algorithms/docs/source/conf.py,99,documentation.,
-algorithms/docs/source/conf.py,100,,
-algorithms/docs/source/conf.py,101,html_theme_options = {},
-algorithms/docs/source/conf.py,103,"Add any paths that contain custom static files (such as style sheets) here,",
-algorithms/docs/source/conf.py,104,"relative to this directory. They are copied after the builtin static files,",
-algorithms/docs/source/conf.py,105,"so a file named ""default.css"" will overwrite the builtin ""default.css"".",
-algorithms/docs/source/conf.py,108,"Custom sidebar templates, must be a dictionary that maps document names",
-algorithms/docs/source/conf.py,109,to template names.,
-algorithms/docs/source/conf.py,110,,
-algorithms/docs/source/conf.py,111,This is required for the alabaster theme,
-algorithms/docs/source/conf.py,112,refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars,
-algorithms/docs/source/conf.py,118,needs 'show_related': True theme option to display,
-algorithms/docs/source/conf.py,123,-- Options for HTMLHelp output ------------------------------------------,
-algorithms/docs/source/conf.py,125,Output file base name for HTML help builder.,
-algorithms/docs/source/conf.py,129,-- Options for LaTeX output ---------------------------------------------,
-algorithms/docs/source/conf.py,132,The paper size ('letterpaper' or 'a4paper').,
-algorithms/docs/source/conf.py,133,,
-algorithms/docs/source/conf.py,134,"'papersize': 'letterpaper',",
-algorithms/docs/source/conf.py,136,"The font size ('10pt', '11pt' or '12pt').",
-algorithms/docs/source/conf.py,137,,
-algorithms/docs/source/conf.py,138,"'pointsize': '10pt',",
-algorithms/docs/source/conf.py,140,Additional stuff for the LaTeX preamble.,
-algorithms/docs/source/conf.py,141,,
-algorithms/docs/source/conf.py,142,"'preamble': '',",
-algorithms/docs/source/conf.py,144,Latex figure (float) alignment,
-algorithms/docs/source/conf.py,145,,
-algorithms/docs/source/conf.py,146,"'figure_align': 'htbp',",
-algorithms/docs/source/conf.py,149,Grouping the document tree into LaTeX files. List of tuples,
-algorithms/docs/source/conf.py,150,"(source start file, target name, title,",
-algorithms/docs/source/conf.py,151,"author, documentclass [howto, manual, or own class]).",
-algorithms/docs/source/conf.py,158,-- Options for manual page output ---------------------------------------,
-algorithms/docs/source/conf.py,160,One entry per manual page. List of tuples,
-algorithms/docs/source/conf.py,161,"(source start file, name, description, authors, manual section).",
-algorithms/docs/source/conf.py,168,-- Options for Texinfo output -------------------------------------------,
-algorithms/docs/source/conf.py,170,Grouping the document tree into Texinfo files. List of tuples,
-algorithms/docs/source/conf.py,171,"(source start file, target name, title, author,",
-algorithms/docs/source/conf.py,172,"dir menu entry, description, category)",
+algorithms/tests/test_matrix.py,122,example taken from https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/04LinearAlgebra/cholesky/,not
+algorithms/tests/test_maths.py,251,def test_key_generator(self):  # this test takes a while!,not
+algorithms/tests/test_maths.py,252,for i in range(100):,not
+algorithms/tests/test_maths.py,253,"print(""step {0}"".format(i))",not
+algorithms/tests/test_maths.py,254,"n, e, d = generate_key(26)",not
+algorithms/tests/test_maths.py,255,data = 2,not
+algorithms/tests/test_maths.py,256,"en = encrypt(data, e, n)",not
+algorithms/tests/test_maths.py,257,"dec = decrypt(en, d, n)",not
+algorithms/tests/test_maths.py,258,"self.assertEqual(data,dec)",not
+algorithms/tests/test_backtrack.py,31,"""123"", 6 -> [""1+2+3"", ""1*2*3""]",not
+algorithms/tests/test_backtrack.py,35,"""232"", 8 -> [""2*3+2"", ""2+3*2""]",not
+algorithms/tests/test_queues.py,22,test __iter__(),not
+algorithms/tests/test_queues.py,29,test __len__(),not
+algorithms/tests/test_queues.py,32,test is_empty(),not
+algorithms/tests/test_queues.py,35,test peek(),not
+algorithms/tests/test_queues.py,38,test dequeue(),not
+algorithms/tests/test_queues.py,51,test __iter__(),not
+algorithms/tests/test_queues.py,58,test __len__(),not
+algorithms/tests/test_queues.py,61,test is_empty(),not
+algorithms/tests/test_queues.py,64,test peek(),not
+algorithms/tests/test_queues.py,67,test dequeue(),not
+algorithms/tests/test_unix.py,18,Test full path relative,not
+algorithms/tests/test_unix.py,21,Test full path with expanding user,not
+algorithms/tests/test_unix.py,22,~/file_name,not
+algorithms/tests/test_unix.py,27,Test url path,not
+algorithms/tests/test_unix.py,32,Test file path,not
+algorithms/tests/test_bit.py,42,8 -> 1000,not
+algorithms/tests/test_bit.py,45,109 -> 1101101,not
+algorithms/tests/test_bit.py,48,63 -> 111111,not
+algorithms/tests/test_bit.py,51,0 -> 0,not
+algorithms/tests/test_bit.py,56,8 -> 1000,not
+algorithms/tests/test_bit.py,59,109 -> 1101101,not
+algorithms/tests/test_bit.py,62,63 -> 111111,not
+algorithms/tests/test_bit.py,65,0 -> 0,not
+algorithms/tests/test_bit.py,69,29: 11101 and 15: 01111,not
+algorithms/tests/test_bit.py,71,45: 0000101101 and 987: 1111011011,not
+algorithms/tests/test_bit.py,73,34: 100010,not
+algorithms/tests/test_bit.py,75,34: 100010 and 53: 110101,not
+algorithms/tests/test_bit.py,99,1775: 11011101111,not
+algorithms/tests/test_bit.py,101,5: 101,not
+algorithms/tests/test_bit.py,103,71: 1000111,not
+algorithms/tests/test_bit.py,105,0: 0,not
+algorithms/tests/test_bit.py,122,bin(0) => 00000000000000000000000000000000,not
+algorithms/tests/test_bit.py,125,bin(2**32 - 1) => 11111111111111111111111111111111,not
+algorithms/tests/test_bit.py,137,nums contains pairs of random integers,not
+algorithms/tests/test_bit.py,148,nums contains triplets of random integers,not
+algorithms/tests/test_bit.py,170,22 = 10110,not
+algorithms/tests/test_bit.py,175,22 = 10110  --> after set bit at 3th position: 30 = 11110,not
+algorithms/tests/test_bit.py,179,22 = 10110 --> after clear bit at 2nd position: 20 = 10010,not
+algorithms/tests/test_bit.py,183,22 = 10110 --> after update bit at 3th position with value 1: 30 = 11110,not
+algorithms/tests/test_bit.py,185,22 = 10110 --> after update bit at 2nd position with value 0: 20 = 10010,not
+algorithms/tests/test_bit.py,201,22: 10110  --> 41: 101001,not
+algorithms/tests/test_bit.py,203,10: 1010   --> 5 : 0101,not
+algorithms/tests/test_bit.py,257,22 = 10110,not
+algorithms/tests/test_bit.py,259,6 = 110,not
+algorithms/tests/test_bit.py,261,8 = 1000,not
+algorithms/tests/test_bit.py,263,145 = 10010001,not
+algorithms/tests/test_ml.py,10,train set for the AND-function,not
+algorithms/tests/test_ml.py,13,train set for light or dark colors,not
+algorithms/tests/test_ml.py,18,AND-function,not
+algorithms/tests/test_ml.py,22,dark/light color test,not
+algorithms/tests/test_linkedlist.py,22,Convert from linked list Node to list for testing,not
+algorithms/tests/test_linkedlist.py,35,list test for palindrome,not
+algorithms/tests/test_linkedlist.py,65,head -> -2 -> 2 -> 2 -> 4 -> 9,not
+algorithms/tests/test_linkedlist.py,72,head -> 1 -> 2 -> 8 -> 4 -> 6,not
+algorithms/tests/test_linkedlist.py,76,Test case: middle case.,not
+algorithms/tests/test_linkedlist.py,82,Expect output: 0 4,not
+algorithms/tests/test_linkedlist.py,85,Test case: taking out the front node,not
+algorithms/tests/test_linkedlist.py,91,Expect output: 2 3 4,not
+algorithms/tests/test_linkedlist.py,94,Test case: removing all the nodes,not
+algorithms/tests/test_linkedlist.py,107,Expect output : 2 --> 1 --> 4 --> 3,not
+algorithms/tests/test_linkedlist.py,111,Given 1->2->3->4->5->NULL,not
+algorithms/tests/test_linkedlist.py,117,K = 2. Expect output: 4->5->1->2->3->NULL.,not
+algorithms/tests/test_linkedlist.py,121,create linked list => A -> B -> C -> D -> E -> C,not
+algorithms/tests/test_linkedlist.py,135,create linked list 1 -> 2 -> 3 -> 4,not
+algorithms/tests/test_linkedlist.py,156,Test recursive,not
+algorithms/tests/test_bfs.py,37,hit -> hot -> dot -> dog -> cog,not
+algorithms/tests/test_bfs.py,40,pick -> sick -> sink -> sank -> tank == 5,not
+algorithms/tests/test_bfs.py,44,"live -> life == 1, no matter what is the word_list.",not
+algorithms/tests/test_bfs.py,47,0 length from ate -> ate,not
+algorithms/tests/test_bfs.py,50,not possible to reach !,not
+algorithms/tests/test_sort.py,116,print(res),not
+algorithms/tests/test_stack.py,25,"Test case: bottom [6, 3, 5, 1, 2, 4] top",not
+algorithms/tests/test_stack.py,31,"Test case: bottom [2, 8, 3, -6, 7, 3] top",not
+algorithms/tests/test_stack.py,33,"Test case: 2 smallest value [2, 8, 3, 7, 3]",not
+algorithms/tests/test_stack.py,37,"Test case: bottom [3, 7, 1, 14, 9] top",not
+algorithms/tests/test_stack.py,44,Test case: even number of values in stack,not
+algorithms/tests/test_stack.py,45,"bottom [3, 8, 17, 9, 1, 10] top",not
+algorithms/tests/test_stack.py,50,Test case: odd number of values in stack,not
+algorithms/tests/test_stack.py,51,"bottom [3, 8, 17, 9, 1] top",not
+algorithms/tests/test_stack.py,77,test __iter__(),not
+algorithms/tests/test_stack.py,84,test __len__(),not
+algorithms/tests/test_stack.py,87,test __str__(),not
+algorithms/tests/test_stack.py,90,test is_empty(),not
+algorithms/tests/test_stack.py,93,test peek(),not
+algorithms/tests/test_stack.py,96,test pop(),not
+algorithms/tests/test_stack.py,110,test __iter__(),not
+algorithms/tests/test_stack.py,117,test __len__(),not
+algorithms/tests/test_stack.py,120,test __str__(),not
+algorithms/tests/test_stack.py,123,test is_empty(),not
+algorithms/tests/test_stack.py,126,test peek(),not
+algorithms/tests/test_stack.py,129,test pop(),not
+algorithms/tests/test_search.py,37,Test binary_search_recur,not
+algorithms/tests/test_search.py,67,test two_sum,not
+algorithms/tests/test_search.py,70,test two_sum1,not
+algorithms/tests/test_search.py,73,test two_sum2,not
+algorithms/tests/test_search.py,88,Test find min using recursion,not
+algorithms/tests/test_graph.py,26,Graph from https://en.wikipedia.org/wiki/File:Scc.png,not
+algorithms/tests/test_graph.py,42,Graph from https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm#/media/File:Tarjan%27s_Algorithm_Animation.gif,not
+algorithms/tests/test_graph.py,231,adjacency list representation of graph,not
+algorithms/tests/test_map.py,35,and does not search forever,not
+algorithms/tests/test_strings.py,176,'Otto' is a old german name.,not
+algorithms/tests/test_strings.py,181,'Otto' is a old german name.,not
+algorithms/tests/test_strings.py,186,'Otto' is a old german name.,not
+algorithms/tests/test_strings.py,191,'Otto' is a old german name.,not
+algorithms/tests/test_strings.py,379,class TestStripUrlParams(unittest.TestCase):,not
+algorithms/tests/test_strings.py,380,"""""""[summary]",not
+algorithms/tests/test_strings.py,381,Test for the file strip_urls_params.py,not
+algorithms/tests/test_strings.py,383,Arguments:,not
+algorithms/tests/test_strings.py,384,unittest {[type]} -- [description],not
+algorithms/tests/test_strings.py,385,"""""""",not
+algorithms/tests/test_strings.py,387,def test_strip_url_params1(self):,not
+algorithms/tests/test_strings.py,388,"self.assertEqual(strip_url_params1(""www.saadbenn.com?a=1&b=2&a=2""), ""www.saadbenn.com?a=1&b=2"")",not
+algorithms/tests/test_strings.py,389,"self.assertEqual(strip_url_params1(""www.saadbenn.com?a=1&b=2"", ['b']), ""www.saadbenn.com?a=1"")",not
+algorithms/tests/test_strings.py,390,def test_strip_url_params2(self):,not
+algorithms/tests/test_strings.py,391,"self.assertEqual(strip_url_params2(""www.saadbenn.com?a=1&b=2&a=2""), ""www.saadbenn.com?a=1&b=2"")",not
+algorithms/tests/test_strings.py,392,"self.assertEqual(strip_url_params2(""www.saadbenn.com?a=1&b=2"", ['b']), ""www.saadbenn.com?a=1"")",not
+algorithms/tests/test_strings.py,393,def test_strip_url_params3(self):,not
+algorithms/tests/test_strings.py,394,"self.assertEqual(strip_url_params3(""www.saadbenn.com?a=1&b=2&a=2""), ""www.saadbenn.com?a=1&b=2"")",not
+algorithms/tests/test_strings.py,395,"self.assertEqual(strip_url_params3(""www.saadbenn.com?a=1&b=2"", ['b']), ""www.saadbenn.com?a=1"")",not
+algorithms/tests/test_strings.py,502,Test first solution,not
+algorithms/tests/test_strings.py,505,Test second solution,not
+algorithms/tests/test_strings.py,508,Test third solution,not
+algorithms/tests/test_heap.py,26,"Before insert 2: [0, 4, 50, 7, 55, 90, 87]",not
+algorithms/tests/test_heap.py,27,"After insert:  [0, 2, 50, 4, 55, 90, 87, 7]",not
+algorithms/tests/test_heap.py,35,"Before remove_min : [0, 4, 50, 7, 55, 90, 87]",not
+algorithms/tests/test_heap.py,36,"After remove_min: [7, 50, 87, 55, 90]",not
+algorithms/tests/test_heap.py,37,Test return value,not
+algorithms/tests/test_heap.py,48,Expect output,not
+algorithms/tests/test_array.py,387,noqa: E501,not
+algorithms/tests/test_array.py,388,noqa: E501,not
+algorithms/tests/test_array.py,389,noqa: E501,not
+algorithms/tests/test_array.py,390,noqa: E501,not
+algorithms/tests/test_array.py,391,noqa: E501,not
+algorithms/tests/test_array.py,393,noqa: E501,not
+algorithms/tests/test_array.py,394,noqa: E501,not
+algorithms/tests/test_array.py,395,noqa: E501,not
+algorithms/tests/test_array.py,396,noqa: E501,not
+algorithms/tests/test_array.py,397,noqa: E501,not
+algorithms/tests/test_array.py,398,noqa: E501,not
+algorithms/tests/test_array.py,399,noqa: E501,not
+algorithms/tests/test_array.py,400,noqa: E501,not
+algorithms/tests/test_array.py,401,noqa: E501,not
+algorithms/tests/test_array.py,402,noqa: E501,not
+algorithms/tests/test_array.py,403,noqa: E501,not
+algorithms/algorithms/map/longest_common_subsequence.py,10,Assuming s2 has all unique chars,not
+algorithms/algorithms/map/hashtable.py,19,keys,not
+algorithms/algorithms/map/hashtable.py,20,values,not
+algorithms/algorithms/map/hashtable.py,27,can assign to hash_ index,not
+algorithms/algorithms/map/hashtable.py,33,"key already exists here, assign over",not
+algorithms/algorithms/map/hashtable.py,41,table is full,not
+algorithms/algorithms/map/hashtable.py,48,That key was never assigned,not
+algorithms/algorithms/map/hashtable.py,51,key found,not
+algorithms/algorithms/map/hashtable.py,56,table is full and wrapped around,not
+algorithms/algorithms/map/hashtable.py,63,That key was never assigned,not
+algorithms/algorithms/map/hashtable.py,66,"key found, assign with deleted sentinel",not
+algorithms/algorithms/map/hashtable.py,74,table is full and wrapped around,not
+algorithms/algorithms/map/hashtable.py,107,increase size of dict * 2 if filled >= 2/3 size (like python dict),not
+algorithms/algorithms/map/hashtable.py,113,this will be the new size,not
+algorithms/algorithms/arrays/rotate.py,24,unused variable is not a problem,not
+algorithms/algorithms/arrays/flatten.py,9,return list,not
+algorithms/algorithms/arrays/flatten.py,15,tail-recursion,not
+algorithms/algorithms/arrays/flatten.py,17,produce the result,not
+algorithms/algorithms/arrays/flatten.py,21,returns iterator,not
+algorithms/algorithms/arrays/josephus.py,14,list starts with 0 index,not
+algorithms/algorithms/arrays/josephus.py,18,hash index to every 3rd,not
+algorithms/algorithms/arrays/garage.py,37,prevent changes in original 'initial',not
+algorithms/algorithms/arrays/garage.py,38,list of each step in sequence,not
+algorithms/algorithms/arrays/garage.py,42,"if zero isn't where it should be,",not
+algorithms/algorithms/arrays/garage.py,43,"what should be where zero is,",not
+algorithms/algorithms/arrays/garage.py,44,and where is it?,not
+algorithms/algorithms/arrays/garage.py,55,"e.g.:  4, [{0, 2, 3, 1, 4}, {2, 0, 3, 1, 4},",not
+algorithms/algorithms/arrays/garage.py,56,"{2, 3, 0, 1, 4}, {0, 3, 2, 1, 4}]",not
+algorithms/algorithms/arrays/trimmean.py,16,"/100 for easy calculation by *, and /2 for easy adaption to best and worst parts.",not
+algorithms/algorithms/arrays/trimmean.py,18,sum value to be calculated to trimmean.,not
+algorithms/algorithms/arrays/delete_nth.py,12,Time complexity O(n^2),not
+algorithms/algorithms/arrays/delete_nth.py,21,"Time Complexity O(n), using hash tables.",not
+algorithms/algorithms/arrays/delete_nth.py,24,keep track of occurrences,not
+algorithms/algorithms/arrays/top_1.py,17,reserve each value which first appears on keys,not
+algorithms/algorithms/arrays/top_1.py,18,reserve how many time each value appears by index number on values,not
+algorithms/algorithms/arrays/limit.py,15,tl:dr -- array slicing by value,not
+algorithms/algorithms/arrays/three_sum.py,36,found three sum,not
+algorithms/algorithms/arrays/three_sum.py,39,remove duplicates,not
+algorithms/algorithms/arrays/missing_ranges.py,19,"after done iterating thru array,",not
+algorithms/algorithms/arrays/missing_ranges.py,20,append remainder to list,not
+algorithms/algorithms/arrays/max_ones_index.py,29,"If current element is 0,",not
+algorithms/algorithms/arrays/max_ones_index.py,30,then calculate the difference,not
+algorithms/algorithms/arrays/max_ones_index.py,31,between curr and prev_prev_zero,not
+algorithms/algorithms/arrays/move_zeros.py,11,False == 0 is True,not
+algorithms/algorithms/arrays/move_zeros.py,17,"not using `not i` to avoid `False`, `[]`, etc.",not
+algorithms/algorithms/arrays/longest_non_repeat.py,49,"get functions of above, returning the max_len and substring",not
+algorithms/algorithms/arrays/n_sum.py,68,want answers with only 2 terms? easy!,not
+algorithms/algorithms/arrays/n_sum.py,80,recursive call,not
+algorithms/algorithms/arrays/n_sum.py,81,a,not
+algorithms/algorithms/arrays/n_sum.py,82,b,not
+algorithms/algorithms/arrays/n_sum.py,83,c,not
+algorithms/algorithms/arrays/n_sum.py,84,"x = n_sum( a, b, c )",not
+algorithms/algorithms/arrays/n_sum.py,85,n_minus1_results = x,not
+algorithms/algorithms/tree/invert_tree.py,1,invert a binary tree,not
+algorithms/algorithms/tree/min_height.py,16,iterative,not
+algorithms/algorithms/tree/pretty_print.py,1,a -> Adam -> Book -> 4,not
+algorithms/algorithms/tree/pretty_print.py,2,b -> Bill -> Computer -> 5,not
+algorithms/algorithms/tree/pretty_print.py,3,-> TV -> 6,not
+algorithms/algorithms/tree/pretty_print.py,4,Jill -> Sports -> 1,not
+algorithms/algorithms/tree/pretty_print.py,5,c -> Bill -> Sports -> 3,not
+algorithms/algorithms/tree/pretty_print.py,6,d -> Adam -> Computer -> 3,not
+algorithms/algorithms/tree/pretty_print.py,7,Quin -> Computer -> 3,not
+algorithms/algorithms/tree/pretty_print.py,8,e -> Quin -> Book -> 5,not
+algorithms/algorithms/tree/pretty_print.py,9,-> TV -> 2,not
+algorithms/algorithms/tree/pretty_print.py,10,f -> Adam -> Computer -> 7,not
+algorithms/algorithms/tree/pretty_print.py,17,end=' ' prevents a newline character,not
+algorithms/algorithms/tree/pretty_print.py,18,"multiple lookups is expensive, even amortized O(1)!",not
+algorithms/algorithms/tree/pretty_print.py,21,OP wants indenting after digits,not
+algorithms/algorithms/tree/pretty_print.py,22,newline and a space to match indenting,not
+algorithms/algorithms/tree/pretty_print.py,23,forces a newline,not
+algorithms/algorithms/tree/is_symmetric.py,22,TC: O(b) SC: O(log n),not
+algorithms/algorithms/tree/is_symmetric.py,42,popleft,not
+algorithms/algorithms/tree/deepest_left.py,1,"Given a binary tree, find the deepest node",not
+algorithms/algorithms/tree/deepest_left.py,2,that is the left child of its parent node.,not
+algorithms/algorithms/tree/deepest_left.py,4,Example:,not
+algorithms/algorithms/tree/deepest_left.py,6,1,not
+algorithms/algorithms/tree/deepest_left.py,7,/   \,not
+algorithms/algorithms/tree/deepest_left.py,8,2     3,not
+algorithms/algorithms/tree/deepest_left.py,9,/ \     \,not
+algorithms/algorithms/tree/deepest_left.py,10,4   5     6,not
+algorithms/algorithms/tree/deepest_left.py,11,\,not
+algorithms/algorithms/tree/deepest_left.py,12,7,not
+algorithms/algorithms/tree/deepest_left.py,13,should return 4.,not
+algorithms/algorithms/tree/b_tree.py,22,self.is_leaf = is_leaf,not
+algorithms/algorithms/tree/b_tree.py,48,child is left child of parent after splitting,not
+algorithms/algorithms/tree/b_tree.py,58,"overflow, tree increases in height",not
+algorithms/algorithms/tree/b_tree.py,69,find position where insert key,not
+algorithms/algorithms/tree/b_tree.py,75,overflow,not
+algorithms/algorithms/tree/b_tree.py,77,decide which child is going to have a new key,not
+algorithms/algorithms/tree/b_tree.py,110,key not found in node,not
+algorithms/algorithms/tree/b_tree.py,113,key not found,not
+algorithms/algorithms/tree/b_tree.py,117,decide in which subtree may be key,not
+algorithms/algorithms/tree/b_tree.py,128,The leaf/node is correct,not
+algorithms/algorithms/tree/b_tree.py,136,0 <-- 1,not
+algorithms/algorithms/tree/b_tree.py,141,merge child with brother on the left,not
+algorithms/algorithms/tree/b_tree.py,144,merge child with brother on the right,not
+algorithms/algorithms/tree/b_tree.py,160,make ownerless_child as a new biggest child (with highest key) -> transfer from right subtree to left subtree,not
+algorithms/algorithms/tree/b_tree.py,174,make ownerless_child as a new lowest child (with lowest key) -> transfer from left subtree to right subtree,not
+algorithms/algorithms/tree/b_tree.py,211,"self._repair_tree(node, ch_index)",not
+algorithms/algorithms/tree/b_tree.py,221,"self._repair_tree(node, ch_index)",not
+algorithms/algorithms/tree/is_balanced.py,25,def is_balanced(root):,not
+algorithms/algorithms/tree/is_balanced.py,26,"""""""",not
+algorithms/algorithms/tree/is_balanced.py,27,O(N^2) solution,not
+algorithms/algorithms/tree/is_balanced.py,28,"""""""",not
+algorithms/algorithms/tree/is_balanced.py,29,left = max_height(root.left),not
+algorithms/algorithms/tree/is_balanced.py,30,right = max_height(root.right),not
+algorithms/algorithms/tree/is_balanced.py,31,return abs(left-right) <= 1 and is_balanced(root.left) and is_balanced(root.right),not
+algorithms/algorithms/tree/is_balanced.py,33,def max_height(root):,not
+algorithms/algorithms/tree/is_balanced.py,34,if root is None:,not
+algorithms/algorithms/tree/is_balanced.py,35,return 0,not
+algorithms/algorithms/tree/is_balanced.py,36,"return max(max_height(root.left), max_height(root.right)) + 1",not
+algorithms/algorithms/tree/path_sum2.py,40,DFS with stack,not
+algorithms/algorithms/tree/path_sum2.py,57,BFS with queue,not
+algorithms/algorithms/tree/path_sum2.py,64,popleft,not
+algorithms/algorithms/tree/same_tree.py,17,"Time Complexity O(min(N,M))",not
+algorithms/algorithms/tree/same_tree.py,18,where N and M are the number of nodes for the trees.,not
+algorithms/algorithms/tree/same_tree.py,20,"Space Complexity O(min(height1, height2))",not
+algorithms/algorithms/tree/same_tree.py,21,levels of recursion is the mininum height between the two trees.,not
+algorithms/algorithms/tree/path_sum.py,32,DFS with stack,not
+algorithms/algorithms/tree/path_sum.py,49,BFS with queue,not
+algorithms/algorithms/tree/path_sum.py,55,popleft,not
+algorithms/algorithms/tree/max_height.py,8,def max_height(root):,not
+algorithms/algorithms/tree/max_height.py,9,if not root:,not
+algorithms/algorithms/tree/max_height.py,10,return 0,not
+algorithms/algorithms/tree/max_height.py,11,"return max(maxDepth(root.left), maxDepth(root.right)) + 1",not
+algorithms/algorithms/tree/max_height.py,13,iterative,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,20,set the node as the left child node of the current node's right node,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,25,right node's left node become the right node of current node,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,30,check the parent case,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,41,set the node as the right child node of the current node's left node,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,46,left node's right  node become the left node of current node,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,51,check the parent case,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,62,the inserted node's color is default is red,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,65,find the position of inserted node,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,72,set the n ode's parent node,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,75,case 1  inserted tree is null,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,78,case 2 not null and find left or right,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,85,fix the tree to,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,89,"case 1 the parent is null, then set the inserted node as root and color = 0",not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,94,"case 2 the parent color is black, do nothing",not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,95,case 3 the parent color is red,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,100,case 3.1 the uncle node is red,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,101,then set parent and uncle color is black and grandparent is red,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,102,then node => node.parent,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,109,"case 3.2 the uncle node is black or null, and the node is right of parent",not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,110,then set his parent node is current node,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,111,left rotate the node and continue the next,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,114,case 3.3 the uncle node is black and parent node is left,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,115,then parent node set black and grandparent set red,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,122,case 3.1 the uncle node is red,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,123,then set parent and uncle color is black and grandparent is red,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,124,then node => node.parent,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,131,"case 3.2 the uncle node is black or null, and the node is right of parent",not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,132,then set his parent node is current node,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,133,left rotate the node and continue the next,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,136,case 3.3 the uncle node is black and parent node is left,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,137,then parent node set black and grandparent set red,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,156,check is node_v is None,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,183,find the node position,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,192,"both child exits ,and find minimum child of right child",not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,196,,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,205,"when node is black, then need to fix it with 4 cases",not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,210,4 cases,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,212,node is not root and color is black,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,214,node is left node,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,217,"case 1: node's red, can not get black node",not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,218,set brother is black and parent is red,not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,225,"case 2: brother node is black, and its children node is both black",not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,232,"case 3: brother node is black , and its left child node is red and right is black",not
+algorithms/algorithms/tree/red_black_tree/red_black_tree.py,239,"case 4: brother node is black, and right is red, and left is any color",not
+algorithms/algorithms/tree/avl/avl.py,10,Root node of the tree.,not
+algorithms/algorithms/tree/avl/avl.py,19,Create new node,not
+algorithms/algorithms/tree/trie/add_and_search.py,41,if dot,not
+algorithms/algorithms/tree/trie/add_and_search.py,43,if last character,not
+algorithms/algorithms/tree/trie/add_and_search.py,52,if letter,not
+algorithms/algorithms/tree/trie/add_and_search.py,73,match xx.xx.x with yyyyyyy,not
+algorithms/algorithms/tree/traversal/postorder.py,31,Recursive Implementation,not
+algorithms/algorithms/tree/traversal/preorder.py,28,Recursive Implementation,not
+algorithms/algorithms/tree/traversal/inorder.py,27,Recursive Implementation,not
+algorithms/algorithms/tree/bst/bst.py,49,Go to right root,not
+algorithms/algorithms/tree/bst/bst.py,51,Go to left root,not
+algorithms/algorithms/tree/bst/bst.py,66,The data is already there,not
+algorithms/algorithms/tree/bst/bst.py,68,Go to left root,not
+algorithms/algorithms/tree/bst/bst.py,69,If left root is a node,not
+algorithms/algorithms/tree/bst/bst.py,71,left root is a None,not
+algorithms/algorithms/tree/bst/bst.py,74,Go to right root,not
+algorithms/algorithms/tree/bst/bst.py,75,If right root is a node,not
+algorithms/algorithms/tree/bst/delete_node.py,51,Find the right most leaf of the left sub-tree,not
+algorithms/algorithms/tree/bst/delete_node.py,55,Attach right child to the right of that leaf,not
+algorithms/algorithms/tree/bst/delete_node.py,57,"Return left child instead of root, a.k.a delete root",not
+algorithms/algorithms/tree/bst/delete_node.py,61,"If left or right child got deleted, the returned root is the child of the deleted node.",not
+algorithms/algorithms/tree/bst/bst_closest_value.py,1,"Given a non-empty binary search tree and a target value,",not
+algorithms/algorithms/tree/bst/bst_closest_value.py,2,find the value in the BST that is closest to the target.,not
+algorithms/algorithms/tree/bst/bst_closest_value.py,4,Note:,not
+algorithms/algorithms/tree/bst/bst_closest_value.py,5,Given target value is a floating point.,not
+algorithms/algorithms/tree/bst/bst_closest_value.py,6,You are guaranteed to have only one unique value in the BST,not
+algorithms/algorithms/tree/bst/bst_closest_value.py,7,that is closest to the target.,not
+algorithms/algorithms/tree/bst/bst_closest_value.py,10,Definition for a binary tree node.,not
+algorithms/algorithms/tree/bst/bst_closest_value.py,11,class TreeNode(object):,not
+algorithms/algorithms/tree/bst/bst_closest_value.py,12,"def __init__(self, x):",not
+algorithms/algorithms/tree/bst/bst_closest_value.py,13,self.val = x,not
+algorithms/algorithms/tree/bst/bst_closest_value.py,14,self.left = None,not
+algorithms/algorithms/tree/bst/bst_closest_value.py,15,self.right = None,not
+algorithms/algorithms/backtrack/combination_sum.py,23,backtracking,not
+algorithms/algorithms/backtrack/add_operators.py,28,all digits have to be used,not
+algorithms/algorithms/backtrack/subsets_unique.py,27,take,not
+algorithms/algorithms/backtrack/subsets_unique.py,32,don't take,not
+algorithms/algorithms/backtrack/factor_combinations.py,39,Iterative:,not
+algorithms/algorithms/backtrack/factor_combinations.py,52,Recursive:,not
+algorithms/algorithms/backtrack/generate_abbreviations.py,17,add the current word,not
+algorithms/algorithms/backtrack/generate_abbreviations.py,21,skip the current word,not
+algorithms/algorithms/backtrack/find_words.py,55,make a trie structure that is essentially dictionaries of dictionaries,not
+algorithms/algorithms/backtrack/find_words.py,56,that map each character to a potential next character,not
+algorithms/algorithms/backtrack/find_words.py,66,result is a set of found words since we do not want repeats,not
+algorithms/algorithms/backtrack/permute.py,43,DFS Version,not
+algorithms/algorithms/backtrack/permute_unique.py,23,handles duplication,not
+algorithms/algorithms/backtrack/subsets.py,30,take nums[pos],not
+algorithms/algorithms/backtrack/subsets.py,34,dont take nums[pos],not
+algorithms/algorithms/backtrack/subsets.py,54,Iteratively,not
+algorithms/algorithms/unix/path/split.py,19,Takt the origin path without the last part,not
+algorithms/algorithms/unix/path/split.py,21,Take the last element of list,not
+algorithms/algorithms/unix/path/join_with_slash.py,13,Remove / trailing,not
+algorithms/algorithms/unix/path/join_with_slash.py,15,Remove / leading,not
+algorithms/algorithms/dfs/sudoku_solver.py,54,valid choice,not
+algorithms/algorithms/dfs/sudoku_solver.py,55,keep solving,not
+algorithms/algorithms/dfs/sudoku_solver.py,57,invalid choice or didn't solve it => undo,not
+algorithms/algorithms/dfs/walls_and_gates.py,31,out of bounds,not
+algorithms/algorithms/dfs/walls_and_gates.py,33,crossed,not
+algorithms/algorithms/dfs/pacific_atlantic.py,1,Given an m x n matrix of non-negative integers representing,not
+algorithms/algorithms/dfs/pacific_atlantic.py,2,"the height of each unit cell in a continent,",not
+algorithms/algorithms/dfs/pacific_atlantic.py,3,"the ""Pacific ocean"" touches the left and top edges of the matrix",not
+algorithms/algorithms/dfs/pacific_atlantic.py,4,"and the ""Atlantic ocean"" touches the right and bottom edges.",not
+algorithms/algorithms/dfs/pacific_atlantic.py,6,"Water can only flow in four directions (up, down, left, or right)",not
+algorithms/algorithms/dfs/pacific_atlantic.py,7,from a cell to another one with height equal or lower.,not
+algorithms/algorithms/dfs/pacific_atlantic.py,9,Find the list of grid coordinates where water can flow to both the,not
+algorithms/algorithms/dfs/pacific_atlantic.py,10,Pacific and Atlantic ocean.,not
+algorithms/algorithms/dfs/pacific_atlantic.py,12,Note:,not
+algorithms/algorithms/dfs/pacific_atlantic.py,13,The order of returned grid coordinates does not matter.,not
+algorithms/algorithms/dfs/pacific_atlantic.py,14,Both m and n are less than 150.,not
+algorithms/algorithms/dfs/pacific_atlantic.py,15,Example:,not
+algorithms/algorithms/dfs/pacific_atlantic.py,17,Given the following 5x5 matrix:,not
+algorithms/algorithms/dfs/pacific_atlantic.py,19,Pacific ~   ~   ~   ~   ~,not
+algorithms/algorithms/dfs/pacific_atlantic.py,20,~  1   2   2   3  (5) *,not
+algorithms/algorithms/dfs/pacific_atlantic.py,21,~  3   2   3  (4) (4) *,not
+algorithms/algorithms/dfs/pacific_atlantic.py,22,~  2   4  (5)  3   1  *,not
+algorithms/algorithms/dfs/pacific_atlantic.py,23,~ (6) (7)  1   4   5  *,not
+algorithms/algorithms/dfs/pacific_atlantic.py,24,~ (5)  1   1   2   4  *,not
+algorithms/algorithms/dfs/pacific_atlantic.py,25,*   *   *   *   * Atlantic,not
+algorithms/algorithms/dfs/pacific_atlantic.py,27,Return:,not
+algorithms/algorithms/dfs/pacific_atlantic.py,29,"[[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]",not
+algorithms/algorithms/dfs/pacific_atlantic.py,30,(positions with parentheses in above matrix).,not
+algorithms/algorithms/heap/k_closest_points.py,14,Time: O(k+(n-k)logk),not
+algorithms/algorithms/heap/k_closest_points.py,15,Space: O(k),not
+algorithms/algorithms/heap/k_closest_points.py,30,heappushpop does conditional check,not
+algorithms/algorithms/heap/k_closest_points.py,40,return points in heap,not
+algorithms/algorithms/heap/binary_heap.py,61,Swap value of child with value of its parent,not
+algorithms/algorithms/heap/binary_heap.py,82,No right child,not
+algorithms/algorithms/heap/binary_heap.py,85,left child > right child,not
+algorithms/algorithms/heap/binary_heap.py,95,Swap min child with parent,not
+algorithms/algorithms/heap/binary_heap.py,106,the smallest value at beginning,not
+algorithms/algorithms/heap/binary_heap.py,107,Repalce it by the last value,not
+algorithms/algorithms/heap/merge_sorted_k_lists.py,10,Definition for singly-linked list.,not
+algorithms/algorithms/heap/merge_sorted_k_lists.py,24,only change heap size when necessary,not
+algorithms/algorithms/heap/merge_sorted_k_lists.py,41,These two lines seem to,not
+algorithms/algorithms/heap/merge_sorted_k_lists.py,42,be equivalent to :-   curr = q.get()[1],not
+algorithms/algorithms/heap/skyline.py,1,-*- coding: utf-8 -*-,not
+algorithms/algorithms/matrix/multiply.py,22,create a result matrix,not
+algorithms/algorithms/matrix/count_paths.py,1,,not
+algorithms/algorithms/matrix/count_paths.py,2,Count the number of unique paths from a[0][0] to a[m-1][n-1],not
+algorithms/algorithms/matrix/count_paths.py,3,We are allowed to move either right or down from a cell in the matrix.,SATD
+algorithms/algorithms/matrix/count_paths.py,4,Approaches-,not
+algorithms/algorithms/matrix/count_paths.py,5,"(i) Recursion- Recurse starting from a[m-1][n-1], upwards and leftwards,",not
+algorithms/algorithms/matrix/count_paths.py,6,add the path count of both recursions and return count.,not
+algorithms/algorithms/matrix/count_paths.py,7,(ii) Dynamic Programming- Start from a[0][0].Store the count in a count,not
+algorithms/algorithms/matrix/count_paths.py,8,matrix. Return count[m-1][n-1],not
+algorithms/algorithms/matrix/count_paths.py,9,"T(n)- O(mn), S(n)- O(mn)",not
+algorithms/algorithms/matrix/count_paths.py,10,,not
+algorithms/algorithms/matrix/count_paths.py,18,Taking care of the edge cases- matrix of size 1xn or mx1,not
+algorithms/algorithms/matrix/count_paths.py,26,Number of ways to reach a[i][j] = number of ways to reach,not
+algorithms/algorithms/matrix/count_paths.py,27,a[i-1][j] + a[i][j-1],not
+algorithms/algorithms/matrix/matrix_inversion.py,28,Error conditions,not
+algorithms/algorithms/matrix/matrix_inversion.py,42,Calculation,not
+algorithms/algorithms/matrix/matrix_inversion.py,44,simple case,not
+algorithms/algorithms/matrix/matrix_inversion.py,54,"get matrix of minors w/ ""checkerboard"" signs",not
+algorithms/algorithms/matrix/matrix_inversion.py,57,calculate determinant (we need to know 1/det),not
+algorithms/algorithms/matrix/matrix_inversion.py,60,adjugate (swap on diagonals) and multiply by 1/det,not
+algorithms/algorithms/matrix/matrix_inversion.py,69,trivial case,not
+algorithms/algorithms/matrix/sparse_dot_vector.py,1,! /usr/bin/env python3,not
+algorithms/algorithms/matrix/sparse_dot_vector.py,40,10,not
+algorithms/algorithms/matrix/search_in_sorted_matrix.py,1,,not
+algorithms/algorithms/matrix/search_in_sorted_matrix.py,2,Search a key in a row wise and column wise sorted (non-decreasing) matrix.,not
+algorithms/algorithms/matrix/search_in_sorted_matrix.py,3,m- Number of rows in the matrix,not
+algorithms/algorithms/matrix/search_in_sorted_matrix.py,4,n- Number of columns in the matrix,not
+algorithms/algorithms/matrix/search_in_sorted_matrix.py,5,T(n)- O(m+n),not
+algorithms/algorithms/matrix/search_in_sorted_matrix.py,6,,not
+algorithms/algorithms/matrix/sum_sub_squares.py,1,Function to find sum of all,not
+algorithms/algorithms/matrix/sum_sub_squares.py,2,sub-squares of size k x k in a given,not
+algorithms/algorithms/matrix/sum_sub_squares.py,3,square matrix of size n x n,not
+algorithms/algorithms/matrix/sum_sub_squares.py,15,Calculate and print sum of current sub-square,not
+algorithms/algorithms/matrix/bomb_enemy.py,25,iterates over all cells in the grid,not
+algorithms/algorithms/matrix/bomb_enemy.py,28,makes sure we are next to a wall.,not
+algorithms/algorithms/matrix/bomb_enemy.py,31,makes sure we are next to a wall.,not
+algorithms/algorithms/matrix/bomb_enemy.py,34,makes sure the cell contains a 0,not
+algorithms/algorithms/matrix/bomb_enemy.py,36,updates the variable,not
+algorithms/algorithms/matrix/bomb_enemy.py,41,calculate killed enemies for row i from column j,not
+algorithms/algorithms/matrix/bomb_enemy.py,51,calculate killed enemies for  column j from row i,not
+algorithms/algorithms/matrix/bomb_enemy.py,63,----------------- TESTS -------------------------,not
+algorithms/algorithms/matrix/sudoku_validator.py,8,Using dict/hash-table,not
+algorithms/algorithms/matrix/sudoku_validator.py,40,Without hash-table/dict,not
+algorithms/algorithms/matrix/sudoku_validator.py,43,check rows,not
+algorithms/algorithms/matrix/sudoku_validator.py,48,check columns,not
+algorithms/algorithms/matrix/sudoku_validator.py,53,check regions,not
+algorithms/algorithms/matrix/sudoku_validator.py,63,if everything correct,not
+algorithms/algorithms/matrix/sudoku_validator.py,67,Using set,not
+algorithms/algorithms/matrix/rotate_image.py,11,clockwise rotate,not
+algorithms/algorithms/matrix/rotate_image.py,12,"first reverse up to down, then swap the symmetry",not
+algorithms/algorithms/matrix/rotate_image.py,13,1 2 3     7 8 9     7 4 1,not
+algorithms/algorithms/matrix/rotate_image.py,14,4 5 6  => 4 5 6  => 8 5 2,not
+algorithms/algorithms/matrix/rotate_image.py,15,7 8 9     1 2 3     9 6 3,not
+algorithms/algorithms/matrix/sparse_mul.py,26,Python solution without table (~156ms):,not
+algorithms/algorithms/matrix/sparse_mul.py,46,Python solution with only one table for B (~196ms):,not
+algorithms/algorithms/matrix/sparse_mul.py,70,Python solution with two tables (~196ms):,not
+algorithms/algorithms/compression/huffman_coding.py,62,"going to left node, right push on stack",not
+algorithms/algorithms/compression/huffman_coding.py,165,"""1"" indicates that tree ended (it will be needed to load the tree)",not
+algorithms/algorithms/compression/huffman_coding.py,179,overwrite first three bits,not
+algorithms/algorithms/compression/huffman_coding.py,187,"buffer is empty, no need to append extra ""0""",not
+algorithms/algorithms/compression/huffman_coding.py,250,read whole code,not
+algorithms/algorithms/compression/huffman_coding.py,253,There is last byte in buffer to parse,not
+algorithms/algorithms/compression/huffman_coding.py,256,"remove additional ""0"" used to fill byte",not
+algorithms/algorithms/compression/huffman_coding.py,270,leave space to save how many bits will be appended to fill the last byte,not
+algorithms/algorithms/compression/huffman_coding.py,317,root,not
+algorithms/algorithms/compression/elias.py,13,Calculates the binary number,not
+algorithms/algorithms/compression/elias.py,18,Calculates the unary number,not
+algorithms/algorithms/compression/rle_compression.py,24,Check If the subsequent character does not match,not
+algorithms/algorithms/compression/rle_compression.py,26,Add the count and character,not
+algorithms/algorithms/compression/rle_compression.py,29,Reset the count and set the character,not
+algorithms/algorithms/compression/rle_compression.py,33,Otherwise increment the counter,not
+algorithms/algorithms/compression/rle_compression.py,50,If not numerical,not
+algorithms/algorithms/compression/rle_compression.py,52,Expand it for the decoding,not
+algorithms/algorithms/compression/rle_compression.py,56,Add it in the counter,not
+algorithms/algorithms/search/search_rotate.py,59,Recursion technique,not
+algorithms/algorithms/search/search_rotate.py,64,found element,not
+algorithms/algorithms/search/search_rotate.py,68,Search left,not
+algorithms/algorithms/search/search_rotate.py,70,Search right,not
+algorithms/algorithms/search/search_rotate.py,73,Search right,not
+algorithms/algorithms/search/search_rotate.py,75,Search left,not
+algorithms/algorithms/search/two_sum.py,18,Using binary search technique,not
+algorithms/algorithms/search/two_sum.py,32,Using dictionary as a hash table,not
+algorithms/algorithms/search/two_sum.py,40,Using two pointers,not
+algorithms/algorithms/search/two_sum.py,42,pointer 1 holds from left of array numbers,not
+algorithms/algorithms/search/two_sum.py,43,pointer 2 holds from right of array numbers,not
+algorithms/algorithms/search/last_occurrence.py,1,,not
+algorithms/algorithms/search/last_occurrence.py,2,Find last occurance of a number in a sorted array (increasing order),not
+algorithms/algorithms/search/last_occurrence.py,3,Approach- Binary Search,not
+algorithms/algorithms/search/last_occurrence.py,4,T(n)- O(log n),not
+algorithms/algorithms/search/last_occurrence.py,5,,not
+algorithms/algorithms/search/binary_search.py,1,,not
+algorithms/algorithms/search/binary_search.py,2,Binary search works for a sorted array.,not
+algorithms/algorithms/search/binary_search.py,3,Note: The code logic is written for an array sorted in,not
+algorithms/algorithms/search/binary_search.py,4,increasing order.,not
+algorithms/algorithms/search/binary_search.py,5,T(n): O(log n),not
+algorithms/algorithms/search/binary_search.py,6,,not
+algorithms/algorithms/search/binary_search.py,21,error case,not
+algorithms/algorithms/search/first_occurrence.py,1,,not
+algorithms/algorithms/search/first_occurrence.py,2,Find first occurance of a number in a sorted array (increasing order),not
+algorithms/algorithms/search/first_occurrence.py,3,Approach- Binary Search,not
+algorithms/algorithms/search/first_occurrence.py,4,T(n)- O(log n),not
+algorithms/algorithms/search/first_occurrence.py,5,,not
+algorithms/algorithms/search/first_occurrence.py,10,"print(""lo: "", lo, "" hi: "", hi, "" mid: "", mid)",not
+algorithms/algorithms/search/jump_search.py,19,return -1 means that array doesn't contain target value,not
+algorithms/algorithms/search/jump_search.py,20,find block that contains target value,not
+algorithms/algorithms/search/jump_search.py,28,find target value in block,not
+algorithms/algorithms/search/jump_search.py,35,"if there is target value in array, return it",not
+algorithms/algorithms/search/linear_search.py,1,,not
+algorithms/algorithms/search/linear_search.py,2,Linear search works in any array.,not
+algorithms/algorithms/search/linear_search.py,3,,not
+algorithms/algorithms/search/linear_search.py,4,T(n): O(n),not
+algorithms/algorithms/search/linear_search.py,5,,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,1,Minimum spanning tree (MST) is going to use an undirected graph,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,2,,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,3,The disjoint set is represented with an list <n> of integers where,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,4,<n[i]> is the parent of the node at position <i>.,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,5,"If <n[i]> = <i>, <i> it's a root, or a head, of a set",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,17,Args:,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,18,n (int): Number of vertices in the graph,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,20,Contains wich node is the parent of the node at poisition <i>,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,21,"Contains size of node at index <i>, used to optimize merge",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,23,"Make all nodes his own parent, creating n sets.",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,26,Args:,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,27,"a, b (int): Indexes of nodes whose sets will be merged.",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,29,Get the set of nodes at position <a> and <b>,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,30,"If <a> and <b> are the roots, this will be constant O(1)",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,34,"Join the shortest node to the longest, minimizing tree size (faster find)",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,36,Merge set(a) and set(b),not
+algorithms/algorithms/graph/minimum_spanning_tree.py,37,Add size of old set(a) to set(b),not
+algorithms/algorithms/graph/minimum_spanning_tree.py,39,Merge set(b) and set(a),not
+algorithms/algorithms/graph/minimum_spanning_tree.py,40,Add size of old set(b) to set(a),not
+algorithms/algorithms/graph/minimum_spanning_tree.py,44,"Very important, memoize result of the",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,45,recursion in the list to optimize next,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,46,"calls and make this operation practically constant, O(1)",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,49,"node <a> it's the set root, so we can return that index",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,54,Args:,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,55,n (int): Number of vertices in the graph,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,56,edges (list of Edge): Edges of the graph,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,57,ds (DisjointSet): DisjointSet of the vertices,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,58,Returns:,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,59,int: sum of weights of the minnimum spanning tree,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,60,,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,61,Kruskal algorithm:,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,62,This algorithm will find the optimal graph with less edges and less,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,63,"total weight to connect all vertices (MST), the MST will always contain",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,64,n-1 edges because it's the minimum required to connect n vertices.,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,65,,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,66,Procedure:,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,67,Sort the edges (criteria: less weight).,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,68,Only take edges of nodes in different sets.,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,69,"If we take a edge, we need to merge the sets to discard these.",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,70,"After repeat this until select n-1 edges, we will have the complete MST.",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,73,"List of edges taken, minimum spanning tree",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,76,Set of the node <u>,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,77,Set of the node <v>,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,82,"If we have selected n-1 edges, all the other",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,83,"edges will be discarted, so, we can stop here",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,92,Test. How input works:,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,93,"Input consists of different weighted, connected, undirected graphs.",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,94,line 1:,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,95,"integers n, m",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,96,lines 2..m+2:,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,97,"edge with the format -> node index u, node index v, integer weight",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,98,,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,99,Samples of input:,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,100,,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,101,5 6,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,102,1 2 3,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,103,1 3 8,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,104,2 4 5,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,105,3 4 2,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,106,3 5 4,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,107,4 5 6,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,108,,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,109,3 3,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,110,2 1 20,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,111,3 1 20,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,112,2 3 100,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,113,,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,114,Sum of weights of the optimal paths:,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,115,"14, 40",not
+algorithms/algorithms/graph/minimum_spanning_tree.py,120,Create list of size <m>,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,122,Read <m> edges from input,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,125,Convert from 1-indexed to 0-indexed,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,126,Convert from 1-indexed to 0-indexed,not
+algorithms/algorithms/graph/minimum_spanning_tree.py,129,"After finish input and graph creation, use Kruskal algorithm for MST:",not
+algorithms/algorithms/graph/find_all_cliques.py,1,takes dict of sets,not
+algorithms/algorithms/graph/find_all_cliques.py,2,each key is a vertex,not
+algorithms/algorithms/graph/find_all_cliques.py,3,value is set of all edges connected to vertex,not
+algorithms/algorithms/graph/find_all_cliques.py,4,returns list of lists (each sub list is a maximal clique),not
+algorithms/algorithms/graph/find_all_cliques.py,5,implementation of the basic algorithm described in:,not
+algorithms/algorithms/graph/find_all_cliques.py,6,"Bron, Coen; Kerbosch, Joep (1973), ""Algorithm 457: finding all cliques of an undirected graph"",",not
+algorithms/algorithms/graph/maximum_flow.py,14,DFS function for ford_fulkerson algorithm.,not
+algorithms/algorithms/graph/maximum_flow.py,28,Computes maximum flow from source to sink using DFS.,not
+algorithms/algorithms/graph/maximum_flow.py,29,Time Complexity : O(Ef),not
+algorithms/algorithms/graph/maximum_flow.py,30,E is the number of edges and f is the maximum flow in the graph.,not
+algorithms/algorithms/graph/maximum_flow.py,44,Computes maximum flow from source to sink using BFS.,not
+algorithms/algorithms/graph/maximum_flow.py,45,Time complexity : O(V*E^2),not
+algorithms/algorithms/graph/maximum_flow.py,46,V is the number of vertices and E is the number of edges.,not
+algorithms/algorithms/graph/maximum_flow.py,57,Finds new flow using BFS.,not
+algorithms/algorithms/graph/maximum_flow.py,74,Update flow array following parent starting from sink.,not
+algorithms/algorithms/graph/maximum_flow.py,83,BFS function for Dinic algorithm.,not
+algorithms/algorithms/graph/maximum_flow.py,84,Check whether sink is reachable only using edges that is not full.,not
+algorithms/algorithms/graph/maximum_flow.py,99,DFS function for Dinic algorithm.,not
+algorithms/algorithms/graph/maximum_flow.py,100,Finds new flow using edges that is not full.,not
+algorithms/algorithms/graph/maximum_flow.py,116,Computes maximum flow from source to sink using Dinic algorithm.,not
+algorithms/algorithms/graph/maximum_flow.py,117,Time complexity : O(V^2*E),not
+algorithms/algorithms/graph/maximum_flow.py,118,V is the number of vertices and E is the number of edges.,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,1,This class represents a directed graph using adjacency,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,4,No. of vertices,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,7,default dictionary to store graph,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,10,To store transitive closure,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,13,function to add an edge to graph,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,20,A recursive DFS traversal function that finds,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,21,all reachable vertices for s,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,24,Mark reachability from s to v as true.,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,27,Find all the vertices reachable through v,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,32,The function to find transitive closure. It uses,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,33,recursive dfs_util(),not
+algorithms/algorithms/graph/transitive_closure_dfs.py,36,Call the recursive helper function to print DFS,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,37,traversal starting from all vertices one by one,not
+algorithms/algorithms/graph/transitive_closure_dfs.py,43,g = Graph(4),not
+algorithms/algorithms/graph/transitive_closure_dfs.py,44,"g.add_edge(0, 1)",not
+algorithms/algorithms/graph/transitive_closure_dfs.py,45,"g.add_edge(0, 2)",not
+algorithms/algorithms/graph/transitive_closure_dfs.py,46,"g.add_edge(1, 2)",not
+algorithms/algorithms/graph/transitive_closure_dfs.py,47,"g.add_edge(2, 0)",not
+algorithms/algorithms/graph/transitive_closure_dfs.py,48,"g.add_edge(2, 3)",not
+algorithms/algorithms/graph/transitive_closure_dfs.py,49,"g.add_edge(3, 3)",not
+algorithms/algorithms/graph/transitive_closure_dfs.py,51,"print(""Transitive closure matrix is"")",not
+algorithms/algorithms/graph/transitive_closure_dfs.py,52,g.transitive_closure(),not
+algorithms/algorithms/graph/graph.py,91,No. of vertices,not
+algorithms/algorithms/graph/graph.py,94,default dictionary to store graph,not
+algorithms/algorithms/graph/graph.py,97,To store transitive closure,not
+algorithms/algorithms/graph/graph.py,100,function to add an edge to graph,not
+algorithms/algorithms/graph/graph.py,107,g = Graph(4),not
+algorithms/algorithms/graph/graph.py,108,"g.add_edge(0, 1)",not
+algorithms/algorithms/graph/graph.py,109,"g.add_edge(0, 2)",not
+algorithms/algorithms/graph/graph.py,110,"g.add_edge(1, 2)",not
+algorithms/algorithms/graph/graph.py,111,"g.add_edge(2, 0)",not
+algorithms/algorithms/graph/graph.py,112,"g.add_edge(2, 3)",not
+algorithms/algorithms/graph/graph.py,113,"g.add_edge(3, 3)",not
+algorithms/algorithms/graph/check_bipartite.py,15,Divide vertexes in the graph into set_type 1 and 2,not
+algorithms/algorithms/graph/check_bipartite.py,16,Initialize all set_types as -1,not
+algorithms/algorithms/graph/check_bipartite.py,25,"If there is a self-loop, it cannot be bipartite",not
+algorithms/algorithms/graph/check_bipartite.py,34,set type of u opposite of v,not
+algorithms/algorithms/graph/dijkstra.py,1,Dijkstra's single source shortest path algorithm,not
+algorithms/algorithms/graph/dijkstra.py,25,minimum distance vertex that is not processed,not
+algorithms/algorithms/graph/dijkstra.py,28,put minimum distance vertex in shortest tree,not
+algorithms/algorithms/graph/dijkstra.py,31,Update dist value of the adjacent vertices,not
+algorithms/algorithms/graph/satisfiability.py,70,Each dfs will visit exactly one component,not
+algorithms/algorithms/graph/satisfiability.py,99,The formula is contradictory,not
+algorithms/algorithms/graph/satisfiability.py,101,An arbitrary representant from each component,not
+algorithms/algorithms/graph/satisfiability.py,107,True/False value for each strongly connected component,not
+algorithms/algorithms/graph/find_path.py,8,find path from start to end using recursion with backtracking,not
+algorithms/algorithms/graph/find_path.py,21,find all path,not
+algorithms/algorithms/graph/find_path.py,52,"print(find_shortest_path(myGraph, 'A', 'D'))",not
+algorithms/algorithms/graph/maximum_flow_dfs.py,28,initial setting,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,33,setting min to max_value,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,35,save visited nodes,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,37,save parent nodes,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,40,initialize stack for DFS,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,43,initial setting,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,47,DFS to find path,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,49,pop from queue,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,52,checking capacity and visit,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,54,"if not, put into queue and chage to visit and save path",not
+algorithms/algorithms/graph/maximum_flow_dfs.py,59,if there is no path from src to sink,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,63,initial setting,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,66,Get minimum flow,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,68,find minimum flow,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,73,initial setting,not
+algorithms/algorithms/graph/maximum_flow_dfs.py,76,reduce capacity,not
+algorithms/algorithms/graph/traversal.py,8,dfs and bfs are the ultimately same except that they are visiting nodes in,not
+algorithms/algorithms/graph/traversal.py,9,different order. To simulate this ordering we would use stack for dfs and,not
+algorithms/algorithms/graph/traversal.py,10,queue for bfs.,not
+algorithms/algorithms/graph/traversal.py,11,,not
+algorithms/algorithms/graph/traversal.py,24,"print(dfs_traverse(graph, 'A'))",not
+algorithms/algorithms/graph/traversal.py,38,"print(bfs_traverse(graph, 'A'))",not
+algorithms/algorithms/graph/traversal.py,49,"print(dfs_traverse_recursive(graph, 'A'))",not
+algorithms/algorithms/graph/traversal.py,51,"def find_path(graph, start, end, visited=[]):",not
+algorithms/algorithms/graph/traversal.py,52,# basecase,not
+algorithms/algorithms/graph/traversal.py,53,visitied = visited + [start],not
+algorithms/algorithms/graph/traversal.py,54,if start == end:,not
+algorithms/algorithms/graph/traversal.py,55,return visited,not
+algorithms/algorithms/graph/traversal.py,56,if start not in graph:,not
+algorithms/algorithms/graph/traversal.py,57,return None,not
+algorithms/algorithms/graph/traversal.py,58,for node in graph[start]:,not
+algorithms/algorithms/graph/traversal.py,59,if node not in visited:,not
+algorithms/algorithms/graph/traversal.py,60,"new_visited = find_path(graph, node, end, visited)",not
+algorithms/algorithms/graph/traversal.py,61,return new_visited,not
+algorithms/algorithms/graph/traversal.py,62,return None,not
+algorithms/algorithms/graph/traversal.py,64,"print(find_path(graph, 'A', 'F'))",not
+algorithms/algorithms/graph/count_connected_number_of_component.py,1,count connected no of component using DFS,not
+algorithms/algorithms/graph/count_connected_number_of_component.py,20,Code is Here,not
+algorithms/algorithms/graph/count_connected_number_of_component.py,45,Driver code,not
+algorithms/algorithms/graph/path_between_two_vertices_in_digraph.py,31,Create a graph given in the above diagram,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,29,initial setting,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,34,setting min to max_value,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,36,save visited nodes,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,38,save parent nodes,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,41,initialize queue for BFS,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,44,initial setting,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,48,BFS to find path,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,50,pop from queue,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,53,checking capacity and visit,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,55,"if not, put into queue and chage to visit and save path",not
+algorithms/algorithms/graph/maximum_flow_bfs.py,60,if there is no path from src to sink,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,64,initial setting,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,67,Get minimum flow,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,69,find minimum flow,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,74,initial setting,not
+algorithms/algorithms/graph/maximum_flow_bfs.py,77,reduce capacity,not
+algorithms/algorithms/graph/tarjan.py,15,Runs Tarjan,not
+algorithms/algorithms/graph/tarjan.py,16,Set all node index to None,not
+algorithms/algorithms/graph/tarjan.py,26,Set the depth index for v to the smallest unused index,not
+algorithms/algorithms/graph/tarjan.py,33,Consider successors of v,not
+algorithms/algorithms/graph/tarjan.py,36,Successor w has not yet been visited; recurse on it,not
+algorithms/algorithms/graph/tarjan.py,40,Successor w is in stack S and hence in the current SCC,not
+algorithms/algorithms/graph/tarjan.py,41,"If w is not on stack, then (v, w) is a cross-edge in the DFS tree and must be ignored",not
+algorithms/algorithms/graph/tarjan.py,42,Note: The next line may look odd - but is correct.,not
+algorithms/algorithms/graph/tarjan.py,43,It says w.index not w.lowlink; that is deliberate and from the original paper,not
+algorithms/algorithms/graph/tarjan.py,46,"If v is a root node, pop the stack and generate an SCC",not
+algorithms/algorithms/graph/tarjan.py,48,start a new strongly connected component,not
+algorithms/algorithms/graph/clone_graph.py,32,Definition for a undirected graph node,not
+algorithms/algorithms/graph/clone_graph.py,39,BFS,not
+algorithms/algorithms/graph/clone_graph.py,49,neighbor is not visited,not
+algorithms/algorithms/graph/clone_graph.py,59,DFS iteratively,not
+algorithms/algorithms/graph/clone_graph.py,79,DFS recursively,not
+algorithms/algorithms/set/randomized_set.py,1,! /usr/bin/env python3,not
+algorithms/algorithms/set/randomized_set.py,23,element -> index,not
+algorithms/algorithms/set/randomized_set.py,55,Remove a half,not
+algorithms/algorithms/set/set_covering.py,71,elements don't cover universe -> invalid input for set cover,not
+algorithms/algorithms/set/set_covering.py,75,track elements of universe covered,not
+algorithms/algorithms/set/set_covering.py,82,find set with minimum cost:elements_added ratio,not
+algorithms/algorithms/set/set_covering.py,85,set may have same elements as already covered -> new_elements = 0,not
+algorithms/algorithms/set/set_covering.py,86,check to avoid division by 0 error,not
+algorithms/algorithms/set/set_covering.py,93,union,not
+algorithms/algorithms/dp/num_decodings.py,43,"only '10', '20' is valid",not
+algorithms/algorithms/dp/num_decodings.py,47,'01 - 09' is not allowed,not
+algorithms/algorithms/dp/num_decodings.py,50,"other case '01, 09, 27'",not
+algorithms/algorithms/dp/min_cost_path.py,31,dist[i] stores minimum cost from 0 --> i.,not
+algorithms/algorithms/dp/min_cost_path.py,34,cost from 0 --> 0 is zero.,not
+algorithms/algorithms/dp/min_cost_path.py,44,cost[i][j] is the cost of,not
+algorithms/algorithms/dp/min_cost_path.py,45,going from i --> j,not
+algorithms/algorithms/dp/min_cost_path.py,47,cost[i][j] = -1 for i > j,not
+algorithms/algorithms/dp/combination_sum.py,52,EDIT: The above solution is top-down. How about a bottom-up one?,not
+algorithms/algorithms/dp/edit_distance.py,36,Time: O(m*n),not
+algorithms/algorithms/dp/edit_distance.py,37,Space: O(m*n),not
+algorithms/algorithms/dp/edit_distance.py,54,this is the same as edit[m][n],not
+algorithms/algorithms/dp/word_break.py,23,TC: O(N^2)  SC: O(N),not
+algorithms/algorithms/dp/climbing_stairs.py,12,O(n) space,not
+algorithms/algorithms/dp/climbing_stairs.py,25,the above function can be optimized as:,not
+algorithms/algorithms/dp/climbing_stairs.py,26,O(1) space,not
+algorithms/algorithms/dp/coin_change.py,19,initialize dp array and set base case as 1,not
+algorithms/algorithms/dp/coin_change.py,22,fill dp in a bottom up manner,not
+algorithms/algorithms/dp/regex_matching.py,28,Match empty string with empty pattern,not
+algorithms/algorithms/dp/regex_matching.py,31,Match empty string with .*,not
+algorithms/algorithms/dp/regex_matching.py,38,The previous character has matched and the current one,not
+algorithms/algorithms/dp/regex_matching.py,39,has to be matched. Two possible matches: the same or .,not
+algorithms/algorithms/dp/regex_matching.py,43,Horizontal look up [j - 2].,not
+algorithms/algorithms/dp/regex_matching.py,44,Not use the character before *.,not
+algorithms/algorithms/dp/regex_matching.py,47,Vertical look up [i - 1].,not
+algorithms/algorithms/dp/regex_matching.py,48,Use at least one character before *.,not
+algorithms/algorithms/dp/regex_matching.py,49,p a b *,not
+algorithms/algorithms/dp/regex_matching.py,50,s 1 0 0 0,not
+algorithms/algorithms/dp/regex_matching.py,51,a 0 1 0 1,not
+algorithms/algorithms/dp/regex_matching.py,52,b 0 0 1 1,not
+algorithms/algorithms/dp/regex_matching.py,53,b 0 0 0 ?,not
+algorithms/algorithms/dp/regex_matching.py,96,E.g.,not
+algorithms/algorithms/dp/regex_matching.py,97,s a b b,not
+algorithms/algorithms/dp/regex_matching.py,98,p 1 0 0 0,not
+algorithms/algorithms/dp/regex_matching.py,99,a 0 1 0 0,not
+algorithms/algorithms/dp/regex_matching.py,100,b 0 0 1 0,not
+algorithms/algorithms/dp/regex_matching.py,101,* 0 1 1 1,not
+algorithms/algorithms/dp/egg_drop.py,24,A Dynamic Programming based Python Program for the Egg Dropping Puzzle,not
+algorithms/algorithms/dp/egg_drop.py,28,A 2D table where entery eggFloor[i][j] will represent minimum,not
+algorithms/algorithms/dp/egg_drop.py,29,number of trials needed for i eggs and j floors.,not
+algorithms/algorithms/dp/egg_drop.py,32,We need one trial for one floor and 0 trials for 0 floors,not
+algorithms/algorithms/dp/egg_drop.py,37,We always need j trials for one egg and j floors.,not
+algorithms/algorithms/dp/egg_drop.py,41,Fill rest of the entries in table using optimal substructure,not
+algorithms/algorithms/dp/egg_drop.py,42,property,not
+algorithms/algorithms/dp/egg_drop.py,51,eggFloor[n][k] holds the result,not
+algorithms/algorithms/dp/job_scheduling.py,1,Python program for weighted job scheduling using Dynamic,not
+algorithms/algorithms/dp/job_scheduling.py,2,Programming and Binary Search,not
+algorithms/algorithms/dp/job_scheduling.py,4,Class to represent a job,not
+algorithms/algorithms/dp/job_scheduling.py,12,A Binary Search based function to find the latest job,not
+algorithms/algorithms/dp/job_scheduling.py,13,(before current job) that doesn't conflict with current,not
+algorithms/algorithms/dp/job_scheduling.py,14,"job.  ""index"" is index of the current job.  This function",not
+algorithms/algorithms/dp/job_scheduling.py,15,returns -1 if all jobs before index conflict with it.,not
+algorithms/algorithms/dp/job_scheduling.py,16,The array jobs[] is sorted in increasing order of finish,not
+algorithms/algorithms/dp/job_scheduling.py,17,time.,not
+algorithms/algorithms/dp/job_scheduling.py,20,Initialize 'lo' and 'hi' for Binary Search,not
+algorithms/algorithms/dp/job_scheduling.py,24,Perform binary Search iteratively,not
+algorithms/algorithms/dp/job_scheduling.py,36,The main function that returns the maximum possible,not
+algorithms/algorithms/dp/job_scheduling.py,37,profit from given array of jobs,not
+algorithms/algorithms/dp/job_scheduling.py,40,Sort jobs according to finish time,not
+algorithms/algorithms/dp/job_scheduling.py,43,Create an array to store solutions of subproblems.  table[i],not
+algorithms/algorithms/dp/job_scheduling.py,44,stores the profit for jobs till arr[i] (including arr[i]),not
+algorithms/algorithms/dp/job_scheduling.py,50,Fill entries in table[] using recursive property,not
+algorithms/algorithms/dp/job_scheduling.py,53,Find profit including the current job,not
+algorithms/algorithms/dp/job_scheduling.py,59,Store maximum of including and excluding,not
+algorithms/algorithms/dp/buy_sell_stock.py,23,O(n^2) time,not
+algorithms/algorithms/dp/buy_sell_stock.py,36,O(n) time,not
+algorithms/algorithms/dp/fib.py,14,precondition,not
+algorithms/algorithms/dp/fib.py,22,print(fib_recursive(35)) # => 9227465 (slow),not
+algorithms/algorithms/dp/fib.py,37,precondition,not
+algorithms/algorithms/dp/fib.py,45,print(fib_list(100)) # => 354224848179261915075,not
+algorithms/algorithms/dp/fib.py,58,precondition,not
+algorithms/algorithms/dp/fib.py,72,print(fib_iter(100)) # => 354224848179261915075,not
+algorithms/algorithms/dp/matrix_chain_order.py,24,Print order of matrix with Ai as matrix,not
+algorithms/algorithms/dp/matrix_chain_order.py,38,Size of matrix created from above array will be,not
+algorithms/algorithms/dp/matrix_chain_order.py,39,30*35 35*15 15*5 5*10 10*20 20*25,not
+algorithms/algorithms/dp/rod_cut.py,1,A Dynamic Programming solution for Rod cutting problem,not
+algorithms/algorithms/dp/rod_cut.py,4,Returns the best obtainable price for a rod of length n and,not
+algorithms/algorithms/dp/rod_cut.py,5,price[] as prices of different pieces,not
+algorithms/algorithms/dp/rod_cut.py,10,Build the table val[] in bottom up manner and return,not
+algorithms/algorithms/dp/rod_cut.py,11,the last entry from the table,not
+algorithms/algorithms/dp/rod_cut.py,20,Driver program to test above functions,not
+algorithms/algorithms/dp/rod_cut.py,24,This code is contributed by Bhavya Jain,not
+algorithms/algorithms/linkedlist/intersection.py,32,"We hit the end of one of the lists, set a flag for this",not
+algorithms/algorithms/linkedlist/intersection.py,40,Mark the length of the longer of the two lists,not
+algorithms/algorithms/linkedlist/intersection.py,53,"force the longer of the two lists to ""catch up""",not
+algorithms/algorithms/linkedlist/intersection.py,58,"The nodes match, return the node",not
+algorithms/algorithms/linkedlist/intersection.py,71,create linked list as:,not
+algorithms/algorithms/linkedlist/intersection.py,72,1 -> 3 -> 5,not
+algorithms/algorithms/linkedlist/intersection.py,73,\,not
+algorithms/algorithms/linkedlist/intersection.py,74,7 -> 9 -> 11,not
+algorithms/algorithms/linkedlist/intersection.py,75,/,not
+algorithms/algorithms/linkedlist/intersection.py,76,2 -> 4 -> 6,not
+algorithms/algorithms/linkedlist/merge_two_list.py,28,recursively,not
+algorithms/algorithms/linkedlist/is_palindrome.py,4,split the list to two parts,not
+algorithms/algorithms/linkedlist/is_palindrome.py,10,Don't forget here! But forget still works!,not
+algorithms/algorithms/linkedlist/is_palindrome.py,11,reverse the second part,not
+algorithms/algorithms/linkedlist/is_palindrome.py,18,compare two parts,not
+algorithms/algorithms/linkedlist/is_palindrome.py,19,second part has the same or one less node,not
+algorithms/algorithms/linkedlist/is_palindrome.py,32,1. Get the midpoint (slow),not
+algorithms/algorithms/linkedlist/is_palindrome.py,37,2. Push the second half into the stack,not
+algorithms/algorithms/linkedlist/is_palindrome.py,43,3. Comparison,not
+algorithms/algorithms/linkedlist/add_two_numbers.py,90,1. test case,not
+algorithms/algorithms/linkedlist/add_two_numbers.py,100,2. test case,not
+algorithms/algorithms/linkedlist/add_two_numbers.py,110,3. test case,not
+algorithms/algorithms/linkedlist/add_two_numbers.py,116,4. test case,not
+algorithms/algorithms/linkedlist/remove_duplicates.py,44,A A B C D C F G,not
+algorithms/algorithms/linkedlist/reverse.py,8,,not
+algorithms/algorithms/linkedlist/reverse.py,9,Iterative solution,not
+algorithms/algorithms/linkedlist/reverse.py,10,T(n)- O(n),not
+algorithms/algorithms/linkedlist/reverse.py,11,,not
+algorithms/algorithms/linkedlist/reverse.py,28,,not
+algorithms/algorithms/linkedlist/reverse.py,29,Recursive solution,not
+algorithms/algorithms/linkedlist/reverse.py,30,T(n)- O(n),not
+algorithms/algorithms/linkedlist/reverse.py,31,,not
+algorithms/algorithms/linkedlist/partition.py,49,cache previous value in case it needs to be pointed elsewhere,not
+algorithms/algorithms/linkedlist/copy_random_pointer.py,34,O(n),not
+algorithms/algorithms/linkedlist/delete_node.py,29,make linkedlist 1 -> 2 -> 3 -> 4,not
+algorithms/algorithms/linkedlist/delete_node.py,36,node3 = 3,not
+algorithms/algorithms/linkedlist/delete_node.py,39,after delete_node => 1 -> 2 -> 4,not
+algorithms/algorithms/linkedlist/linkedlist.py,1,Pros,not
+algorithms/algorithms/linkedlist/linkedlist.py,2,"Linked Lists have constant-time insertions and deletions in any position,",not
+algorithms/algorithms/linkedlist/linkedlist.py,3,"in comparison, arrays require O(n) time to do the same thing.",not
+algorithms/algorithms/linkedlist/linkedlist.py,4,Linked lists can continue to expand without having to specify,not
+algorithms/algorithms/linkedlist/linkedlist.py,5,their size ahead of time (remember our lectures on Array sizing,not
+algorithms/algorithms/linkedlist/linkedlist.py,6,form the Array Sequence section of the course!),not
+algorithms/algorithms/linkedlist/linkedlist.py,8,Cons,not
+algorithms/algorithms/linkedlist/linkedlist.py,9,"To access an element in a linked list, you need to take O(k) time",not
+algorithms/algorithms/linkedlist/linkedlist.py,10,to go from the head of the list to the kth element.,not
+algorithms/algorithms/linkedlist/linkedlist.py,11,"In contrast, arrays have constant time operations to access",not
+algorithms/algorithms/linkedlist/linkedlist.py,12,elements in an array.,not
+algorithms/algorithms/linkedlist/first_cyclic_node.py,44,create linked list => A -> B -> C -> D -> E -> C,not
+algorithms/algorithms/linkedlist/rotate_list.py,10,Definition for singly-linked list.,not
+algorithms/algorithms/linkedlist/rotate_list.py,11,class ListNode(object):,not
+algorithms/algorithms/linkedlist/rotate_list.py,12,"def __init__(self, x):",not
+algorithms/algorithms/linkedlist/rotate_list.py,13,self.val = x,not
+algorithms/algorithms/linkedlist/rotate_list.py,14,self.next = None,not
+algorithms/algorithms/linkedlist/rotate_list.py,27,count length of the list,not
+algorithms/algorithms/linkedlist/rotate_list.py,31,make it circular,not
+algorithms/algorithms/linkedlist/rotate_list.py,34,rotate until length-k,not
+algorithms/algorithms/linkedlist/kth_to_last.py,56,"Went too far, k is not valid",not
+algorithms/algorithms/linkedlist/kth_to_last.py,75,def make_test_li,not
+algorithms/algorithms/linkedlist/kth_to_last.py,76,A A B C D C F G,not
+algorithms/algorithms/linkedlist/kth_to_last.py,94,test kth_to_last_eval,not
+algorithms/algorithms/linkedlist/kth_to_last.py,102,test kth_to_last_dict,not
+algorithms/algorithms/linkedlist/kth_to_last.py,110,test kth_to_last,not
+algorithms/algorithms/linkedlist/remove_range.py,14,Case: remove node at head,not
+algorithms/algorithms/linkedlist/remove_range.py,21,Move pointer to start position,SATD
+algorithms/algorithms/linkedlist/remove_range.py,24,Remove data until the end,not
+algorithms/algorithms/maths/primes_sieve_of_eratosthenes.py,34,"If x is even, exclude x from list (-1):",not
+algorithms/algorithms/maths/primes_sieve_of_eratosthenes.py,36,Sieve,not
+algorithms/algorithms/maths/primes_sieve_of_eratosthenes.py,37,List of Primes,not
+algorithms/algorithms/maths/primes_sieve_of_eratosthenes.py,39,2 is prime by default,not
+algorithms/algorithms/maths/cosine_similarity.py,36,Calculate the dot product of two vectors,not
+algorithms/algorithms/maths/recursive_binomial_coefficient.py,18,function is only defined for n>=k,not
+algorithms/algorithms/maths/recursive_binomial_coefficient.py,20,"C(n,0) = C(n,n) = 1, so this is our base case.",not
+algorithms/algorithms/maths/recursive_binomial_coefficient.py,23,"C(n,k) = C(n,n-k), so if n/2 is sufficiently small, we can reduce the problem size.",not
+algorithms/algorithms/maths/recursive_binomial_coefficient.py,26,"else, we know C(n,k) = (n/k)C(n-1,k-1), so we can use this to reduce our problem size.",not
+algorithms/algorithms/maths/modular_exponential.py,11,"If the last bit is 1, add 2^k.",not
+algorithms/algorithms/maths/modular_exponential.py,15,Utilize modular multiplication properties to combine the computed mod C values.,not
+algorithms/algorithms/maths/summing_digits.py,16,set to 1,not
+algorithms/algorithms/maths/summing_digits.py,17,set to 1,not
+algorithms/algorithms/maths/summing_digits.py,20,parse the string into individual digits,not
+algorithms/algorithms/maths/summing_digits.py,31,Some test cases:,not
+algorithms/algorithms/maths/rabin_miller.py,41,precondition n >= 5,not
+algorithms/algorithms/maths/rabin_miller.py,43,True for prime,not
+algorithms/algorithms/maths/rsa.py,58,size in bits of p and q need to add up to the size of n,not
+algorithms/algorithms/maths/rsa.py,62,"in many cases, e is also chosen to be a small constant",not
+algorithms/algorithms/maths/rsa.py,75,calculate totient function,not
+algorithms/algorithms/maths/rsa.py,90,sample usage:,not
+algorithms/algorithms/maths/rsa.py,91,"n,e,d = generate_key(16)",not
+algorithms/algorithms/maths/rsa.py,92,data = 20,not
+algorithms/algorithms/maths/rsa.py,93,"encrypted = pow(data,e,n)",not
+algorithms/algorithms/maths/rsa.py,94,"decrypted = pow(encrypted,d,n)",not
+algorithms/algorithms/maths/rsa.py,95,assert decrypted == data,not
+algorithms/algorithms/maths/next_perfect_square.py,14,Another way:,not
+algorithms/algorithms/maths/next_bigger.py,34,no such number exists,not
+algorithms/algorithms/maths/next_bigger.py,43,prefer slicing instead of reversed(digits[idx:]),not
+algorithms/algorithms/stack/longest_abs_path.py,1,def lengthLongestPath(input):,not
+algorithms/algorithms/stack/longest_abs_path.py,2,maxlen = 0,not
+algorithms/algorithms/stack/longest_abs_path.py,3,pathlen = {0: 0},not
+algorithms/algorithms/stack/longest_abs_path.py,4,for line in input.splitlines():,not
+algorithms/algorithms/stack/longest_abs_path.py,5,"print(""---------------"")",not
+algorithms/algorithms/stack/longest_abs_path.py,6,"print(""line:"", line)",not
+algorithms/algorithms/stack/longest_abs_path.py,7,name = line.strip('\t'),not
+algorithms/algorithms/stack/longest_abs_path.py,8,"print(""name:"", name)",not
+algorithms/algorithms/stack/longest_abs_path.py,9,depth = len(line) - len(name),not
+algorithms/algorithms/stack/longest_abs_path.py,10,"print(""depth:"", depth)",not
+algorithms/algorithms/stack/longest_abs_path.py,11,if '.' in name:,not
+algorithms/algorithms/stack/longest_abs_path.py,12,"maxlen = max(maxlen, pathlen[depth] + len(name))",not
+algorithms/algorithms/stack/longest_abs_path.py,13,else:,not
+algorithms/algorithms/stack/longest_abs_path.py,14,pathlen[depth + 1] = pathlen[depth] + len(name) + 1,not
+algorithms/algorithms/stack/longest_abs_path.py,15,"print(""maxlen:"", maxlen)",not
+algorithms/algorithms/stack/longest_abs_path.py,16,return maxlen,not
+algorithms/algorithms/stack/longest_abs_path.py,18,def lengthLongestPath(input):,not
+algorithms/algorithms/stack/longest_abs_path.py,19,"paths = input.split(""\n"")",not
+algorithms/algorithms/stack/longest_abs_path.py,20,level = [0] * 10,not
+algorithms/algorithms/stack/longest_abs_path.py,21,maxLength = 0,not
+algorithms/algorithms/stack/longest_abs_path.py,22,for path in paths:,not
+algorithms/algorithms/stack/longest_abs_path.py,23,"print(""-------------"")",not
+algorithms/algorithms/stack/longest_abs_path.py,24,"levelIdx = path.rfind(""\t"")",not
+algorithms/algorithms/stack/longest_abs_path.py,25,"print(""Path: "", path)",not
+algorithms/algorithms/stack/longest_abs_path.py,26,"print(""path.rfind(\\t)"", path.rfind(""\t""))",not
+algorithms/algorithms/stack/longest_abs_path.py,27,"print(""levelIdx: "", levelIdx)",not
+algorithms/algorithms/stack/longest_abs_path.py,28,"print(""level: "", level)",not
+algorithms/algorithms/stack/longest_abs_path.py,29,level[levelIdx + 1] = level[levelIdx] + len(path) - levelIdx + 1,not
+algorithms/algorithms/stack/longest_abs_path.py,30,"print(""level: "", level)",not
+algorithms/algorithms/stack/longest_abs_path.py,31,"if ""."" in path:",not
+algorithms/algorithms/stack/longest_abs_path.py,32,"maxLength = max(maxLength, level[levelIdx+1] - 1)",not
+algorithms/algorithms/stack/longest_abs_path.py,33,"print(""maxlen: "", maxLength)",not
+algorithms/algorithms/stack/longest_abs_path.py,34,return maxLength,not
+algorithms/algorithms/stack/longest_abs_path.py,41,running length and max length,not
+algorithms/algorithms/stack/longest_abs_path.py,42,keep track of the name length,not
+algorithms/algorithms/stack/longest_abs_path.py,46,the depth of current dir or file,not
+algorithms/algorithms/stack/longest_abs_path.py,50,go back to the correct depth,not
+algorithms/algorithms/stack/longest_abs_path.py,52,1 is the length of '/',not
+algorithms/algorithms/stack/longest_abs_path.py,53,increase current length,not
+algorithms/algorithms/stack/longest_abs_path.py,56,update maxlen only when it is a file,not
+algorithms/algorithms/stack/longest_abs_path.py,57,-1 is to minus one '/',not
+algorithms/algorithms/stack/stack.py,91,double the size of the array,not
+algorithms/algorithms/stack/is_consecutive.py,25,Case odd number of values in stack,not
+algorithms/algorithms/stack/is_consecutive.py,28,Not consecutive,not
+algorithms/algorithms/stack/is_consecutive.py,30,Backup second value,not
+algorithms/algorithms/stack/is_consecutive.py,33,Back up stack from storage stack,not
+algorithms/algorithms/stack/is_consecutive.py,42,Case odd number of values in stack,not
+algorithms/algorithms/stack/is_consecutive.py,45,Not consecutive,not
+algorithms/algorithms/stack/is_consecutive.py,47,Backup second value,not
+algorithms/algorithms/stack/is_consecutive.py,50,Back up stack from queue,not
+algorithms/algorithms/stack/is_sorted.py,26,Backup stack,not
+algorithms/algorithms/stack/switch_pairs.py,31,case: odd number of values in stack,not
+algorithms/algorithms/stack/switch_pairs.py,41,Put all values into queue from stack,not
+algorithms/algorithms/stack/switch_pairs.py,44,Put values back into stack from queue,not
+algorithms/algorithms/stack/switch_pairs.py,47,"Now, stack is reverse, put all values into queue from stack",not
+algorithms/algorithms/stack/switch_pairs.py,50,Swap pairs by appending the 2nd value before appending 1st value,not
+algorithms/algorithms/stack/switch_pairs.py,55,case: odd number of values in stack,not
+algorithms/algorithms/stack/remove_min.py,13,Stack is empty,not
+algorithms/algorithms/stack/remove_min.py,15,Find the smallest value,not
+algorithms/algorithms/stack/remove_min.py,23,Back up stack and remove min value,not
+algorithms/algorithms/stack/ordered_stack.py,1,The stack remains always ordered such that the highest value is at the top and the lowest at the bottom,not
+algorithms/algorithms/stack/ordered_stack.py,13,push method to maintain order when pushing new elements,not
+algorithms/algorithms/stack/stutter.py,29,Put all values into queue from stack,not
+algorithms/algorithms/stack/stutter.py,32,Put values back into stack from queue,not
+algorithms/algorithms/stack/stutter.py,35,"Now, stack is reverse, put all values into queue from stack",not
+algorithms/algorithms/stack/stutter.py,38,Put 2 times value into stack from queue,not
+algorithms/algorithms/strings/decode_string.py,1,"Given an encoded string, return it's decoded string.",not
+algorithms/algorithms/strings/decode_string.py,3,"The encoding rule is: k[encoded_string], where the encoded_string",not
+algorithms/algorithms/strings/decode_string.py,4,inside the square brackets is being repeated exactly k times.,not
+algorithms/algorithms/strings/decode_string.py,5,Note that k is guaranteed to be a positive integer.,not
+algorithms/algorithms/strings/decode_string.py,7,"You may assume that the input string is always valid; No extra white spaces,",not
+algorithms/algorithms/strings/decode_string.py,8,"square brackets are well-formed, etc.",not
+algorithms/algorithms/strings/decode_string.py,10,"Furthermore, you may assume that the original data does not contain any",not
+algorithms/algorithms/strings/decode_string.py,11,"digits and that digits are only for those repeat numbers, k.",not
+algorithms/algorithms/strings/decode_string.py,12,"For example, there won't be input like 3a or 2[4].",not
+algorithms/algorithms/strings/decode_string.py,14,Examples:,not
+algorithms/algorithms/strings/decode_string.py,16,"s = ""3[a]2[bc]"", return ""aaabcbc"".",not
+algorithms/algorithms/strings/decode_string.py,17,"s = ""3[a2[c]]"", return ""accaccacc"".",not
+algorithms/algorithms/strings/decode_string.py,18,"s = ""2[abc]3[cd]ef"", return ""abcabccdcdcdef"".",not
+algorithms/algorithms/strings/strip_url_params.py,13,Here is a very non-pythonic grotesque solution,not
+algorithms/algorithms/strings/strip_url_params.py,19,final result to be returned,not
+algorithms/algorithms/strings/strip_url_params.py,24,add the '?' to our result if it is in the url,not
+algorithms/algorithms/strings/strip_url_params.py,30,logic for removing duplicate query strings,not
+algorithms/algorithms/strings/strip_url_params.py,31,build up the list by splitting the query_string using digits,not
+algorithms/algorithms/strings/strip_url_params.py,41,logic for checking whether we should add the string to our result,not
+algorithms/algorithms/strings/strip_url_params.py,70,A very friendly pythonic solution (easy to follow),not
+algorithms/algorithms/strings/strip_url_params.py,84,Here is my friend's solution using python's builtin libraries,not
+algorithms/algorithms/strings/breaking_bad.py,40,reversely sort the symbols according to their lengths.,not
+algorithms/algorithms/strings/breaking_bad.py,45,"once match, append the `word_replaced` to res, process next word",not
+algorithms/algorithms/strings/breaking_bad.py,50,"if this word matches no symbol, append it.",not
+algorithms/algorithms/strings/min_distance.py,28,TODO: Using dynamic programming,SATD
+algorithms/algorithms/strings/merge_string_checker.py,14,Recursive Solution,not
+algorithms/algorithms/strings/merge_string_checker.py,29,An iterative approach,not
+algorithms/algorithms/strings/is_palindrome.py,54,Variation 1,not
+algorithms/algorithms/strings/is_palindrome.py,61,can also get rid of the string_reverse function and just do this return s == s[::-1] in one line.,not
+algorithms/algorithms/strings/is_palindrome.py,67,Variation 2,not
+algorithms/algorithms/strings/is_palindrome.py,77,Variation 3,not
+algorithms/algorithms/strings/encode_decode.py,6,Implement the encode and decode methods.,not
+algorithms/algorithms/strings/knuth_morris_pratt.py,16,making pi table,not
+algorithms/algorithms/strings/knuth_morris_pratt.py,23,finding pattern,not
+algorithms/algorithms/strings/reverse_words.py,10,arr is list of words,not
+algorithms/algorithms/strings/rabin_karp.py,1,Following program is the python implementation of,not
+algorithms/algorithms/strings/rabin_karp.py,2,Rabin Karp Algorithm,not
+algorithms/algorithms/strings/rabin_karp.py,11,ord maps the character to a number,not
+algorithms/algorithms/strings/rabin_karp.py,12,"subtract out the ASCII value of ""a"" to start the indexing at zero",not
+algorithms/algorithms/strings/rabin_karp.py,15,start index of current window,not
+algorithms/algorithms/strings/rabin_karp.py,17,end of index window,not
+algorithms/algorithms/strings/rabin_karp.py,22,remove left letter from hash value,not
+algorithms/algorithms/strings/rabin_karp.py,40,word_hash.move_window(),not
+algorithms/algorithms/strings/fizzbuzz.py,30,Validate the input,not
+algorithms/algorithms/strings/fizzbuzz.py,49,Alternative solution,not
+algorithms/algorithms/strings/domain_extractor.py,12,Non pythonic way,not
+algorithms/algorithms/strings/domain_extractor.py,14,grab only the non http(s) part,not
+algorithms/algorithms/strings/domain_extractor.py,16,grab the actual one depending on the len of the list,not
+algorithms/algorithms/strings/domain_extractor.py,19,case when www is in the url,not
+algorithms/algorithms/strings/domain_extractor.py,22,case when www is not in the url,not
+algorithms/algorithms/strings/domain_extractor.py,26,pythonic one liner,not
+algorithms/algorithms/strings/validate_coordinates.py,20,I'll be adding my attempt as well as my friend's solution (took us ~ 1 hour),not
+algorithms/algorithms/strings/validate_coordinates.py,22,my attempt,not
+algorithms/algorithms/strings/validate_coordinates.py,38,friends solutions,not
+algorithms/algorithms/strings/validate_coordinates.py,47,using regular expression,not
+algorithms/algorithms/strings/one_edit_distance.py,31,modify,not
+algorithms/algorithms/strings/one_edit_distance.py,33,insertion,not
+algorithms/algorithms/strings/strong_password.py,34,Return the minimum number of characters to make the password strong,not
+algorithms/algorithms/strings/text_justification.py,40,return value,not
+algorithms/algorithms/strings/text_justification.py,41,current length of strs in a row,not
+algorithms/algorithms/strings/text_justification.py,42,current words in a row,not
+algorithms/algorithms/strings/text_justification.py,43,the index of current word in words,not
+algorithms/algorithms/strings/text_justification.py,44,is current word the first in a row,not
+algorithms/algorithms/strings/text_justification.py,53,"except for the first word, each word should have at least a ' ' before it.",not
+algorithms/algorithms/strings/text_justification.py,60,"here we have already got a row of str , then we should supplement enough ' ' to make sure the length is max_width.",not
+algorithms/algorithms/strings/text_justification.py,62,if the row is the last,not
+algorithms/algorithms/strings/text_justification.py,68,not the last row and more than one word,not
+algorithms/algorithms/strings/text_justification.py,80,row with only one word,not
+algorithms/algorithms/strings/text_justification.py,85,"after a row , reset those value",not
+algorithms/algorithms/strings/delete_reoccurring.py,9,time complexity O(n),not
+algorithms/algorithms/strings/word_squares.py,1,"Given a set of words (without duplicates),",not
+algorithms/algorithms/strings/word_squares.py,2,find all word squares you can build from them.,not
+algorithms/algorithms/strings/word_squares.py,4,A sequence of words forms a valid word square,not
+algorithms/algorithms/strings/word_squares.py,5,"if the kth row and column read the exact same string,",not
+algorithms/algorithms/strings/word_squares.py,6,"where 0 ≤ k < max(numRows, numColumns).",not
+algorithms/algorithms/strings/word_squares.py,8,"For example, the word sequence [""ball"",""area"",""lead"",""lady""] forms",not
+algorithms/algorithms/strings/word_squares.py,9,a word square because each word reads the same both horizontally,not
+algorithms/algorithms/strings/word_squares.py,10,and vertically.,not
+algorithms/algorithms/strings/word_squares.py,12,b a l l,not
+algorithms/algorithms/strings/word_squares.py,13,a r e a,not
+algorithms/algorithms/strings/word_squares.py,14,l e a d,not
+algorithms/algorithms/strings/word_squares.py,15,l a d y,not
+algorithms/algorithms/strings/word_squares.py,16,Note:,not
+algorithms/algorithms/strings/word_squares.py,17,There are at least 1 and at most 1000 words.,not
+algorithms/algorithms/strings/word_squares.py,18,All words will have the exact same length.,not
+algorithms/algorithms/strings/word_squares.py,19,Word length is at least 1 and at most 5.,not
+algorithms/algorithms/strings/word_squares.py,20,Each word contains only lowercase English alphabet a-z.,not
+algorithms/algorithms/strings/word_squares.py,22,Example 1:,not
+algorithms/algorithms/strings/word_squares.py,24,Input:,not
+algorithms/algorithms/strings/word_squares.py,25,"[""area"",""lead"",""wall"",""lady"",""ball""]",not
+algorithms/algorithms/strings/word_squares.py,27,Output:,not
+algorithms/algorithms/strings/word_squares.py,28,[,not
+algorithms/algorithms/strings/word_squares.py,29,"[ ""wall"",",not
+algorithms/algorithms/strings/word_squares.py,30,"""area"",",not
+algorithms/algorithms/strings/word_squares.py,31,"""lead"",",not
+algorithms/algorithms/strings/word_squares.py,32,"""lady""",not
+algorithms/algorithms/strings/word_squares.py,33,"],",not
+algorithms/algorithms/strings/word_squares.py,34,"[ ""ball"",",not
+algorithms/algorithms/strings/word_squares.py,35,"""area"",",not
+algorithms/algorithms/strings/word_squares.py,36,"""lead"",",not
+algorithms/algorithms/strings/word_squares.py,37,"""lady""",not
+algorithms/algorithms/strings/word_squares.py,38,],not
+algorithms/algorithms/strings/word_squares.py,39,],not
+algorithms/algorithms/strings/word_squares.py,41,Explanation:,not
+algorithms/algorithms/strings/word_squares.py,42,The output consists of two word squares. The order of output does not matter,not
+algorithms/algorithms/strings/word_squares.py,43,(just the order of words in each word square matters).,not
+algorithms/algorithms/bit/find_difference.py,25,ord(ch) return an integer representing the Unicode code point of that character,not
+algorithms/algorithms/bit/find_difference.py,27,chr(i) Return the string representing a character whose Unicode code point is the integer i,not
+algorithms/algorithms/bit/insert_bit.py,31,Create mask,not
+algorithms/algorithms/bit/insert_bit.py,35,Keep the bit from 0 position to i position,not
+algorithms/algorithms/bit/has_alternative_bit.py,19,Time Complexity - O(number of bits in n),not
+algorithms/algorithms/bit/has_alternative_bit.py,34,Time Complexity - O(1),not
+algorithms/algorithms/bit/has_alternative_bit.py,36,for bits ending with zero (...1010),not
+algorithms/algorithms/bit/has_alternative_bit.py,37,for bits ending with one  (...0101),not
+algorithms/algorithms/bit/bytes_int_conversion.py,7,"list.insert(0, ...) is inefficient",not
+algorithms/algorithms/bit/flip_bit_longest_sequence.py,17,last digit is 1,not
+algorithms/algorithms/bit/flip_bit_longest_sequence.py,20,last digit is 0,not
+algorithms/algorithms/bit/flip_bit_longest_sequence.py,21,second last digit is 0,not
+algorithms/algorithms/bit/flip_bit_longest_sequence.py,28,right shift num,not
+algorithms/algorithms/bit/single_number3.py,34,isolate a^b from pairs using XOR,not
+algorithms/algorithms/bit/single_number3.py,39,isolate right most bit from a^b,not
+algorithms/algorithms/bit/single_number3.py,42,isolate a and b from a^b,not
+algorithms/algorithms/bit/single_number2.py,21,Another awesome answer,not
+algorithms/algorithms/bit/swap_pair.py,17,odd bit arithmetic right shift 1 bit,SATD
+algorithms/algorithms/bit/swap_pair.py,19,even bit left shift 1 bit,SATD
+algorithms/algorithms/bit/binary_gap.py,18,原方法为 binary_gap，但通过实验发现算法有误，不论是什么数，输出值最多为2。,not
+algorithms/algorithms/bit/binary_gap.py,19,改进方法为binary_gap_improved。,not
+algorithms/algorithms/bit/binary_gap.py,20,"The original method is binary_gap,",not
+algorithms/algorithms/bit/binary_gap.py,21,"but the experimental results show that the algorithm seems to be wrong,",not
+algorithms/algorithms/bit/binary_gap.py,22,"regardless of the number, the output value is up to 2.",not
+algorithms/algorithms/bit/binary_gap.py,23,The improved method is binary_gap_improved.,not
+algorithms/algorithms/bit/count_flips_to_convert.py,14,count number of ones in diff,not
+algorithms/algorithms/queues/moving_average.py,22,"Given a stream of integers and a window size,",not
+algorithms/algorithms/queues/moving_average.py,23,calculate the moving average of all integers in the sliding window.,not
+algorithms/algorithms/queues/reconstruct_queue.py,1,Suppose you have a random list of people standing in a queue.,not
+algorithms/algorithms/queues/reconstruct_queue.py,2,"Each person is described by a pair of integers (h, k),",not
+algorithms/algorithms/queues/reconstruct_queue.py,3,where h is the height of the person and k is the number of people,not
+algorithms/algorithms/queues/reconstruct_queue.py,4,in front of this person who have a height greater than or equal to h.,not
+algorithms/algorithms/queues/reconstruct_queue.py,5,Write an algorithm to reconstruct the queue.,not
+algorithms/algorithms/queues/reconstruct_queue.py,7,Note:,not
+algorithms/algorithms/queues/reconstruct_queue.py,8,"The number of people is less than 1,100.",not
+algorithms/algorithms/queues/reconstruct_queue.py,10,Example,not
+algorithms/algorithms/queues/reconstruct_queue.py,12,Input:,not
+algorithms/algorithms/queues/reconstruct_queue.py,13,"[[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]",not
+algorithms/algorithms/queues/reconstruct_queue.py,15,Output:,not
+algorithms/algorithms/queues/reconstruct_queue.py,16,"[[5,0], [7,0], [5,2], [6,1], [4,4], [7,1]]",not
+algorithms/algorithms/queues/max_sliding_window.py,22,queue storing indexes of elements,not
+algorithms/algorithms/queues/priority_queue.py,48,when traversed complete queue,not
+algorithms/algorithms/queues/priority_queue.py,54,remove and return the first node from the queue,not
+algorithms/algorithms/bfs/word_ladder.py,33,not possible,not
+algorithms/algorithms/bfs/word_ladder.py,38,when only differ by 1 character,not
+algorithms/algorithms/bfs/word_ladder.py,62,print(begin_set),not
+algorithms/algorithms/bfs/word_ladder.py,63,print(result),not
+algorithms/algorithms/bfs/shortest_distance_from_all_buildings.py,15,count how many building we have visited,not
+algorithms/algorithms/bfs/shortest_distance_from_all_buildings.py,35,only the position be visited by count times will append to queue,not
+algorithms/algorithms/sort/selection_sort.py,13,"""Select"" the correct value",not
+algorithms/algorithms/sort/shell_sort.py,6,Initialize size of the gap,not
+algorithms/algorithms/sort/merge_sort.py,5,Our recursive base case,not
+algorithms/algorithms/sort/merge_sort.py,9,Perform merge_sort recursively on both halves,not
+algorithms/algorithms/sort/merge_sort.py,12,Merge each side together,not
+algorithms/algorithms/sort/merge_sort.py,23,Sort each one and place into the result,not
+algorithms/algorithms/sort/merge_sort.py,30,Add the left overs if there's any left to the result,not
+algorithms/algorithms/sort/merge_sort.py,33,Add the left overs if there's any left to the result,not
+algorithms/algorithms/sort/merge_sort.py,37,Return result,not
+algorithms/algorithms/sort/bogo_sort.py,15,check the array is inorder,not
+algorithms/algorithms/sort/bitonic_sort.py,30,end of function(compare and bitionic_merge) definition,not
+algorithms/algorithms/sort/bitonic_sort.py,34,checks if n is power of two,not
+algorithms/algorithms/sort/cycle_sort.py,14,Finding cycle to rotate.,not
+algorithms/algorithms/sort/cycle_sort.py,18,Finding an indx to put items in.,not
+algorithms/algorithms/sort/cycle_sort.py,24,Case of there is not a cycle,not
+algorithms/algorithms/sort/cycle_sort.py,28,Putting the item immediately right after the duplicate item or on the right.,not
+algorithms/algorithms/sort/cycle_sort.py,33,Rotating the remaining cycle.,not
+algorithms/algorithms/sort/cycle_sort.py,36,Finding where to put the item.,not
+algorithms/algorithms/sort/cycle_sort.py,42,"After item is duplicated, put it in place or put it there.",not
+algorithms/algorithms/sort/top_sort.py,11,print(node),not
+algorithms/algorithms/sort/counting_sort.py,13,"in case there are negative elements, change the array to all positive element",not
+algorithms/algorithms/sort/counting_sort.py,16,"save the change, so that we can convert the array back to all positive number",not
+algorithms/algorithms/sort/counting_sort.py,24,temp_array[i] contain the times the number i appear in arr,not
+algorithms/algorithms/sort/counting_sort.py,28,temp_array[i] contain the number of element less than or equal i in arr,not
+algorithms/algorithms/sort/counting_sort.py,31,creating a result_arr an put the element in a correct positon,not
+algorithms/algorithms/sort/bucket_sort.py,6,The number of buckets and make buckets,not
+algorithms/algorithms/sort/bucket_sort.py,9,Assign values into bucket_sort,not
+algorithms/algorithms/sort/bucket_sort.py,13,Sort,not
+algorithms/algorithms/sort/bucket_sort.py,20,We will use insertion sort here.,not
+algorithms/algorithms/sort/quick_sort.py,15,Start our two recursive calls,not
+algorithms/algorithms/sort/quick_sort.py,28,last is the pivot,not
+algorithms/algorithms/sort/heap_sort.py,23,Iterate from last parent to first,not
+algorithms/algorithms/sort/heap_sort.py,27,Iterate from current_parent to last_parent,not
+algorithms/algorithms/sort/heap_sort.py,29,Find greatest child of current_parent,not
+algorithms/algorithms/sort/heap_sort.py,34,Swap if child is greater than parent,not
+algorithms/algorithms/sort/heap_sort.py,41,"If no swap occured, no need to keep iterating",not
+algorithms/algorithms/sort/heap_sort.py,64,Offset last_parent by the start (last_parent calculated as if start index was 0),not
+algorithms/algorithms/sort/heap_sort.py,65,All array accesses need to be offset by start,not
+algorithms/algorithms/sort/heap_sort.py,69,Iterate from last parent to first,not
+algorithms/algorithms/sort/heap_sort.py,73,Iterate from current_parent to last_parent,not
+algorithms/algorithms/sort/heap_sort.py,75,Find lesser child of current_parent,not
+algorithms/algorithms/sort/heap_sort.py,81,Swap if child is less than parent,not
+algorithms/algorithms/sort/heap_sort.py,89,"If no swap occured, no need to keep iterating",not
+algorithms/algorithms/sort/pancake_sort.py,16,Finding index of maximum number in arr,not
+algorithms/algorithms/sort/pancake_sort.py,19,Needs moving,not
+algorithms/algorithms/sort/pancake_sort.py,21,reverse from 0 to index_max,not
+algorithms/algorithms/sort/pancake_sort.py,23,Reverse list,not
+algorithms/algorithms/sort/insertion_sort.py,15,Swap the number down the list,not
+algorithms/algorithms/sort/insertion_sort.py,18,Break and do the final swap,not
+algorithms/algorithms/distribution/histogram.py,23,Create dict to store histogram,not
+algorithms/algorithms/distribution/histogram.py,25,"For each list value, add one to the respective histogram dict position",not
+algorithms/docs/source/conf.py,1,!/usr/bin/env python3,not
+algorithms/docs/source/conf.py,2,-*- coding: utf-8 -*-,not
+algorithms/docs/source/conf.py,3,,not
+algorithms/docs/source/conf.py,4,"algorithms documentation build configuration file, created by",not
+algorithms/docs/source/conf.py,5,sphinx-quickstart on Wed Jun  6 01:17:26 2018.,not
+algorithms/docs/source/conf.py,6,,not
+algorithms/docs/source/conf.py,7,This file is execfile()d with the current directory set to its,not
+algorithms/docs/source/conf.py,8,containing dir.,not
+algorithms/docs/source/conf.py,9,,not
+algorithms/docs/source/conf.py,10,Note that not all possible configuration values are present in this,not
+algorithms/docs/source/conf.py,11,autogenerated file.,not
+algorithms/docs/source/conf.py,12,,not
+algorithms/docs/source/conf.py,13,All configuration values have a default; values that are commented out,not
+algorithms/docs/source/conf.py,14,serve to show the default.,not
+algorithms/docs/source/conf.py,16,"If extensions (or modules to document with autodoc) are in another directory,",not
+algorithms/docs/source/conf.py,17,add these directories to sys.path here. If the directory is relative to the,not
+algorithms/docs/source/conf.py,18,"documentation root, use os.path.abspath to make it absolute, like shown here.",not
+algorithms/docs/source/conf.py,19,,not
+algorithms/docs/source/conf.py,20,import os,not
+algorithms/docs/source/conf.py,21,import sys,not
+algorithms/docs/source/conf.py,22,"sys.path.insert(0, os.path.abspath('.'))",not
+algorithms/docs/source/conf.py,25,-- General configuration ------------------------------------------------,not
+algorithms/docs/source/conf.py,27,"If your documentation needs a minimal Sphinx version, state it here.",not
+algorithms/docs/source/conf.py,28,,not
+algorithms/docs/source/conf.py,29,needs_sphinx = '1.0',not
+algorithms/docs/source/conf.py,31,"Add any Sphinx extension module names here, as strings. They can be",not
+algorithms/docs/source/conf.py,32,extensions coming with Sphinx (named 'sphinx.ext.*') or your custom,not
+algorithms/docs/source/conf.py,33,ones.,not
+algorithms/docs/source/conf.py,43,"Add any paths that contain templates here, relative to this directory.",not
+algorithms/docs/source/conf.py,46,The suffix(es) of source filenames.,not
+algorithms/docs/source/conf.py,47,You can specify multiple suffix as a list of string:,not
+algorithms/docs/source/conf.py,48,,not
+algorithms/docs/source/conf.py,54,The master toctree document.,not
+algorithms/docs/source/conf.py,57,General information about the project.,not
+algorithms/docs/source/conf.py,62,"The version info for the project you're documenting, acts as replacement for",not
+algorithms/docs/source/conf.py,63,"|version| and |release|, also used in various other places throughout the",not
+algorithms/docs/source/conf.py,64,built documents.,not
+algorithms/docs/source/conf.py,65,,not
+algorithms/docs/source/conf.py,66,The short X.Y version.,not
+algorithms/docs/source/conf.py,68,"The full version, including alpha/beta/rc tags.",not
+algorithms/docs/source/conf.py,71,The language for content autogenerated by Sphinx. Refer to documentation,not
+algorithms/docs/source/conf.py,72,for a list of supported languages.,not
+algorithms/docs/source/conf.py,73,,not
+algorithms/docs/source/conf.py,74,This is also used if you do content translation via gettext catalogs.,not
+algorithms/docs/source/conf.py,75,"Usually you set ""language"" from the command line for these cases.",not
+algorithms/docs/source/conf.py,78,"List of patterns, relative to source directory, that match files and",not
+algorithms/docs/source/conf.py,79,directories to ignore when looking for source files.,not
+algorithms/docs/source/conf.py,80,This patterns also effect to html_static_path and html_extra_path,not
+algorithms/docs/source/conf.py,83,The name of the Pygments (syntax highlighting) style to use.,not
+algorithms/docs/source/conf.py,86,"If true, `todo` and `todoList` produce output, else they produce nothing.",SATD
+algorithms/docs/source/conf.py,90,-- Options for HTML output ----------------------------------------------,not
+algorithms/docs/source/conf.py,92,The theme to use for HTML and HTML Help pages.  See the documentation for,not
+algorithms/docs/source/conf.py,93,a list of builtin themes.,not
+algorithms/docs/source/conf.py,94,,not
+algorithms/docs/source/conf.py,97,Theme options are theme-specific and customize the look and feel of a theme,not
+algorithms/docs/source/conf.py,98,"further.  For a list of options available for each theme, see the",not
+algorithms/docs/source/conf.py,99,documentation.,not
+algorithms/docs/source/conf.py,100,,not
+algorithms/docs/source/conf.py,101,html_theme_options = {},not
+algorithms/docs/source/conf.py,103,"Add any paths that contain custom static files (such as style sheets) here,",not
+algorithms/docs/source/conf.py,104,"relative to this directory. They are copied after the builtin static files,",not
+algorithms/docs/source/conf.py,105,"so a file named ""default.css"" will overwrite the builtin ""default.css"".",not
+algorithms/docs/source/conf.py,108,"Custom sidebar templates, must be a dictionary that maps document names",not
+algorithms/docs/source/conf.py,109,to template names.,not
+algorithms/docs/source/conf.py,110,,not
+algorithms/docs/source/conf.py,111,This is required for the alabaster theme,not
+algorithms/docs/source/conf.py,112,refs: http://alabaster.readthedocs.io/en/latest/installation.html#sidebars,not
+algorithms/docs/source/conf.py,118,needs 'show_related': True theme option to display,not
+algorithms/docs/source/conf.py,123,-- Options for HTMLHelp output ------------------------------------------,not
+algorithms/docs/source/conf.py,125,Output file base name for HTML help builder.,not
+algorithms/docs/source/conf.py,129,-- Options for LaTeX output ---------------------------------------------,not
+algorithms/docs/source/conf.py,132,The paper size ('letterpaper' or 'a4paper').,not
+algorithms/docs/source/conf.py,133,,not
+algorithms/docs/source/conf.py,134,"'papersize': 'letterpaper',",not
+algorithms/docs/source/conf.py,136,"The font size ('10pt', '11pt' or '12pt').",not
+algorithms/docs/source/conf.py,137,,not
+algorithms/docs/source/conf.py,138,"'pointsize': '10pt',",not
+algorithms/docs/source/conf.py,140,Additional stuff for the LaTeX preamble.,not
+algorithms/docs/source/conf.py,141,,not
+algorithms/docs/source/conf.py,142,"'preamble': '',",not
+algorithms/docs/source/conf.py,144,Latex figure (float) alignment,not
+algorithms/docs/source/conf.py,145,,not
+algorithms/docs/source/conf.py,146,"'figure_align': 'htbp',",not
+algorithms/docs/source/conf.py,149,Grouping the document tree into LaTeX files. List of tuples,not
+algorithms/docs/source/conf.py,150,"(source start file, target name, title,",not
+algorithms/docs/source/conf.py,151,"author, documentclass [howto, manual, or own class]).",SATD
+algorithms/docs/source/conf.py,158,-- Options for manual page output ---------------------------------------,not
+algorithms/docs/source/conf.py,160,One entry per manual page. List of tuples,not
+algorithms/docs/source/conf.py,161,"(source start file, name, description, authors, manual section).",not
+algorithms/docs/source/conf.py,168,-- Options for Texinfo output -------------------------------------------,not
+algorithms/docs/source/conf.py,170,Grouping the document tree into Texinfo files. List of tuples,not
+algorithms/docs/source/conf.py,171,"(source start file, target name, title, author,",not
+algorithms/docs/source/conf.py,172,"dir menu entry, description, category)",not

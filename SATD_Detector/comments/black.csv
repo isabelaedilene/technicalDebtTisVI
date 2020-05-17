@@ -1,1050 +1,1351 @@
 file path,line #,comment,satd
-black/,50,lib2to3 fork,
-black/,60,noqa: B950,
-black/,65,types,
-black/,136,All string literals are unicode,
-black/,142,"The following two feature-flags are mutually exclusive, and exactly one should be",
-black/,143,set for every version of python.,
-black/,212,"Legacy name, left for integrations.",
-black/,263,type: ignore  # bad types in .pyi,
-black/,437,We'll autodetect later.,
-black/,473,"if a file was explicitly given, we don't care about its extension",
-black/,553,Work around https://bugs.python.org/issue26903,
-black/,602,"For diff output, we need locks to ensure we don't interleave output",
-black/,603,from different processes.,
-black/,619,There are no good alternatives for these on Windows.,
-black/,631,If the file was written back or was successfully checked as,
-black/,632,"well-formatted, store this information in the cache.",
-black/,649,multiprocessing.Manager().Lock() is some crazy proxy,
-black/,824,"No target_version specified, so try all grammars.",
-black/,826,Python 3.7+,
-black/,828,Python 3.0-3.6,
-black/,830,Python 2.7 with future print_function import,
-black/,832,Python 2.7,
-black/,837,"Python 2-only code, so try Python 2 grammars.",
-black/,839,Python 2.7 with future print_function import,
-black/,841,Python 2.7,
-black/,845,"Python 3-compatible code, so only try Python 3 grammar.",
-black/,847,"If we have to parse both, try to parse async as a keyword first",
-black/,849,Python 3.7+,
-black/,854,Python 3.0-3.6,
-black/,856,"At least one of the above branches must have been taken, because every Python",
-black/,857,version has exactly one of the two 'ASYNC_*' flags,
-black/,914,We explicitly branch on whether a visitor exists (instead of,
-black/,915,using self.visit_default as the default arg to getattr) in order,
-black/,916,to save needing to create a bound method object and so mypyc can,
-black/,917,generate a native call to visit_default.,
-black/,950,We don't have to handle prefixes for `Node` objects since,
-black/,951,that delegates to the first child anyway.,
-black/,1009,double star in arglist,
-black/,1010,single argument to call,
-black/,1012,lambdas,
-black/,1015,single element of a list or set literal,
-black/,1217,keys ordered like `leaves`,
-black/,1240,Note: at this point leaf.prefix should be empty except for,
-black/,1241,"imports, for which we only preserve newlines.",
-black/,1308,Look for and address a trailing colon.,
-black/,1319,"Tuples require an extra check, because if there's only",
-black/,1320,one element in the tuple removing the comma unmakes the,
-black/,1321,tuple.,
-black/,1322,,
-black/,1323,We also check for parens before looking for the trailing,
-black/,1324,comma because in some cases (eg assigning a dict,
-black/,1325,literal) the literal gets wrapped in temporary parens,
-black/,1326,during parsing. This case is covered by the,
-black/,1327,collections.py test data.,
-black/,1334,"Couldn't find the matching opening paren, play it safe.",
-black/,1343,We haven't looked yet for the trailing comma because,
-black/,1344,we might also have caught noop parens.,
-black/,1348,it's either a one-tuple or didn't have a trailing comma,
-black/,1354,TODO: this is a gut feeling. Will we ever see this?,
-black/,1422,When trailing commas or optional parens are inserted by Black for,
-black/,1423,"consistency, comments after the previous last element are not moved",
-black/,1424,"(they don't have to, rendering will still be correct).  So we ignore",
-black/,1425,trailing commas and invisible.,
-black/,1431,A type comment is uncollapsable if it is attached to a leaf,
-black/,1432,that isn't at the end of the line (since that could cause it,
-black/,1433,to get associated to a different argument) or if there are,
-black/,1434,comments before it (since that could cause it to get hidden,
-black/,1435,behind a comment.,
-black/,1454,"If a 'type: ignore' is attached to the end of a line, we",
-black/,1455,"can't split the line, because we can't know which of the",
-black/,1456,subexpressions the ignore was meant to apply to.,
-black/,1457,,
-black/,1458,We only want this to apply to actual physical lines from the,
-black/,1459,"original source, though: we don't want the presence of a",
-black/,1460,'type: ignore' at the end of a multiline expression to,
-black/,1461,justify pushing it all onto one line. Thus we,
-black/,1462,(unfortunately) need to check the actual source lines and,
-black/,1463,only report an unsplittable 'type: ignore' if this line was,
-black/,1464,one line in the original code.,
-black/,1466,"Grab the first and last line numbers, skipping generated leaves",
-black/,1471,We look at the last two leaves since a comma or an,
-black/,1472,invisible paren could have been added at the end of the,
-black/,1473,line.,
-black/,1489,We remove trailing commas only in the case of importing a,
-black/,1490,single name from a module.,
-black/,1499,"regular `from foo import bar,`",
-black/,1501,"`from foo import (bar as baz,)",
-black/,1507,"`from foo import bar as baz,`",
-black/,1546,Comments on an optional parens wrapping a single leaf should belong to,
-black/,1547,the wrapped node except if it's a type comment. Pinning the comment like,
-black/,1548,this avoids unstable formatting caused by comment migration.,
-black/,1631,Black should not insert empty lines at the beginning,
-black/,1632,of the file,
-black/,1646,Consume the first leaf's extra newlines.,
-black/,1686,Don't insert empty lines before the first line in the file.,
-black/,1709,No blank line between classes with an empty body,
-black/,1714,Blank line between a block of functions and a block of non-functions,
-black/,1748,"Line is empty, don't emit. Creating a new one unnecessary.",
-black/,1760,any comment within brackets is subject to splitting,
-black/,1763,regular trailing comment,
-black/,1768,regular standalone comment,
-black/,1786,In blib2to3 INDENT never holds comments.,
-black/,1792,The current line might still wait for trailing comments.  At DEDENT time,
-black/,1793,there won't be any (they would be prefixes on the preceding NEWLINE).,
-black/,1794,Emit the line then.,
-black/,1797,"While DEDENT has no value, its prefix may contain standalone comments",
-black/,1798,that belong to the current indentation level.  Get 'em.,
-black/,1801,"Finally, emit the dedent.",
-black/,1820,type: ignore,
-black/,1933,noqa: C901,
-black/,1985,"A bit hacky: if the equal sign has whitespace, it means we",
-black/,1986,"previously found it's a typed argument.  So, we're using",
-black/,1987,"that, too.",
-black/,2011,type: ignore,
-black/,2013,Python 2 print chevron,
-black/,2020,untyped function signatures or calls,
-black/,2025,lambdas,
-black/,2030,typed function signatures,
-black/,2039,"A bit hacky: if the equal sign has whitespace, it means we",
-black/,2040,"previously found it's a typed argument.  So, we're using that, too.",
-black/,2047,type names,
-black/,2054,attributes and calls,
-black/,2071,single argument,
-black/,2084,decorators,
-black/,2103,indexing,
-black/,2116,"dots, but not the first one.",
-black/,2120,dict unpacking,
-black/,2125,unary ops,
-black/,2237,* and ** might also be MATH_OPERATORS but in this case they are not.,
-black/,2238,Don't treat them as a delimiter.,
-black/,2363,token.COMMENT or STANDALONE_COMMENT,
-black/,2364,content of the comment,
-black/,2365,how many newlines before the comment,
-black/,2366,how many characters of the original leaf's prefix did we consume,
-black/,2380,adding the length of the split '\n',
-black/,2385,Escaped newlines outside of a comment are not really newlines at,
-black/,2386,all. We treat a single-line comment following an escaped newline,
-black/,2387,as a simple trailing comment.,
-black/,2393,simple trailing comment,
-black/,2470,"All splits failed, best effort split with no omits.",
-black/,2471,This mostly happens to multiline strings that are by definition,
-black/,2472,reported as not fitting a single line.,
-black/,2473,line_length=1 here was historically a bug that somehow became a feature.,
-black/,2474,See #762 and #781 for the full story.,
-black/,2482,We are accumulating lines in `result` because we might want to abort,
-black/,2483,"mission and return the original line in the end, or attempt a different",
-black/,2484,split altogether.,
-black/,2574,If there is no opening or closing_bracket that means the split failed and,
-black/,2575,"all content is in the tail.  Otherwise, if `head_leaves` are empty, it means",
-black/,2576,the matching `opening_bracket` wasn't available on `line` anymore.,
-black/,2587,the body shouldn't be exploded,
-black/,2589,the opening bracket is an optional paren,
-black/,2592,the closing bracket is an optional paren,
-black/,2595,it's not an import (optional parens are the only thing we can split on,
-black/,2596,in this case; attempting a split without them is a waste of time),
-black/,2598,there are no standalone comments in the body,
-black/,2600,and we can actually remove the parens,
-black/,2671,"Since body is a new indent level, remove spurious leading whitespace.",
-black/,2673,"Ensure a trailing comma for imports and standalone function arguments, but",
-black/,2674,be careful not to add one after any comments or within type annotations.,
-black/,2690,Populate the line,
-black/,2895,There's an internal error,
-black/,2904,There's at least one unescaped new_quote in this raw string,
-black/,2905,so converting is impossible,
-black/,2908,Do not introduce or remove backslashes in raw strings,
-black/,2911,remove unnecessary escapes,
-black/,2914,Consider the string without unnecessary escapes as the original,
-black/,2931,Do not introduce backslashes in interpolated expressions,
-black/,2935,edge case:,
-black/,2940,Do not introduce more escaping,
-black/,2943,Prefer double quotes,
-black/,2956,Leave octal and binary literals alone.,
-black/,2959,Change hex literals to upper case.,
-black/,2975,"Capitalize in ""2L"" because ""l"" looks too similar to ""1"".",
-black/,3004,"This `node` has a prefix with `# fmt: off`, don't mess with parens.",
-black/,3008,Add parentheses around long tuple unpacking in assignments.,
-black/,3026,"""import from"" nodes store parentheses directly as part of",
-black/,3027,the statement,
-black/,3029,make parentheses invisible,
-black/,3030,type: ignore,
-black/,3031,type: ignore,
-black/,3033,insert invisible parentheses,
-black/,3060,We only want standalone comments. If there's no previous leaf or,
-black/,3061,"the previous leaf is indentation, it's a standalone comment in",
-black/,3062,disguise.,
-black/,3072,Can be a container node with the `leaf`.,
-black/,3080,That happens when one of the `ignored_nodes` ended with a NEWLINE,
-black/,3081,leaf (possibly followed by a DEDENT).,
-black/,3147,make parentheses invisible,
-black/,3148,type: ignore,
-black/,3149,type: ignore,
-black/,3153,Strip the invisible parens from `middle` by replacing,
-black/,3154,it with the child in-between the invisible parens,
-black/,3249,type: ignore,
-black/,3278,Star expressions are also used as assignment targets in extended,
-black/,3279,iterable unpacking (PEP 3132).  See what its parent is instead.,
-black/,3395,type: ignore,
-black/,3400,type: ignore,
-black/,3473,"Empty brackets would fail a split so treat them as ""inner""",
-black/,3474,brackets (e.g. only add them to the `omit` set if another,
-black/,3475,pair of brackets was good enough.,
-black/,3518,Continue looking if we see a docstring; otherwise stop.,
-black/,3568,First ignore files matching .gitignore,
-black/,3573,Then ignore with `exclude` option.,
-black/,3623,"Append a fake file so `parents` below returns `common_base_dir`, too.",
-black/,3684,According to http://tldp.org/LDP/abs/html/exitcodes.html starting with,
-black/,3685,126 we have special return codes reserved by the shell.,
-black/,3727,TODO: support Python 4+ ;),
-black/,3769,noqa: F402,
-black/,3770,TypeIgnore has only one field 'lineno' which breaks this comparison,
-black/,3786,"Ignore nested tuples within del statements, because we may insert",
-black/,3787,parentheses and they change the AST.,
-black/,3900,This part is borrowed from asyncio/runners.py in Python 3.7b2.,
-black/,3911,`concurrent.futures.Future` objects cannot be cancelled once they,
-black/,3912,are already running. There might be some when the `shutdown()` happened.,
-black/,3913,Silence their logger's spew about the event loop being closed.,
-black/,3961,"Multiline strings, we can't continue.",
-black/,3978,multiline strings,
-black/,4028,Without delimiters the optional parentheses are useless.,
-black/,4033,With more than one delimiter of a kind the optional parentheses read better.,
-black/,4037,A single stranded method call doesn't require optional parentheses.,
-black/,4047,"With a single delimiter, omit if the expression starts or ends with",
-black/,4048,a bracket.,
-black/,4061,There are brackets we can further split on.,
-black/,4065,checked the entire string and line length wasn't exceeded,
-black/,4069,Note: we are not returning False here because a line might have *both*,
-black/,4070,a leading opening bracket and a trailing closing bracket.  If the,
-black/,4071,"opening bracket doesn't match our rule, maybe the closing will.",
-black/,4077,don't use indexing for omitting optional parentheses;,
-black/,4078,it looks weird,
-black/,4085,Empty brackets don't help.,
-black/,4089,Additional wrapping of a multiline string in this situation is,
-black/,4090,unnecessary.,
-black/,4102,There are brackets we can further split on.,
-black/,4178,type: ignore,
-black/,16,This is used internally by tests to shut down the server prematurely,
-black/,19,Request headers,
-black/,36,Response headers,
-black/,125,Only output the diff in the HTTP response,
-black/,176,Default to lowest supported minor version.,
-black/setup.py,1,Copyright (C) 2018 Łukasz Langa,
-black/setup.py,7,noqa E402,
-black/setup.py,10,for setuptools.build_meta,
-black/setup.py,22,"To compile with mypyc, a mypyc checkout must be present on the PYTHONPATH",
-black/blib2to3/pygram.py,1,"Copyright 2006 Google, Inc. All Rights Reserved.",
-black/blib2to3/pygram.py,2,Licensed to PSF under a Contributor Agreement.,
-black/blib2to3/pygram.py,6,Python imports,
-black/blib2to3/pygram.py,11,Local imports,
-black/blib2to3/pygram.py,17,Moved into initialize because mypyc can't handle __file__ (XXX bug),
-black/blib2to3/pygram.py,18,# The grammar file,
-black/blib2to3/pygram.py,19,"_GRAMMAR_FILE = os.path.join(os.path.dirname(__file__), ""Grammar.txt"")",
-black/blib2to3/pygram.py,20,"_PATTERN_GRAMMAR_FILE = os.path.join(os.path.dirname(__file__),",
-black/blib2to3/pygram.py,21,"""PatternGrammar.txt"")",
-black/blib2to3/pygram.py,166,The grammar file,
-black/blib2to3/pygram.py,172,Python 2,
-black/blib2to3/pygram.py,177,Python 2 + from __future__ import print_function,
-black/blib2to3/pygram.py,181,Python 3.0-3.6,
-black/blib2to3/pygram.py,186,Python 3.7+,
-black/blib2to3/pytree.py,1,"Copyright 2006 Google, Inc. All Rights Reserved.",
-black/blib2to3/pytree.py,2,Licensed to PSF under a Contributor Agreement.,
-black/blib2to3/pytree.py,13,mypy: allow-untyped-defs,
-black/blib2to3/pytree.py,37,"maximum repeat count, default max",
-black/blib2to3/pytree.py,47,printing tokens is possible but not as useful,
-black/blib2to3/pytree.py,48,from .pgen2 import token // token.__dict__.items():,
-black/blib2to3/pytree.py,74,Default values for instance variables,
-black/blib2to3/pytree.py,75,int: token number (< 256) or symbol number (>= 256),
-black/blib2to3/pytree.py,76,"Parent node pointer, or None",
-black/blib2to3/pytree.py,77,List of subnodes,
-black/blib2to3/pytree.py,96,type: Any  # For Py3 compatibility.,
-black/blib2to3/pytree.py,386,Default values for instance variables,
-black/blib2to3/pytree.py,392,Whitespace and comments preceding this token in the input,
-black/blib2to3/pytree.py,393,Line where this token starts in the input,
-black/blib2to3/pytree.py,394,Column where this token starts in the input,
-black/blib2to3/pytree.py,488,"If there's exactly one child, return that child instead of",
-black/blib2to3/pytree.py,489,creating a new node.,
-black/blib2to3/pytree.py,517,Defaults for instance variables,
-black/blib2to3/pytree.py,519,"Node type (token if < 256, symbol if >= 256)",
-black/blib2to3/pytree.py,520,Optional content matching pattern,
-black/blib2to3/pytree.py,521,Optional name used to store match in results dict,
-black/blib2to3/pytree.py,756,Protect against alterations,
-black/blib2to3/pytree.py,757,Check sanity of alternatives,
-black/blib2to3/pytree.py,760,Can't have zero alternatives,
-black/blib2to3/pytree.py,762,Can have empty alternatives,
-black/blib2to3/pytree.py,824,Shortcut for special case (see __init__.__doc__),
-black/blib2to3/pytree.py,833,The reason for this is that hitting the recursion limit usually,
-black/blib2to3/pytree.py,834,results in some ugly messages about how RuntimeErrors are being,
-black/blib2to3/pytree.py,835,"ignored. We only have to do this on CPython, though, because other",
-black/blib2to3/pytree.py,836,implementations don't have this nasty bug in the first place.,
-black/blib2to3/pytree.py,846,We fall back to the iterative pattern matching scheme if the recursive,
-black/blib2to3/pytree.py,847,scheme hits the recursion limit.,
-black/blib2to3/pytree.py,863,generate matches that use just one alt from self.content,
-black/blib2to3/pytree.py,869,"for each match, iterate down the nodes",
-black/blib2to3/pytree.py,873,stop if the entire set of nodes has been matched,
-black/blib2to3/pytree.py,888,type: _Results,
-black/blib2to3/pytree.py,932,We never match a node in its entirety,
-black/blib2to3/pytree.py,936,We only match an empty sequence of nodes in its entirety,
-black/blib2to3/pytree.py,941,Return a match if there is an empty sequence,
-black/blib2to3/pytree.py,945,Return a match if the argument pattern has no matches,
-black/blib2to3/__init__.py,1,empty,
-black/blib2to3/pgen2/conv.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",
-black/blib2to3/pgen2/conv.py,2,Licensed to PSF under a Contributor Agreement.,
-black/blib2to3/pgen2/conv.py,4,mypy: ignore-errors,
-black/blib2to3/pgen2/conv.py,31,Python imports,
-black/blib2to3/pgen2/conv.py,34,Local imports,
-black/blib2to3/pgen2/conv.py,118,The code below essentially uses f's iterator-ness!,
-black/blib2to3/pgen2/conv.py,121,Expect the two #include lines,
-black/blib2to3/pgen2/conv.py,127,Parse the state definitions,
-black/blib2to3/pgen2/conv.py,166,Parse the dfas,
-black/blib2to3/pgen2/conv.py,197,Parse the labels,
-black/blib2to3/pgen2/conv.py,218,Parse the grammar struct,
-black/blib2to3/pgen2/conv.py,250,map from keyword strings to arc labels,
-black/blib2to3/pgen2/conv.py,251,map from numeric token values to arc labels,
-black/blib2to3/pgen2/token.py,6,Taken from Python (r53757) and modified to include some tokens,
-black/blib2to3/pgen2/token.py,7,originally monkeypatched in by pgen2.tokenize,
-black/blib2to3/pgen2/token.py,9,--start constants--,
-black/blib2to3/pgen2/token.py,72,--end constants--,
-black/blib2to3/pgen2/parse.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",
-black/blib2to3/pgen2/parse.py,2,Licensed to PSF under a Contributor Agreement.,
-black/blib2to3/pgen2/parse.py,13,Local imports,
-black/blib2to3/pgen2/parse.py,134,"Each stack entry is a tuple: (dfa, state, node).",
-black/blib2to3/pgen2/parse.py,135,"A node is a tuple: (type, value, context, children),",
-black/blib2to3/pgen2/parse.py,136,"where children is a list of nodes or None, and context may be None.",
-black/blib2to3/pgen2/parse.py,145,Map from token to label,
-black/blib2to3/pgen2/parse.py,147,Loop until the token is shifted; may raise exceptions,
-black/blib2to3/pgen2/parse.py,152,Look for a state with this label,
-black/blib2to3/pgen2/parse.py,156,Look it up in the list of labels,
-black/blib2to3/pgen2/parse.py,158,Shift a token; we're done with it,
-black/blib2to3/pgen2/parse.py,160,Pop while we are in an accept-only state,
-black/blib2to3/pgen2/parse.py,165,Done parsing!,
-black/blib2to3/pgen2/parse.py,169,Done with this token,
-black/blib2to3/pgen2/parse.py,172,See if it's a symbol and if we're in its first set,
-black/blib2to3/pgen2/parse.py,176,Push a symbol,
-black/blib2to3/pgen2/parse.py,178,To continue the outer while loop,
-black/blib2to3/pgen2/parse.py,181,"An accepting state, pop it and try something else",
-black/blib2to3/pgen2/parse.py,184,"Done parsing, but another token is input",
-black/blib2to3/pgen2/parse.py,187,No success finding a transition,
-black/blib2to3/pgen2/parse.py,193,Keep a listing of all used names,
-black/blib2to3/pgen2/parse.py,196,Check for reserved words,
-black/blib2to3/pgen2/driver.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",
-black/blib2to3/pgen2/driver.py,2,Licensed to PSF under a Contributor Agreement.,
-black/blib2to3/pgen2/driver.py,4,Modifications:,
-black/blib2to3/pgen2/driver.py,5,"Copyright 2006 Google, Inc. All Rights Reserved.",
-black/blib2to3/pgen2/driver.py,6,Licensed to PSF under a Contributor Agreement.,
-black/blib2to3/pgen2/driver.py,18,Python imports,
-black/blib2to3/pgen2/driver.py,38,Pgen imports,
-black/blib2to3/pgen2/driver.py,62,XXX Move the prefix computation into a wrapper around tokenize.,
-black/blib2to3/pgen2/driver.py,115,We never broke out -- EOF is too soon (how can this happen???),
-black/blib2to3/pgen2/driver.py,164,unexpected empty line,
-black/blib2to3/pgen2/driver.py,167,indent is finished,
-black/blib2to3/pgen2/grammar.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",
-black/blib2to3/pgen2/grammar.py,2,Licensed to PSF under a Contributor Agreement.,
-black/blib2to3/pgen2/grammar.py,15,Python imports,
-black/blib2to3/pgen2/grammar.py,21,Local imports,
-black/blib2to3/pgen2/grammar.py,95,"Python 3.7+ parses async as a keyword, not an identifier",
-black/blib2to3/pgen2/grammar.py,101,"mypyc generates objects that don't have a __dict__, but they",
-black/blib2to3/pgen2/grammar.py,102,do have __getstate__ methods that will return an equivalent,
-black/blib2to3/pgen2/grammar.py,103,dictionary,
-black/blib2to3/pgen2/grammar.py,107,type: ignore,
-black/blib2to3/pgen2/grammar.py,166,Map from operator to number (since tokenize doesn't do this),
-black/blib2to3/pgen2/literals.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",
-black/blib2to3/pgen2/literals.py,2,Licensed to PSF under a Contributor Agreement.,
-black/blib2to3/pgen2/__init__.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",
-black/blib2to3/pgen2/__init__.py,2,Licensed to PSF under a Contributor Agreement.,
-black/blib2to3/pgen2/tokenize.py,1,"Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006 Python Software Foundation.",
-black/blib2to3/pgen2/tokenize.py,2,All rights reserved.,
-black/blib2to3/pgen2/tokenize.py,4,"mypy: allow-untyped-defs, allow-untyped-calls",
-black/blib2to3/pgen2/tokenize.py,81,this is invalid but it's fine because Name comes after Number in all groups,
-black/blib2to3/pgen2/tokenize.py,97,Tail end of ' string.,
-black/blib2to3/pgen2/tokenize.py,99,"Tail end of "" string.",
-black/blib2to3/pgen2/tokenize.py,101,Tail end of ''' string.,
-black/blib2to3/pgen2/tokenize.py,103,"Tail end of """""" string.",
-black/blib2to3/pgen2/tokenize.py,107,"Single-line ' or "" string.",
-black/blib2to3/pgen2/tokenize.py,113,"Because of leftmost-then-longest match semantics, be sure to put the",
-black/blib2to3/pgen2/tokenize.py,114,"longest operators first (e.g., if = came before ==, == would get",
-black/blib2to3/pgen2/tokenize.py,115,recognized as two instances of =).,
-black/blib2to3/pgen2/tokenize.py,132,"First (or only) line of ' or "" string.",
-black/blib2to3/pgen2/tokenize.py,182,for testing,
-black/blib2to3/pgen2/tokenize.py,213,backwards compatible interface,
-black/blib2to3/pgen2/tokenize.py,292,Only care about the first 12 characters.,
-black/blib2to3/pgen2/tokenize.py,343,This behaviour mimics the Python interpreter,
-black/blib2to3/pgen2/tokenize.py,348,This behaviour mimics the Python interpreter,
-black/blib2to3/pgen2/tokenize.py,424,"If we know we're parsing 3.7+, we can unconditionally parse `async` and",
-black/blib2to3/pgen2/tokenize.py,425,`await` as keywords.,
-black/blib2to3/pgen2/tokenize.py,427,'stashed' and 'async_*' are used for async/await parsing,
-black/blib2to3/pgen2/tokenize.py,436,loop over lines in stream,
-black/blib2to3/pgen2/tokenize.py,444,continued string,
-black/blib2to3/pgen2/tokenize.py,476,new statement,
-black/blib2to3/pgen2/tokenize.py,480,measure leading whitespace,
-black/blib2to3/pgen2/tokenize.py,497,skip blank lines,
-black/blib2to3/pgen2/tokenize.py,501,skip comments,
-black/blib2to3/pgen2/tokenize.py,514,count indents,
-black/blib2to3/pgen2/tokenize.py,518,count dedents,
-black/blib2to3/pgen2/tokenize.py,538,continued statement,
-black/blib2to3/pgen2/tokenize.py,545,scan for tokens,
-black/blib2to3/pgen2/tokenize.py,552,ordinary number,
-black/blib2to3/pgen2/tokenize.py,574,all on one line,
-black/blib2to3/pgen2/tokenize.py,582,multiple lines,
-black/blib2to3/pgen2/tokenize.py,591,continued string,
-black/blib2to3/pgen2/tokenize.py,601,ordinary string,
-black/blib2to3/pgen2/tokenize.py,606,ordinary name,
-black/blib2to3/pgen2/tokenize.py,644,continued stmt,
-black/blib2to3/pgen2/tokenize.py,645,This yield is new; needed for better idempotency:,
-black/blib2to3/pgen2/tokenize.py,668,pop remaining indent levels,
-black/blib2to3/pgen2/tokenize.py,673,testing,
-black/blib2to3/pgen2/pgen.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",
-black/blib2to3/pgen2/pgen.py,2,Licensed to PSF under a Contributor Agreement.,
-black/blib2to3/pgen2/pgen.py,4,Pgen imports,
-black/blib2to3/pgen2/pgen.py,48,Initialize lookahead,
-black/blib2to3/pgen2/pgen.py,52,map from symbol name to set of tokens,
-black/blib2to3/pgen2/pgen.py,86,assert ilabel not in first # XXX failed on <> ... !=,
-black/blib2to3/pgen2/pgen.py,91,XXX Maybe this should be a method on a subclass of converter?,
-black/blib2to3/pgen2/pgen.py,94,Either a symbol name or a named token,
-black/blib2to3/pgen2/pgen.py,96,A symbol name (a non-terminal),
-black/blib2to3/pgen2/pgen.py,104,"A named token (NAME, NUMBER, STRING)",
-black/blib2to3/pgen2/pgen.py,115,Either a keyword or an operator,
-black/blib2to3/pgen2/pgen.py,119,A keyword,
-black/blib2to3/pgen2/pgen.py,127,An operator (any non-numeric token),
-black/blib2to3/pgen2/pgen.py,128,Fails if unknown token,
-black/blib2to3/pgen2/pgen.py,142,"print name, self.first[name].keys()",
-black/blib2to3/pgen2/pgen.py,146,dummy to detect left recursion,
-black/blib2to3/pgen2/pgen.py,180,MSTART: (NEWLINE | RULE)* ENDMARKER,
-black/blib2to3/pgen2/pgen.py,184,RULE: NAME ':' RHS NEWLINE,
-black/blib2to3/pgen2/pgen.py,189,"self.dump_nfa(name, a, z)",
-black/blib2to3/pgen2/pgen.py,191,"self.dump_dfa(name, dfa)",
-black/blib2to3/pgen2/pgen.py,196,"print name, oldlen, newlen",
-black/blib2to3/pgen2/pgen.py,203,"To turn an NFA into a DFA, we define the states of the DFA",
-black/blib2to3/pgen2/pgen.py,204,to correspond to *sets* of states of the NFA.  Then do some,
-black/blib2to3/pgen2/pgen.py,205,state reduction.  Let's represent sets as dicts with 1 for,
-black/blib2to3/pgen2/pgen.py,206,values.,
-black/blib2to3/pgen2/pgen.py,225,NB states grows while we're iterating,
-black/blib2to3/pgen2/pgen.py,239,List of DFAState instances; first one is start,
-black/blib2to3/pgen2/pgen.py,265,"This is not theoretically optimal, but works well enough.",
-black/blib2to3/pgen2/pgen.py,266,Algorithm: repeatedly look for two states that have the same,
-black/blib2to3/pgen2/pgen.py,267,set of arcs (same labels pointing to the same nodes) and,
-black/blib2to3/pgen2/pgen.py,268,"unify them, until things stop changing.",
-black/blib2to3/pgen2/pgen.py,270,dfa is a list of DFAState instances,
-black/blib2to3/pgen2/pgen.py,278,"print ""  unify"", i, j",
-black/blib2to3/pgen2/pgen.py,286,RHS: ALT ('|' ALT)*,
-black/blib2to3/pgen2/pgen.py,303,ALT: ITEM+,
-black/blib2to3/pgen2/pgen.py,312,ITEM: '[' RHS ']' | ATOM ['+' | '*'],
-black/blib2to3/pgen2/pgen.py,332,ATOM: '(' RHS ')' | NAME | STRING,
-black/blib2to3/pgen2/pgen.py,364,"print token.tok_name[self.type], repr(self.value)",
-black/blib2to3/pgen2/pgen.py,379,"list of (label, NFAState) pairs",
-black/blib2to3/pgen2/pgen.py,398,map from label to DFAState,
-black/blib2to3/pgen2/pgen.py,412,Equality test -- ignore the nfaset instance variable,
-black/blib2to3/pgen2/pgen.py,416,"Can't just return self.arcs == other.arcs, because that",
-black/blib2to3/pgen2/pgen.py,417,"would invoke this method recursively, with cycles...",
-black/blib2to3/pgen2/pgen.py,425,For Py3 compatibility.,
-black/tests/test_,1,!/usr/bin/env python3,
-black/tests/test_,69,"If there's no output marker, treat the entire file as already pre-formatted.",
-black/tests/test_,128,type: ignore,
-black/tests/test_,129,type: ignore,
-black/tests/test_,264,the diff output has a trailing space,
-black/tests/test_,345,the diff output has a trailing space,
-black/tests/test_,581,ensure black can parse this when the target is 3.6,
-black/tests/test_,583,"but not on 3.7, because async/await is no longer an identifier",
-black/tests/test_,596,ensure black can parse this when the target is 3.7,
-black/tests/test_,598,"but not on 3.6, because we use async as a reserved keyword",
-black/tests/test_,686,mixed tabs and spaces (valid Python 2 code),
-black/tests/test_,1277,Files which will be reformatted.,
-black/tests/test_,1280,Files which will not be reformatted.,
-black/tests/test_,1283,Multi file command.,
-black/tests/test_,1288,"Without an argument, black exits with error code 0.",
-black/tests/test_,1330,verify cache with --pyi is separate,
-black/tests/test_,1355,verify cache with --pyi is separate,
-black/tests/test_,1382,verify cache with --target-version is separate,
-black/tests/test_,1407,verify cache with --target-version is separate,
-black/tests/test_,1570,`child` should behave like a symlink which resolved path is clearly,
-black/tests/test_,1571,outside of the `root` directory.,
-black/tests/test_,1587,`child` should behave like a strange file which resolved path is clearly,
-black/tests/test_,1588,outside of the `root` directory.,
-black/tests/test_,1605,type: ignore,
-black/tests/test_,1610,"First, let's see if Click is crashing with a preferred ASCII charset.",
-black/tests/test_,1615,"Now, let's silence Click...",
-black/tests/test_,1617,...and confirm it's silent.,
-black/tests/test_,1653,TODO: remove these decorators once the below is released,
-black/tests/test_,1654,https://github.com/aio-libs/aiohttp/pull/3727,
-black/tests/data/function_trailing_comma.py,12,output,
-black/tests/data/function.py,1,!/usr/bin/env python3,
-black/tests/data/function.py,37,EMPTY LINE WITH WHITESPACE (this comment will be removed),
-black/tests/data/function.py,53,trailing standalone comment,
-black/tests/data/function.py,97,output,
-black/tests/data/function.py,100,!/usr/bin/env python3,
-black/tests/data/function.py,197,trailing standalone comment,
-black/tests/data/remove_parens.py,58,output,
-black/tests/data/numeric_literals.py,1,!/usr/bin/env python3.6,
-black/tests/data/numeric_literals.py,22,output,
-black/tests/data/numeric_literals.py,25,!/usr/bin/env python3.6,
-black/tests/data/beginning_backslash.py,9,output,
-black/tests/data/python2_unicode_literals.py,1,!/usr/bin/env python2,
-black/tests/data/python2_unicode_literals.py,10,output,
-black/tests/data/python2_unicode_literals.py,13,!/usr/bin/env python2,
-black/tests/data/python37.py,1,!/usr/bin/env python3.7,
-black/tests/data/python37.py,33,output,
-black/tests/data/python37.py,36,!/usr/bin/env python3.7,
-black/tests/data/fstring.py,11,output,
-black/tests/data/cantfit.py,1,long variable name,
-black/tests/data/cantfit.py,3,with a comment,
-black/tests/data/cantfit.py,14,long function name,
-black/tests/data/cantfit.py,22,long arguments,
-black/tests/data/cantfit.py,29,noqa,
-black/tests/data/cantfit.py,42,output,
-black/tests/data/cantfit.py,45,long variable name,
-black/tests/data/cantfit.py,50,with a comment,
-black/tests/data/cantfit.py,66,long function name,
-black/tests/data/cantfit.py,76,long arguments,
-black/tests/data/cantfit.py,82,noqa,
-black/tests/data/empty_lines.py,4,leading comment,
-black/tests/data/empty_lines.py,11,trailing comment,
-black/tests/data/empty_lines.py,16,another trailing comment,
-black/tests/data/empty_lines.py,52,,
-black/tests/data/empty_lines.py,53,SECTION BECAUSE SECTIONS,
-black/tests/data/empty_lines.py,54,,
-black/tests/data/empty_lines.py,65,Comment because comments,
-black/tests/data/empty_lines.py,72,Another comment because more comments,
-black/tests/data/empty_lines.py,80,Start of the line or a bracketed expression.,
-black/tests/data/empty_lines.py,81,More than one line for the comment.,
-black/tests/data/empty_lines.py,95,output,
-black/tests/data/empty_lines.py,101,leading comment,
-black/tests/data/empty_lines.py,108,trailing comment,
-black/tests/data/empty_lines.py,113,another trailing comment,
-black/tests/data/empty_lines.py,146,,
-black/tests/data/empty_lines.py,147,SECTION BECAUSE SECTIONS,
-black/tests/data/empty_lines.py,148,,
-black/tests/data/empty_lines.py,160,Comment because comments,
-black/tests/data/empty_lines.py,167,Another comment because more comments,
-black/tests/data/empty_lines.py,175,Start of the line or a bracketed expression.,
-black/tests/data/empty_lines.py,176,More than one line for the comment.,
-black/tests/data/async_as_identifier.py,26,output,
-black/tests/data/function2.py,10,negate top,
-black/tests/data/function2.py,26,output,
-black/tests/data/function2.py,34,negate top,
-black/tests/data/string_quotes.py,54,output,
-black/tests/data/debug_visitor.py,20,We don't have to handle prefixes for `Node` objects since,
-black/tests/data/debug_visitor.py,21,that delegates to the first child anyway.,
-black/tests/data/tupleassign.py,1,This is a standalone comment.,
-black/tests/data/tupleassign.py,4,This is as well.,
-black/tests/data/tupleassign.py,9,output,
-black/tests/data/tupleassign.py,12,This is a standalone comment.,
-black/tests/data/tupleassign.py,20,This is as well.,
-black/tests/data/composition.py,23,Rule 1,
-black/tests/data/composition.py,25,Rule 2,
-black/tests/data/composition.py,29,Just a comment,
-black/tests/data/composition.py,31,Another,
-black/tests/data/composition.py,39,Only send the first n items.,
-black/tests/data/comments3.py,1,The percent-percent comments are Spyder IDE cells.,
-black/tests/data/comments3.py,3,%%,
-black/tests/data/comments3.py,9,This one is actually too long to fit in a single line.,
-black/tests/data/comments3.py,11,yup,
-black/tests/data/comments3.py,13,right,
-black/tests/data/comments3.py,16,Capture each of the exceptions in the MultiError along with each of their causes and contexts,
-black/tests/data/comments3.py,22,This should be left alone (before),
-black/tests/data/comments3.py,28,copy the set of _seen exceptions so that duplicates,
-black/tests/data/comments3.py,29,shared between sub-exceptions are not omitted,
-black/tests/data/comments3.py,32,This should be left alone (after),
-black/tests/data/comments3.py,35,everything is fine if the expression isn't nested,
-black/tests/data/comments3.py,41,copy the set of _seen exceptions so that duplicates,
-black/tests/data/comments3.py,42,shared between sub-exceptions are not omitted,
-black/tests/data/comments3.py,47,%%,
-black/tests/data/numeric_literals_py2.py,1,!/usr/bin/env python2.7,
-black/tests/data/numeric_literals_py2.py,8,output,
-black/tests/data/numeric_literals_py2.py,11,!/usr/bin/env python2.7,
-black/tests/data/python2_print_function.py,1,!/usr/bin/env python2,
-black/tests/data/python2_print_function.py,8,output,
-black/tests/data/python2_print_function.py,11,!/usr/bin/env python2,
-black/tests/data/numeric_literals_skip_underscores.py,1,!/usr/bin/env python3.6,
-black/tests/data/numeric_literals_skip_underscores.py,12,output,
-black/tests/data/numeric_literals_skip_underscores.py,14,!/usr/bin/env python3.6,
-black/tests/data/fmtonoff.py,1,!/usr/bin/env python3,
-black/tests/data/fmtonoff.py,9,fmt: off,
-black/tests/data/fmtonoff.py,12,fmt: on,
-black/tests/data/fmtonoff.py,14,Comment 1,
-black/tests/data/fmtonoff.py,16,Comment 2,
-black/tests/data/fmtonoff.py,18,fmt: off,
-black/tests/data/fmtonoff.py,40,fmt: on,
-black/tests/data/fmtonoff.py,48,fmt: off,
-black/tests/data/fmtonoff.py,54,fmt: off,
-black/tests/data/fmtonoff.py,57,fmt: on,
-black/tests/data/fmtonoff.py,62,fmt: off,
-black/tests/data/fmtonoff.py,65,fmt: on,
-black/tests/data/fmtonoff.py,68,fmt: off,
-black/tests/data/fmtonoff.py,71,fmt: on,
-black/tests/data/fmtonoff.py,74,fmt: off,
-black/tests/data/fmtonoff.py,77,fmt: on,
-black/tests/data/fmtonoff.py,79,fmt: off,
-black/tests/data/fmtonoff.py,82,fmt: on,
-black/tests/data/fmtonoff.py,85,fmt: off,
-black/tests/data/fmtonoff.py,92,fmt: on,
-black/tests/data/fmtonoff.py,98,fmt: off,
-black/tests/data/fmtonoff.py,101,"hey, that won't work",
-black/tests/data/fmtonoff.py,104,fmt: on,
-black/tests/data/fmtonoff.py,108,fmt: on,
-black/tests/data/fmtonoff.py,109,fmt: off,
-black/tests/data/fmtonoff.py,114,fmt: on,
-black/tests/data/fmtonoff.py,115,fmt: off,
-black/tests/data/fmtonoff.py,116,...but comments still get reformatted even though they should not be,
-black/tests/data/fmtonoff.py,117,fmt: on,
-black/tests/data/fmtonoff.py,123,fmt: off,
-black/tests/data/fmtonoff.py,127,fmt: on,
-black/tests/data/fmtonoff.py,148,fmt: off,
-black/tests/data/fmtonoff.py,150,fmt: on,
-black/tests/data/fmtonoff.py,158,yapf: disable,
-black/tests/data/fmtonoff.py,165,fmt: off,
-black/tests/data/fmtonoff.py,178,fmt: on,
-black/tests/data/fmtonoff.py,181,fmt: off,
-black/tests/data/fmtonoff.py,183,No formatting to the end of the file,
-black/tests/data/fmtonoff.py,188,output,
-black/tests/data/fmtonoff.py,191,!/usr/bin/env python3,
-black/tests/data/fmtonoff.py,199,fmt: off,
-black/tests/data/fmtonoff.py,202,fmt: on,
-black/tests/data/fmtonoff.py,204,Comment 1,
-black/tests/data/fmtonoff.py,206,Comment 2,
-black/tests/data/fmtonoff.py,208,fmt: off,
-black/tests/data/fmtonoff.py,230,fmt: on,
-black/tests/data/fmtonoff.py,255,fmt: off,
-black/tests/data/fmtonoff.py,262,fmt: off,
-black/tests/data/fmtonoff.py,265,fmt: on,
-black/tests/data/fmtonoff.py,272,fmt: off,
-black/tests/data/fmtonoff.py,275,fmt: on,
-black/tests/data/fmtonoff.py,279,fmt: off,
-black/tests/data/fmtonoff.py,282,fmt: on,
-black/tests/data/fmtonoff.py,286,fmt: off,
-black/tests/data/fmtonoff.py,289,fmt: on,
-black/tests/data/fmtonoff.py,291,fmt: off,
-black/tests/data/fmtonoff.py,294,fmt: on,
-black/tests/data/fmtonoff.py,298,fmt: off,
-black/tests/data/fmtonoff.py,305,fmt: on,
-black/tests/data/fmtonoff.py,313,fmt: off,
-black/tests/data/fmtonoff.py,315,"hey, that won't work",
-black/tests/data/fmtonoff.py,317,fmt: on,
-black/tests/data/fmtonoff.py,323,fmt: on,
-black/tests/data/fmtonoff.py,324,fmt: off,
-black/tests/data/fmtonoff.py,329,fmt: on,
-black/tests/data/fmtonoff.py,330,fmt: off,
-black/tests/data/fmtonoff.py,331,...but comments still get reformatted even though they should not be,
-black/tests/data/fmtonoff.py,332,fmt: on,
-black/tests/data/fmtonoff.py,345,fmt: off,
-black/tests/data/fmtonoff.py,349,fmt: on,
-black/tests/data/fmtonoff.py,370,fmt: off,
-black/tests/data/fmtonoff.py,372,fmt: on,
-black/tests/data/fmtonoff.py,378,yapf: disable,
-black/tests/data/fmtonoff.py,392,fmt: off,
-black/tests/data/fmtonoff.py,405,fmt: on,
-black/tests/data/fmtonoff.py,408,fmt: off,
-black/tests/data/fmtonoff.py,410,No formatting to the end of the file,
-black/tests/data/slices.py,26,These are from PEP-8:,
-black/tests/data/slices.py,29,ham[lower+offset : upper+offset],
-black/tests/data/python38.py,1,!/usr/bin/env python3.8,
-black/tests/data/python38.py,14,output,
-black/tests/data/python38.py,17,!/usr/bin/env python3.8,
-black/tests/data/comments.py,1,!/usr/bin/env python3,
-black/tests/data/comments.py,2,fmt: on,
-black/tests/data/comments.py,3,Some license here.,
-black/tests/data/comments.py,4,,
-black/tests/data/comments.py,5,"Has many lines. Many, many lines.",
-black/tests/data/comments.py,6,"Many, many, many lines.",
-black/tests/data/comments.py,16,some noqa comment,
-black/tests/data/comments.py,24,Some comment before a function.,
-black/tests/data/comments.py,32,FIXME: Some comment about why this function is crap but still in production.,
-black/tests/data/comments.py,36,Explains why we have this if.,
-black/tests/data/comments.py,37,In great detail indeed.,
-black/tests/data/comments.py,39,type: ignore,
-black/tests/data/comments.py,41,This return is also commented for some reason.,
-black/tests/data/comments.py,45,Explains why we use global state.,
-black/tests/data/comments.py,49,Another comment!,
-black/tests/data/comments.py,50,This time two lines.,
-black/tests/data/comments.py,56,: Doc comment for class attribute Foo.bar.,
-black/tests/data/comments.py,57,: It can have multiple lines.,
-black/tests/data/comments.py,60,: Doc comment for Foo.flox. One line only.,
-black/tests/data/comments.py,66,: Doc comment for instance attribute qux.,
-black/tests/data/comments.py,73,' <h1>This is pweave!</h1>,
-black/tests/data/comments.py,78,"This comment, for some reason \",
-black/tests/data/comments.py,79,contains a trailing backslash.,
-black/tests/data/comments.py,80,Some more comments,
-black/tests/data/comments.py,82,Comment after ending a block.,
-black/tests/data/comments.py,85,Comment between things.,
-black/tests/data/comments.py,89,Some closing comments.,
-black/tests/data/comments.py,90,Maybe Vim or Emacs directives for formatting.,
-black/tests/data/comments.py,91,Who knows.,
-black/tests/data/comments4.py,2,NOT DRY,
-black/tests/data/comments4.py,5,DRY,
-black/tests/data/comments4.py,13,metadata_version errors.,
-black/tests/data/comments4.py,28,name errors.,
-black/tests/data/comments4.py,44,version errors.,
-black/tests/data/comments4.py,72,Because foo.,
-black/tests/data/comments4.py,76,Another comment about the filtering on is_quux goes here.,
-black/tests/data/comments4.py,86,Standalone comment reasonably placed.,
-black/tests/data/comments4.py,98,Standlone comment but weirdly placed.,
-black/tests/data/comments5.py,3,trailing comment,
-black/tests/data/comments5.py,4,Comment belongs to the `if` block.,
-black/tests/data/comments5.py,5,This one belongs to the `while` block.,
-black/tests/data/comments5.py,7,"Should this one, too?  I guess so.",
-black/tests/data/comments5.py,9,This one is properly standalone now.,
-black/tests/data/comments5.py,12,first we do this,
-black/tests/data/comments5.py,16,then we do this,
-black/tests/data/comments5.py,18,and finally we loop around,
-black/tests/data/comments5.py,33,leading function comment,
-black/tests/data/comments5.py,36,trailing function comment,
-black/tests/data/comments5.py,39,SECTION COMMENT,
-black/tests/data/comments5.py,42,leading 1,
-black/tests/data/comments5.py,44,leading 2,
-black/tests/data/comments5.py,46,leading 3,
-black/tests/data/comments5.py,52,leading 1,
-black/tests/data/comments5.py,54,leading 2,
-black/tests/data/comments5.py,56,leading function comment,
-black/tests/data/comments5.py,61,Note: crappy but inevitable.  The current design of EmptyLineTracker doesn't,
-black/tests/data/comments5.py,62,allow this to work correctly.  The user will have to split those lines by,
-black/tests/data/comments5.py,63,hand.,
-black/tests/data/comments5.py,65,This comment should be split from `some_instruction` by two lines but isn't.,
-black/tests/data/class_methods_new_line.py,103,output,
-black/tests/data/string_prefixes.py,1,!/usr/bin/env python3.6,
-black/tests/data/string_prefixes.py,9,output,
-black/tests/data/string_prefixes.py,12,!/usr/bin/env python3.6,
-black/tests/data/collections.py,5,unwraps,
-black/tests/data/collections.py,10,stays wrapped,
-black/tests/data/collections.py,16,as doesn't get confusing when unwrapped,
-black/tests/data/collections.py,42,looping over a 1-tuple should also not get wrapped,
-black/tests/data/collections.py,73,output,
-black/tests/data/collections.py,80,unwraps,
-black/tests/data/collections.py,83,stays wrapped,
-black/tests/data/collections.py,89,as doesn't get confusing when unwrapped,
-black/tests/data/collections.py,131,looping over a 1-tuple should also not get wrapped,
-black/tests/data/comment_after_escaped_newline.py,2,pylint: disable=W9016,
-black/tests/data/comment_after_escaped_newline.py,8,some comment here,
-black/tests/data/comment_after_escaped_newline.py,11,output,
-black/tests/data/comment_after_escaped_newline.py,13,pylint: disable=W9016,
-black/tests/data/comment_after_escaped_newline.py,17,some comment here,
-black/tests/data/import_spacing.py,3,flake8: noqa,
-black/tests/data/import_spacing.py,10,This relies on each of the submodules having an __all__ variable.,
-black/tests/data/import_spacing.py,13,comment here,
-black/tests/data/import_spacing.py,16,comment here,
-black/tests/data/import_spacing.py,19,comment here,
-black/tests/data/import_spacing.py,49,output,
-black/tests/data/import_spacing.py,54,flake8: noqa,
-black/tests/data/import_spacing.py,59,This relies on each of the submodules having an __all__ variable.,
-black/tests/data/import_spacing.py,62,comment here,
-black/tests/data/import_spacing.py,65,comment here,
-black/tests/data/import_spacing.py,68,comment here,
-black/tests/data/bracketmatch.py,9,output,
-black/tests/data/class_blank_parentheses.py,26,output,
-black/tests/data/force_py36.py,1,The input source must not contain any Py36-specific syntax (e.g. argument type,
-black/tests/data/force_py36.py,2,"annotations, trailing comma after *rest) or this test becomes invalid.",
-black/tests/data/force_py36.py,4,output,
-black/tests/data/force_py36.py,5,The input source must not contain any Py36-specific syntax (e.g. argument type,
-black/tests/data/force_py36.py,6,"annotations, trailing comma after *rest) or this test becomes invalid.",
-black/tests/data/expression.py,86,note: no trailing comma pre-3.6,
-black/tests/data/expression.py,103,type: ignore,
-black/tests/data/expression.py,106,type: ignore,
-black/tests/data/expression.py,111,type: ignore,
-black/tests/data/expression.py,245,standalone comment at ENDMARKER,
-black/tests/data/expression.py,248,output,
-black/tests/data/expression.py,369,note: no trailing comma pre-3.6,
-black/tests/data/expression.py,388,type: ignore,
-black/tests/data/expression.py,391,type: ignore,
-black/tests/data/expression.py,396,type: ignore,
-black/tests/data/expression.py,588,standalone comment at ENDMARKER,
-black/tests/data/force_pyi.py,4,output,
-black/tests/data/fmtonoff2.py,6,fmt: off,
-black/tests/data/fmtonoff2.py,8,Test data:,
-black/tests/data/fmtonoff2.py,9,"Position, Volume, State, TmSt/TmEx/None, [call, [arg1...]]",
-black/tests/data/fmtonoff2.py,13,Test don't manage the volume,
-black/tests/data/fmtonoff2.py,26,misaligned comment,
-black/tests/data/fmtonoff2.py,35,one is zero/none,
-black/tests/data/fmtonoff2.py,40,fmt: on,
-black/tests/data/fmtonoff3.py,1,fmt: off,
-black/tests/data/fmtonoff3.py,6,fmt: on,
-black/tests/data/fmtonoff3.py,8,fmt: off,
-black/tests/data/fmtonoff3.py,13,fmt: on,
-black/tests/data/fmtonoff3.py,19,output,
-black/tests/data/fmtonoff3.py,21,fmt: off,
-black/tests/data/fmtonoff3.py,26,fmt: on,
-black/tests/data/fmtonoff3.py,28,fmt: off,
-black/tests/data/fmtonoff3.py,33,fmt: on,
-black/tests/data/comments6.py,5,type: int,
-black/tests/data/comments6.py,10,test type comments,
-black/tests/data/comments6.py,12,"type: (int, int, int, int, int, int, int, int, int) -> None",
-black/tests/data/comments6.py,17,type: int,
-black/tests/data/comments6.py,18,type: int,
-black/tests/data/comments6.py,19,type: int,
-black/tests/data/comments6.py,20,type: int,
-black/tests/data/comments6.py,21,type: int,
-black/tests/data/comments6.py,22,type: int,
-black/tests/data/comments6.py,23,type: int,
-black/tests/data/comments6.py,24,type: int,
-black/tests/data/comments6.py,25,type: int,
-black/tests/data/comments6.py,27,type: (...) -> None,
-black/tests/data/comments6.py,32,type: int,
-black/tests/data/comments6.py,33,type: *Any,
-black/tests/data/comments6.py,34,type: bool,
-black/tests/data/comments6.py,35,type: **Any,
-black/tests/data/comments6.py,37,type: (...) -> None,
-black/tests/data/comments6.py,42,type: int,
-black/tests/data/comments6.py,43,type: int,
-black/tests/data/comments6.py,44,type: int,
-black/tests/data/comments6.py,45,type: int,
-black/tests/data/comments6.py,47,type: (...) -> None,
-black/tests/data/comments6.py,49,type: int,
-black/tests/data/comments6.py,50,type: float,
-black/tests/data/comments6.py,51,type: int,
-black/tests/data/comments6.py,54,type: int,
-black/tests/data/comments6.py,55,type: bool,
-black/tests/data/comments6.py,60,"type: Tuple[int, int]",
-black/tests/data/comments6.py,69,type: int,
-black/tests/data/comments6.py,73,not a type comment,
-black/tests/data/comments6.py,74,type: int,
-black/tests/data/comments6.py,76,type: (...) -> None,
-black/tests/data/comments6.py,81,not a type comment,
-black/tests/data/comments6.py,82,type: (int) -> None,
-black/tests/data/comments6.py,87,type: int,
-black/tests/data/comments6.py,88,type: () -> int,
-black/tests/data/comments6.py,99,type: ignore,
-black/tests/data/comments6.py,103,type: ignore,
-black/tests/data/comments6.py,107,aaa,
-black/tests/data/comments6.py,109,type: ignore,
-black/tests/data/comments6.py,113,type: ignore,
-black/tests/data/comments6.py,116,type: ignore[arg-type],
-black/tests/data/comments7.py,8,"String,",
-black/tests/data/comments7.py,9,"resolve_to_config_type,",
-black/tests/data/comments7.py,10,"DEFAULT_TYPE_ATTRIBUTES,",
-black/tests/data/comments7.py,21,"and some comments,",
-black/tests/data/comments7.py,22,"resolve_to_config_type,",
-black/tests/data/comments7.py,23,"DEFAULT_TYPE_ATTRIBUTES,",
-black/tests/data/comments7.py,27,"look ma, no comment migration xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-black/tests/data/comments7.py,30,"look ma, no comment migration xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-black/tests/data/comments7.py,34,aaa,
-black/tests/data/comments7.py,37,aaa,
-black/tests/data/comments7.py,47,type: ignore,
-black/tests/data/comments7.py,50,"The type: ignore exception only applies to line length, not",
-black/tests/data/comments7.py,51,other types of formatting.,
-black/tests/data/comments7.py,53,type: ignore,
-black/tests/data/comments7.py,58,output,
-black/tests/data/comments7.py,67,"String,",
-black/tests/data/comments7.py,68,"resolve_to_config_type,",
-black/tests/data/comments7.py,69,"DEFAULT_TYPE_ATTRIBUTES,",
-black/tests/data/comments7.py,80,"and some comments,",
-black/tests/data/comments7.py,81,"resolve_to_config_type,",
-black/tests/data/comments7.py,82,"DEFAULT_TYPE_ATTRIBUTES,",
-black/tests/data/comments7.py,86,"look ma, no comment migration xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-black/tests/data/comments7.py,88,"look ma, no comment migration xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-black/tests/data/comments7.py,90,aaa,
-black/tests/data/comments7.py,92,aaa,
-black/tests/data/comments7.py,96,type: ignore,
-black/tests/data/comments7.py,98,"The type: ignore exception only applies to line length, not",
-black/tests/data/comments7.py,99,other types of formatting.,
-black/tests/data/comments7.py,106,type: ignore,
-black/tests/data/comments2.py,2,NOT DRY,
-black/tests/data/comments2.py,5,DRY,
-black/tests/data/comments2.py,8,Please keep __all__ alphabetized within each category.,
-black/tests/data/comments2.py,11,Super-special typing primitives.,
-black/tests/data/comments2.py,16,ABCs (from collections.abc).,
-black/tests/data/comments2.py,17,collections.abc.Set.,
-black/tests/data/comments2.py,21,Concrete collection types.,
-black/tests/data/comments2.py,29,Not really a type.,
-black/tests/data/comments2.py,34,singletons,
-black/tests/data/comments2.py,38,builtin types and objects,
-black/tests/data/comments2.py,46,user-defined types and objects,
-black/tests/data/comments2.py,55,for compiler in compilers.values():,
-black/tests/data/comments2.py,56,add_compiler(compiler),
-black/tests/data/comments2.py,58,"add_compiler(compilers[(7.1, 64)])",
-black/tests/data/comments2.py,60,Comment before function.,
-black/tests/data/comments2.py,64,(1,
-black/tests/data/comments2.py,66,)1,
-black/tests/data/comments2.py,71,type: ignore,
-black/tests/data/comments2.py,75,(2 what if this was actually long,
-black/tests/data/comments2.py,77,)2,
-black/tests/data/comments2.py,79,type: ignore,
-black/tests/data/comments2.py,81,has the child process finished?,
-black/tests/data/comments2.py,83,"the child process has finished, but the",
-black/tests/data/comments2.py,84,transport hasn't been notified yet?,
-black/tests/data/comments2.py,87,no newline before or after,
-black/tests/data/comments2.py,89,one,
-black/tests/data/comments2.py,91,two,
-black/tests/data/comments2.py,94,no newline after,
-black/tests/data/comments2.py,99,,
-black/tests/data/comments2.py,102,short,
-black/tests/data/comments2.py,104,but,
-black/tests/data/comments2.py,106,multiline,
-black/tests/data/comments2.py,110,yup,
-black/tests/data/comments2.py,113,yup,
-black/tests/data/comments2.py,114,yup,
-black/tests/data/comments2.py,115,right,
-black/tests/data/comments2.py,118,hello,
-black/tests/data/comments2.py,120,yup,
-black/tests/data/comments2.py,122,right,
-black/tests/data/comments2.py,126,This one is actually too long to fit in a single line.,
-black/tests/data/comments2.py,128,yup,
-black/tests/data/comments2.py,130,right,
-black/tests/data/comments2.py,137,and round and round we go,
-black/tests/data/comments2.py,138,and round and round we go,
-black/tests/data/comments2.py,140,let's return,
-black/tests/data/comments2.py,145,FIXME: \r\n?,
-black/tests/data/comments2.py,149,type: Final,
-black/tests/data/comments2.py,153,type: ignore,
-black/tests/data/comments2.py,157,,
-black/tests/data/comments2.py,158,SECTION COMMENT,
-black/tests/data/comments2.py,159,,
-black/tests/data/comments2.py,164,END COMMENTS,
-black/tests/data/comments2.py,165,MORE END COMMENTS,
-black/tests/data/comments2.py,168,output,
-black/tests/data/comments2.py,172,NOT DRY,
-black/tests/data/comments2.py,175,DRY,
-black/tests/data/comments2.py,178,Please keep __all__ alphabetized within each category.,
-black/tests/data/comments2.py,181,Super-special typing primitives.,
-black/tests/data/comments2.py,185,ABCs (from collections.abc).,
-black/tests/data/comments2.py,186,collections.abc.Set.,
-black/tests/data/comments2.py,189,Concrete collection types.,
-black/tests/data/comments2.py,197,Not really a type.,
-black/tests/data/comments2.py,202,singletons,
-black/tests/data/comments2.py,207,builtin types and objects,
-black/tests/data/comments2.py,215,user-defined types and objects,
-black/tests/data/comments2.py,224,for compiler in compilers.values():,
-black/tests/data/comments2.py,225,add_compiler(compiler),
-black/tests/data/comments2.py,227,"add_compiler(compilers[(7.1, 64)])",
-black/tests/data/comments2.py,229,Comment before function.,
-black/tests/data/comments2.py,232,(1  # )1,
-black/tests/data/comments2.py,236,type: ignore,
-black/tests/data/comments2.py,240,(2 what if this was actually long,
-black/tests/data/comments2.py,242,)2,
-black/tests/data/comments2.py,244,type: ignore,
-black/tests/data/comments2.py,247,has the child process finished?,
-black/tests/data/comments2.py,249,"the child process has finished, but the",
-black/tests/data/comments2.py,250,transport hasn't been notified yet?,
-black/tests/data/comments2.py,254,no newline before or after,
-black/tests/data/comments2.py,256,one,
-black/tests/data/comments2.py,258,two,
-black/tests/data/comments2.py,262,no newline after,
-black/tests/data/comments2.py,272,,
-black/tests/data/comments2.py,275,short,
-black/tests/data/comments2.py,277,but,
-black/tests/data/comments2.py,279,multiline,
-black/tests/data/comments2.py,283,yup,
-black/tests/data/comments2.py,287,yup  # yup  # right,
-black/tests/data/comments2.py,290,hello,
-black/tests/data/comments2.py,292,yup,
-black/tests/data/comments2.py,294,right,
-black/tests/data/comments2.py,298,This one is actually too long to fit in a single line.,
-black/tests/data/comments2.py,300,yup,
-black/tests/data/comments2.py,302,right,
-black/tests/data/comments2.py,309,and round and round we go,
-black/tests/data/comments2.py,310,and round and round we go,
-black/tests/data/comments2.py,312,let's return,
-black/tests/data/comments2.py,315,FIXME: \r\n?,
-black/tests/data/comments2.py,319,type: Final,
-black/tests/data/comments2.py,324,type: ignore,
-black/tests/data/comments2.py,328,,
-black/tests/data/comments2.py,329,SECTION COMMENT,
-black/tests/data/comments2.py,330,,
-black/tests/data/comments2.py,335,END COMMENTS,
-black/tests/data/comments2.py,336,MORE END COMMENTS,
-black/tests/data/python2.py,1,!/usr/bin/env python2,
-black/tests/data/python2.py,17,output,
-black/tests/data/python2.py,20,!/usr/bin/env python2,
-black/docs/conf.py,1,-*- coding: utf-8 -*-,
-black/docs/conf.py,2,,
-black/docs/conf.py,3,Configuration file for the Sphinx documentation builder.,
-black/docs/conf.py,4,,
-black/docs/conf.py,5,This file does only contain a selection of the most common options. For a,
-black/docs/conf.py,6,full list see the documentation:,
-black/docs/conf.py,7,http://www.sphinx-doc.org/en/stable/config,
-black/docs/conf.py,9,-- Path setup --------------------------------------------------------------,
-black/docs/conf.py,11,"If extensions (or modules to document with autodoc) are in another directory,",
-black/docs/conf.py,12,add these directories to sys.path here. If the directory is relative to the,
-black/docs/conf.py,13,"documentation root, use os.path.abspath to make it absolute, like shown here.",
-black/docs/conf.py,14,,
-black/docs/conf.py,79,-- Project information -----------------------------------------------------,
-black/docs/conf.py,85,Autopopulate version,
-black/docs/conf.py,86,"The version, including alpha/beta/rc tags, but not commit hash and datestamps",
-black/docs/conf.py,88,The short X.Y version.,
-black/docs/conf.py,96,-- General configuration ---------------------------------------------------,
-black/docs/conf.py,98,"If your documentation needs a minimal Sphinx version, state it here.",
-black/docs/conf.py,99,,
-black/docs/conf.py,100,needs_sphinx = '1.0',
-black/docs/conf.py,102,"Add any Sphinx extension module names here, as strings. They can be",
-black/docs/conf.py,103,extensions coming with Sphinx (named 'sphinx.ext.*') or your custom,
-black/docs/conf.py,104,ones.,
-black/docs/conf.py,107,"Add any paths that contain templates here, relative to this directory.",
-black/docs/conf.py,112,The suffix(es) of source filenames.,
-black/docs/conf.py,113,You can specify multiple suffix as a list of string:,
-black/docs/conf.py,116,The master toctree document.,
-black/docs/conf.py,119,The language for content autogenerated by Sphinx. Refer to documentation,
-black/docs/conf.py,120,for a list of supported languages.,
-black/docs/conf.py,121,,
-black/docs/conf.py,122,This is also used if you do content translation via gettext catalogs.,
-black/docs/conf.py,123,"Usually you set ""language"" from the command line for these cases.",
-black/docs/conf.py,126,"List of patterns, relative to source directory, that match files and",
-black/docs/conf.py,127,directories to ignore when looking for source files.,
-black/docs/conf.py,128,This pattern also affects html_static_path and html_extra_path .,
-black/docs/conf.py,131,The name of the Pygments (syntax highlighting) style to use.,
-black/docs/conf.py,135,-- Options for HTML output -------------------------------------------------,
-black/docs/conf.py,137,The theme to use for HTML and HTML Help pages.  See the documentation for,
-black/docs/conf.py,138,a list of builtin themes.,
-black/docs/conf.py,139,,
-black/docs/conf.py,166,"Add any paths that contain custom static files (such as style sheets) here,",
-black/docs/conf.py,167,"relative to this directory. They are copied after the builtin static files,",
-black/docs/conf.py,168,"so a file named ""default.css"" will overwrite the builtin ""default.css"".",
-black/docs/conf.py,171,"Custom sidebar templates, must be a dictionary that maps document names",
-black/docs/conf.py,172,to template names.,
-black/docs/conf.py,173,,
-black/docs/conf.py,174,The default sidebars (for documents that don't match any pattern) are,
-black/docs/conf.py,175,defined by theme itself.  Builtin themes are using these templates by,
-black/docs/conf.py,176,"default: ``['localtoc.html', 'relations.html', 'sourcelink.html',",
-black/docs/conf.py,177,'searchbox.html']``.,
-black/docs/conf.py,178,,
-black/docs/conf.py,179,html_sidebars = {},
-black/docs/conf.py,182,-- Options for HTMLHelp output ---------------------------------------------,
-black/docs/conf.py,184,Output file base name for HTML help builder.,
-black/docs/conf.py,188,-- Options for LaTeX output ------------------------------------------------,
-black/docs/conf.py,191,The paper size ('letterpaper' or 'a4paper').,
-black/docs/conf.py,192,,
-black/docs/conf.py,193,"'papersize': 'letterpaper',",
-black/docs/conf.py,194,"The font size ('10pt', '11pt' or '12pt').",
-black/docs/conf.py,195,,
-black/docs/conf.py,196,"'pointsize': '10pt',",
-black/docs/conf.py,197,Additional stuff for the LaTeX preamble.,
-black/docs/conf.py,198,,
-black/docs/conf.py,199,"'preamble': '',",
-black/docs/conf.py,200,Latex figure (float) alignment,
-black/docs/conf.py,201,,
-black/docs/conf.py,202,"'figure_align': 'htbp',",
-black/docs/conf.py,205,Grouping the document tree into LaTeX files. List of tuples,
-black/docs/conf.py,206,"(source start file, target name, title,",
-black/docs/conf.py,207,"author, documentclass [howto, manual, or own class]).",
-black/docs/conf.py,219,-- Options for manual page output ------------------------------------------,
-black/docs/conf.py,221,One entry per manual page. List of tuples,
-black/docs/conf.py,222,"(source start file, name, description, authors, manual section).",
-black/docs/conf.py,226,-- Options for Texinfo output ----------------------------------------------,
-black/docs/conf.py,228,Grouping the document tree into Texinfo files. List of tuples,
-black/docs/conf.py,229,"(source start file, target name, title, author,",
-black/docs/conf.py,230,"dir menu entry, description, category)",
-black/docs/conf.py,244,-- Options for Epub output -------------------------------------------------,
-black/docs/conf.py,246,Bibliographic Dublin Core info.,
-black/docs/conf.py,252,The unique identifier of the text. This can be a ISBN number,
-black/docs/conf.py,253,or the project homepage.,
-black/docs/conf.py,254,,
-black/docs/conf.py,255,epub_identifier = '',
-black/docs/conf.py,257,A unique identification for the text.,
-black/docs/conf.py,258,,
-black/docs/conf.py,259,epub_uid = '',
-black/docs/conf.py,261,A list of files that should not be packed into the epub file.,
-black/docs/conf.py,265,-- Extension configuration -------------------------------------------------,
-black/docs/conf.py,269,-- Options for intersphinx extension ---------------------------------------,
-black/docs/conf.py,271,Example configuration for intersphinx: refer to the Python standard library.,
-black/gallery/gallery.py,13,type: ignore # typing can't see Literal,
-black/gallery/gallery.py,34,type: ignore,
-black/gallery/gallery.py,35,https://github.com/python/mypy/issues/1484,
-black/gallery/gallery.py,126,for flake8,
-black/gallery/gallery.py,225,ensure the process,
-black/gallery/gallery.py,226,continuess to run even it can't format some files. Reporting those,
-black/gallery/gallery.py,227,should be enough,
+black/setup.py,1,Copyright (C) 2020 Łukasz Langa,not
+black/setup.py,7,noqa E402,not
+black/setup.py,10,for setuptools.build_meta,not
+black/setup.py,22,"To compile with mypyc, a mypyc checkout must be present on the PYTHONPATH",not
+black/src/blib2to3/pygram.py,1,"Copyright 2006 Google, Inc. All Rights Reserved.",not
+black/src/blib2to3/pygram.py,2,Licensed to PSF under a Contributor Agreement.,not
+black/src/blib2to3/pygram.py,6,Python imports,not
+black/src/blib2to3/pygram.py,11,Local imports,not
+black/src/blib2to3/pygram.py,17,Moved into initialize because mypyc can't handle __file__ (XXX bug),not
+black/src/blib2to3/pygram.py,18,# The grammar file,not
+black/src/blib2to3/pygram.py,19,"_GRAMMAR_FILE = os.path.join(os.path.dirname(__file__), ""Grammar.txt"")",not
+black/src/blib2to3/pygram.py,20,"_PATTERN_GRAMMAR_FILE = os.path.join(os.path.dirname(__file__),",not
+black/src/blib2to3/pygram.py,21,"""PatternGrammar.txt"")",not
+black/src/blib2to3/pygram.py,166,The grammar file,not
+black/src/blib2to3/pygram.py,172,Python 2,not
+black/src/blib2to3/pygram.py,177,Python 2 + from __future__ import print_function,not
+black/src/blib2to3/pygram.py,181,Python 3.0-3.6,not
+black/src/blib2to3/pygram.py,186,Python 3.7+,not
+black/src/blib2to3/pytree.py,1,"Copyright 2006 Google, Inc. All Rights Reserved.",not
+black/src/blib2to3/pytree.py,2,Licensed to PSF under a Contributor Agreement.,not
+black/src/blib2to3/pytree.py,13,mypy: allow-untyped-defs,not
+black/src/blib2to3/pytree.py,37,"maximum repeat count, default max",not
+black/src/blib2to3/pytree.py,47,printing tokens is possible but not as useful,not
+black/src/blib2to3/pytree.py,48,from .pgen2 import token // token.__dict__.items():,not
+black/src/blib2to3/pytree.py,74,Default values for instance variables,not
+black/src/blib2to3/pytree.py,75,int: token number (< 256) or symbol number (>= 256),not
+black/src/blib2to3/pytree.py,76,"Parent node pointer, or None",not
+black/src/blib2to3/pytree.py,77,List of subnodes,not
+black/src/blib2to3/pytree.py,96,type: Any  # For Py3 compatibility.,not
+black/src/blib2to3/pytree.py,386,Default values for instance variables,not
+black/src/blib2to3/pytree.py,392,Whitespace and comments preceding this token in the input,not
+black/src/blib2to3/pytree.py,393,Line where this token starts in the input,not
+black/src/blib2to3/pytree.py,394,Column where this token starts in the input,not
+black/src/blib2to3/pytree.py,488,"If there's exactly one child, return that child instead of",not
+black/src/blib2to3/pytree.py,489,creating a new node.,not
+black/src/blib2to3/pytree.py,517,Defaults for instance variables,not
+black/src/blib2to3/pytree.py,519,"Node type (token if < 256, symbol if >= 256)",not
+black/src/blib2to3/pytree.py,520,Optional content matching pattern,not
+black/src/blib2to3/pytree.py,521,Optional name used to store match in results dict,not
+black/src/blib2to3/pytree.py,756,Protect against alterations,not
+black/src/blib2to3/pytree.py,757,Check sanity of alternatives,not
+black/src/blib2to3/pytree.py,760,Can't have zero alternatives,not
+black/src/blib2to3/pytree.py,762,Can have empty alternatives,not
+black/src/blib2to3/pytree.py,824,Shortcut for special case (see __init__.__doc__),not
+black/src/blib2to3/pytree.py,833,The reason for this is that hitting the recursion limit usually,not
+black/src/blib2to3/pytree.py,834,results in some ugly messages about how RuntimeErrors are being,SATD
+black/src/blib2to3/pytree.py,835,"ignored. We only have to do this on CPython, though, because other",not
+black/src/blib2to3/pytree.py,836,implementations don't have this nasty bug in the first place.,not
+black/src/blib2to3/pytree.py,846,We fall back to the iterative pattern matching scheme if the recursive,not
+black/src/blib2to3/pytree.py,847,scheme hits the recursion limit.,not
+black/src/blib2to3/pytree.py,863,generate matches that use just one alt from self.content,not
+black/src/blib2to3/pytree.py,869,"for each match, iterate down the nodes",not
+black/src/blib2to3/pytree.py,873,stop if the entire set of nodes has been matched,not
+black/src/blib2to3/pytree.py,888,type: _Results,not
+black/src/blib2to3/pytree.py,932,We never match a node in its entirety,not
+black/src/blib2to3/pytree.py,936,We only match an empty sequence of nodes in its entirety,not
+black/src/blib2to3/pytree.py,941,Return a match if there is an empty sequence,not
+black/src/blib2to3/pytree.py,945,Return a match if the argument pattern has no matches,not
+black/src/blib2to3/__init__.py,1,empty,not
+black/src/blib2to3/pgen2/conv.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",not
+black/src/blib2to3/pgen2/conv.py,2,Licensed to PSF under a Contributor Agreement.,not
+black/src/blib2to3/pgen2/conv.py,4,mypy: ignore-errors,not
+black/src/blib2to3/pgen2/conv.py,31,Python imports,not
+black/src/blib2to3/pgen2/conv.py,34,Local imports,not
+black/src/blib2to3/pgen2/conv.py,118,The code below essentially uses f's iterator-ness!,not
+black/src/blib2to3/pgen2/conv.py,121,Expect the two #include lines,not
+black/src/blib2to3/pgen2/conv.py,127,Parse the state definitions,not
+black/src/blib2to3/pgen2/conv.py,166,Parse the dfas,not
+black/src/blib2to3/pgen2/conv.py,197,Parse the labels,not
+black/src/blib2to3/pgen2/conv.py,218,Parse the grammar struct,not
+black/src/blib2to3/pgen2/conv.py,250,map from keyword strings to arc labels,not
+black/src/blib2to3/pgen2/conv.py,251,map from numeric token values to arc labels,not
+black/src/blib2to3/pgen2/token.py,6,Taken from Python (r53757) and modified to include some tokens,not
+black/src/blib2to3/pgen2/token.py,7,originally monkeypatched in by pgen2.tokenize,not
+black/src/blib2to3/pgen2/token.py,9,--start constants--,not
+black/src/blib2to3/pgen2/token.py,72,--end constants--,not
+black/src/blib2to3/pgen2/parse.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",not
+black/src/blib2to3/pgen2/parse.py,2,Licensed to PSF under a Contributor Agreement.,not
+black/src/blib2to3/pgen2/parse.py,13,Local imports,not
+black/src/blib2to3/pgen2/parse.py,134,"Each stack entry is a tuple: (dfa, state, node).",not
+black/src/blib2to3/pgen2/parse.py,135,"A node is a tuple: (type, value, context, children),",not
+black/src/blib2to3/pgen2/parse.py,136,"where children is a list of nodes or None, and context may be None.",not
+black/src/blib2to3/pgen2/parse.py,145,Map from token to label,not
+black/src/blib2to3/pgen2/parse.py,147,Loop until the token is shifted; may raise exceptions,not
+black/src/blib2to3/pgen2/parse.py,152,Look for a state with this label,not
+black/src/blib2to3/pgen2/parse.py,156,Look it up in the list of labels,not
+black/src/blib2to3/pgen2/parse.py,158,Shift a token; we're done with it,not
+black/src/blib2to3/pgen2/parse.py,160,Pop while we are in an accept-only state,not
+black/src/blib2to3/pgen2/parse.py,165,Done parsing!,not
+black/src/blib2to3/pgen2/parse.py,169,Done with this token,not
+black/src/blib2to3/pgen2/parse.py,172,See if it's a symbol and if we're in its first set,not
+black/src/blib2to3/pgen2/parse.py,176,Push a symbol,not
+black/src/blib2to3/pgen2/parse.py,178,To continue the outer while loop,not
+black/src/blib2to3/pgen2/parse.py,181,"An accepting state, pop it and try something else",not
+black/src/blib2to3/pgen2/parse.py,184,"Done parsing, but another token is input",not
+black/src/blib2to3/pgen2/parse.py,187,No success finding a transition,not
+black/src/blib2to3/pgen2/parse.py,193,Keep a listing of all used names,not
+black/src/blib2to3/pgen2/parse.py,196,Check for reserved words,not
+black/src/blib2to3/pgen2/driver.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",not
+black/src/blib2to3/pgen2/driver.py,2,Licensed to PSF under a Contributor Agreement.,not
+black/src/blib2to3/pgen2/driver.py,4,Modifications:,not
+black/src/blib2to3/pgen2/driver.py,5,"Copyright 2006 Google, Inc. All Rights Reserved.",not
+black/src/blib2to3/pgen2/driver.py,6,Licensed to PSF under a Contributor Agreement.,not
+black/src/blib2to3/pgen2/driver.py,18,Python imports,not
+black/src/blib2to3/pgen2/driver.py,38,Pgen imports,not
+black/src/blib2to3/pgen2/driver.py,62,XXX Move the prefix computation into a wrapper around tokenize.,SATD
+black/src/blib2to3/pgen2/driver.py,115,We never broke out -- EOF is too soon (how can this happen???),not
+black/src/blib2to3/pgen2/driver.py,164,unexpected empty line,not
+black/src/blib2to3/pgen2/driver.py,167,indent is finished,not
+black/src/blib2to3/pgen2/grammar.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",not
+black/src/blib2to3/pgen2/grammar.py,2,Licensed to PSF under a Contributor Agreement.,not
+black/src/blib2to3/pgen2/grammar.py,15,Python imports,not
+black/src/blib2to3/pgen2/grammar.py,21,Local imports,not
+black/src/blib2to3/pgen2/grammar.py,95,"Python 3.7+ parses async as a keyword, not an identifier",not
+black/src/blib2to3/pgen2/grammar.py,101,"mypyc generates objects that don't have a __dict__, but they",not
+black/src/blib2to3/pgen2/grammar.py,102,do have __getstate__ methods that will return an equivalent,not
+black/src/blib2to3/pgen2/grammar.py,103,dictionary,not
+black/src/blib2to3/pgen2/grammar.py,107,type: ignore,not
+black/src/blib2to3/pgen2/grammar.py,166,Map from operator to number (since tokenize doesn't do this),not
+black/src/blib2to3/pgen2/literals.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",not
+black/src/blib2to3/pgen2/literals.py,2,Licensed to PSF under a Contributor Agreement.,not
+black/src/blib2to3/pgen2/__init__.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",not
+black/src/blib2to3/pgen2/__init__.py,2,Licensed to PSF under a Contributor Agreement.,not
+black/src/blib2to3/pgen2/tokenize.py,1,"Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006 Python Software Foundation.",not
+black/src/blib2to3/pgen2/tokenize.py,2,All rights reserved.,not
+black/src/blib2to3/pgen2/tokenize.py,4,"mypy: allow-untyped-defs, allow-untyped-calls",not
+black/src/blib2to3/pgen2/tokenize.py,81,this is invalid but it's fine because Name comes after Number in all groups,not
+black/src/blib2to3/pgen2/tokenize.py,99,Tail end of ' string.,not
+black/src/blib2to3/pgen2/tokenize.py,101,"Tail end of "" string.",not
+black/src/blib2to3/pgen2/tokenize.py,103,Tail end of ''' string.,not
+black/src/blib2to3/pgen2/tokenize.py,105,"Tail end of """""" string.",not
+black/src/blib2to3/pgen2/tokenize.py,109,"Single-line ' or "" string.",not
+black/src/blib2to3/pgen2/tokenize.py,115,"Because of leftmost-then-longest match semantics, be sure to put the",not
+black/src/blib2to3/pgen2/tokenize.py,116,"longest operators first (e.g., if = came before ==, == would get",not
+black/src/blib2to3/pgen2/tokenize.py,117,recognized as two instances of =).,not
+black/src/blib2to3/pgen2/tokenize.py,134,"First (or only) line of ' or "" string.",not
+black/src/blib2to3/pgen2/tokenize.py,184,for testing,not
+black/src/blib2to3/pgen2/tokenize.py,215,backwards compatible interface,not
+black/src/blib2to3/pgen2/tokenize.py,294,Only care about the first 12 characters.,not
+black/src/blib2to3/pgen2/tokenize.py,345,This behaviour mimics the Python interpreter,not
+black/src/blib2to3/pgen2/tokenize.py,350,This behaviour mimics the Python interpreter,not
+black/src/blib2to3/pgen2/tokenize.py,426,"If we know we're parsing 3.7+, we can unconditionally parse `async` and",not
+black/src/blib2to3/pgen2/tokenize.py,427,`await` as keywords.,not
+black/src/blib2to3/pgen2/tokenize.py,429,'stashed' and 'async_*' are used for async/await parsing,not
+black/src/blib2to3/pgen2/tokenize.py,438,loop over lines in stream,not
+black/src/blib2to3/pgen2/tokenize.py,446,continued string,not
+black/src/blib2to3/pgen2/tokenize.py,478,new statement,not
+black/src/blib2to3/pgen2/tokenize.py,482,measure leading whitespace,not
+black/src/blib2to3/pgen2/tokenize.py,499,skip blank lines,not
+black/src/blib2to3/pgen2/tokenize.py,503,skip comments,not
+black/src/blib2to3/pgen2/tokenize.py,516,count indents,not
+black/src/blib2to3/pgen2/tokenize.py,520,count dedents,not
+black/src/blib2to3/pgen2/tokenize.py,540,continued statement,not
+black/src/blib2to3/pgen2/tokenize.py,547,scan for tokens,not
+black/src/blib2to3/pgen2/tokenize.py,554,ordinary number,not
+black/src/blib2to3/pgen2/tokenize.py,576,all on one line,not
+black/src/blib2to3/pgen2/tokenize.py,584,multiple lines,not
+black/src/blib2to3/pgen2/tokenize.py,593,continued string,not
+black/src/blib2to3/pgen2/tokenize.py,603,ordinary string,not
+black/src/blib2to3/pgen2/tokenize.py,608,ordinary name,not
+black/src/blib2to3/pgen2/tokenize.py,646,continued stmt,not
+black/src/blib2to3/pgen2/tokenize.py,647,This yield is new; needed for better idempotency:,SATD
+black/src/blib2to3/pgen2/tokenize.py,670,pop remaining indent levels,not
+black/src/blib2to3/pgen2/tokenize.py,675,testing,not
+black/src/blib2to3/pgen2/pgen.py,1,"Copyright 2004-2005 Elemental Security, Inc. All Rights Reserved.",not
+black/src/blib2to3/pgen2/pgen.py,2,Licensed to PSF under a Contributor Agreement.,not
+black/src/blib2to3/pgen2/pgen.py,4,Pgen imports,not
+black/src/blib2to3/pgen2/pgen.py,48,Initialize lookahead,not
+black/src/blib2to3/pgen2/pgen.py,52,map from symbol name to set of tokens,not
+black/src/blib2to3/pgen2/pgen.py,86,assert ilabel not in first # XXX failed on <> ... !=,SATD
+black/src/blib2to3/pgen2/pgen.py,91,XXX Maybe this should be a method on a subclass of converter?,SATD
+black/src/blib2to3/pgen2/pgen.py,94,Either a symbol name or a named token,not
+black/src/blib2to3/pgen2/pgen.py,96,A symbol name (a non-terminal),not
+black/src/blib2to3/pgen2/pgen.py,104,"A named token (NAME, NUMBER, STRING)",not
+black/src/blib2to3/pgen2/pgen.py,115,Either a keyword or an operator,not
+black/src/blib2to3/pgen2/pgen.py,119,A keyword,not
+black/src/blib2to3/pgen2/pgen.py,127,An operator (any non-numeric token),not
+black/src/blib2to3/pgen2/pgen.py,128,Fails if unknown token,not
+black/src/blib2to3/pgen2/pgen.py,142,"print name, self.first[name].keys()",not
+black/src/blib2to3/pgen2/pgen.py,146,dummy to detect left recursion,not
+black/src/blib2to3/pgen2/pgen.py,180,MSTART: (NEWLINE | RULE)* ENDMARKER,not
+black/src/blib2to3/pgen2/pgen.py,184,RULE: NAME ':' RHS NEWLINE,not
+black/src/blib2to3/pgen2/pgen.py,189,"self.dump_nfa(name, a, z)",not
+black/src/blib2to3/pgen2/pgen.py,191,"self.dump_dfa(name, dfa)",not
+black/src/blib2to3/pgen2/pgen.py,196,"print name, oldlen, newlen",not
+black/src/blib2to3/pgen2/pgen.py,203,"To turn an NFA into a DFA, we define the states of the DFA",not
+black/src/blib2to3/pgen2/pgen.py,204,to correspond to *sets* of states of the NFA.  Then do some,not
+black/src/blib2to3/pgen2/pgen.py,205,state reduction.  Let's represent sets as dicts with 1 for,not
+black/src/blib2to3/pgen2/pgen.py,206,values.,not
+black/src/blib2to3/pgen2/pgen.py,225,NB states grows while we're iterating,not
+black/src/blib2to3/pgen2/pgen.py,239,List of DFAState instances; first one is start,not
+black/src/blib2to3/pgen2/pgen.py,265,"This is not theoretically optimal, but works well enough.",not
+black/src/blib2to3/pgen2/pgen.py,266,Algorithm: repeatedly look for two states that have the same,not
+black/src/blib2to3/pgen2/pgen.py,267,set of arcs (same labels pointing to the same nodes) and,not
+black/src/blib2to3/pgen2/pgen.py,268,"unify them, until things stop changing.",not
+black/src/blib2to3/pgen2/pgen.py,270,dfa is a list of DFAState instances,not
+black/src/blib2to3/pgen2/pgen.py,278,"print ""  unify"", i, j",not
+black/src/blib2to3/pgen2/pgen.py,286,RHS: ALT ('|' ALT)*,not
+black/src/blib2to3/pgen2/pgen.py,303,ALT: ITEM+,not
+black/src/blib2to3/pgen2/pgen.py,312,ITEM: '[' RHS ']' | ATOM ['+' | '*'],not
+black/src/blib2to3/pgen2/pgen.py,332,ATOM: '(' RHS ')' | NAME | STRING,not
+black/src/blib2to3/pgen2/pgen.py,364,"print token.tok_name[self.type], repr(self.value)",not
+black/src/blib2to3/pgen2/pgen.py,379,"list of (label, NFAState) pairs",not
+black/src/blib2to3/pgen2/pgen.py,398,map from label to DFAState,not
+black/src/blib2to3/pgen2/pgen.py,412,Equality test -- ignore the nfaset instance variable,not
+black/src/blib2to3/pgen2/pgen.py,416,"Can't just return self.arcs == other.arcs, because that",not
+black/src/blib2to3/pgen2/pgen.py,417,"would invoke this method recursively, with cycles...",not
+black/src/blib2to3/pgen2/pgen.py,425,For Py3 compatibility.,not
+black/src/blackd/__init__.py,16,This is used internally by tests to shut down the server prematurely,not
+black/src/blackd/__init__.py,19,Request headers,not
+black/src/blackd/__init__.py,36,Response headers,not
+black/src/blackd/__init__.py,125,Only output the diff in the HTTP response,not
+black/src/blackd/__init__.py,176,Default to lowest supported minor version.,not
+black/src/black/__init__.py,55,lib2to3 fork,not
+black/src/black/__init__.py,65,noqa: F401,not
+black/src/black/__init__.py,68,noqa: B950,not
+black/src/black/__init__.py,72,All possible string prefix characters.,not
+black/src/black/__init__.py,75,types,not
+black/src/black/__init__.py,135,The 'Result' return type is used to implement an error-handling model heavily,not
+black/src/black/__init__.py,136,influenced by that used by the Rust programming language,not
+black/src/black/__init__.py,137,(see https://doc.rust-lang.org/book/ch09-00-error-handling.html).,not
+black/src/black/__init__.py,139,(T)ransform Result,not
+black/src/black/__init__.py,186,All string literals are unicode,not
+black/src/black/__init__.py,192,"The following two feature-flags are mutually exclusive, and exactly one should be",not
+black/src/black/__init__.py,193,set for every version of python.,not
+black/src/black/__init__.py,262,"Legacy name, left for integrations.",not
+black/src/black/__init__.py,493,We'll autodetect later.,not
+black/src/black/__init__.py,661,Work around https://bugs.python.org/issue26903,not
+black/src/black/__init__.py,666,we arrive here if the underlying system does not support multi-processing,not
+black/src/black/__init__.py,667,"like in AWS Lambda or Termux, in which case we gracefully fallback to",not
+black/src/black/__init__.py,668,a ThreadPollExecutor with just a single worker (more workers would not do us,not
+black/src/black/__init__.py,669,any good due to the Global Interpreter Lock),not
+black/src/black/__init__.py,719,"For diff output, we need locks to ensure we don't interleave output",not
+black/src/black/__init__.py,720,from different processes.,not
+black/src/black/__init__.py,736,There are no good alternatives for these on Windows.,not
+black/src/black/__init__.py,748,If the file was written back or was successfully checked as,not
+black/src/black/__init__.py,749,"well-formatted, store this information in the cache.",not
+black/src/black/__init__.py,766,multiprocessing.Manager().Lock() is some crazy proxy,not
+black/src/black/__init__.py,816,"bold white, reset",not
+black/src/black/__init__.py,818,"cyan, reset",not
+black/src/black/__init__.py,820,"green, reset",not
+black/src/black/__init__.py,822,"red, reset",not
+black/src/black/__init__.py,840,We set `strip=False` so that we can don't have to modify,not
+black/src/black/__init__.py,841,test_express_diff_with_color.,not
+black/src/black/__init__.py,846,wrap_stream returns a `colorama.AnsiToWin32.AnsiToWin32` object,not
+black/src/black/__init__.py,847,which does not have a `detach()` method. So we fake one.,not
+black/src/black/__init__.py,848,type: ignore,not
+black/src/black/__init__.py,996,"No target_version specified, so try all grammars.",not
+black/src/black/__init__.py,998,Python 3.7+,not
+black/src/black/__init__.py,1000,Python 3.0-3.6,not
+black/src/black/__init__.py,1002,Python 2.7 with future print_function import,not
+black/src/black/__init__.py,1004,Python 2.7,not
+black/src/black/__init__.py,1009,"Python 2-only code, so try Python 2 grammars.",not
+black/src/black/__init__.py,1011,Python 2.7 with future print_function import,not
+black/src/black/__init__.py,1013,Python 2.7,not
+black/src/black/__init__.py,1017,"Python 3-compatible code, so only try Python 3 grammar.",not
+black/src/black/__init__.py,1019,"If we have to parse both, try to parse async as a keyword first",not
+black/src/black/__init__.py,1021,Python 3.7+,not
+black/src/black/__init__.py,1026,Python 3.0-3.6,not
+black/src/black/__init__.py,1028,"At least one of the above branches must have been taken, because every Python",not
+black/src/black/__init__.py,1029,version has exactly one of the two 'ASYNC_*' flags,not
+black/src/black/__init__.py,1083,We explicitly branch on whether a visitor exists (instead of,not
+black/src/black/__init__.py,1084,using self.visit_default as the default arg to getattr) in order,not
+black/src/black/__init__.py,1085,to save needing to create a bound method object and so mypyc can,not
+black/src/black/__init__.py,1086,generate a native call to visit_default.,not
+black/src/black/__init__.py,1119,We don't have to handle prefixes for `Node` objects since,not
+black/src/black/__init__.py,1120,that delegates to the first child anyway.,not
+black/src/black/__init__.py,1178,double star in arglist,not
+black/src/black/__init__.py,1179,single argument to call,not
+black/src/black/__init__.py,1181,lambdas,not
+black/src/black/__init__.py,1184,single element of a list or set literal,not
+black/src/black/__init__.py,1386,keys ordered like `leaves`,not
+black/src/black/__init__.py,1409,Note: at this point leaf.prefix should be empty except for,not
+black/src/black/__init__.py,1410,"imports, for which we only preserve newlines.",not
+black/src/black/__init__.py,1477,Look for and address a trailing colon.,not
+black/src/black/__init__.py,1488,"Tuples require an extra check, because if there's only",not
+black/src/black/__init__.py,1489,one element in the tuple removing the comma unmakes the,not
+black/src/black/__init__.py,1490,tuple.,not
+black/src/black/__init__.py,1491,,not
+black/src/black/__init__.py,1492,We also check for parens before looking for the trailing,not
+black/src/black/__init__.py,1493,comma because in some cases (eg assigning a dict,not
+black/src/black/__init__.py,1494,literal) the literal gets wrapped in temporary parens,not
+black/src/black/__init__.py,1495,during parsing. This case is covered by the,not
+black/src/black/__init__.py,1496,collections.py test data.,not
+black/src/black/__init__.py,1503,"Couldn't find the matching opening paren, play it safe.",not
+black/src/black/__init__.py,1512,We haven't looked yet for the trailing comma because,not
+black/src/black/__init__.py,1513,we might also have caught noop parens.,not
+black/src/black/__init__.py,1517,it's either a one-tuple or didn't have a trailing comma,not
+black/src/black/__init__.py,1523,TODO: this is a gut feeling. Will we ever see this?,SATD
+black/src/black/__init__.py,1591,When trailing commas or optional parens are inserted by Black for,not
+black/src/black/__init__.py,1592,"consistency, comments after the previous last element are not moved",not
+black/src/black/__init__.py,1593,"(they don't have to, rendering will still be correct).  So we ignore",not
+black/src/black/__init__.py,1594,trailing commas and invisible.,not
+black/src/black/__init__.py,1600,A type comment is uncollapsable if it is attached to a leaf,not
+black/src/black/__init__.py,1601,that isn't at the end of the line (since that could cause it,not
+black/src/black/__init__.py,1602,to get associated to a different argument) or if there are,not
+black/src/black/__init__.py,1603,comments before it (since that could cause it to get hidden,not
+black/src/black/__init__.py,1604,behind a comment.,not
+black/src/black/__init__.py,1623,"If a 'type: ignore' is attached to the end of a line, we",not
+black/src/black/__init__.py,1624,"can't split the line, because we can't know which of the",not
+black/src/black/__init__.py,1625,subexpressions the ignore was meant to apply to.,not
+black/src/black/__init__.py,1626,,not
+black/src/black/__init__.py,1627,We only want this to apply to actual physical lines from the,not
+black/src/black/__init__.py,1628,"original source, though: we don't want the presence of a",not
+black/src/black/__init__.py,1629,'type: ignore' at the end of a multiline expression to,not
+black/src/black/__init__.py,1630,justify pushing it all onto one line. Thus we,not
+black/src/black/__init__.py,1631,(unfortunately) need to check the actual source lines and,not
+black/src/black/__init__.py,1632,only report an unsplittable 'type: ignore' if this line was,not
+black/src/black/__init__.py,1633,one line in the original code.,not
+black/src/black/__init__.py,1635,"Grab the first and last line numbers, skipping generated leaves",not
+black/src/black/__init__.py,1640,We look at the last two leaves since a comma or an,not
+black/src/black/__init__.py,1641,invisible paren could have been added at the end of the,not
+black/src/black/__init__.py,1642,line.,not
+black/src/black/__init__.py,1658,We remove trailing commas only in the case of importing a,not
+black/src/black/__init__.py,1659,single name from a module.,not
+black/src/black/__init__.py,1668,"regular `from foo import bar,`",not
+black/src/black/__init__.py,1670,"`from foo import (bar as baz,)",not
+black/src/black/__init__.py,1676,"`from foo import bar as baz,`",not
+black/src/black/__init__.py,1715,Comments on an optional parens wrapping a single leaf should belong to,not
+black/src/black/__init__.py,1716,the wrapped node except if it's a type comment. Pinning the comment like,not
+black/src/black/__init__.py,1717,this avoids unstable formatting caused by comment migration.,not
+black/src/black/__init__.py,1808,Black should not insert empty lines at the beginning,not
+black/src/black/__init__.py,1809,of the file,not
+black/src/black/__init__.py,1823,Consume the first leaf's extra newlines.,not
+black/src/black/__init__.py,1863,Don't insert empty lines before the first line in the file.,not
+black/src/black/__init__.py,1886,No blank line between classes with an empty body,not
+black/src/black/__init__.py,1891,Blank line between a block of functions and a block of non-functions,not
+black/src/black/__init__.py,1925,"Line is empty, don't emit. Creating a new one unnecessary.",not
+black/src/black/__init__.py,1937,any comment within brackets is subject to splitting,not
+black/src/black/__init__.py,1940,regular trailing comment,not
+black/src/black/__init__.py,1945,regular standalone comment,not
+black/src/black/__init__.py,1963,In blib2to3 INDENT never holds comments.,not
+black/src/black/__init__.py,1969,The current line might still wait for trailing comments.  At DEDENT time,not
+black/src/black/__init__.py,1970,there won't be any (they would be prefixes on the preceding NEWLINE).,not
+black/src/black/__init__.py,1971,Emit the line then.,not
+black/src/black/__init__.py,1974,"While DEDENT has no value, its prefix may contain standalone comments",not
+black/src/black/__init__.py,1975,that belong to the current indentation level.  Get 'em.,not
+black/src/black/__init__.py,1978,"Finally, emit the dedent.",not
+black/src/black/__init__.py,1997,type: ignore,not
+black/src/black/__init__.py,2078,Check if it's a docstring,not
+black/src/black/__init__.py,2122,noqa: C901,not
+black/src/black/__init__.py,2174,"A bit hacky: if the equal sign has whitespace, it means we",SATD
+black/src/black/__init__.py,2175,"previously found it's a typed argument.  So, we're using",not
+black/src/black/__init__.py,2176,"that, too.",not
+black/src/black/__init__.py,2200,type: ignore,not
+black/src/black/__init__.py,2202,Python 2 print chevron,not
+black/src/black/__init__.py,2209,untyped function signatures or calls,not
+black/src/black/__init__.py,2214,lambdas,not
+black/src/black/__init__.py,2219,typed function signatures,not
+black/src/black/__init__.py,2228,"A bit hacky: if the equal sign has whitespace, it means we",SATD
+black/src/black/__init__.py,2229,"previously found it's a typed argument.  So, we're using that, too.",not
+black/src/black/__init__.py,2236,type names,not
+black/src/black/__init__.py,2243,attributes and calls,not
+black/src/black/__init__.py,2260,single argument,not
+black/src/black/__init__.py,2273,decorators,not
+black/src/black/__init__.py,2292,indexing,not
+black/src/black/__init__.py,2305,"dots, but not the first one.",not
+black/src/black/__init__.py,2309,dict unpacking,not
+black/src/black/__init__.py,2314,unary ops,not
+black/src/black/__init__.py,2442,* and ** might also be MATH_OPERATORS but in this case they are not.,not
+black/src/black/__init__.py,2443,Don't treat them as a delimiter.,not
+black/src/black/__init__.py,2568,token.COMMENT or STANDALONE_COMMENT,not
+black/src/black/__init__.py,2569,content of the comment,not
+black/src/black/__init__.py,2570,how many newlines before the comment,not
+black/src/black/__init__.py,2571,how many characters of the original leaf's prefix did we consume,not
+black/src/black/__init__.py,2585,adding the length of the split '\n',not
+black/src/black/__init__.py,2590,Escaped newlines outside of a comment are not really newlines at,not
+black/src/black/__init__.py,2591,all. We treat a single-line comment following an escaped newline,not
+black/src/black/__init__.py,2592,as a simple trailing comment.,not
+black/src/black/__init__.py,2598,simple trailing comment,not
+black/src/black/__init__.py,2668,"Only apply basic string preprocessing, since lines shouldn't be split here.",not
+black/src/black/__init__.py,2681,"All splits failed, best effort split with no omits.",SATD
+black/src/black/__init__.py,2682,This mostly happens to multiline strings that are by definition,not
+black/src/black/__init__.py,2683,reported as not fitting a single line.,not
+black/src/black/__init__.py,2684,line_length=1 here was historically a bug that somehow became a feature.,not
+black/src/black/__init__.py,2685,See #762 and #781 for the full story.,not
+black/src/black/__init__.py,2708,We are accumulating lines in `result` because we might want to abort,not
+black/src/black/__init__.py,2709,"mission and return the original line in the end, or attempt a different",not
+black/src/black/__init__.py,2710,split altogether.,not
+black/src/black/__init__.py,2737,type: ignore,not
+black/src/black/__init__.py,2806,Optimization to avoid calling `self.do_match(...)` when the line does,not
+black/src/black/__init__.py,2807,not contain any string.,not
+black/src/black/__init__.py,2977,Chain the errors together using `__cause__`.,not
+black/src/black/__init__.py,3040,"If the string group is wrapped inside an Atom node, we must make sure",not
+black/src/black/__init__.py,3041,to later replace that Atom with our new (merged) string leaf.,not
+black/src/black/__init__.py,3044,We will place BREAK_MARK in between every two substrings that we,not
+black/src/black/__init__.py,3045,merge. We will then later go through our final result and use the,not
+black/src/black/__init__.py,3046,various instances of BREAK_MARK we find to add the right values to,not
+black/src/black/__init__.py,3047,the custom split map.,SATD
+black/src/black/__init__.py,3073,Holds the CustomSplit objects that will later be added to the custom,not
+black/src/black/__init__.py,3074,split map.,not
+black/src/black/__init__.py,3077,Temporary storage for the 'has_prefix' part of the CustomSplit objects.,not
+black/src/black/__init__.py,3080,Sets the 'prefix' variable. This is the prefix that the final merged,not
+black/src/black/__init__.py,3081,string will have.,not
+black/src/black/__init__.py,3092,The next loop merges the string group. The final string will be,not
+black/src/black/__init__.py,3093,contained in 'S'.,not
+black/src/black/__init__.py,3094,,not
+black/src/black/__init__.py,3095,The following convenience variables are used:,not
+black/src/black/__init__.py,3096,,not
+black/src/black/__init__.py,3097,S: string,not
+black/src/black/__init__.py,3098,NS: naked string,not
+black/src/black/__init__.py,3099,SS: next string,not
+black/src/black/__init__.py,3100,NSS: naked next string,not
+black/src/black/__init__.py,3111,If this is an f-string group but this substring is not prefixed,not
+black/src/black/__init__.py,3112,with 'f'...,not
+black/src/black/__init__.py,3114,Then we must escape any braces contained in this substring.,not
+black/src/black/__init__.py,3131,Fill the 'custom_splits' list with the appropriate CustomSplit objects.,not
+black/src/black/__init__.py,3148,Build the final line ('new_line') that this method will later return.,not
+black/src/black/__init__.py,3187,"If the string group is trailed by a comma, we count the",not
+black/src/black/__init__.py,3188,comments trailing the comma to be one of the string group's,not
+black/src/black/__init__.py,3189,comments.,not
+black/src/black/__init__.py,3248,Should be a string...,not
+black/src/black/__init__.py,3252,Should be preceded by a non-empty LPAR...,not
+black/src/black/__init__.py,3260,That LPAR should NOT be preceded by a function name or a closing,not
+black/src/black/__init__.py,3261,bracket (which could be a function which returns a function or a,not
+black/src/black/__init__.py,3262,list/dictionary that contains a function)...,not
+black/src/black/__init__.py,3270,"Skip the string trailer, if one exists.",not
+black/src/black/__init__.py,3274,Should be followed by a non-empty RPAR...,not
+black/src/black/__init__.py,3280,That RPAR should NOT be followed by a '.' symbol.,not
+black/src/black/__init__.py,3426,"We use the shorthand ""WMA4"" in comments to abbreviate ""We must",not
+black/src/black/__init__.py,3427,"account for"". When giving examples, we use STRING to mean some/any",not
+black/src/black/__init__.py,3428,valid string.,not
+black/src/black/__init__.py,3429,,not
+black/src/black/__init__.py,3430,"Finally, we use the following convenience variables:",not
+black/src/black/__init__.py,3431,,not
+black/src/black/__init__.py,3432,P:  The leaf that is before the target string leaf.,not
+black/src/black/__init__.py,3433,N:  The leaf that is after the target string leaf.,not
+black/src/black/__init__.py,3434,NN: The leaf that is after N.,not
+black/src/black/__init__.py,3436,WMA4 the whitespace at the beginning of the line.,not
+black/src/black/__init__.py,3446,"If the previous leaf is an empty LPAR placeholder, we should skip it.",not
+black/src/black/__init__.py,3451,WMA4 a space and a '+' character (e.g. `+ STRING`).,not
+black/src/black/__init__.py,3455,"WMA4 a space, a comma, and a closing bracket [e.g. `), STRING`].",not
+black/src/black/__init__.py,3459,"This conditional branch is meant to handle dictionary keys,",not
+black/src/black/__init__.py,3460,"variable assignments, 'return STRING' statement lines, and",not
+black/src/black/__init__.py,3461,'else STRING' ternary expression lines.,not
+black/src/black/__init__.py,3463,WMA4 a single space.,not
+black/src/black/__init__.py,3466,WMA4 the lengths of any leaves that came before that space.,not
+black/src/black/__init__.py,3473,"If the next leaf is an empty RPAR placeholder, we should skip it.",not
+black/src/black/__init__.py,3477,"WMA4 a single comma at the end of the string (e.g `STRING,`).",not
+black/src/black/__init__.py,3484,This conditional branch is meant to handle method calls invoked,not
+black/src/black/__init__.py,3485,off of a string literal up to and including the LPAR character.,not
+black/src/black/__init__.py,3487,WMA4 the '.' character.,not
+black/src/black/__init__.py,3494,WMA4 the left parenthesis character.,not
+black/src/black/__init__.py,3497,WMA4 the length of the method's name.,not
+black/src/black/__init__.py,3504,WMA4 two spaces before the '#' character.,not
+black/src/black/__init__.py,3507,WMA4 the length of the inline comment.,not
+black/src/black/__init__.py,3552,"Matches an ""f-expression"" (e.g. {var}) that might be found in an f-string.",not
+black/src/black/__init__.py,3570,The first leaf MAY be a '+' symbol...,not
+black/src/black/__init__.py,3574,The next/first leaf MAY be an empty LPAR...,not
+black/src/black/__init__.py,3578,The next/first leaf MUST be a string...,not
+black/src/black/__init__.py,3584,"Skip the string trailer, if one exists.",not
+black/src/black/__init__.py,3588,That string MAY be followed by an empty RPAR...,not
+black/src/black/__init__.py,3592,That string / empty RPAR leaf MAY be followed by a comma...,not
+black/src/black/__init__.py,3596,But no more leaves are allowed...,not
+black/src/black/__init__.py,3612,We MAY choose to drop the 'f' prefix from substrings that don't,not
+black/src/black/__init__.py,3613,"contain any f-expressions, but ONLY if the original f-string",not
+black/src/black/__init__.py,3614,"containes at least one f-expression. Otherwise, we will alter the AST",not
+black/src/black/__init__.py,3615,of the program.,not
+black/src/black/__init__.py,3655,--- Calculate Max Break Index (for string value),not
+black/src/black/__init__.py,3656,We start with the line length limit,not
+black/src/black/__init__.py,3658,The last index of a string of length N is N-1.,not
+black/src/black/__init__.py,3660,Leading whitespace is not present in the string value (e.g. Leaf.value).,not
+black/src/black/__init__.py,3669,Check if StringMerger registered any custom splits.,not
+black/src/black/__init__.py,3671,We use them ONLY if none of them would produce lines that exceed the,not
+black/src/black/__init__.py,3672,line limit.,not
+black/src/black/__init__.py,3678,Temporary storage for the remaining chunk of the string line that,not
+black/src/black/__init__.py,3679,can't fit onto the line currently being constructed.,not
+black/src/black/__init__.py,3696,Custom User Split (manual),SATD
+black/src/black/__init__.py,3700,Algorithmic Split (automatic),not
+black/src/black/__init__.py,3704,If we are unable to algorthmically determine a good split,not
+black/src/black/__init__.py,3705,"and this string has custom splits registered to it, we",not
+black/src/black/__init__.py,3706,fall back to using them--which means we have to start,not
+black/src/black/__init__.py,3707,over from the beginning.,not
+black/src/black/__init__.py,3715,"Otherwise, we stop splitting here.",not
+black/src/black/__init__.py,3720,--- Construct `next_value`,not
+black/src/black/__init__.py,3723,Are we allowed to try to drop a pointless 'f' prefix?,not
+black/src/black/__init__.py,3725,"If we are, will we be successful?",not
+black/src/black/__init__.py,3728,"If the current custom split did NOT originally use a prefix,",not
+black/src/black/__init__.py,3729,then `csplit.break_idx` will be off by one after removing,not
+black/src/black/__init__.py,3730,the 'f' prefix.,not
+black/src/black/__init__.py,3739,--- Construct `next_leaf`,not
+black/src/black/__init__.py,3744,--- Construct `next_line`,not
+black/src/black/__init__.py,3761,NOTE: I could not find a test case that verifies that the following,not
+black/src/black/__init__.py,3762,"line is actually necessary, but it seems to be. Otherwise we risk",not
+black/src/black/__init__.py,3763,"not normalizing the last substring, right?",not
+black/src/black/__init__.py,3769,If there are any leaves to the right of the target string...,not
+black/src/black/__init__.py,3771,We use `temp_value` here to determine how long the last line,not
+black/src/black/__init__.py,3772,would be if we were to append all the leaves to the right of the,not
+black/src/black/__init__.py,3773,target string to the last string line.,not
+black/src/black/__init__.py,3780,Try to fit them all on the same line with the last substring...,not
+black/src/black/__init__.py,3788,"Otherwise, place the last substring on one line and everything",not
+black/src/black/__init__.py,3789,else on a line below that...,not
+black/src/black/__init__.py,3797,Else the target string was the last leaf...,not
+black/src/black/__init__.py,3880,"First, we check all indices BELOW @max_break_idx.",not
+black/src/black/__init__.py,3886,"If that fails, we check all indices ABOVE @max_break_idx.",not
+black/src/black/__init__.py,3887,,not
+black/src/black/__init__.py,3888,"If we are able to find a valid index here, the next line is going",not
+black/src/black/__init__.py,3889,"to be longer than the specified line length, but it's probably",not
+black/src/black/__init__.py,3890,better than doing nothing at all.,SATD
+black/src/black/__init__.py,3993,If the string has no spaces...,not
+black/src/black/__init__.py,3995,And will still violate the line length limit when split...,not
+black/src/black/__init__.py,3998,And has no associated custom splits...,not
+black/src/black/__init__.py,4000,Then we should NOT put this string on its own line.,not
+black/src/black/__init__.py,4021,If this line is apart of a return/yield statement and the first leaf,not
+black/src/black/__init__.py,4022,"contains either the ""return"" or ""yield"" keywords...",not
+black/src/black/__init__.py,4029,The next visible leaf MUST contain a string...,not
+black/src/black/__init__.py,4046,If this line is apart of a ternary expression and the first leaf,not
+black/src/black/__init__.py,4047,"contains the ""else"" keyword...",not
+black/src/black/__init__.py,4056,The next visible leaf MUST contain a string...,not
+black/src/black/__init__.py,4073,If this line is apart of an assert statement and the first leaf,not
+black/src/black/__init__.py,4074,"contains the ""assert"" keyword...",not
+black/src/black/__init__.py,4079,We MUST find a comma...,not
+black/src/black/__init__.py,4083,That comma MUST be followed by a string...,not
+black/src/black/__init__.py,4087,"Skip the string trailer, if one exists.",not
+black/src/black/__init__.py,4091,But no more leaves are allowed...,not
+black/src/black/__init__.py,4108,If this line is apart of an expression statement or is a function,not
+black/src/black/__init__.py,4109,argument AND the first leaf contains a variable name...,not
+black/src/black/__init__.py,4117,We MUST find either an '=' or '+=' symbol...,not
+black/src/black/__init__.py,4121,That symbol MUST be followed by a string...,not
+black/src/black/__init__.py,4125,"Skip the string trailer, if one exists.",not
+black/src/black/__init__.py,4129,The next leaf MAY be a comma iff this line is apart,not
+black/src/black/__init__.py,4130,of a function argument...,not
+black/src/black/__init__.py,4138,But no more leaves are allowed...,not
+black/src/black/__init__.py,4155,If this line is apart of a dictionary key assignment...,not
+black/src/black/__init__.py,4160,We MUST find a colon...,not
+black/src/black/__init__.py,4164,That colon MUST be followed by a string...,not
+black/src/black/__init__.py,4168,"Skip the string trailer, if one exists.",not
+black/src/black/__init__.py,4172,That string MAY be followed by a comma...,not
+black/src/black/__init__.py,4176,But no more leaves are allowed...,not
+black/src/black/__init__.py,4197,--- First Line,not
+black/src/black/__init__.py,4201,We have to remember to account for (possibly invisible) LPAR and RPAR,not
+black/src/black/__init__.py,4202,leaves that already wrapped the target string. If these leaves do,not
+black/src/black/__init__.py,4203,"exist, we will replace them with our own LPAR and RPAR leaves.",not
+black/src/black/__init__.py,4219,We throw inline comments that were originally to the right of the,not
+black/src/black/__init__.py,4220,target string to the top line. They will now be shown to the right of,not
+black/src/black/__init__.py,4221,the LPAR.,not
+black/src/black/__init__.py,4228,--- Middle (String) Line,not
+black/src/black/__init__.py,4229,"We only need to yield one (possibly too long) string line, since the",not
+black/src/black/__init__.py,4230,`StringSplitter` will break it down further if necessary.,not
+black/src/black/__init__.py,4257,--- Last Line,not
+black/src/black/__init__.py,4268,"If the target string ended with a comma, we place this comma to the",not
+black/src/black/__init__.py,4269,right of the RPAR on the last line.,not
+black/src/black/__init__.py,4310,String Parser States,not
+black/src/black/__init__.py,4320,Lookup Table for Next State,not
+black/src/black/__init__.py,4322,A string trailer may start with '.' OR '%'.,not
+black/src/black/__init__.py,4326,A '.' MUST be followed by an attribute or method name.,not
+black/src/black/__init__.py,4328,"A method name MUST be followed by an '(', whereas an attribute name",not
+black/src/black/__init__.py,4329,is the last symbol in the string trailer.,not
+black/src/black/__init__.py,4332,A '%' symbol can be followed by an '(' or a single argument (e.g. a,not
+black/src/black/__init__.py,4333,string or variable name).,not
+black/src/black/__init__.py,4336,"If a '%' symbol is followed by a single argument, that argument is",not
+black/src/black/__init__.py,4337,the last leaf in the string trailer.,not
+black/src/black/__init__.py,4339,"If present, a ')' symbol is the last symbol in a string trailer.",not
+black/src/black/__init__.py,4340,"(NOTE: LPARS and nested RPARS are not included in this lookup table,",not
+black/src/black/__init__.py,4341,since they are treated as a special case by the parsing logic in this,not
+black/src/black/__init__.py,4342,classes' implementation.),not
+black/src/black/__init__.py,4381,We ignore empty LPAR or RPAR leaves.,not
+black/src/black/__init__.py,4391,The LPAR parser state is a special case. We will return True until we,not
+black/src/black/__init__.py,4392,find the matching RPAR token.,not
+black/src/black/__init__.py,4398,"Otherwise, we use a lookup table to determine the next state.",not
+black/src/black/__init__.py,4400,If the lookup table matches the current state to the next,not
+black/src/black/__init__.py,4401,"token, we use the lookup table.",not
+black/src/black/__init__.py,4405,"Otherwise, we check if a the current state was assigned a",not
+black/src/black/__init__.py,4406,default.,not
+black/src/black/__init__.py,4409,"If no default has been assigned, then this parser has a logic",not
+black/src/black/__init__.py,4410,error.,not
+black/src/black/__init__.py,4735,If there is no opening or closing_bracket that means the split failed and,not
+black/src/black/__init__.py,4736,"all content is in the tail.  Otherwise, if `head_leaves` are empty, it means",not
+black/src/black/__init__.py,4737,the matching `opening_bracket` wasn't available on `line` anymore.,not
+black/src/black/__init__.py,4748,the body shouldn't be exploded,not
+black/src/black/__init__.py,4750,the opening bracket is an optional paren,not
+black/src/black/__init__.py,4753,the closing bracket is an optional paren,not
+black/src/black/__init__.py,4756,it's not an import (optional parens are the only thing we can split on,not
+black/src/black/__init__.py,4757,in this case; attempting a split without them is a waste of time),not
+black/src/black/__init__.py,4759,there are no standalone comments in the body,not
+black/src/black/__init__.py,4761,and we can actually remove the parens,not
+black/src/black/__init__.py,4832,"Since body is a new indent level, remove spurious leading whitespace.",not
+black/src/black/__init__.py,4834,"Ensure a trailing comma for imports and standalone function arguments, but",not
+black/src/black/__init__.py,4835,be careful not to add one after any comments or within type annotations.,not
+black/src/black/__init__.py,4851,Populate the line,not
+black/src/black/__init__.py,5056,There's an internal error,not
+black/src/black/__init__.py,5065,There's at least one unescaped new_quote in this raw string,not
+black/src/black/__init__.py,5066,so converting is impossible,not
+black/src/black/__init__.py,5069,Do not introduce or remove backslashes in raw strings,not
+black/src/black/__init__.py,5072,remove unnecessary escapes,not
+black/src/black/__init__.py,5075,Consider the string without unnecessary escapes as the original,not
+black/src/black/__init__.py,5092,Do not introduce backslashes in interpolated expressions,not
+black/src/black/__init__.py,5096,edge case:,not
+black/src/black/__init__.py,5101,Do not introduce more escaping,not
+black/src/black/__init__.py,5104,Prefer double quotes,not
+black/src/black/__init__.py,5117,Leave octal and binary literals alone.,not
+black/src/black/__init__.py,5120,Change hex literals to upper case.,not
+black/src/black/__init__.py,5136,"Capitalize in ""2L"" because ""l"" looks too similar to ""1"".",not
+black/src/black/__init__.py,5165,"This `node` has a prefix with `# fmt: off`, don't mess with parens.",not
+black/src/black/__init__.py,5169,Fixes a bug where invisible parens are not properly stripped from,not
+black/src/black/__init__.py,5170,assignment statements that contain type annotations.,not
+black/src/black/__init__.py,5174,Add parentheses around long tuple unpacking in assignments.,not
+black/src/black/__init__.py,5192,"""import from"" nodes store parentheses directly as part of",not
+black/src/black/__init__.py,5193,the statement,not
+black/src/black/__init__.py,5195,make parentheses invisible,not
+black/src/black/__init__.py,5196,type: ignore,not
+black/src/black/__init__.py,5197,type: ignore,not
+black/src/black/__init__.py,5199,insert invisible parentheses,not
+black/src/black/__init__.py,5226,We only want standalone comments. If there's no previous leaf or,not
+black/src/black/__init__.py,5227,"the previous leaf is indentation, it's a standalone comment in",not
+black/src/black/__init__.py,5228,disguise.,not
+black/src/black/__init__.py,5238,Can be a container node with the `leaf`.,not
+black/src/black/__init__.py,5246,That happens when one of the `ignored_nodes` ended with a NEWLINE,not
+black/src/black/__init__.py,5247,leaf (possibly followed by a DEDENT).,not
+black/src/black/__init__.py,5281,fix for fmt: on in children,not
+black/src/black/__init__.py,5349,make parentheses invisible,not
+black/src/black/__init__.py,5350,type: ignore,not
+black/src/black/__init__.py,5351,type: ignore,not
+black/src/black/__init__.py,5355,Strip the invisible parens from `middle` by replacing,not
+black/src/black/__init__.py,5356,it with the child in-between the invisible parens,not
+black/src/black/__init__.py,5451,type: ignore,not
+black/src/black/__init__.py,5480,Star expressions are also used as assignment targets in extended,not
+black/src/black/__init__.py,5481,iterable unpacking (PEP 3132).  See what its parent is instead.,not
+black/src/black/__init__.py,5596,type: ignore,not
+black/src/black/__init__.py,5601,type: ignore,not
+black/src/black/__init__.py,5674,"Empty brackets would fail a split so treat them as ""inner""",not
+black/src/black/__init__.py,5675,brackets (e.g. only add them to the `omit` set if another,not
+black/src/black/__init__.py,5676,pair of brackets was good enough.,not
+black/src/black/__init__.py,5719,Continue looking if we see a docstring; otherwise stop.,not
+black/src/black/__init__.py,5769,Then ignore with `exclude` option.,not
+black/src/black/__init__.py,5784,First ignore files matching .gitignore,not
+black/src/black/__init__.py,5829,"Append a fake file so `parents` below returns `common_base_dir`, too.",not
+black/src/black/__init__.py,5890,According to http://tldp.org/LDP/abs/html/exitcodes.html starting with,not
+black/src/black/__init__.py,5891,126 we have special return codes reserved by the shell.,not
+black/src/black/__init__.py,5933,TODO: support Python 4+ ;),SATD
+black/src/black/__init__.py,5974,noqa: F402,not
+black/src/black/__init__.py,5975,TypeIgnore has only one field 'lineno' which breaks this comparison,not
+black/src/black/__init__.py,5991,"Ignore nested tuples within del statements, because we may insert",not
+black/src/black/__init__.py,5992,parentheses and they change the AST.,not
+black/src/black/__init__.py,6008,"Constant strings may be indented across newlines, if they are",not
+black/src/black/__init__.py,6009,docstrings; fold spaces after newlines when comparing,not
+black/src/black/__init__.py,6116,This part is borrowed from asyncio/runners.py in Python 3.7b2.,not
+black/src/black/__init__.py,6127,`concurrent.futures.Future` objects cannot be cancelled once they,not
+black/src/black/__init__.py,6128,are already running. There might be some when the `shutdown()` happened.,not
+black/src/black/__init__.py,6129,Silence their logger's spew about the event loop being closed.,not
+black/src/black/__init__.py,6177,"Multiline strings, we can't continue.",not
+black/src/black/__init__.py,6194,multiline strings,not
+black/src/black/__init__.py,6244,Without delimiters the optional parentheses are useless.,not
+black/src/black/__init__.py,6249,With more than one delimiter of a kind the optional parentheses read better.,not
+black/src/black/__init__.py,6253,A single stranded method call doesn't require optional parentheses.,not
+black/src/black/__init__.py,6263,"With a single delimiter, omit if the expression starts or ends with",not
+black/src/black/__init__.py,6264,a bracket.,not
+black/src/black/__init__.py,6277,There are brackets we can further split on.,not
+black/src/black/__init__.py,6281,checked the entire string and line length wasn't exceeded,not
+black/src/black/__init__.py,6285,Note: we are not returning False here because a line might have *both*,not
+black/src/black/__init__.py,6286,a leading opening bracket and a trailing closing bracket.  If the,not
+black/src/black/__init__.py,6287,"opening bracket doesn't match our rule, maybe the closing will.",not
+black/src/black/__init__.py,6293,don't use indexing for omitting optional parentheses;,not
+black/src/black/__init__.py,6294,it looks weird,not
+black/src/black/__init__.py,6301,Empty brackets don't help.,not
+black/src/black/__init__.py,6305,Additional wrapping of a multiline string in this situation is,not
+black/src/black/__init__.py,6306,unnecessary.,not
+black/src/black/__init__.py,6318,There are brackets we can further split on.,not
+black/src/black/__init__.py,6394,type: ignore,not
+black/src/black/__init__.py,6410,https://www.python.org/dev/peps/pep-0257/#handling-docstring-indentation,not
+black/src/black/__init__.py,6413,Convert tabs to spaces (following the normal Python rules),not
+black/src/black/__init__.py,6414,and split into a list of lines:,not
+black/src/black/__init__.py,6416,Determine minimum indentation (first line doesn't count):,not
+black/src/black/__init__.py,6422,Remove indentation (first line is special):,not
+black/src/black/__init__.py,6432,Return a single string:,not
+black/tests/test_black.py,1,!/usr/bin/env python3,not
+black/tests/test_black.py,70,"If there's no output marker, treat the entire file as already pre-formatted.",not
+black/tests/test_black.py,128,type: ignore,not
+black/tests/test_black.py,129,type: ignore,not
+black/tests/test_black.py,273,the diff output has a trailing space,not
+black/tests/test_black.py,291,"Again, the contents are checked in a different test, so only look for colors.",not
+black/tests/test_black.py,376,the diff output has a trailing space,not
+black/tests/test_black.py,397,We check the contents of the diff in `test_expression_diff`. All,not
+black/tests/test_black.py,398,we need to check here is that color codes exist in the result.,not
+black/tests/test_black.py,665,ensure black can parse this when the target is 3.6,not
+black/tests/test_black.py,667,"but not on 3.7, because async/await is no longer an identifier",not
+black/tests/test_black.py,680,ensure black can parse this when the target is 3.7,not
+black/tests/test_black.py,682,"but not on 3.6, because we use async as a reserved keyword",not
+black/tests/test_black.py,778,mixed tabs and spaces (valid Python 2 code),not
+black/tests/test_black.py,1380,Files which will be reformatted.,not
+black/tests/test_black.py,1383,Files which will not be reformatted.,not
+black/tests/test_black.py,1386,Multi file command.,not
+black/tests/test_black.py,1391,"Without an argument, black exits with error code 0.",not
+black/tests/test_black.py,1433,verify cache with --pyi is separate,not
+black/tests/test_black.py,1458,verify cache with --pyi is separate,not
+black/tests/test_black.py,1485,verify cache with --target-version is separate,not
+black/tests/test_black.py,1510,verify cache with --target-version is separate,not
+black/tests/test_black.py,1673,`child` should behave like a symlink which resolved path is clearly,not
+black/tests/test_black.py,1674,outside of the `root` directory.,not
+black/tests/test_black.py,1690,`child` should behave like a strange file which resolved path is clearly,not
+black/tests/test_black.py,1691,outside of the `root` directory.,not
+black/tests/test_black.py,1708,type: ignore,not
+black/tests/test_black.py,1713,"First, let's see if Click is crashing with a preferred ASCII charset.",not
+black/tests/test_black.py,1718,"Now, let's silence Click...",not
+black/tests/test_black.py,1720,...and confirm it's silent.,not
+black/tests/test_black.py,1766,TODO: remove these decorators once the below is released,SATD
+black/tests/test_black.py,1767,https://github.com/aio-libs/aiohttp/pull/3727,not
+black/tests/data/function_trailing_comma.py,12,output,not
+black/tests/data/function.py,1,!/usr/bin/env python3,not
+black/tests/data/function.py,37,EMPTY LINE WITH WHITESPACE (this comment will be removed),not
+black/tests/data/function.py,53,trailing standalone comment,not
+black/tests/data/function.py,97,output,not
+black/tests/data/function.py,100,!/usr/bin/env python3,not
+black/tests/data/function.py,197,trailing standalone comment,not
+black/tests/data/remove_parens.py,58,output,not
+black/tests/data/fmtonoff4.py,1,fmt: off,not
+black/tests/data/fmtonoff4.py,6,fmt: on,not
+black/tests/data/fmtonoff4.py,15,output,not
+black/tests/data/fmtonoff4.py,17,fmt: off,not
+black/tests/data/fmtonoff4.py,22,fmt: on,not
+black/tests/data/numeric_literals.py,1,!/usr/bin/env python3.6,not
+black/tests/data/numeric_literals.py,22,output,not
+black/tests/data/numeric_literals.py,25,!/usr/bin/env python3.6,not
+black/tests/data/beginning_backslash.py,9,output,not
+black/tests/data/python2_unicode_literals.py,1,!/usr/bin/env python2,not
+black/tests/data/python2_unicode_literals.py,10,output,not
+black/tests/data/python2_unicode_literals.py,13,!/usr/bin/env python2,not
+black/tests/data/python37.py,1,!/usr/bin/env python3.7,not
+black/tests/data/python37.py,33,output,not
+black/tests/data/python37.py,36,!/usr/bin/env python3.7,not
+black/tests/data/fstring.py,11,output,not
+black/tests/data/cantfit.py,1,long variable name,not
+black/tests/data/cantfit.py,3,with a comment,not
+black/tests/data/cantfit.py,14,long function name,not
+black/tests/data/cantfit.py,22,long arguments,not
+black/tests/data/cantfit.py,29,noqa,not
+black/tests/data/cantfit.py,42,output,not
+black/tests/data/cantfit.py,45,long variable name,not
+black/tests/data/cantfit.py,50,with a comment,not
+black/tests/data/cantfit.py,66,long function name,not
+black/tests/data/cantfit.py,76,long arguments,not
+black/tests/data/cantfit.py,84,noqa,not
+black/tests/data/empty_lines.py,4,leading comment,not
+black/tests/data/empty_lines.py,11,trailing comment,not
+black/tests/data/empty_lines.py,16,another trailing comment,not
+black/tests/data/empty_lines.py,52,,not
+black/tests/data/empty_lines.py,53,SECTION BECAUSE SECTIONS,not
+black/tests/data/empty_lines.py,54,,not
+black/tests/data/empty_lines.py,65,Comment because comments,not
+black/tests/data/empty_lines.py,72,Another comment because more comments,not
+black/tests/data/empty_lines.py,80,Start of the line or a bracketed expression.,not
+black/tests/data/empty_lines.py,81,More than one line for the comment.,not
+black/tests/data/empty_lines.py,95,output,not
+black/tests/data/empty_lines.py,101,leading comment,not
+black/tests/data/empty_lines.py,108,trailing comment,not
+black/tests/data/empty_lines.py,113,another trailing comment,not
+black/tests/data/empty_lines.py,146,,not
+black/tests/data/empty_lines.py,147,SECTION BECAUSE SECTIONS,not
+black/tests/data/empty_lines.py,148,,not
+black/tests/data/empty_lines.py,160,Comment because comments,not
+black/tests/data/empty_lines.py,167,Another comment because more comments,not
+black/tests/data/empty_lines.py,175,Start of the line or a bracketed expression.,not
+black/tests/data/empty_lines.py,176,More than one line for the comment.,not
+black/tests/data/async_as_identifier.py,26,output,not
+black/tests/data/function2.py,10,negate top,not
+black/tests/data/function2.py,26,output,not
+black/tests/data/function2.py,34,negate top,not
+black/tests/data/string_quotes.py,54,output,not
+black/tests/data/debug_visitor.py,20,We don't have to handle prefixes for `Node` objects since,not
+black/tests/data/debug_visitor.py,21,that delegates to the first child anyway.,not
+black/tests/data/tupleassign.py,1,This is a standalone comment.,not
+black/tests/data/tupleassign.py,4,This is as well.,not
+black/tests/data/tupleassign.py,9,output,not
+black/tests/data/tupleassign.py,12,This is a standalone comment.,not
+black/tests/data/tupleassign.py,20,This is as well.,not
+black/tests/data/composition.py,23,Rule 1,not
+black/tests/data/composition.py,25,Rule 2,not
+black/tests/data/composition.py,29,Just a comment,not
+black/tests/data/composition.py,31,Another,not
+black/tests/data/composition.py,39,Only send the first n items.,not
+black/tests/data/comments3.py,1,The percent-percent comments are Spyder IDE cells.,not
+black/tests/data/comments3.py,3,%%,not
+black/tests/data/comments3.py,9,This one is actually too long to fit in a single line.,not
+black/tests/data/comments3.py,11,yup,not
+black/tests/data/comments3.py,13,right,not
+black/tests/data/comments3.py,16,Capture each of the exceptions in the MultiError along with each of their causes and contexts,not
+black/tests/data/comments3.py,22,This should be left alone (before),not
+black/tests/data/comments3.py,28,copy the set of _seen exceptions so that duplicates,not
+black/tests/data/comments3.py,29,shared between sub-exceptions are not omitted,not
+black/tests/data/comments3.py,32,This should be left alone (after),not
+black/tests/data/comments3.py,35,everything is fine if the expression isn't nested,not
+black/tests/data/comments3.py,41,copy the set of _seen exceptions so that duplicates,not
+black/tests/data/comments3.py,42,shared between sub-exceptions are not omitted,not
+black/tests/data/comments3.py,47,%%,not
+black/tests/data/numeric_literals_py2.py,1,!/usr/bin/env python2.7,not
+black/tests/data/numeric_literals_py2.py,8,output,not
+black/tests/data/numeric_literals_py2.py,11,!/usr/bin/env python2.7,not
+black/tests/data/docstring.py,69,output,not
+black/tests/data/python2_print_function.py,1,!/usr/bin/env python2,not
+black/tests/data/python2_print_function.py,8,output,not
+black/tests/data/python2_print_function.py,11,!/usr/bin/env python2,not
+black/tests/data/numeric_literals_skip_underscores.py,1,!/usr/bin/env python3.6,not
+black/tests/data/numeric_literals_skip_underscores.py,12,output,not
+black/tests/data/numeric_literals_skip_underscores.py,14,!/usr/bin/env python3.6,not
+black/tests/data/fmtonoff.py,1,!/usr/bin/env python3,not
+black/tests/data/fmtonoff.py,9,fmt: off,not
+black/tests/data/fmtonoff.py,12,fmt: on,not
+black/tests/data/fmtonoff.py,14,Comment 1,not
+black/tests/data/fmtonoff.py,16,Comment 2,not
+black/tests/data/fmtonoff.py,18,fmt: off,not
+black/tests/data/fmtonoff.py,40,fmt: on,not
+black/tests/data/fmtonoff.py,48,fmt: off,not
+black/tests/data/fmtonoff.py,54,fmt: off,not
+black/tests/data/fmtonoff.py,57,fmt: on,not
+black/tests/data/fmtonoff.py,62,fmt: off,not
+black/tests/data/fmtonoff.py,65,fmt: on,not
+black/tests/data/fmtonoff.py,68,fmt: off,not
+black/tests/data/fmtonoff.py,71,fmt: on,not
+black/tests/data/fmtonoff.py,74,fmt: off,not
+black/tests/data/fmtonoff.py,77,fmt: on,not
+black/tests/data/fmtonoff.py,79,fmt: off,not
+black/tests/data/fmtonoff.py,82,fmt: on,not
+black/tests/data/fmtonoff.py,85,fmt: off,not
+black/tests/data/fmtonoff.py,92,fmt: on,not
+black/tests/data/fmtonoff.py,98,fmt: off,not
+black/tests/data/fmtonoff.py,101,"hey, that won't work",not
+black/tests/data/fmtonoff.py,104,fmt: on,not
+black/tests/data/fmtonoff.py,108,fmt: on,not
+black/tests/data/fmtonoff.py,109,fmt: off,not
+black/tests/data/fmtonoff.py,114,fmt: on,not
+black/tests/data/fmtonoff.py,115,fmt: off,not
+black/tests/data/fmtonoff.py,116,...but comments still get reformatted even though they should not be,not
+black/tests/data/fmtonoff.py,117,fmt: on,not
+black/tests/data/fmtonoff.py,123,fmt: off,not
+black/tests/data/fmtonoff.py,127,fmt: on,not
+black/tests/data/fmtonoff.py,148,fmt: off,not
+black/tests/data/fmtonoff.py,150,fmt: on,not
+black/tests/data/fmtonoff.py,158,yapf: disable,not
+black/tests/data/fmtonoff.py,165,fmt: off,not
+black/tests/data/fmtonoff.py,178,fmt: on,not
+black/tests/data/fmtonoff.py,181,fmt: off,not
+black/tests/data/fmtonoff.py,183,No formatting to the end of the file,not
+black/tests/data/fmtonoff.py,188,output,not
+black/tests/data/fmtonoff.py,191,!/usr/bin/env python3,not
+black/tests/data/fmtonoff.py,199,fmt: off,not
+black/tests/data/fmtonoff.py,202,fmt: on,not
+black/tests/data/fmtonoff.py,204,Comment 1,not
+black/tests/data/fmtonoff.py,206,Comment 2,not
+black/tests/data/fmtonoff.py,208,fmt: off,not
+black/tests/data/fmtonoff.py,230,fmt: on,not
+black/tests/data/fmtonoff.py,255,fmt: off,not
+black/tests/data/fmtonoff.py,262,fmt: off,not
+black/tests/data/fmtonoff.py,265,fmt: on,not
+black/tests/data/fmtonoff.py,272,fmt: off,not
+black/tests/data/fmtonoff.py,275,fmt: on,not
+black/tests/data/fmtonoff.py,279,fmt: off,not
+black/tests/data/fmtonoff.py,282,fmt: on,not
+black/tests/data/fmtonoff.py,286,fmt: off,not
+black/tests/data/fmtonoff.py,289,fmt: on,not
+black/tests/data/fmtonoff.py,291,fmt: off,not
+black/tests/data/fmtonoff.py,294,fmt: on,not
+black/tests/data/fmtonoff.py,298,fmt: off,not
+black/tests/data/fmtonoff.py,305,fmt: on,not
+black/tests/data/fmtonoff.py,313,fmt: off,not
+black/tests/data/fmtonoff.py,315,"hey, that won't work",not
+black/tests/data/fmtonoff.py,317,fmt: on,not
+black/tests/data/fmtonoff.py,323,fmt: on,not
+black/tests/data/fmtonoff.py,324,fmt: off,not
+black/tests/data/fmtonoff.py,329,fmt: on,not
+black/tests/data/fmtonoff.py,330,fmt: off,not
+black/tests/data/fmtonoff.py,331,...but comments still get reformatted even though they should not be,not
+black/tests/data/fmtonoff.py,332,fmt: on,not
+black/tests/data/fmtonoff.py,345,fmt: off,not
+black/tests/data/fmtonoff.py,349,fmt: on,not
+black/tests/data/fmtonoff.py,370,fmt: off,not
+black/tests/data/fmtonoff.py,372,fmt: on,not
+black/tests/data/fmtonoff.py,378,yapf: disable,not
+black/tests/data/fmtonoff.py,392,fmt: off,not
+black/tests/data/fmtonoff.py,405,fmt: on,not
+black/tests/data/fmtonoff.py,408,fmt: off,not
+black/tests/data/fmtonoff.py,410,No formatting to the end of the file,not
+black/tests/data/slices.py,26,These are from PEP-8:,not
+black/tests/data/slices.py,29,ham[lower+offset : upper+offset],not
+black/tests/data/long_strings.py,37,First Comment,not
+black/tests/data/long_strings.py,38,Second Comment,not
+black/tests/data/long_strings.py,39,Third Comment,not
+black/tests/data/long_strings.py,91,This comment gets thrown to the top.,not
+black/tests/data/long_strings.py,93,This comment stays on the bottom.,not
+black/tests/data/long_strings.py,96,noqa: E501,not
+black/tests/data/long_strings.py,98,noqa,not
+black/tests/data/long_strings.py,123,comment after comma,not
+black/tests/data/long_strings.py,137,comment after comma,not
+black/tests/data/long_strings.py,182,type: ignore,not
+black/tests/data/long_strings.py,187,noqa,not
+black/tests/data/long_strings.py,192,pylint: disable=some-pylint-check,not
+black/tests/data/long_strings.py,197,output,not
+black/tests/data/long_strings.py,308,First Comment,not
+black/tests/data/long_strings.py,309,Second Comment,not
+black/tests/data/long_strings.py,310,Third Comment,not
+black/tests/data/long_strings.py,402,This comment gets thrown to the top.,not
+black/tests/data/long_strings.py,410,This comment stays on the bottom.,not
+black/tests/data/long_strings.py,417,noqa: E501,not
+black/tests/data/long_strings.py,419,noqa,not
+black/tests/data/long_strings.py,477,comment after comma,not
+black/tests/data/long_strings.py,487,comment after comma,not
+black/tests/data/long_strings.py,551,type: ignore,not
+black/tests/data/long_strings.py,556,noqa,not
+black/tests/data/long_strings.py,561,pylint: disable=some-pylint-check,not
+black/tests/data/python38.py,1,!/usr/bin/env python3.8,not
+black/tests/data/python38.py,14,output,not
+black/tests/data/python38.py,17,!/usr/bin/env python3.8,not
+black/tests/data/comments.py,1,!/usr/bin/env python3,not
+black/tests/data/comments.py,2,fmt: on,not
+black/tests/data/comments.py,3,Some license here.,not
+black/tests/data/comments.py,4,,not
+black/tests/data/comments.py,5,"Has many lines. Many, many lines.",not
+black/tests/data/comments.py,6,"Many, many, many lines.",not
+black/tests/data/comments.py,16,some noqa comment,not
+black/tests/data/comments.py,24,Some comment before a function.,not
+black/tests/data/comments.py,27,some strings,not
+black/tests/data/comments.py,28,type: ignore,not
+black/tests/data/comments.py,37,FIXME: Some comment about why this function is crap but still in production.,SATD
+black/tests/data/comments.py,41,Explains why we have this if.,SATD
+black/tests/data/comments.py,42,In great detail indeed.,not
+black/tests/data/comments.py,44,type: ignore,not
+black/tests/data/comments.py,46,This return is also commented for some reason.,not
+black/tests/data/comments.py,50,Explains why we use global state.,SATD
+black/tests/data/comments.py,54,Another comment!,not
+black/tests/data/comments.py,55,This time two lines.,not
+black/tests/data/comments.py,61,: Doc comment for class attribute Foo.bar.,not
+black/tests/data/comments.py,62,: It can have multiple lines.,not
+black/tests/data/comments.py,65,: Doc comment for Foo.flox. One line only.,not
+black/tests/data/comments.py,71,: Doc comment for instance attribute qux.,not
+black/tests/data/comments.py,78,' <h1>This is pweave!</h1>,not
+black/tests/data/comments.py,83,"This comment, for some reason \",not
+black/tests/data/comments.py,84,contains a trailing backslash.,not
+black/tests/data/comments.py,85,Some more comments,not
+black/tests/data/comments.py,87,Comment after ending a block.,not
+black/tests/data/comments.py,90,Comment between things.,not
+black/tests/data/comments.py,94,Some closing comments.,not
+black/tests/data/comments.py,95,Maybe Vim or Emacs directives for formatting.,not
+black/tests/data/comments.py,96,Who knows.,not
+black/tests/data/comments4.py,2,NOT DRY,not
+black/tests/data/comments4.py,5,DRY,not
+black/tests/data/comments4.py,13,metadata_version errors.,not
+black/tests/data/comments4.py,26,name errors.,not
+black/tests/data/comments4.py,38,version errors.,not
+black/tests/data/comments4.py,62,Because foo.,not
+black/tests/data/comments4.py,66,Another comment about the filtering on is_quux goes here.,not
+black/tests/data/comments4.py,76,Standalone comment reasonably placed.,not
+black/tests/data/comments4.py,88,Standlone comment but weirdly placed.,not
+black/tests/data/comments5.py,3,trailing comment,not
+black/tests/data/comments5.py,4,Comment belongs to the `if` block.,not
+black/tests/data/comments5.py,5,This one belongs to the `while` block.,not
+black/tests/data/comments5.py,7,"Should this one, too?  I guess so.",not
+black/tests/data/comments5.py,9,This one is properly standalone now.,not
+black/tests/data/comments5.py,12,first we do this,not
+black/tests/data/comments5.py,16,then we do this,not
+black/tests/data/comments5.py,18,and finally we loop around,not
+black/tests/data/comments5.py,33,leading function comment,not
+black/tests/data/comments5.py,36,trailing function comment,not
+black/tests/data/comments5.py,39,SECTION COMMENT,not
+black/tests/data/comments5.py,42,leading 1,not
+black/tests/data/comments5.py,44,leading 2,not
+black/tests/data/comments5.py,46,leading 3,not
+black/tests/data/comments5.py,52,leading 1,not
+black/tests/data/comments5.py,54,leading 2,not
+black/tests/data/comments5.py,56,leading function comment,not
+black/tests/data/comments5.py,61,Note: crappy but inevitable.  The current design of EmptyLineTracker doesn't,SATD
+black/tests/data/comments5.py,62,allow this to work correctly.  The user will have to split those lines by,not
+black/tests/data/comments5.py,63,hand.,not
+black/tests/data/comments5.py,65,This comment should be split from `some_instruction` by two lines but isn't.,SATD
+black/tests/data/class_methods_new_line.py,103,output,not
+black/tests/data/string_prefixes.py,1,!/usr/bin/env python3.6,not
+black/tests/data/string_prefixes.py,9,output,not
+black/tests/data/string_prefixes.py,12,!/usr/bin/env python3.6,not
+black/tests/data/collections.py,5,unwraps,not
+black/tests/data/collections.py,10,stays wrapped,not
+black/tests/data/collections.py,16,as doesn't get confusing when unwrapped,not
+black/tests/data/collections.py,42,looping over a 1-tuple should also not get wrapped,not
+black/tests/data/collections.py,73,output,not
+black/tests/data/collections.py,80,unwraps,not
+black/tests/data/collections.py,83,stays wrapped,not
+black/tests/data/collections.py,89,as doesn't get confusing when unwrapped,not
+black/tests/data/collections.py,131,looping over a 1-tuple should also not get wrapped,not
+black/tests/data/long_strings__edge_case.py,34,output,not
+black/tests/data/comment_after_escaped_newline.py,2,pylint: disable=W9016,not
+black/tests/data/comment_after_escaped_newline.py,8,some comment here,not
+black/tests/data/comment_after_escaped_newline.py,11,output,not
+black/tests/data/comment_after_escaped_newline.py,13,pylint: disable=W9016,not
+black/tests/data/comment_after_escaped_newline.py,17,some comment here,not
+black/tests/data/import_spacing.py,3,flake8: noqa,not
+black/tests/data/import_spacing.py,10,This relies on each of the submodules having an __all__ variable.,not
+black/tests/data/import_spacing.py,13,comment here,not
+black/tests/data/import_spacing.py,16,comment here,not
+black/tests/data/import_spacing.py,19,comment here,not
+black/tests/data/import_spacing.py,49,output,not
+black/tests/data/import_spacing.py,54,flake8: noqa,not
+black/tests/data/import_spacing.py,59,This relies on each of the submodules having an __all__ variable.,not
+black/tests/data/import_spacing.py,62,comment here,not
+black/tests/data/import_spacing.py,65,comment here,not
+black/tests/data/import_spacing.py,68,comment here,not
+black/tests/data/bracketmatch.py,9,output,not
+black/tests/data/long_strings__regression.py,6,Don't merge multiline (e.g. triple-quoted) strings.,not
+black/tests/data/long_strings__regression.py,12,There was a bug where tuples were being identified as long strings.,SATD
+black/tests/data/long_strings__regression.py,61,xx -x xxxxxxx xx xxx xxxxxxx.,not
+black/tests/data/long_strings__regression.py,67,Disappearing Comment,not
+black/tests/data/long_strings__regression.py,166,'xxxxxxxxxxxxxxxxxxxxxxx',not
+black/tests/data/long_strings__regression.py,167,'xxxxxxxxxxxxxxxxxxxxxx',not
+black/tests/data/long_strings__regression.py,168,'xxxxxxxxxxxxxxxxxx',not
+black/tests/data/long_strings__regression.py,169,'xxxxxxxxxxxxxxxxx',not
+black/tests/data/long_strings__regression.py,208,xxxx xxxxxxxxxx xxxx xx xxxx xx xxx xxxxxxxx xxxxxx xxxxx.,not
+black/tests/data/long_strings__regression.py,213,This comment gets thrown to the top.,not
+black/tests/data/long_strings__regression.py,215,comments here are fine,not
+black/tests/data/long_strings__regression.py,219,But these,not
+black/tests/data/long_strings__regression.py,220,comments will stay,not
+black/tests/data/long_strings__regression.py,221,comments here are fine,not
+black/tests/data/long_strings__regression.py,224,LPAR Comment,not
+black/tests/data/long_strings__regression.py,225,Comma Comment,not
+black/tests/data/long_strings__regression.py,226,RPAR Comment,not
+black/tests/data/long_strings__regression.py,257,dot-atom,not
+black/tests/data/long_strings__regression.py,258,quoted-string,not
+black/tests/data/long_strings__regression.py,263,dot-atom,not
+black/tests/data/long_strings__regression.py,264,quoted-string,not
+black/tests/data/long_strings__regression.py,270,dot-atom,not
+black/tests/data/long_strings__regression.py,271,quoted-string,not
+black/tests/data/long_strings__regression.py,313,output,not
+black/tests/data/long_strings__regression.py,321,Don't merge multiline (e.g. triple-quoted) strings.,not
+black/tests/data/long_strings__regression.py,329,There was a bug where tuples were being identified as long strings.,SATD
+black/tests/data/long_strings__regression.py,398,xx -x xxxxxxx xx xxx xxxxxxx.,not
+black/tests/data/long_strings__regression.py,402,Disappearing Comment,not
+black/tests/data/long_strings__regression.py,518,'xxxxxxxxxxxxxxxxxxxxxxx',not
+black/tests/data/long_strings__regression.py,519,'xxxxxxxxxxxxxxxxxxxxxx',not
+black/tests/data/long_strings__regression.py,520,'xxxxxxxxxxxxxxxxxx',not
+black/tests/data/long_strings__regression.py,521,'xxxxxxxxxxxxxxxxx',not
+black/tests/data/long_strings__regression.py,566,xxxx xxxxxxxxxx xxxx xx xxxx xx xxx xxxxxxxx xxxxxx xxxxx.,not
+black/tests/data/long_strings__regression.py,573,This comment gets thrown to the top.,not
+black/tests/data/long_strings__regression.py,576,comments here are fine,not
+black/tests/data/long_strings__regression.py,580,But these,not
+black/tests/data/long_strings__regression.py,581,comments will stay,not
+black/tests/data/long_strings__regression.py,582,comments here are fine,not
+black/tests/data/long_strings__regression.py,585,LPAR Comment,not
+black/tests/data/long_strings__regression.py,587,Comma Comment,not
+black/tests/data/long_strings__regression.py,588,RPAR Comment,not
+black/tests/data/long_strings__regression.py,629,dot-atom,not
+black/tests/data/long_strings__regression.py,630,quoted-string,not
+black/tests/data/long_strings__regression.py,637,dot-atom,not
+black/tests/data/long_strings__regression.py,638,quoted-string,not
+black/tests/data/long_strings__regression.py,645,dot-atom,not
+black/tests/data/long_strings__regression.py,646,quoted-string,not
+black/tests/data/class_blank_parentheses.py,26,output,not
+black/tests/data/force_py36.py,1,The input source must not contain any Py36-specific syntax (e.g. argument type,not
+black/tests/data/force_py36.py,2,"annotations, trailing comma after *rest) or this test becomes invalid.",not
+black/tests/data/force_py36.py,4,output,not
+black/tests/data/force_py36.py,5,The input source must not contain any Py36-specific syntax (e.g. argument type,not
+black/tests/data/force_py36.py,6,"annotations, trailing comma after *rest) or this test becomes invalid.",not
+black/tests/data/expression.py,86,note: no trailing comma pre-3.6,not
+black/tests/data/expression.py,103,type: ignore,not
+black/tests/data/expression.py,106,type: ignore,not
+black/tests/data/expression.py,111,type: ignore,not
+black/tests/data/expression.py,245,standalone comment at ENDMARKER,not
+black/tests/data/expression.py,248,output,not
+black/tests/data/expression.py,369,note: no trailing comma pre-3.6,not
+black/tests/data/expression.py,388,type: ignore,not
+black/tests/data/expression.py,391,type: ignore,not
+black/tests/data/expression.py,396,type: ignore,not
+black/tests/data/expression.py,588,standalone comment at ENDMARKER,not
+black/tests/data/force_pyi.py,4,output,not
+black/tests/data/fmtonoff2.py,6,fmt: off,not
+black/tests/data/fmtonoff2.py,8,Test data:,not
+black/tests/data/fmtonoff2.py,9,"Position, Volume, State, TmSt/TmEx/None, [call, [arg1...]]",not
+black/tests/data/fmtonoff2.py,13,Test don't manage the volume,not
+black/tests/data/fmtonoff2.py,26,misaligned comment,not
+black/tests/data/fmtonoff2.py,35,one is zero/none,not
+black/tests/data/fmtonoff2.py,40,fmt: on,not
+black/tests/data/fmtonoff3.py,1,fmt: off,not
+black/tests/data/fmtonoff3.py,6,fmt: on,not
+black/tests/data/fmtonoff3.py,8,fmt: off,not
+black/tests/data/fmtonoff3.py,13,fmt: on,not
+black/tests/data/fmtonoff3.py,19,output,not
+black/tests/data/fmtonoff3.py,21,fmt: off,not
+black/tests/data/fmtonoff3.py,26,fmt: on,not
+black/tests/data/fmtonoff3.py,28,fmt: off,not
+black/tests/data/fmtonoff3.py,33,fmt: on,not
+black/tests/data/comments6.py,5,type: int,not
+black/tests/data/comments6.py,10,test type comments,not
+black/tests/data/comments6.py,12,"type: (int, int, int, int, int, int, int, int, int) -> None",not
+black/tests/data/comments6.py,17,type: int,not
+black/tests/data/comments6.py,18,type: int,not
+black/tests/data/comments6.py,19,type: int,not
+black/tests/data/comments6.py,20,type: int,not
+black/tests/data/comments6.py,21,type: int,not
+black/tests/data/comments6.py,22,type: int,not
+black/tests/data/comments6.py,23,type: int,not
+black/tests/data/comments6.py,24,type: int,not
+black/tests/data/comments6.py,25,type: int,not
+black/tests/data/comments6.py,27,type: (...) -> None,not
+black/tests/data/comments6.py,32,type: int,not
+black/tests/data/comments6.py,33,type: *Any,not
+black/tests/data/comments6.py,34,type: bool,not
+black/tests/data/comments6.py,35,type: **Any,not
+black/tests/data/comments6.py,37,type: (...) -> None,not
+black/tests/data/comments6.py,42,type: int,not
+black/tests/data/comments6.py,43,type: int,not
+black/tests/data/comments6.py,44,type: int,not
+black/tests/data/comments6.py,45,type: int,not
+black/tests/data/comments6.py,47,type: (...) -> None,not
+black/tests/data/comments6.py,49,type: int,not
+black/tests/data/comments6.py,50,type: float,not
+black/tests/data/comments6.py,51,type: int,not
+black/tests/data/comments6.py,54,type: int,not
+black/tests/data/comments6.py,55,type: bool,not
+black/tests/data/comments6.py,60,"type: Tuple[int, int]",not
+black/tests/data/comments6.py,69,type: int,not
+black/tests/data/comments6.py,73,not a type comment,not
+black/tests/data/comments6.py,74,type: int,not
+black/tests/data/comments6.py,76,type: (...) -> None,not
+black/tests/data/comments6.py,81,not a type comment,not
+black/tests/data/comments6.py,82,type: (int) -> None,not
+black/tests/data/comments6.py,87,type: int,not
+black/tests/data/comments6.py,88,type: () -> int,not
+black/tests/data/comments6.py,99,type: ignore,not
+black/tests/data/comments6.py,103,type: ignore,not
+black/tests/data/comments6.py,107,aaa,not
+black/tests/data/comments6.py,111,type: ignore,not
+black/tests/data/comments6.py,115,type: ignore,not
+black/tests/data/comments6.py,118,type: ignore[arg-type],not
+black/tests/data/comments7.py,8,"String,",not
+black/tests/data/comments7.py,9,"resolve_to_config_type,",not
+black/tests/data/comments7.py,10,"DEFAULT_TYPE_ATTRIBUTES,",not
+black/tests/data/comments7.py,21,"and some comments,",not
+black/tests/data/comments7.py,22,"resolve_to_config_type,",not
+black/tests/data/comments7.py,23,"DEFAULT_TYPE_ATTRIBUTES,",not
+black/tests/data/comments7.py,27,"look ma, no comment migration xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",not
+black/tests/data/comments7.py,30,"look ma, no comment migration xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",not
+black/tests/data/comments7.py,34,aaa,not
+black/tests/data/comments7.py,37,aaa,not
+black/tests/data/comments7.py,47,type: ignore,not
+black/tests/data/comments7.py,50,"The type: ignore exception only applies to line length, not",not
+black/tests/data/comments7.py,51,other types of formatting.,not
+black/tests/data/comments7.py,53,type: ignore,not
+black/tests/data/comments7.py,58,output,not
+black/tests/data/comments7.py,67,"String,",not
+black/tests/data/comments7.py,68,"resolve_to_config_type,",not
+black/tests/data/comments7.py,69,"DEFAULT_TYPE_ATTRIBUTES,",not
+black/tests/data/comments7.py,80,"and some comments,",not
+black/tests/data/comments7.py,81,"resolve_to_config_type,",not
+black/tests/data/comments7.py,82,"DEFAULT_TYPE_ATTRIBUTES,",not
+black/tests/data/comments7.py,86,"look ma, no comment migration xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",not
+black/tests/data/comments7.py,88,"look ma, no comment migration xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",not
+black/tests/data/comments7.py,90,aaa,not
+black/tests/data/comments7.py,94,aaa,not
+black/tests/data/comments7.py,100,type: ignore,not
+black/tests/data/comments7.py,102,"The type: ignore exception only applies to line length, not",not
+black/tests/data/comments7.py,103,other types of formatting.,not
+black/tests/data/comments7.py,110,type: ignore,not
+black/tests/data/comments2.py,2,NOT DRY,not
+black/tests/data/comments2.py,5,DRY,not
+black/tests/data/comments2.py,8,Please keep __all__ alphabetized within each category.,not
+black/tests/data/comments2.py,11,Super-special typing primitives.,not
+black/tests/data/comments2.py,16,ABCs (from collections.abc).,not
+black/tests/data/comments2.py,17,collections.abc.Set.,not
+black/tests/data/comments2.py,21,Concrete collection types.,not
+black/tests/data/comments2.py,29,Not really a type.,not
+black/tests/data/comments2.py,34,singletons,not
+black/tests/data/comments2.py,38,builtin types and objects,not
+black/tests/data/comments2.py,46,user-defined types and objects,not
+black/tests/data/comments2.py,55,for compiler in compilers.values():,not
+black/tests/data/comments2.py,56,add_compiler(compiler),not
+black/tests/data/comments2.py,58,"add_compiler(compilers[(7.1, 64)])",not
+black/tests/data/comments2.py,60,Comment before function.,not
+black/tests/data/comments2.py,64,(1,not
+black/tests/data/comments2.py,66,)1,not
+black/tests/data/comments2.py,71,type: ignore,not
+black/tests/data/comments2.py,75,(2 what if this was actually long,not
+black/tests/data/comments2.py,77,)2,not
+black/tests/data/comments2.py,79,type: ignore,not
+black/tests/data/comments2.py,81,has the child process finished?,not
+black/tests/data/comments2.py,83,"the child process has finished, but the",not
+black/tests/data/comments2.py,84,transport hasn't been notified yet?,not
+black/tests/data/comments2.py,87,no newline before or after,not
+black/tests/data/comments2.py,89,one,not
+black/tests/data/comments2.py,91,two,not
+black/tests/data/comments2.py,94,no newline after,not
+black/tests/data/comments2.py,99,,not
+black/tests/data/comments2.py,102,short,not
+black/tests/data/comments2.py,104,but,not
+black/tests/data/comments2.py,106,multiline,not
+black/tests/data/comments2.py,110,yup,not
+black/tests/data/comments2.py,113,yup,not
+black/tests/data/comments2.py,114,yup,not
+black/tests/data/comments2.py,115,right,not
+black/tests/data/comments2.py,118,hello,not
+black/tests/data/comments2.py,120,yup,not
+black/tests/data/comments2.py,122,right,not
+black/tests/data/comments2.py,126,This one is actually too long to fit in a single line.,not
+black/tests/data/comments2.py,128,yup,not
+black/tests/data/comments2.py,130,right,not
+black/tests/data/comments2.py,137,and round and round we go,not
+black/tests/data/comments2.py,138,and round and round we go,not
+black/tests/data/comments2.py,140,let's return,not
+black/tests/data/comments2.py,145,FIXME: \r\n?,SATD
+black/tests/data/comments2.py,149,type: Final,not
+black/tests/data/comments2.py,153,type: ignore,not
+black/tests/data/comments2.py,157,,not
+black/tests/data/comments2.py,158,SECTION COMMENT,not
+black/tests/data/comments2.py,159,,not
+black/tests/data/comments2.py,164,END COMMENTS,not
+black/tests/data/comments2.py,165,MORE END COMMENTS,not
+black/tests/data/comments2.py,168,output,not
+black/tests/data/comments2.py,172,NOT DRY,not
+black/tests/data/comments2.py,175,DRY,not
+black/tests/data/comments2.py,178,Please keep __all__ alphabetized within each category.,not
+black/tests/data/comments2.py,181,Super-special typing primitives.,not
+black/tests/data/comments2.py,185,ABCs (from collections.abc).,not
+black/tests/data/comments2.py,186,collections.abc.Set.,not
+black/tests/data/comments2.py,189,Concrete collection types.,not
+black/tests/data/comments2.py,197,Not really a type.,not
+black/tests/data/comments2.py,202,singletons,not
+black/tests/data/comments2.py,207,builtin types and objects,not
+black/tests/data/comments2.py,215,user-defined types and objects,not
+black/tests/data/comments2.py,224,for compiler in compilers.values():,not
+black/tests/data/comments2.py,225,add_compiler(compiler),not
+black/tests/data/comments2.py,227,"add_compiler(compilers[(7.1, 64)])",not
+black/tests/data/comments2.py,229,Comment before function.,not
+black/tests/data/comments2.py,232,(1  # )1,not
+black/tests/data/comments2.py,236,type: ignore,not
+black/tests/data/comments2.py,240,(2 what if this was actually long,not
+black/tests/data/comments2.py,242,)2,not
+black/tests/data/comments2.py,244,type: ignore,not
+black/tests/data/comments2.py,247,has the child process finished?,not
+black/tests/data/comments2.py,249,"the child process has finished, but the",not
+black/tests/data/comments2.py,250,transport hasn't been notified yet?,not
+black/tests/data/comments2.py,254,no newline before or after,not
+black/tests/data/comments2.py,256,one,not
+black/tests/data/comments2.py,258,two,not
+black/tests/data/comments2.py,262,no newline after,not
+black/tests/data/comments2.py,272,,not
+black/tests/data/comments2.py,275,short,not
+black/tests/data/comments2.py,277,but,not
+black/tests/data/comments2.py,279,multiline,not
+black/tests/data/comments2.py,283,yup,not
+black/tests/data/comments2.py,287,yup  # yup  # right,not
+black/tests/data/comments2.py,290,hello,not
+black/tests/data/comments2.py,292,yup,not
+black/tests/data/comments2.py,294,right,not
+black/tests/data/comments2.py,298,This one is actually too long to fit in a single line.,not
+black/tests/data/comments2.py,300,yup,not
+black/tests/data/comments2.py,302,right,not
+black/tests/data/comments2.py,309,and round and round we go,not
+black/tests/data/comments2.py,310,and round and round we go,not
+black/tests/data/comments2.py,312,let's return,not
+black/tests/data/comments2.py,315,FIXME: \r\n?,SATD
+black/tests/data/comments2.py,319,type: Final,not
+black/tests/data/comments2.py,324,type: ignore,not
+black/tests/data/comments2.py,328,,not
+black/tests/data/comments2.py,329,SECTION COMMENT,not
+black/tests/data/comments2.py,330,,not
+black/tests/data/comments2.py,335,END COMMENTS,not
+black/tests/data/comments2.py,336,MORE END COMMENTS,not
+black/tests/data/python2.py,1,!/usr/bin/env python2,not
+black/tests/data/python2.py,17,output,not
+black/tests/data/python2.py,20,!/usr/bin/env python2,not
+black/docs/conf.py,1,-*- coding: utf-8 -*-,not
+black/docs/conf.py,2,,not
+black/docs/conf.py,3,Configuration file for the Sphinx documentation builder.,not
+black/docs/conf.py,4,,not
+black/docs/conf.py,5,This file does only contain a selection of the most common options. For a,not
+black/docs/conf.py,6,full list see the documentation:,not
+black/docs/conf.py,7,http://www.sphinx-doc.org/en/stable/config,not
+black/docs/conf.py,9,-- Path setup --------------------------------------------------------------,not
+black/docs/conf.py,11,"If extensions (or modules to document with autodoc) are in another directory,",not
+black/docs/conf.py,12,add these directories to sys.path here. If the directory is relative to the,not
+black/docs/conf.py,13,"documentation root, use os.path.abspath to make it absolute, like shown here.",not
+black/docs/conf.py,14,,not
+black/docs/conf.py,79,-- Project information -----------------------------------------------------,not
+black/docs/conf.py,85,Autopopulate version,not
+black/docs/conf.py,86,"The version, including alpha/beta/rc tags, but not commit hash and datestamps",not
+black/docs/conf.py,88,The short X.Y version.,not
+black/docs/conf.py,96,-- General configuration ---------------------------------------------------,not
+black/docs/conf.py,98,"If your documentation needs a minimal Sphinx version, state it here.",not
+black/docs/conf.py,99,,not
+black/docs/conf.py,100,needs_sphinx = '1.0',not
+black/docs/conf.py,102,"Add any Sphinx extension module names here, as strings. They can be",not
+black/docs/conf.py,103,extensions coming with Sphinx (named 'sphinx.ext.*') or your custom,not
+black/docs/conf.py,104,ones.,not
+black/docs/conf.py,107,"Add any paths that contain templates here, relative to this directory.",not
+black/docs/conf.py,112,The suffix(es) of source filenames.,not
+black/docs/conf.py,113,You can specify multiple suffix as a list of string:,not
+black/docs/conf.py,116,The master toctree document.,not
+black/docs/conf.py,119,The language for content autogenerated by Sphinx. Refer to documentation,not
+black/docs/conf.py,120,for a list of supported languages.,not
+black/docs/conf.py,121,,not
+black/docs/conf.py,122,This is also used if you do content translation via gettext catalogs.,not
+black/docs/conf.py,123,"Usually you set ""language"" from the command line for these cases.",not
+black/docs/conf.py,126,"List of patterns, relative to source directory, that match files and",not
+black/docs/conf.py,127,directories to ignore when looking for source files.,not
+black/docs/conf.py,128,This pattern also affects html_static_path and html_extra_path .,not
+black/docs/conf.py,131,The name of the Pygments (syntax highlighting) style to use.,not
+black/docs/conf.py,135,-- Options for HTML output -------------------------------------------------,not
+black/docs/conf.py,137,The theme to use for HTML and HTML Help pages.  See the documentation for,not
+black/docs/conf.py,138,a list of builtin themes.,not
+black/docs/conf.py,139,,not
+black/docs/conf.py,166,"Add any paths that contain custom static files (such as style sheets) here,",not
+black/docs/conf.py,167,"relative to this directory. They are copied after the builtin static files,",not
+black/docs/conf.py,168,"so a file named ""default.css"" will overwrite the builtin ""default.css"".",not
+black/docs/conf.py,171,"Custom sidebar templates, must be a dictionary that maps document names",not
+black/docs/conf.py,172,to template names.,not
+black/docs/conf.py,173,,not
+black/docs/conf.py,174,The default sidebars (for documents that don't match any pattern) are,not
+black/docs/conf.py,175,defined by theme itself.  Builtin themes are using these templates by,not
+black/docs/conf.py,176,"default: ``['localtoc.html', 'relations.html', 'sourcelink.html',",not
+black/docs/conf.py,177,'searchbox.html']``.,not
+black/docs/conf.py,178,,not
+black/docs/conf.py,179,html_sidebars = {},not
+black/docs/conf.py,182,-- Options for HTMLHelp output ---------------------------------------------,not
+black/docs/conf.py,184,Output file base name for HTML help builder.,not
+black/docs/conf.py,188,-- Options for LaTeX output ------------------------------------------------,not
+black/docs/conf.py,191,The paper size ('letterpaper' or 'a4paper').,not
+black/docs/conf.py,192,,not
+black/docs/conf.py,193,"'papersize': 'letterpaper',",not
+black/docs/conf.py,194,"The font size ('10pt', '11pt' or '12pt').",not
+black/docs/conf.py,195,,not
+black/docs/conf.py,196,"'pointsize': '10pt',",not
+black/docs/conf.py,197,Additional stuff for the LaTeX preamble.,not
+black/docs/conf.py,198,,not
+black/docs/conf.py,199,"'preamble': '',",not
+black/docs/conf.py,200,Latex figure (float) alignment,not
+black/docs/conf.py,201,,not
+black/docs/conf.py,202,"'figure_align': 'htbp',",not
+black/docs/conf.py,205,Grouping the document tree into LaTeX files. List of tuples,not
+black/docs/conf.py,206,"(source start file, target name, title,",not
+black/docs/conf.py,207,"author, documentclass [howto, manual, or own class]).",SATD
+black/docs/conf.py,219,-- Options for manual page output ------------------------------------------,not
+black/docs/conf.py,221,One entry per manual page. List of tuples,not
+black/docs/conf.py,222,"(source start file, name, description, authors, manual section).",not
+black/docs/conf.py,226,-- Options for Texinfo output ----------------------------------------------,not
+black/docs/conf.py,228,Grouping the document tree into Texinfo files. List of tuples,not
+black/docs/conf.py,229,"(source start file, target name, title, author,",not
+black/docs/conf.py,230,"dir menu entry, description, category)",not
+black/docs/conf.py,244,-- Options for Epub output -------------------------------------------------,not
+black/docs/conf.py,246,Bibliographic Dublin Core info.,not
+black/docs/conf.py,252,The unique identifier of the text. This can be a ISBN number,not
+black/docs/conf.py,253,or the project homepage.,not
+black/docs/conf.py,254,,not
+black/docs/conf.py,255,epub_identifier = '',not
+black/docs/conf.py,257,A unique identification for the text.,not
+black/docs/conf.py,258,,not
+black/docs/conf.py,259,epub_uid = '',not
+black/docs/conf.py,261,A list of files that should not be packed into the epub file.,not
+black/docs/conf.py,265,-- Extension configuration -------------------------------------------------,not
+black/docs/conf.py,269,-- Options for intersphinx extension ---------------------------------------,not
+black/docs/conf.py,271,Example configuration for intersphinx: refer to the Python standard library.,not
+black/gallery/gallery.py,13,type: ignore # typing can't see Literal,not
+black/gallery/gallery.py,34,type: ignore,not
+black/gallery/gallery.py,35,https://github.com/python/mypy/issues/1484,not
+black/gallery/gallery.py,126,for flake8,not
+black/gallery/gallery.py,225,ensure the process,not
+black/gallery/gallery.py,226,continuess to run even it can't format some files. Reporting those,not
+black/gallery/gallery.py,227,should be enough,not

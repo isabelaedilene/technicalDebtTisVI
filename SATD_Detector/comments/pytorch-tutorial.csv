@@ -1,346 +1,346 @@
 file path,line #,comment,satd
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,1,Some part of the code was referenced from below.,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,2,https://github.com/pytorch/examples/tree/master/word_language_model,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,10,Device configuration,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,13,Hyper-parameters,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,18,number of words to be sampled,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,23,"Load ""Penn Treebank"" dataset",
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,30,RNN based language model,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,39,Embed word ids to vectors,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,42,Forward propagate LSTM,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,45,"Reshape output to (batch_size*sequence_length, hidden_size)",
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,48,Decode hidden states of all time steps,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,54,Loss and optimizer,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,58,Truncated backpropagation,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,62,Train the model,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,64,Set initial hidden and cell states,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,69,Get mini-batch inputs and targets,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,73,Forward pass,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,78,Backward and optimize,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,89,Test the model,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,92,Set intial hidden ane cell states,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,96,Select one word id randomly,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,101,Forward propagate RNN,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,104,Sample a word id,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,108,Fill input with sampled word id for the next time step,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,111,File write,
-pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,119,Save the model checkpoints,
-pytorch-tutorial/tutorials/02-intermediate/language_model/data_utils.py,26,Add words to the dictionary,
-pytorch-tutorial/tutorials/02-intermediate/language_model/data_utils.py,35,Tokenize the file content,
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,7,Device configuration,
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,10,Hyper parameters,
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,16,MNIST dataset,
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,26,Data loader,
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,35,Convolutional neural network (two convolutional layers),
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,60,Loss and optimizer,
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,64,Train the model,
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,71,Forward pass,
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,75,Backward and optimize,
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,84,Test the model,
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,85,eval mode (batchnorm uses moving mean/variance instead of mini-batch mean/variance),
-pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,99,Save the model checkpoint,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,1,----------------------------------------------------------------------------,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,2,An implementation of https://arxiv.org/pdf/1512.03385.pdf,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,3,See section 4.2 for the model architecture on CIFAR-10,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,4,Some part of the code was referenced from below,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,5,https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,6,----------------------------------------------------------------------------,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,14,Device configuration,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,17,Hyper-parameters,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,22,Image preprocessing modules,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,29,CIFAR-10 dataset,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,39,Data loader,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,48,3x3 convolution,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,53,Residual block,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,77,ResNet,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,119,Loss and optimizer,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,123,For updating learning rate,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,128,Train the model,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,136,Forward pass,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,140,Backward and optimize,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,149,Decay learning rate,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,154,Test the model,
-pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,169,Save the model checkpoint,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,7,Device configuration,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,10,Hyper-parameters,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,20,MNIST dataset,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,30,Data loader,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,39,Recurrent neural network (many-to-one),
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,49,Set initial hidden and cell states,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,53,Forward propagate LSTM,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,54,"out: tensor of shape (batch_size, seq_length, hidden_size)",
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,56,Decode the hidden state of the last time step,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,63,Loss and optimizer,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,67,Train the model,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,74,Forward pass,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,78,Backward and optimize,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,87,Test the model,
-pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,102,Save the model checkpoint,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,7,Device configuration,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,10,Hyper-parameters,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,20,MNIST dataset,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,30,Data loader,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,39,Bidirectional recurrent neural network (many-to-one),
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,46,2 for bidirection,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,49,Set initial states,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,50,2 for bidirection,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,53,Forward propagate LSTM,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,54,"out: tensor of shape (batch_size, seq_length, hidden_size*2)",
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,56,Decode the hidden state of the last time step,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,63,Loss and optimizer,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,67,Train the model,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,74,Forward pass,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,78,Backward and optimize,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,87,Test the model,
-pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,101,Save the model checkpoint,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,9,Device configuration,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,12,Hyper-parameters,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,20,Create a directory if not exists,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,24,Image processing,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,25,transform = transforms.Compose([,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,26,"transforms.ToTensor(),",
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,27,"transforms.Normalize(mean=(0.5, 0.5, 0.5),   # 3 for RGB channels",
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,28,"std=(0.5, 0.5, 0.5))])",
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,31,1 for greyscale channels,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,34,MNIST dataset,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,40,Data loader,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,45,Discriminator,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,54,Generator,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,63,Device setting,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,67,Binary cross entropy loss and optimizer,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,80,Start training,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,86,Create the labels which are later used as input for the BCE loss,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,90,==================================================================,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,91,Train the discriminator,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,92,==================================================================,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,94,"Compute BCE_Loss using real images where BCE_Loss(x, y): - y * log(D(x)) - (1-y) * log(1 - D(x))",
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,95,Second term of the loss is always zero since real_labels == 1,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,100,Compute BCELoss using fake images,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,101,First term of the loss is always zero since fake_labels == 0,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,108,Backprop and optimize,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,114,==================================================================,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,115,Train the generator,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,116,==================================================================,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,118,Compute loss with fake images,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,123,We train G to maximize log(D(G(z)) instead of minimizing log(1-D(G(z))),
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,124,"For the reason, see the last paragraph of section 3. https://arxiv.org/pdf/1406.2661.pdf",
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,127,Backprop and optimize,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,137,Save real images,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,142,Save sampled images,
-pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,146,Save the model checkpoints,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,10,Device configuration,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,13,Create a directory if not exists,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,18,Hyper-parameters,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,26,MNIST dataset,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,32,Data loader,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,38,VAE model,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,70,Start training,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,73,Forward pass,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,77,Compute reconstruction loss and kl divergence,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,78,"For KL divergence, see Appendix B in VAE paper or http://yunjey47.tistory.com/43",
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,82,Backprop and optimize,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,93,Save the sampled images,
-pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,98,Save the reconstructed images,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,12,delete the last fc layer.,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,49,"hiddens: (batch_size, 1, hidden_size)",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,50,"outputs:  (batch_size, vocab_size)",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,51,predicted: (batch_size),
-pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,53,"inputs: (batch_size, embed_size)",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,54,"inputs: (batch_size, 1, embed_size)",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,55,"sampled_ids: (batch_size, max_seq_length)",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,13,Device configuration,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,26,Image preprocessing,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,32,Load vocabulary wrapper,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,36,Build models,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,37,eval mode (batchnorm uses moving mean/variance),
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,42,Load the trained model parameters,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,46,Prepare an image,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,50,Generate an caption from the image,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,53,"(1, max_seq_length) -> (max_seq_length)",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,55,Convert word_ids to words,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,64,Print out the image and the generated caption,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,76,Model parameters (should be same as paramters in train.py),
-pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,43,Convert caption (string) to word ids.,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,72,Sort a data list by caption length (descending order).,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,76,Merge images (from tuple of 3D tensor to 4D tensor).,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,79,Merge captions (from tuple of 1D tensor to 2D tensor).,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,89,COCO caption dataset,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,95,Data loader for COCO dataset,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,96,"This will return (images, captions, lengths) for each iteration.",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,97,"images: a tensor of shape (batch_size, 3, 224, 224).",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,98,"captions: a tensor of shape (batch_size, padded_length).",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,99,lengths: a list indicating valid length for each caption. length is (batch_size).,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/build_vocab.py,42,"If the word frequency is less than 'threshold', then the word is discarded.",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/build_vocab.py,45,Create a vocab wrapper and add some special tokens.,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/build_vocab.py,52,Add the words to the vocabulary.,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,14,Device configuration,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,18,Create model directory,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,22,"Image preprocessing, normalization for the pretrained resnet",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,30,Load vocabulary wrapper,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,34,Build data loader,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,39,Build the models,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,43,Loss and optimizer,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,48,Train the models,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,53,Set mini-batch dataset,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,58,"Forward, backward and optimize",
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,67,Print log info,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,72,Save the model checkpoints,
-pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,90,Model parameters,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,12,Device configuration,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,52,Image preprocessing,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,53,"VGGNet was trained on ImageNet where images are normalized by mean=[0.485, 0.456, 0.406] and std=[0.229, 0.224, 0.225].",
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,54,We use the same normalization statistics here.,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,60,Load content and style images,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,61,Make the style image same size as the content image,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,65,Initialize a target image with the content image,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,73,Extract multiple(5) conv feature vectors,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,81,Compute content loss with target and content images,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,84,Reshape convolutional feature maps,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,89,Compute gram matrix,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,93,Compute style loss with target and style images,
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,96,"Compute total loss, backprop and optimize",
-pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,107,Save the generated image,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,1,Code referenced from https://gist.github.com/gyglim/1f8dfb1b5c82627ae3efcfbbadb9f514,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,6,Python 2.7,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,8,Python 3.x,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,27,Write the image to a string,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,34,Create an Image object,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,38,Create a Summary value,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,41,Create and write Summary,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,48,Create a histogram using numpy,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,51,Fill the fields of the histogram proto,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,59,Drop the start of the first bin,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,62,Add bin edges and counts,
-pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,68,Create and write Summary,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,8,Device configuration,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,11,MNIST dataset,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,17,Data loader,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,23,Fully connected neural network with one hidden layer,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,41,Loss and optimizer,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,49,Start training,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,52,Reset the data_iter,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,56,Fetch images and labels,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,60,Forward pass,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,64,Backward and optimize,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,69,Compute accuracy,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,77,==================================================================,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,78,Tensorboard Logging,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,79,==================================================================,
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,81,1. Log scalar values (scalar summary),
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,87,2. Log values and gradients of the parameters (histogram summary),
-pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,93,3. Log training images (image summary),
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,7,Device configuration,
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,10,Hyper-parameters,
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,18,MNIST dataset,
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,28,Data loader,
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,37,Fully connected neural network with one hidden layer,
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,53,Loss and optimizer,
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,57,Train the model,
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,61,Move tensors to the configured device,
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,65,Forward pass,
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,69,Backward and optimize,
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,78,Test the model,
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,79,"In test phase, we don't need to compute gradients (for memory efficiency)",
-pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,93,Save the model checkpoint,
-pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,7,Hyper-parameters,
-pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,13,Toy dataset,
-pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,22,Linear regression model,
-pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,25,Loss and optimizer,
-pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,29,Train the model,
-pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,31,Convert numpy arrays to torch tensors,
-pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,35,Forward pass,
-pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,39,Backward and optimize,
-pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,47,Plot the graph,
-pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,54,Save the model checkpoint,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,8,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,9,Table of Contents,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,10,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,12,1. Basic autograd example 1               (Line 25 to 39),
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,13,2. Basic autograd example 2               (Line 46 to 83),
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,14,3. Loading data from numpy                (Line 90 to 97),
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,15,4. Input pipline                          (Line 104 to 129),
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,16,5. Input pipline for custom dataset       (Line 136 to 156),
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,17,6. Pretrained model                       (Line 163 to 176),
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,18,7. Save and load model                    (Line 183 to 189),
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,21,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,22,1. Basic autograd example 1,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,23,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,25,Create tensors.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,30,Build a computational graph.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,31,y = 2 * x + 3,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,33,Compute gradients.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,36,Print out the gradients.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,37,x.grad = 2,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,38,w.grad = 1,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,39,b.grad = 1,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,42,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,43,2. Basic autograd example 2,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,44,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,46,"Create tensors of shape (10, 3) and (10, 2).",
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,50,Build a fully connected layer.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,55,Build loss function and optimizer.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,59,Forward pass.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,62,Compute loss.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,66,Backward pass.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,69,Print out the gradients.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,73,1-step gradient descent.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,76,You can also perform gradient descent at the low level.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,77,linear.weight.data.sub_(0.01 * linear.weight.grad.data),
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,78,linear.bias.data.sub_(0.01 * linear.bias.grad.data),
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,80,Print out the loss after 1-step gradient descent.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,86,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,87,3. Loading data from numpy,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,88,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,90,Create a numpy array.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,93,Convert the numpy array to a torch tensor.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,96,Convert the torch tensor to a numpy array.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,100,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,101,4. Input pipeline,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,102,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,104,Download and construct CIFAR-10 dataset.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,110,Fetch one data pair (read data from disk).,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,115,Data loader (this provides queues and threads in a very simple way).,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,120,"When iteration starts, queue and thread start to load data from files.",
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,123,Mini-batch images and labels.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,126,Actual usage of the data loader is as below.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,128,Training code should be written here.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,132,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,133,5. Input pipeline for custom dataset,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,134,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,136,You should build your custom dataset as below.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,139,TODO,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,140,1. Initialize file paths or a list of file names.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,143,TODO,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,144,"1. Read one data from file (e.g. using numpy.fromfile, PIL.Image.open).",
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,145,2. Preprocess the data (e.g. torchvision.Transform).,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,146,3. Return a data pair (e.g. image and label).,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,149,You should change 0 to the total size of your dataset.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,152,You can then use the prebuilt data loader.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,159,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,160,6. Pretrained model,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,161,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,163,Download and load the pretrained ResNet-18.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,166,"If you want to finetune only the top layer of the model, set as below.",
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,170,Replace the top layer for finetuning.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,171,100 is an example.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,173,Forward pass.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,176,"(64, 100)",
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,179,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,180,7. Save and load the model,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,181,==================================================================,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,183,Save and load the entire model.,
-pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,187,Save and load only the model parameters (recommended).,
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,7,Hyper-parameters,
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,8,784,
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,14,MNIST dataset (images and labels),
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,24,Data loader (input pipeline),
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,33,Logistic regression model,
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,36,Loss and optimizer,
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,37,nn.CrossEntropyLoss() computes softmax internally,
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,41,Train the model,
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,45,"Reshape images to (batch_size, input_size)",
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,48,Forward pass,
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,52,Backward and optimize,
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,61,Test the model,
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,62,"In test phase, we don't need to compute gradients (for memory efficiency)",
-pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,75,Save the model checkpoint,
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,1,Some part of the code was referenced from below.,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,2,https://github.com/pytorch/examples/tree/master/word_language_model,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,10,Device configuration,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,13,Hyper-parameters,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,18,number of words to be sampled,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,23,"Load ""Penn Treebank"" dataset",not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,30,RNN based language model,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,39,Embed word ids to vectors,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,42,Forward propagate LSTM,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,45,"Reshape output to (batch_size*sequence_length, hidden_size)",not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,48,Decode hidden states of all time steps,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,54,Loss and optimizer,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,58,Truncated backpropagation,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,62,Train the model,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,64,Set initial hidden and cell states,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,69,Get mini-batch inputs and targets,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,73,Forward pass,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,78,Backward and optimize,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,89,Test the model,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,92,Set intial hidden ane cell states,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,96,Select one word id randomly,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,101,Forward propagate RNN,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,104,Sample a word id,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,108,Fill input with sampled word id for the next time step,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,111,File write,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/main.py,119,Save the model checkpoints,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/data_utils.py,26,Add words to the dictionary,not
+pytorch-tutorial/tutorials/02-intermediate/language_model/data_utils.py,35,Tokenize the file content,not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,7,Device configuration,not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,10,Hyper parameters,not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,16,MNIST dataset,not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,26,Data loader,not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,35,Convolutional neural network (two convolutional layers),not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,60,Loss and optimizer,not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,64,Train the model,not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,71,Forward pass,not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,75,Backward and optimize,not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,84,Test the model,not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,85,eval mode (batchnorm uses moving mean/variance instead of mini-batch mean/variance),not
+pytorch-tutorial/tutorials/02-intermediate/convolutional_neural_network/main.py,99,Save the model checkpoint,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,1,----------------------------------------------------------------------------,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,2,An implementation of https://arxiv.org/pdf/1512.03385.pdf,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,3,See section 4.2 for the model architecture on CIFAR-10,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,4,Some part of the code was referenced from below,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,5,https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,6,----------------------------------------------------------------------------,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,14,Device configuration,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,17,Hyper-parameters,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,22,Image preprocessing modules,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,29,CIFAR-10 dataset,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,39,Data loader,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,48,3x3 convolution,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,53,Residual block,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,77,ResNet,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,119,Loss and optimizer,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,123,For updating learning rate,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,128,Train the model,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,136,Forward pass,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,140,Backward and optimize,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,149,Decay learning rate,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,154,Test the model,not
+pytorch-tutorial/tutorials/02-intermediate/deep_residual_network/main.py,169,Save the model checkpoint,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,7,Device configuration,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,10,Hyper-parameters,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,20,MNIST dataset,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,30,Data loader,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,39,Recurrent neural network (many-to-one),not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,49,Set initial hidden and cell states,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,53,Forward propagate LSTM,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,54,"out: tensor of shape (batch_size, seq_length, hidden_size)",not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,56,Decode the hidden state of the last time step,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,63,Loss and optimizer,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,67,Train the model,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,74,Forward pass,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,78,Backward and optimize,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,87,Test the model,not
+pytorch-tutorial/tutorials/02-intermediate/recurrent_neural_network/main.py,102,Save the model checkpoint,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,7,Device configuration,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,10,Hyper-parameters,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,20,MNIST dataset,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,30,Data loader,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,39,Bidirectional recurrent neural network (many-to-one),not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,46,2 for bidirection,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,49,Set initial states,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,50,2 for bidirection,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,53,Forward propagate LSTM,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,54,"out: tensor of shape (batch_size, seq_length, hidden_size*2)",not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,56,Decode the hidden state of the last time step,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,63,Loss and optimizer,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,67,Train the model,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,74,Forward pass,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,78,Backward and optimize,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,87,Test the model,not
+pytorch-tutorial/tutorials/02-intermediate/bidirectional_recurrent_neural_network/main.py,101,Save the model checkpoint,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,9,Device configuration,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,12,Hyper-parameters,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,20,Create a directory if not exists,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,24,Image processing,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,25,transform = transforms.Compose([,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,26,"transforms.ToTensor(),",not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,27,"transforms.Normalize(mean=(0.5, 0.5, 0.5),   # 3 for RGB channels",not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,28,"std=(0.5, 0.5, 0.5))])",not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,31,1 for greyscale channels,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,34,MNIST dataset,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,40,Data loader,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,45,Discriminator,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,54,Generator,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,63,Device setting,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,67,Binary cross entropy loss and optimizer,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,80,Start training,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,86,Create the labels which are later used as input for the BCE loss,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,90,==================================================================,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,91,Train the discriminator,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,92,==================================================================,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,94,"Compute BCE_Loss using real images where BCE_Loss(x, y): - y * log(D(x)) - (1-y) * log(1 - D(x))",not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,95,Second term of the loss is always zero since real_labels == 1,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,100,Compute BCELoss using fake images,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,101,First term of the loss is always zero since fake_labels == 0,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,108,Backprop and optimize,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,114,==================================================================,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,115,Train the generator,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,116,==================================================================,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,118,Compute loss with fake images,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,123,We train G to maximize log(D(G(z)) instead of minimizing log(1-D(G(z))),not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,124,"For the reason, see the last paragraph of section 3. https://arxiv.org/pdf/1406.2661.pdf",not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,127,Backprop and optimize,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,137,Save real images,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,142,Save sampled images,not
+pytorch-tutorial/tutorials/03-advanced/generative_adversarial_network/main.py,146,Save the model checkpoints,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,10,Device configuration,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,13,Create a directory if not exists,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,18,Hyper-parameters,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,26,MNIST dataset,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,32,Data loader,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,38,VAE model,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,70,Start training,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,73,Forward pass,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,77,Compute reconstruction loss and kl divergence,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,78,"For KL divergence, see Appendix B in VAE paper or http://yunjey47.tistory.com/43",not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,82,Backprop and optimize,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,93,Save the sampled images,not
+pytorch-tutorial/tutorials/03-advanced/variational_autoencoder/main.py,98,Save the reconstructed images,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,12,delete the last fc layer.,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,49,"hiddens: (batch_size, 1, hidden_size)",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,50,"outputs:  (batch_size, vocab_size)",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,51,predicted: (batch_size),not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,53,"inputs: (batch_size, embed_size)",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,54,"inputs: (batch_size, 1, embed_size)",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/model.py,55,"sampled_ids: (batch_size, max_seq_length)",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,13,Device configuration,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,26,Image preprocessing,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,32,Load vocabulary wrapper,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,36,Build models,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,37,eval mode (batchnorm uses moving mean/variance),not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,42,Load the trained model parameters,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,46,Prepare an image,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,50,Generate an caption from the image,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,53,"(1, max_seq_length) -> (max_seq_length)",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,55,Convert word_ids to words,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,64,Print out the image and the generated caption,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/sample.py,76,Model parameters (should be same as paramters in train.py),not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,43,Convert caption (string) to word ids.,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,72,Sort a data list by caption length (descending order).,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,76,Merge images (from tuple of 3D tensor to 4D tensor).,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,79,Merge captions (from tuple of 1D tensor to 2D tensor).,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,89,COCO caption dataset,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,95,Data loader for COCO dataset,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,96,"This will return (images, captions, lengths) for each iteration.",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,97,"images: a tensor of shape (batch_size, 3, 224, 224).",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,98,"captions: a tensor of shape (batch_size, padded_length).",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/data_loader.py,99,lengths: a list indicating valid length for each caption. length is (batch_size).,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/build_vocab.py,42,"If the word frequency is less than 'threshold', then the word is discarded.",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/build_vocab.py,45,Create a vocab wrapper and add some special tokens.,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/build_vocab.py,52,Add the words to the vocabulary.,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,14,Device configuration,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,18,Create model directory,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,22,"Image preprocessing, normalization for the pretrained resnet",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,30,Load vocabulary wrapper,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,34,Build data loader,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,39,Build the models,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,43,Loss and optimizer,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,48,Train the models,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,53,Set mini-batch dataset,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,58,"Forward, backward and optimize",not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,67,Print log info,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,72,Save the model checkpoints,not
+pytorch-tutorial/tutorials/03-advanced/image_captioning/train.py,90,Model parameters,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,12,Device configuration,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,52,Image preprocessing,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,53,"VGGNet was trained on ImageNet where images are normalized by mean=[0.485, 0.456, 0.406] and std=[0.229, 0.224, 0.225].",not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,54,We use the same normalization statistics here.,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,60,Load content and style images,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,61,Make the style image same size as the content image,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,65,Initialize a target image with the content image,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,73,Extract multiple(5) conv feature vectors,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,81,Compute content loss with target and content images,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,84,Reshape convolutional feature maps,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,89,Compute gram matrix,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,93,Compute style loss with target and style images,not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,96,"Compute total loss, backprop and optimize",not
+pytorch-tutorial/tutorials/03-advanced/neural_style_transfer/main.py,107,Save the generated image,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,1,Code referenced from https://gist.github.com/gyglim/1f8dfb1b5c82627ae3efcfbbadb9f514,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,6,Python 2.7,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,8,Python 3.x,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,27,Write the image to a string,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,34,Create an Image object,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,38,Create a Summary value,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,41,Create and write Summary,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,48,Create a histogram using numpy,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,51,Fill the fields of the histogram proto,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,59,Drop the start of the first bin,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,62,Add bin edges and counts,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/logger.py,68,Create and write Summary,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,8,Device configuration,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,11,MNIST dataset,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,17,Data loader,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,23,Fully connected neural network with one hidden layer,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,41,Loss and optimizer,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,49,Start training,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,52,Reset the data_iter,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,56,Fetch images and labels,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,60,Forward pass,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,64,Backward and optimize,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,69,Compute accuracy,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,77,==================================================================,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,78,Tensorboard Logging,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,79,==================================================================,not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,81,1. Log scalar values (scalar summary),not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,87,2. Log values and gradients of the parameters (histogram summary),not
+pytorch-tutorial/tutorials/04-utils/tensorboard/main.py,93,3. Log training images (image summary),not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,7,Device configuration,not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,10,Hyper-parameters,not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,18,MNIST dataset,not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,28,Data loader,not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,37,Fully connected neural network with one hidden layer,not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,53,Loss and optimizer,not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,57,Train the model,not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,61,Move tensors to the configured device,SATD
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,65,Forward pass,not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,69,Backward and optimize,not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,78,Test the model,not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,79,"In test phase, we don't need to compute gradients (for memory efficiency)",not
+pytorch-tutorial/tutorials/01-basics/feedforward_neural_network/main.py,93,Save the model checkpoint,not
+pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,7,Hyper-parameters,not
+pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,13,Toy dataset,not
+pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,22,Linear regression model,not
+pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,25,Loss and optimizer,not
+pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,29,Train the model,not
+pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,31,Convert numpy arrays to torch tensors,not
+pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,35,Forward pass,not
+pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,39,Backward and optimize,not
+pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,47,Plot the graph,not
+pytorch-tutorial/tutorials/01-basics/linear_regression/main.py,54,Save the model checkpoint,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,8,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,9,Table of Contents,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,10,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,12,1. Basic autograd example 1               (Line 25 to 39),not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,13,2. Basic autograd example 2               (Line 46 to 83),not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,14,3. Loading data from numpy                (Line 90 to 97),not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,15,4. Input pipline                          (Line 104 to 129),not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,16,5. Input pipline for custom dataset       (Line 136 to 156),not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,17,6. Pretrained model                       (Line 163 to 176),not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,18,7. Save and load model                    (Line 183 to 189),not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,21,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,22,1. Basic autograd example 1,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,23,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,25,Create tensors.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,30,Build a computational graph.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,31,y = 2 * x + 3,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,33,Compute gradients.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,36,Print out the gradients.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,37,x.grad = 2,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,38,w.grad = 1,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,39,b.grad = 1,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,42,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,43,2. Basic autograd example 2,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,44,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,46,"Create tensors of shape (10, 3) and (10, 2).",not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,50,Build a fully connected layer.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,55,Build loss function and optimizer.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,59,Forward pass.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,62,Compute loss.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,66,Backward pass.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,69,Print out the gradients.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,73,1-step gradient descent.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,76,You can also perform gradient descent at the low level.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,77,linear.weight.data.sub_(0.01 * linear.weight.grad.data),not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,78,linear.bias.data.sub_(0.01 * linear.bias.grad.data),not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,80,Print out the loss after 1-step gradient descent.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,86,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,87,3. Loading data from numpy,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,88,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,90,Create a numpy array.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,93,Convert the numpy array to a torch tensor.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,96,Convert the torch tensor to a numpy array.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,100,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,101,4. Input pipeline,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,102,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,104,Download and construct CIFAR-10 dataset.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,110,Fetch one data pair (read data from disk).,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,115,Data loader (this provides queues and threads in a very simple way).,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,120,"When iteration starts, queue and thread start to load data from files.",not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,123,Mini-batch images and labels.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,126,Actual usage of the data loader is as below.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,128,Training code should be written here.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,132,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,133,5. Input pipeline for custom dataset,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,134,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,136,You should build your custom dataset as below.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,139,TODO,SATD
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,140,1. Initialize file paths or a list of file names.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,143,TODO,SATD
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,144,"1. Read one data from file (e.g. using numpy.fromfile, PIL.Image.open).",not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,145,2. Preprocess the data (e.g. torchvision.Transform).,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,146,3. Return a data pair (e.g. image and label).,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,149,You should change 0 to the total size of your dataset.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,152,You can then use the prebuilt data loader.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,159,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,160,6. Pretrained model,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,161,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,163,Download and load the pretrained ResNet-18.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,166,"If you want to finetune only the top layer of the model, set as below.",not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,170,Replace the top layer for finetuning.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,171,100 is an example.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,173,Forward pass.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,176,"(64, 100)",not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,179,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,180,7. Save and load the model,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,181,==================================================================,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,183,Save and load the entire model.,not
+pytorch-tutorial/tutorials/01-basics/pytorch_basics/main.py,187,Save and load only the model parameters (recommended).,not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,7,Hyper-parameters,not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,8,784,not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,14,MNIST dataset (images and labels),not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,24,Data loader (input pipeline),not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,33,Logistic regression model,not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,36,Loss and optimizer,not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,37,nn.CrossEntropyLoss() computes softmax internally,not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,41,Train the model,not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,45,"Reshape images to (batch_size, input_size)",not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,48,Forward pass,not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,52,Backward and optimize,not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,61,Test the model,not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,62,"In test phase, we don't need to compute gradients (for memory efficiency)",not
+pytorch-tutorial/tutorials/01-basics/logistic_regression/main.py,75,Save the model checkpoint,not
