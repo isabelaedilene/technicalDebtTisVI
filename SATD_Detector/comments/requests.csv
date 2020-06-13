@@ -1,871 +1,873 @@
 file path,line #,comment,satd
-requests/setup.py,1,!/usr/bin/env python,
-requests/setup.py,2,Learn more: https://github.com/kennethreitz/setup.py,
-requests/setup.py,36,'setup.py publish' shortcut.,
-requests/tests/compat.py,1,-*- coding: utf-8 -*-,
-requests/tests/test_hooks.py,1,-*- coding: utf-8 -*-,
-requests/tests/test_testserver.py,1,-*- coding: utf-8 -*-,
-requests/tests/test_testserver.py,77,release server block,
-requests/tests/test_testserver.py,91,the (n+1)th request fails,
-requests/tests/test_testserver.py,98,TODO: figure out why this sometimes fails when using pytest-xdist.,
-requests/tests/test_testserver.py,154,"if the server thread fails to finish, the test suite will hang",
-requests/tests/test_testserver.py,155,and get killed by the jenkins timeout.,
-requests/tests/test_testserver.py,165,"if the server thread fails to finish, the test suite will hang",
-requests/tests/test_testserver.py,166,and get killed by the jenkins timeout.,
-requests/tests/test_utils.py,1,-*- coding: utf-8 -*-,
-requests/tests/test_utils.py,200,This is testing that the 'no_proxy' argument overrides the,
-requests/tests/test_utils.py,201,environment variable 'no_proxy',
-requests/tests/test_utils.py,297,HTML5 meta charset attribute,
-requests/tests/test_utils.py,299,HTML4 pragma directive,
-requests/tests/test_utils.py,301,XHTML 1.x served with text/html MIME type,
-requests/tests/test_utils.py,303,XHTML 1.x served as XML,
-requests/tests/test_utils.py,390,Ensure requoting doesn't break expectations,
-requests/tests/test_utils.py,395,Ensure we handle unquoted percent signs in redirects,
-requests/tests/test_utils.py,408,Illegal bytes,
-requests/tests/test_utils.py,413,Reserved characters,
-requests/tests/test_utils.py,457,XXX: unsure whether this is reasonable behavior,
-requests/tests/test_utils.py,547,Reads all content at once,
-requests/tests/test_utils.py,701,Test 'no_proxy' argument,
-requests/tests/test_utils.py,744,this could be a string (REG_SZ) or a 32-bit number (REG_DWORD),
-requests/tests/conftest.py,1,-*- coding: utf-8 -*-,
-requests/tests/conftest.py,8,Issue #1483: Make sure the URL always has a trailing slash,
-requests/tests/utils.py,1,-*- coding: utf-8 -*-,
-requests/tests/test_,1,-*- coding: utf-8 -*-,
-requests/tests/test_,39,Requests to this URL should always fail with a connection timeout (nothing,
-requests/tests/test_,40,listening on that port),
-requests/tests/test_,71,"Not really an entry point, but people rely on it.",
-requests/tests/test_,150,Test for issue #3696,
-requests/tests/test_,268,Mimic a redirect response,
-requests/tests/test_,272,Run request through resolve_redirects,
-requests/tests/test_,285,Create Response to avoid https://github.com/kevin1024/pytest-httpbin/issues/33,
-requests/tests/test_,291,Mimic a redirect response,
-requests/tests/test_,295,Run request through resolve_redirect,
-requests/tests/test_,332,redirects to httpbin('get'),
-requests/tests/test_,364,Session cookie should not be modified,
-requests/tests/test_,370,Sending a request with cookies should not add cookies to the session,
-requests/tests/test_,379,Make sure the cookie was sent,
-requests/tests/test_,381,Make sure the session cj is still the custom one,
-requests/tests/test_,389,Make sure the cookie was sent,
-requests/tests/test_,402,Prepare request without using Session,
-requests/tests/test_,406,Send request and simulate redirect,
-requests/tests/test_,413,Verify CookieJar isn't being converted to RequestsCookieJar,
-requests/tests/test_,525,Connecting to an unknown domain should raise a ConnectionError,
-requests/tests/test_,527,Connecting to an invalid port should raise a ConnectionError,
-requests/tests/test_,529,Inputing a URL that cannot be parsed should raise an InvalidURL error,
-requests/tests/test_,537,"any proxy related error (address resolution, no route to host, etc) should result in a ProxyError",
-requests/tests/test_,566,Should use netrc and work.,
-requests/tests/test_,570,Given auth should override and fail.,
-requests/tests/test_,576,Should use netrc and work.,
-requests/tests/test_,580,Given auth should override and fail.,
-requests/tests/test_,811,compat.str is unicode.,
-requests/tests/test_,862,"Our local httpbin does not have a trusted CA, so this call will",
-requests/tests/test_,863,fail if we use our default trust bundle.,
-requests/tests/test_,1115,make sure one can use keys multiple times,
-requests/tests/test_,1131,make sure one can use values multiple times,
-requests/tests/test_,1147,make sure one can use items multiple times,
-requests/tests/test_,1163,Verify that CookieConflictError is raised if domain is not specified,
-requests/tests/test_,1167,Verify that CookieConflictError is not raised if domain is specified,
-requests/tests/test_,1224,also for streaming,
-requests/tests/test_,1232,check for unicode HTTP status,
-requests/tests/test_,1238,old behaviour - crashes here,
-requests/tests/test_,1241,check raise_status falls back to ISO-8859-1,
-requests/tests/test_,1274,verify we can pickle the original request,
-requests/tests/test_,1277,verify we can pickle the response and that we have access to,
-requests/tests/test_,1278,the original request.,
-requests/tests/test_,1286,Verify PreparedRequest can be pickled and unpickled,
-requests/tests/test_,1292,Verify unpickled PreparedRequest sends properly,
-requests/tests/test_,1302,Verify PreparedRequest can be pickled and unpickled,
-requests/tests/test_,1308,Verify unpickled PreparedRequest sends properly,
-requests/tests/test_,1317,Verify PreparedRequest can be pickled,
-requests/tests/test_,1324,Verify unpickled PreparedRequest sends properly,
-requests/tests/test_,1449,From issue #1321,
-requests/tests/test_,1475,"This is testing that they are builtin strings. A bit weird, but there",
-requests/tests/test_,1476,we go.,
-requests/tests/test_,1497,Test for int,
-requests/tests/test_,1501,Test for dict,
-requests/tests/test_,1505,Test for list,
-requests/tests/test_,1518,Test for newline,
-requests/tests/test_,1521,Test for line feed,
-requests/tests/test_,1524,Test for carriage return,
-requests/tests/test_,1535,Test for whitespace,
-requests/tests/test_,1538,Test for tab,
-requests/tests/test_,1607,Non-standard ports should trigger stripping,
-requests/tests/test_,1632,"read only the first eight bytes of the response body,",
-requests/tests/test_,1633,then follow the redirect,
-requests/tests/test_,1638,"read all of the response via iter_content,",
-requests/tests/test_,1639,then follow the redirect,
-requests/tests/test_,1656,the data has all been read,
-requests/tests/test_,1659,rewind it back,
-requests/tests/test_,1665,read some data,
-requests/tests/test_,1670,the data has all been read,
-requests/tests/test_,1673,rewind it back,
-requests/tests/test_,1849,Make sure r.content is None,
-requests/tests/test_,1927,default behavior,
-requests/tests/test_,1930,edge case - check to see if 'location' is in headers anyways,
-requests/tests/test_,2256,urllib3 expects bodies as bytes-like objects,
-requests/tests/test_,2424,Helper function that normalizes equivalent,
-requests/tests/test_,2425,percent-encoded bytes before comparisons,
-requests/tests/test_structures.py,1,-*- coding: utf-8 -*-,
-requests/tests/test_lowlevel.py,1,-*- coding: utf-8 -*-,
-requests/tests/test_lowlevel.py,21,release server block,
-requests/tests/test_lowlevel.py,53,Respond to initial GET with a challenge.,
-requests/tests/test_lowlevel.py,58,"Verify we receive an Authorization header in response, then redirect.",
-requests/tests/test_lowlevel.py,63,"Verify Authorization isn't sent to the redirected host,",
-requests/tests/test_lowlevel.py,64,then send another challenge.,
-requests/tests/test_lowlevel.py,69,"Verify Authorization is sent correctly again, and return 200 OK.",
-requests/tests/test_lowlevel.py,82,Verify server succeeded in authenticating.,
-requests/tests/test_lowlevel.py,84,Verify Authorization was sent in final request.,
-requests/tests/test_lowlevel.py,87,Verify redirect happened as we expected.,
-requests/tests/test_lowlevel.py,109,Respond to initial GET with a challenge.,
-requests/tests/test_lowlevel.py,114,"Verify we receive an Authorization header in response, then",
-requests/tests/test_lowlevel.py,115,challenge again.,
-requests/tests/test_lowlevel.py,120,Verify the client didn't respond to second challenge.,
-requests/tests/test_lowlevel.py,132,Verify server didn't authenticate us.,
-requests/tests/test_lowlevel.py,152,Respond to GET with a 200 containing www-authenticate header.,
-requests/tests/test_lowlevel.py,157,Verify the client didn't respond with auth.,
-requests/tests/test_lowlevel.py,169,Verify server didn't receive auth from us.,
-requests/tests/test_lowlevel.py,192,do nothing with the requests; just close the socket,
-requests/tests/test_lowlevel.py,197,fake proxy's lack of response will cause a ConnectionError,
-requests/tests/test_lowlevel.py,201,the fake proxy received a request,
-requests/tests/test_lowlevel.py,204,it had actual content (not checking for SOCKS protocol for now),
-requests/tests/test_lowlevel.py,211,stores the second request to the server,
-requests/tests/test_lowlevel.py,304,Verify we haven't overwritten the location with our previous fragment.,
-requests/tests/test_lowlevel.py,306,Verify previous fragment is used and not the original.,
-requests/tests/test_help.py,1,-*- encoding: utf-8,
-requests/tests/__init__.py,1,-*- coding: utf-8 -*-,
-requests/tests/__init__.py,10,"urllib3 sets SNIMissingWarning to only go off once,",
-requests/tests/__init__.py,11,while this test suite requires it to always fire,
-requests/tests/__init__.py,12,so that it occurs during test_requests.test_https_warnings,
-requests/tests/testserver/server.py,1,-*- coding: utf-8 -*-,
-requests/tests/testserver/server.py,66,in case self.port = 0,
-requests/tests/testserver/server.py,74,just in case of exception,
-requests/tests/testserver/server.py,121,avoid server from waiting for event timeouts,
-requests/tests/testserver/server.py,122,if an exception is found in the main thread,
-requests/tests/testserver/server.py,125,ensure server thread doesn't get stuck waiting for connections,
-requests/tests/testserver/server.py,128,allow exceptions to propagate,
-requests/,1,-*- coding: utf-8 -*-,
-requests/,15,-------,
-requests/,16,Pythons,
-requests/,17,-------,
-requests/,19,Syntax sugar.,
-requests/,22,: Python 2.x?,
-requests/,25,: Python 3.x?,
-requests/,33,---------,
-requests/,34,Specifics,
-requests/,35,---------,
-requests/,46,Keep OrderedDict for backwards compatibility.,
-requests/,63,Keep OrderedDict for backwards compatibility.,
-requests/,50,Complete Guess,
-requests/,52,Complete Guess,
-requests/,1,-*- coding: utf-8 -*-,
-requests/,49,"Use the lowercased key for lookups, but store the actual",
-requests/,50,key alongside the value.,
-requests/,78,Compare insensitively,
-requests/,81,Copy is required,
-requests/,100,"We allow fall-through here, so values default to None",
-requests/,3,This code exists for backwards compatibility reasons.,
-requests/,4,I don't like it either. Just look the other way. :),
-requests/,8,This traversal is apparently necessary such that the identities are,
-requests/,9,preserved (requests.packages.urllib3.* is urllib3.*),
-requests/,14,"Kinda cool, though, right?",
-requests/,1,-*- coding: utf-8 -*-,
-requests/,52,Only return the response's URL if the user hadn't set the Host,
-requests/,53,header,
-requests/,56,"If they did set it, retrieve it and reconstruct the expected domain",
-requests/,59,Reconstruct the URL as we expect it,
-requests/,128,"the _original_response field is the wrapped httplib.HTTPResponse object,",
-requests/,130,pull out the HTTPMessage with the headers and put it in the mock:,
-requests/,206,support client code that unsets cookies by assignment of a None value:,
-requests/,297,there is only one domain in jar,
-requests/,393,if there are multiple cookies that meet passed in criteria,
-requests/,395,we will eventually return this as long as no cookie conflict,
-requests/,404,remove the unpickleable RLock object,
-requests/,431,We're dealing with an instance of RequestsCookieJar,
-requests/,433,We're dealing with a generic CookieJar instance,
-requests/,1,-*- coding: utf-8 -*-,
-requests/,37,"formerly defined here, reexposed here for backward compatibility",
-requests/,40,"Preferred clock, based on which one is more accurate on a given system.",
-requests/,42,Python 3.4+,
-requests/,44,Earlier than Python 3.,
-requests/,62,Bypass if not a dictionary (e.g. verify),
-requests/,72,Remove keys that are set to None. Extract keys first to avoid altering,
-requests/,73,the dictionary during iteration.,
-requests/,100,Due to the nature of how requests processes redirects this method will,
-requests/,101,be called at least once upon the original response and at least twice,
-requests/,102,on each subsequent redirect response (if any).,
-requests/,103,"If a custom mixin is used to handle this logic, it may be advantageous",
-requests/,104,to cache the redirect location onto the response object as a private,
-requests/,105,attribute.,
-requests/,108,Currently the underlying http module on py3 decode headers,
-requests/,109,"in latin1, but empirical evidence suggests that latin1 is very",
-requests/,110,rarely used with non-ASCII characters in HTTP headers.,
-requests/,111,It is more likely to get UTF8 header rather than latin1.,
-requests/,112,This causes incorrect handling of UTF8 encoded location headers.,
-requests/,113,"To solve this, we re-encode the location in latin1.",
-requests/,125,Special case: allow http -> https redirect when using the standard,
-requests/,126,"ports. This isn't specified by RFC 7235, but is kept to avoid",
-requests/,127,breaking backwards compatibility with older versions of requests,
-requests/,128,that allowed any redirects on the same host.,
-requests/,133,Handle default port usage corresponding to scheme.,
-requests/,141,Standard case: root URI must match,
-requests/,148,keep track of history,
-requests/,155,Update history and keep track of redirects.,
-requests/,156,resp.history must ignore the original request in this loop,
-requests/,161,Consume socket so it can be released,
-requests/,168,Release the connection back into the pool.,
-requests/,171,Handle redirection without scheme (see: RFC 1808 Section 4),
-requests/,176,Normalize url case and attach previous fragment if needed (RFC 7231 7.1.2),
-requests/,184,"Facilitate relative 'location' headers, as allowed by RFC 7231.",
-requests/,185,(e.g. '/path/to/resource' instead of 'http://domain.tld/path/to/resource'),
-requests/,186,"Compliant with RFC3986, we percent encode the url.",
-requests/,196,https://github.com/psf/requests/issues/1084,
-requests/,198,https://github.com/psf/requests/issues/3490,
-requests/,207,Extract any cookies sent on the response to the cookiejar,
-requests/,208,in the new request. Because we've mutated our copied prepared,
-requests/,209,"request, use the old one that we haven't yet touched.",
-requests/,214,Rebuild auth and proxy information.,
-requests/,218,A failed tell() sets `_body_position` to `object()`. This non-None,
-requests/,219,"value ensures `rewindable` will be True, allowing us to raise an",
-requests/,220,"UnrewindableBodyError, instead of hanging the connection.",
-requests/,226,Attempt to rewind consumed file-like object.,
-requests/,230,Override the original request.,
-requests/,250,"extract redirect url, if any, for the next loop",
-requests/,263,"If we get redirected to a new host, we should strip out any",
-requests/,264,authentication headers.,
-requests/,267,.netrc might have more auth for us on our new host.,
-requests/,320,https://tools.ietf.org/html/rfc7231#section-6.4.4,
-requests/,324,"Do what the browsers do, despite standards...",
-requests/,325,"First, turn 302s into GETs.",
-requests/,329,"Second, if a POST is responded to with a 301, turn it into a GET.",
-requests/,330,This bizarre behaviour is explained in Issue 1704.,
-requests/,364,: A case-insensitive dictionary of headers to be sent on each,
-requests/,365,: :class:`Request <Request>` sent from this,
-requests/,366,: :class:`Session <Session>`.,
-requests/,369,: Default Authentication tuple or object to attach to,
-requests/,370,: :class:`Request <Request>`.,
-requests/,373,: Dictionary mapping protocol or protocol and host to the URL of the proxy,
-requests/,374,": (e.g. {'http': 'foo.bar:3128', 'http://host.name': 'foo.bar:4012'}) to",
-requests/,375,: be used on each :class:`Request <Request>`.,
-requests/,378,: Event-handling hooks.,
-requests/,381,: Dictionary of querystring data to attach to each,
-requests/,382,: :class:`Request <Request>`. The dictionary values may be lists for,
-requests/,383,: representing multivalued query parameters.,
-requests/,386,: Stream response content default.,
-requests/,389,: SSL Verification default.,
-requests/,392,": SSL client certificate default, if String, path to ssl client",
-requests/,393,": cert file (.pem). If Tuple, ('cert', 'key') pair.",
-requests/,396,: Maximum number of redirects allowed. If the request exceeds this,
-requests/,397,": limit, a :class:`TooManyRedirects` exception is raised.",
-requests/,398,": This defaults to requests.models.DEFAULT_REDIRECT_LIMIT, which is",
-requests/,399,: 30.,
-requests/,402,": Trust environment settings for proxy configuration, default",
-requests/,403,: authentication and similar.,
-requests/,406,: A CookieJar containing all currently outstanding cookies set on this,
-requests/,407,: session. By default it is a,
-requests/,408,": :class:`RequestsCookieJar <requests.cookies.RequestsCookieJar>`, but",
-requests/,409,: may be any other ``cookielib.CookieJar`` compatible object.,
-requests/,412,Default connection adapters.,
-requests/,435,Bootstrap CookieJar.,
-requests/,439,Merge with session cookies,
-requests/,443,Set environment's basic authentication if not explicitly set.,
-requests/,503,Create the Request.,
-requests/,524,Send the request.,
-requests/,619,Set defaults that the hooks can utilize to ensure they always have,
-requests/,620,the correct parameters to reproduce the previous request.,
-requests/,626,It's possible that users might accidentally send a Request object.,
-requests/,627,Guard against that specific failure case.,
-requests/,631,Set up variables needed for resolve_redirects and dispatching of hooks,
-requests/,636,Get the appropriate adapter to use,
-requests/,639,Start time (approximately) of the request,
-requests/,642,Send the request,
-requests/,645,Total elapsed time of the request (approximately),
-requests/,649,Response manipulation hooks,
-requests/,652,Persist cookies,
-requests/,655,If the hooks create history then we want those cookies too,
-requests/,661,Redirect resolving generator.,
-requests/,664,Resolve redirects if allowed.,
-requests/,667,Shuffle things around if there's history.,
-requests/,669,Insert the first (original) request at the start,
-requests/,671,Get the last request made,
-requests/,675,"If redirects aren't being followed, store the response on the Request for Response.next().",
-requests/,693,Gather clues from the surrounding environment.,
-requests/,695,Set environment's proxies.,
-requests/,701,Look for requests environment configuration and be compatible,
-requests/,702,with cURL.,
-requests/,707,Merge all the kwargs.,
-requests/,727,Nothing matches :-/,
-requests/,1,-*- coding: utf-8 -*-,
-requests/,20,TODO: response is the only one,
-requests/,1,-*- coding: utf-8 -*-,
-requests/,57,"By using the 'with' statement we are sure the session is closed, thus we",
-requests/,58,avoid leaving sockets open which can trigger a ResourceWarning in some,
-requests/,59,"cases, and look like a memory leak in others.",
-requests/,1,-*- coding: utf-8 -*-,
-requests/,1,-*- coding: utf-8 -*-,
-requests/,27,Informational.,
-requests/,44,Redirection.,
-requests/,54,These 2 to be removed in 3.0,
-requests/,56,Client Error.,
-requests/,91,Server Error.,
-requests/,1,-*- coding: utf-8 -*-,
-requests/,26,"to_native_string is unused here, but imported here for backwards compatibility",
-requests/,46,provide a proxy_bypass version on Windows without DNS lookups,
-requests/,60,"ProxyEnable could be REG_SZ or REG_DWORD, normalizing it",
-requests/,63,ProxyOverride is almost always a string,
-requests/,71,make a check value list from the registry entry: replace the,
-requests/,72,'<local>' string by the localhost entry and the corresponding,
-requests/,73,canonical entry.,
-requests/,75,now check if we match one of the registry values.,
-requests/,80,mask dots,
-requests/,81,change glob sequence,
-requests/,82,change glob char,
-requests/,87,noqa,
-requests/,126,"Having used fstat to determine the file length, we need to",
-requests/,127,confirm that this file was opened up in binary mode.,
-requests/,143,"This can happen in some weird situations, such as when the file",
-requests/,144,is actually a special file descriptor like stdin. In this,
-requests/,145,"instance, we don't know what the length is, so set it to zero and",
-requests/,146,let requests chunk it instead.,
-requests/,151,StringIO and BytesIO have seek but no useable fileno,
-requests/,153,seek to end of file,
-requests/,157,seek back to current position to support,
-requests/,158,partially read file-like objects,
-requests/,181,os.path.expanduser can fail when $HOME is undefined and,
-requests/,182,getpwuid fails. See https://bugs.python.org/issue20164 &,
-requests/,183,https://github.com/psf/requests/issues/1846,
-requests/,190,Abort early if there isn't one.,
-requests/,196,Strip port numbers from netloc. This weird `if...encode`` dance is,
-requests/,197,"used for Python 3.2, which doesn't support unicode literals.",
-requests/,206,Return with login / password,
-requests/,210,"If there was a parsing error or a permissions issue reading the file,",
-requests/,211,we'll just skip netrc auth unless explicitly asked to raise errors.,
-requests/,215,AppEngine hackiness.,
-requests/,234,"this is already a valid path, no need to do anything further",
-requests/,237,find the first valid part of the provided path and treat that as a zip archive,
-requests/,238,assume the rest of the path is the name of a member in the archive,
-requests/,251,we have a valid zip archive and a valid member of that archive,
-requests/,316,From mitsuhiko/werkzeug (used with permission).,
-requests/,348,From mitsuhiko/werkzeug (used with permission).,
-requests/,383,From mitsuhiko/werkzeug (used with permission).,
-requests/,393,"this is not the real unquoting, but fixing this so that the",
-requests/,394,RFC is met will result in bugs with internet explorer and,
-requests/,395,probably some other browsers as well.  IE for example is,
-requests/,396,"uploading files with ""C:\foo\bar.txt"" as filename",
-requests/,399,if this is a filename and the starting characters look like,
-requests/,400,"a UNC path, then just return the value without quotes.  Using the",
-requests/,401,replace sequence below on a UNC path has the effect of turning,
-requests/,402,the leading double slash into a single slash and then,
-requests/,403,_fix_ie_filename() doesn't work correctly.  See #458.,
-requests/,549,Try charset from content-type,
-requests/,558,Fall back:,
-requests/,565,The unreserved URI characters (RFC 3986),
-requests/,605,Unquote only the unreserved characters,
-requests/,606,"Then quote only illegal characters (do not quote reserved,",
-requests/,607,"unreserved, or '%')",
-requests/,610,"We couldn't unquote the given URI, so let's try quoting it, but",
-requests/,611,there may be unquoted '%'s in the URI. We need to make sure they're,
-requests/,612,properly quoted so they do not cause issues elsewhere.,
-requests/,705,Prioritize lowercase environment variables over uppercase,
-requests/,706,"to keep a consistent behaviour with other http projects (curl, wget).",
-requests/,709,"First check whether no_proxy is defined. If it is, check that the URL",
-requests/,710,we're getting isn't in the no_proxy list.,
-requests/,717,"URLs don't always have hostnames, e.g. file:/// urls.",
-requests/,721,We need to check whether we match here. We need to see if we match,
-requests/,722,"the end of the hostname, both with and without the port.",
-requests/,733,If no_proxy ip was defined in plain IP notation instead of cidr notation &,
-requests/,734,matches the IP of the index,
-requests/,743,"The URL does match something in no_proxy, so we don't want",
-requests/,744,to apply the proxies on this URL.,
-requests/,748,parsed.hostname can be `None` in cases such as a file URI.,
-requests/,856,Null bytes; no need to recreate these on each call to guess_json_utf,
-requests/,857,encoding to ASCII for Python 3,
-requests/,866,"JSON always starts with two ASCII characters, so detection is as",
-requests/,867,easy as counting the nulls and from their location and count,
-requests/,868,"determine the encoding. Also detect a BOM, if present.",
-requests/,871,BOM included,
-requests/,873,"BOM included, MS style (discouraged)",
-requests/,875,BOM included,
-requests/,880,1st and 3rd are null,
-requests/,882,2nd and 4th are null,
-requests/,884,Did not detect 2 valid UTF-16 ascii-range characters,
-requests/,890,Did not detect a valid UTF-32 ascii-range character,
-requests/,902,"urlparse is a finicky beast, and sometimes decides that there isn't a",
-requests/,903,"netloc present. Assume that it's being over-cautious, and switch netloc",
-requests/,904,and path if urlparse decided there was no netloc.,
-requests/,927,Moved outside of function to avoid recompile every call,
-requests/,961,see func:`prepend_scheme_if_needed`,
-requests/,1,-*- coding: utf-8 -*-,
-requests/,31,"""I want us to put a big-ol' comment on top of it that",
-requests/,32,says that this behaviour is dumb but we need to preserve,
-requests/,33,"it because people are relying on it.""",
-requests/,34,- Lukasa,
-requests/,35,,
-requests/,36,These are here solely to maintain backwards compatibility,
-requests/,37,for things like ints. This will be removed in 3.0.0.,
-requests/,57,-- End Removal --,
-requests/,114,Keep state in per-thread local storage,
-requests/,118,Ensure state is initialized just once per-thread,
-requests/,143,lambdas assume digest modules are imported at the top level,
-requests/,174,XXX not implemented yet,
-requests/,177,: path is request-uri defined in RFC 2616 which should not be empty,
-requests/,210,XXX handle auth-int.,
-requests/,215,XXX should the partial digests be encoded too?,
-requests/,241,"If response is not 4xx, do not auth",
-requests/,242,See https://github.com/psf/requests/issues/3772,
-requests/,248,Rewind the file position indicator of the body to where,
-requests/,249,it was to resend the request.,
-requests/,259,Consume content and release the original connection,
-requests/,260,to allow our new request to reuse the same one.,
-requests/,279,"Initialize per-thread state, if needed",
-requests/,281,"If we have a saved nonce, skip the 401",
-requests/,287,In the case of HTTPDigestAuth being reused and the body of,
-requests/,288,"the previous request was a file-like object, pos has the",
-requests/,289,file position of the previous body. Ensure it's set to,
-requests/,290,None.,
-requests/,1,-*- coding: utf-8 -*-,
-requests/,135,Can't handle by adding 'proxy_manager' to self.__attrs__ because,
-requests/,136,"self.poolmanager uses a lambda function, which isn't pickleable.",
-requests/,158,save these values for pickling,
-requests/,219,Allow self-specified cert location.,
-requests/,267,"Fallback to None if there's no status_code, for whatever reason.",
-requests/,270,Make headers case-insensitive.,
-requests/,273,Set encoding.,
-requests/,283,Add new cookies from the server.,
-requests/,286,Give the Response some context.,
-requests/,312,Only scheme should be lower case,
-requests/,427,this may raise a string formatting error.,
-requests/,452,Send the request.,
-requests/,476,Receive the response from the server,
-requests/,478,"For Python 2.7, use buffering of HTTP responses",
-requests/,481,For compatibility with Python 3.3+,
-requests/,492,"If we hit any problems here, clean up the connection.",
-requests/,493,"Then, reraise so that we can handle the actual exception.",
-requests/,502,TODO: Remove this in 3.0.0: see #2811,
-requests/,513,This branch is for urllib3 v1.22 and later.,
-requests/,526,This branch is for urllib3 versions earlier than v1.22,
-requests/,1,!/usr/bin/env python,
-requests/,2,-*- coding: utf-8 -*-,
-requests/,1,-*- coding: utf-8 -*-,
-requests/,111,Warnings,
-requests/,1,-*- coding: utf-8 -*-,
-requests/,13,"Import encoding now, to avoid implicit import later.",
-requests/,14,"Implicit import within threads may cause LookupError when standard library is in a ZIP,",
-requests/,15,such as in Embedded Python. See https://github.com/psf/requests/issues/3578.,
-requests/,45,: The set of HTTP status codes that indicate an automatically,
-requests/,46,: processable redirect.,
-requests/,48,301,
-requests/,49,302,
-requests/,50,303,
-requests/,51,307,
-requests/,52,308,
-requests/,133,Don't call str() on bytestrings: in Py3 it all goes wrong.,
-requests/,142,support for explicit filename,
-requests/,230,Default empty dicts for dict params.,
-requests/,292,: HTTP verb to send to the server.,
-requests/,294,: HTTP URL to send the request to.,
-requests/,296,: dictionary of HTTP headers.,
-requests/,298,The `CookieJar` used to create the Cookie header will be stored here,
-requests/,299,after prepare_cookies is called,
-requests/,301,: request body to send to the server.,
-requests/,303,": dictionary of callback hooks, for internal usage.",
-requests/,305,: integer denoting starting position of a readable file-like body.,
-requests/,320,Note that prepare_auth must be last to enable authentication schemes,
-requests/,321,such as OAuth to work on a fully prepared request.,
-requests/,323,This MUST go after prepare_auth. Authenticators could add a hook,
-requests/,358,: Accept objects that have string representations.,
-requests/,359,: We're unable to blindly call unicode/str functions,
-requests/,360,: as this will include the bytestring indicator (b''),
-requests/,361,: on python 3.x.,
-requests/,362,: https://github.com/psf/requests/pull/2238,
-requests/,368,Remove leading whitespaces from url,
-requests/,371,"Don't do any URL preparation for non-HTTP schemes like `mailto`,",
-requests/,372,"`data` etc to work around exceptions from `url_parse`, which",
-requests/,373,handles RFC 3986 only.,
-requests/,378,Support for unicode domain names and paths.,
-requests/,393,"In general, we want to try IDNA encoding the hostname if the string contains",
-requests/,394,non-ASCII characters. This allows users to automatically get the correct IDNA,
-requests/,395,"behaviour. For strings containing only ASCII characters, we need to also verify",
-requests/,396,"it doesn't start with a wildcard (*), before allowing the unencoded hostname.",
-requests/,405,Carefully reconstruct the network location,
-requests/,413,Bare domains aren't valid URLs.,
-requests/,448,Raise exception on invalid header value.,
-requests/,456,"Check if file, fo, generator, iterator.",
-requests/,457,"If not, run through normal process.",
-requests/,459,Nottin' on you.,
-requests/,464,urllib3 requires a bytes-like body. Python 2's json.dumps,
-requests/,465,"provides this natively, but Python 3 gives a Unicode string.",
-requests/,485,Record the current file position before reading.,
-requests/,486,This will allow us to rewind a file in the event,
-requests/,487,of a redirect.,
-requests/,491,"This differentiates from None, allowing us to catch",
-requests/,492,a failed `tell()` later when trying to rewind the body,
-requests/,503,Multi-part file uploads.,
-requests/,516,Add content-type if it wasn't explicitly provided.,
-requests/,527,"If length exists, set it. Otherwise, we fallback",
-requests/,528,to Transfer-Encoding: chunked.,
-requests/,531,Set Content-Length to 0 for methods that can have a body,
-requests/,532,but don't provide one. (i.e. not GET or HEAD),
-requests/,538,"If no Auth is explicitly provided, extract it from the URL first.",
-requests/,545,special-case basic HTTP auth,
-requests/,548,Allow auth to make its changes.,
-requests/,551,Update self to reflect the auth changes.,
-requests/,554,Recompute Content-Length,
-requests/,579,hooks can be passed as None to the prepare method and to this,
-requests/,580,"method. To prevent iterating over None, simply use an empty list",
-requests/,581,if hooks is False-y,
-requests/,602,": Integer Code of responded HTTP Status, e.g. 404 or 200.",
-requests/,605,: Case-insensitive Dictionary of Response Headers.,
-requests/,606,": For example, ``headers['content-encoding']`` will return the",
-requests/,607,: value of a ``'Content-Encoding'`` response header.,
-requests/,610,: File-like object representation of response (for advanced usage).,
-requests/,611,: Use of ``raw`` requires that ``stream=True`` be set on the request.,
-requests/,612,: This requirement does not apply for use internally to Requests.,
-requests/,615,: Final URL location of Response.,
-requests/,618,: Encoding to decode with when accessing r.text.,
-requests/,621,: A list of :class:`Response <Response>` objects from,
-requests/,622,: the history of the Request. Any redirect responses will end,
-requests/,623,: up here. The list is sorted from the oldest to the most recent request.,
-requests/,626,": Textual reason of responded HTTP Status, e.g. ""Not Found"" or ""OK"".",
-requests/,629,: A CookieJar of Cookies the server sent back.,
-requests/,632,: The amount of time elapsed between sending the request,
-requests/,633,: and the arrival of the response (as a timedelta).,
-requests/,634,: This property specifically measures the time taken between sending,
-requests/,635,: the first byte of the request and finishing parsing the headers. It,
-requests/,636,: is therefore unaffected by consuming the response content or the,
-requests/,637,: value of the ``stream`` keyword argument.,
-requests/,640,: The :class:`PreparedRequest <PreparedRequest>` object to which this,
-requests/,641,: is a response.,
-requests/,651,Consume everything; accessing the content attribute makes,
-requests/,652,sure the content has been fully read.,
-requests/,662,pickled objects do not have .raw,
-requests/,748,Special case for urllib3.,
-requests/,760,Standard file-like object.,
-requests/,773,simulate reading small chunks of the content,
-requests/,821,Read the contents.,
-requests/,832,don't need to release the connection; that's been handled by urllib3,
-requests/,833,since we exhausted the data.,
-requests/,849,Try charset from content-type,
-requests/,856,Fallback to auto-detected encoding.,
-requests/,860,Decode unicode from given encoding.,
-requests/,864,A LookupError is raised if the encoding was not found which could,
-requests/,865,indicate a misspelling or similar mistake.,
-requests/,866,,
-requests/,867,A TypeError can be raised if encoding is None,
-requests/,868,,
-requests/,869,So we try blindly encoding.,
-requests/,882,No encoding set. JSON RFC 4627 section 3 states we should expect,
-requests/,883,"UTF-8, -16 or -32. Detect which one to use; If the detection or",
-requests/,884,"decoding fails, fall back to `self.text` (using chardet to make",
-requests/,885,a best guess).,
-requests/,893,Wrong UTF codec detected; usually because it's not UTF-8,
-requests/,894,"but some other 8-bit codec.  This is an RFC violation,",
-requests/,895,and the server didn't bother to tell us what codec *was*,
-requests/,896,used.,
-requests/,906,l = MultiDict(),
-requests/,923,We attempt to decode utf-8 first because some servers,
-requests/,924,choose to localize their reason strings. If the string,
-requests/,925,"isn't utf-8, we fall back to iso-8859-1 for all other",
-requests/,926,encodings. (See PR #3538),
-requests/,1,-*- coding: utf-8 -*-,
-requests/,3,__,
-requests/,4,/__)  _  _     _   _ _/   _,
-requests/,5,/ (   (- (/ (/ (- _)  /  _),
-requests/,6,/,
-requests/,51,Verify urllib3 isn't installed from git.,
-requests/,53,"Sometimes, urllib3 only reports its version as 16.1.",
-requests/,57,Check urllib3 for compatibility.,
-requests/,58,noqa: F811,
-requests/,60,"urllib3 >= 1.21.1, <= 1.25",
-requests/,65,Check chardet for compatibility.,
-requests/,68,"chardet >= 3.0.2, < 3.1.0",
-requests/,75,cryptography < 1.3.4,
-requests/,85,Check imported dependencies for compatibility.,
-requests/,93,"Attempt to enable urllib3's SNI support, if possible",
-requests/,98,Check cryptography version,
-requests/,104,urllib3's DependencyWarnings should be silenced.,
-requests/,124,"Set default logging handler to avoid ""No handler found"" warnings.",
-requests/,130,FileModeWarnings go off per the default.,
-requests/,1,.-. .-. .-. . . .-. .-. .-. .-.,
-requests/,2,|(  |-  |.| | | |-  `-.  |  `-.,
-requests/,3,' ' `-' `-`.`-' `-' `-'  '  `-',
-requests/docs/conf.py,1,-*- coding: utf-8 -*-,
-requests/docs/conf.py,2,,
-requests/docs/conf.py,3,"Requests documentation build configuration file, created by",
-requests/docs/conf.py,4,sphinx-quickstart on Fri Feb 19 00:05:47 2016.,
-requests/docs/conf.py,5,,
-requests/docs/conf.py,6,This file is execfile()d with the current directory set to its,
-requests/docs/conf.py,7,containing dir.,
-requests/docs/conf.py,8,,
-requests/docs/conf.py,9,Note that not all possible configuration values are present in this,
-requests/docs/conf.py,10,autogenerated file.,
-requests/docs/conf.py,11,,
-requests/docs/conf.py,12,All configuration values have a default; values that are commented out,
-requests/docs/conf.py,13,serve to show the default.,
-requests/docs/conf.py,18,"If extensions (or modules to document with autodoc) are in another directory,",
-requests/docs/conf.py,19,add these directories to sys.path here. If the directory is relative to the,
-requests/docs/conf.py,20,"documentation root, use os.path.abspath to make it absolute, like shown here.",
-requests/docs/conf.py,21,"sys.path.insert(0, os.path.abspath('.'))",
-requests/docs/conf.py,23,Insert Requests' path into the system.,
-requests/docs/conf.py,30,-- General configuration ------------------------------------------------,
-requests/docs/conf.py,32,"If your documentation needs a minimal Sphinx version, state it here.",
-requests/docs/conf.py,33,needs_sphinx = '1.0',
-requests/docs/conf.py,35,"Add any Sphinx extension module names here, as strings. They can be",
-requests/docs/conf.py,36,extensions coming with Sphinx (named 'sphinx.ext.*') or your custom,
-requests/docs/conf.py,37,ones.,
-requests/docs/conf.py,45,"Add any paths that contain templates here, relative to this directory.",
-requests/docs/conf.py,48,The suffix(es) of source filenames.,
-requests/docs/conf.py,49,You can specify multiple suffix as a list of string:,
-requests/docs/conf.py,50,"source_suffix = ['.rst', '.md']",
-requests/docs/conf.py,53,The encoding of source files.,
-requests/docs/conf.py,54,source_encoding = 'utf-8-sig',
-requests/docs/conf.py,56,The master toctree document.,
-requests/docs/conf.py,59,General information about the project.,
-requests/docs/conf.py,64,"The version info for the project you're documenting, acts as replacement for",
-requests/docs/conf.py,65,"|version| and |release|, also used in various other places throughout the",
-requests/docs/conf.py,66,built documents.,
-requests/docs/conf.py,67,,
-requests/docs/conf.py,68,The short X.Y version.,
-requests/docs/conf.py,70,"The full version, including alpha/beta/rc tags.",
-requests/docs/conf.py,73,The language for content autogenerated by Sphinx. Refer to documentation,
-requests/docs/conf.py,74,for a list of supported languages.,
-requests/docs/conf.py,75,,
-requests/docs/conf.py,76,This is also used if you do content translation via gettext catalogs.,
-requests/docs/conf.py,77,"Usually you set ""language"" from the command line for these cases.",
-requests/docs/conf.py,80,"There are two options for replacing |today|: either, you set today to some",
-requests/docs/conf.py,81,"non-false value, then it is used:",
-requests/docs/conf.py,82,today = '',
-requests/docs/conf.py,83,"Else, today_fmt is used as the format for a strftime call.",
-requests/docs/conf.py,84,"today_fmt = '%B %d, %Y'",
-requests/docs/conf.py,86,"List of patterns, relative to source directory, that match files and",
-requests/docs/conf.py,87,directories to ignore when looking for source files.,
-requests/docs/conf.py,90,The reST default role (used for this markup: `text`) to use for all,
-requests/docs/conf.py,91,documents.,
-requests/docs/conf.py,92,default_role = None,
-requests/docs/conf.py,94,"If true, '()' will be appended to :func: etc. cross-reference text.",
-requests/docs/conf.py,97,"If true, the current module name will be prepended to all description",
-requests/docs/conf.py,98,unit titles (such as .. function::).,
-requests/docs/conf.py,101,"If true, sectionauthor and moduleauthor directives will be shown in the",
-requests/docs/conf.py,102,output. They are ignored by default.,
-requests/docs/conf.py,103,show_authors = False,
-requests/docs/conf.py,105,The name of the Pygments (syntax highlighting) style to use.,
-requests/docs/conf.py,108,A list of ignored prefixes for module index sorting.,
-requests/docs/conf.py,109,modindex_common_prefix = [],
-requests/docs/conf.py,111,"If true, keep warnings as ""system message"" paragraphs in the built documents.",
-requests/docs/conf.py,112,keep_warnings = False,
-requests/docs/conf.py,114,"If true, `todo` and `todoList` produce output, else they produce nothing.",
-requests/docs/conf.py,118,-- Options for HTML output ----------------------------------------------,
-requests/docs/conf.py,120,The theme to use for HTML and HTML Help pages.  See the documentation for,
-requests/docs/conf.py,121,a list of builtin themes.,
-requests/docs/conf.py,124,Theme options are theme-specific and customize the look and feel of a theme,
-requests/docs/conf.py,125,"further.  For a list of options available for each theme, see the",
-requests/docs/conf.py,126,documentation.,
-requests/docs/conf.py,136,"Add any paths that contain custom themes here, relative to this directory.",
-requests/docs/conf.py,137,html_theme_path = [],
-requests/docs/conf.py,139,"The name for this set of Sphinx documents.  If None, it defaults to",
-requests/docs/conf.py,140,"""<project> v<release> documentation"".",
-requests/docs/conf.py,141,html_title = None,
-requests/docs/conf.py,143,A shorter title for the navigation bar.  Default is the same as html_title.,
-requests/docs/conf.py,144,html_short_title = None,
-requests/docs/conf.py,146,The name of an image file (relative to this directory) to place at the top,
-requests/docs/conf.py,147,of the sidebar.,
-requests/docs/conf.py,148,html_logo = None,
-requests/docs/conf.py,150,The name of an image file (within the static path) to use as favicon of the,
-requests/docs/conf.py,151,docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32,
-requests/docs/conf.py,152,pixels large.,
-requests/docs/conf.py,153,html_favicon = None,
-requests/docs/conf.py,155,"Add any paths that contain custom static files (such as style sheets) here,",
-requests/docs/conf.py,156,"relative to this directory. They are copied after the builtin static files,",
-requests/docs/conf.py,157,"so a file named ""default.css"" will overwrite the builtin ""default.css"".",
-requests/docs/conf.py,160,Add any extra paths that contain custom files (such as robots.txt or,
-requests/docs/conf.py,161,".htaccess) here, relative to this directory. These files are copied",
-requests/docs/conf.py,162,directly to the root of the documentation.,
-requests/docs/conf.py,163,html_extra_path = [],
-requests/docs/conf.py,165,"If not '', a 'Last updated on:' timestamp is inserted at every page bottom,",
-requests/docs/conf.py,166,using the given strftime format.,
-requests/docs/conf.py,167,"html_last_updated_fmt = '%b %d, %Y'",
-requests/docs/conf.py,169,"If true, SmartyPants will be used to convert quotes and dashes to",
-requests/docs/conf.py,170,typographically correct entities.,
-requests/docs/conf.py,173,"Custom sidebar templates, maps document names to template names.",
-requests/docs/conf.py,186,"Additional templates that should be rendered to pages, maps page names to",
-requests/docs/conf.py,187,template names.,
-requests/docs/conf.py,188,html_additional_pages = {},
-requests/docs/conf.py,190,"If false, no module index is generated.",
-requests/docs/conf.py,191,html_domain_indices = True,
-requests/docs/conf.py,193,"If false, no index is generated.",
-requests/docs/conf.py,194,html_use_index = True,
-requests/docs/conf.py,196,"If true, the index is split into individual pages for each letter.",
-requests/docs/conf.py,197,html_split_index = False,
-requests/docs/conf.py,199,"If true, links to the reST sources are added to the pages.",
-requests/docs/conf.py,202,"If true, ""Created using Sphinx"" is shown in the HTML footer. Default is True.",
-requests/docs/conf.py,205,"If true, ""(C) Copyright ..."" is shown in the HTML footer. Default is True.",
-requests/docs/conf.py,208,"If true, an OpenSearch description file will be output, and all pages will",
-requests/docs/conf.py,209,contain a <link> tag referring to it.  The value of this option must be the,
-requests/docs/conf.py,210,base URL from which the finished HTML is served.,
-requests/docs/conf.py,211,html_use_opensearch = '',
-requests/docs/conf.py,213,"This is the file name suffix for HTML files (e.g. "".xhtml"").",
-requests/docs/conf.py,214,html_file_suffix = None,
-requests/docs/conf.py,216,Language to be used for generating the HTML full-text search index.,
-requests/docs/conf.py,217,Sphinx supports the following languages:,
-requests/docs/conf.py,218,"'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'",
-requests/docs/conf.py,219,"'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'",
-requests/docs/conf.py,220,html_search_language = 'en',
-requests/docs/conf.py,222,"A dictionary with options for the search language support, empty by default.",
-requests/docs/conf.py,223,Now only 'ja' uses this config value,
-requests/docs/conf.py,224,html_search_options = {'type': 'default'},
-requests/docs/conf.py,226,The name of a javascript file (relative to the configuration directory) that,
-requests/docs/conf.py,227,"implements a search results scorer. If empty, the default will be used.",
-requests/docs/conf.py,228,html_search_scorer = 'scorer.js',
-requests/docs/conf.py,230,Output file base name for HTML help builder.,
-requests/docs/conf.py,233,-- Options for LaTeX output ---------------------------------------------,
-requests/docs/conf.py,236,The paper size ('letterpaper' or 'a4paper').,
-requests/docs/conf.py,237,"'papersize': 'letterpaper',",
-requests/docs/conf.py,238,"The font size ('10pt', '11pt' or '12pt').",
-requests/docs/conf.py,239,"'pointsize': '10pt',",
-requests/docs/conf.py,240,Additional stuff for the LaTeX preamble.,
-requests/docs/conf.py,241,"'preamble': '',",
-requests/docs/conf.py,242,Latex figure (float) alignment,
-requests/docs/conf.py,243,"'figure_align': 'htbp',",
-requests/docs/conf.py,246,Grouping the document tree into LaTeX files. List of tuples,
-requests/docs/conf.py,247,"(source start file, target name, title,",
-requests/docs/conf.py,248,"author, documentclass [howto, manual, or own class]).",
-requests/docs/conf.py,253,The name of an image file (relative to this directory) to place at the top of,
-requests/docs/conf.py,254,the title page.,
-requests/docs/conf.py,255,latex_logo = None,
-requests/docs/conf.py,257,"For ""manual"" documents, if this is true, then toplevel headings are parts,",
-requests/docs/conf.py,258,not chapters.,
-requests/docs/conf.py,259,latex_use_parts = False,
-requests/docs/conf.py,261,"If true, show page references after internal links.",
-requests/docs/conf.py,262,latex_show_pagerefs = False,
-requests/docs/conf.py,264,"If true, show URL addresses after external links.",
-requests/docs/conf.py,265,latex_show_urls = False,
-requests/docs/conf.py,267,Documents to append as an appendix to all manuals.,
-requests/docs/conf.py,268,latex_appendices = [],
-requests/docs/conf.py,270,"If false, no module index is generated.",
-requests/docs/conf.py,271,latex_domain_indices = True,
-requests/docs/conf.py,274,-- Options for manual page output ---------------------------------------,
-requests/docs/conf.py,276,One entry per manual page. List of tuples,
-requests/docs/conf.py,277,"(source start file, name, description, authors, manual section).",
-requests/docs/conf.py,280,"If true, show URL addresses after external links.",
-requests/docs/conf.py,281,man_show_urls = False,
-requests/docs/conf.py,284,-- Options for Texinfo output -------------------------------------------,
-requests/docs/conf.py,286,Grouping the document tree into Texinfo files. List of tuples,
-requests/docs/conf.py,287,"(source start file, target name, title, author,",
-requests/docs/conf.py,288,"dir menu entry, description, category)",
-requests/docs/conf.py,301,Documents to append as an appendix to all manuals.,
-requests/docs/conf.py,302,texinfo_appendices = [],
-requests/docs/conf.py,304,"If false, no module index is generated.",
-requests/docs/conf.py,305,texinfo_domain_indices = True,
-requests/docs/conf.py,307,"How to display URL addresses: 'footnote', 'no', or 'inline'.",
-requests/docs/conf.py,308,texinfo_show_urls = 'footnote',
-requests/docs/conf.py,310,"If true, do not generate a @detailmenu in the ""Top"" node's menu.",
-requests/docs/conf.py,311,texinfo_no_detailmenu = False,
-requests/docs/conf.py,314,-- Options for Epub output ----------------------------------------------,
-requests/docs/conf.py,316,Bibliographic Dublin Core info.,
-requests/docs/conf.py,322,The basename for the epub file. It defaults to the project name.,
-requests/docs/conf.py,323,epub_basename = project,
-requests/docs/conf.py,325,The HTML theme for the epub output. Since the default themes are not,
-requests/docs/conf.py,326,"optimized for small screen space, using the same theme for HTML and epub",
-requests/docs/conf.py,327,"output is usually not wise. This defaults to 'epub', a theme designed to save",
-requests/docs/conf.py,328,visual space.,
-requests/docs/conf.py,329,epub_theme = 'epub',
-requests/docs/conf.py,331,The language of the text. It defaults to the language option,
-requests/docs/conf.py,332,or 'en' if the language is not set.,
-requests/docs/conf.py,333,epub_language = '',
-requests/docs/conf.py,335,The scheme of the identifier. Typical schemes are ISBN or URL.,
-requests/docs/conf.py,336,epub_scheme = '',
-requests/docs/conf.py,338,The unique identifier of the text. This can be a ISBN number,
-requests/docs/conf.py,339,or the project homepage.,
-requests/docs/conf.py,340,epub_identifier = '',
-requests/docs/conf.py,342,A unique identification for the text.,
-requests/docs/conf.py,343,epub_uid = '',
-requests/docs/conf.py,345,A tuple containing the cover image and cover page html template filenames.,
-requests/docs/conf.py,346,epub_cover = (),
-requests/docs/conf.py,348,"A sequence of (type, uri, title) tuples for the guide element of content.opf.",
-requests/docs/conf.py,349,epub_guide = (),
-requests/docs/conf.py,351,HTML files that should be inserted before the pages created by sphinx.,
-requests/docs/conf.py,352,The format is a list of tuples containing the path and title.,
-requests/docs/conf.py,353,epub_pre_files = [],
-requests/docs/conf.py,355,HTML files that should be inserted after the pages created by sphinx.,
-requests/docs/conf.py,356,The format is a list of tuples containing the path and title.,
-requests/docs/conf.py,357,epub_post_files = [],
-requests/docs/conf.py,359,A list of files that should not be packed into the epub file.,
-requests/docs/conf.py,362,The depth of the table of contents in toc.ncx.,
-requests/docs/conf.py,363,epub_tocdepth = 3,
-requests/docs/conf.py,365,Allow duplicate toc entries.,
-requests/docs/conf.py,366,epub_tocdup = True,
-requests/docs/conf.py,368,Choose between 'default' and 'includehidden'.,
-requests/docs/conf.py,369,epub_tocscope = 'default',
-requests/docs/conf.py,371,Fix unsupported image types using the Pillow.,
-requests/docs/conf.py,372,epub_fix_images = False,
-requests/docs/conf.py,374,Scale large images.,
-requests/docs/conf.py,375,epub_max_image_width = 0,
-requests/docs/conf.py,377,"How to display URL addresses: 'footnote', 'no', or 'inline'.",
-requests/docs/conf.py,378,epub_show_urls = 'inline',
-requests/docs/conf.py,380,"If false, no index is generated.",
-requests/docs/conf.py,381,epub_use_index = True,
-requests/docs/_themes/flask_theme_support.py,1,flasky extensions.  flasky pygments style based on tango style,
-requests/docs/_themes/flask_theme_support.py,12,No corresponding class for the following:,
-requests/docs/_themes/flask_theme_support.py,13,"Text:                     """", # class:  ''",
-requests/docs/_themes/flask_theme_support.py,14,class: 'w',
-requests/docs/_themes/flask_theme_support.py,15,class: 'err',
-requests/docs/_themes/flask_theme_support.py,16,class 'x',
-requests/docs/_themes/flask_theme_support.py,18,class: 'c',
-requests/docs/_themes/flask_theme_support.py,19,class: 'cp',
-requests/docs/_themes/flask_theme_support.py,21,class: 'k',
-requests/docs/_themes/flask_theme_support.py,22,class: 'kc',
-requests/docs/_themes/flask_theme_support.py,23,class: 'kd',
-requests/docs/_themes/flask_theme_support.py,24,class: 'kn',
-requests/docs/_themes/flask_theme_support.py,25,class: 'kp',
-requests/docs/_themes/flask_theme_support.py,26,class: 'kr',
-requests/docs/_themes/flask_theme_support.py,27,class: 'kt',
-requests/docs/_themes/flask_theme_support.py,29,class: 'o',
-requests/docs/_themes/flask_theme_support.py,30,class: 'ow' - like keywords,
-requests/docs/_themes/flask_theme_support.py,32,class: 'p',
-requests/docs/_themes/flask_theme_support.py,34,"because special names such as Name.Class, Name.Function, etc.",
-requests/docs/_themes/flask_theme_support.py,35,"are not recognized as such later in the parsing, we choose them",
-requests/docs/_themes/flask_theme_support.py,36,to look the same as ordinary variables.,
-requests/docs/_themes/flask_theme_support.py,37,class: 'n',
-requests/docs/_themes/flask_theme_support.py,38,class: 'na' - to be revised,
-requests/docs/_themes/flask_theme_support.py,39,class: 'nb',
-requests/docs/_themes/flask_theme_support.py,40,class: 'bp',
-requests/docs/_themes/flask_theme_support.py,41,class: 'nc' - to be revised,
-requests/docs/_themes/flask_theme_support.py,42,class: 'no' - to be revised,
-requests/docs/_themes/flask_theme_support.py,43,class: 'nd' - to be revised,
-requests/docs/_themes/flask_theme_support.py,44,class: 'ni',
-requests/docs/_themes/flask_theme_support.py,45,class: 'ne',
-requests/docs/_themes/flask_theme_support.py,46,class: 'nf',
-requests/docs/_themes/flask_theme_support.py,47,class: 'py',
-requests/docs/_themes/flask_theme_support.py,48,class: 'nl',
-requests/docs/_themes/flask_theme_support.py,49,class: 'nn' - to be revised,
-requests/docs/_themes/flask_theme_support.py,50,class: 'nx',
-requests/docs/_themes/flask_theme_support.py,51,class: 'nt' - like a keyword,
-requests/docs/_themes/flask_theme_support.py,52,class: 'nv' - to be revised,
-requests/docs/_themes/flask_theme_support.py,53,class: 'vc' - to be revised,
-requests/docs/_themes/flask_theme_support.py,54,class: 'vg' - to be revised,
-requests/docs/_themes/flask_theme_support.py,55,class: 'vi' - to be revised,
-requests/docs/_themes/flask_theme_support.py,57,class: 'm',
-requests/docs/_themes/flask_theme_support.py,59,class: 'l',
-requests/docs/_themes/flask_theme_support.py,60,class: 'ld',
-requests/docs/_themes/flask_theme_support.py,62,class: 's',
-requests/docs/_themes/flask_theme_support.py,63,class: 'sb',
-requests/docs/_themes/flask_theme_support.py,64,class: 'sc',
-requests/docs/_themes/flask_theme_support.py,65,class: 'sd' - like a comment,
-requests/docs/_themes/flask_theme_support.py,66,class: 's2',
-requests/docs/_themes/flask_theme_support.py,67,class: 'se',
-requests/docs/_themes/flask_theme_support.py,68,class: 'sh',
-requests/docs/_themes/flask_theme_support.py,69,class: 'si',
-requests/docs/_themes/flask_theme_support.py,70,class: 'sx',
-requests/docs/_themes/flask_theme_support.py,71,class: 'sr',
-requests/docs/_themes/flask_theme_support.py,72,class: 's1',
-requests/docs/_themes/flask_theme_support.py,73,class: 'ss',
-requests/docs/_themes/flask_theme_support.py,75,class: 'g',
-requests/docs/_themes/flask_theme_support.py,76,class: 'gd',
-requests/docs/_themes/flask_theme_support.py,77,class: 'ge',
-requests/docs/_themes/flask_theme_support.py,78,class: 'gr',
-requests/docs/_themes/flask_theme_support.py,79,class: 'gh',
-requests/docs/_themes/flask_theme_support.py,80,class: 'gi',
-requests/docs/_themes/flask_theme_support.py,81,class: 'go',
-requests/docs/_themes/flask_theme_support.py,82,class: 'gp',
-requests/docs/_themes/flask_theme_support.py,83,class: 'gs',
-requests/docs/_themes/flask_theme_support.py,84,class: 'gu',
-requests/docs/_themes/flask_theme_support.py,85,class: 'gt',
+requests/setup.py,1,!/usr/bin/env python,not
+requests/setup.py,2,Learn more: https://github.com/kennethreitz/setup.py,not
+requests/setup.py,36,'setup.py publish' shortcut.,not
+requests/tests/compat.py,1,-*- coding: utf-8 -*-,not
+requests/tests/test_hooks.py,1,-*- coding: utf-8 -*-,not
+requests/tests/test_testserver.py,1,-*- coding: utf-8 -*-,not
+requests/tests/test_testserver.py,77,release server block,not
+requests/tests/test_testserver.py,91,the (n+1)th request fails,not
+requests/tests/test_testserver.py,98,TODO: figure out why this sometimes fails when using pytest-xdist.,SATD
+requests/tests/test_testserver.py,154,"if the server thread fails to finish, the test suite will hang",not
+requests/tests/test_testserver.py,155,and get killed by the jenkins timeout.,not
+requests/tests/test_testserver.py,165,"if the server thread fails to finish, the test suite will hang",not
+requests/tests/test_testserver.py,166,and get killed by the jenkins timeout.,not
+requests/tests/test_utils.py,1,-*- coding: utf-8 -*-,not
+requests/tests/test_utils.py,200,This is testing that the 'no_proxy' argument overrides the,not
+requests/tests/test_utils.py,201,environment variable 'no_proxy',not
+requests/tests/test_utils.py,297,HTML5 meta charset attribute,not
+requests/tests/test_utils.py,299,HTML4 pragma directive,not
+requests/tests/test_utils.py,301,XHTML 1.x served with text/html MIME type,not
+requests/tests/test_utils.py,303,XHTML 1.x served as XML,not
+requests/tests/test_utils.py,390,Ensure requoting doesn't break expectations,not
+requests/tests/test_utils.py,395,Ensure we handle unquoted percent signs in redirects,not
+requests/tests/test_utils.py,408,Illegal bytes,not
+requests/tests/test_utils.py,413,Reserved characters,not
+requests/tests/test_utils.py,457,XXX: unsure whether this is reasonable behavior,SATD
+requests/tests/test_utils.py,547,Reads all content at once,not
+requests/tests/test_utils.py,701,Test 'no_proxy' argument,not
+requests/tests/test_utils.py,744,this could be a string (REG_SZ) or a 32-bit number (REG_DWORD),SATD
+requests/tests/conftest.py,1,-*- coding: utf-8 -*-,not
+requests/tests/conftest.py,8,Issue #1483: Make sure the URL always has a trailing slash,not
+requests/tests/utils.py,1,-*- coding: utf-8 -*-,not
+requests/tests/test_requests.py,1,-*- coding: utf-8 -*-,not
+requests/tests/test_requests.py,39,Requests to this URL should always fail with a connection timeout (nothing,not
+requests/tests/test_requests.py,40,listening on that port),not
+requests/tests/test_requests.py,71,"Not really an entry point, but people rely on it.",not
+requests/tests/test_requests.py,150,Test for issue #3696,not
+requests/tests/test_requests.py,268,Mimic a redirect response,not
+requests/tests/test_requests.py,272,Run request through resolve_redirects,not
+requests/tests/test_requests.py,285,Create Response to avoid https://github.com/kevin1024/pytest-httpbin/issues/33,not
+requests/tests/test_requests.py,291,Mimic a redirect response,not
+requests/tests/test_requests.py,295,Run request through resolve_redirect,not
+requests/tests/test_requests.py,332,redirects to httpbin('get'),not
+requests/tests/test_requests.py,364,Session cookie should not be modified,not
+requests/tests/test_requests.py,370,Sending a request with cookies should not add cookies to the session,not
+requests/tests/test_requests.py,379,Make sure the cookie was sent,not
+requests/tests/test_requests.py,381,Make sure the session cj is still the custom one,not
+requests/tests/test_requests.py,389,Make sure the cookie was sent,not
+requests/tests/test_requests.py,402,Prepare request without using Session,not
+requests/tests/test_requests.py,406,Send request and simulate redirect,not
+requests/tests/test_requests.py,413,Verify CookieJar isn't being converted to RequestsCookieJar,not
+requests/tests/test_requests.py,525,Connecting to an unknown domain should raise a ConnectionError,not
+requests/tests/test_requests.py,527,Connecting to an invalid port should raise a ConnectionError,not
+requests/tests/test_requests.py,529,Inputing a URL that cannot be parsed should raise an InvalidURL error,not
+requests/tests/test_requests.py,537,"any proxy related error (address resolution, no route to host, etc) should result in a ProxyError",not
+requests/tests/test_requests.py,566,Should use netrc and work.,not
+requests/tests/test_requests.py,570,Given auth should override and fail.,not
+requests/tests/test_requests.py,576,Should use netrc and work.,not
+requests/tests/test_requests.py,580,Given auth should override and fail.,not
+requests/tests/test_requests.py,813,compat.str is unicode.,not
+requests/tests/test_requests.py,864,"Our local httpbin does not have a trusted CA, so this call will",not
+requests/tests/test_requests.py,865,fail if we use our default trust bundle.,not
+requests/tests/test_requests.py,1117,make sure one can use keys multiple times,not
+requests/tests/test_requests.py,1133,make sure one can use values multiple times,not
+requests/tests/test_requests.py,1149,make sure one can use items multiple times,not
+requests/tests/test_requests.py,1165,Verify that CookieConflictError is raised if domain is not specified,not
+requests/tests/test_requests.py,1169,Verify that CookieConflictError is not raised if domain is specified,not
+requests/tests/test_requests.py,1226,also for streaming,not
+requests/tests/test_requests.py,1234,check for unicode HTTP status,not
+requests/tests/test_requests.py,1240,old behaviour - crashes here,not
+requests/tests/test_requests.py,1243,check raise_status falls back to ISO-8859-1,not
+requests/tests/test_requests.py,1276,verify we can pickle the original request,not
+requests/tests/test_requests.py,1279,verify we can pickle the response and that we have access to,not
+requests/tests/test_requests.py,1280,the original request.,not
+requests/tests/test_requests.py,1288,Verify PreparedRequest can be pickled and unpickled,not
+requests/tests/test_requests.py,1294,Verify unpickled PreparedRequest sends properly,not
+requests/tests/test_requests.py,1304,Verify PreparedRequest can be pickled and unpickled,not
+requests/tests/test_requests.py,1310,Verify unpickled PreparedRequest sends properly,not
+requests/tests/test_requests.py,1319,Verify PreparedRequest can be pickled,not
+requests/tests/test_requests.py,1326,Verify unpickled PreparedRequest sends properly,not
+requests/tests/test_requests.py,1451,From issue #1321,not
+requests/tests/test_requests.py,1477,"This is testing that they are builtin strings. A bit weird, but there",not
+requests/tests/test_requests.py,1478,we go.,not
+requests/tests/test_requests.py,1499,Test for int,not
+requests/tests/test_requests.py,1503,Test for dict,not
+requests/tests/test_requests.py,1507,Test for list,not
+requests/tests/test_requests.py,1520,Test for newline,not
+requests/tests/test_requests.py,1523,Test for line feed,not
+requests/tests/test_requests.py,1526,Test for carriage return,not
+requests/tests/test_requests.py,1537,Test for whitespace,not
+requests/tests/test_requests.py,1540,Test for tab,not
+requests/tests/test_requests.py,1609,Non-standard ports should trigger stripping,not
+requests/tests/test_requests.py,1634,"read only the first eight bytes of the response body,",not
+requests/tests/test_requests.py,1635,then follow the redirect,not
+requests/tests/test_requests.py,1640,"read all of the response via iter_content,",not
+requests/tests/test_requests.py,1641,then follow the redirect,not
+requests/tests/test_requests.py,1658,the data has all been read,not
+requests/tests/test_requests.py,1661,rewind it back,not
+requests/tests/test_requests.py,1667,read some data,not
+requests/tests/test_requests.py,1672,the data has all been read,not
+requests/tests/test_requests.py,1675,rewind it back,not
+requests/tests/test_requests.py,1851,Make sure r.content is None,not
+requests/tests/test_requests.py,1929,default behavior,not
+requests/tests/test_requests.py,1932,edge case - check to see if 'location' is in headers anyways,not
+requests/tests/test_requests.py,2258,urllib3 expects bodies as bytes-like objects,not
+requests/tests/test_requests.py,2426,Helper function that normalizes equivalent,not
+requests/tests/test_requests.py,2427,percent-encoded bytes before comparisons,not
+requests/tests/test_structures.py,1,-*- coding: utf-8 -*-,not
+requests/tests/test_lowlevel.py,1,-*- coding: utf-8 -*-,not
+requests/tests/test_lowlevel.py,21,release server block,not
+requests/tests/test_lowlevel.py,53,Respond to initial GET with a challenge.,not
+requests/tests/test_lowlevel.py,58,"Verify we receive an Authorization header in response, then redirect.",not
+requests/tests/test_lowlevel.py,63,"Verify Authorization isn't sent to the redirected host,",not
+requests/tests/test_lowlevel.py,64,then send another challenge.,not
+requests/tests/test_lowlevel.py,69,"Verify Authorization is sent correctly again, and return 200 OK.",not
+requests/tests/test_lowlevel.py,82,Verify server succeeded in authenticating.,not
+requests/tests/test_lowlevel.py,84,Verify Authorization was sent in final request.,not
+requests/tests/test_lowlevel.py,87,Verify redirect happened as we expected.,not
+requests/tests/test_lowlevel.py,109,Respond to initial GET with a challenge.,not
+requests/tests/test_lowlevel.py,114,"Verify we receive an Authorization header in response, then",not
+requests/tests/test_lowlevel.py,115,challenge again.,not
+requests/tests/test_lowlevel.py,120,Verify the client didn't respond to second challenge.,not
+requests/tests/test_lowlevel.py,132,Verify server didn't authenticate us.,not
+requests/tests/test_lowlevel.py,152,Respond to GET with a 200 containing www-authenticate header.,not
+requests/tests/test_lowlevel.py,157,Verify the client didn't respond with auth.,not
+requests/tests/test_lowlevel.py,169,Verify server didn't receive auth from us.,not
+requests/tests/test_lowlevel.py,192,do nothing with the requests; just close the socket,not
+requests/tests/test_lowlevel.py,197,fake proxy's lack of response will cause a ConnectionError,not
+requests/tests/test_lowlevel.py,201,the fake proxy received a request,not
+requests/tests/test_lowlevel.py,204,it had actual content (not checking for SOCKS protocol for now),not
+requests/tests/test_lowlevel.py,211,stores the second request to the server,not
+requests/tests/test_lowlevel.py,304,Verify we haven't overwritten the location with our previous fragment.,not
+requests/tests/test_lowlevel.py,306,Verify previous fragment is used and not the original.,not
+requests/tests/test_help.py,1,-*- encoding: utf-8,not
+requests/tests/__init__.py,1,-*- coding: utf-8 -*-,not
+requests/tests/__init__.py,10,"urllib3 sets SNIMissingWarning to only go off once,",not
+requests/tests/__init__.py,11,while this test suite requires it to always fire,not
+requests/tests/__init__.py,12,so that it occurs during test_requests.test_https_warnings,not
+requests/tests/testserver/server.py,1,-*- coding: utf-8 -*-,not
+requests/tests/testserver/server.py,66,in case self.port = 0,not
+requests/tests/testserver/server.py,74,just in case of exception,not
+requests/tests/testserver/server.py,121,avoid server from waiting for event timeouts,not
+requests/tests/testserver/server.py,122,if an exception is found in the main thread,not
+requests/tests/testserver/server.py,125,ensure server thread doesn't get stuck waiting for connections,not
+requests/tests/testserver/server.py,128,allow exceptions to propagate,not
+requests/requests/compat.py,1,-*- coding: utf-8 -*-,not
+requests/requests/compat.py,15,-------,not
+requests/requests/compat.py,16,Pythons,not
+requests/requests/compat.py,17,-------,not
+requests/requests/compat.py,19,Syntax sugar.,not
+requests/requests/compat.py,22,: Python 2.x?,not
+requests/requests/compat.py,25,: Python 3.x?,not
+requests/requests/compat.py,33,---------,not
+requests/requests/compat.py,34,Specifics,not
+requests/requests/compat.py,35,---------,not
+requests/requests/compat.py,46,Keep OrderedDict for backwards compatibility.,not
+requests/requests/compat.py,63,Keep OrderedDict for backwards compatibility.,not
+requests/requests/help.py,50,Complete Guess,not
+requests/requests/help.py,52,Complete Guess,not
+requests/requests/structures.py,1,-*- coding: utf-8 -*-,not
+requests/requests/structures.py,49,"Use the lowercased key for lookups, but store the actual",not
+requests/requests/structures.py,50,key alongside the value.,not
+requests/requests/structures.py,78,Compare insensitively,not
+requests/requests/structures.py,81,Copy is required,not
+requests/requests/structures.py,100,"We allow fall-through here, so values default to None",not
+requests/requests/packages.py,3,This code exists for backwards compatibility reasons.,not
+requests/requests/packages.py,4,I don't like it either. Just look the other way. :),not
+requests/requests/packages.py,8,This traversal is apparently necessary such that the identities are,not
+requests/requests/packages.py,9,preserved (requests.packages.urllib3.* is urllib3.*),not
+requests/requests/packages.py,14,"Kinda cool, though, right?",not
+requests/requests/cookies.py,1,-*- coding: utf-8 -*-,not
+requests/requests/cookies.py,52,Only return the response's URL if the user hadn't set the Host,not
+requests/requests/cookies.py,53,header,not
+requests/requests/cookies.py,56,"If they did set it, retrieve it and reconstruct the expected domain",not
+requests/requests/cookies.py,59,Reconstruct the URL as we expect it,not
+requests/requests/cookies.py,128,"the _original_response field is the wrapped httplib.HTTPResponse object,",not
+requests/requests/cookies.py,130,pull out the HTTPMessage with the headers and put it in the mock:,not
+requests/requests/cookies.py,206,support client code that unsets cookies by assignment of a None value:,not
+requests/requests/cookies.py,297,there is only one domain in jar,not
+requests/requests/cookies.py,393,if there are multiple cookies that meet passed in criteria,not
+requests/requests/cookies.py,395,we will eventually return this as long as no cookie conflict,not
+requests/requests/cookies.py,404,remove the unpickleable RLock object,not
+requests/requests/cookies.py,431,We're dealing with an instance of RequestsCookieJar,not
+requests/requests/cookies.py,433,We're dealing with a generic CookieJar instance,not
+requests/requests/sessions.py,1,-*- coding: utf-8 -*-,not
+requests/requests/sessions.py,37,"formerly defined here, reexposed here for backward compatibility",not
+requests/requests/sessions.py,40,"Preferred clock, based on which one is more accurate on a given system.",not
+requests/requests/sessions.py,42,Python 3.4+,not
+requests/requests/sessions.py,44,Earlier than Python 3.,not
+requests/requests/sessions.py,62,Bypass if not a dictionary (e.g. verify),not
+requests/requests/sessions.py,72,Remove keys that are set to None. Extract keys first to avoid altering,not
+requests/requests/sessions.py,73,the dictionary during iteration.,not
+requests/requests/sessions.py,100,Due to the nature of how requests processes redirects this method will,not
+requests/requests/sessions.py,101,be called at least once upon the original response and at least twice,not
+requests/requests/sessions.py,102,on each subsequent redirect response (if any).,not
+requests/requests/sessions.py,103,"If a custom mixin is used to handle this logic, it may be advantageous",not
+requests/requests/sessions.py,104,to cache the redirect location onto the response object as a private,not
+requests/requests/sessions.py,105,attribute.,not
+requests/requests/sessions.py,108,Currently the underlying http module on py3 decode headers,not
+requests/requests/sessions.py,109,"in latin1, but empirical evidence suggests that latin1 is very",not
+requests/requests/sessions.py,110,rarely used with non-ASCII characters in HTTP headers.,not
+requests/requests/sessions.py,111,It is more likely to get UTF8 header rather than latin1.,not
+requests/requests/sessions.py,112,This causes incorrect handling of UTF8 encoded location headers.,not
+requests/requests/sessions.py,113,"To solve this, we re-encode the location in latin1.",not
+requests/requests/sessions.py,125,Special case: allow http -> https redirect when using the standard,not
+requests/requests/sessions.py,126,"ports. This isn't specified by RFC 7235, but is kept to avoid",not
+requests/requests/sessions.py,127,breaking backwards compatibility with older versions of requests,not
+requests/requests/sessions.py,128,that allowed any redirects on the same host.,not
+requests/requests/sessions.py,133,Handle default port usage corresponding to scheme.,not
+requests/requests/sessions.py,141,Standard case: root URI must match,not
+requests/requests/sessions.py,148,keep track of history,not
+requests/requests/sessions.py,155,Update history and keep track of redirects.,not
+requests/requests/sessions.py,156,resp.history must ignore the original request in this loop,not
+requests/requests/sessions.py,161,Consume socket so it can be released,not
+requests/requests/sessions.py,168,Release the connection back into the pool.,not
+requests/requests/sessions.py,171,Handle redirection without scheme (see: RFC 1808 Section 4),not
+requests/requests/sessions.py,176,Normalize url case and attach previous fragment if needed (RFC 7231 7.1.2),not
+requests/requests/sessions.py,184,"Facilitate relative 'location' headers, as allowed by RFC 7231.",not
+requests/requests/sessions.py,185,(e.g. '/path/to/resource' instead of 'http://domain.tld/path/to/resource'),not
+requests/requests/sessions.py,186,"Compliant with RFC3986, we percent encode the url.",not
+requests/requests/sessions.py,196,https://github.com/psf/requests/issues/1084,not
+requests/requests/sessions.py,198,https://github.com/psf/requests/issues/3490,not
+requests/requests/sessions.py,207,Extract any cookies sent on the response to the cookiejar,not
+requests/requests/sessions.py,208,in the new request. Because we've mutated our copied prepared,not
+requests/requests/sessions.py,209,"request, use the old one that we haven't yet touched.",not
+requests/requests/sessions.py,214,Rebuild auth and proxy information.,not
+requests/requests/sessions.py,218,A failed tell() sets `_body_position` to `object()`. This non-None,not
+requests/requests/sessions.py,219,"value ensures `rewindable` will be True, allowing us to raise an",not
+requests/requests/sessions.py,220,"UnrewindableBodyError, instead of hanging the connection.",not
+requests/requests/sessions.py,226,Attempt to rewind consumed file-like object.,not
+requests/requests/sessions.py,230,Override the original request.,not
+requests/requests/sessions.py,250,"extract redirect url, if any, for the next loop",not
+requests/requests/sessions.py,263,"If we get redirected to a new host, we should strip out any",not
+requests/requests/sessions.py,264,authentication headers.,not
+requests/requests/sessions.py,267,.netrc might have more auth for us on our new host.,not
+requests/requests/sessions.py,320,https://tools.ietf.org/html/rfc7231#section-6.4.4,not
+requests/requests/sessions.py,324,"Do what the browsers do, despite standards...",not
+requests/requests/sessions.py,325,"First, turn 302s into GETs.",not
+requests/requests/sessions.py,329,"Second, if a POST is responded to with a 301, turn it into a GET.",not
+requests/requests/sessions.py,330,This bizarre behaviour is explained in Issue 1704.,not
+requests/requests/sessions.py,364,: A case-insensitive dictionary of headers to be sent on each,not
+requests/requests/sessions.py,365,: :class:`Request <Request>` sent from this,not
+requests/requests/sessions.py,366,: :class:`Session <Session>`.,not
+requests/requests/sessions.py,369,: Default Authentication tuple or object to attach to,not
+requests/requests/sessions.py,370,: :class:`Request <Request>`.,not
+requests/requests/sessions.py,373,: Dictionary mapping protocol or protocol and host to the URL of the proxy,not
+requests/requests/sessions.py,374,": (e.g. {'http': 'foo.bar:3128', 'http://host.name': 'foo.bar:4012'}) to",not
+requests/requests/sessions.py,375,: be used on each :class:`Request <Request>`.,not
+requests/requests/sessions.py,378,: Event-handling hooks.,not
+requests/requests/sessions.py,381,: Dictionary of querystring data to attach to each,not
+requests/requests/sessions.py,382,: :class:`Request <Request>`. The dictionary values may be lists for,not
+requests/requests/sessions.py,383,: representing multivalued query parameters.,not
+requests/requests/sessions.py,386,: Stream response content default.,not
+requests/requests/sessions.py,389,: SSL Verification default.,not
+requests/requests/sessions.py,392,": SSL client certificate default, if String, path to ssl client",not
+requests/requests/sessions.py,393,": cert file (.pem). If Tuple, ('cert', 'key') pair.",not
+requests/requests/sessions.py,396,: Maximum number of redirects allowed. If the request exceeds this,not
+requests/requests/sessions.py,397,": limit, a :class:`TooManyRedirects` exception is raised.",not
+requests/requests/sessions.py,398,": This defaults to requests.models.DEFAULT_REDIRECT_LIMIT, which is",not
+requests/requests/sessions.py,399,: 30.,not
+requests/requests/sessions.py,402,": Trust environment settings for proxy configuration, default",not
+requests/requests/sessions.py,403,: authentication and similar.,not
+requests/requests/sessions.py,406,: A CookieJar containing all currently outstanding cookies set on this,not
+requests/requests/sessions.py,407,: session. By default it is a,not
+requests/requests/sessions.py,408,": :class:`RequestsCookieJar <requests.cookies.RequestsCookieJar>`, but",not
+requests/requests/sessions.py,409,: may be any other ``cookielib.CookieJar`` compatible object.,not
+requests/requests/sessions.py,412,Default connection adapters.,not
+requests/requests/sessions.py,435,Bootstrap CookieJar.,not
+requests/requests/sessions.py,439,Merge with session cookies,not
+requests/requests/sessions.py,443,Set environment's basic authentication if not explicitly set.,not
+requests/requests/sessions.py,503,Create the Request.,not
+requests/requests/sessions.py,524,Send the request.,not
+requests/requests/sessions.py,619,Set defaults that the hooks can utilize to ensure they always have,not
+requests/requests/sessions.py,620,the correct parameters to reproduce the previous request.,not
+requests/requests/sessions.py,626,It's possible that users might accidentally send a Request object.,not
+requests/requests/sessions.py,627,Guard against that specific failure case.,not
+requests/requests/sessions.py,631,Set up variables needed for resolve_redirects and dispatching of hooks,not
+requests/requests/sessions.py,636,Get the appropriate adapter to use,not
+requests/requests/sessions.py,639,Start time (approximately) of the request,not
+requests/requests/sessions.py,642,Send the request,not
+requests/requests/sessions.py,645,Total elapsed time of the request (approximately),not
+requests/requests/sessions.py,649,Response manipulation hooks,not
+requests/requests/sessions.py,652,Persist cookies,not
+requests/requests/sessions.py,655,If the hooks create history then we want those cookies too,not
+requests/requests/sessions.py,661,Redirect resolving generator.,not
+requests/requests/sessions.py,664,Resolve redirects if allowed.,not
+requests/requests/sessions.py,667,Shuffle things around if there's history.,not
+requests/requests/sessions.py,669,Insert the first (original) request at the start,not
+requests/requests/sessions.py,671,Get the last request made,not
+requests/requests/sessions.py,675,"If redirects aren't being followed, store the response on the Request for Response.next().",not
+requests/requests/sessions.py,693,Gather clues from the surrounding environment.,not
+requests/requests/sessions.py,695,Set environment's proxies.,not
+requests/requests/sessions.py,701,Look for requests environment configuration and be compatible,not
+requests/requests/sessions.py,702,with cURL.,not
+requests/requests/sessions.py,707,Merge all the kwargs.,not
+requests/requests/sessions.py,727,Nothing matches :-/,not
+requests/requests/hooks.py,1,-*- coding: utf-8 -*-,not
+requests/requests/hooks.py,20,TODO: response is the only one,SATD
+requests/requests/api.py,1,-*- coding: utf-8 -*-,not
+requests/requests/api.py,57,"By using the 'with' statement we are sure the session is closed, thus we",not
+requests/requests/api.py,58,avoid leaving sockets open which can trigger a ResourceWarning in some,not
+requests/requests/api.py,59,"cases, and look like a memory leak in others.",not
+requests/requests/_internal_utils.py,1,-*- coding: utf-8 -*-,not
+requests/requests/status_codes.py,1,-*- coding: utf-8 -*-,not
+requests/requests/status_codes.py,27,Informational.,not
+requests/requests/status_codes.py,44,Redirection.,not
+requests/requests/status_codes.py,54,These 2 to be removed in 3.0,not
+requests/requests/status_codes.py,56,Client Error.,not
+requests/requests/status_codes.py,91,Server Error.,not
+requests/requests/utils.py,1,-*- coding: utf-8 -*-,not
+requests/requests/utils.py,26,"to_native_string is unused here, but imported here for backwards compatibility",not
+requests/requests/utils.py,46,provide a proxy_bypass version on Windows without DNS lookups,not
+requests/requests/utils.py,60,"ProxyEnable could be REG_SZ or REG_DWORD, normalizing it",not
+requests/requests/utils.py,63,ProxyOverride is almost always a string,not
+requests/requests/utils.py,71,make a check value list from the registry entry: replace the,not
+requests/requests/utils.py,72,'<local>' string by the localhost entry and the corresponding,not
+requests/requests/utils.py,73,canonical entry.,not
+requests/requests/utils.py,75,now check if we match one of the registry values.,not
+requests/requests/utils.py,80,mask dots,not
+requests/requests/utils.py,81,change glob sequence,not
+requests/requests/utils.py,82,change glob char,not
+requests/requests/utils.py,87,noqa,not
+requests/requests/utils.py,126,"Having used fstat to determine the file length, we need to",not
+requests/requests/utils.py,127,confirm that this file was opened up in binary mode.,not
+requests/requests/utils.py,143,"This can happen in some weird situations, such as when the file",not
+requests/requests/utils.py,144,is actually a special file descriptor like stdin. In this,not
+requests/requests/utils.py,145,"instance, we don't know what the length is, so set it to zero and",not
+requests/requests/utils.py,146,let requests chunk it instead.,not
+requests/requests/utils.py,151,StringIO and BytesIO have seek but no useable fileno,not
+requests/requests/utils.py,153,seek to end of file,not
+requests/requests/utils.py,157,seek back to current position to support,not
+requests/requests/utils.py,158,partially read file-like objects,not
+requests/requests/utils.py,181,os.path.expanduser can fail when $HOME is undefined and,not
+requests/requests/utils.py,182,getpwuid fails. See https://bugs.python.org/issue20164 &,not
+requests/requests/utils.py,183,https://github.com/psf/requests/issues/1846,not
+requests/requests/utils.py,190,Abort early if there isn't one.,not
+requests/requests/utils.py,196,Strip port numbers from netloc. This weird `if...encode`` dance is,not
+requests/requests/utils.py,197,"used for Python 3.2, which doesn't support unicode literals.",not
+requests/requests/utils.py,206,Return with login / password,not
+requests/requests/utils.py,210,"If there was a parsing error or a permissions issue reading the file,",not
+requests/requests/utils.py,211,we'll just skip netrc auth unless explicitly asked to raise errors.,not
+requests/requests/utils.py,215,AppEngine hackiness.,SATD
+requests/requests/utils.py,234,"this is already a valid path, no need to do anything further",not
+requests/requests/utils.py,237,find the first valid part of the provided path and treat that as a zip archive,not
+requests/requests/utils.py,238,assume the rest of the path is the name of a member in the archive,not
+requests/requests/utils.py,251,we have a valid zip archive and a valid member of that archive,not
+requests/requests/utils.py,316,From mitsuhiko/werkzeug (used with permission).,not
+requests/requests/utils.py,348,From mitsuhiko/werkzeug (used with permission).,not
+requests/requests/utils.py,383,From mitsuhiko/werkzeug (used with permission).,not
+requests/requests/utils.py,393,"this is not the real unquoting, but fixing this so that the",not
+requests/requests/utils.py,394,RFC is met will result in bugs with internet explorer and,not
+requests/requests/utils.py,395,probably some other browsers as well.  IE for example is,not
+requests/requests/utils.py,396,"uploading files with ""C:\foo\bar.txt"" as filename",not
+requests/requests/utils.py,399,if this is a filename and the starting characters look like,not
+requests/requests/utils.py,400,"a UNC path, then just return the value without quotes.  Using the",not
+requests/requests/utils.py,401,replace sequence below on a UNC path has the effect of turning,not
+requests/requests/utils.py,402,the leading double slash into a single slash and then,not
+requests/requests/utils.py,403,_fix_ie_filename() doesn't work correctly.  See #458.,not
+requests/requests/utils.py,549,Try charset from content-type,not
+requests/requests/utils.py,558,Fall back:,not
+requests/requests/utils.py,565,The unreserved URI characters (RFC 3986),not
+requests/requests/utils.py,605,Unquote only the unreserved characters,not
+requests/requests/utils.py,606,"Then quote only illegal characters (do not quote reserved,",not
+requests/requests/utils.py,607,"unreserved, or '%')",not
+requests/requests/utils.py,610,"We couldn't unquote the given URI, so let's try quoting it, but",not
+requests/requests/utils.py,611,there may be unquoted '%'s in the URI. We need to make sure they're,not
+requests/requests/utils.py,612,properly quoted so they do not cause issues elsewhere.,not
+requests/requests/utils.py,705,Prioritize lowercase environment variables over uppercase,not
+requests/requests/utils.py,706,"to keep a consistent behaviour with other http projects (curl, wget).",not
+requests/requests/utils.py,709,"First check whether no_proxy is defined. If it is, check that the URL",not
+requests/requests/utils.py,710,we're getting isn't in the no_proxy list.,not
+requests/requests/utils.py,717,"URLs don't always have hostnames, e.g. file:/// urls.",not
+requests/requests/utils.py,721,We need to check whether we match here. We need to see if we match,not
+requests/requests/utils.py,722,"the end of the hostname, both with and without the port.",not
+requests/requests/utils.py,733,If no_proxy ip was defined in plain IP notation instead of cidr notation &,not
+requests/requests/utils.py,734,matches the IP of the index,not
+requests/requests/utils.py,743,"The URL does match something in no_proxy, so we don't want",not
+requests/requests/utils.py,744,to apply the proxies on this URL.,not
+requests/requests/utils.py,748,parsed.hostname can be `None` in cases such as a file URI.,not
+requests/requests/utils.py,856,Null bytes; no need to recreate these on each call to guess_json_utf,not
+requests/requests/utils.py,857,encoding to ASCII for Python 3,not
+requests/requests/utils.py,866,"JSON always starts with two ASCII characters, so detection is as",not
+requests/requests/utils.py,867,easy as counting the nulls and from their location and count,not
+requests/requests/utils.py,868,"determine the encoding. Also detect a BOM, if present.",not
+requests/requests/utils.py,871,BOM included,not
+requests/requests/utils.py,873,"BOM included, MS style (discouraged)",not
+requests/requests/utils.py,875,BOM included,not
+requests/requests/utils.py,880,1st and 3rd are null,not
+requests/requests/utils.py,882,2nd and 4th are null,not
+requests/requests/utils.py,884,Did not detect 2 valid UTF-16 ascii-range characters,not
+requests/requests/utils.py,890,Did not detect a valid UTF-32 ascii-range character,not
+requests/requests/utils.py,902,"urlparse is a finicky beast, and sometimes decides that there isn't a",not
+requests/requests/utils.py,903,"netloc present. Assume that it's being over-cautious, and switch netloc",not
+requests/requests/utils.py,904,and path if urlparse decided there was no netloc.,not
+requests/requests/utils.py,927,Moved outside of function to avoid recompile every call,not
+requests/requests/utils.py,961,see func:`prepend_scheme_if_needed`,not
+requests/requests/auth.py,1,-*- coding: utf-8 -*-,not
+requests/requests/auth.py,31,"""I want us to put a big-ol' comment on top of it that",not
+requests/requests/auth.py,32,says that this behaviour is dumb but we need to preserve,not
+requests/requests/auth.py,33,"it because people are relying on it.""",not
+requests/requests/auth.py,34,- Lukasa,not
+requests/requests/auth.py,35,,not
+requests/requests/auth.py,36,These are here solely to maintain backwards compatibility,not
+requests/requests/auth.py,37,for things like ints. This will be removed in 3.0.0.,not
+requests/requests/auth.py,57,-- End Removal --,not
+requests/requests/auth.py,114,Keep state in per-thread local storage,not
+requests/requests/auth.py,118,Ensure state is initialized just once per-thread,not
+requests/requests/auth.py,143,lambdas assume digest modules are imported at the top level,not
+requests/requests/auth.py,174,XXX not implemented yet,SATD
+requests/requests/auth.py,177,: path is request-uri defined in RFC 2616 which should not be empty,not
+requests/requests/auth.py,210,XXX handle auth-int.,SATD
+requests/requests/auth.py,215,XXX should the partial digests be encoded too?,SATD
+requests/requests/auth.py,241,"If response is not 4xx, do not auth",not
+requests/requests/auth.py,242,See https://github.com/psf/requests/issues/3772,not
+requests/requests/auth.py,248,Rewind the file position indicator of the body to where,not
+requests/requests/auth.py,249,it was to resend the request.,not
+requests/requests/auth.py,259,Consume content and release the original connection,not
+requests/requests/auth.py,260,to allow our new request to reuse the same one.,not
+requests/requests/auth.py,279,"Initialize per-thread state, if needed",not
+requests/requests/auth.py,281,"If we have a saved nonce, skip the 401",not
+requests/requests/auth.py,287,In the case of HTTPDigestAuth being reused and the body of,not
+requests/requests/auth.py,288,"the previous request was a file-like object, pos has the",not
+requests/requests/auth.py,289,file position of the previous body. Ensure it's set to,not
+requests/requests/auth.py,290,None.,not
+requests/requests/adapters.py,1,-*- coding: utf-8 -*-,not
+requests/requests/adapters.py,135,Can't handle by adding 'proxy_manager' to self.__attrs__ because,not
+requests/requests/adapters.py,136,"self.poolmanager uses a lambda function, which isn't pickleable.",not
+requests/requests/adapters.py,158,save these values for pickling,not
+requests/requests/adapters.py,219,Allow self-specified cert location.,not
+requests/requests/adapters.py,267,"Fallback to None if there's no status_code, for whatever reason.",not
+requests/requests/adapters.py,270,Make headers case-insensitive.,not
+requests/requests/adapters.py,273,Set encoding.,not
+requests/requests/adapters.py,283,Add new cookies from the server.,not
+requests/requests/adapters.py,286,Give the Response some context.,not
+requests/requests/adapters.py,312,Only scheme should be lower case,not
+requests/requests/adapters.py,427,this may raise a string formatting error.,not
+requests/requests/adapters.py,452,Send the request.,not
+requests/requests/adapters.py,476,Receive the response from the server,not
+requests/requests/adapters.py,478,"For Python 2.7, use buffering of HTTP responses",not
+requests/requests/adapters.py,481,For compatibility with Python 3.3+,not
+requests/requests/adapters.py,492,"If we hit any problems here, clean up the connection.",not
+requests/requests/adapters.py,493,"Then, reraise so that we can handle the actual exception.",not
+requests/requests/adapters.py,502,TODO: Remove this in 3.0.0: see #2811,SATD
+requests/requests/adapters.py,513,This branch is for urllib3 v1.22 and later.,not
+requests/requests/adapters.py,526,This branch is for urllib3 versions earlier than v1.22,not
+requests/requests/certs.py,1,!/usr/bin/env python,not
+requests/requests/certs.py,2,-*- coding: utf-8 -*-,not
+requests/requests/exceptions.py,1,-*- coding: utf-8 -*-,not
+requests/requests/exceptions.py,111,Warnings,not
+requests/requests/models.py,1,-*- coding: utf-8 -*-,not
+requests/requests/models.py,13,"Import encoding now, to avoid implicit import later.",not
+requests/requests/models.py,14,"Implicit import within threads may cause LookupError when standard library is in a ZIP,",not
+requests/requests/models.py,15,such as in Embedded Python. See https://github.com/psf/requests/issues/3578.,not
+requests/requests/models.py,45,: The set of HTTP status codes that indicate an automatically,not
+requests/requests/models.py,46,: processable redirect.,not
+requests/requests/models.py,48,301,not
+requests/requests/models.py,49,302,not
+requests/requests/models.py,50,303,not
+requests/requests/models.py,51,307,not
+requests/requests/models.py,52,308,not
+requests/requests/models.py,133,Don't call str() on bytestrings: in Py3 it all goes wrong.,not
+requests/requests/models.py,142,support for explicit filename,not
+requests/requests/models.py,230,Default empty dicts for dict params.,not
+requests/requests/models.py,292,: HTTP verb to send to the server.,not
+requests/requests/models.py,294,: HTTP URL to send the request to.,not
+requests/requests/models.py,296,: dictionary of HTTP headers.,not
+requests/requests/models.py,298,The `CookieJar` used to create the Cookie header will be stored here,not
+requests/requests/models.py,299,after prepare_cookies is called,not
+requests/requests/models.py,301,: request body to send to the server.,not
+requests/requests/models.py,303,": dictionary of callback hooks, for internal usage.",not
+requests/requests/models.py,305,: integer denoting starting position of a readable file-like body.,not
+requests/requests/models.py,320,Note that prepare_auth must be last to enable authentication schemes,not
+requests/requests/models.py,321,such as OAuth to work on a fully prepared request.,not
+requests/requests/models.py,323,This MUST go after prepare_auth. Authenticators could add a hook,not
+requests/requests/models.py,358,: Accept objects that have string representations.,not
+requests/requests/models.py,359,: We're unable to blindly call unicode/str functions,not
+requests/requests/models.py,360,: as this will include the bytestring indicator (b''),not
+requests/requests/models.py,361,: on python 3.x.,not
+requests/requests/models.py,362,: https://github.com/psf/requests/pull/2238,not
+requests/requests/models.py,368,Remove leading whitespaces from url,not
+requests/requests/models.py,371,"Don't do any URL preparation for non-HTTP schemes like `mailto`,",not
+requests/requests/models.py,372,"`data` etc to work around exceptions from `url_parse`, which",not
+requests/requests/models.py,373,handles RFC 3986 only.,not
+requests/requests/models.py,378,Support for unicode domain names and paths.,not
+requests/requests/models.py,393,"In general, we want to try IDNA encoding the hostname if the string contains",not
+requests/requests/models.py,394,non-ASCII characters. This allows users to automatically get the correct IDNA,not
+requests/requests/models.py,395,"behaviour. For strings containing only ASCII characters, we need to also verify",not
+requests/requests/models.py,396,"it doesn't start with a wildcard (*), before allowing the unencoded hostname.",not
+requests/requests/models.py,405,Carefully reconstruct the network location,not
+requests/requests/models.py,413,Bare domains aren't valid URLs.,not
+requests/requests/models.py,448,Raise exception on invalid header value.,not
+requests/requests/models.py,456,"Check if file, fo, generator, iterator.",not
+requests/requests/models.py,457,"If not, run through normal process.",not
+requests/requests/models.py,459,Nottin' on you.,not
+requests/requests/models.py,464,urllib3 requires a bytes-like body. Python 2's json.dumps,not
+requests/requests/models.py,465,"provides this natively, but Python 3 gives a Unicode string.",not
+requests/requests/models.py,485,Record the current file position before reading.,not
+requests/requests/models.py,486,This will allow us to rewind a file in the event,not
+requests/requests/models.py,487,of a redirect.,not
+requests/requests/models.py,491,"This differentiates from None, allowing us to catch",not
+requests/requests/models.py,492,a failed `tell()` later when trying to rewind the body,not
+requests/requests/models.py,503,Multi-part file uploads.,not
+requests/requests/models.py,516,Add content-type if it wasn't explicitly provided.,not
+requests/requests/models.py,527,"If length exists, set it. Otherwise, we fallback",not
+requests/requests/models.py,528,to Transfer-Encoding: chunked.,not
+requests/requests/models.py,531,Set Content-Length to 0 for methods that can have a body,not
+requests/requests/models.py,532,but don't provide one. (i.e. not GET or HEAD),not
+requests/requests/models.py,538,"If no Auth is explicitly provided, extract it from the URL first.",not
+requests/requests/models.py,545,special-case basic HTTP auth,not
+requests/requests/models.py,548,Allow auth to make its changes.,not
+requests/requests/models.py,551,Update self to reflect the auth changes.,not
+requests/requests/models.py,554,Recompute Content-Length,not
+requests/requests/models.py,579,hooks can be passed as None to the prepare method and to this,not
+requests/requests/models.py,580,"method. To prevent iterating over None, simply use an empty list",not
+requests/requests/models.py,581,if hooks is False-y,not
+requests/requests/models.py,602,": Integer Code of responded HTTP Status, e.g. 404 or 200.",not
+requests/requests/models.py,605,: Case-insensitive Dictionary of Response Headers.,not
+requests/requests/models.py,606,": For example, ``headers['content-encoding']`` will return the",not
+requests/requests/models.py,607,: value of a ``'Content-Encoding'`` response header.,not
+requests/requests/models.py,610,: File-like object representation of response (for advanced usage).,not
+requests/requests/models.py,611,: Use of ``raw`` requires that ``stream=True`` be set on the request.,not
+requests/requests/models.py,612,: This requirement does not apply for use internally to Requests.,not
+requests/requests/models.py,615,: Final URL location of Response.,not
+requests/requests/models.py,618,: Encoding to decode with when accessing r.text.,not
+requests/requests/models.py,621,: A list of :class:`Response <Response>` objects from,not
+requests/requests/models.py,622,: the history of the Request. Any redirect responses will end,not
+requests/requests/models.py,623,: up here. The list is sorted from the oldest to the most recent request.,not
+requests/requests/models.py,626,": Textual reason of responded HTTP Status, e.g. ""Not Found"" or ""OK"".",not
+requests/requests/models.py,629,: A CookieJar of Cookies the server sent back.,not
+requests/requests/models.py,632,: The amount of time elapsed between sending the request,not
+requests/requests/models.py,633,: and the arrival of the response (as a timedelta).,not
+requests/requests/models.py,634,: This property specifically measures the time taken between sending,not
+requests/requests/models.py,635,: the first byte of the request and finishing parsing the headers. It,not
+requests/requests/models.py,636,: is therefore unaffected by consuming the response content or the,not
+requests/requests/models.py,637,: value of the ``stream`` keyword argument.,not
+requests/requests/models.py,640,: The :class:`PreparedRequest <PreparedRequest>` object to which this,not
+requests/requests/models.py,641,: is a response.,not
+requests/requests/models.py,651,Consume everything; accessing the content attribute makes,not
+requests/requests/models.py,652,sure the content has been fully read.,not
+requests/requests/models.py,662,pickled objects do not have .raw,not
+requests/requests/models.py,748,Special case for urllib3.,not
+requests/requests/models.py,760,Standard file-like object.,not
+requests/requests/models.py,773,simulate reading small chunks of the content,not
+requests/requests/models.py,821,Read the contents.,not
+requests/requests/models.py,832,don't need to release the connection; that's been handled by urllib3,not
+requests/requests/models.py,833,since we exhausted the data.,not
+requests/requests/models.py,849,Try charset from content-type,not
+requests/requests/models.py,856,Fallback to auto-detected encoding.,not
+requests/requests/models.py,860,Decode unicode from given encoding.,not
+requests/requests/models.py,864,A LookupError is raised if the encoding was not found which could,not
+requests/requests/models.py,865,indicate a misspelling or similar mistake.,not
+requests/requests/models.py,866,,not
+requests/requests/models.py,867,A TypeError can be raised if encoding is None,not
+requests/requests/models.py,868,,not
+requests/requests/models.py,869,So we try blindly encoding.,not
+requests/requests/models.py,882,No encoding set. JSON RFC 4627 section 3 states we should expect,not
+requests/requests/models.py,883,"UTF-8, -16 or -32. Detect which one to use; If the detection or",not
+requests/requests/models.py,884,"decoding fails, fall back to `self.text` (using chardet to make",not
+requests/requests/models.py,885,a best guess).,SATD
+requests/requests/models.py,893,Wrong UTF codec detected; usually because it's not UTF-8,not
+requests/requests/models.py,894,"but some other 8-bit codec.  This is an RFC violation,",not
+requests/requests/models.py,895,and the server didn't bother to tell us what codec *was*,not
+requests/requests/models.py,896,used.,not
+requests/requests/models.py,906,l = MultiDict(),not
+requests/requests/models.py,923,We attempt to decode utf-8 first because some servers,not
+requests/requests/models.py,924,choose to localize their reason strings. If the string,not
+requests/requests/models.py,925,"isn't utf-8, we fall back to iso-8859-1 for all other",not
+requests/requests/models.py,926,encodings. (See PR #3538),not
+requests/requests/__init__.py,1,-*- coding: utf-8 -*-,not
+requests/requests/__init__.py,3,__,not
+requests/requests/__init__.py,4,/__)  _  _     _   _ _/   _,not
+requests/requests/__init__.py,5,/ (   (- (/ (/ (- _)  /  _),not
+requests/requests/__init__.py,6,/,not
+requests/requests/__init__.py,51,Verify urllib3 isn't installed from git.,not
+requests/requests/__init__.py,53,"Sometimes, urllib3 only reports its version as 16.1.",not
+requests/requests/__init__.py,57,Check urllib3 for compatibility.,not
+requests/requests/__init__.py,58,noqa: F811,not
+requests/requests/__init__.py,60,"urllib3 >= 1.21.1, <= 1.25",not
+requests/requests/__init__.py,65,Check chardet for compatibility.,not
+requests/requests/__init__.py,68,"chardet >= 3.0.2, < 3.1.0",not
+requests/requests/__init__.py,75,cryptography < 1.3.4,not
+requests/requests/__init__.py,85,Check imported dependencies for compatibility.,not
+requests/requests/__init__.py,93,Attempt to enable urllib3's fallback for SNI support,not
+requests/requests/__init__.py,94,if the standard library doesn't support SNI or the,not
+requests/requests/__init__.py,95,'ssl' library isn't available.,not
+requests/requests/__init__.py,106,Check cryptography version,not
+requests/requests/__init__.py,112,urllib3's DependencyWarnings should be silenced.,not
+requests/requests/__init__.py,132,"Set default logging handler to avoid ""No handler found"" warnings.",not
+requests/requests/__init__.py,138,FileModeWarnings go off per the default.,not
+requests/requests/__version__.py,1,.-. .-. .-. . . .-. .-. .-. .-.,not
+requests/requests/__version__.py,2,|(  |-  |.| | | |-  `-.  |  `-.,not
+requests/requests/__version__.py,3,' ' `-' `-`.`-' `-' `-'  '  `-',not
+requests/docs/conf.py,1,-*- coding: utf-8 -*-,not
+requests/docs/conf.py,2,,not
+requests/docs/conf.py,3,"Requests documentation build configuration file, created by",not
+requests/docs/conf.py,4,sphinx-quickstart on Fri Feb 19 00:05:47 2016.,not
+requests/docs/conf.py,5,,not
+requests/docs/conf.py,6,This file is execfile()d with the current directory set to its,not
+requests/docs/conf.py,7,containing dir.,not
+requests/docs/conf.py,8,,not
+requests/docs/conf.py,9,Note that not all possible configuration values are present in this,not
+requests/docs/conf.py,10,autogenerated file.,not
+requests/docs/conf.py,11,,not
+requests/docs/conf.py,12,All configuration values have a default; values that are commented out,not
+requests/docs/conf.py,13,serve to show the default.,not
+requests/docs/conf.py,18,"If extensions (or modules to document with autodoc) are in another directory,",not
+requests/docs/conf.py,19,add these directories to sys.path here. If the directory is relative to the,not
+requests/docs/conf.py,20,"documentation root, use os.path.abspath to make it absolute, like shown here.",not
+requests/docs/conf.py,21,"sys.path.insert(0, os.path.abspath('.'))",not
+requests/docs/conf.py,23,Insert Requests' path into the system.,not
+requests/docs/conf.py,30,-- General configuration ------------------------------------------------,not
+requests/docs/conf.py,32,"If your documentation needs a minimal Sphinx version, state it here.",not
+requests/docs/conf.py,33,needs_sphinx = '1.0',not
+requests/docs/conf.py,35,"Add any Sphinx extension module names here, as strings. They can be",not
+requests/docs/conf.py,36,extensions coming with Sphinx (named 'sphinx.ext.*') or your custom,not
+requests/docs/conf.py,37,ones.,not
+requests/docs/conf.py,45,"Add any paths that contain templates here, relative to this directory.",not
+requests/docs/conf.py,48,The suffix(es) of source filenames.,not
+requests/docs/conf.py,49,You can specify multiple suffix as a list of string:,not
+requests/docs/conf.py,50,"source_suffix = ['.rst', '.md']",not
+requests/docs/conf.py,53,The encoding of source files.,not
+requests/docs/conf.py,54,source_encoding = 'utf-8-sig',not
+requests/docs/conf.py,56,The master toctree document.,not
+requests/docs/conf.py,59,General information about the project.,not
+requests/docs/conf.py,64,"The version info for the project you're documenting, acts as replacement for",not
+requests/docs/conf.py,65,"|version| and |release|, also used in various other places throughout the",not
+requests/docs/conf.py,66,built documents.,not
+requests/docs/conf.py,67,,not
+requests/docs/conf.py,68,The short X.Y version.,not
+requests/docs/conf.py,70,"The full version, including alpha/beta/rc tags.",not
+requests/docs/conf.py,73,The language for content autogenerated by Sphinx. Refer to documentation,not
+requests/docs/conf.py,74,for a list of supported languages.,not
+requests/docs/conf.py,75,,not
+requests/docs/conf.py,76,This is also used if you do content translation via gettext catalogs.,not
+requests/docs/conf.py,77,"Usually you set ""language"" from the command line for these cases.",not
+requests/docs/conf.py,80,"There are two options for replacing |today|: either, you set today to some",not
+requests/docs/conf.py,81,"non-false value, then it is used:",not
+requests/docs/conf.py,82,today = '',not
+requests/docs/conf.py,83,"Else, today_fmt is used as the format for a strftime call.",not
+requests/docs/conf.py,84,"today_fmt = '%B %d, %Y'",not
+requests/docs/conf.py,86,"List of patterns, relative to source directory, that match files and",not
+requests/docs/conf.py,87,directories to ignore when looking for source files.,not
+requests/docs/conf.py,90,The reST default role (used for this markup: `text`) to use for all,not
+requests/docs/conf.py,91,documents.,not
+requests/docs/conf.py,92,default_role = None,not
+requests/docs/conf.py,94,"If true, '()' will be appended to :func: etc. cross-reference text.",not
+requests/docs/conf.py,97,"If true, the current module name will be prepended to all description",not
+requests/docs/conf.py,98,unit titles (such as .. function::).,not
+requests/docs/conf.py,101,"If true, sectionauthor and moduleauthor directives will be shown in the",not
+requests/docs/conf.py,102,output. They are ignored by default.,not
+requests/docs/conf.py,103,show_authors = False,not
+requests/docs/conf.py,105,The name of the Pygments (syntax highlighting) style to use.,not
+requests/docs/conf.py,108,A list of ignored prefixes for module index sorting.,not
+requests/docs/conf.py,109,modindex_common_prefix = [],not
+requests/docs/conf.py,111,"If true, keep warnings as ""system message"" paragraphs in the built documents.",not
+requests/docs/conf.py,112,keep_warnings = False,not
+requests/docs/conf.py,114,"If true, `todo` and `todoList` produce output, else they produce nothing.",SATD
+requests/docs/conf.py,118,-- Options for HTML output ----------------------------------------------,not
+requests/docs/conf.py,120,The theme to use for HTML and HTML Help pages.  See the documentation for,not
+requests/docs/conf.py,121,a list of builtin themes.,not
+requests/docs/conf.py,124,Theme options are theme-specific and customize the look and feel of a theme,not
+requests/docs/conf.py,125,"further.  For a list of options available for each theme, see the",not
+requests/docs/conf.py,126,documentation.,not
+requests/docs/conf.py,136,"Add any paths that contain custom themes here, relative to this directory.",not
+requests/docs/conf.py,137,html_theme_path = [],not
+requests/docs/conf.py,139,"The name for this set of Sphinx documents.  If None, it defaults to",not
+requests/docs/conf.py,140,"""<project> v<release> documentation"".",not
+requests/docs/conf.py,141,html_title = None,not
+requests/docs/conf.py,143,A shorter title for the navigation bar.  Default is the same as html_title.,not
+requests/docs/conf.py,144,html_short_title = None,not
+requests/docs/conf.py,146,The name of an image file (relative to this directory) to place at the top,not
+requests/docs/conf.py,147,of the sidebar.,not
+requests/docs/conf.py,148,html_logo = None,not
+requests/docs/conf.py,150,The name of an image file (within the static path) to use as favicon of the,not
+requests/docs/conf.py,151,docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32,not
+requests/docs/conf.py,152,pixels large.,not
+requests/docs/conf.py,153,html_favicon = None,not
+requests/docs/conf.py,155,"Add any paths that contain custom static files (such as style sheets) here,",not
+requests/docs/conf.py,156,"relative to this directory. They are copied after the builtin static files,",not
+requests/docs/conf.py,157,"so a file named ""default.css"" will overwrite the builtin ""default.css"".",not
+requests/docs/conf.py,160,Add any extra paths that contain custom files (such as robots.txt or,not
+requests/docs/conf.py,161,".htaccess) here, relative to this directory. These files are copied",not
+requests/docs/conf.py,162,directly to the root of the documentation.,not
+requests/docs/conf.py,163,html_extra_path = [],not
+requests/docs/conf.py,165,"If not '', a 'Last updated on:' timestamp is inserted at every page bottom,",not
+requests/docs/conf.py,166,using the given strftime format.,not
+requests/docs/conf.py,167,"html_last_updated_fmt = '%b %d, %Y'",not
+requests/docs/conf.py,169,"If true, SmartyPants will be used to convert quotes and dashes to",not
+requests/docs/conf.py,170,typographically correct entities.,not
+requests/docs/conf.py,173,"Custom sidebar templates, maps document names to template names.",not
+requests/docs/conf.py,186,"Additional templates that should be rendered to pages, maps page names to",not
+requests/docs/conf.py,187,template names.,not
+requests/docs/conf.py,188,html_additional_pages = {},not
+requests/docs/conf.py,190,"If false, no module index is generated.",not
+requests/docs/conf.py,191,html_domain_indices = True,not
+requests/docs/conf.py,193,"If false, no index is generated.",not
+requests/docs/conf.py,194,html_use_index = True,not
+requests/docs/conf.py,196,"If true, the index is split into individual pages for each letter.",not
+requests/docs/conf.py,197,html_split_index = False,not
+requests/docs/conf.py,199,"If true, links to the reST sources are added to the pages.",not
+requests/docs/conf.py,202,"If true, ""Created using Sphinx"" is shown in the HTML footer. Default is True.",not
+requests/docs/conf.py,205,"If true, ""(C) Copyright ..."" is shown in the HTML footer. Default is True.",not
+requests/docs/conf.py,208,"If true, an OpenSearch description file will be output, and all pages will",not
+requests/docs/conf.py,209,contain a <link> tag referring to it.  The value of this option must be the,not
+requests/docs/conf.py,210,base URL from which the finished HTML is served.,not
+requests/docs/conf.py,211,html_use_opensearch = '',not
+requests/docs/conf.py,213,"This is the file name suffix for HTML files (e.g. "".xhtml"").",not
+requests/docs/conf.py,214,html_file_suffix = None,not
+requests/docs/conf.py,216,Language to be used for generating the HTML full-text search index.,not
+requests/docs/conf.py,217,Sphinx supports the following languages:,not
+requests/docs/conf.py,218,"'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'",not
+requests/docs/conf.py,219,"'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'",not
+requests/docs/conf.py,220,html_search_language = 'en',not
+requests/docs/conf.py,222,"A dictionary with options for the search language support, empty by default.",not
+requests/docs/conf.py,223,Now only 'ja' uses this config value,not
+requests/docs/conf.py,224,html_search_options = {'type': 'default'},not
+requests/docs/conf.py,226,The name of a javascript file (relative to the configuration directory) that,not
+requests/docs/conf.py,227,"implements a search results scorer. If empty, the default will be used.",not
+requests/docs/conf.py,228,html_search_scorer = 'scorer.js',not
+requests/docs/conf.py,230,Output file base name for HTML help builder.,not
+requests/docs/conf.py,233,-- Options for LaTeX output ---------------------------------------------,not
+requests/docs/conf.py,236,The paper size ('letterpaper' or 'a4paper').,not
+requests/docs/conf.py,237,"'papersize': 'letterpaper',",not
+requests/docs/conf.py,238,"The font size ('10pt', '11pt' or '12pt').",not
+requests/docs/conf.py,239,"'pointsize': '10pt',",not
+requests/docs/conf.py,240,Additional stuff for the LaTeX preamble.,not
+requests/docs/conf.py,241,"'preamble': '',",not
+requests/docs/conf.py,242,Latex figure (float) alignment,not
+requests/docs/conf.py,243,"'figure_align': 'htbp',",not
+requests/docs/conf.py,246,Grouping the document tree into LaTeX files. List of tuples,not
+requests/docs/conf.py,247,"(source start file, target name, title,",not
+requests/docs/conf.py,248,"author, documentclass [howto, manual, or own class]).",SATD
+requests/docs/conf.py,253,The name of an image file (relative to this directory) to place at the top of,not
+requests/docs/conf.py,254,the title page.,not
+requests/docs/conf.py,255,latex_logo = None,not
+requests/docs/conf.py,257,"For ""manual"" documents, if this is true, then toplevel headings are parts,",not
+requests/docs/conf.py,258,not chapters.,not
+requests/docs/conf.py,259,latex_use_parts = False,not
+requests/docs/conf.py,261,"If true, show page references after internal links.",not
+requests/docs/conf.py,262,latex_show_pagerefs = False,not
+requests/docs/conf.py,264,"If true, show URL addresses after external links.",not
+requests/docs/conf.py,265,latex_show_urls = False,not
+requests/docs/conf.py,267,Documents to append as an appendix to all manuals.,not
+requests/docs/conf.py,268,latex_appendices = [],not
+requests/docs/conf.py,270,"If false, no module index is generated.",not
+requests/docs/conf.py,271,latex_domain_indices = True,not
+requests/docs/conf.py,274,-- Options for manual page output ---------------------------------------,not
+requests/docs/conf.py,276,One entry per manual page. List of tuples,not
+requests/docs/conf.py,277,"(source start file, name, description, authors, manual section).",not
+requests/docs/conf.py,280,"If true, show URL addresses after external links.",not
+requests/docs/conf.py,281,man_show_urls = False,not
+requests/docs/conf.py,284,-- Options for Texinfo output -------------------------------------------,not
+requests/docs/conf.py,286,Grouping the document tree into Texinfo files. List of tuples,not
+requests/docs/conf.py,287,"(source start file, target name, title, author,",not
+requests/docs/conf.py,288,"dir menu entry, description, category)",not
+requests/docs/conf.py,301,Documents to append as an appendix to all manuals.,not
+requests/docs/conf.py,302,texinfo_appendices = [],not
+requests/docs/conf.py,304,"If false, no module index is generated.",not
+requests/docs/conf.py,305,texinfo_domain_indices = True,not
+requests/docs/conf.py,307,"How to display URL addresses: 'footnote', 'no', or 'inline'.",not
+requests/docs/conf.py,308,texinfo_show_urls = 'footnote',not
+requests/docs/conf.py,310,"If true, do not generate a @detailmenu in the ""Top"" node's menu.",not
+requests/docs/conf.py,311,texinfo_no_detailmenu = False,not
+requests/docs/conf.py,314,-- Options for Epub output ----------------------------------------------,not
+requests/docs/conf.py,316,Bibliographic Dublin Core info.,not
+requests/docs/conf.py,322,The basename for the epub file. It defaults to the project name.,not
+requests/docs/conf.py,323,epub_basename = project,not
+requests/docs/conf.py,325,The HTML theme for the epub output. Since the default themes are not,not
+requests/docs/conf.py,326,"optimized for small screen space, using the same theme for HTML and epub",not
+requests/docs/conf.py,327,"output is usually not wise. This defaults to 'epub', a theme designed to save",not
+requests/docs/conf.py,328,visual space.,not
+requests/docs/conf.py,329,epub_theme = 'epub',not
+requests/docs/conf.py,331,The language of the text. It defaults to the language option,not
+requests/docs/conf.py,332,or 'en' if the language is not set.,not
+requests/docs/conf.py,333,epub_language = '',not
+requests/docs/conf.py,335,The scheme of the identifier. Typical schemes are ISBN or URL.,not
+requests/docs/conf.py,336,epub_scheme = '',not
+requests/docs/conf.py,338,The unique identifier of the text. This can be a ISBN number,not
+requests/docs/conf.py,339,or the project homepage.,not
+requests/docs/conf.py,340,epub_identifier = '',not
+requests/docs/conf.py,342,A unique identification for the text.,not
+requests/docs/conf.py,343,epub_uid = '',not
+requests/docs/conf.py,345,A tuple containing the cover image and cover page html template filenames.,not
+requests/docs/conf.py,346,epub_cover = (),not
+requests/docs/conf.py,348,"A sequence of (type, uri, title) tuples for the guide element of content.opf.",not
+requests/docs/conf.py,349,epub_guide = (),not
+requests/docs/conf.py,351,HTML files that should be inserted before the pages created by sphinx.,not
+requests/docs/conf.py,352,The format is a list of tuples containing the path and title.,not
+requests/docs/conf.py,353,epub_pre_files = [],not
+requests/docs/conf.py,355,HTML files that should be inserted after the pages created by sphinx.,not
+requests/docs/conf.py,356,The format is a list of tuples containing the path and title.,not
+requests/docs/conf.py,357,epub_post_files = [],not
+requests/docs/conf.py,359,A list of files that should not be packed into the epub file.,not
+requests/docs/conf.py,362,The depth of the table of contents in toc.ncx.,not
+requests/docs/conf.py,363,epub_tocdepth = 3,not
+requests/docs/conf.py,365,Allow duplicate toc entries.,not
+requests/docs/conf.py,366,epub_tocdup = True,not
+requests/docs/conf.py,368,Choose between 'default' and 'includehidden'.,not
+requests/docs/conf.py,369,epub_tocscope = 'default',not
+requests/docs/conf.py,371,Fix unsupported image types using the Pillow.,not
+requests/docs/conf.py,372,epub_fix_images = False,not
+requests/docs/conf.py,374,Scale large images.,not
+requests/docs/conf.py,375,epub_max_image_width = 0,not
+requests/docs/conf.py,377,"How to display URL addresses: 'footnote', 'no', or 'inline'.",not
+requests/docs/conf.py,378,epub_show_urls = 'inline',not
+requests/docs/conf.py,380,"If false, no index is generated.",not
+requests/docs/conf.py,381,epub_use_index = True,not
+requests/docs/_themes/flask_theme_support.py,1,flasky extensions.  flasky pygments style based on tango style,not
+requests/docs/_themes/flask_theme_support.py,12,No corresponding class for the following:,not
+requests/docs/_themes/flask_theme_support.py,13,"Text:                     """", # class:  ''",not
+requests/docs/_themes/flask_theme_support.py,14,class: 'w',not
+requests/docs/_themes/flask_theme_support.py,15,class: 'err',not
+requests/docs/_themes/flask_theme_support.py,16,class 'x',not
+requests/docs/_themes/flask_theme_support.py,18,class: 'c',not
+requests/docs/_themes/flask_theme_support.py,19,class: 'cp',not
+requests/docs/_themes/flask_theme_support.py,21,class: 'k',not
+requests/docs/_themes/flask_theme_support.py,22,class: 'kc',not
+requests/docs/_themes/flask_theme_support.py,23,class: 'kd',not
+requests/docs/_themes/flask_theme_support.py,24,class: 'kn',not
+requests/docs/_themes/flask_theme_support.py,25,class: 'kp',not
+requests/docs/_themes/flask_theme_support.py,26,class: 'kr',not
+requests/docs/_themes/flask_theme_support.py,27,class: 'kt',not
+requests/docs/_themes/flask_theme_support.py,29,class: 'o',not
+requests/docs/_themes/flask_theme_support.py,30,class: 'ow' - like keywords,not
+requests/docs/_themes/flask_theme_support.py,32,class: 'p',not
+requests/docs/_themes/flask_theme_support.py,34,"because special names such as Name.Class, Name.Function, etc.",not
+requests/docs/_themes/flask_theme_support.py,35,"are not recognized as such later in the parsing, we choose them",not
+requests/docs/_themes/flask_theme_support.py,36,to look the same as ordinary variables.,not
+requests/docs/_themes/flask_theme_support.py,37,class: 'n',not
+requests/docs/_themes/flask_theme_support.py,38,class: 'na' - to be revised,not
+requests/docs/_themes/flask_theme_support.py,39,class: 'nb',not
+requests/docs/_themes/flask_theme_support.py,40,class: 'bp',not
+requests/docs/_themes/flask_theme_support.py,41,class: 'nc' - to be revised,not
+requests/docs/_themes/flask_theme_support.py,42,class: 'no' - to be revised,not
+requests/docs/_themes/flask_theme_support.py,43,class: 'nd' - to be revised,not
+requests/docs/_themes/flask_theme_support.py,44,class: 'ni',not
+requests/docs/_themes/flask_theme_support.py,45,class: 'ne',not
+requests/docs/_themes/flask_theme_support.py,46,class: 'nf',not
+requests/docs/_themes/flask_theme_support.py,47,class: 'py',not
+requests/docs/_themes/flask_theme_support.py,48,class: 'nl',not
+requests/docs/_themes/flask_theme_support.py,49,class: 'nn' - to be revised,not
+requests/docs/_themes/flask_theme_support.py,50,class: 'nx',not
+requests/docs/_themes/flask_theme_support.py,51,class: 'nt' - like a keyword,not
+requests/docs/_themes/flask_theme_support.py,52,class: 'nv' - to be revised,not
+requests/docs/_themes/flask_theme_support.py,53,class: 'vc' - to be revised,not
+requests/docs/_themes/flask_theme_support.py,54,class: 'vg' - to be revised,not
+requests/docs/_themes/flask_theme_support.py,55,class: 'vi' - to be revised,not
+requests/docs/_themes/flask_theme_support.py,57,class: 'm',not
+requests/docs/_themes/flask_theme_support.py,59,class: 'l',not
+requests/docs/_themes/flask_theme_support.py,60,class: 'ld',not
+requests/docs/_themes/flask_theme_support.py,62,class: 's',not
+requests/docs/_themes/flask_theme_support.py,63,class: 'sb',not
+requests/docs/_themes/flask_theme_support.py,64,class: 'sc',not
+requests/docs/_themes/flask_theme_support.py,65,class: 'sd' - like a comment,not
+requests/docs/_themes/flask_theme_support.py,66,class: 's2',not
+requests/docs/_themes/flask_theme_support.py,67,class: 'se',not
+requests/docs/_themes/flask_theme_support.py,68,class: 'sh',not
+requests/docs/_themes/flask_theme_support.py,69,class: 'si',not
+requests/docs/_themes/flask_theme_support.py,70,class: 'sx',not
+requests/docs/_themes/flask_theme_support.py,71,class: 'sr',not
+requests/docs/_themes/flask_theme_support.py,72,class: 's1',not
+requests/docs/_themes/flask_theme_support.py,73,class: 'ss',not
+requests/docs/_themes/flask_theme_support.py,75,class: 'g',not
+requests/docs/_themes/flask_theme_support.py,76,class: 'gd',not
+requests/docs/_themes/flask_theme_support.py,77,class: 'ge',not
+requests/docs/_themes/flask_theme_support.py,78,class: 'gr',not
+requests/docs/_themes/flask_theme_support.py,79,class: 'gh',not
+requests/docs/_themes/flask_theme_support.py,80,class: 'gi',not
+requests/docs/_themes/flask_theme_support.py,81,class: 'go',not
+requests/docs/_themes/flask_theme_support.py,82,class: 'gp',not
+requests/docs/_themes/flask_theme_support.py,83,class: 'gs',not
+requests/docs/_themes/flask_theme_support.py,84,class: 'gu',not
+requests/docs/_themes/flask_theme_support.py,85,class: 'gt',not

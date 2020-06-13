@@ -1,217 +1,217 @@
 file path,line #,comment,satd
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,1,!/usr/bin/python,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,34,image width/height (square),
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,43,look for 'FF DA' (SOS),
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,47,look for 'FF D9' (EOI),
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,49,enough size ?,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,65,make sure the exploit-jpg directory exists or create it,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,71,start generation,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,74,loop over every payload,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,76,not done yet,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,79,loop while not done and timeout not reached,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,82,"we create a NxN pixels image, true colors",
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,84,we create a palette,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,88,we shuffle this palette,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,90,and fill the image with it,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,97,write down the image,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,102,"now, we try to insert the payload various ways",
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,107,write down the new jpeg file,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,112,load it with GD,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,117,does it contain our payload ?,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,119,Yay !,
-PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,128,"payload not found, we remove the file",
-PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,4,"Shellcodes - Bypass included : Keyword Recognition : System, GET, php",
-PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,5,--- How to use : http://localhost/shell.php?c=echo%20'<pre>';ls,
-PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,7,"shellcode  = ""<?=@`$_GET[c]`;""",
-PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,9,--- How to use : http://localhost/shell.php?_=system&__=echo%20'<pre>';ls,
-PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,15,Create a backdoored PNG,
-PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,21,undocumented class,
-PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,25,copy metadata into new object,
-PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/gen_xbin_avi.py,1,!/usr/bin/env python3,
-PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/gen_xbin_avi.py,21,AES.new('\x00'*16).decrypt('\x00'*16),
-PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/gen_avi_bypass.py,25,"TXT_LIST = ['/usr/share/doc/gnupg/Upgrading_From_PGP.txt', '/usr/share/doc/mount/mount.txt', '/etc/pki/nssdb/pkcs11.txt', '/usr/share/gnupg/help.txt']",
-PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,1,"Generating ""evil"" zip file",
-PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,2,Based on the work of Ajin Abraham,
-PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,3,Vuln website : https://github.com/ajinabraham/bad_python_extract,
-PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,4,More info : https://ajinabraham.com/blog/exploiting-insecure-file-extraction-in-python-for-code-execution,
-PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,6,Warning 1: need a restart from the server OR debug=True,
-PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,7,Warning 2: you won't get the output of the command (blind rce),
-PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,16,"""/home/swissky/Bureau/""+",
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,1,FROM https://github.com/osnr/horrifying-pdf-experiments,
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,27,Default appearance stream: can be arbitrary PDF XObject or,
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,28,something. Very general.,
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,42,It took me a while to figure this out. See PDF spec:,
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,43,https://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_reference_1-7.pdf#page=641,
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,45,"Basically, the appearance stream we just specified doesn't",
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,46,follow the field rect if it gets changed in JS (at least not in,
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,47,Chrome).,
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,49,"But this simple MK field here, with border/color",
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,50,"characteristics, _does_ follow those movements and resizes, so",
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,51,we can get moving colored rectangles this way.,
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,80,"You probably should just wrap each JS action with a try/catch,",
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,81,because Chrome does no error reporting or even logging otherwise;,
-PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,82,you just get a silent failure.,
-PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,1,!/usr/bin/python,
-PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,3,Quick and dirty demonstration of CVE-2014-0160 originally by Jared Stafford (jspenguin@jspenguin.org),
-PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,4,The author disclaims copyright to this source code.,
-PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,5,Modified by SensePost based on lots of other people's efforts (hard to work out credit via PasteBin),
-PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,88,EOF?,
-PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,150,Look for server hello done message.,
-PayloadsAllTheThings/CVE Exploits/JBoss CVE-2015-7501.py,1,! /usr/bin/env python2,
-PayloadsAllTheThings/CVE Exploits/JBoss CVE-2015-7501.py,3,Jboss Java Deserialization RCE (CVE-2015-7501),
-PayloadsAllTheThings/CVE Exploits/JBoss CVE-2015-7501.py,4,Made with <3 by @byt3bl33d3r,
-PayloadsAllTheThings/CVE Exploits/JBoss CVE-2015-7501.py,13,"from binascii import hexlify, unhexlify",
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,1,!/usr/bin/env python3,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,2,coding=utf-8,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,3,*****************************************************,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,4,struts-pwn: Apache Struts CVE-2017-9805 Exploit,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,5,Author:,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,6,Mazin Ahmed <Mazin AT MazinAhmed DOT net>,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,7,This code is based on:,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,8,https://github.com/rapid7/metasploit-framework/pull/8924,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,9,https://techblog.mediaservice.net/2017/09/detection-payload-for-the-new-struts-rest-vulnerability-cve-2017-9805/,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,10,*****************************************************,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,17,Disable SSL warnings,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,130,"'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',",
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,257,"'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',",
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,266,if the response returned before the request timeout.,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,267,"then, the host should not be vulnerable.",
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,268,"The request should return > 10 seconds, while the timeout is 8.",
-PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,1,!/usr/bin/python,
-PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,3,Successful Output:,
-PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,4,# python shell_shocker.py <VulnURL>,
-PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,5,[+] Attempting Shell_Shock - Make sure to type full path,
-PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,6,~$ /bin/ls /,
-PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,7,bin,
-PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,8,boot,
-PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,9,dev,
-PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,10,etc,
-PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,11,..,
-PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,12,~$ /bin/cat /etc/passwd,
-PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,1,!/usr/bin/env python2,
-PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,3,Oracle WebLogic Server Java Object Deserialization RCE (CVE-2016-3510),
-PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,4,Based on the PoC by FoxGlove Security (https://github.com/foxglovesec/JavaUnserializeExploits),
-PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,5,Made with <3 by @byt3bl33d3r,
-PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,54,Send headers,
-PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,68,adjust header for appropriate message length,
-PayloadsAllTheThings/CVE Exploits/Tomcat CVE-2017-12617.py,1,!/usr/bin/python,
-PayloadsAllTheThings/CVE Exploits/Tomcat CVE-2017-12617.py,2,From https://github.com/cyberheartmi9/CVE-2017-12617/blob/master/tomcat-cve-2017-12617.py,
-PayloadsAllTheThings/CVE Exploits/Tomcat CVE-2017-12617.py,151,print bcolors.HEADER+ banner+bcolors.ENDC,
-PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,1,! /usr/bin/env python2,
-PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,3,Jenkins CLI RMI Java Deserialization RCE (CVE-2015-8103),
-PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,4,Based on the PoC by FoxGlove Security (https://github.com/foxglovesec/JavaUnserializeExploits),
-PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,5,Made with <3 by @byt3bl33d3r,
-PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,61,Query Jenkins over HTTP to find what port the CLI listener is on,
-PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,65,Open a socket to the CLI port,
-PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,71,Send headers,
-PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2018-2894.py,1,!/usr/bin/env python,
-PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2018-2894.py,2,coding:utf-8,
-PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2018-2894.py,3,Build By LandGrey,
-PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2016-0792.py,1,! /usr/bin/env python2,
-PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2016-0792.py,3,Jenkins Groovy XML RCE (CVE-2016-0792),
-PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2016-0792.py,4,"Note: Although this is listed as a pre-auth RCE, during my testing it only worked if authentication was disabled in Jenkins",
-PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2016-0792.py,5,Made with <3 by @byt3bl33d3r,
-PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,1,! /usr/bin/env python2,
-PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,3,IBM WebSphere Java Object Deserialization RCE (CVE-2015-7450),
-PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,4,Based on the nessus plugin websphere_java_serialize.nasl,
-PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,5,Made with <3 by @byt3bl33d3r,
-PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,57,"This was in the nessus plugin, but wasn't used anywhwere :/",
-PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,58,"ser3 = ""rO0ABXVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAFzcgAkY29tLmlibS53ZWJzcGhlcmUubWFuYWdlbWVudC5TZXNzaW9uJ5mLeyYSGOUCAANKAAJpZFoADnNoYXJlV29ya3NwYWNlTAAIdXNlck5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAAAAVEDKkaUAXQAEVNjcmlwdDE1MTAzMmE0Njk0""",
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,1,Author: Paul Taylor / @bao7uo,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,3,https://github.com/bao7uo/dp_crypto/blob/master/dp_crypto.py,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,5,dp_crypto - CVE-2017-9248 exploit,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,6,Telerik.Web.UI.dll Cryptographic compromise,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,8,"Warning - no cert warnings,",
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,9,and verify = False in code below prevents verification,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,64,^^ max is len(base64chars),
-PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,7,NOTE,
-PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,8,Enable Remote API with the following command,
-PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,9,/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock,
-PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,10,"This is an intended feature, remember to filter the port 2375..",
-PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,16,Step 1 - Extract id and name from each container,
-PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,29,Step 2 - Prepare command,
-PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,40,Step 3 - Execute command,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,1,!/usr/bin/env python3,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,2,coding=utf-8,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,3,*****************************************************,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,4,struts-pwn: Apache Struts CVE-2018-11776 Exploit,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,5,Author:,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,6,Mazin Ahmed <Mazin AT MazinAhmed DOT net>,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,7,This code uses a payload from:,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,8,https://github.com/jas502n/St2-057,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,9,*****************************************************,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,25,Disable SSL warnings,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,67,"'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',",
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,78,url: http://example.com/demo/struts2-showcase/index.action,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,87,Site: http://example.com,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,90,FilePath: /demo/struts2-showcase/index.action,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,95,Filename: index.action,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,101,File Dir: /demo/struts2-showcase/,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,134,It will be renderred later with the payload.,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,1,!/usr/bin/python,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,70,"def reversepl(ip,port):",
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,71,"print ""perl""",
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,73,"def reversepy(ip,port):",
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,74,"print ""python""",
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,76,CVE-2013-2251 ---------------------------------------------------------------------------------,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,93,"print BOLD+""   * [SHELL REVERSA]""+ENDC",
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,94,"print OTRO+""     Struts@Shell:$ reverse 127.0.0.1 4444 (perl,python,bash)\n""+ENDC",
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,121,CVE-2017-5638 ---------------------------------------------------------------------------------,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,159,CVE-2018-11776 ---------------------------------------------------------------------------------,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,164,Filtramos la url solo dominio,
-PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,172,Filtramos la url solo path,
-PayloadsAllTheThings/CVE Exploits/Citrix CVE-2019-19781.py,1,!/usr/bin/env python,
-PayloadsAllTheThings/CVE Exploits/Citrix CVE-2019-19781.py,2,https://github.com/mpgn/CVE-2019-19781,
-PayloadsAllTheThings/CVE Exploits/Citrix CVE-2019-19781.py,3,#,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,1,!/usr/bin/env python3,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,2,origin : https://github.com/noperator/CVE-2019-18935,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,3,INSTALL:,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,4,git clone https://github.com/noperator/CVE-2019-18935.git && cd CVE-2019-18935,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,5,python3 -m venv env,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,6,source env/bin/activate,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,7,pip3 install -r requirements.txt,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,9,Import encryption routines.,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,47,Build rauPostData.,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,52,"These values seem a bit arbitrary, but when they're all set to 0, the payload disappears shortly after being written to disk.",
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,77,Determines remote filename on disk.,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,80,Build multipart form data.,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,90,Send request.,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,99,Build rauPostData.,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,106,Build multipart form data.,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,108,Only need this now.,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,109,One extra input is required for the page to process the request.,
-PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,112,Send request.,
-PayloadsAllTheThings/CVE Exploits/Jenkins Groovy Console.py,1,!/usr/bin/env python,
-PayloadsAllTheThings/CVE Exploits/Jenkins Groovy Console.py,2,SRC: https://raw.githubusercontent.com/bl4de/security-tools/master/jgc.py,
-PayloadsAllTheThings/CVE Exploits/Jenkins Groovy Console.py,3,DOC: https://medium.com/@_bl4de/remote-code-execution-with-groovy-console-in-jenkins-bd6ef55c285b,
-PayloadsAllTheThings/File Inclusion/uploadlfi.py,18,<?php echo system('uptime');,
-PayloadsAllTheThings/File Inclusion/phpinfolfi.py,1,!/usr/bin/python,
-PayloadsAllTheThings/File Inclusion/phpinfolfi.py,2,https://www.insomniasec.com/downloads/publications/LFI%20With%20PHPInfo%20Assistance.pdf,
-PayloadsAllTheThings/File Inclusion/phpinfolfi.py,31,modify this to suit the LFI script,
-PayloadsAllTheThings/File Inclusion/phpinfolfi.py,107,detect the final chunk,
-PayloadsAllTheThings/File Inclusion/phpinfolfi.py,116,padded up a bit,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,1,!/usr/bin/python,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,2,coding=utf-8,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,3,https://raw.githubusercontent.com/cujanovic/SSRF-Testing/master/ip.py,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,168,Case 1 - Dotted hexadecimal,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,201,===========================================================================,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,215,===========================================================================,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,217,Case 2 - Dotless hexadecimal,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,263,Case 3 - Dotless decimal,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,309,Case 4 - Dotted decimal with overflow(256),
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,355,Case 5 - Dotted octal,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,401,Case 6 - Dotted octal with padding,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,447,Case 7 - IPv6 compact version,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,493,Case 8 - IPv6 mapped version,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,539,Case 9 - Dotted hexadecimal + Dotted octal + Dotless decimal,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,585,Case 10 - Dotted hexadecimal + Dotless decimal,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,631,Case 11 - Dotted octal with padding + Dotless decimal,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,677,Case 12 - Dotted octal with padding + Dotted hexadecimal + Dotless decimal,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,723,Case 13 - Abusing IDNA Standard,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,732,Case 14 - Abusing 。and ｡,
-PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,744,Case 15 Abusing Enclosed Alphanumerics,
-PayloadsAllTheThings/Web Sockets/Files/ws-harness.py,1,!/usr/bin/python,
-PayloadsAllTheThings/Web Sockets/Files/ws-harness.py,32,Handler for the GET requests,
-PayloadsAllTheThings/Web Sockets/Files/ws-harness.py,53,Create a web server and define the handler to manage the,
-PayloadsAllTheThings/Web Sockets/Files/ws-harness.py,54,incoming request,
-PayloadsAllTheThings/Web Sockets/Files/ws-harness.py,58,Wait forever for incoming http requests,
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,1,!/usr/bin/python,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,34,image width/height (square),not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,43,look for 'FF DA' (SOS),not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,47,look for 'FF D9' (EOI),not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,49,enough size ?,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,65,make sure the exploit-jpg directory exists or create it,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,71,start generation,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,74,loop over every payload,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,76,not done yet,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,79,loop while not done and timeout not reached,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,82,"we create a NxN pixels image, true colors",not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,84,we create a palette,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,88,we shuffle this palette,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,90,and fill the image with it,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,97,write down the image,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,102,"now, we try to insert the payload various ways",not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,107,write down the new jpeg file,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,112,load it with GD,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,117,does it contain our payload ?,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,119,Yay !,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Resize/exploit_JPG.py,128,"payload not found, we remove the file",not
+PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,4,"Shellcodes - Bypass included : Keyword Recognition : System, GET, php",not
+PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,5,--- How to use : http://localhost/shell.php?c=echo%20'<pre>';ls,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,7,"shellcode  = ""<?=@`$_GET[c]`;""",not
+PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,9,--- How to use : http://localhost/shell.php?_=system&__=echo%20'<pre>';ls,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,15,Create a backdoored PNG,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,21,undocumented class,not
+PayloadsAllTheThings/Upload Insecure Files/Picture Metadata/Build_image_to_LFI.py,25,copy metadata into new object,not
+PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/gen_xbin_avi.py,1,!/usr/bin/env python3,not
+PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/gen_xbin_avi.py,21,AES.new('\x00'*16).decrypt('\x00'*16),not
+PayloadsAllTheThings/Upload Insecure Files/CVE Ffmpeg HLS/gen_avi_bypass.py,25,"TXT_LIST = ['/usr/share/doc/gnupg/Upgrading_From_PGP.txt', '/usr/share/doc/mount/mount.txt', '/etc/pki/nssdb/pkcs11.txt', '/usr/share/gnupg/help.txt']",not
+PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,1,"Generating ""evil"" zip file",not
+PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,2,Based on the work of Ajin Abraham,not
+PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,3,Vuln website : https://github.com/ajinabraham/bad_python_extract,not
+PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,4,More info : https://ajinabraham.com/blog/exploiting-insecure-file-extraction-in-python-for-code-execution,not
+PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,6,Warning 1: need a restart from the server OR debug=True,not
+PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,7,Warning 2: you won't get the output of the command (blind rce),not
+PayloadsAllTheThings/Upload Insecure Files/Configuration Python __init__.py/python-generate-init.py,16,"""/home/swissky/Bureau/""+",not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,1,FROM https://github.com/osnr/horrifying-pdf-experiments,not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,27,Default appearance stream: can be arbitrary PDF XObject or,not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,28,something. Very general.,not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,42,It took me a while to figure this out. See PDF spec:,not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,43,https://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_reference_1-7.pdf#page=641,not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,45,"Basically, the appearance stream we just specified doesn't",not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,46,follow the field rect if it gets changed in JS (at least not in,not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,47,Chrome).,not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,49,"But this simple MK field here, with border/color",not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,50,"characteristics, _does_ follow those movements and resizes, so",not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,51,we can get moving colored rectangles this way.,not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,80,"You probably should just wrap each JS action with a try/catch,",not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,81,because Chrome does no error reporting or even logging otherwise;,not
+PayloadsAllTheThings/Upload Insecure Files/Extension PDF JS/poc.py,82,you just get a silent failure.,not
+PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,1,!/usr/bin/python,not
+PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,3,Quick and dirty demonstration of CVE-2014-0160 originally by Jared Stafford (jspenguin@jspenguin.org),not
+PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,4,The author disclaims copyright to this source code.,not
+PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,5,Modified by SensePost based on lots of other people's efforts (hard to work out credit via PasteBin),not
+PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,88,EOF?,not
+PayloadsAllTheThings/CVE Exploits/Heartbleed CVE-2014-0160.py,150,Look for server hello done message.,not
+PayloadsAllTheThings/CVE Exploits/JBoss CVE-2015-7501.py,1,! /usr/bin/env python2,not
+PayloadsAllTheThings/CVE Exploits/JBoss CVE-2015-7501.py,3,Jboss Java Deserialization RCE (CVE-2015-7501),not
+PayloadsAllTheThings/CVE Exploits/JBoss CVE-2015-7501.py,4,Made with <3 by @byt3bl33d3r,not
+PayloadsAllTheThings/CVE Exploits/JBoss CVE-2015-7501.py,13,"from binascii import hexlify, unhexlify",not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,1,!/usr/bin/env python3,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,2,coding=utf-8,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,3,*****************************************************,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,4,struts-pwn: Apache Struts CVE-2017-9805 Exploit,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,5,Author:,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,6,Mazin Ahmed <Mazin AT MazinAhmed DOT net>,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,7,This code is based on:,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,8,https://github.com/rapid7/metasploit-framework/pull/8924,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,9,https://techblog.mediaservice.net/2017/09/detection-payload-for-the-new-struts-rest-vulnerability-cve-2017-9805/,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,10,*****************************************************,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,17,Disable SSL warnings,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,130,"'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',",not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,257,"'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',",not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,266,if the response returned before the request timeout.,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,267,"then, the host should not be vulnerable.",not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2017-9805.py,268,"The request should return > 10 seconds, while the timeout is 8.",not
+PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,1,!/usr/bin/python,not
+PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,3,Successful Output:,not
+PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,4,# python shell_shocker.py <VulnURL>,not
+PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,5,[+] Attempting Shell_Shock - Make sure to type full path,not
+PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,6,~$ /bin/ls /,not
+PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,7,bin,not
+PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,8,boot,not
+PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,9,dev,not
+PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,10,etc,not
+PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,11,..,not
+PayloadsAllTheThings/CVE Exploits/Shellshock CVE-2014-6271.py,12,~$ /bin/cat /etc/passwd,not
+PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,1,!/usr/bin/env python2,not
+PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,3,Oracle WebLogic Server Java Object Deserialization RCE (CVE-2016-3510),not
+PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,4,Based on the PoC by FoxGlove Security (https://github.com/foxglovesec/JavaUnserializeExploits),not
+PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,5,Made with <3 by @byt3bl33d3r,not
+PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,54,Send headers,not
+PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2016-3510.py,68,adjust header for appropriate message length,not
+PayloadsAllTheThings/CVE Exploits/Tomcat CVE-2017-12617.py,1,!/usr/bin/python,not
+PayloadsAllTheThings/CVE Exploits/Tomcat CVE-2017-12617.py,2,From https://github.com/cyberheartmi9/CVE-2017-12617/blob/master/tomcat-cve-2017-12617.py,not
+PayloadsAllTheThings/CVE Exploits/Tomcat CVE-2017-12617.py,151,print bcolors.HEADER+ banner+bcolors.ENDC,not
+PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,1,! /usr/bin/env python2,not
+PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,3,Jenkins CLI RMI Java Deserialization RCE (CVE-2015-8103),not
+PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,4,Based on the PoC by FoxGlove Security (https://github.com/foxglovesec/JavaUnserializeExploits),not
+PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,5,Made with <3 by @byt3bl33d3r,not
+PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,61,Query Jenkins over HTTP to find what port the CLI listener is on,not
+PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,65,Open a socket to the CLI port,not
+PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2015-8103.py,71,Send headers,not
+PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2018-2894.py,1,!/usr/bin/env python,not
+PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2018-2894.py,2,coding:utf-8,not
+PayloadsAllTheThings/CVE Exploits/WebLogic CVE-2018-2894.py,3,Build By LandGrey,not
+PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2016-0792.py,1,! /usr/bin/env python2,not
+PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2016-0792.py,3,Jenkins Groovy XML RCE (CVE-2016-0792),not
+PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2016-0792.py,4,"Note: Although this is listed as a pre-auth RCE, during my testing it only worked if authentication was disabled in Jenkins",not
+PayloadsAllTheThings/CVE Exploits/Jenkins CVE-2016-0792.py,5,Made with <3 by @byt3bl33d3r,not
+PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,1,! /usr/bin/env python2,not
+PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,3,IBM WebSphere Java Object Deserialization RCE (CVE-2015-7450),not
+PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,4,Based on the nessus plugin websphere_java_serialize.nasl,not
+PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,5,Made with <3 by @byt3bl33d3r,not
+PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,57,"This was in the nessus plugin, but wasn't used anywhwere :/",not
+PayloadsAllTheThings/CVE Exploits/WebSphere CVE-2015-7450.py,58,"ser3 = ""rO0ABXVyABNbTGphdmEubGFuZy5PYmplY3Q7kM5YnxBzKWwCAAB4cAAAAAFzcgAkY29tLmlibS53ZWJzcGhlcmUubWFuYWdlbWVudC5TZXNzaW9uJ5mLeyYSGOUCAANKAAJpZFoADnNoYXJlV29ya3NwYWNlTAAIdXNlck5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAAAAVEDKkaUAXQAEVNjcmlwdDE1MTAzMmE0Njk0""",not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,1,Author: Paul Taylor / @bao7uo,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,3,https://github.com/bao7uo/dp_crypto/blob/master/dp_crypto.py,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,5,dp_crypto - CVE-2017-9248 exploit,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,6,Telerik.Web.UI.dll Cryptographic compromise,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,8,"Warning - no cert warnings,",not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,9,and verify = False in code below prevents verification,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2017-9248.py,64,^^ max is len(base64chars),not
+PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,7,NOTE,not
+PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,8,Enable Remote API with the following command,not
+PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,9,/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock,not
+PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,10,"This is an intended feature, remember to filter the port 2375..",not
+PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,16,Step 1 - Extract id and name from each container,not
+PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,29,Step 2 - Prepare command,not
+PayloadsAllTheThings/CVE Exploits/Docker API RCE.py,40,Step 3 - Execute command,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,1,!/usr/bin/env python3,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,2,coding=utf-8,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,3,*****************************************************,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,4,struts-pwn: Apache Struts CVE-2018-11776 Exploit,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,5,Author:,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,6,Mazin Ahmed <Mazin AT MazinAhmed DOT net>,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,7,This code uses a payload from:,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,8,https://github.com/jas502n/St2-057,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,9,*****************************************************,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,25,Disable SSL warnings,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,67,"'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',",not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,78,url: http://example.com/demo/struts2-showcase/index.action,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,87,Site: http://example.com,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,90,FilePath: /demo/struts2-showcase/index.action,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,95,Filename: index.action,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,101,File Dir: /demo/struts2-showcase/,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2018-11776.py,134,It will be renderred later with the payload.,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,1,!/usr/bin/python,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,70,"def reversepl(ip,port):",not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,71,"print ""perl""",not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,73,"def reversepy(ip,port):",not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,74,"print ""python""",not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,76,CVE-2013-2251 ---------------------------------------------------------------------------------,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,93,"print BOLD+""   * [SHELL REVERSA]""+ENDC",not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,94,"print OTRO+""     Struts@Shell:$ reverse 127.0.0.1 4444 (perl,python,bash)\n""+ENDC",not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,121,CVE-2017-5638 ---------------------------------------------------------------------------------,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,159,CVE-2018-11776 ---------------------------------------------------------------------------------,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,164,Filtramos la url solo dominio,not
+PayloadsAllTheThings/CVE Exploits/Apache Struts 2 CVE-2013-2251 CVE-2017-5638 CVE-2018-11776_.py,172,Filtramos la url solo path,not
+PayloadsAllTheThings/CVE Exploits/Citrix CVE-2019-19781.py,1,!/usr/bin/env python,not
+PayloadsAllTheThings/CVE Exploits/Citrix CVE-2019-19781.py,2,https://github.com/mpgn/CVE-2019-19781,not
+PayloadsAllTheThings/CVE Exploits/Citrix CVE-2019-19781.py,3,#,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,1,!/usr/bin/env python3,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,2,origin : https://github.com/noperator/CVE-2019-18935,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,3,INSTALL:,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,4,git clone https://github.com/noperator/CVE-2019-18935.git && cd CVE-2019-18935,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,5,python3 -m venv env,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,6,source env/bin/activate,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,7,pip3 install -r requirements.txt,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,9,Import encryption routines.,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,47,Build rauPostData.,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,52,"These values seem a bit arbitrary, but when they're all set to 0, the payload disappears shortly after being written to disk.",not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,77,Determines remote filename on disk.,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,80,Build multipart form data.,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,90,Send request.,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,99,Build rauPostData.,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,106,Build multipart form data.,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,108,Only need this now.,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,109,One extra input is required for the page to process the request.,not
+PayloadsAllTheThings/CVE Exploits/Telerik CVE-2019-18935.py,112,Send request.,not
+PayloadsAllTheThings/CVE Exploits/Jenkins Groovy Console.py,1,!/usr/bin/env python,not
+PayloadsAllTheThings/CVE Exploits/Jenkins Groovy Console.py,2,SRC: https://raw.githubusercontent.com/bl4de/security-tools/master/jgc.py,not
+PayloadsAllTheThings/CVE Exploits/Jenkins Groovy Console.py,3,DOC: https://medium.com/@_bl4de/remote-code-execution-with-groovy-console-in-jenkins-bd6ef55c285b,not
+PayloadsAllTheThings/File Inclusion/uploadlfi.py,18,<?php echo system('uptime');,not
+PayloadsAllTheThings/File Inclusion/phpinfolfi.py,1,!/usr/bin/python,not
+PayloadsAllTheThings/File Inclusion/phpinfolfi.py,2,https://www.insomniasec.com/downloads/publications/LFI%20With%20PHPInfo%20Assistance.pdf,not
+PayloadsAllTheThings/File Inclusion/phpinfolfi.py,31,modify this to suit the LFI script,not
+PayloadsAllTheThings/File Inclusion/phpinfolfi.py,107,detect the final chunk,not
+PayloadsAllTheThings/File Inclusion/phpinfolfi.py,116,padded up a bit,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,1,!/usr/bin/python,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,2,coding=utf-8,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,3,https://raw.githubusercontent.com/cujanovic/SSRF-Testing/master/ip.py,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,168,Case 1 - Dotted hexadecimal,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,201,===========================================================================,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,215,===========================================================================,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,217,Case 2 - Dotless hexadecimal,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,263,Case 3 - Dotless decimal,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,309,Case 4 - Dotted decimal with overflow(256),not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,355,Case 5 - Dotted octal,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,401,Case 6 - Dotted octal with padding,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,447,Case 7 - IPv6 compact version,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,493,Case 8 - IPv6 mapped version,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,539,Case 9 - Dotted hexadecimal + Dotted octal + Dotless decimal,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,585,Case 10 - Dotted hexadecimal + Dotless decimal,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,631,Case 11 - Dotted octal with padding + Dotless decimal,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,677,Case 12 - Dotted octal with padding + Dotted hexadecimal + Dotless decimal,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,723,Case 13 - Abusing IDNA Standard,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,732,Case 14 - Abusing 。and ｡,not
+PayloadsAllTheThings/Server Side Request Forgery/Files/ip.py,744,Case 15 Abusing Enclosed Alphanumerics,not
+PayloadsAllTheThings/Web Sockets/Files/ws-harness.py,1,!/usr/bin/python,not
+PayloadsAllTheThings/Web Sockets/Files/ws-harness.py,32,Handler for the GET requests,not
+PayloadsAllTheThings/Web Sockets/Files/ws-harness.py,53,Create a web server and define the handler to manage the,not
+PayloadsAllTheThings/Web Sockets/Files/ws-harness.py,54,incoming request,not
+PayloadsAllTheThings/Web Sockets/Files/ws-harness.py,58,Wait forever for incoming http requests,not

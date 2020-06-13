@@ -1,304 +1,334 @@
 file path,line #,comment,satd
-examples/snli/util.py,14,ignore existing directory,
-examples/snli/util.py,17,a different error happened,
-examples/snli/train.py,46,double the number of cells for bidirectional networks,
-examples/snli/train.py,75,"switch model to training mode, clear gradient accumulators",
-examples/snli/train.py,80,forward pass,
-examples/snli/train.py,83,calculate accuracy of predictions in the current batch,
-examples/snli/train.py,88,calculate loss of the network output with respect to training labels,
-examples/snli/train.py,91,backpropagate and update optimizer learning rate,
-examples/snli/train.py,94,checkpoint model periodically,
-examples/snli/train.py,103,evaluate performance on validation set periodically,
-examples/snli/train.py,106,switch model to evaluation mode,
-examples/snli/train.py,109,calculate accuracy on validation set,
-examples/snli/train.py,122,update best valiation set accuracy,
-examples/snli/train.py,125,found a model with better validation set accuracy,
-examples/snli/train.py,131,"save model, delete previous 'best_snapshot' files",
-examples/snli/train.py,139,print progress message,
-examples/regression/main.py,1,!/usr/bin/env python,
-examples/regression/main.py,41,Define model,
-examples/regression/main.py,45,Get data,
-examples/regression/main.py,48,Reset gradients,
-examples/regression/main.py,51,Forward pass,
-examples/regression/main.py,55,Backward pass,
-examples/regression/main.py,58,Apply gradients,
-examples/regression/main.py,62,Stop criterion,
-examples/imagenet/main.py,104,"Since we have ngpus_per_node processes per node, the total world_size",
-examples/imagenet/main.py,105,needs to be adjusted accordingly,
-examples/imagenet/main.py,107,Use torch.multiprocessing.spawn to launch distributed processes: the,
-examples/imagenet/main.py,108,main_worker process function,
-examples/imagenet/main.py,111,Simply call main_worker function,
-examples/imagenet/main.py,126,"For multiprocessing distributed training, rank needs to be the",
-examples/imagenet/main.py,127,global rank among all the processes,
-examples/imagenet/main.py,131,create model,
-examples/imagenet/main.py,140,"For multiprocessing distributed, DistributedDataParallel constructor",
-examples/imagenet/main.py,141,"should always set the single device scope, otherwise,",
-examples/imagenet/main.py,142,DistributedDataParallel will use all available devices.,
-examples/imagenet/main.py,146,When using a single GPU per process and per,
-examples/imagenet/main.py,147,"DistributedDataParallel, we need to divide the batch size",
-examples/imagenet/main.py,148,ourselves based on the total number of GPUs we have,
-examples/imagenet/main.py,154,DistributedDataParallel will divide and allocate batch_size to all,
-examples/imagenet/main.py,155,available GPUs if device_ids are not set,
-examples/imagenet/main.py,161,DataParallel will divide and allocate batch_size to all available GPUs,
-examples/imagenet/main.py,168,define loss function (criterion) and optimizer,
-examples/imagenet/main.py,175,optionally resume from a checkpoint,
-examples/imagenet/main.py,182,Map model to be loaded to specified single gpu.,
-examples/imagenet/main.py,188,best_acc1 may be from a checkpoint from a different GPU,
-examples/imagenet/main.py,199,Data loading code,
-examples/imagenet/main.py,242,train for one epoch,
-examples/imagenet/main.py,245,evaluate on validation set,
-examples/imagenet/main.py,248,remember best acc@1 and save checkpoint,
-examples/imagenet/main.py,274,switch to train mode,
-examples/imagenet/main.py,279,measure data loading time,
-examples/imagenet/main.py,286,compute output,
-examples/imagenet/main.py,290,measure accuracy and record loss,
-examples/imagenet/main.py,296,compute gradient and do SGD step,
-examples/imagenet/main.py,301,measure elapsed time,
-examples/imagenet/main.py,319,switch to evaluate mode,
-examples/imagenet/main.py,329,compute output,
-examples/imagenet/main.py,333,measure accuracy and record loss,
-examples/imagenet/main.py,339,measure elapsed time,
-examples/imagenet/main.py,346,TODO: this should also be done with the ProgressMeter,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,16,"--------- MNIST Network to train, from pytorch/examples -----",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,27,Put conv layers on the first cuda device,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,30,"Put rest of the network on the 2nd cuda device, if there is one",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,48,Move tensor to next device if necessary,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,60,--------- Helper Methods --------------------,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,62,"On the local node, call a method with first arg as the value held by the",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,63,RRef. Other args are passed in as arguments to the function called.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,64,Useful for calling instance methods.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,68,"Given an RRef, return the result of calling the passed in method on the value",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,69,held by the RRef. This call is done on the remote node that owns,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,70,the RRef. args and kwargs are passed into the method.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,71,"Example: If the value held by the RRef is of type Foo, then",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,72,"remote_method(Foo.bar, rref, arg1, arg2) is equivalent to calling",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,73,"<foo_instance>.bar(arg1, arg2) on the remote node and getting the result",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,74,back.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,82,--------- Parameter Server --------------------,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,94,"This output is forwarded over RPC, which as of 1.5.0 only accepts CPU tensors.",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,95,Tensors must be moved in and out of GPU memory due to this.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,99,Use dist autograd to retrieve gradients accumulated for this model.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,100,Primarily used for verification.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,103,"This output is forwarded over RPC, which as of 1.5.0 only accepts CPU tensors.",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,104,Tensors must be moved in and out of GPU memory due to this.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,111,Wrap local parameters in a RRef. Needed for building the,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,112,DistributedOptimizer which optimizes paramters remotely.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,124,Ensure that we get only one handle to the ParameterServer.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,127,construct it once,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,133,The parameter server just acts as a host for the model and responds to,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,134,"requests from trainers, hence it does not need to run a loop.",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,135,"rpc.shutdown() will wait for all workers to complete by default, which",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,136,in this case means that the parameter server will wait for all trainers,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,137,"to complete, and then exit.",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,145,--------- Trainers --------------------,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,147,nn.Module corresponding to the network trained by this trainer. The,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,148,forward() method simply invokes the network on the given parameter,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,149,server.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,170,"Runs the typical nueral network forward + backward + optimizer step, but",
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,171,in a distributed fashion.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,173,Build DistributedOptmizer.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,184,Ensure that dist autograd ran successfully and gradients were,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,185,returned.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,200,Use GPU to evaluate if possible,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,214,Main loop for trainers.,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,227,--------- Launcher --------------------,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,275,Get data to train on,
-examples/distributed/rpc/parameter_server/rpc_parameter_server.py,298,start training worker on this node,
-examples/distributed/rpc/rnn/main.py,35,setup distributed optimizer,
-examples/distributed/rpc/rnn/main.py,50,train for 10 iterations,
-examples/distributed/rpc/rnn/main.py,52,create distributed autograd context,
-examples/distributed/rpc/rnn/main.py,59,run distributed backward pass,
-examples/distributed/rpc/rnn/main.py,61,run distributed optimizer,
-examples/distributed/rpc/rnn/main.py,63,not necessary to zero grads as each iteration creates a different,
-examples/distributed/rpc/rnn/main.py,64,distributed autograd context which hosts different grads,
-examples/distributed/rpc/rnn/main.py,80,parameter server do nothing,
-examples/distributed/rpc/rnn/main.py,83,block until all rpcs finish,
-examples/distributed/rpc/rnn/rnn.py,76,setup embedding table remotely,
-examples/distributed/rpc/rnn/rnn.py,78,setup LSTM locally,
-examples/distributed/rpc/rnn/rnn.py,80,setup decoder remotely,
-examples/distributed/rpc/rnn/rnn.py,84,pass input to the remote embedding table and fetch emb tensor back,
-examples/distributed/rpc/rnn/rnn.py,87,pass output to the rremote decoder and get the decoded output back,
-examples/distributed/rpc/rnn/rnn.py,93,get RRefs of embedding table,
-examples/distributed/rpc/rnn/rnn.py,95,create RRefs for local parameters,
-examples/distributed/rpc/rnn/rnn.py,97,get RRefs of decoder,
-examples/distributed/rpc/rl/main.py,100,send the state to the agent to get an action,
-examples/distributed/rpc/rl/main.py,103,"apply the action to the environment, and get the reward",
-examples/distributed/rpc/rl/main.py,106,report the reward to the agent for training purpose,
-examples/distributed/rpc/rl/main.py,158,make async RPC to kick off an episode on all observers,
-examples/distributed/rpc/rl/main.py,167,wait until all obervers have finished this episode,
-examples/distributed/rpc/rl/main.py,180,joins probs and rewards from different observers into lists,
-examples/distributed/rpc/rl/main.py,186,use the minimum observer reward to calculate the running reward,
-examples/distributed/rpc/rl/main.py,190,clear saved probs and rewards,
-examples/distributed/rpc/rl/main.py,218,rank0 is the agent,
-examples/distributed/rpc/rl/main.py,235,other ranks are the observer,
-examples/distributed/rpc/rl/main.py,237,observers passively waiting for instructions from agents,
-examples/cpp/tools/download_mnist.py,45,Just a newline.,
-examples/cpp/transfer-learning/convert.py,7,Download and load the pre-trained model,
-examples/cpp/transfer-learning/convert.py,10,Set upgrading the gradients to False,
-examples/cpp/transfer-learning/convert.py,14,Save the model except the final FC Layer,
-examples/time_sequence_prediction/train.py,29,if we should predict the future,
-examples/time_sequence_prediction/train.py,39,set random seed to 0,
-examples/time_sequence_prediction/train.py,42,load data and make training set,
-examples/time_sequence_prediction/train.py,48,build the model,
-examples/time_sequence_prediction/train.py,52,use LBFGS as optimizer since we can load the whole data to train,
-examples/time_sequence_prediction/train.py,54,begin to train,
-examples/time_sequence_prediction/train.py,65,"begin to predict, no need to track gradient here",
-examples/time_sequence_prediction/train.py,72,draw the result,
-examples/reinforcement_learning/actor_critic.py,13,Cart Pole,
-examples/reinforcement_learning/actor_critic.py,43,actor's layer,
-examples/reinforcement_learning/actor_critic.py,46,critic's layer,
-examples/reinforcement_learning/actor_critic.py,49,action & reward buffer,
-examples/reinforcement_learning/actor_critic.py,59,actor: choses action to take from state s_t,
-examples/reinforcement_learning/actor_critic.py,60,by returning probability of each action,
-examples/reinforcement_learning/actor_critic.py,63,critic: evaluates being in the state s_t,
-examples/reinforcement_learning/actor_critic.py,66,return values for both actor and critic as a tuple of 2 values:,
-examples/reinforcement_learning/actor_critic.py,67,1. a list with the probability of each action over the action space,
-examples/reinforcement_learning/actor_critic.py,68,2. the value from state s_t,
-examples/reinforcement_learning/actor_critic.py,81,create a categorical distribution over the list of probabilities of actions,
-examples/reinforcement_learning/actor_critic.py,84,and sample an action using the distribution,
-examples/reinforcement_learning/actor_critic.py,87,save to action buffer,
-examples/reinforcement_learning/actor_critic.py,90,the action to take (left or right),
-examples/reinforcement_learning/actor_critic.py,100,list to save actor (policy) loss,
-examples/reinforcement_learning/actor_critic.py,101,list to save critic (value) loss,
-examples/reinforcement_learning/actor_critic.py,102,list to save the true values,
-examples/reinforcement_learning/actor_critic.py,104,calculate the true value using rewards returned from the environment,
-examples/reinforcement_learning/actor_critic.py,106,calculate the discounted value,
-examples/reinforcement_learning/actor_critic.py,116,calculate actor (policy) loss,
-examples/reinforcement_learning/actor_critic.py,119,calculate critic (value) loss using L1 smooth loss,
-examples/reinforcement_learning/actor_critic.py,122,reset gradients,
-examples/reinforcement_learning/actor_critic.py,125,sum up all the values of policy_losses and value_losses,
-examples/reinforcement_learning/actor_critic.py,128,perform backprop,
-examples/reinforcement_learning/actor_critic.py,132,reset rewards and action buffer,
-examples/reinforcement_learning/actor_critic.py,140,run inifinitely many episodes,
-examples/reinforcement_learning/actor_critic.py,143,reset environment and episode reward,
-examples/reinforcement_learning/actor_critic.py,147,"for each episode, only run 9999 steps so that we don't",
-examples/reinforcement_learning/actor_critic.py,148,infinite loop while learning,
-examples/reinforcement_learning/actor_critic.py,151,select action from policy,
-examples/reinforcement_learning/actor_critic.py,154,take the action,
-examples/reinforcement_learning/actor_critic.py,165,update cumulative reward,
-examples/reinforcement_learning/actor_critic.py,168,perform backprop,
-examples/reinforcement_learning/actor_critic.py,171,log results,
-examples/reinforcement_learning/actor_critic.py,176,"check if we have ""solved"" the cart pole problem",
-examples/reinforcement_learning/reinforce.py,85,Don't infinite loop while learning,
-examples/mnist/main.py,60,sum up batch loss,
-examples/mnist/main.py,61,get the index of the max log-probability,
-examples/mnist/main.py,72,Training settings,
-examples/fast_neural_style/download_saved_models.py,4,PyTorch 1.1 moves _download_url_to_file,
-examples/fast_neural_style/download_saved_models.py,5,from torch.utils.model_zoo to torch.hub,
-examples/fast_neural_style/download_saved_models.py,6,PyTorch 1.0 exists another _download_url_to_file,
-examples/fast_neural_style/download_saved_models.py,7,2 argument,
-examples/fast_neural_style/download_saved_models.py,8,"TODO: If you remove support PyTorch 1.0 or older,",
-examples/fast_neural_style/download_saved_models.py,9,You should remove torch.utils.model_zoo,
-examples/fast_neural_style/download_saved_models.py,10,Ref. PyTorch #18758,
-examples/fast_neural_style/download_saved_models.py,11,https://github.com/pytorch/pytorch/pull/18758/commits,
-examples/fast_neural_style/neural_style/neural_style.py,112,save model,
-examples/fast_neural_style/neural_style/neural_style.py,139,remove saved deprecated running_* keys in InstanceNorm from the checkpoint,
-examples/fast_neural_style/neural_style/utils.py,30,normalize using imagenet mean and std,
-examples/fast_neural_style/neural_style/transformer_net.py,7,Initial convolution layers,
-examples/fast_neural_style/neural_style/transformer_net.py,14,Residual layers,
-examples/fast_neural_style/neural_style/transformer_net.py,20,Upsampling Layers,
-examples/fast_neural_style/neural_style/transformer_net.py,26,Non-linearities,
-examples/dcgan/main.py,59,folder dataset,
-examples/dcgan/main.py,112,custom weights initialization called on netG and netD,
-examples/dcgan/main.py,127,"input is Z, going into a convolution",
-examples/dcgan/main.py,131,state size. (ngf*8) x 4 x 4,
-examples/dcgan/main.py,135,state size. (ngf*4) x 8 x 8,
-examples/dcgan/main.py,139,state size. (ngf*2) x 16 x 16,
-examples/dcgan/main.py,143,state size. (ngf) x 32 x 32,
-examples/dcgan/main.py,146,state size. (nc) x 64 x 64,
-examples/dcgan/main.py,169,input is (nc) x 64 x 64,
-examples/dcgan/main.py,172,state size. (ndf) x 32 x 32,
-examples/dcgan/main.py,176,state size. (ndf*2) x 16 x 16,
-examples/dcgan/main.py,180,state size. (ndf*4) x 8 x 8,
-examples/dcgan/main.py,184,state size. (ndf*8) x 4 x 4,
-examples/dcgan/main.py,210,setup optimizer,
-examples/dcgan/main.py,216,,
-examples/dcgan/main.py,217,(1) Update D network: maximize log(D(x)) + log(1 - D(G(z))),
-examples/dcgan/main.py,218,,
-examples/dcgan/main.py,219,train with real,
-examples/dcgan/main.py,230,train with fake,
-examples/dcgan/main.py,241,,
-examples/dcgan/main.py,242,(2) Update G network: maximize log(D(G(z))),
-examples/dcgan/main.py,243,,
-examples/dcgan/main.py,245,fake labels are real for generator cost,
-examples/dcgan/main.py,264,do checkpointing,
-examples/super_resolution/main.py,12,Training settings,
-examples/super_resolution/super_resolve.py,9,Training settings,
-examples/vae/main.py,72,Reconstruction + KL divergence losses summed over all elements and batch,
-examples/vae/main.py,76,see Appendix B from VAE paper:,
-examples/vae/main.py,77,"Kingma and Welling. Auto-Encoding Variational Bayes. ICLR, 2014",
-examples/vae/main.py,78,https://arxiv.org/abs/1312.6114,
-examples/vae/main.py,79,0.5 * sum(1 + log(sigma^2) - mu^2 - sigma^2),
-examples/word_language_model/model.py,25,Optionally tie weights as in:,
-examples/word_language_model/model.py,26,"""Using the Output Embedding to Improve Language Models"" (Press & Wolf 2016)",
-examples/word_language_model/model.py,27,https://arxiv.org/abs/1608.05859,
-examples/word_language_model/model.py,28,and,
-examples/word_language_model/model.py,29,"""Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling"" (Inan et al. 2016)",
-examples/word_language_model/model.py,30,https://arxiv.org/abs/1611.01462,
-examples/word_language_model/model.py,64,Temporarily leave PositionalEncoding module here. Will be moved somewhere else.,
-examples/word_language_model/main.py,1,coding: utf-8,
-examples/word_language_model/main.py,54,Set the random seed manually for reproducibility.,
-examples/word_language_model/main.py,62,,
-examples/word_language_model/main.py,63,Load data,
-examples/word_language_model/main.py,64,,
-examples/word_language_model/main.py,68,"Starting from sequential data, batchify arranges the dataset into columns.",
-examples/word_language_model/main.py,69,"For instance, with the alphabet as the sequence and batch size 4, we'd get",
-examples/word_language_model/main.py,70,┌ a g m s ┐,
-examples/word_language_model/main.py,71,│ b h n t │,
-examples/word_language_model/main.py,72,│ c i o u │,
-examples/word_language_model/main.py,73,│ d j p v │,
-examples/word_language_model/main.py,74,│ e k q w │,
-examples/word_language_model/main.py,75,└ f l r x ┘.,
-examples/word_language_model/main.py,76,"These columns are treated as independent by the model, which means that the",
-examples/word_language_model/main.py,77,"dependence of e. g. 'g' on 'f' can not be learned, but allows more efficient",
-examples/word_language_model/main.py,78,batch processing.,
-examples/word_language_model/main.py,81,Work out how cleanly we can divide the dataset into bsz parts.,
-examples/word_language_model/main.py,83,Trim off any extra elements that wouldn't cleanly fit (remainders).,
-examples/word_language_model/main.py,85,Evenly divide the data across the bsz batches.,
-examples/word_language_model/main.py,94,,
-examples/word_language_model/main.py,95,Build the model,
-examples/word_language_model/main.py,96,,
-examples/word_language_model/main.py,106,,
-examples/word_language_model/main.py,107,Training code,
-examples/word_language_model/main.py,108,,
-examples/word_language_model/main.py,119,get_batch subdivides the source data into chunks of length args.bptt.,
-examples/word_language_model/main.py,120,"If source is equal to the example output of the batchify function, with",
-examples/word_language_model/main.py,121,"a bptt-limit of 2, we'd get the following two Variables for i = 0:",
-examples/word_language_model/main.py,122,┌ a g m s ┐ ┌ b h n t ┐,
-examples/word_language_model/main.py,123,└ b h n t ┘ └ c i o u ┘,
-examples/word_language_model/main.py,124,"Note that despite the name of the function, the subdivison of data is not",
-examples/word_language_model/main.py,125,"done along the batch dimension (i.e. dimension 1), since that was handled",
-examples/word_language_model/main.py,126,"by the batchify function. The chunks are along dimension 0, corresponding",
-examples/word_language_model/main.py,127,to the seq_len dimension in the LSTM.,
-examples/word_language_model/main.py,137,Turn on evaluation mode which disables dropout.,
-examples/word_language_model/main.py,157,Turn on training mode which enables dropout.,
-examples/word_language_model/main.py,166,"Starting each batch, we detach the hidden state from how it was previously produced.",
-examples/word_language_model/main.py,167,"If we didn't, the model would try backpropagating all the way to start of the dataset.",
-examples/word_language_model/main.py,178,`clip_grad_norm` helps prevent the exploding gradient problem in RNNs / LSTMs.,
-examples/word_language_model/main.py,205,Loop over epochs.,
-examples/word_language_model/main.py,209,At any point you can hit Ctrl + C to break out of training early.,
-examples/word_language_model/main.py,220,Save the model if the validation loss is the best we've seen so far.,
-examples/word_language_model/main.py,226,Anneal the learning rate if no improvement has been seen in the validation dataset.,
-examples/word_language_model/main.py,232,Load the best saved model.,
-examples/word_language_model/main.py,235,after load the rnn params are not a continuous chunk of memory,
-examples/word_language_model/main.py,236,"this makes them a continuous chunk, and will speed up forward pass",
-examples/word_language_model/main.py,237,"Currently, only rnn model supports flatten_parameters function.",
-examples/word_language_model/main.py,241,Run on test data.,
-examples/word_language_model/main.py,249,Export the model in ONNX format.,
-examples/word_language_model/generate.py,1,,
-examples/word_language_model/generate.py,2,Language Modeling on Wikitext-2,
-examples/word_language_model/generate.py,3,,
-examples/word_language_model/generate.py,4,This file generates new sentences sampled from the language model,
-examples/word_language_model/generate.py,5,,
-examples/word_language_model/generate.py,6,,
-examples/word_language_model/generate.py,16,Model parameters.,
-examples/word_language_model/generate.py,35,Set the random seed manually for reproducibility.,
-examples/word_language_model/generate.py,59,no tracking history,
-examples/word_language_model/data.py,30,Add words to the dictionary,
-examples/word_language_model/data.py,37,Tokenize file content,
-examples/mnist_hogwild/main.py,10,Training settings,
-examples/mnist_hogwild/main.py,60,"gradients are allocated lazily, so they are not shared here",
-examples/mnist_hogwild/main.py,65,We first train the model across `num_processes` processes,
-examples/mnist_hogwild/main.py,71,"Once training is complete, we can test the model",
-examples/mnist_hogwild/train.py,61,sum up batch loss,
-examples/mnist_hogwild/train.py,62,get the index of the max log-probability,
+examples/snli/util.py,14,ignore existing directory,not
+examples/snli/util.py,17,a different error happened,not
+examples/snli/train.py,46,double the number of cells for bidirectional networks,not
+examples/snli/train.py,75,"switch model to training mode, clear gradient accumulators",not
+examples/snli/train.py,80,forward pass,not
+examples/snli/train.py,83,calculate accuracy of predictions in the current batch,not
+examples/snli/train.py,88,calculate loss of the network output with respect to training labels,not
+examples/snli/train.py,91,backpropagate and update optimizer learning rate,not
+examples/snli/train.py,94,checkpoint model periodically,not
+examples/snli/train.py,103,evaluate performance on validation set periodically,not
+examples/snli/train.py,106,switch model to evaluation mode,not
+examples/snli/train.py,109,calculate accuracy on validation set,not
+examples/snli/train.py,122,update best valiation set accuracy,not
+examples/snli/train.py,125,found a model with better validation set accuracy,not
+examples/snli/train.py,131,"save model, delete previous 'best_snapshot' files",not
+examples/snli/train.py,139,print progress message,not
+examples/regression/main.py,1,!/usr/bin/env python,not
+examples/regression/main.py,41,Define model,not
+examples/regression/main.py,45,Get data,not
+examples/regression/main.py,48,Reset gradients,not
+examples/regression/main.py,51,Forward pass,not
+examples/regression/main.py,55,Backward pass,not
+examples/regression/main.py,58,Apply gradients,not
+examples/regression/main.py,62,Stop criterion,not
+examples/imagenet/main.py,104,"Since we have ngpus_per_node processes per node, the total world_size",not
+examples/imagenet/main.py,105,needs to be adjusted accordingly,not
+examples/imagenet/main.py,107,Use torch.multiprocessing.spawn to launch distributed processes: the,not
+examples/imagenet/main.py,108,main_worker process function,not
+examples/imagenet/main.py,111,Simply call main_worker function,not
+examples/imagenet/main.py,126,"For multiprocessing distributed training, rank needs to be the",not
+examples/imagenet/main.py,127,global rank among all the processes,not
+examples/imagenet/main.py,131,create model,not
+examples/imagenet/main.py,140,"For multiprocessing distributed, DistributedDataParallel constructor",not
+examples/imagenet/main.py,141,"should always set the single device scope, otherwise,",not
+examples/imagenet/main.py,142,DistributedDataParallel will use all available devices.,not
+examples/imagenet/main.py,146,When using a single GPU per process and per,not
+examples/imagenet/main.py,147,"DistributedDataParallel, we need to divide the batch size",not
+examples/imagenet/main.py,148,ourselves based on the total number of GPUs we have,not
+examples/imagenet/main.py,154,DistributedDataParallel will divide and allocate batch_size to all,not
+examples/imagenet/main.py,155,available GPUs if device_ids are not set,not
+examples/imagenet/main.py,161,DataParallel will divide and allocate batch_size to all available GPUs,not
+examples/imagenet/main.py,168,define loss function (criterion) and optimizer,not
+examples/imagenet/main.py,175,optionally resume from a checkpoint,not
+examples/imagenet/main.py,182,Map model to be loaded to specified single gpu.,not
+examples/imagenet/main.py,188,best_acc1 may be from a checkpoint from a different GPU,not
+examples/imagenet/main.py,199,Data loading code,not
+examples/imagenet/main.py,242,train for one epoch,not
+examples/imagenet/main.py,245,evaluate on validation set,not
+examples/imagenet/main.py,248,remember best acc@1 and save checkpoint,not
+examples/imagenet/main.py,274,switch to train mode,not
+examples/imagenet/main.py,279,measure data loading time,not
+examples/imagenet/main.py,286,compute output,not
+examples/imagenet/main.py,290,measure accuracy and record loss,not
+examples/imagenet/main.py,296,compute gradient and do SGD step,not
+examples/imagenet/main.py,301,measure elapsed time,not
+examples/imagenet/main.py,319,switch to evaluate mode,not
+examples/imagenet/main.py,329,compute output,not
+examples/imagenet/main.py,333,measure accuracy and record loss,not
+examples/imagenet/main.py,339,measure elapsed time,not
+examples/imagenet/main.py,346,TODO: this should also be done with the ProgressMeter,SATD
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,16,"--------- MNIST Network to train, from pytorch/examples -----",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,27,Put conv layers on the first cuda device,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,30,"Put rest of the network on the 2nd cuda device, if there is one",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,48,Move tensor to next device if necessary,SATD
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,60,--------- Helper Methods --------------------,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,62,"On the local node, call a method with first arg as the value held by the",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,63,RRef. Other args are passed in as arguments to the function called.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,64,Useful for calling instance methods.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,68,"Given an RRef, return the result of calling the passed in method on the value",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,69,held by the RRef. This call is done on the remote node that owns,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,70,the RRef. args and kwargs are passed into the method.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,71,"Example: If the value held by the RRef is of type Foo, then",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,72,"remote_method(Foo.bar, rref, arg1, arg2) is equivalent to calling",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,73,"<foo_instance>.bar(arg1, arg2) on the remote node and getting the result",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,74,back.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,82,--------- Parameter Server --------------------,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,94,"This output is forwarded over RPC, which as of 1.5.0 only accepts CPU tensors.",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,95,Tensors must be moved in and out of GPU memory due to this.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,99,Use dist autograd to retrieve gradients accumulated for this model.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,100,Primarily used for verification.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,103,"This output is forwarded over RPC, which as of 1.5.0 only accepts CPU tensors.",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,104,Tensors must be moved in and out of GPU memory due to this.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,111,Wrap local parameters in a RRef. Needed for building the,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,112,DistributedOptimizer which optimizes paramters remotely.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,124,Ensure that we get only one handle to the ParameterServer.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,127,construct it once,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,133,The parameter server just acts as a host for the model and responds to,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,134,"requests from trainers, hence it does not need to run a loop.",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,135,"rpc.shutdown() will wait for all workers to complete by default, which",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,136,in this case means that the parameter server will wait for all trainers,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,137,"to complete, and then exit.",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,145,--------- Trainers --------------------,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,147,nn.Module corresponding to the network trained by this trainer. The,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,148,forward() method simply invokes the network on the given parameter,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,149,server.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,170,"Runs the typical nueral network forward + backward + optimizer step, but",not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,171,in a distributed fashion.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,173,Build DistributedOptmizer.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,184,Ensure that dist autograd ran successfully and gradients were,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,185,returned.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,200,Use GPU to evaluate if possible,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,214,Main loop for trainers.,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,227,--------- Launcher --------------------,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,275,Get data to train on,not
+examples/distributed/rpc/parameter_server/rpc_parameter_server.py,298,start training worker on this node,not
+examples/distributed/rpc/rnn/main.py,35,setup distributed optimizer,not
+examples/distributed/rpc/rnn/main.py,50,train for 10 iterations,not
+examples/distributed/rpc/rnn/main.py,52,create distributed autograd context,not
+examples/distributed/rpc/rnn/main.py,59,run distributed backward pass,not
+examples/distributed/rpc/rnn/main.py,61,run distributed optimizer,not
+examples/distributed/rpc/rnn/main.py,63,not necessary to zero grads as each iteration creates a different,not
+examples/distributed/rpc/rnn/main.py,64,distributed autograd context which hosts different grads,not
+examples/distributed/rpc/rnn/main.py,80,parameter server do nothing,not
+examples/distributed/rpc/rnn/main.py,83,block until all rpcs finish,not
+examples/distributed/rpc/rnn/rnn.py,76,setup embedding table remotely,not
+examples/distributed/rpc/rnn/rnn.py,78,setup LSTM locally,not
+examples/distributed/rpc/rnn/rnn.py,80,setup decoder remotely,not
+examples/distributed/rpc/rnn/rnn.py,84,pass input to the remote embedding table and fetch emb tensor back,not
+examples/distributed/rpc/rnn/rnn.py,87,pass output to the rremote decoder and get the decoded output back,not
+examples/distributed/rpc/rnn/rnn.py,93,get RRefs of embedding table,not
+examples/distributed/rpc/rnn/rnn.py,95,create RRefs for local parameters,not
+examples/distributed/rpc/rnn/rnn.py,97,get RRefs of decoder,not
+examples/distributed/rpc/rl/main.py,100,send the state to the agent to get an action,not
+examples/distributed/rpc/rl/main.py,103,"apply the action to the environment, and get the reward",not
+examples/distributed/rpc/rl/main.py,106,report the reward to the agent for training purpose,not
+examples/distributed/rpc/rl/main.py,158,make async RPC to kick off an episode on all observers,not
+examples/distributed/rpc/rl/main.py,167,wait until all obervers have finished this episode,not
+examples/distributed/rpc/rl/main.py,180,joins probs and rewards from different observers into lists,not
+examples/distributed/rpc/rl/main.py,186,use the minimum observer reward to calculate the running reward,not
+examples/distributed/rpc/rl/main.py,190,clear saved probs and rewards,not
+examples/distributed/rpc/rl/main.py,218,rank0 is the agent,not
+examples/distributed/rpc/rl/main.py,235,other ranks are the observer,not
+examples/distributed/rpc/rl/main.py,237,observers passively waiting for instructions from agents,not
+examples/distributed/rpc/pipeline/main.py,18,,not
+examples/distributed/rpc/pipeline/main.py,19,helper functions,not
+examples/distributed/rpc/pipeline/main.py,20,,not
+examples/distributed/rpc/pipeline/main.py,67,,not
+examples/distributed/rpc/pipeline/main.py,68,Define Model Parallel ResNet50,not
+examples/distributed/rpc/pipeline/main.py,69,,not
+examples/distributed/rpc/pipeline/main.py,180,Put the first part of the ResNet50 on workers[0],not
+examples/distributed/rpc/pipeline/main.py,188,Put the second part of the ResNet50 on workers[1],not
+examples/distributed/rpc/pipeline/main.py,197,"Split the input batch xs into micro-batches, and collect async RPC",not
+examples/distributed/rpc/pipeline/main.py,198,futures into a list,not
+examples/distributed/rpc/pipeline/main.py,206,wait for all RPC to finish,not
+examples/distributed/rpc/pipeline/main.py,208,cat all tensors into one tensor.,not
+examples/distributed/rpc/pipeline/main.py,219,,not
+examples/distributed/rpc/pipeline/main.py,220,Run RPC Processes,not
+examples/distributed/rpc/pipeline/main.py,221,,not
+examples/distributed/rpc/pipeline/main.py,230,put the two model parts on worker1 and worker2 respectively,not
+examples/distributed/rpc/pipeline/main.py,245,generate random inputs and labels,not
+examples/distributed/rpc/pipeline/main.py,278,block until all rpcs finish,not
+examples/distributed/ddp/main.py,16,initialize the process group,not
+examples/distributed/ddp/main.py,39,create model and move it to GPU with id rank,not
+examples/distributed/ddp/main.py,74,All processes should see same parameters as they all start from same,not
+examples/distributed/ddp/main.py,75,random parameters and gradients are synchronized in backward passes.,not
+examples/distributed/ddp/main.py,76,"Therefore, saving it in one process is sufficient.",not
+examples/distributed/ddp/main.py,79,Use a barrier() to make sure that process 1 loads the model after process,not
+examples/distributed/ddp/main.py,80,0 saves it.,not
+examples/distributed/ddp/main.py,82,configure map_location properly,not
+examples/distributed/ddp/main.py,94,Use a barrier() to make sure that all processes have finished reading the,not
+examples/distributed/ddp/main.py,95,checkpoint,not
+examples/distributed/ddp/main.py,124,setup mp_model and devices for this process,not
+examples/distributed/ddp/main.py,134,outputs will be on dev1,not
+examples/cpp/tools/download_mnist.py,45,Just a newline.,not
+examples/cpp/transfer-learning/convert.py,7,Download and load the pre-trained model,not
+examples/cpp/transfer-learning/convert.py,10,Set upgrading the gradients to False,not
+examples/cpp/transfer-learning/convert.py,14,Save the model except the final FC Layer,not
+examples/time_sequence_prediction/train.py,29,if we should predict the future,not
+examples/time_sequence_prediction/train.py,39,set random seed to 0,not
+examples/time_sequence_prediction/train.py,42,load data and make training set,not
+examples/time_sequence_prediction/train.py,48,build the model,not
+examples/time_sequence_prediction/train.py,52,use LBFGS as optimizer since we can load the whole data to train,not
+examples/time_sequence_prediction/train.py,54,begin to train,not
+examples/time_sequence_prediction/train.py,65,"begin to predict, no need to track gradient here",not
+examples/time_sequence_prediction/train.py,72,draw the result,not
+examples/reinforcement_learning/actor_critic.py,13,Cart Pole,not
+examples/reinforcement_learning/actor_critic.py,43,actor's layer,not
+examples/reinforcement_learning/actor_critic.py,46,critic's layer,not
+examples/reinforcement_learning/actor_critic.py,49,action & reward buffer,not
+examples/reinforcement_learning/actor_critic.py,59,actor: choses action to take from state s_t,not
+examples/reinforcement_learning/actor_critic.py,60,by returning probability of each action,not
+examples/reinforcement_learning/actor_critic.py,63,critic: evaluates being in the state s_t,not
+examples/reinforcement_learning/actor_critic.py,66,return values for both actor and critic as a tuple of 2 values:,not
+examples/reinforcement_learning/actor_critic.py,67,1. a list with the probability of each action over the action space,not
+examples/reinforcement_learning/actor_critic.py,68,2. the value from state s_t,not
+examples/reinforcement_learning/actor_critic.py,81,create a categorical distribution over the list of probabilities of actions,not
+examples/reinforcement_learning/actor_critic.py,84,and sample an action using the distribution,not
+examples/reinforcement_learning/actor_critic.py,87,save to action buffer,not
+examples/reinforcement_learning/actor_critic.py,90,the action to take (left or right),not
+examples/reinforcement_learning/actor_critic.py,100,list to save actor (policy) loss,not
+examples/reinforcement_learning/actor_critic.py,101,list to save critic (value) loss,not
+examples/reinforcement_learning/actor_critic.py,102,list to save the true values,not
+examples/reinforcement_learning/actor_critic.py,104,calculate the true value using rewards returned from the environment,not
+examples/reinforcement_learning/actor_critic.py,106,calculate the discounted value,not
+examples/reinforcement_learning/actor_critic.py,116,calculate actor (policy) loss,not
+examples/reinforcement_learning/actor_critic.py,119,calculate critic (value) loss using L1 smooth loss,not
+examples/reinforcement_learning/actor_critic.py,122,reset gradients,not
+examples/reinforcement_learning/actor_critic.py,125,sum up all the values of policy_losses and value_losses,not
+examples/reinforcement_learning/actor_critic.py,128,perform backprop,not
+examples/reinforcement_learning/actor_critic.py,132,reset rewards and action buffer,not
+examples/reinforcement_learning/actor_critic.py,140,run inifinitely many episodes,not
+examples/reinforcement_learning/actor_critic.py,143,reset environment and episode reward,not
+examples/reinforcement_learning/actor_critic.py,147,"for each episode, only run 9999 steps so that we don't",not
+examples/reinforcement_learning/actor_critic.py,148,infinite loop while learning,not
+examples/reinforcement_learning/actor_critic.py,151,select action from policy,not
+examples/reinforcement_learning/actor_critic.py,154,take the action,not
+examples/reinforcement_learning/actor_critic.py,165,update cumulative reward,not
+examples/reinforcement_learning/actor_critic.py,168,perform backprop,not
+examples/reinforcement_learning/actor_critic.py,171,log results,not
+examples/reinforcement_learning/actor_critic.py,176,"check if we have ""solved"" the cart pole problem",not
+examples/reinforcement_learning/reinforce.py,85,Don't infinite loop while learning,not
+examples/mnist/main.py,60,sum up batch loss,not
+examples/mnist/main.py,61,get the index of the max log-probability,not
+examples/mnist/main.py,72,Training settings,not
+examples/fast_neural_style/download_saved_models.py,4,PyTorch 1.1 moves _download_url_to_file,not
+examples/fast_neural_style/download_saved_models.py,5,from torch.utils.model_zoo to torch.hub,not
+examples/fast_neural_style/download_saved_models.py,6,PyTorch 1.0 exists another _download_url_to_file,not
+examples/fast_neural_style/download_saved_models.py,7,2 argument,not
+examples/fast_neural_style/download_saved_models.py,8,"TODO: If you remove support PyTorch 1.0 or older,",SATD
+examples/fast_neural_style/download_saved_models.py,9,You should remove torch.utils.model_zoo,not
+examples/fast_neural_style/download_saved_models.py,10,Ref. PyTorch #18758,not
+examples/fast_neural_style/download_saved_models.py,11,https://github.com/pytorch/pytorch/pull/18758/commits,not
+examples/fast_neural_style/neural_style/neural_style.py,112,save model,not
+examples/fast_neural_style/neural_style/neural_style.py,139,remove saved deprecated running_* keys in InstanceNorm from the checkpoint,not
+examples/fast_neural_style/neural_style/utils.py,30,normalize using imagenet mean and std,not
+examples/fast_neural_style/neural_style/transformer_net.py,7,Initial convolution layers,not
+examples/fast_neural_style/neural_style/transformer_net.py,14,Residual layers,not
+examples/fast_neural_style/neural_style/transformer_net.py,20,Upsampling Layers,not
+examples/fast_neural_style/neural_style/transformer_net.py,26,Non-linearities,not
+examples/dcgan/main.py,59,folder dataset,not
+examples/dcgan/main.py,112,custom weights initialization called on netG and netD,not
+examples/dcgan/main.py,127,"input is Z, going into a convolution",not
+examples/dcgan/main.py,131,state size. (ngf*8) x 4 x 4,not
+examples/dcgan/main.py,135,state size. (ngf*4) x 8 x 8,not
+examples/dcgan/main.py,139,state size. (ngf*2) x 16 x 16,not
+examples/dcgan/main.py,143,state size. (ngf) x 32 x 32,not
+examples/dcgan/main.py,146,state size. (nc) x 64 x 64,not
+examples/dcgan/main.py,169,input is (nc) x 64 x 64,not
+examples/dcgan/main.py,172,state size. (ndf) x 32 x 32,not
+examples/dcgan/main.py,176,state size. (ndf*2) x 16 x 16,not
+examples/dcgan/main.py,180,state size. (ndf*4) x 8 x 8,not
+examples/dcgan/main.py,184,state size. (ndf*8) x 4 x 4,not
+examples/dcgan/main.py,210,setup optimizer,not
+examples/dcgan/main.py,216,,not
+examples/dcgan/main.py,217,(1) Update D network: maximize log(D(x)) + log(1 - D(G(z))),not
+examples/dcgan/main.py,218,,not
+examples/dcgan/main.py,219,train with real,not
+examples/dcgan/main.py,230,train with fake,not
+examples/dcgan/main.py,241,,not
+examples/dcgan/main.py,242,(2) Update G network: maximize log(D(G(z))),not
+examples/dcgan/main.py,243,,not
+examples/dcgan/main.py,245,fake labels are real for generator cost,not
+examples/dcgan/main.py,264,do checkpointing,not
+examples/super_resolution/main.py,12,Training settings,not
+examples/super_resolution/super_resolve.py,9,Training settings,not
+examples/vae/main.py,72,Reconstruction + KL divergence losses summed over all elements and batch,not
+examples/vae/main.py,76,see Appendix B from VAE paper:,not
+examples/vae/main.py,77,"Kingma and Welling. Auto-Encoding Variational Bayes. ICLR, 2014",not
+examples/vae/main.py,78,https://arxiv.org/abs/1312.6114,not
+examples/vae/main.py,79,0.5 * sum(1 + log(sigma^2) - mu^2 - sigma^2),not
+examples/word_language_model/model.py,25,Optionally tie weights as in:,not
+examples/word_language_model/model.py,26,"""Using the Output Embedding to Improve Language Models"" (Press & Wolf 2016)",not
+examples/word_language_model/model.py,27,https://arxiv.org/abs/1608.05859,not
+examples/word_language_model/model.py,28,and,not
+examples/word_language_model/model.py,29,"""Tying Word Vectors and Word Classifiers: A Loss Framework for Language Modeling"" (Inan et al. 2016)",not
+examples/word_language_model/model.py,30,https://arxiv.org/abs/1611.01462,not
+examples/word_language_model/model.py,64,Temporarily leave PositionalEncoding module here. Will be moved somewhere else.,not
+examples/word_language_model/main.py,1,coding: utf-8,not
+examples/word_language_model/main.py,54,Set the random seed manually for reproducibility.,not
+examples/word_language_model/main.py,62,,not
+examples/word_language_model/main.py,63,Load data,not
+examples/word_language_model/main.py,64,,not
+examples/word_language_model/main.py,68,"Starting from sequential data, batchify arranges the dataset into columns.",not
+examples/word_language_model/main.py,69,"For instance, with the alphabet as the sequence and batch size 4, we'd get",not
+examples/word_language_model/main.py,70,┌ a g m s ┐,not
+examples/word_language_model/main.py,71,│ b h n t │,not
+examples/word_language_model/main.py,72,│ c i o u │,not
+examples/word_language_model/main.py,73,│ d j p v │,not
+examples/word_language_model/main.py,74,│ e k q w │,not
+examples/word_language_model/main.py,75,└ f l r x ┘.,not
+examples/word_language_model/main.py,76,"These columns are treated as independent by the model, which means that the",not
+examples/word_language_model/main.py,77,"dependence of e. g. 'g' on 'f' can not be learned, but allows more efficient",not
+examples/word_language_model/main.py,78,batch processing.,not
+examples/word_language_model/main.py,81,Work out how cleanly we can divide the dataset into bsz parts.,not
+examples/word_language_model/main.py,83,Trim off any extra elements that wouldn't cleanly fit (remainders).,not
+examples/word_language_model/main.py,85,Evenly divide the data across the bsz batches.,not
+examples/word_language_model/main.py,94,,not
+examples/word_language_model/main.py,95,Build the model,not
+examples/word_language_model/main.py,96,,not
+examples/word_language_model/main.py,106,,not
+examples/word_language_model/main.py,107,Training code,not
+examples/word_language_model/main.py,108,,not
+examples/word_language_model/main.py,119,get_batch subdivides the source data into chunks of length args.bptt.,not
+examples/word_language_model/main.py,120,"If source is equal to the example output of the batchify function, with",not
+examples/word_language_model/main.py,121,"a bptt-limit of 2, we'd get the following two Variables for i = 0:",not
+examples/word_language_model/main.py,122,┌ a g m s ┐ ┌ b h n t ┐,not
+examples/word_language_model/main.py,123,└ b h n t ┘ └ c i o u ┘,not
+examples/word_language_model/main.py,124,"Note that despite the name of the function, the subdivison of data is not",not
+examples/word_language_model/main.py,125,"done along the batch dimension (i.e. dimension 1), since that was handled",not
+examples/word_language_model/main.py,126,"by the batchify function. The chunks are along dimension 0, corresponding",not
+examples/word_language_model/main.py,127,to the seq_len dimension in the LSTM.,not
+examples/word_language_model/main.py,137,Turn on evaluation mode which disables dropout.,not
+examples/word_language_model/main.py,157,Turn on training mode which enables dropout.,not
+examples/word_language_model/main.py,166,"Starting each batch, we detach the hidden state from how it was previously produced.",not
+examples/word_language_model/main.py,167,"If we didn't, the model would try backpropagating all the way to start of the dataset.",not
+examples/word_language_model/main.py,178,`clip_grad_norm` helps prevent the exploding gradient problem in RNNs / LSTMs.,not
+examples/word_language_model/main.py,205,Loop over epochs.,not
+examples/word_language_model/main.py,209,At any point you can hit Ctrl + C to break out of training early.,not
+examples/word_language_model/main.py,220,Save the model if the validation loss is the best we've seen so far.,not
+examples/word_language_model/main.py,226,Anneal the learning rate if no improvement has been seen in the validation dataset.,not
+examples/word_language_model/main.py,232,Load the best saved model.,not
+examples/word_language_model/main.py,235,after load the rnn params are not a continuous chunk of memory,not
+examples/word_language_model/main.py,236,"this makes them a continuous chunk, and will speed up forward pass",not
+examples/word_language_model/main.py,237,"Currently, only rnn model supports flatten_parameters function.",not
+examples/word_language_model/main.py,241,Run on test data.,not
+examples/word_language_model/main.py,249,Export the model in ONNX format.,not
+examples/word_language_model/generate.py,1,,not
+examples/word_language_model/generate.py,2,Language Modeling on Wikitext-2,not
+examples/word_language_model/generate.py,3,,not
+examples/word_language_model/generate.py,4,This file generates new sentences sampled from the language model,not
+examples/word_language_model/generate.py,5,,not
+examples/word_language_model/generate.py,6,,not
+examples/word_language_model/generate.py,16,Model parameters.,not
+examples/word_language_model/generate.py,35,Set the random seed manually for reproducibility.,not
+examples/word_language_model/generate.py,59,no tracking history,not
+examples/word_language_model/data.py,30,Add words to the dictionary,not
+examples/word_language_model/data.py,37,Tokenize file content,not
+examples/mnist_hogwild/main.py,10,Training settings,not
+examples/mnist_hogwild/main.py,60,"gradients are allocated lazily, so they are not shared here",not
+examples/mnist_hogwild/main.py,65,We first train the model across `num_processes` processes,not
+examples/mnist_hogwild/main.py,71,"Once training is complete, we can test the model",not
+examples/mnist_hogwild/train.py,61,sum up batch loss,not
+examples/mnist_hogwild/train.py,62,get the index of the max log-probability,not

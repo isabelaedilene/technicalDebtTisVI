@@ -1,32 +1,32 @@
 file path,line #,comment,satd
-system-design-primer/solutions/system_design/query_cache/query_cache_snippets.py,1,-*- coding: utf-8 -*-,
-system-design-primer/solutions/system_design/query_cache/query_cache_snippets.py,76,"Key exists in cache, update the value",
-system-design-primer/solutions/system_design/query_cache/query_cache_snippets.py,80,Key does not exist in cache,
-system-design-primer/solutions/system_design/query_cache/query_cache_snippets.py,82,Remove the oldest entry from the linked list and lookup,
-system-design-primer/solutions/system_design/query_cache/query_cache_snippets.py,87,Add the new key and value,
-system-design-primer/solutions/system_design/mint/mint_snippets.py,1,-*- coding: utf-8 -*-,
-system-design-primer/solutions/system_design/mint/mint_snippets.py,12,...,
-system-design-primer/solutions/system_design/mint/mint_mapreduce.py,1,-*- coding: utf-8 -*-,
-system-design-primer/solutions/system_design/web_crawler/web_crawler_mapreduce.py,1,-*- coding: utf-8 -*-,
-system-design-primer/solutions/system_design/web_crawler/web_crawler_snippets.py,1,-*- coding: utf-8 -*-,
-system-design-primer/solutions/system_design/web_crawler/web_crawler_snippets.py,44,Create signature based on url and contents,
-system-design-primer/solutions/system_design/pastebin/pastebin.py,1,-*- coding: utf-8 -*-,
-system-design-primer/solutions/system_design/sales_rank/sales_rank_mapreduce.py,1,-*- coding: utf-8 -*-,
-system-design-primer/solutions/system_design/social_graph/social_graph_snippets.py,1,-*- coding: utf-8 -*-,
-system-design-primer/solutions/system_design/social_graph/social_graph_snippets.py,42,"key: person_id, value: person_server",
-system-design-primer/solutions/system_design/social_graph/social_graph_snippets.py,52,"key: person_id, value: person",
-system-design-primer/solutions/system_design/social_graph/social_graph_snippets.py,70,Use self.visited_ids to track visited nodes,
-system-design-primer/solutions/system_design/social_graph/social_graph_snippets.py,71,Use self.lookup to translate a person_id to a Person,
-system-design-primer/solutions/object_oriented_design/lru_cache/lru_cache.py,29,"key: query, value: node",
-system-design-primer/solutions/object_oriented_design/lru_cache/lru_cache.py,52,"Key exists in cache, update the value",
-system-design-primer/solutions/object_oriented_design/lru_cache/lru_cache.py,56,Key does not exist in cache,
-system-design-primer/solutions/object_oriented_design/lru_cache/lru_cache.py,58,Remove the oldest entry from the linked list and lookup,
-system-design-primer/solutions/object_oriented_design/lru_cache/lru_cache.py,63,Add the new key and value,
-system-design-primer/solutions/object_oriented_design/parking_lot/parking_lot.py,64,List of Levels,
-system-design-primer/solutions/object_oriented_design/parking_lot/parking_lot.py,81,List of ParkingSpots,
-system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,8,"key: user id, value: User",
-system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,32,"key: friend id, value: User",
-system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,33,"key: friend id, value: private chats",
-system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,34,"key: chat id, value: GroupChat",
-system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,35,"key: friend id, value: AddRequest",
-system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,36,"key: friend id, value: AddRequest",
+system-design-primer/solutions/system_design/mint/mint_mapreduce.py,1,-*- coding: utf-8 -*-,not
+system-design-primer/solutions/system_design/mint/mint_snippets.py,1,-*- coding: utf-8 -*-,not
+system-design-primer/solutions/system_design/mint/mint_snippets.py,12,...,not
+system-design-primer/solutions/system_design/web_crawler/web_crawler_snippets.py,1,-*- coding: utf-8 -*-,not
+system-design-primer/solutions/system_design/web_crawler/web_crawler_snippets.py,44,Create signature based on url and contents,not
+system-design-primer/solutions/system_design/web_crawler/web_crawler_mapreduce.py,1,-*- coding: utf-8 -*-,not
+system-design-primer/solutions/system_design/social_graph/social_graph_snippets.py,1,-*- coding: utf-8 -*-,not
+system-design-primer/solutions/system_design/social_graph/social_graph_snippets.py,42,"key: person_id, value: person_server",not
+system-design-primer/solutions/system_design/social_graph/social_graph_snippets.py,52,"key: person_id, value: person",not
+system-design-primer/solutions/system_design/social_graph/social_graph_snippets.py,70,Use self.visited_ids to track visited nodes,not
+system-design-primer/solutions/system_design/social_graph/social_graph_snippets.py,71,Use self.lookup to translate a person_id to a Person,not
+system-design-primer/solutions/system_design/sales_rank/sales_rank_mapreduce.py,1,-*- coding: utf-8 -*-,not
+system-design-primer/solutions/system_design/query_cache/query_cache_snippets.py,1,-*- coding: utf-8 -*-,not
+system-design-primer/solutions/system_design/query_cache/query_cache_snippets.py,76,"Key exists in cache, update the value",not
+system-design-primer/solutions/system_design/query_cache/query_cache_snippets.py,80,Key does not exist in cache,not
+system-design-primer/solutions/system_design/query_cache/query_cache_snippets.py,82,Remove the oldest entry from the linked list and lookup,not
+system-design-primer/solutions/system_design/query_cache/query_cache_snippets.py,87,Add the new key and value,not
+system-design-primer/solutions/system_design/pastebin/pastebin.py,1,-*- coding: utf-8 -*-,not
+system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,8,"key: user id, value: User",not
+system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,32,"key: friend id, value: User",not
+system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,33,"key: friend id, value: private chats",not
+system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,34,"key: chat id, value: GroupChat",not
+system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,35,"key: friend id, value: AddRequest",not
+system-design-primer/solutions/object_oriented_design/online_chat/online_chat.py,36,"key: friend id, value: AddRequest",not
+system-design-primer/solutions/object_oriented_design/parking_lot/parking_lot.py,64,List of Levels,not
+system-design-primer/solutions/object_oriented_design/parking_lot/parking_lot.py,81,List of ParkingSpots,not
+system-design-primer/solutions/object_oriented_design/lru_cache/lru_cache.py,29,"key: query, value: node",not
+system-design-primer/solutions/object_oriented_design/lru_cache/lru_cache.py,52,"Key exists in cache, update the value",not
+system-design-primer/solutions/object_oriented_design/lru_cache/lru_cache.py,56,Key does not exist in cache,not
+system-design-primer/solutions/object_oriented_design/lru_cache/lru_cache.py,58,Remove the oldest entry from the linked list and lookup,not
+system-design-primer/solutions/object_oriented_design/lru_cache/lru_cache.py,63,Add the new key and value,not

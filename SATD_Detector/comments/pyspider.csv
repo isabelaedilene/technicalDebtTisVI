@@ -1,945 +1,945 @@
 file path,line #,comment,satd
-pyspider/run.py,1,!/usr/bin/env python,
-pyspider/run.py,2,-*- encoding: utf-8 -*-,
-pyspider/run.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/run.py,4,Author: Binux<roy@binux.me>,
-pyspider/run.py,5,http://binux.me,
-pyspider/run.py,6,Created on 2014-11-24 23:11:49,
-pyspider/setup.py,1,!/usr/bin/env python,
-pyspider/setup.py,2,-*- encoding: utf-8 -*-,
-pyspider/setup.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/setup.py,4,Author: Binux<roy@binux.me>,
-pyspider/setup.py,5,http://binux.me,
-pyspider/setup.py,6,Created on 2014-11-24 22:27:45,
-pyspider/setup.py,35,3.*,
-pyspider/setup.py,50,3.*,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-03-05 00:11:49,
-pyspider/,100,get db from env,
-pyspider/,138,create folder for counter.dump,
-pyspider/,142,"message queue, compatible with old version",
-pyspider/,160,phantomjs-proxy,
-pyspider/,166,puppeteer-proxy,
-pyspider/,370,inject queues for webui,
-pyspider/,375,fetcher rpc,
-pyspider/,381,get fetcher instance for webui,
-pyspider/,387,scheduler rpc,
-pyspider/,426,this may cause memory leak: https://github.com/ariya/phantomjs/issues/12903,
-pyspider/,427,"'--load-images=false',",
-pyspider/,518,FIXME: py34 cannot run components with threads,
-pyspider/,527,phantomjs,
-pyspider/,536,puppeteer,
-pyspider/,545,result worker,
-pyspider/,550,processor,
-pyspider/,555,fetcher,
-pyspider/,561,scheduler,
-pyspider/,566,running webui in main thread to make it exitable,
-pyspider/,572,exit components run in threading,
-pyspider/,576,exit components run in subprocess,
-pyspider/,608,flake8: noqa,
-pyspider/,622,test taskdb,
-pyspider/,625,test message queue,
-pyspider/,628,test all,
-pyspider/,640,disable log,
-pyspider/,652,result worker,
-pyspider/,659,processor,
-pyspider/,666,fetcher,
-pyspider/,674,webui,
-pyspider/,680,scheduler,
-pyspider/,707,wait bench test finished,
-pyspider/,713,exit components run in threading,
-pyspider/,717,exit components run in subprocess,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-11-17 19:17:12,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-10-19 15:37:46,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-10-19 16:10:19,
-pyspider/,1,"Author:      Fred L. Drake, Jr.",
-pyspider/,2,fdrake@...,
-pyspider/,3,,
-pyspider/,4,This is a simple little module I wrote to make life easier.  I didn't,
-pyspider/,5,"see anything quite like it in the library, though I may have overlooked",
-pyspider/,6,something.  I wrote this when I was trying to read some heavily nested,
-pyspider/,7,tuples with fairly non-descriptive content.  This is modeled very much,
-pyspider/,8,after Lisp/Scheme - style pretty-printing of lists.  If you find it,
-pyspider/,9,"useful, thank small children who sleep at night.",
-pyspider/,47,cache these for faster access:,
-pyspider/,251,"Return triple (repr_string, isreadable, isrecursive).",
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-26 23:41:51,
-pyspider/,1,Copyright (c) 2006-2007 Open Source Applications Foundation,
-pyspider/,2,,
-pyspider/,3,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-pyspider/,4,you may not use this file except in compliance with the License.,
-pyspider/,5,You may obtain a copy of the License at,
-pyspider/,6,,
-pyspider/,7,http://www.apache.org/licenses/LICENSE-2.0,
-pyspider/,8,,
-pyspider/,9,"Unless required by applicable law or agreed to in writing, software",
-pyspider/,10,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-pyspider/,11,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-pyspider/,12,See the License for the specific language governing permissions and,
-pyspider/,13,limitations under the License.,
-pyspider/,14,,
-pyspider/,15,Origin: https://code.google.com/p/wsgi-xmlrpc/,
-pyspider/,34,python 2.4,
-pyspider/,67,Get arguments by reading body of request.,
-pyspider/,68,We read this in chunks to avoid straining,
-pyspider/,69,"socket.read(); around the 10 or 15Mb mark, some platforms",
-pyspider/,70,begin to have problems (bug #792570).,
-pyspider/,75,"In previous versions of SimpleXMLRPCServer, _dispatch",
-pyspider/,76,"could be overridden in this class, instead of in",
-pyspider/,77,"SimpleXMLRPCDispatcher. To maintain backwards compatibility,",
-pyspider/,78,check to see if a subclass implements _dispatch and,
-pyspider/,79,using that method if present.,
-pyspider/,84,This should only happen if the module is buggy,
-pyspider/,85,"internal error, report as HTTP server error",
-pyspider/,90,got a valid XML RPC response,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-12-08 22:23:10,
-pyspider/,7,rate: 10000000000,
-pyspider/,8,burst: 10000000000,
-pyspider/,182,clear message queue,
-pyspider/,7,The SharedCounter and Queue classes come from:,
-pyspider/,8,https://github.com/vterron/lemon/commit/9ca6b4b,
-pyspider/,66,for py34,
-pyspider/,73,flake8: noqa,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2012-11-16 10:33:20,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2012-10-24 16:08:17,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-16 23:12:48,
-pyspider/,73,"mark the function with variable 'is_cronjob=True', the function would be",
-pyspider/,74,collected into the list Handler._cron_jobs by meta class,
-pyspider/,77,"collect interval and unify to seconds, it's used in meta class. See the",
-pyspider/,78,comments in meta class.,
-pyspider/,103,A list of all functions which is marked as 'is_cronjob=True',
-pyspider/,106,The min_tick is the greatest common divisor(GCD) of the interval of cronjobs,
-pyspider/,107,this value would be queried by scheduler when the project initial loaded.,
-pyspider/,108,Scheudler may only send _on_cronjob task every min_tick seconds. It can reduce,
-pyspider/,109,the number of tasks sent from scheduler.,
-pyspider/,171,do not run_func when 304,
-pyspider/,346,apis,
-pyspider/,441,"When triggered, a '_on_cronjob' task is sent from scheudler with 'tick' in",
-pyspider/,442,Response.save. Scheduler may at least send the trigger task every GCD of the,
-pyspider/,443,inverval of the cronjobs. The method should check the tick for each cronjob,
-pyspider/,444,function to confirm the execute interval.,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2012-11-06 11:50:13,
-pyspider/,94,"Due to click skew, things are some things slightly",
-pyspider/,95,in the future. Round timestamps in the immediate,
-pyspider/,96,future down to now in relative mode.,
-pyspider/,99,"Otherwise, future dates always use the full format.",
-pyspider/,155,"11mo, since confusing for same month last year",
-pyspider/,411,inject exit method,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2012-11-02 11:16:02,
-pyspider/,71,content is unicode,
-pyspider/,75,Try charset from content-type or content,
-pyspider/,78,Fallback to auto-detected encoding.,
-pyspider/,115,Decode unicode from given encoding.,
-pyspider/,119,A LookupError is raised if the encoding was not found which could,
-pyspider/,120,indicate a misspelling or similar mistake.,
-pyspider/,121,,
-pyspider/,122,So we try blindly encoding.,
-pyspider/,157,lxml would raise LookupError when encoding not supported,
-pyspider/,158,try fromstring without encoding instead.,
-pyspider/,159,"on windows, unicode is not availabe as encoding for lxml",
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2012-11-09 14:39:57,
-pyspider/,32,Support for unicode domain names and paths.,
-pyspider/,82,curl,
-pyspider/,85,waiting for url,
-pyspider/,88,flags,
-pyspider/,94,option,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2012-11-14 17:09:50,
-pyspider/,359,"assert all(isinstance(k, six.string_types) for k in key)",
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,Created on __DATE__,
-pyspider/,4,Project: __PROJECT_NAME__,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2015-03-27 20:12:11,
-pyspider/,90,python2 needs byes when python3 needs unicode,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-07 17:05:11,
-pyspider/,38,selected tasks after recent pause,
-pyspider/,39,wait for scheduler.FAIL_PAUSE_NUM loop steps before sending the event,
-pyspider/,56,unpaused --(last FAIL_PAUSE_NUM task failed)--> paused --(PAUSE_TIME)--> unpause_checking,
-pyspider/,57,unpaused <--(last UNPAUSE_CHECK_NUM task have success)--|,
-pyspider/,58,paused <--(last UNPAUSE_CHECK_NUM task no success)--|,
-pyspider/,62,ignore select task,
-pyspider/,85,ignore select task,
-pyspider/,90,break with enough check cnt,
-pyspider/,167,current not used,
-pyspider/,168,current not used,
-pyspider/,232,update project runtime info from processor by sending a _on_get_info,
-pyspider/,233,"request, result is in status_page.track.save",
-pyspider/,248,load task queue when project is running and delete task_queue when project is stoped,
-pyspider/,354,check _on_get_info result here,
-pyspider/,376,check _postpone_request first,
-pyspider/,468,use force=False here to prevent automatic send_buffer append and get exception,
-pyspider/,482,"dynamic assign select limit for each project, use qsize as weight",
-pyspider/,484,type:Project,
-pyspider/,487,"only check project pause when select new tasks, cronjob and new request still working",
-pyspider/,493,task queue,
-pyspider/,494,type:TaskQueue,
-pyspider/,500,ensure minimum select limit for each project,
-pyspider/,501,ensure maximum select limit for each project,
-pyspider/,507,type:Project,
-pyspider/,509,task queue,
-pyspider/,514,calculate select limit for project,
-pyspider/,524,"check send_buffer here. when not empty, out_queue may blocked. Not sending tasks",
-pyspider/,540,check and send finished event to project,
-pyspider/,542,wait for self.FAIL_PAUSE_NUM steps to make sure all tasks in queue have been processed,
-pyspider/,579,print top 5 active counters,
-pyspider/,656,stop xmlrpc server,
-pyspider/,777,"fix for ""<type 'exceptions.TypeError'>:dictionary key must be string""",
-pyspider/,778,have no idea why,
-pyspider/,847,"when a task is in processing, the modify may conflict with the running task.",
-pyspider/,848,postpone the modify after task finished.,
-pyspider/,985,"self._cnt['all'].event((project, 'retry'), +1)",
-pyspider/,992,inject informations about project,
-pyspider/,1002,lazy join project.crawl_config,
-pyspider/,1029,waiting for running tasks,
-pyspider/,1046,looking up the project instance,
-pyspider/,1057,get task package,
-pyspider/,1064,check task in taskdb,
-pyspider/,1074,select the task,
-pyspider/,1151,do with message,
-pyspider/,1155,do with results,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-07 16:53:08,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-07 13:12:10,
-pyspider/,61,compare in-queue sequence number finally if two element has the same,
-pyspider/,62,priority or exetime,
-pyspider/,173,type: InQueueTask,
-pyspider/,215,force update a processing task is not allowed as there are so many,
-pyspider/,216,problems may happen,
-pyspider/,1,NOQA,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.com>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2012-08-30 17:43:49,
-pyspider/,77,f[0] may return bytes type,
-pyspider/,78,https://github.com/mysql/mysql-connector-python/pull/37,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-10-08 15:04:08,
-pyspider/,52,NOQA,
-pyspider/,188,"in python 2.6 url like ""http://host/?query"", query will not been splitted",
-pyspider/,216,"default to env, then url, then hard coded",
-pyspider/,220,create necessary DBs + the admin user,
-pyspider/,223,user is already created. This will happen if CouchDB is running in docker,
-pyspider/,224,and COUCHDB_USER and COUCHDB_PASSWORD are set,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2015-01-17 12:32:17,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2015-01-17 20:56:50,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2016-01-20 20:20:55,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2016-01-17 18:32:33,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2016-01-18 19:41:24,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2016-01-17 18:31:58,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-11-22 20:30:44,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-08 10:25:34,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-09 12:05:52,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-10-13 17:08:43,
-pyspider/,1,!/usr/bin/envutils,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-07-17 18:53:01,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-07-17 21:06:43,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-10-13 22:02:57,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-11-05 10:42:24,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-07-17 20:12:54,
-pyspider/,28,create index,
-pyspider/,16,Create the db,
-pyspider/,25,create index,
-pyspider/,61,object contains the fields to update and their new values,
-pyspider/,62,update will contain _rev,
-pyspider/,26,create index,
-pyspider/,108,drop the project,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2015-05-16 21:01:52,
-pyspider/,100,"self.redis.srem(status_key, taskid)",
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2015-05-17 01:34:21,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-08 10:28:48,
-pyspider/,8,task schema,
-pyspider/,11,"new, not change",
-pyspider/,12,"new, not change",
-pyspider/,13,"new, not change",
-pyspider/,14,change,
-pyspider/,22,'recrawl': int,
-pyspider/,23,new and restart,
-pyspider/,30,new and restart,
-pyspider/,33,new and restart,
-pyspider/,51,jsonable object saved by processor,
-pyspider/,52,finish,
-pyspider/,53,keep between request,
-pyspider/,54,keep between request,
-pyspider/,65,projects in taskdb,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-09 11:28:52,
-pyspider/,10,"NOTE: When get/get_all/check_update from database with default fields,",
-pyspider/,11,all following fields should be included in output dict.,
-pyspider/,18,"'config': str,",
-pyspider/,20,"'priority': int,",
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-10-11 18:40:03,
-pyspider/,8,result schema,
-pyspider/,11,"new, not changeable",
-pyspider/,12,"new, not changeable",
-pyspider/,13,"new, not changeable",
-pyspider/,14,json string,
-pyspider/,24,projects in resultdb,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-12-04 22:33:43,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-12-04 23:25:10,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-12-04 18:48:15,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-12-04 18:48:47,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-12-04 20:11:04,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-10-11 23:54:50,
-pyspider/,27,"we suggest manually build index in advance, instead of indexing",
-pyspider/,28,"in the startup process,",
-pyspider/,29,for project in self.projects:,
-pyspider/,30,collection_name = self._collection_name(project),
-pyspider/,31,self.database[collection_name].ensure_index('status'),
-pyspider/,32,self.database[collection_name].ensure_index('taskid'),
-pyspider/,91,"when there are too many data in task collection , aggregate operation will take a very long time,",
-pyspider/,92,and this will cause scheduler module startup to be particularly slow,
-pyspider/,94,ret = self.database[collection_name].aggregate([,
-pyspider/,95,{'$group': {,
-pyspider/,96,"'_id'  : '$status',",
-pyspider/,97,'total': {,
-pyspider/,98,'$sum': 1,
-pyspider/,99,},
-pyspider/,100,},
-pyspider/,101,}]),
-pyspider/,103,"Instead of aggregate, use find-count on status(with index) field.",
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-10-12 12:22:42,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-10-13 22:18:36,
-pyspider/,27,"we suggest manually build index in advance, instead of indexing",
-pyspider/,28,"in the startup process,",
-pyspider/,29,for project in self.projects:,
-pyspider/,30,collection_name = self._collection_name(project),
-pyspider/,31,self.database[collection_name].ensure_index('taskid'),
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-11-22 20:42:01,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-16 22:24:20,
-pyspider/,40,fix for old non-package version scripts,
-pyspider/,53,logger inject,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-16 22:59:56,
-pyspider/,167,FIXME: unicode_obj should used in scheduler before store to database,
-pyspider/,168,it's used here for performance.,
-pyspider/,171,FIXME: unicode_obj should used in scheduler before store to database,
-pyspider/,172,it's used here for performance.,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-12-14 09:07:11,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2012-12-17 11:07:19,
-pyspider/,79,1h,
-pyspider/,94,binding io_loop to http_client here,
-pyspider/,238,proxy,
-pyspider/,259,etag,
-pyspider/,268,last modifed,
-pyspider/,278,timeout,
-pyspider/,282,data rename to body,
-pyspider/,333,setup request parameters,
-pyspider/,338,fix for tornado request obj,
-pyspider/,353,we will handle redirects by hand to capture cookies,
-pyspider/,356,making requests,
-pyspider/,358,robots.txt,
-pyspider/,367,"if cookie already in header, get_cookie_header wouldn't work",
-pyspider/,437,check phantomjs proxy is enabled,
-pyspider/,452,setup request parameters,
-pyspider/,459,robots.txt,
-pyspider/,492,making requests,
-pyspider/,538,check phantomjs proxy is enabled,
-pyspider/,553,setup request parameters,
-pyspider/,560,robots.txt,
-pyspider/,596,making requests,
-pyspider/,646,check puppeteer proxy is enabled,
-pyspider/,661,setup request parameters,
-pyspider/,668,robots.txt,
-pyspider/,702,making requests,
-pyspider/,757,FIXME: decode unicode_obj should used after data selete from,
-pyspider/,758,"database, it's used here for performance",
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-07-16 15:30:57,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-22 23:17:13,
-pyspider/,107,"cdn = app.config.get('cdn', 'http://cdn.staticfile.org/')",
-pyspider/,108,"cdn = app.config.get('cdn', '//cdnjs.cloudflare.com/ajax/libs/')",
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-12-10 20:36:27,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-22 23:20:39,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-10-19 16:23:55,
-pyspider/,36,force update project list,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-12-08 22:31:17,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-22 23:20:40,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<i@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2014-02-23 00:19:06,
-pyspider/,115,The code below is to mock the behavior that crawl_config been joined when selected by scheduler.,
-pyspider/,116,"but to have a better view of joined tasks, it has been done in BaseHandler.crawl when `is_debugger is True`",
-pyspider/,117,crawl_config = module['instance'].crawl_config,
-pyspider/,118,"task = module['instance'].task_join_crawl_config(task, crawl_config)",
-pyspider/,151,"binary data can't encode to JSON, encode result as unicode obj",
-pyspider/,152,before send it to frontend,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2015-6-3 11:29,
-pyspider/,42,old class,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2015-05-22 20:54:01,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<17175297.hk@gmail.com>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2012-11-15 17:27:54,
-pyspider/,103,self.channel.queue_purge(self.name),
-pyspider/,238,self.channel.queue_purge(self.name),
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2015-04-27 22:48:04,
-pyspider/,1,!/usr/bin/env python,
-pyspider/,2,-*- encoding: utf-8 -*-,
-pyspider/,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/,4,Author: Binux<roy@binux.me>,
-pyspider/,5,http://binux.me,
-pyspider/,6,Created on 2015-04-30 21:47:08,
-pyspider/tools/migrate.py,1,!/usr/bin/env python,
-pyspider/tools/migrate.py,2,-*- encoding: utf-8 -*-,
-pyspider/tools/migrate.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tools/migrate.py,4,Author: Binux<roy@binux.me>,
-pyspider/tools/migrate.py,5,http://binux.me,
-pyspider/tools/migrate.py,6,Created on 2015-09-30 23:22:46,
-pyspider/tests/test_xmlrpc.py,1,Copyright (c) 2006-2007 Open Source Applications Foundation,
-pyspider/tests/test_xmlrpc.py,2,,
-pyspider/tests/test_xmlrpc.py,3,"Licensed under the Apache License, Version 2.0 (the ""License"");",
-pyspider/tests/test_xmlrpc.py,4,you may not use this file except in compliance with the License.,
-pyspider/tests/test_xmlrpc.py,5,You may obtain a copy of the License at,
-pyspider/tests/test_xmlrpc.py,6,,
-pyspider/tests/test_xmlrpc.py,7,http://www.apache.org/licenses/LICENSE-2.0,
-pyspider/tests/test_xmlrpc.py,8,,
-pyspider/tests/test_xmlrpc.py,9,"Unless required by applicable law or agreed to in writing, software",
-pyspider/tests/test_xmlrpc.py,10,"distributed under the License is distributed on an ""AS IS"" BASIS,",
-pyspider/tests/test_xmlrpc.py,11,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",
-pyspider/tests/test_xmlrpc.py,12,See the License for the specific language governing permissions and,
-pyspider/tests/test_xmlrpc.py,13,limitations under the License.,
-pyspider/tests/test_xmlrpc.py,14,,
-pyspider/tests/test_xmlrpc.py,15,Origin: https://code.google.com/p/wsgi-xmlrpc/,
-pyspider/tests/test_message_queue.py,1,!/usr/bin/env python,
-pyspider/tests/test_message_queue.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_message_queue.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_message_queue.py,4,Author: Binux<i@binux.me>,
-pyspider/tests/test_message_queue.py,5,http://binux.me,
-pyspider/tests/test_message_queue.py,6,Created on 2014-10-07 10:33:38,
-pyspider/tests/test_message_queue.py,76,"@unittest.skipIf(six.PY3, 'pika not suport python 3')",
-pyspider/tests/test_scheduler.py,1,!/usr/bin/env python,
-pyspider/tests/test_scheduler.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_scheduler.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_scheduler.py,4,Author: Binux<i@binux.me>,
-pyspider/tests/test_scheduler.py,5,http://binux.me,
-pyspider/tests/test_scheduler.py,6,Created on 2014-02-08 22:37:13,
-pyspider/tests/test_scheduler.py,144,not dispatch cronjob,
-pyspider/tests/test_scheduler.py,174,unknown project: test_project,
-pyspider/tests/test_scheduler.py,205,"select test_project:_on_get_info data:,_on_get_info",
-pyspider/tests/test_scheduler.py,216,test_project on_get_info {},
-pyspider/tests/test_scheduler.py,231,"select test_project_not_started:_on_get_info data:,_on_get_info",
-pyspider/tests/test_scheduler.py,252,new task test_project:taskid url,
-pyspider/tests/test_scheduler.py,253,task_queue = [ test_project:taskid ],
-pyspider/tests/test_scheduler.py,256,select test_project:taskid,
-pyspider/tests/test_scheduler.py,279,restart task test_project:taskid url_force_update,
-pyspider/tests/test_scheduler.py,281,it should not block next,
-pyspider/tests/test_scheduler.py,291,unknown project: no_project,
-pyspider/tests/test_scheduler.py,303,Bad status pack: 'track',
-pyspider/tests/test_scheduler.py,311,Bad status pack: 'process',
-pyspider/tests/test_scheduler.py,331,task retry 0/3 test_project:taskid url,
-pyspider/tests/test_scheduler.py,333,with self.assertRaises(Queue.Empty):,
-pyspider/tests/test_scheduler.py,334,task = self.scheduler2fetcher.get(timeout=4),
-pyspider/tests/test_scheduler.py,335,select test_project:taskid url,
-pyspider/tests/test_scheduler.py,354,task done test_project:taskid url,
-pyspider/tests/test_scheduler.py,359,"select test_project:on_finished data:,on_finished",
-pyspider/tests/test_scheduler.py,375,task done test_project:on_finished url,
-pyspider/tests/test_scheduler.py,441,restart task test_project:taskid url,
-pyspider/tests/test_scheduler.py,443,select test_project:taskid url,
-pyspider/tests/test_scheduler.py,447,task done test_project:taskid url,
-pyspider/tests/test_scheduler.py,448,"select test_project:on_finished data:,on_finished",
-pyspider/tests/test_scheduler.py,465,restart task test_project:taskid url,
-pyspider/tests/test_scheduler.py,466,select test_project:taskid url,
-pyspider/tests/test_scheduler.py,486,task retry 0/1 test_project:taskid url,
-pyspider/tests/test_scheduler.py,487,select test_project:taskid url,
-pyspider/tests/test_scheduler.py,503,task failed test_project:taskid url,
-pyspider/tests/test_scheduler.py,505,"select test_project:on_finished data:,on_finished",
-pyspider/tests/test_scheduler.py,513,"'taskid': 'taskid#',",
-pyspider/tests/test_scheduler.py,516,"taskid not in task: {'project': 'test_project', 'url': 'url'}",
-pyspider/tests/test_scheduler.py,519,"'project': 'test_project',",
-pyspider/tests/test_scheduler.py,521,"project not in task: {'url': 'url', 'taskid': 'taskid#'}",
-pyspider/tests/test_scheduler.py,525,"'url': 'url',",
-pyspider/tests/test_scheduler.py,526,"url not in task: {'project': 'test_project', 'taskid': 'taskid#'}",
-pyspider/tests/test_scheduler.py,531,unknown project: not_exist_project,
-pyspider/tests/test_scheduler.py,536,new task test_project:taskid# url,
-pyspider/tests/test_scheduler.py,557,restart task test_project:taskid url,
-pyspider/tests/test_scheduler.py,558,select test_project:taskid# url,
-pyspider/tests/test_scheduler.py,559,select test_project:taskid url,
-pyspider/tests/test_scheduler.py,581,task done test_project:taskid url,
-pyspider/tests/test_scheduler.py,610,not processing pack: test_project:taskid url,
-pyspider/tests/test_scheduler.py,611,select test_project:taskid url,
-pyspider/tests/test_scheduler.py,612,task retry 0/1 test_project:taskid url,
-pyspider/tests/test_scheduler.py,613,select test_project:taskid url,
-pyspider/tests/test_scheduler.py,614,task retry 0/1 test_project:taskid url,
-pyspider/tests/test_scheduler.py,615,select test_project:taskid url,
-pyspider/tests/test_scheduler.py,642,task done test_project:taskid url,
-pyspider/tests/test_scheduler.py,664,new task test_project:taskid_to_cancel url,
-pyspider/tests/test_scheduler.py,665,task_queue = [ test_project:taskid_to_cancel ],
-pyspider/tests/test_scheduler.py,685,new cancel test_project:taskid_to_cancel url,
-pyspider/tests/test_scheduler.py,686,task_queue = [ ],
-pyspider/tests/test_scheduler.py,718,"self.assertIsNotNone(self.taskdb.get_task('test_inqueue_project', 'taskid1'))",
-pyspider/tests/test_counter.py,1,!/usr/bin/env python,
-pyspider/tests/test_counter.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_counter.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_counter.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/test_counter.py,5,http://binux.me,
-pyspider/tests/test_counter.py,6,Created on 2015-04-05 00:05:58,
-pyspider/tests/data_fetcher_processor_handler.py,1,!/usr/bin/env python,
-pyspider/tests/data_fetcher_processor_handler.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/data_fetcher_processor_handler.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/data_fetcher_processor_handler.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/data_fetcher_processor_handler.py,5,http://binux.me,
-pyspider/tests/data_fetcher_processor_handler.py,6,Created on 2015-01-18 14:12:55,
-pyspider/tests/test_result_worker.py,1,!/usr/bin/env python,
-pyspider/tests/test_result_worker.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_result_worker.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_result_worker.py,4,Author: Binux<i@binux.me>,
-pyspider/tests/test_result_worker.py,5,http://binux.me,
-pyspider/tests/test_result_worker.py,6,Created on 2014-11-11 20:52:53,
-pyspider/tests/test_utils.py,1,!/usr/bin/env python,
-pyspider/tests/test_utils.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_utils.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_utils.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/test_utils.py,5,http://binux.me,
-pyspider/tests/test_utils.py,6,Created on 2015-01-18 16:53:49,
-pyspider/tests/test_fetcher.py,1,!/usr/bin/env python,
-pyspider/tests/test_fetcher.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_fetcher.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_fetcher.py,4,Author: Binux<i@binux.me>,
-pyspider/tests/test_fetcher.py,5,http://binux.me,
-pyspider/tests/test_fetcher.py,6,Created on 2014-02-15 22:10:35,
-pyspider/tests/test_fetcher.py,168,utf8 encoding 中文,
-pyspider/tests/test_fetcher.py,182,gbk encoding 中文,
-pyspider/tests/test_fetcher.py,533,"self.assertIn('js_script_result', result) TODO: lua nil is not exists",
-pyspider/tests/test_bench.py,1,!/usr/bin/env python,
-pyspider/tests/test_bench.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_bench.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_bench.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/test_bench.py,5,http://binux.me,
-pyspider/tests/test_bench.py,6,Created on 2014-12-10 01:34:09,
-pyspider/tests/test_bench.py,32,cmd = [sys.executable],
-pyspider/tests/test_task_queue.py,1,!/usr/bin/env python,
-pyspider/tests/test_task_queue.py,2,-*- coding: utf-8 -*-,
-pyspider/tests/test_task_queue.py,31,type:Queue.Queue,
-pyspider/tests/test_task_queue.py,34,"six.print_('put, taskid=', it.taskid, 'priority=', it.priority, 'exetime=', it.exetime)",
-pyspider/tests/test_task_queue.py,38,type: Queue.Queue,
-pyspider/tests/test_task_queue.py,42,"six.print_('get, taskid=', task.taskid, 'priority=', task.priority, 'exetime=', task.exetime)",
-pyspider/tests/test_task_queue.py,47,type:Queue.Queue,
-pyspider/tests/test_task_queue.py,57,six.print_('Test time queue order by time only'),
-pyspider/tests/test_task_queue.py,69,"six.print_('put, taskid=', it.taskid, 'priority=', it.priority, 'exetime=', it.exetime)",
-pyspider/tests/test_task_queue.py,79,"six.print_('get, taskid=', t2.taskid, 'priority=', t2.priority, 'exetime=', t2.exetime)",
-pyspider/tests/test_fetcher_processor.py,1,!/usr/bin/env python,
-pyspider/tests/test_fetcher_processor.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_fetcher_processor.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_fetcher_processor.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/test_fetcher_processor.py,5,http://binux.me,
-pyspider/tests/test_fetcher_processor.py,6,Created on 2015-01-18 14:09:41,
-pyspider/tests/test_fetcher_processor.py,204,"'中文': '.', # FIXME: not work",
-pyspider/tests/test_base_handler.py,1,!/usr/bin/env python,
-pyspider/tests/test_base_handler.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_base_handler.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_base_handler.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/test_base_handler.py,5,http://binux.me,
-pyspider/tests/test_base_handler.py,6,Created on 2017-02-26 10:35:23,
-pyspider/tests/test_base_handler.py,39,should not affect finial task,
-pyspider/tests/test_base_handler.py,40,should add proxy,
-pyspider/tests/test_base_handler.py,41,should merge headers,
-pyspider/tests/test_base_handler.py,42,should not affect cookie,
-pyspider/tests/test_base_handler.py,43,should add header c,
-pyspider/tests/test_processor.py,1,!/usr/bin/env python,
-pyspider/tests/test_processor.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_processor.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_processor.py,4,Author: Binux<i@binux.me>,
-pyspider/tests/test_processor.py,5,http://binux.me,
-pyspider/tests/test_processor.py,6,Created on 2014-02-22 14:00:05,
-pyspider/tests/test_processor.py,402,clear new task queue,
-pyspider/tests/test_processor.py,405,clear status queue,
-pyspider/tests/test_processor.py,447,clear new task queue,
-pyspider/tests/test_processor.py,450,clear status queue,
-pyspider/tests/test_processor.py,485,clear new task queue,
-pyspider/tests/test_processor.py,488,clear status queue,
-pyspider/tests/test_processor.py,513,not update,
-pyspider/tests/test_processor.py,522,updated,
-pyspider/tests/test_processor.py,536,update with md5,
-pyspider/tests/test_webdav.py,1,!/usr/bin/env python,
-pyspider/tests/test_webdav.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_webdav.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_webdav.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/test_webdav.py,5,http://binux.me,
-pyspider/tests/test_webdav.py,6,Created on 2015-06-03 21:15,
-pyspider/tests/data_test_webpage.py,1,!/usr/bin/env python,
-pyspider/tests/data_test_webpage.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/data_test_webpage.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/data_test_webpage.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/data_test_webpage.py,5,http://binux.me,
-pyspider/tests/data_test_webpage.py,6,Created on 2015-01-24 13:44:10,
-pyspider/tests/test_result_dump.py,1,!/usr/bin/env python,
-pyspider/tests/test_result_dump.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_result_dump.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_result_dump.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/test_result_dump.py,5,http://binux.me,
-pyspider/tests/test_result_dump.py,6,Created on 2015-10-12 22:17:57,
-pyspider/tests/__init__.py,1,!/usr/bin/env python,
-pyspider/tests/__init__.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/__init__.py,4,Author: Binux<i@binux.me>,
-pyspider/tests/__init__.py,5,http://binux.me,
-pyspider/tests/__init__.py,6,Created on 2014-02-09 10:53:19,
-pyspider/tests/data_sample_handler.py,1,!/usr/bin/env python,
-pyspider/tests/data_sample_handler.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/data_sample_handler.py,3,Created on __DATE__,
-pyspider/tests/data_sample_handler.py,4,Project: __PROJECT_NAME__,
-pyspider/tests/test_run.py,1,!/usr/bin/env python,
-pyspider/tests/test_run.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_run.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_run.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/test_run.py,5,http://binux.me,
-pyspider/tests/test_run.py,6,Created on 2014-11-21 22:32:35,
-pyspider/tests/test_run.py,104,TODO: MORE SPECIFIC,
-pyspider/tests/test_run.py,158,create a test admin user,
-pyspider/tests/test_run.py,174,remove the test admin user,
-pyspider/tests/test_run.py,239,cmd = [sys.executable],
-pyspider/tests/test_run.py,253,click run,
-pyspider/tests/test_run.py,286,cmd = [sys.executable],
-pyspider/tests/test_run.py,296,child,
-pyspider/tests/test_run.py,299,parent,
-pyspider/tests/test_database.py,1,!/usr/bin/env python,
-pyspider/tests/test_database.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_database.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_database.py,4,Author: Binux<i@binux.me>,
-pyspider/tests/test_database.py,5,http://binux.me,
-pyspider/tests/test_database.py,6,Created on 2014-02-08 22:37:13,
-pyspider/tests/test_database.py,54,"'content': 'asdfasdfasdfasdf',",
-pyspider/tests/test_database.py,72,this test not works for mongodb,
-pyspider/tests/test_database.py,73,def test_10_create_project(self):,
-pyspider/tests/test_database.py,74,with self.assertRaises(AssertionError):,
-pyspider/tests/test_database.py,75,self.taskdb._create_project('abc.abc'),
-pyspider/tests/test_database.py,76,self.taskdb._create_project('abc'),
-pyspider/tests/test_database.py,77,self.taskdb._list_project(),
-pyspider/tests/test_database.py,78,"self.assertEqual(len(self.taskdb.projects), 1)",
-pyspider/tests/test_database.py,79,"self.assertIn('abc', self.taskdb.projects)",
-pyspider/tests/test_database.py,699,create a test admin user,
-pyspider/tests/test_database.py,712,remove the test admin user,
-pyspider/tests/test_database.py,727,create a test admin user,
-pyspider/tests/test_database.py,740,remove the test admin user,
-pyspider/tests/test_database.py,760,create a test admin user,
-pyspider/tests/test_database.py,773,remove the test admin user,
-pyspider/tests/test_response.py,1,!/usr/bin/env python,
-pyspider/tests/test_response.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_response.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_response.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/test_response.py,5,http://binux.me,
-pyspider/tests/test_response.py,6,Created on 2015-01-18 11:10:27,
-pyspider/tests/data_handler.py,2,!/usr/bin/env python,
-pyspider/tests/data_handler.py,3,-*- encoding: utf-8 -*-,
-pyspider/tests/data_handler.py,4,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/data_handler.py,5,Author: Binux<i@binux.me>,
-pyspider/tests/data_handler.py,6,http://binux.me,
-pyspider/tests/data_handler.py,7,Created on 2014-02-22 14:02:21,
-pyspider/tests/test_webui.py,1,!/usr/bin/env python,
-pyspider/tests/test_webui.py,2,-*- encoding: utf-8 -*-,
-pyspider/tests/test_webui.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/tests/test_webui.py,4,Author: Binux<roy@binux.me>,
-pyspider/tests/test_webui.py,5,http://binux.me,
-pyspider/tests/test_webui.py,6,Created on 2014-11-18 21:03:22,
-pyspider/tests/test_webui.py,29,flake8: noqa,
-pyspider/docs/conf.py,1,!/usr/bin/env python,
-pyspider/docs/conf.py,2,-*- encoding: utf-8 -*-,
-pyspider/docs/conf.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,
-pyspider/docs/conf.py,4,Author: Binux<roy@binux.me>,
-pyspider/docs/conf.py,5,http://binux.me,
-pyspider/docs/conf.py,6,Created on 2015-11-10 01:31:54,
+pyspider/run.py,1,!/usr/bin/env python,not
+pyspider/run.py,2,-*- encoding: utf-8 -*-,not
+pyspider/run.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/run.py,4,Author: Binux<roy@binux.me>,not
+pyspider/run.py,5,http://binux.me,not
+pyspider/run.py,6,Created on 2014-11-24 23:11:49,not
+pyspider/setup.py,1,!/usr/bin/env python,not
+pyspider/setup.py,2,-*- encoding: utf-8 -*-,not
+pyspider/setup.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/setup.py,4,Author: Binux<roy@binux.me>,not
+pyspider/setup.py,5,http://binux.me,not
+pyspider/setup.py,6,Created on 2014-11-24 22:27:45,not
+pyspider/setup.py,35,3.*,not
+pyspider/setup.py,50,3.*,not
+pyspider/pyspider/run.py,1,!/usr/bin/env python,not
+pyspider/pyspider/run.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/run.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/run.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/run.py,5,http://binux.me,not
+pyspider/pyspider/run.py,6,Created on 2014-03-05 00:11:49,not
+pyspider/pyspider/run.py,100,get db from env,not
+pyspider/pyspider/run.py,138,create folder for counter.dump,not
+pyspider/pyspider/run.py,142,"message queue, compatible with old version",not
+pyspider/pyspider/run.py,160,phantomjs-proxy,not
+pyspider/pyspider/run.py,166,puppeteer-proxy,not
+pyspider/pyspider/run.py,370,inject queues for webui,not
+pyspider/pyspider/run.py,375,fetcher rpc,not
+pyspider/pyspider/run.py,381,get fetcher instance for webui,not
+pyspider/pyspider/run.py,387,scheduler rpc,not
+pyspider/pyspider/run.py,426,this may cause memory leak: https://github.com/ariya/phantomjs/issues/12903,not
+pyspider/pyspider/run.py,427,"'--load-images=false',",not
+pyspider/pyspider/run.py,518,FIXME: py34 cannot run components with threads,SATD
+pyspider/pyspider/run.py,527,phantomjs,not
+pyspider/pyspider/run.py,536,puppeteer,not
+pyspider/pyspider/run.py,545,result worker,not
+pyspider/pyspider/run.py,550,processor,not
+pyspider/pyspider/run.py,555,fetcher,not
+pyspider/pyspider/run.py,561,scheduler,not
+pyspider/pyspider/run.py,566,running webui in main thread to make it exitable,not
+pyspider/pyspider/run.py,572,exit components run in threading,not
+pyspider/pyspider/run.py,576,exit components run in subprocess,not
+pyspider/pyspider/run.py,608,flake8: noqa,not
+pyspider/pyspider/run.py,622,test taskdb,not
+pyspider/pyspider/run.py,625,test message queue,not
+pyspider/pyspider/run.py,628,test all,not
+pyspider/pyspider/run.py,640,disable log,not
+pyspider/pyspider/run.py,652,result worker,not
+pyspider/pyspider/run.py,659,processor,not
+pyspider/pyspider/run.py,666,fetcher,not
+pyspider/pyspider/run.py,674,webui,not
+pyspider/pyspider/run.py,680,scheduler,not
+pyspider/pyspider/run.py,707,wait bench test finished,not
+pyspider/pyspider/run.py,713,exit components run in threading,not
+pyspider/pyspider/run.py,717,exit components run in subprocess,not
+pyspider/pyspider/__init__.py,1,!/usr/bin/env python,not
+pyspider/pyspider/__init__.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/__init__.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/__init__.py,5,http://binux.me,not
+pyspider/pyspider/__init__.py,6,Created on 2014-11-17 19:17:12,not
+pyspider/pyspider/result/result_worker.py,1,!/usr/bin/env python,not
+pyspider/pyspider/result/result_worker.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/result/result_worker.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/result/result_worker.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/result/result_worker.py,5,http://binux.me,not
+pyspider/pyspider/result/result_worker.py,6,Created on 2014-10-19 15:37:46,not
+pyspider/pyspider/result/__init__.py,1,!/usr/bin/env python,not
+pyspider/pyspider/result/__init__.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/result/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/result/__init__.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/result/__init__.py,5,http://binux.me,not
+pyspider/pyspider/result/__init__.py,6,Created on 2014-10-19 16:10:19,not
+pyspider/pyspider/libs/pprint.py,1,"Author:      Fred L. Drake, Jr.",not
+pyspider/pyspider/libs/pprint.py,2,fdrake@...,not
+pyspider/pyspider/libs/pprint.py,3,,not
+pyspider/pyspider/libs/pprint.py,4,This is a simple little module I wrote to make life easier.  I didn't,not
+pyspider/pyspider/libs/pprint.py,5,"see anything quite like it in the library, though I may have overlooked",not
+pyspider/pyspider/libs/pprint.py,6,something.  I wrote this when I was trying to read some heavily nested,not
+pyspider/pyspider/libs/pprint.py,7,tuples with fairly non-descriptive content.  This is modeled very much,not
+pyspider/pyspider/libs/pprint.py,8,after Lisp/Scheme - style pretty-printing of lists.  If you find it,not
+pyspider/pyspider/libs/pprint.py,9,"useful, thank small children who sleep at night.",not
+pyspider/pyspider/libs/pprint.py,47,cache these for faster access:,not
+pyspider/pyspider/libs/pprint.py,251,"Return triple (repr_string, isreadable, isrecursive).",not
+pyspider/pyspider/libs/ListIO.py,1,!/usr/bin/env python,not
+pyspider/pyspider/libs/ListIO.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/libs/ListIO.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/libs/ListIO.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/libs/ListIO.py,5,http://binux.me,not
+pyspider/pyspider/libs/ListIO.py,6,Created on 2014-02-26 23:41:51,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,1,Copyright (c) 2006-2007 Open Source Applications Foundation,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,2,,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,3,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,4,you may not use this file except in compliance with the License.,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,5,You may obtain a copy of the License at,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,6,,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,7,http://www.apache.org/licenses/LICENSE-2.0,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,8,,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,9,"Unless required by applicable law or agreed to in writing, software",not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,10,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,11,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,12,See the License for the specific language governing permissions and,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,13,limitations under the License.,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,14,,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,15,Origin: https://code.google.com/p/wsgi-xmlrpc/,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,34,python 2.4,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,67,Get arguments by reading body of request.,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,68,We read this in chunks to avoid straining,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,69,"socket.read(); around the 10 or 15Mb mark, some platforms",not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,70,begin to have problems (bug #792570).,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,75,"In previous versions of SimpleXMLRPCServer, _dispatch",not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,76,"could be overridden in this class, instead of in",not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,77,"SimpleXMLRPCDispatcher. To maintain backwards compatibility,",not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,78,check to see if a subclass implements _dispatch and,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,79,using that method if present.,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,84,This should only happen if the module is buggy,not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,85,"internal error, report as HTTP server error",not
+pyspider/pyspider/libs/wsgi_xmlrpc.py,90,got a valid XML RPC response,not
+pyspider/pyspider/libs/bench.py,1,!/usr/bin/env python,not
+pyspider/pyspider/libs/bench.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/libs/bench.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/libs/bench.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/libs/bench.py,5,http://binux.me,not
+pyspider/pyspider/libs/bench.py,6,Created on 2014-12-08 22:23:10,not
+pyspider/pyspider/libs/bench.py,7,rate: 10000000000,not
+pyspider/pyspider/libs/bench.py,8,burst: 10000000000,not
+pyspider/pyspider/libs/bench.py,182,clear message queue,not
+pyspider/pyspider/libs/multiprocessing_queue.py,7,The SharedCounter and Queue classes come from:,not
+pyspider/pyspider/libs/multiprocessing_queue.py,8,https://github.com/vterron/lemon/commit/9ca6b4b,not
+pyspider/pyspider/libs/multiprocessing_queue.py,66,for py34,not
+pyspider/pyspider/libs/multiprocessing_queue.py,73,flake8: noqa,not
+pyspider/pyspider/libs/dataurl.py,1,!/usr/bin/env python,not
+pyspider/pyspider/libs/dataurl.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/libs/dataurl.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/libs/dataurl.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/libs/dataurl.py,5,http://binux.me,not
+pyspider/pyspider/libs/dataurl.py,6,Created on 2012-11-16 10:33:20,not
+pyspider/pyspider/libs/log.py,1,!/usr/bin/env python,not
+pyspider/pyspider/libs/log.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/libs/log.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/libs/log.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/libs/log.py,5,http://binux.me,not
+pyspider/pyspider/libs/log.py,6,Created on 2012-10-24 16:08:17,not
+pyspider/pyspider/libs/base_handler.py,1,!/usr/bin/env python,not
+pyspider/pyspider/libs/base_handler.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/libs/base_handler.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/libs/base_handler.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/libs/base_handler.py,5,http://binux.me,not
+pyspider/pyspider/libs/base_handler.py,6,Created on 2014-02-16 23:12:48,not
+pyspider/pyspider/libs/base_handler.py,73,"mark the function with variable 'is_cronjob=True', the function would be",not
+pyspider/pyspider/libs/base_handler.py,74,collected into the list Handler._cron_jobs by meta class,not
+pyspider/pyspider/libs/base_handler.py,77,"collect interval and unify to seconds, it's used in meta class. See the",not
+pyspider/pyspider/libs/base_handler.py,78,comments in meta class.,not
+pyspider/pyspider/libs/base_handler.py,103,A list of all functions which is marked as 'is_cronjob=True',not
+pyspider/pyspider/libs/base_handler.py,106,The min_tick is the greatest common divisor(GCD) of the interval of cronjobs,not
+pyspider/pyspider/libs/base_handler.py,107,this value would be queried by scheduler when the project initial loaded.,not
+pyspider/pyspider/libs/base_handler.py,108,Scheudler may only send _on_cronjob task every min_tick seconds. It can reduce,not
+pyspider/pyspider/libs/base_handler.py,109,the number of tasks sent from scheduler.,not
+pyspider/pyspider/libs/base_handler.py,171,do not run_func when 304,not
+pyspider/pyspider/libs/base_handler.py,346,apis,not
+pyspider/pyspider/libs/base_handler.py,441,"When triggered, a '_on_cronjob' task is sent from scheudler with 'tick' in",not
+pyspider/pyspider/libs/base_handler.py,442,Response.save. Scheduler may at least send the trigger task every GCD of the,not
+pyspider/pyspider/libs/base_handler.py,443,inverval of the cronjobs. The method should check the tick for each cronjob,not
+pyspider/pyspider/libs/base_handler.py,444,function to confirm the execute interval.,not
+pyspider/pyspider/libs/utils.py,1,!/usr/bin/env python,not
+pyspider/pyspider/libs/utils.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/libs/utils.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/libs/utils.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/libs/utils.py,5,http://binux.me,not
+pyspider/pyspider/libs/utils.py,6,Created on 2012-11-06 11:50:13,not
+pyspider/pyspider/libs/utils.py,94,"Due to click skew, things are some things slightly",not
+pyspider/pyspider/libs/utils.py,95,in the future. Round timestamps in the immediate,not
+pyspider/pyspider/libs/utils.py,96,future down to now in relative mode.,not
+pyspider/pyspider/libs/utils.py,99,"Otherwise, future dates always use the full format.",not
+pyspider/pyspider/libs/utils.py,155,"11mo, since confusing for same month last year",not
+pyspider/pyspider/libs/utils.py,411,inject exit method,not
+pyspider/pyspider/libs/response.py,1,!/usr/bin/env python,not
+pyspider/pyspider/libs/response.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/libs/response.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/libs/response.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/libs/response.py,5,http://binux.me,not
+pyspider/pyspider/libs/response.py,6,Created on 2012-11-02 11:16:02,not
+pyspider/pyspider/libs/response.py,71,content is unicode,not
+pyspider/pyspider/libs/response.py,75,Try charset from content-type or content,not
+pyspider/pyspider/libs/response.py,78,Fallback to auto-detected encoding.,not
+pyspider/pyspider/libs/response.py,115,Decode unicode from given encoding.,not
+pyspider/pyspider/libs/response.py,119,A LookupError is raised if the encoding was not found which could,not
+pyspider/pyspider/libs/response.py,120,indicate a misspelling or similar mistake.,not
+pyspider/pyspider/libs/response.py,121,,not
+pyspider/pyspider/libs/response.py,122,So we try blindly encoding.,not
+pyspider/pyspider/libs/response.py,157,lxml would raise LookupError when encoding not supported,not
+pyspider/pyspider/libs/response.py,158,try fromstring without encoding instead.,not
+pyspider/pyspider/libs/response.py,159,"on windows, unicode is not availabe as encoding for lxml",not
+pyspider/pyspider/libs/url.py,1,!/usr/bin/env python,not
+pyspider/pyspider/libs/url.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/libs/url.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/libs/url.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/libs/url.py,5,http://binux.me,not
+pyspider/pyspider/libs/url.py,6,Created on 2012-11-09 14:39:57,not
+pyspider/pyspider/libs/url.py,32,Support for unicode domain names and paths.,not
+pyspider/pyspider/libs/url.py,82,curl,not
+pyspider/pyspider/libs/url.py,85,waiting for url,not
+pyspider/pyspider/libs/url.py,88,flags,not
+pyspider/pyspider/libs/url.py,94,option,not
+pyspider/pyspider/libs/counter.py,1,!/usr/bin/env python,not
+pyspider/pyspider/libs/counter.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/libs/counter.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/libs/counter.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/libs/counter.py,5,http://binux.me,not
+pyspider/pyspider/libs/counter.py,6,Created on 2012-11-14 17:09:50,not
+pyspider/pyspider/libs/counter.py,359,"assert all(isinstance(k, six.string_types) for k in key)",not
+pyspider/pyspider/libs/sample_handler.py,1,!/usr/bin/env python,not
+pyspider/pyspider/libs/sample_handler.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/libs/sample_handler.py,3,Created on __DATE__,not
+pyspider/pyspider/libs/sample_handler.py,4,Project: __PROJECT_NAME__,not
+pyspider/pyspider/libs/result_dump.py,1,!/usr/bin/env python,not
+pyspider/pyspider/libs/result_dump.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/libs/result_dump.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/libs/result_dump.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/libs/result_dump.py,5,http://binux.me,not
+pyspider/pyspider/libs/result_dump.py,6,Created on 2015-03-27 20:12:11,not
+pyspider/pyspider/libs/result_dump.py,90,python2 needs byes when python3 needs unicode,not
+pyspider/pyspider/scheduler/scheduler.py,1,!/usr/bin/env python,not
+pyspider/pyspider/scheduler/scheduler.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/scheduler/scheduler.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/scheduler/scheduler.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/scheduler/scheduler.py,5,http://binux.me,not
+pyspider/pyspider/scheduler/scheduler.py,6,Created on 2014-02-07 17:05:11,not
+pyspider/pyspider/scheduler/scheduler.py,38,selected tasks after recent pause,not
+pyspider/pyspider/scheduler/scheduler.py,39,wait for scheduler.FAIL_PAUSE_NUM loop steps before sending the event,not
+pyspider/pyspider/scheduler/scheduler.py,56,unpaused --(last FAIL_PAUSE_NUM task failed)--> paused --(PAUSE_TIME)--> unpause_checking,not
+pyspider/pyspider/scheduler/scheduler.py,57,unpaused <--(last UNPAUSE_CHECK_NUM task have success)--|,not
+pyspider/pyspider/scheduler/scheduler.py,58,paused <--(last UNPAUSE_CHECK_NUM task no success)--|,not
+pyspider/pyspider/scheduler/scheduler.py,62,ignore select task,not
+pyspider/pyspider/scheduler/scheduler.py,85,ignore select task,not
+pyspider/pyspider/scheduler/scheduler.py,90,break with enough check cnt,not
+pyspider/pyspider/scheduler/scheduler.py,167,current not used,not
+pyspider/pyspider/scheduler/scheduler.py,168,current not used,not
+pyspider/pyspider/scheduler/scheduler.py,232,update project runtime info from processor by sending a _on_get_info,not
+pyspider/pyspider/scheduler/scheduler.py,233,"request, result is in status_page.track.save",not
+pyspider/pyspider/scheduler/scheduler.py,248,load task queue when project is running and delete task_queue when project is stoped,not
+pyspider/pyspider/scheduler/scheduler.py,354,check _on_get_info result here,not
+pyspider/pyspider/scheduler/scheduler.py,376,check _postpone_request first,not
+pyspider/pyspider/scheduler/scheduler.py,468,use force=False here to prevent automatic send_buffer append and get exception,not
+pyspider/pyspider/scheduler/scheduler.py,482,"dynamic assign select limit for each project, use qsize as weight",not
+pyspider/pyspider/scheduler/scheduler.py,484,type:Project,not
+pyspider/pyspider/scheduler/scheduler.py,487,"only check project pause when select new tasks, cronjob and new request still working",not
+pyspider/pyspider/scheduler/scheduler.py,493,task queue,not
+pyspider/pyspider/scheduler/scheduler.py,494,type:TaskQueue,not
+pyspider/pyspider/scheduler/scheduler.py,500,ensure minimum select limit for each project,not
+pyspider/pyspider/scheduler/scheduler.py,501,ensure maximum select limit for each project,not
+pyspider/pyspider/scheduler/scheduler.py,507,type:Project,not
+pyspider/pyspider/scheduler/scheduler.py,509,task queue,not
+pyspider/pyspider/scheduler/scheduler.py,514,calculate select limit for project,not
+pyspider/pyspider/scheduler/scheduler.py,524,"check send_buffer here. when not empty, out_queue may blocked. Not sending tasks",not
+pyspider/pyspider/scheduler/scheduler.py,540,check and send finished event to project,not
+pyspider/pyspider/scheduler/scheduler.py,542,wait for self.FAIL_PAUSE_NUM steps to make sure all tasks in queue have been processed,not
+pyspider/pyspider/scheduler/scheduler.py,579,print top 5 active counters,not
+pyspider/pyspider/scheduler/scheduler.py,656,stop xmlrpc server,not
+pyspider/pyspider/scheduler/scheduler.py,777,"fix for ""<type 'exceptions.TypeError'>:dictionary key must be string""",not
+pyspider/pyspider/scheduler/scheduler.py,778,have no idea why,SATD
+pyspider/pyspider/scheduler/scheduler.py,847,"when a task is in processing, the modify may conflict with the running task.",not
+pyspider/pyspider/scheduler/scheduler.py,848,postpone the modify after task finished.,not
+pyspider/pyspider/scheduler/scheduler.py,985,"self._cnt['all'].event((project, 'retry'), +1)",not
+pyspider/pyspider/scheduler/scheduler.py,992,inject informations about project,not
+pyspider/pyspider/scheduler/scheduler.py,1002,lazy join project.crawl_config,not
+pyspider/pyspider/scheduler/scheduler.py,1029,waiting for running tasks,not
+pyspider/pyspider/scheduler/scheduler.py,1046,looking up the project instance,not
+pyspider/pyspider/scheduler/scheduler.py,1057,get task package,not
+pyspider/pyspider/scheduler/scheduler.py,1064,check task in taskdb,not
+pyspider/pyspider/scheduler/scheduler.py,1074,select the task,not
+pyspider/pyspider/scheduler/scheduler.py,1151,do with message,not
+pyspider/pyspider/scheduler/scheduler.py,1155,do with results,not
+pyspider/pyspider/scheduler/token_bucket.py,1,!/usr/bin/env python,not
+pyspider/pyspider/scheduler/token_bucket.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/scheduler/token_bucket.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/scheduler/token_bucket.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/scheduler/token_bucket.py,5,http://binux.me,not
+pyspider/pyspider/scheduler/token_bucket.py,6,Created on 2014-02-07 16:53:08,not
+pyspider/pyspider/scheduler/task_queue.py,1,!/usr/bin/env python,not
+pyspider/pyspider/scheduler/task_queue.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/scheduler/task_queue.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/scheduler/task_queue.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/scheduler/task_queue.py,5,http://binux.me,not
+pyspider/pyspider/scheduler/task_queue.py,6,Created on 2014-02-07 13:12:10,not
+pyspider/pyspider/scheduler/task_queue.py,61,compare in-queue sequence number finally if two element has the same,not
+pyspider/pyspider/scheduler/task_queue.py,62,priority or exetime,not
+pyspider/pyspider/scheduler/task_queue.py,173,type: InQueueTask,not
+pyspider/pyspider/scheduler/task_queue.py,215,force update a processing task is not allowed as there are so many,not
+pyspider/pyspider/scheduler/task_queue.py,216,problems may happen,not
+pyspider/pyspider/scheduler/__init__.py,1,NOQA,not
+pyspider/pyspider/database/basedb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/basedb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/basedb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/basedb.py,4,Author: Binux<i@binux.com>,not
+pyspider/pyspider/database/basedb.py,5,http://binux.me,not
+pyspider/pyspider/database/basedb.py,6,Created on 2012-08-30 17:43:49,not
+pyspider/pyspider/database/basedb.py,77,f[0] may return bytes type,not
+pyspider/pyspider/database/basedb.py,78,https://github.com/mysql/mysql-connector-python/pull/37,not
+pyspider/pyspider/database/__init__.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/__init__.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/__init__.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/__init__.py,5,http://binux.me,not
+pyspider/pyspider/database/__init__.py,6,Created on 2014-10-08 15:04:08,not
+pyspider/pyspider/database/__init__.py,52,NOQA,not
+pyspider/pyspider/database/__init__.py,188,"in python 2.6 url like ""http://host/?query"", query will not been splitted",not
+pyspider/pyspider/database/__init__.py,216,"default to env, then url, then hard coded",not
+pyspider/pyspider/database/__init__.py,220,create necessary DBs + the admin user,not
+pyspider/pyspider/database/__init__.py,223,user is already created. This will happen if CouchDB is running in docker,not
+pyspider/pyspider/database/__init__.py,224,and COUCHDB_USER and COUCHDB_PASSWORD are set,not
+pyspider/pyspider/database/local/projectdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/local/projectdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/local/projectdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/local/projectdb.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/local/projectdb.py,5,http://binux.me,not
+pyspider/pyspider/database/local/projectdb.py,6,Created on 2015-01-17 12:32:17,not
+pyspider/pyspider/database/local/__init__.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/local/__init__.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/local/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/local/__init__.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/local/__init__.py,5,http://binux.me,not
+pyspider/pyspider/database/local/__init__.py,6,Created on 2015-01-17 20:56:50,not
+pyspider/pyspider/database/elasticsearch/taskdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/elasticsearch/taskdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/elasticsearch/taskdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/elasticsearch/taskdb.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/elasticsearch/taskdb.py,5,http://binux.me,not
+pyspider/pyspider/database/elasticsearch/taskdb.py,6,Created on 2016-01-20 20:20:55,not
+pyspider/pyspider/database/elasticsearch/projectdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/elasticsearch/projectdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/elasticsearch/projectdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/elasticsearch/projectdb.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/elasticsearch/projectdb.py,5,http://binux.me,not
+pyspider/pyspider/database/elasticsearch/projectdb.py,6,Created on 2016-01-17 18:32:33,not
+pyspider/pyspider/database/elasticsearch/resultdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/elasticsearch/resultdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/elasticsearch/resultdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/elasticsearch/resultdb.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/elasticsearch/resultdb.py,5,http://binux.me,not
+pyspider/pyspider/database/elasticsearch/resultdb.py,6,Created on 2016-01-18 19:41:24,not
+pyspider/pyspider/database/elasticsearch/__init__.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/elasticsearch/__init__.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/elasticsearch/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/elasticsearch/__init__.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/elasticsearch/__init__.py,5,http://binux.me,not
+pyspider/pyspider/database/elasticsearch/__init__.py,6,Created on 2016-01-17 18:31:58,not
+pyspider/pyspider/database/sqlite/sqlitebase.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/sqlite/sqlitebase.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/sqlite/sqlitebase.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/sqlite/sqlitebase.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/sqlite/sqlitebase.py,5,http://binux.me,not
+pyspider/pyspider/database/sqlite/sqlitebase.py,6,Created on 2014-11-22 20:30:44,not
+pyspider/pyspider/database/sqlite/taskdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/sqlite/taskdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/sqlite/taskdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/sqlite/taskdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/sqlite/taskdb.py,5,http://binux.me,not
+pyspider/pyspider/database/sqlite/taskdb.py,6,Created on 2014-02-08 10:25:34,not
+pyspider/pyspider/database/sqlite/projectdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/sqlite/projectdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/sqlite/projectdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/sqlite/projectdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/sqlite/projectdb.py,5,http://binux.me,not
+pyspider/pyspider/database/sqlite/projectdb.py,6,Created on 2014-02-09 12:05:52,not
+pyspider/pyspider/database/sqlite/resultdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/sqlite/resultdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/sqlite/resultdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/sqlite/resultdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/sqlite/resultdb.py,5,http://binux.me,not
+pyspider/pyspider/database/sqlite/resultdb.py,6,Created on 2014-10-13 17:08:43,not
+pyspider/pyspider/database/mysql/taskdb.py,1,!/usr/bin/envutils,not
+pyspider/pyspider/database/mysql/taskdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/mysql/taskdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/mysql/taskdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/mysql/taskdb.py,5,http://binux.me,not
+pyspider/pyspider/database/mysql/taskdb.py,6,Created on 2014-07-17 18:53:01,not
+pyspider/pyspider/database/mysql/projectdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/mysql/projectdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/mysql/projectdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/mysql/projectdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/mysql/projectdb.py,5,http://binux.me,not
+pyspider/pyspider/database/mysql/projectdb.py,6,Created on 2014-07-17 21:06:43,not
+pyspider/pyspider/database/mysql/resultdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/mysql/resultdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/mysql/resultdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/mysql/resultdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/mysql/resultdb.py,5,http://binux.me,not
+pyspider/pyspider/database/mysql/resultdb.py,6,Created on 2014-10-13 22:02:57,not
+pyspider/pyspider/database/mysql/mysqlbase.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/mysql/mysqlbase.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/mysql/mysqlbase.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/mysql/mysqlbase.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/mysql/mysqlbase.py,5,http://binux.me,not
+pyspider/pyspider/database/mysql/mysqlbase.py,6,Created on 2014-11-05 10:42:24,not
+pyspider/pyspider/database/mysql/__init__.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/mysql/__init__.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/mysql/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/mysql/__init__.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/mysql/__init__.py,5,http://binux.me,not
+pyspider/pyspider/database/mysql/__init__.py,6,Created on 2014-07-17 20:12:54,not
+pyspider/pyspider/database/couchdb/taskdb.py,28,create index,not
+pyspider/pyspider/database/couchdb/projectdb.py,16,Create the db,not
+pyspider/pyspider/database/couchdb/projectdb.py,25,create index,not
+pyspider/pyspider/database/couchdb/projectdb.py,61,object contains the fields to update and their new values,not
+pyspider/pyspider/database/couchdb/projectdb.py,62,update will contain _rev,not
+pyspider/pyspider/database/couchdb/resultdb.py,26,create index,not
+pyspider/pyspider/database/couchdb/resultdb.py,108,drop the project,not
+pyspider/pyspider/database/redis/taskdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/redis/taskdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/redis/taskdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/redis/taskdb.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/redis/taskdb.py,5,http://binux.me,not
+pyspider/pyspider/database/redis/taskdb.py,6,Created on 2015-05-16 21:01:52,not
+pyspider/pyspider/database/redis/taskdb.py,100,"self.redis.srem(status_key, taskid)",not
+pyspider/pyspider/database/redis/__init__.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/redis/__init__.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/redis/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/redis/__init__.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/redis/__init__.py,5,http://binux.me,not
+pyspider/pyspider/database/redis/__init__.py,6,Created on 2015-05-17 01:34:21,not
+pyspider/pyspider/database/base/taskdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/base/taskdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/base/taskdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/base/taskdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/base/taskdb.py,5,http://binux.me,not
+pyspider/pyspider/database/base/taskdb.py,6,Created on 2014-02-08 10:28:48,not
+pyspider/pyspider/database/base/taskdb.py,8,task schema,not
+pyspider/pyspider/database/base/taskdb.py,11,"new, not change",not
+pyspider/pyspider/database/base/taskdb.py,12,"new, not change",not
+pyspider/pyspider/database/base/taskdb.py,13,"new, not change",not
+pyspider/pyspider/database/base/taskdb.py,14,change,not
+pyspider/pyspider/database/base/taskdb.py,22,'recrawl': int,not
+pyspider/pyspider/database/base/taskdb.py,23,new and restart,not
+pyspider/pyspider/database/base/taskdb.py,30,new and restart,not
+pyspider/pyspider/database/base/taskdb.py,33,new and restart,not
+pyspider/pyspider/database/base/taskdb.py,51,jsonable object saved by processor,not
+pyspider/pyspider/database/base/taskdb.py,52,finish,not
+pyspider/pyspider/database/base/taskdb.py,53,keep between request,not
+pyspider/pyspider/database/base/taskdb.py,54,keep between request,not
+pyspider/pyspider/database/base/taskdb.py,65,projects in taskdb,not
+pyspider/pyspider/database/base/projectdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/base/projectdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/base/projectdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/base/projectdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/base/projectdb.py,5,http://binux.me,not
+pyspider/pyspider/database/base/projectdb.py,6,Created on 2014-02-09 11:28:52,not
+pyspider/pyspider/database/base/projectdb.py,10,"NOTE: When get/get_all/check_update from database with default fields,",not
+pyspider/pyspider/database/base/projectdb.py,11,all following fields should be included in output dict.,not
+pyspider/pyspider/database/base/projectdb.py,18,"'config': str,",not
+pyspider/pyspider/database/base/projectdb.py,20,"'priority': int,",not
+pyspider/pyspider/database/base/resultdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/base/resultdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/base/resultdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/base/resultdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/base/resultdb.py,5,http://binux.me,not
+pyspider/pyspider/database/base/resultdb.py,6,Created on 2014-10-11 18:40:03,not
+pyspider/pyspider/database/base/resultdb.py,8,result schema,not
+pyspider/pyspider/database/base/resultdb.py,11,"new, not changeable",not
+pyspider/pyspider/database/base/resultdb.py,12,"new, not changeable",not
+pyspider/pyspider/database/base/resultdb.py,13,"new, not changeable",not
+pyspider/pyspider/database/base/resultdb.py,14,json string,not
+pyspider/pyspider/database/base/resultdb.py,24,projects in resultdb,not
+pyspider/pyspider/database/sqlalchemy/taskdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/sqlalchemy/taskdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/sqlalchemy/taskdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/sqlalchemy/taskdb.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/sqlalchemy/taskdb.py,5,http://binux.me,not
+pyspider/pyspider/database/sqlalchemy/taskdb.py,6,Created on 2014-12-04 22:33:43,not
+pyspider/pyspider/database/sqlalchemy/projectdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/sqlalchemy/projectdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/sqlalchemy/projectdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/sqlalchemy/projectdb.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/sqlalchemy/projectdb.py,5,http://binux.me,not
+pyspider/pyspider/database/sqlalchemy/projectdb.py,6,Created on 2014-12-04 23:25:10,not
+pyspider/pyspider/database/sqlalchemy/resultdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/sqlalchemy/resultdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/sqlalchemy/resultdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/sqlalchemy/resultdb.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/sqlalchemy/resultdb.py,5,http://binux.me,not
+pyspider/pyspider/database/sqlalchemy/resultdb.py,6,Created on 2014-12-04 18:48:15,not
+pyspider/pyspider/database/sqlalchemy/sqlalchemybase.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/sqlalchemy/sqlalchemybase.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/sqlalchemy/sqlalchemybase.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/sqlalchemy/sqlalchemybase.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/sqlalchemy/sqlalchemybase.py,5,http://binux.me,not
+pyspider/pyspider/database/sqlalchemy/sqlalchemybase.py,6,Created on 2014-12-04 18:48:47,not
+pyspider/pyspider/database/sqlalchemy/__init__.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/sqlalchemy/__init__.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/sqlalchemy/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/sqlalchemy/__init__.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/sqlalchemy/__init__.py,5,http://binux.me,not
+pyspider/pyspider/database/sqlalchemy/__init__.py,6,Created on 2014-12-04 20:11:04,not
+pyspider/pyspider/database/mongodb/taskdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/mongodb/taskdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/mongodb/taskdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/mongodb/taskdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/mongodb/taskdb.py,5,http://binux.me,not
+pyspider/pyspider/database/mongodb/taskdb.py,6,Created on 2014-10-11 23:54:50,not
+pyspider/pyspider/database/mongodb/taskdb.py,27,"we suggest manually build index in advance, instead of indexing",not
+pyspider/pyspider/database/mongodb/taskdb.py,28,"in the startup process,",not
+pyspider/pyspider/database/mongodb/taskdb.py,29,for project in self.projects:,not
+pyspider/pyspider/database/mongodb/taskdb.py,30,collection_name = self._collection_name(project),not
+pyspider/pyspider/database/mongodb/taskdb.py,31,self.database[collection_name].ensure_index('status'),not
+pyspider/pyspider/database/mongodb/taskdb.py,32,self.database[collection_name].ensure_index('taskid'),not
+pyspider/pyspider/database/mongodb/taskdb.py,91,"when there are too many data in task collection , aggregate operation will take a very long time,",not
+pyspider/pyspider/database/mongodb/taskdb.py,92,and this will cause scheduler module startup to be particularly slow,not
+pyspider/pyspider/database/mongodb/taskdb.py,94,ret = self.database[collection_name].aggregate([,not
+pyspider/pyspider/database/mongodb/taskdb.py,95,{'$group': {,not
+pyspider/pyspider/database/mongodb/taskdb.py,96,"'_id'  : '$status',",not
+pyspider/pyspider/database/mongodb/taskdb.py,97,'total': {,not
+pyspider/pyspider/database/mongodb/taskdb.py,98,'$sum': 1,not
+pyspider/pyspider/database/mongodb/taskdb.py,99,},not
+pyspider/pyspider/database/mongodb/taskdb.py,100,},not
+pyspider/pyspider/database/mongodb/taskdb.py,101,}]),not
+pyspider/pyspider/database/mongodb/taskdb.py,103,"Instead of aggregate, use find-count on status(with index) field.",not
+pyspider/pyspider/database/mongodb/projectdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/mongodb/projectdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/mongodb/projectdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/mongodb/projectdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/mongodb/projectdb.py,5,http://binux.me,not
+pyspider/pyspider/database/mongodb/projectdb.py,6,Created on 2014-10-12 12:22:42,not
+pyspider/pyspider/database/mongodb/resultdb.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/mongodb/resultdb.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/mongodb/resultdb.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/mongodb/resultdb.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/database/mongodb/resultdb.py,5,http://binux.me,not
+pyspider/pyspider/database/mongodb/resultdb.py,6,Created on 2014-10-13 22:18:36,not
+pyspider/pyspider/database/mongodb/resultdb.py,27,"we suggest manually build index in advance, instead of indexing",not
+pyspider/pyspider/database/mongodb/resultdb.py,28,"in the startup process,",not
+pyspider/pyspider/database/mongodb/resultdb.py,29,for project in self.projects:,not
+pyspider/pyspider/database/mongodb/resultdb.py,30,collection_name = self._collection_name(project),not
+pyspider/pyspider/database/mongodb/resultdb.py,31,self.database[collection_name].ensure_index('taskid'),not
+pyspider/pyspider/database/mongodb/mongodbbase.py,1,!/usr/bin/env python,not
+pyspider/pyspider/database/mongodb/mongodbbase.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/database/mongodb/mongodbbase.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/database/mongodb/mongodbbase.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/database/mongodb/mongodbbase.py,5,http://binux.me,not
+pyspider/pyspider/database/mongodb/mongodbbase.py,6,Created on 2014-11-22 20:42:01,not
+pyspider/pyspider/processor/project_module.py,1,!/usr/bin/env python,not
+pyspider/pyspider/processor/project_module.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/processor/project_module.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/processor/project_module.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/processor/project_module.py,5,http://binux.me,not
+pyspider/pyspider/processor/project_module.py,6,Created on 2014-02-16 22:24:20,not
+pyspider/pyspider/processor/project_module.py,40,fix for old non-package version scripts,not
+pyspider/pyspider/processor/project_module.py,53,logger inject,not
+pyspider/pyspider/processor/processor.py,1,!/usr/bin/env python,not
+pyspider/pyspider/processor/processor.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/processor/processor.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/processor/processor.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/processor/processor.py,5,http://binux.me,not
+pyspider/pyspider/processor/processor.py,6,Created on 2014-02-16 22:59:56,not
+pyspider/pyspider/processor/processor.py,167,FIXME: unicode_obj should used in scheduler before store to database,SATD
+pyspider/pyspider/processor/processor.py,168,it's used here for performance.,not
+pyspider/pyspider/processor/processor.py,171,FIXME: unicode_obj should used in scheduler before store to database,SATD
+pyspider/pyspider/processor/processor.py,172,it's used here for performance.,not
+pyspider/pyspider/fetcher/cookie_utils.py,1,!/usr/bin/env python,not
+pyspider/pyspider/fetcher/cookie_utils.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/fetcher/cookie_utils.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/fetcher/cookie_utils.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/fetcher/cookie_utils.py,5,http://binux.me,not
+pyspider/pyspider/fetcher/cookie_utils.py,6,Created on 2014-12-14 09:07:11,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,1,!/usr/bin/env python,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,5,http://binux.me,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,6,Created on 2012-12-17 11:07:19,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,79,1h,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,94,binding io_loop to http_client here,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,238,proxy,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,259,etag,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,268,last modifed,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,278,timeout,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,282,data rename to body,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,333,setup request parameters,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,338,fix for tornado request obj,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,353,we will handle redirects by hand to capture cookies,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,356,making requests,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,358,robots.txt,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,367,"if cookie already in header, get_cookie_header wouldn't work",not
+pyspider/pyspider/fetcher/tornado_fetcher.py,437,check phantomjs proxy is enabled,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,452,setup request parameters,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,459,robots.txt,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,492,making requests,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,538,check phantomjs proxy is enabled,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,553,setup request parameters,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,560,robots.txt,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,596,making requests,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,646,check puppeteer proxy is enabled,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,661,setup request parameters,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,668,robots.txt,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,702,making requests,not
+pyspider/pyspider/fetcher/tornado_fetcher.py,757,FIXME: decode unicode_obj should used after data selete from,SATD
+pyspider/pyspider/fetcher/tornado_fetcher.py,758,"database, it's used here for performance",not
+pyspider/pyspider/webui/task.py,1,!/usr/bin/env python,not
+pyspider/pyspider/webui/task.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/webui/task.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/webui/task.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/webui/task.py,5,http://binux.me,not
+pyspider/pyspider/webui/task.py,6,Created on 2014-07-16 15:30:57,not
+pyspider/pyspider/webui/app.py,1,!/usr/bin/env python,not
+pyspider/pyspider/webui/app.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/webui/app.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/webui/app.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/webui/app.py,5,http://binux.me,not
+pyspider/pyspider/webui/app.py,6,Created on 2014-02-22 23:17:13,not
+pyspider/pyspider/webui/app.py,107,"cdn = app.config.get('cdn', 'http://cdn.staticfile.org/')",not
+pyspider/pyspider/webui/app.py,108,"cdn = app.config.get('cdn', '//cdnjs.cloudflare.com/ajax/libs/')",not
+pyspider/pyspider/webui/login.py,1,!/usr/bin/env python,not
+pyspider/pyspider/webui/login.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/webui/login.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/webui/login.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/webui/login.py,5,http://binux.me,not
+pyspider/pyspider/webui/login.py,6,Created on 2014-12-10 20:36:27,not
+pyspider/pyspider/webui/index.py,1,!/usr/bin/env python,not
+pyspider/pyspider/webui/index.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/webui/index.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/webui/index.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/webui/index.py,5,http://binux.me,not
+pyspider/pyspider/webui/index.py,6,Created on 2014-02-22 23:20:39,not
+pyspider/pyspider/webui/result.py,1,!/usr/bin/env python,not
+pyspider/pyspider/webui/result.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/webui/result.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/webui/result.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/webui/result.py,5,http://binux.me,not
+pyspider/pyspider/webui/result.py,6,Created on 2014-10-19 16:23:55,not
+pyspider/pyspider/webui/result.py,36,force update project list,not
+pyspider/pyspider/webui/bench_test.py,1,!/usr/bin/env python,not
+pyspider/pyspider/webui/bench_test.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/webui/bench_test.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/webui/bench_test.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/webui/bench_test.py,5,http://binux.me,not
+pyspider/pyspider/webui/bench_test.py,6,Created on 2014-12-08 22:31:17,not
+pyspider/pyspider/webui/__init__.py,1,!/usr/bin/env python,not
+pyspider/pyspider/webui/__init__.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/webui/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/webui/__init__.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/webui/__init__.py,5,http://binux.me,not
+pyspider/pyspider/webui/__init__.py,6,Created on 2014-02-22 23:20:40,not
+pyspider/pyspider/webui/debug.py,1,!/usr/bin/env python,not
+pyspider/pyspider/webui/debug.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/webui/debug.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/webui/debug.py,4,Author: Binux<i@binux.me>,not
+pyspider/pyspider/webui/debug.py,5,http://binux.me,not
+pyspider/pyspider/webui/debug.py,6,Created on 2014-02-23 00:19:06,not
+pyspider/pyspider/webui/debug.py,115,The code below is to mock the behavior that crawl_config been joined when selected by scheduler.,not
+pyspider/pyspider/webui/debug.py,116,"but to have a better view of joined tasks, it has been done in BaseHandler.crawl when `is_debugger is True`",SATD
+pyspider/pyspider/webui/debug.py,117,crawl_config = module['instance'].crawl_config,not
+pyspider/pyspider/webui/debug.py,118,"task = module['instance'].task_join_crawl_config(task, crawl_config)",not
+pyspider/pyspider/webui/debug.py,151,"binary data can't encode to JSON, encode result as unicode obj",not
+pyspider/pyspider/webui/debug.py,152,before send it to frontend,not
+pyspider/pyspider/webui/webdav.py,1,!/usr/bin/env python,not
+pyspider/pyspider/webui/webdav.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/webui/webdav.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/webui/webdav.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/webui/webdav.py,5,http://binux.me,not
+pyspider/pyspider/webui/webdav.py,6,Created on 2015-6-3 11:29,not
+pyspider/pyspider/webui/webdav.py,42,old class,not
+pyspider/pyspider/message_queue/kombu_queue.py,1,!/usr/bin/env python,not
+pyspider/pyspider/message_queue/kombu_queue.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/message_queue/kombu_queue.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/message_queue/kombu_queue.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/message_queue/kombu_queue.py,5,http://binux.me,not
+pyspider/pyspider/message_queue/kombu_queue.py,6,Created on 2015-05-22 20:54:01,not
+pyspider/pyspider/message_queue/rabbitmq.py,1,!/usr/bin/env python,not
+pyspider/pyspider/message_queue/rabbitmq.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/message_queue/rabbitmq.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/message_queue/rabbitmq.py,4,Author: Binux<17175297.hk@gmail.com>,not
+pyspider/pyspider/message_queue/rabbitmq.py,5,http://binux.me,not
+pyspider/pyspider/message_queue/rabbitmq.py,6,Created on 2012-11-15 17:27:54,not
+pyspider/pyspider/message_queue/rabbitmq.py,103,self.channel.queue_purge(self.name),not
+pyspider/pyspider/message_queue/rabbitmq.py,238,self.channel.queue_purge(self.name),not
+pyspider/pyspider/message_queue/redis_queue.py,1,!/usr/bin/env python,not
+pyspider/pyspider/message_queue/redis_queue.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/message_queue/redis_queue.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/message_queue/redis_queue.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/message_queue/redis_queue.py,5,http://binux.me,not
+pyspider/pyspider/message_queue/redis_queue.py,6,Created on 2015-04-27 22:48:04,not
+pyspider/pyspider/message_queue/__init__.py,1,!/usr/bin/env python,not
+pyspider/pyspider/message_queue/__init__.py,2,-*- encoding: utf-8 -*-,not
+pyspider/pyspider/message_queue/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/pyspider/message_queue/__init__.py,4,Author: Binux<roy@binux.me>,not
+pyspider/pyspider/message_queue/__init__.py,5,http://binux.me,not
+pyspider/pyspider/message_queue/__init__.py,6,Created on 2015-04-30 21:47:08,not
+pyspider/tools/migrate.py,1,!/usr/bin/env python,not
+pyspider/tools/migrate.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tools/migrate.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tools/migrate.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tools/migrate.py,5,http://binux.me,not
+pyspider/tools/migrate.py,6,Created on 2015-09-30 23:22:46,not
+pyspider/tests/test_xmlrpc.py,1,Copyright (c) 2006-2007 Open Source Applications Foundation,not
+pyspider/tests/test_xmlrpc.py,2,,not
+pyspider/tests/test_xmlrpc.py,3,"Licensed under the Apache License, Version 2.0 (the ""License"");",not
+pyspider/tests/test_xmlrpc.py,4,you may not use this file except in compliance with the License.,not
+pyspider/tests/test_xmlrpc.py,5,You may obtain a copy of the License at,not
+pyspider/tests/test_xmlrpc.py,6,,not
+pyspider/tests/test_xmlrpc.py,7,http://www.apache.org/licenses/LICENSE-2.0,not
+pyspider/tests/test_xmlrpc.py,8,,not
+pyspider/tests/test_xmlrpc.py,9,"Unless required by applicable law or agreed to in writing, software",not
+pyspider/tests/test_xmlrpc.py,10,"distributed under the License is distributed on an ""AS IS"" BASIS,",not
+pyspider/tests/test_xmlrpc.py,11,"WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.",not
+pyspider/tests/test_xmlrpc.py,12,See the License for the specific language governing permissions and,not
+pyspider/tests/test_xmlrpc.py,13,limitations under the License.,not
+pyspider/tests/test_xmlrpc.py,14,,not
+pyspider/tests/test_xmlrpc.py,15,Origin: https://code.google.com/p/wsgi-xmlrpc/,not
+pyspider/tests/test_message_queue.py,1,!/usr/bin/env python,not
+pyspider/tests/test_message_queue.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_message_queue.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_message_queue.py,4,Author: Binux<i@binux.me>,not
+pyspider/tests/test_message_queue.py,5,http://binux.me,not
+pyspider/tests/test_message_queue.py,6,Created on 2014-10-07 10:33:38,not
+pyspider/tests/test_message_queue.py,76,"@unittest.skipIf(six.PY3, 'pika not suport python 3')",not
+pyspider/tests/test_scheduler.py,1,!/usr/bin/env python,not
+pyspider/tests/test_scheduler.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_scheduler.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_scheduler.py,4,Author: Binux<i@binux.me>,not
+pyspider/tests/test_scheduler.py,5,http://binux.me,not
+pyspider/tests/test_scheduler.py,6,Created on 2014-02-08 22:37:13,not
+pyspider/tests/test_scheduler.py,144,not dispatch cronjob,not
+pyspider/tests/test_scheduler.py,174,unknown project: test_project,not
+pyspider/tests/test_scheduler.py,205,"select test_project:_on_get_info data:,_on_get_info",not
+pyspider/tests/test_scheduler.py,216,test_project on_get_info {},not
+pyspider/tests/test_scheduler.py,231,"select test_project_not_started:_on_get_info data:,_on_get_info",not
+pyspider/tests/test_scheduler.py,252,new task test_project:taskid url,not
+pyspider/tests/test_scheduler.py,253,task_queue = [ test_project:taskid ],not
+pyspider/tests/test_scheduler.py,256,select test_project:taskid,not
+pyspider/tests/test_scheduler.py,279,restart task test_project:taskid url_force_update,not
+pyspider/tests/test_scheduler.py,281,it should not block next,not
+pyspider/tests/test_scheduler.py,291,unknown project: no_project,not
+pyspider/tests/test_scheduler.py,303,Bad status pack: 'track',not
+pyspider/tests/test_scheduler.py,311,Bad status pack: 'process',not
+pyspider/tests/test_scheduler.py,331,task retry 0/3 test_project:taskid url,not
+pyspider/tests/test_scheduler.py,333,with self.assertRaises(Queue.Empty):,not
+pyspider/tests/test_scheduler.py,334,task = self.scheduler2fetcher.get(timeout=4),not
+pyspider/tests/test_scheduler.py,335,select test_project:taskid url,not
+pyspider/tests/test_scheduler.py,354,task done test_project:taskid url,not
+pyspider/tests/test_scheduler.py,359,"select test_project:on_finished data:,on_finished",not
+pyspider/tests/test_scheduler.py,375,task done test_project:on_finished url,not
+pyspider/tests/test_scheduler.py,441,restart task test_project:taskid url,not
+pyspider/tests/test_scheduler.py,443,select test_project:taskid url,not
+pyspider/tests/test_scheduler.py,447,task done test_project:taskid url,not
+pyspider/tests/test_scheduler.py,448,"select test_project:on_finished data:,on_finished",not
+pyspider/tests/test_scheduler.py,465,restart task test_project:taskid url,not
+pyspider/tests/test_scheduler.py,466,select test_project:taskid url,not
+pyspider/tests/test_scheduler.py,486,task retry 0/1 test_project:taskid url,not
+pyspider/tests/test_scheduler.py,487,select test_project:taskid url,not
+pyspider/tests/test_scheduler.py,503,task failed test_project:taskid url,not
+pyspider/tests/test_scheduler.py,505,"select test_project:on_finished data:,on_finished",not
+pyspider/tests/test_scheduler.py,513,"'taskid': 'taskid#',",not
+pyspider/tests/test_scheduler.py,516,"taskid not in task: {'project': 'test_project', 'url': 'url'}",not
+pyspider/tests/test_scheduler.py,519,"'project': 'test_project',",not
+pyspider/tests/test_scheduler.py,521,"project not in task: {'url': 'url', 'taskid': 'taskid#'}",not
+pyspider/tests/test_scheduler.py,525,"'url': 'url',",not
+pyspider/tests/test_scheduler.py,526,"url not in task: {'project': 'test_project', 'taskid': 'taskid#'}",not
+pyspider/tests/test_scheduler.py,531,unknown project: not_exist_project,not
+pyspider/tests/test_scheduler.py,536,new task test_project:taskid# url,not
+pyspider/tests/test_scheduler.py,557,restart task test_project:taskid url,not
+pyspider/tests/test_scheduler.py,558,select test_project:taskid# url,not
+pyspider/tests/test_scheduler.py,559,select test_project:taskid url,not
+pyspider/tests/test_scheduler.py,581,task done test_project:taskid url,not
+pyspider/tests/test_scheduler.py,610,not processing pack: test_project:taskid url,not
+pyspider/tests/test_scheduler.py,611,select test_project:taskid url,not
+pyspider/tests/test_scheduler.py,612,task retry 0/1 test_project:taskid url,not
+pyspider/tests/test_scheduler.py,613,select test_project:taskid url,not
+pyspider/tests/test_scheduler.py,614,task retry 0/1 test_project:taskid url,not
+pyspider/tests/test_scheduler.py,615,select test_project:taskid url,not
+pyspider/tests/test_scheduler.py,642,task done test_project:taskid url,not
+pyspider/tests/test_scheduler.py,664,new task test_project:taskid_to_cancel url,not
+pyspider/tests/test_scheduler.py,665,task_queue = [ test_project:taskid_to_cancel ],not
+pyspider/tests/test_scheduler.py,685,new cancel test_project:taskid_to_cancel url,not
+pyspider/tests/test_scheduler.py,686,task_queue = [ ],not
+pyspider/tests/test_scheduler.py,718,"self.assertIsNotNone(self.taskdb.get_task('test_inqueue_project', 'taskid1'))",not
+pyspider/tests/test_counter.py,1,!/usr/bin/env python,not
+pyspider/tests/test_counter.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_counter.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_counter.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/test_counter.py,5,http://binux.me,not
+pyspider/tests/test_counter.py,6,Created on 2015-04-05 00:05:58,not
+pyspider/tests/data_fetcher_processor_handler.py,1,!/usr/bin/env python,not
+pyspider/tests/data_fetcher_processor_handler.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/data_fetcher_processor_handler.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/data_fetcher_processor_handler.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/data_fetcher_processor_handler.py,5,http://binux.me,not
+pyspider/tests/data_fetcher_processor_handler.py,6,Created on 2015-01-18 14:12:55,not
+pyspider/tests/test_result_worker.py,1,!/usr/bin/env python,not
+pyspider/tests/test_result_worker.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_result_worker.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_result_worker.py,4,Author: Binux<i@binux.me>,not
+pyspider/tests/test_result_worker.py,5,http://binux.me,not
+pyspider/tests/test_result_worker.py,6,Created on 2014-11-11 20:52:53,not
+pyspider/tests/test_utils.py,1,!/usr/bin/env python,not
+pyspider/tests/test_utils.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_utils.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_utils.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/test_utils.py,5,http://binux.me,not
+pyspider/tests/test_utils.py,6,Created on 2015-01-18 16:53:49,not
+pyspider/tests/test_fetcher.py,1,!/usr/bin/env python,not
+pyspider/tests/test_fetcher.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_fetcher.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_fetcher.py,4,Author: Binux<i@binux.me>,not
+pyspider/tests/test_fetcher.py,5,http://binux.me,not
+pyspider/tests/test_fetcher.py,6,Created on 2014-02-15 22:10:35,not
+pyspider/tests/test_fetcher.py,168,utf8 encoding 中文,not
+pyspider/tests/test_fetcher.py,182,gbk encoding 中文,not
+pyspider/tests/test_fetcher.py,533,"self.assertIn('js_script_result', result) TODO: lua nil is not exists",SATD
+pyspider/tests/test_bench.py,1,!/usr/bin/env python,not
+pyspider/tests/test_bench.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_bench.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_bench.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/test_bench.py,5,http://binux.me,not
+pyspider/tests/test_bench.py,6,Created on 2014-12-10 01:34:09,not
+pyspider/tests/test_bench.py,32,cmd = [sys.executable],not
+pyspider/tests/test_task_queue.py,1,!/usr/bin/env python,not
+pyspider/tests/test_task_queue.py,2,-*- coding: utf-8 -*-,not
+pyspider/tests/test_task_queue.py,31,type:Queue.Queue,not
+pyspider/tests/test_task_queue.py,34,"six.print_('put, taskid=', it.taskid, 'priority=', it.priority, 'exetime=', it.exetime)",not
+pyspider/tests/test_task_queue.py,38,type: Queue.Queue,not
+pyspider/tests/test_task_queue.py,42,"six.print_('get, taskid=', task.taskid, 'priority=', task.priority, 'exetime=', task.exetime)",not
+pyspider/tests/test_task_queue.py,47,type:Queue.Queue,not
+pyspider/tests/test_task_queue.py,57,six.print_('Test time queue order by time only'),not
+pyspider/tests/test_task_queue.py,69,"six.print_('put, taskid=', it.taskid, 'priority=', it.priority, 'exetime=', it.exetime)",not
+pyspider/tests/test_task_queue.py,79,"six.print_('get, taskid=', t2.taskid, 'priority=', t2.priority, 'exetime=', t2.exetime)",not
+pyspider/tests/test_fetcher_processor.py,1,!/usr/bin/env python,not
+pyspider/tests/test_fetcher_processor.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_fetcher_processor.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_fetcher_processor.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/test_fetcher_processor.py,5,http://binux.me,not
+pyspider/tests/test_fetcher_processor.py,6,Created on 2015-01-18 14:09:41,not
+pyspider/tests/test_fetcher_processor.py,204,"'中文': '.', # FIXME: not work",SATD
+pyspider/tests/test_base_handler.py,1,!/usr/bin/env python,not
+pyspider/tests/test_base_handler.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_base_handler.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_base_handler.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/test_base_handler.py,5,http://binux.me,not
+pyspider/tests/test_base_handler.py,6,Created on 2017-02-26 10:35:23,not
+pyspider/tests/test_base_handler.py,39,should not affect finial task,not
+pyspider/tests/test_base_handler.py,40,should add proxy,not
+pyspider/tests/test_base_handler.py,41,should merge headers,not
+pyspider/tests/test_base_handler.py,42,should not affect cookie,not
+pyspider/tests/test_base_handler.py,43,should add header c,not
+pyspider/tests/test_processor.py,1,!/usr/bin/env python,not
+pyspider/tests/test_processor.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_processor.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_processor.py,4,Author: Binux<i@binux.me>,not
+pyspider/tests/test_processor.py,5,http://binux.me,not
+pyspider/tests/test_processor.py,6,Created on 2014-02-22 14:00:05,not
+pyspider/tests/test_processor.py,402,clear new task queue,not
+pyspider/tests/test_processor.py,405,clear status queue,not
+pyspider/tests/test_processor.py,447,clear new task queue,not
+pyspider/tests/test_processor.py,450,clear status queue,not
+pyspider/tests/test_processor.py,485,clear new task queue,not
+pyspider/tests/test_processor.py,488,clear status queue,not
+pyspider/tests/test_processor.py,513,not update,not
+pyspider/tests/test_processor.py,522,updated,not
+pyspider/tests/test_processor.py,536,update with md5,not
+pyspider/tests/test_webdav.py,1,!/usr/bin/env python,not
+pyspider/tests/test_webdav.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_webdav.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_webdav.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/test_webdav.py,5,http://binux.me,not
+pyspider/tests/test_webdav.py,6,Created on 2015-06-03 21:15,not
+pyspider/tests/data_test_webpage.py,1,!/usr/bin/env python,not
+pyspider/tests/data_test_webpage.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/data_test_webpage.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/data_test_webpage.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/data_test_webpage.py,5,http://binux.me,not
+pyspider/tests/data_test_webpage.py,6,Created on 2015-01-24 13:44:10,not
+pyspider/tests/test_result_dump.py,1,!/usr/bin/env python,not
+pyspider/tests/test_result_dump.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_result_dump.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_result_dump.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/test_result_dump.py,5,http://binux.me,not
+pyspider/tests/test_result_dump.py,6,Created on 2015-10-12 22:17:57,not
+pyspider/tests/__init__.py,1,!/usr/bin/env python,not
+pyspider/tests/__init__.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/__init__.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/__init__.py,4,Author: Binux<i@binux.me>,not
+pyspider/tests/__init__.py,5,http://binux.me,not
+pyspider/tests/__init__.py,6,Created on 2014-02-09 10:53:19,not
+pyspider/tests/data_sample_handler.py,1,!/usr/bin/env python,not
+pyspider/tests/data_sample_handler.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/data_sample_handler.py,3,Created on __DATE__,not
+pyspider/tests/data_sample_handler.py,4,Project: __PROJECT_NAME__,not
+pyspider/tests/test_run.py,1,!/usr/bin/env python,not
+pyspider/tests/test_run.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_run.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_run.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/test_run.py,5,http://binux.me,not
+pyspider/tests/test_run.py,6,Created on 2014-11-21 22:32:35,not
+pyspider/tests/test_run.py,104,TODO: MORE SPECIFIC,SATD
+pyspider/tests/test_run.py,158,create a test admin user,not
+pyspider/tests/test_run.py,174,remove the test admin user,not
+pyspider/tests/test_run.py,239,cmd = [sys.executable],not
+pyspider/tests/test_run.py,253,click run,not
+pyspider/tests/test_run.py,286,cmd = [sys.executable],not
+pyspider/tests/test_run.py,296,child,not
+pyspider/tests/test_run.py,299,parent,not
+pyspider/tests/test_database.py,1,!/usr/bin/env python,not
+pyspider/tests/test_database.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_database.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_database.py,4,Author: Binux<i@binux.me>,not
+pyspider/tests/test_database.py,5,http://binux.me,not
+pyspider/tests/test_database.py,6,Created on 2014-02-08 22:37:13,not
+pyspider/tests/test_database.py,54,"'content': 'asdfasdfasdfasdf',",not
+pyspider/tests/test_database.py,72,this test not works for mongodb,not
+pyspider/tests/test_database.py,73,def test_10_create_project(self):,not
+pyspider/tests/test_database.py,74,with self.assertRaises(AssertionError):,not
+pyspider/tests/test_database.py,75,self.taskdb._create_project('abc.abc'),not
+pyspider/tests/test_database.py,76,self.taskdb._create_project('abc'),not
+pyspider/tests/test_database.py,77,self.taskdb._list_project(),not
+pyspider/tests/test_database.py,78,"self.assertEqual(len(self.taskdb.projects), 1)",not
+pyspider/tests/test_database.py,79,"self.assertIn('abc', self.taskdb.projects)",not
+pyspider/tests/test_database.py,699,create a test admin user,not
+pyspider/tests/test_database.py,712,remove the test admin user,not
+pyspider/tests/test_database.py,727,create a test admin user,not
+pyspider/tests/test_database.py,740,remove the test admin user,not
+pyspider/tests/test_database.py,760,create a test admin user,not
+pyspider/tests/test_database.py,773,remove the test admin user,not
+pyspider/tests/test_response.py,1,!/usr/bin/env python,not
+pyspider/tests/test_response.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_response.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_response.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/test_response.py,5,http://binux.me,not
+pyspider/tests/test_response.py,6,Created on 2015-01-18 11:10:27,not
+pyspider/tests/data_handler.py,2,!/usr/bin/env python,not
+pyspider/tests/data_handler.py,3,-*- encoding: utf-8 -*-,not
+pyspider/tests/data_handler.py,4,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/data_handler.py,5,Author: Binux<i@binux.me>,not
+pyspider/tests/data_handler.py,6,http://binux.me,not
+pyspider/tests/data_handler.py,7,Created on 2014-02-22 14:02:21,not
+pyspider/tests/test_webui.py,1,!/usr/bin/env python,not
+pyspider/tests/test_webui.py,2,-*- encoding: utf-8 -*-,not
+pyspider/tests/test_webui.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/tests/test_webui.py,4,Author: Binux<roy@binux.me>,not
+pyspider/tests/test_webui.py,5,http://binux.me,not
+pyspider/tests/test_webui.py,6,Created on 2014-11-18 21:03:22,not
+pyspider/tests/test_webui.py,29,flake8: noqa,not
+pyspider/docs/conf.py,1,!/usr/bin/env python,not
+pyspider/docs/conf.py,2,-*- encoding: utf-8 -*-,not
+pyspider/docs/conf.py,3,vim: set et sw=4 ts=4 sts=4 ff=unix fenc=utf8:,not
+pyspider/docs/conf.py,4,Author: Binux<roy@binux.me>,not
+pyspider/docs/conf.py,5,http://binux.me,not
+pyspider/docs/conf.py,6,Created on 2015-11-10 01:31:54,not

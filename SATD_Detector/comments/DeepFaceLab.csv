@@ -1,969 +1,965 @@
 file path,line #,comment,satd
-DeepFaceLab/main.py,2,Fix for linux,
-DeepFaceLab/main.py,257,========== XSeg,
-DeepFaceLab/mainscripts/VideoEd.py,42,highest quality for jpg,
-DeepFaceLab/mainscripts/VideoEd.py,97,Check extension of all images,
-DeepFaceLab/mainscripts/VideoEd.py,110,Rename to temporary filenames,
-DeepFaceLab/mainscripts/VideoEd.py,120,Rename to sequental filenames,
-DeepFaceLab/mainscripts/VideoEd.py,131,Process image sequence in ffmpeg,
-DeepFaceLab/mainscripts/VideoEd.py,147,Rename to temporary filenames,
-DeepFaceLab/mainscripts/VideoEd.py,157,Rename to initial filenames,
-DeepFaceLab/mainscripts/VideoEd.py,203,probing reference file,
-DeepFaceLab/mainscripts/VideoEd.py,206,getting first video and audio streams id with fps,
-DeepFaceLab/mainscripts/VideoEd.py,216,has audio track,
-DeepFaceLab/mainscripts/VideoEd.py,220,if fps not specified and not overwritten by reference-file,
-DeepFaceLab/mainscripts/Extractor.py,42,override,
-DeepFaceLab/mainscripts/Extractor.py,53,transfer and set stdin in order to work code.interact in debug subprocess,
-DeepFaceLab/mainscripts/Extractor.py,74,"for head type, extract ""3D landmarks""",
-DeepFaceLab/mainscripts/Extractor.py,80,override,
-DeepFaceLab/mainscripts/Extractor.py,135,Image is too small,
-DeepFaceLab/mainscripts/Extractor.py,217,if re-extracting from dflimg and more than 1 or zero faces detected - dont process and just copy it,
-DeepFaceLab/mainscripts/Extractor.py,228,cannot extract more than 1 face from dflimg,
-DeepFaceLab/mainscripts/Extractor.py,251,get rid of faces which umeyama-landmark-area > 4*detector-rect-area,
-DeepFaceLab/mainscripts/Extractor.py,262,if extracting from dflimg and jpg copy it in order not to lose quality,
-DeepFaceLab/mainscripts/Extractor.py,288,overridable,
-DeepFaceLab/mainscripts/Extractor.py,290,return string identificator of your data,
-DeepFaceLab/mainscripts/Extractor.py,348,override,
-DeepFaceLab/mainscripts/Extractor.py,371,override,
-DeepFaceLab/mainscripts/Extractor.py,378,override,
-DeepFaceLab/mainscripts/Extractor.py,396,override,
-DeepFaceLab/mainscripts/Extractor.py,406,need remark image from input data that already has a marked face?,
-DeepFaceLab/mainscripts/Extractor.py,408,If there was already a face then lock the rectangle to it until the mouse is clicked,
-DeepFaceLab/mainscripts/Extractor.py,478,confirm frame,
-DeepFaceLab/mainscripts/Extractor.py,484,confirm skip frame,
-DeepFaceLab/mainscripts/Extractor.py,488,go prev frame,
-DeepFaceLab/mainscripts/Extractor.py,492,Only save the face if the rect is still locked,
-DeepFaceLab/mainscripts/Extractor.py,503,go next frame,
-DeepFaceLab/mainscripts/Extractor.py,507,Only save the face if the rect is still locked,
-DeepFaceLab/mainscripts/Extractor.py,515,skip remaining,
-DeepFaceLab/mainscripts/Extractor.py,569,override,
-DeepFaceLab/mainscripts/Extractor.py,574,override,
-DeepFaceLab/mainscripts/Extractor.py,619,override,
-DeepFaceLab/mainscripts/Extractor.py,626,override,
-DeepFaceLab/mainscripts/Extractor.py,631,override,
-DeepFaceLab/mainscripts/Extractor.py,636,override,
-DeepFaceLab/mainscripts/Extractor.py,638,return string identificator of your data,
-DeepFaceLab/mainscripts/Extractor.py,641,override,
-DeepFaceLab/mainscripts/Extractor.py,648,override,
-DeepFaceLab/mainscripts/Extractor.py,653,override,
-DeepFaceLab/mainscripts/Extractor.py,657,override,
-DeepFaceLab/mainscripts/Extractor.py,661,override,
-DeepFaceLab/mainscripts/Extractor.py,667,override,
-DeepFaceLab/mainscripts/Extractor.py,671,override,
-DeepFaceLab/mainscripts/Extractor.py,677,override,
-DeepFaceLab/mainscripts/Merger.py,45,Initialize model,
-DeepFaceLab/mainscripts/Merger.py,54,Preparing MP functions,
-DeepFaceLab/mainscripts/Merger.py,154,center+up,
-DeepFaceLab/mainscripts/Merger.py,244,interpolate landmarks,
-DeepFaceLab/mainscripts/Merger.py,245,from facelib import LandmarksProcessor,
-DeepFaceLab/mainscripts/Merger.py,246,from facelib import FaceType,
-DeepFaceLab/mainscripts/Merger.py,247,a = sorted(alignments.keys()),
-DeepFaceLab/mainscripts/Merger.py,248,a_len = len(a),
-DeepFaceLab/mainscripts/Merger.py,249,,
-DeepFaceLab/mainscripts/Merger.py,250,box_pts = 3,
-DeepFaceLab/mainscripts/Merger.py,251,box = np.ones(box_pts)/box_pts,
-DeepFaceLab/mainscripts/Merger.py,252,for i in range( a_len ):,
-DeepFaceLab/mainscripts/Merger.py,253,if i >= box_pts and i <= a_len-box_pts-1:,
-DeepFaceLab/mainscripts/Merger.py,254,af0 = alignments[ a[i] ][0] ##first face,
-DeepFaceLab/mainscripts/Merger.py,255,"m0 = LandmarksProcessor.get_transform_mat (af0, 256, face_type=FaceType.FULL)",
-DeepFaceLab/mainscripts/Merger.py,256,,
-DeepFaceLab/mainscripts/Merger.py,257,points = [],
-DeepFaceLab/mainscripts/Merger.py,258,,
-DeepFaceLab/mainscripts/Merger.py,259,"for j in range(-box_pts, box_pts+1):",
-DeepFaceLab/mainscripts/Merger.py,260,af = alignments[ a[i+j] ][0] ##first face,
-DeepFaceLab/mainscripts/Merger.py,261,"m = LandmarksProcessor.get_transform_mat (af, 256, face_type=FaceType.FULL)",
-DeepFaceLab/mainscripts/Merger.py,262,"p = LandmarksProcessor.transform_points (af, m)",
-DeepFaceLab/mainscripts/Merger.py,263,points.append (p),
-DeepFaceLab/mainscripts/Merger.py,264,,
-DeepFaceLab/mainscripts/Merger.py,265,points = np.array(points),
-DeepFaceLab/mainscripts/Merger.py,266,points_len = len(points),
-DeepFaceLab/mainscripts/Merger.py,267,"t_points = np.transpose(points, [1,0,2])",
-DeepFaceLab/mainscripts/Merger.py,268,,
-DeepFaceLab/mainscripts/Merger.py,269,"p1 = np.array ( [ int(np.convolve(x[:,0], box, mode='same')[points_len//2]) for x in t_points ] )",
-DeepFaceLab/mainscripts/Merger.py,270,"p2 = np.array ( [ int(np.convolve(x[:,1], box, mode='same')[points_len//2]) for x in t_points ] )",
-DeepFaceLab/mainscripts/Merger.py,271,,
-DeepFaceLab/mainscripts/Merger.py,272,"new_points = np.concatenate( [np.expand_dims(p1,-1),np.expand_dims(p2,-1)], -1 )",
-DeepFaceLab/mainscripts/Merger.py,273,,
-DeepFaceLab/mainscripts/Merger.py,274,"alignments[ a[i] ][0]  = LandmarksProcessor.transform_points (new_points, m0, True).astype(np.int32)",
-DeepFaceLab/mainscripts/Sorter.py,26,override,
-DeepFaceLab/mainscripts/Sorter.py,39,override,
-DeepFaceLab/mainscripts/Sorter.py,41,return string identificator of your data,
-DeepFaceLab/mainscripts/Sorter.py,44,override,
-DeepFaceLab/mainscripts/Sorter.py,51,override,
-DeepFaceLab/mainscripts/Sorter.py,55,override,
-DeepFaceLab/mainscripts/Sorter.py,59,override,
-DeepFaceLab/mainscripts/Sorter.py,67,override,
-DeepFaceLab/mainscripts/Sorter.py,74,override,
-DeepFaceLab/mainscripts/Sorter.py,78,override,
-DeepFaceLab/mainscripts/Sorter.py,87,override,
-DeepFaceLab/mainscripts/Sorter.py,177,override,
-DeepFaceLab/mainscripts/Sorter.py,204,override,
-DeepFaceLab/mainscripts/Sorter.py,208,override,
-DeepFaceLab/mainscripts/Sorter.py,227,override,
-DeepFaceLab/mainscripts/Sorter.py,234,override,
-DeepFaceLab/mainscripts/Sorter.py,239,override,
-DeepFaceLab/mainscripts/Sorter.py,243,override,
-DeepFaceLab/mainscripts/Sorter.py,249,override,
-DeepFaceLab/mainscripts/Sorter.py,253,override,
-DeepFaceLab/mainscripts/Sorter.py,258,override,
-DeepFaceLab/mainscripts/Sorter.py,269,override,
-DeepFaceLab/mainscripts/Sorter.py,274,override,
-DeepFaceLab/mainscripts/Sorter.py,285,override,
-DeepFaceLab/mainscripts/Sorter.py,287,return string identificator of your data,
-DeepFaceLab/mainscripts/Sorter.py,290,override,
-DeepFaceLab/mainscripts/Sorter.py,297,override,
-DeepFaceLab/mainscripts/Sorter.py,301,override,
-DeepFaceLab/mainscripts/Sorter.py,305,override,
-DeepFaceLab/mainscripts/Sorter.py,312,override,
-DeepFaceLab/mainscripts/Sorter.py,319,override,
-DeepFaceLab/mainscripts/Sorter.py,323,override,
-DeepFaceLab/mainscripts/Sorter.py,328,override,
-DeepFaceLab/mainscripts/Sorter.py,426,override,
-DeepFaceLab/mainscripts/Sorter.py,430,override,
-DeepFaceLab/mainscripts/Sorter.py,462,override,
-DeepFaceLab/mainscripts/Sorter.py,464,return string identificator of your data,
-DeepFaceLab/mainscripts/Sorter.py,467,override,
-DeepFaceLab/mainscripts/Sorter.py,477,override,
-DeepFaceLab/mainscripts/Sorter.py,481,override,
-DeepFaceLab/mainscripts/Sorter.py,485,override,
-DeepFaceLab/mainscripts/Sorter.py,493,override,
-DeepFaceLab/mainscripts/Sorter.py,500,override,
-DeepFaceLab/mainscripts/Sorter.py,504,override,
-DeepFaceLab/mainscripts/Sorter.py,512,override,
-DeepFaceLab/mainscripts/Sorter.py,518,override,
-DeepFaceLab/mainscripts/Sorter.py,538,override,
-DeepFaceLab/mainscripts/Sorter.py,542,override,
-DeepFaceLab/mainscripts/Sorter.py,551,override,
-DeepFaceLab/mainscripts/Sorter.py,558,override,
-DeepFaceLab/mainscripts/Sorter.py,562,override,
-DeepFaceLab/mainscripts/Sorter.py,566,override,
-DeepFaceLab/mainscripts/Sorter.py,574,override,
-DeepFaceLab/mainscripts/Sorter.py,578,override,
-DeepFaceLab/mainscripts/Sorter.py,584,override,
-DeepFaceLab/mainscripts/Sorter.py,604,"instead of math.pi / 2, using -1.2,+1.2 because actually maximum yaw for 2DFAN landmarks are -1.2+1.2",
-DeepFaceLab/mainscripts/dev_misc.py,221,unused in end user workflow,
-DeepFaceLab/mainscripts/dev_misc.py,223,process 68 landmarks dataset with .pts files,
-DeepFaceLab/mainscripts/dev_misc.py,279,"DFLJPG.x(output_filepath, face_type=FaceType.toString(FaceType.MARK_ONLY),",
-DeepFaceLab/mainscripts/dev_misc.py,280,"landmarks=lmrks,",
-DeepFaceLab/mainscripts/dev_misc.py,281,"source_filename=filepath.name,",
-DeepFaceLab/mainscripts/dev_misc.py,282,"source_rect=rect,",
-DeepFaceLab/mainscripts/dev_misc.py,283,source_landmarks=lmrks,
-DeepFaceLab/mainscripts/dev_misc.py,284,),
-DeepFaceLab/mainscripts/dev_misc.py,288,unused in end user workflow,
-DeepFaceLab/mainscripts/dev_misc.py,293,"extract faces from umdfaces.io dataset csv file with pitch,yaw,roll info.",
-DeepFaceLab/mainscripts/dev_misc.py,375,"dflimg.x(filename, person_name=dir_name)",
-DeepFaceLab/mainscripts/dev_misc.py,377,import code,
-DeepFaceLab/mainscripts/dev_misc.py,378,"code.interact(local=dict(globals(), **locals()))",
-DeepFaceLab/mainscripts/FacesetEnhancer.py,14,override,
-DeepFaceLab/mainscripts/FacesetEnhancer.py,24,override,
-DeepFaceLab/mainscripts/FacesetEnhancer.py,28,override,
-DeepFaceLab/mainscripts/FacesetEnhancer.py,32,override,
-DeepFaceLab/mainscripts/FacesetEnhancer.py,44,override,
-DeepFaceLab/mainscripts/FacesetEnhancer.py,49,override,
-DeepFaceLab/mainscripts/FacesetEnhancer.py,53,override,
-DeepFaceLab/mainscripts/FacesetEnhancer.py,59,override,
-DeepFaceLab/mainscripts/FacesetEnhancer.py,75,override,
-DeepFaceLab/mainscripts/FacesetEnhancer.py,98,override,
-DeepFaceLab/mainscripts/Trainer.py,82,Set the GUI Thread as Ready,
-DeepFaceLab/mainscripts/Trainer.py,217,Wait for inital load to occur.,
-DeepFaceLab/mainscripts/Trainer.py,265,make all previews size equal,
-DeepFaceLab/mainscripts/Trainer.py,284,HEAD,
-DeepFaceLab/samplelib/SampleGeneratorBase.py,24,overridable,
-DeepFaceLab/samplelib/SampleGeneratorBase.py,26,implement your own iterator,
-DeepFaceLab/samplelib/SampleGeneratorBase.py,30,implement your own iterator,
-DeepFaceLab/samplelib/SampleGeneratorBase.py,33,overridable,
-DeepFaceLab/samplelib/SampleGeneratorFace.py,72,overridable,
-DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,52,overridable,
-DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,146,override,
-DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,155,override,
-DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,160,override,
-DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,164,override,
-DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,168,override,
-DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,175,override,
-DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,179,override,
-DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,189,overridable optional,
-DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,137,overridable,
-DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,185,"neck_path = masks.get(MaskType.neck, None)",
-DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,202,if neck_path is not None:,
-DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,203,neck_path = masks_path / neck_path,
-DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,204,if neck_path.exists():,
-DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,205,"neck = cv2_imread(neck_path)[...,0:1].astype(np.float32) / 255.0",
-DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,206,"mask = np.clip(mask+neck, 0, 1)",
-DeepFaceLab/samplelib/SampleProcessor.py,25,BGR,
-DeepFaceLab/samplelib/SampleProcessor.py,26,Grayscale,
-DeepFaceLab/samplelib/SampleProcessor.py,27,3xGrayscale,
-DeepFaceLab/samplelib/SampleProcessor.py,31,mask all hull as grayscale,
-DeepFaceLab/samplelib/SampleProcessor.py,32,mask eyes hull as grayscale,
-DeepFaceLab/samplelib/SampleProcessor.py,33,combo all + eyes as grayscale,
-DeepFaceLab/samplelib/SampleProcessor.py,184,Apply random color transfer,
-DeepFaceLab/samplelib/SampleProcessor.py,212,Transform from BGR to desired channel_type,
-DeepFaceLab/samplelib/SampleProcessor.py,220,Final transformations,
-DeepFaceLab/samplelib/SampleLoader.py,107,override,
-DeepFaceLab/samplelib/SampleLoader.py,115,override,
-DeepFaceLab/samplelib/SampleLoader.py,119,override,
-DeepFaceLab/samplelib/SampleLoader.py,123,override,
-DeepFaceLab/samplelib/SampleLoader.py,128,override,
-DeepFaceLab/samplelib/SampleLoader.py,136,override,
-DeepFaceLab/samplelib/SampleLoader.py,140,override,
-DeepFaceLab/samplelib/SampleLoader.py,146,override,
-DeepFaceLab/samplelib/SampleLoader.py,151,override,
-DeepFaceLab/samplelib/SampleLoader.py,170,override,
-DeepFaceLab/samplelib/SampleLoader.py,172,return string identificator of your data,
-DeepFaceLab/samplelib/Sample.py,13,raw image,
-DeepFaceLab/samplelib/Sample.py,16,aligned face unsorted,
-DeepFaceLab/samplelib/Sample.py,17,aligned face person,
-DeepFaceLab/samplelib/Sample.py,18,sorted by source filename,
-DeepFaceLab/samplelib/PackedFaceset.py,55,just free mem,
-DeepFaceLab/samplelib/PackedFaceset.py,59,sample data offset table,
-DeepFaceLab/core/pathex.py,20,see below for Python 2.x,
-DeepFaceLab/core/mathlib/umeyama.py,27,Compute mean of src and dst.,
-DeepFaceLab/core/mathlib/umeyama.py,31,Subtract mean from src and dst.,
-DeepFaceLab/core/mathlib/umeyama.py,35,Eq. (38).,
-DeepFaceLab/core/mathlib/umeyama.py,38,Eq. (39).,
-DeepFaceLab/core/mathlib/umeyama.py,47,Eq. (40) and (43).,
-DeepFaceLab/core/mathlib/umeyama.py,63,Eq. (41) and (42).,
-DeepFaceLab/core/leras/nn.py,52,Manipulate environment variables before import tensorflow,
-DeepFaceLab/core/leras/nn.py,60,Windows specific env vars,
-DeepFaceLab/core/leras/nn.py,73,512Mb (32mb default),
-DeepFaceLab/core/leras/nn.py,75,tf log errors only,
-DeepFaceLab/core/leras/nn.py,84,Disable tensorflow warnings,
-DeepFaceLab/core/leras/nn.py,87,Initialize framework,
-DeepFaceLab/core/leras/nn.py,95,Configure tensorflow session-config,
-DeepFaceLab/core/leras/nn.py,193,Undocumented access to last tf.device(...),
-DeepFaceLab/core/leras/archis/ArchiBase.py,9,overridable,
-DeepFaceLab/core/leras/archis/ArchiBase.py,13,overridable,
-DeepFaceLab/core/leras/layers/Conv2DTranspose.py,36,He init,
-DeepFaceLab/core/leras/layers/Saveable.py,14,override,
-DeepFaceLab/core/leras/layers/Saveable.py,16,return tf tensors that should be initialized/loaded/saved,
-DeepFaceLab/core/leras/layers/Saveable.py,19,override,
-DeepFaceLab/core/leras/layers/Saveable.py,90,"io.log_err(f""Weight {w.name} was not loaded from file {filename}"")",
-DeepFaceLab/core/leras/layers/Dense.py,39,He init,
-DeepFaceLab/core/leras/layers/LayerBase.py,5,override,
-DeepFaceLab/core/leras/layers/LayerBase.py,9,override,
-DeepFaceLab/core/leras/ops/__init__.py,144,match NCHW version in order to switch data_format without problems,
-DeepFaceLab/core/leras/ops/__init__.py,160,match NCHW version in order to switch data_format without problems,
-DeepFaceLab/core/leras/ops/__init__.py,265,compensation factor,
-DeepFaceLab/core/leras/ops/__init__.py,279,match NCHW version in order to switch data_format without problems,
-DeepFaceLab/core/leras/ops/__init__.py,292,match NCHW version in order to switch data_format without problems,
-DeepFaceLab/core/leras/ops/__init__.py,312,X        Y          Z,
-DeepFaceLab/core/leras/ops/__init__.py,313,R,
-DeepFaceLab/core/leras/ops/__init__.py,314,G,
-DeepFaceLab/core/leras/ops/__init__.py,315,B,
-DeepFaceLab/core/leras/ops/__init__.py,327,l       a       b,
-DeepFaceLab/core/leras/ops/__init__.py,328,fx,
-DeepFaceLab/core/leras/ops/__init__.py,329,fy,
-DeepFaceLab/core/leras/ops/__init__.py,330,fz,
-DeepFaceLab/core/leras/initializers/CA.py,45,override,
-DeepFaceLab/core/leras/initializers/CA.py,51,override,
-DeepFaceLab/core/leras/initializers/CA.py,58,override,
-DeepFaceLab/core/leras/initializers/CA.py,63,override,
-DeepFaceLab/core/leras/initializers/CA.py,71,override,
-DeepFaceLab/core/leras/initializers/CA.py,75,override,
-DeepFaceLab/core/leras/initializers/CA.py,80,override,
-DeepFaceLab/core/leras/initializers/__init__.py,17,"list of (shape, np.dtype)",
-DeepFaceLab/core/leras/optimizers/OptimizerBase.py,19,if clipnorm == 0 no need to add ops to the graph,
-DeepFaceLab/core/leras/optimizers/OptimizerBase.py,26,saving the shape to avoid converting sparse tensor to dense,
-DeepFaceLab/core/leras/optimizers/RMSprop.py,29,Initialize here all trainable variables used in training,
-DeepFaceLab/core/leras/models/ModelBase.py,70,override,
-DeepFaceLab/core/leras/models/ModelBase.py,94,override,
-DeepFaceLab/core/leras/models/ModelBase.py,104,override,
-DeepFaceLab/core/leras/models/ModelBase.py,106,flow layers/models/tensors here,
-DeepFaceLab/core/leras/models/ModelBase.py,125,"CPU tensors will not impact any performance, only slightly RAM ""leakage""",
-DeepFaceLab/core/leras/models/ModelBase.py,185,Get layers names and str lenght for delim,
-DeepFaceLab/core/leras/models/ModelBase.py,191,Get params for each layer,
-DeepFaceLab/core/leras/models/ModelBase.py,195,Get str lenght for delim,
-DeepFaceLab/core/leras/models/ModelBase.py,200,Set delim,
-DeepFaceLab/core/leras/models/ModelBase.py,206,Format model name str,
-DeepFaceLab/core/leras/models/ModelBase.py,216,Format layers table,
-DeepFaceLab/core/leras/models/ModelBase.py,238,Format sum of params,
-DeepFaceLab/core/joblib/SubprocessorBase.py,33,overridable optional,
-DeepFaceLab/core/joblib/SubprocessorBase.py,35,initialize your subprocess here using client_dict,
-DeepFaceLab/core/joblib/SubprocessorBase.py,38,overridable optional,
-DeepFaceLab/core/joblib/SubprocessorBase.py,40,finalize your subprocess here,
-DeepFaceLab/core/joblib/SubprocessorBase.py,43,overridable,
-DeepFaceLab/core/joblib/SubprocessorBase.py,45,process 'data' given from host and return result,
-DeepFaceLab/core/joblib/SubprocessorBase.py,48,overridable optional,
-DeepFaceLab/core/joblib/SubprocessorBase.py,50,return string identificator of your 'data',
-DeepFaceLab/core/joblib/SubprocessorBase.py,94,disable pickling,
-DeepFaceLab/core/joblib/SubprocessorBase.py,100,overridable,
-DeepFaceLab/core/joblib/SubprocessorBase.py,111,overridable,
-DeepFaceLab/core/joblib/SubprocessorBase.py,113,"yield per process (name, host_dict, client_dict)",
-DeepFaceLab/core/joblib/SubprocessorBase.py,116,overridable optional,
-DeepFaceLab/core/joblib/SubprocessorBase.py,118,logic when all subprocesses initialized and ready,
-DeepFaceLab/core/joblib/SubprocessorBase.py,121,overridable optional,
-DeepFaceLab/core/joblib/SubprocessorBase.py,123,logic when all subprocess finalized,
-DeepFaceLab/core/joblib/SubprocessorBase.py,126,overridable,
-DeepFaceLab/core/joblib/SubprocessorBase.py,128,return data for processing here,
-DeepFaceLab/core/joblib/SubprocessorBase.py,131,overridable,
-DeepFaceLab/core/joblib/SubprocessorBase.py,133,you have to place returned 'data' back to your queue,
-DeepFaceLab/core/joblib/SubprocessorBase.py,136,overridable,
-DeepFaceLab/core/joblib/SubprocessorBase.py,138,your logic what to do with 'result' of 'data',
-DeepFaceLab/core/joblib/SubprocessorBase.py,141,overridable,
-DeepFaceLab/core/joblib/SubprocessorBase.py,143,return result that will be returned in func run(),
-DeepFaceLab/core/joblib/SubprocessorBase.py,146,overridable,
-DeepFaceLab/core/joblib/SubprocessorBase.py,148,tick in main loop,
-DeepFaceLab/core/joblib/SubprocessorBase.py,149,"return True if system can be finalized when no data in get_data, orelse False",
-DeepFaceLab/core/joblib/SubprocessorBase.py,152,overridable,
-DeepFaceLab/core/joblib/SubprocessorBase.py,162,"getting info about name of subprocesses, host and client dicts, and spawning them",
-DeepFaceLab/core/joblib/SubprocessorBase.py,198,waiting subprocesses their success(or not) initialization,
-DeepFaceLab/core/joblib/SubprocessorBase.py,221,"ok some processes survived, initialize host logic",
-DeepFaceLab/core/joblib/SubprocessorBase.py,225,main loop of data processing,
-DeepFaceLab/core/joblib/SubprocessorBase.py,232,"success processed data, return data and result to on_result",
-DeepFaceLab/core/joblib/SubprocessorBase.py,237,"some error occured while process data, returning chunk to on_data_return",
-DeepFaceLab/core/joblib/SubprocessorBase.py,240,and killing process,
-DeepFaceLab/core/joblib/SubprocessorBase.py,253,subprocess busy too long,
-DeepFaceLab/core/joblib/SubprocessorBase.py,261,"free state of subprocess, get some data from get_data",
-DeepFaceLab/core/joblib/SubprocessorBase.py,264,and send it to subprocess,
-DeepFaceLab/core/joblib/SubprocessorBase.py,274,"all subprocesses free and no more data available to process, ending loop",
-DeepFaceLab/core/joblib/SubprocessorBase.py,279,gracefully terminating subprocesses,
-DeepFaceLab/core/joblib/SubprocessorBase.py,304,finalizing host logic and return result,
-DeepFaceLab/core/qtex/qtex.py,50,[::-1],
-DeepFaceLab/core/qtex/QSubprocessor.py,39,overridable optional,
-DeepFaceLab/core/qtex/QSubprocessor.py,41,initialize your subprocess here using client_dict,
-DeepFaceLab/core/qtex/QSubprocessor.py,44,overridable optional,
-DeepFaceLab/core/qtex/QSubprocessor.py,46,finalize your subprocess here,
-DeepFaceLab/core/qtex/QSubprocessor.py,49,overridable,
-DeepFaceLab/core/qtex/QSubprocessor.py,51,process 'data' given from host and return result,
-DeepFaceLab/core/qtex/QSubprocessor.py,54,overridable optional,
-DeepFaceLab/core/qtex/QSubprocessor.py,56,return string identificator of your 'data',
-DeepFaceLab/core/qtex/QSubprocessor.py,92,disable pickling,
-DeepFaceLab/core/qtex/QSubprocessor.py,98,overridable,
-DeepFaceLab/core/qtex/QSubprocessor.py,110,"getting info about name of subprocesses, host and client dicts, and spawning them",
-DeepFaceLab/core/qtex/QSubprocessor.py,127,waiting subprocesses their success(or not) initialization,
-DeepFaceLab/core/qtex/QSubprocessor.py,150,"ok some processes survived, initialize host logic",
-DeepFaceLab/core/qtex/QSubprocessor.py,157,overridable,
-DeepFaceLab/core/qtex/QSubprocessor.py,159,"yield per process (name, host_dict, client_dict)",
-DeepFaceLab/core/qtex/QSubprocessor.py,163,overridable optional,
-DeepFaceLab/core/qtex/QSubprocessor.py,165,logic when all subprocesses initialized and ready,
-DeepFaceLab/core/qtex/QSubprocessor.py,168,overridable optional,
-DeepFaceLab/core/qtex/QSubprocessor.py,170,logic when all subprocess finalized,
-DeepFaceLab/core/qtex/QSubprocessor.py,173,overridable,
-DeepFaceLab/core/qtex/QSubprocessor.py,175,return data for processing here,
-DeepFaceLab/core/qtex/QSubprocessor.py,178,overridable,
-DeepFaceLab/core/qtex/QSubprocessor.py,180,you have to place returned 'data' back to your queue,
-DeepFaceLab/core/qtex/QSubprocessor.py,183,overridable,
-DeepFaceLab/core/qtex/QSubprocessor.py,185,your logic what to do with 'result' of 'data',
-DeepFaceLab/core/qtex/QSubprocessor.py,194,"success processed data, return data and result to on_result",
-DeepFaceLab/core/qtex/QSubprocessor.py,199,"some error occured while process data, returning chunk to on_data_return",
-DeepFaceLab/core/qtex/QSubprocessor.py,202,and killing process,
-DeepFaceLab/core/qtex/QSubprocessor.py,215,subprocess busy too long,
-DeepFaceLab/core/qtex/QSubprocessor.py,223,"free state of subprocess, get some data from get_data",
-DeepFaceLab/core/qtex/QSubprocessor.py,226,and send it to subprocess,
-DeepFaceLab/core/qtex/QSubprocessor.py,233,gracefully terminating subprocesses,
-DeepFaceLab/core/qtex/QSubprocessor.py,258,finalizing host logic,
-DeepFaceLab/core/interact/interact.py,15,if success we are in colab,
-DeepFaceLab/core/interact/interact.py,88,we will show window only on first show_image,
-DeepFaceLab/core/interact/interact.py,420,currently it does not work on Colab,
-DeepFaceLab/core/interact/interact.py,471,fix opencv bug when window size more than screen size,
-DeepFaceLab/core/interact/interact.py,531,clear_output(),
-DeepFaceLab/core/interact/interact.py,535,clear_output(),
-DeepFaceLab/core/interact/interact.py,542,# cv2 stores colors as BGR; convert to RGB,
-DeepFaceLab/core/interact/interact.py,543,if img.ndim == 3:,
-DeepFaceLab/core/interact/interact.py,544,if img.shape[2] == 4:,
-DeepFaceLab/core/interact/interact.py,545,"img = cv2.cvtColor(img, cv2.COLOR_BGRA2RGBA)",
-DeepFaceLab/core/interact/interact.py,546,else:,
-DeepFaceLab/core/interact/interact.py,547,"img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)",
-DeepFaceLab/core/interact/interact.py,548,img = PIL.Image.fromarray(img),
-DeepFaceLab/core/interact/interact.py,549,plt.imshow(img),
-DeepFaceLab/core/interact/interact.py,550,plt.show(),
-DeepFaceLab/core/interact/interact.py,554,"print(""on_capture_mouse(): Colab does not support"")",
-DeepFaceLab/core/interact/interact.py,558,"print(""on_capture_keys(): Colab does not support"")",
-DeepFaceLab/core/interact/interact.py,565,"print(""on_wait_any_key(): Colab does not support"")",
-DeepFaceLab/core/mplib/MPSharedList.py,113,override,
-DeepFaceLab/core/mplib/MPSharedList.py,119,override,
-DeepFaceLab/core/mplib/MPSharedList.py,124,override,
-DeepFaceLab/core/mplib/MPSharedList.py,131,override,
-DeepFaceLab/core/mplib/MPSharedList.py,135,override,
-DeepFaceLab/core/mplib/MPSharedList.py,140,overridable optional,
-DeepFaceLab/core/mplib/__init__.py,38,get_1D,
-DeepFaceLab/core/mplib/__init__.py,48,get_2D,
-DeepFaceLab/core/mplib/__init__.py,71,disable pickling,
-DeepFaceLab/core/mplib/__init__.py,139,disable pickling,
-DeepFaceLab/core/mplib/__init__.py,205,disable pickling,
-DeepFaceLab/core/mplib/__init__.py,280,disable pickling,
-DeepFaceLab/core/imagelib/color_transfer.py,217,"convert the images from the RGB to L*ab* color space, being",
-DeepFaceLab/core/imagelib/color_transfer.py,218,sure to utilizing the floating point data type (note: OpenCV,
-DeepFaceLab/core/imagelib/color_transfer.py,219,"expects floats to be 32-bit, so use that instead of 64-bit)",
-DeepFaceLab/core/imagelib/color_transfer.py,223,compute color statistics for the source and target images,
-DeepFaceLab/core/imagelib/color_transfer.py,229,subtract the means from the target image,
-DeepFaceLab/core/imagelib/color_transfer.py,236,scale by the standard deviations using paper proposed factor,
-DeepFaceLab/core/imagelib/color_transfer.py,241,scale by the standard deviations using reciprocal of paper proposed factor,
-DeepFaceLab/core/imagelib/color_transfer.py,246,add in the source mean,
-DeepFaceLab/core/imagelib/color_transfer.py,251,"clip/scale the pixel intensities to [0, 255] if they fall",
-DeepFaceLab/core/imagelib/color_transfer.py,252,outside this range,
-DeepFaceLab/core/imagelib/color_transfer.py,257,merge the channels together and convert back to the RGB color,
-DeepFaceLab/core/imagelib/color_transfer.py,258,"space, being sure to utilize the 8-bit unsigned integer data",
-DeepFaceLab/core/imagelib/color_transfer.py,259,type,
-DeepFaceLab/core/imagelib/color_transfer.py,263,return the color transferred image,
-DeepFaceLab/core/imagelib/color_transfer.py,305,compute the mean and standard deviation of each channel,
-DeepFaceLab/core/imagelib/color_transfer.py,311,return the color statistics,
-DeepFaceLab/core/imagelib/color_transfer.py,328,Code borrowed from:,
-DeepFaceLab/core/imagelib/color_transfer.py,329,https://stackoverflow.com/questions/32655686/histogram-matching-of-two-images-in-python-2-x,
-DeepFaceLab/core/imagelib/SegIEPolys.py,145,Backward comp,
-DeepFaceLab/core/imagelib/reduce_colors.py,5,n_colors = [0..256],
-DeepFaceLab/core/imagelib/blursharpen.py,15,box,
-DeepFaceLab/core/imagelib/blursharpen.py,21,gaussian,
-DeepFaceLab/core/imagelib/warp.py,15,random warp by grid,
-DeepFaceLab/core/imagelib/warp.py,31,random transform,
-DeepFaceLab/core/imagelib/equalize_and_stack_square.py,33,GA,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,39,type: (numpy.ndarray) -> numpy.ndarray,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,47,normalize h1,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,51,Note: https://sourceforge.net/p/octave/image/ci/default/tree/inst/edge.m#l59,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,59,type: (numpy.ndarray) -> numpy.ndarray,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,86,threshold to characterize blocks as edge/non-edge blocks,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,88,fitting parameter,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,90,block size,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,92,just noticeable widths based on the perceptual experiments,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,97,type: (numpy.ndarray) -> float,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,100,convert the image to double for further processing,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,103,edge detection using canny and sobel canny edge detection is done to,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,104,classify the blocks as edge or non-edge blocks and sobel edge,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,105,detection is done for the purpose of edge width measurement.,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,109,edge width calculation,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,112,sharpness metric calculation,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,117,"type: (numpy.ndarray, numpy.ndarray) -> numpy.ndarray",
-DeepFaceLab/core/imagelib/estimate_sharpness.py,125,`edge_widths` consists of zero and non-zero values. A zero value,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,126,indicates that there is no edge at that position and a non-zero value,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,127,indicates that there is an edge at that position and the value itself,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,128,gives the edge width.,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,131,find the gradient for the image,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,134,dimensions of the image,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,137,holds the angle information of the edges,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,140,calculate the angle of the edges,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,153,quantize the angle,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,160,gradient angle = 180 or -180,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,166,outside image or intensity increasing from left to right,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,176,outside image or intensity increasing from left to right,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,185,gradient angle = 0,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,191,outside image or intensity decreasing from left to right,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,201,outside image or intensity decreasing from left to right,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,213,"type: (numpy.array, numpy.array, numpy.array) -> numpy.float64",
-DeepFaceLab/core/imagelib/estimate_sharpness.py,215,get the size of image,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,221,maximum block indices,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,225,loop over the blocks,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,229,get the row and col indices for the block pixel positions,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,235,rotate block to simulate column-major boolean indexing,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,242,calculate the probability of blur detection at the edges,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,243,detected in the block,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,246,update the statistics using the block information,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,252,normalize the pdf,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,256,calculate the sharpness metric,
-DeepFaceLab/core/imagelib/estimate_sharpness.py,261,"type: (numpy.ndarray, float) -> bool",
-DeepFaceLab/core/imagelib/estimate_sharpness.py,267,type: (numpy.ndarray) -> int,
-DeepFaceLab/facelib/XSegNet.py,34,Place holders on CPU,
-DeepFaceLab/facelib/XSegNet.py,38,Initializing model classes,
-DeepFaceLab/facelib/XSegNet.py,62,Loading/initializing all models/optimizers weights,
-DeepFaceLab/facelib/XSegNet.py,94,get rid of noise,
-DeepFaceLab/facelib/LandmarksProcessor.py,15,17,
-DeepFaceLab/facelib/LandmarksProcessor.py,16,18,
-DeepFaceLab/facelib/LandmarksProcessor.py,17,19,
-DeepFaceLab/facelib/LandmarksProcessor.py,18,20,
-DeepFaceLab/facelib/LandmarksProcessor.py,19,21,
-DeepFaceLab/facelib/LandmarksProcessor.py,20,22,
-DeepFaceLab/facelib/LandmarksProcessor.py,21,23,
-DeepFaceLab/facelib/LandmarksProcessor.py,22,24,
-DeepFaceLab/facelib/LandmarksProcessor.py,23,25,
-DeepFaceLab/facelib/LandmarksProcessor.py,24,26,
-DeepFaceLab/facelib/LandmarksProcessor.py,25,27,
-DeepFaceLab/facelib/LandmarksProcessor.py,26,28,
-DeepFaceLab/facelib/LandmarksProcessor.py,27,29,
-DeepFaceLab/facelib/LandmarksProcessor.py,28,30,
-DeepFaceLab/facelib/LandmarksProcessor.py,29,31,
-DeepFaceLab/facelib/LandmarksProcessor.py,30,32,
-DeepFaceLab/facelib/LandmarksProcessor.py,31,33,
-DeepFaceLab/facelib/LandmarksProcessor.py,32,34,
-DeepFaceLab/facelib/LandmarksProcessor.py,33,35,
-DeepFaceLab/facelib/LandmarksProcessor.py,34,36,
-DeepFaceLab/facelib/LandmarksProcessor.py,35,37,
-DeepFaceLab/facelib/LandmarksProcessor.py,36,38,
-DeepFaceLab/facelib/LandmarksProcessor.py,37,39,
-DeepFaceLab/facelib/LandmarksProcessor.py,38,40,
-DeepFaceLab/facelib/LandmarksProcessor.py,39,41,
-DeepFaceLab/facelib/LandmarksProcessor.py,40,42,
-DeepFaceLab/facelib/LandmarksProcessor.py,41,43,
-DeepFaceLab/facelib/LandmarksProcessor.py,42,44,
-DeepFaceLab/facelib/LandmarksProcessor.py,43,45,
-DeepFaceLab/facelib/LandmarksProcessor.py,44,46,
-DeepFaceLab/facelib/LandmarksProcessor.py,45,47,
-DeepFaceLab/facelib/LandmarksProcessor.py,46,48,
-DeepFaceLab/facelib/LandmarksProcessor.py,47,49,
-DeepFaceLab/facelib/LandmarksProcessor.py,48,50,
-DeepFaceLab/facelib/LandmarksProcessor.py,49,51,
-DeepFaceLab/facelib/LandmarksProcessor.py,50,52,
-DeepFaceLab/facelib/LandmarksProcessor.py,51,53,
-DeepFaceLab/facelib/LandmarksProcessor.py,52,54,
-DeepFaceLab/facelib/LandmarksProcessor.py,53,55,
-DeepFaceLab/facelib/LandmarksProcessor.py,54,56,
-DeepFaceLab/facelib/LandmarksProcessor.py,55,57,
-DeepFaceLab/facelib/LandmarksProcessor.py,56,58,
-DeepFaceLab/facelib/LandmarksProcessor.py,57,59,
-DeepFaceLab/facelib/LandmarksProcessor.py,58,60,
-DeepFaceLab/facelib/LandmarksProcessor.py,59,61,
-DeepFaceLab/facelib/LandmarksProcessor.py,60,62,
-DeepFaceLab/facelib/LandmarksProcessor.py,61,63,
-DeepFaceLab/facelib/LandmarksProcessor.py,62,64,
-DeepFaceLab/facelib/LandmarksProcessor.py,63,65,
-DeepFaceLab/facelib/LandmarksProcessor.py,64,66,
-DeepFaceLab/facelib/LandmarksProcessor.py,65,67,
-DeepFaceLab/facelib/LandmarksProcessor.py,70,17,
-DeepFaceLab/facelib/LandmarksProcessor.py,71,18,
-DeepFaceLab/facelib/LandmarksProcessor.py,72,19,
-DeepFaceLab/facelib/LandmarksProcessor.py,73,20,
-DeepFaceLab/facelib/LandmarksProcessor.py,74,21,
-DeepFaceLab/facelib/LandmarksProcessor.py,75,22,
-DeepFaceLab/facelib/LandmarksProcessor.py,76,23,
-DeepFaceLab/facelib/LandmarksProcessor.py,77,24,
-DeepFaceLab/facelib/LandmarksProcessor.py,78,25,
-DeepFaceLab/facelib/LandmarksProcessor.py,79,26,
-DeepFaceLab/facelib/LandmarksProcessor.py,80,27,
-DeepFaceLab/facelib/LandmarksProcessor.py,81,28,
-DeepFaceLab/facelib/LandmarksProcessor.py,82,29,
-DeepFaceLab/facelib/LandmarksProcessor.py,83,30,
-DeepFaceLab/facelib/LandmarksProcessor.py,84,31,
-DeepFaceLab/facelib/LandmarksProcessor.py,85,32,
-DeepFaceLab/facelib/LandmarksProcessor.py,86,33,
-DeepFaceLab/facelib/LandmarksProcessor.py,87,34,
-DeepFaceLab/facelib/LandmarksProcessor.py,88,35,
-DeepFaceLab/facelib/LandmarksProcessor.py,89,36,
-DeepFaceLab/facelib/LandmarksProcessor.py,90,37,
-DeepFaceLab/facelib/LandmarksProcessor.py,91,38,
-DeepFaceLab/facelib/LandmarksProcessor.py,92,39,
-DeepFaceLab/facelib/LandmarksProcessor.py,93,40,
-DeepFaceLab/facelib/LandmarksProcessor.py,94,41,
-DeepFaceLab/facelib/LandmarksProcessor.py,95,42,
-DeepFaceLab/facelib/LandmarksProcessor.py,96,43,
-DeepFaceLab/facelib/LandmarksProcessor.py,97,44,
-DeepFaceLab/facelib/LandmarksProcessor.py,98,45,
-DeepFaceLab/facelib/LandmarksProcessor.py,99,46,
-DeepFaceLab/facelib/LandmarksProcessor.py,100,47,
-DeepFaceLab/facelib/LandmarksProcessor.py,101,48,
-DeepFaceLab/facelib/LandmarksProcessor.py,102,54,
-DeepFaceLab/facelib/LandmarksProcessor.py,106,48,
-DeepFaceLab/facelib/LandmarksProcessor.py,107,49,
-DeepFaceLab/facelib/LandmarksProcessor.py,108,50,
-DeepFaceLab/facelib/LandmarksProcessor.py,109,51,
-DeepFaceLab/facelib/LandmarksProcessor.py,110,52,
-DeepFaceLab/facelib/LandmarksProcessor.py,111,53,
-DeepFaceLab/facelib/LandmarksProcessor.py,112,54,
-DeepFaceLab/facelib/LandmarksProcessor.py,113,55,
-DeepFaceLab/facelib/LandmarksProcessor.py,114,56,
-DeepFaceLab/facelib/LandmarksProcessor.py,115,57,
-DeepFaceLab/facelib/LandmarksProcessor.py,116,58,
-DeepFaceLab/facelib/LandmarksProcessor.py,117,59,
-DeepFaceLab/facelib/LandmarksProcessor.py,118,60,
-DeepFaceLab/facelib/LandmarksProcessor.py,119,61,
-DeepFaceLab/facelib/LandmarksProcessor.py,120,62,
-DeepFaceLab/facelib/LandmarksProcessor.py,121,63,
-DeepFaceLab/facelib/LandmarksProcessor.py,122,64,
-DeepFaceLab/facelib/LandmarksProcessor.py,123,65,
-DeepFaceLab/facelib/LandmarksProcessor.py,124,66,
-DeepFaceLab/facelib/LandmarksProcessor.py,125,67,
-DeepFaceLab/facelib/LandmarksProcessor.py,128,68 point landmark definitions,
-DeepFaceLab/facelib/LandmarksProcessor.py,134,missed one point,
-DeepFaceLab/facelib/LandmarksProcessor.py,138,00,
-DeepFaceLab/facelib/LandmarksProcessor.py,139,01,
-DeepFaceLab/facelib/LandmarksProcessor.py,140,02,
-DeepFaceLab/facelib/LandmarksProcessor.py,141,03,
-DeepFaceLab/facelib/LandmarksProcessor.py,142,04,
-DeepFaceLab/facelib/LandmarksProcessor.py,143,05,
-DeepFaceLab/facelib/LandmarksProcessor.py,144,06,
-DeepFaceLab/facelib/LandmarksProcessor.py,145,07,
-DeepFaceLab/facelib/LandmarksProcessor.py,146,08,
-DeepFaceLab/facelib/LandmarksProcessor.py,147,09,
-DeepFaceLab/facelib/LandmarksProcessor.py,148,10,
-DeepFaceLab/facelib/LandmarksProcessor.py,149,11,
-DeepFaceLab/facelib/LandmarksProcessor.py,150,12,
-DeepFaceLab/facelib/LandmarksProcessor.py,151,13,
-DeepFaceLab/facelib/LandmarksProcessor.py,152,14,
-DeepFaceLab/facelib/LandmarksProcessor.py,153,15,
-DeepFaceLab/facelib/LandmarksProcessor.py,154,16,
-DeepFaceLab/facelib/LandmarksProcessor.py,155,17,
-DeepFaceLab/facelib/LandmarksProcessor.py,156,18,
-DeepFaceLab/facelib/LandmarksProcessor.py,157,19,
-DeepFaceLab/facelib/LandmarksProcessor.py,158,20,
-DeepFaceLab/facelib/LandmarksProcessor.py,159,21,
-DeepFaceLab/facelib/LandmarksProcessor.py,160,22,
-DeepFaceLab/facelib/LandmarksProcessor.py,161,23,
-DeepFaceLab/facelib/LandmarksProcessor.py,162,24,
-DeepFaceLab/facelib/LandmarksProcessor.py,163,25,
-DeepFaceLab/facelib/LandmarksProcessor.py,164,26,
-DeepFaceLab/facelib/LandmarksProcessor.py,165,27,
-DeepFaceLab/facelib/LandmarksProcessor.py,166,28,
-DeepFaceLab/facelib/LandmarksProcessor.py,167,29,
-DeepFaceLab/facelib/LandmarksProcessor.py,168,00,
-DeepFaceLab/facelib/LandmarksProcessor.py,169,01,
-DeepFaceLab/facelib/LandmarksProcessor.py,170,02,
-DeepFaceLab/facelib/LandmarksProcessor.py,171,03,
-DeepFaceLab/facelib/LandmarksProcessor.py,172,04,
-DeepFaceLab/facelib/LandmarksProcessor.py,173,05,
-DeepFaceLab/facelib/LandmarksProcessor.py,174,06,
-DeepFaceLab/facelib/LandmarksProcessor.py,175,07,
-DeepFaceLab/facelib/LandmarksProcessor.py,176,08,
-DeepFaceLab/facelib/LandmarksProcessor.py,177,09,
-DeepFaceLab/facelib/LandmarksProcessor.py,178,10,
-DeepFaceLab/facelib/LandmarksProcessor.py,179,11,
-DeepFaceLab/facelib/LandmarksProcessor.py,180,12,
-DeepFaceLab/facelib/LandmarksProcessor.py,181,13,
-DeepFaceLab/facelib/LandmarksProcessor.py,182,14,
-DeepFaceLab/facelib/LandmarksProcessor.py,183,15,
-DeepFaceLab/facelib/LandmarksProcessor.py,184,16,
-DeepFaceLab/facelib/LandmarksProcessor.py,185,17,
-DeepFaceLab/facelib/LandmarksProcessor.py,186,18,
-DeepFaceLab/facelib/LandmarksProcessor.py,187,19,
-DeepFaceLab/facelib/LandmarksProcessor.py,188,20,
-DeepFaceLab/facelib/LandmarksProcessor.py,189,21,
-DeepFaceLab/facelib/LandmarksProcessor.py,190,22,
-DeepFaceLab/facelib/LandmarksProcessor.py,191,23,
-DeepFaceLab/facelib/LandmarksProcessor.py,192,24,
-DeepFaceLab/facelib/LandmarksProcessor.py,193,25,
-DeepFaceLab/facelib/LandmarksProcessor.py,194,26,
-DeepFaceLab/facelib/LandmarksProcessor.py,195,27,
-DeepFaceLab/facelib/LandmarksProcessor.py,196,28,
-DeepFaceLab/facelib/LandmarksProcessor.py,197,29,
-DeepFaceLab/facelib/LandmarksProcessor.py,198,30,
-DeepFaceLab/facelib/LandmarksProcessor.py,199,31,
-DeepFaceLab/facelib/LandmarksProcessor.py,200,32,
-DeepFaceLab/facelib/LandmarksProcessor.py,201,33,
-DeepFaceLab/facelib/LandmarksProcessor.py,202,34,
-DeepFaceLab/facelib/LandmarksProcessor.py,203,35,
-DeepFaceLab/facelib/LandmarksProcessor.py,204,36,
-DeepFaceLab/facelib/LandmarksProcessor.py,205,37,
-DeepFaceLab/facelib/LandmarksProcessor.py,219,jaw,
-DeepFaceLab/facelib/LandmarksProcessor.py,228,eyebrows averaging,
-DeepFaceLab/facelib/LandmarksProcessor.py,243,nose,
-DeepFaceLab/facelib/LandmarksProcessor.py,246,left eye (from our view),
-DeepFaceLab/facelib/LandmarksProcessor.py,254,right eye,
-DeepFaceLab/facelib/LandmarksProcessor.py,262,mouth,
-DeepFaceLab/facelib/LandmarksProcessor.py,280,estimate landmarks transform from global space to local aligned space with bounds [0..1],
-DeepFaceLab/facelib/LandmarksProcessor.py,283,get corner points in global space,
-DeepFaceLab/facelib/LandmarksProcessor.py,287,calc diagonal vectors between corners in global space,
-DeepFaceLab/facelib/LandmarksProcessor.py,293,calc modifier of diagonal vectors for scale and padding value,
-DeepFaceLab/facelib/LandmarksProcessor.py,298,"adjust vertical offset for WHOLE_FACE, 7% below in order to cover more forehead",
-DeepFaceLab/facelib/LandmarksProcessor.py,307,"assuming image_landmarks are 3D_Landmarks extracted for HEAD,",
-DeepFaceLab/facelib/LandmarksProcessor.py,308,adjust horizontal offset according to estimated yaw,
-DeepFaceLab/facelib/LandmarksProcessor.py,315,Damp near zero,
-DeepFaceLab/facelib/LandmarksProcessor.py,319,"adjust vertical offset for HEAD, 50% below",
-DeepFaceLab/facelib/LandmarksProcessor.py,325,calc 3 points in global space to estimate 2d affine transform,
-DeepFaceLab/facelib/LandmarksProcessor.py,331,remove_align - face will be centered in the frame but not aligned,
-DeepFaceLab/facelib/LandmarksProcessor.py,338,get area of face square in global space,
-DeepFaceLab/facelib/LandmarksProcessor.py,341,calc side of square,
-DeepFaceLab/facelib/LandmarksProcessor.py,344,calc 3 points with unrotated square,
-DeepFaceLab/facelib/LandmarksProcessor.py,349,calc affine transform from 3 global space points to 3 local space points size of 'output_size',
-DeepFaceLab/facelib/LandmarksProcessor.py,368,#nose,
-DeepFaceLab/facelib/LandmarksProcessor.py,372,mid points between the mid points and eye,
-DeepFaceLab/facelib/LandmarksProcessor.py,376,Top of the eye arrays,
-DeepFaceLab/facelib/LandmarksProcessor.py,380,Eyebrow arrays,
-DeepFaceLab/facelib/LandmarksProcessor.py,384,Adjust eyebrow arrays,
-DeepFaceLab/facelib/LandmarksProcessor.py,474,calculate signed distance for all points and lines,
-DeepFaceLab/facelib/LandmarksProcessor.py,535,"eyes_mask = np.clip ( 1- ( np.sqrt( np.maximum(eyes_mask,0) ) / eyes_fall_dist ), 0, 1)",
-DeepFaceLab/facelib/LandmarksProcessor.py,536,"eyes_mask = np.clip ( 1- ( np.cbrt( np.maximum(eyes_mask,0) ) / eyes_fall_dist ), 0, 1)",
-DeepFaceLab/facelib/LandmarksProcessor.py,540,"brows_mask = np.clip ( 1- ( np.sqrt( np.maximum(brows_mask,0) ) / brows_fall_dist ), 0, 1)",
-DeepFaceLab/facelib/LandmarksProcessor.py,544,"mouth_mask = np.clip ( 1- ( np.sqrt( np.maximum(mouth_mask,0) ) / mouth_fall_dist ), 0, 1)",
-DeepFaceLab/facelib/LandmarksProcessor.py,551,nose_mask = (a-b)*x+b - k*x*(1.0-x),
-DeepFaceLab/facelib/LandmarksProcessor.py,553,"nose_mask = np.minimum (up_nose_mask , down_nose_mask )",
-DeepFaceLab/facelib/LandmarksProcessor.py,554,"nose_mask = 1-np.clip( nose_mask / nose_fall_dist, 0, 1)",
-DeepFaceLab/facelib/LandmarksProcessor.py,561,"up_nose_mask = np.clip ( 1- ( np.cbrt( np.maximum(up_nose_mask,0) ) / nose_fall_dist ), 0, 1)",
-DeepFaceLab/facelib/LandmarksProcessor.py,565,"down_nose_mask = np.clip ( 1- ( np.cbrt( np.maximum(down_nose_mask,0) ) / nose_fall_dist ), 0, 1)",
-DeepFaceLab/facelib/LandmarksProcessor.py,567,"nose_mask = np.clip( up_nose_mask + down_nose_mask, 0, 1 )",
-DeepFaceLab/facelib/LandmarksProcessor.py,568,nose_mask /= np.max(nose_mask),
-DeepFaceLab/facelib/LandmarksProcessor.py,569,"nose_mask = np.maximum (up_nose_mask , down_nose_mask )",
-DeepFaceLab/facelib/LandmarksProcessor.py,570,nose_mask = down_nose_mask,
-DeepFaceLab/facelib/LandmarksProcessor.py,572,nose_mask = np.zeros_like(nose_mask),
-DeepFaceLab/facelib/LandmarksProcessor.py,580,eyes_mask = eyes_mask * (1-nose_mask),
-DeepFaceLab/facelib/LandmarksProcessor.py,592,"nose_mask = np.maximum( up_nose_mask, down_nose_mask )",
-DeepFaceLab/facelib/LandmarksProcessor.py,596,"result = np.clip (result, 0, 1)",
-DeepFaceLab/facelib/LandmarksProcessor.py,682,open shapes,
-DeepFaceLab/facelib/LandmarksProcessor.py,685,closed shapes,
-DeepFaceLab/facelib/LandmarksProcessor.py,690,the rest of the cicles,
-DeepFaceLab/facelib/LandmarksProcessor.py,693,jaw big circles,
-DeepFaceLab/facelib/LandmarksProcessor.py,720,"Works much better than solvePnP if landmarks from ""3DFAN""",
-DeepFaceLab/facelib/LandmarksProcessor.py,754,if remove_align:,
-DeepFaceLab/facelib/LandmarksProcessor.py,755,"bbox = transform_points ( [ (0,0), (0,output_size), (output_size, output_size), (output_size,0) ], mat, True)",
-DeepFaceLab/facelib/LandmarksProcessor.py,756,#import code,
-DeepFaceLab/facelib/LandmarksProcessor.py,757,"#code.interact(local=dict(globals(), **locals()))",
-DeepFaceLab/facelib/LandmarksProcessor.py,758,"area = mathlib.polygon_area(bbox[:,0], bbox[:,1] )",
-DeepFaceLab/facelib/LandmarksProcessor.py,759,side = math.sqrt(area) / 2,
-DeepFaceLab/facelib/LandmarksProcessor.py,760,"center = transform_points ( [(output_size/2,output_size/2)], mat, True)",
-DeepFaceLab/facelib/LandmarksProcessor.py,761,"pts1 = np.float32(( center+[-side,-side], center+[side,-side], center+[side,-side] ))",
-DeepFaceLab/facelib/LandmarksProcessor.py,762,"pts2 = np.float32([[0,0],[output_size,0],[0,output_size]])",
-DeepFaceLab/facelib/LandmarksProcessor.py,763,"mat = cv2.getAffineTransform(pts1,pts2)",
-DeepFaceLab/facelib/LandmarksProcessor.py,764,if full_face_align_top and (face_type == FaceType.FULL or face_type == FaceType.FULL_NO_ALIGN):,
-DeepFaceLab/facelib/LandmarksProcessor.py,765,#lmrks2 = expand_eyebrows(image_landmarks),
-DeepFaceLab/facelib/LandmarksProcessor.py,766,"#lmrks2_ = transform_points( [ lmrks2[19], lmrks2[24] ], mat, False )",
-DeepFaceLab/facelib/LandmarksProcessor.py,767,"#y_diff = np.float32( (0,np.min(lmrks2_[:,1])) )",
-DeepFaceLab/facelib/LandmarksProcessor.py,768,"#y_diff = transform_points( [ np.float32( (0,0) ), y_diff], mat, True)",
-DeepFaceLab/facelib/LandmarksProcessor.py,769,#y_diff = y_diff[1]-y_diff[0],
-DeepFaceLab/facelib/LandmarksProcessor.py,770,,
-DeepFaceLab/facelib/LandmarksProcessor.py,771,"x_diff = np.float32((0,0))",
-DeepFaceLab/facelib/LandmarksProcessor.py,772,,
-DeepFaceLab/facelib/LandmarksProcessor.py,773,"lmrks2_ = transform_points( [ image_landmarks[0], image_landmarks[16] ], mat, False )",
-DeepFaceLab/facelib/LandmarksProcessor.py,774,"if lmrks2_[0,0] < 0:",
-DeepFaceLab/facelib/LandmarksProcessor.py,775,"x_diff = lmrks2_[0,0]",
-DeepFaceLab/facelib/LandmarksProcessor.py,776,"x_diff = transform_points( [ np.float32( (0,0) ), np.float32((x_diff,0)) ], mat, True)",
-DeepFaceLab/facelib/LandmarksProcessor.py,777,x_diff = x_diff[1]-x_diff[0],
-DeepFaceLab/facelib/LandmarksProcessor.py,778,"elif lmrks2_[1,0] >= output_size:",
-DeepFaceLab/facelib/LandmarksProcessor.py,779,"x_diff = lmrks2_[1,0]-(output_size-1)",
-DeepFaceLab/facelib/LandmarksProcessor.py,780,"x_diff = transform_points( [ np.float32( (0,0) ), np.float32((x_diff,0)) ], mat, True)",
-DeepFaceLab/facelib/LandmarksProcessor.py,781,x_diff = x_diff[1]-x_diff[0],
-DeepFaceLab/facelib/LandmarksProcessor.py,782,,
-DeepFaceLab/facelib/LandmarksProcessor.py,783,"mat = cv2.getAffineTransform( l_t+y_diff+x_diff ,pts2)",
-DeepFaceLab/facelib/FANExtractor.py,224,dont do second pass if faces != 1 detected in cropped image,
-DeepFaceLab/facelib/S3FDExtractor.py,153,max-out background label,
-DeepFaceLab/facelib/S3FDExtractor.py,176,pass exception between __enter__ and __exit__ to outter level,
-DeepFaceLab/facelib/S3FDExtractor.py,199,filtering faces < 40pix by any side,
-DeepFaceLab/facelib/S3FDExtractor.py,201,"enlarging bottom line a bit for 2DFAN-4, because default is not enough covering a chin",
-DeepFaceLab/facelib/S3FDExtractor.py,204,sort by largest area first,
-DeepFaceLab/facelib/S3FDExtractor.py,224,"4,8,16,32,64,128",
-DeepFaceLab/facelib/FaceType.py,4,"enumerating in order ""next contains prev""",
-DeepFaceLab/facelib/FaceType.py,13,"no align at all, just embedded faceinfo",
-DeepFaceLab/localization/localization.py,5,system_locale may be nil,
-DeepFaceLab/XSegEditor/XSegEditor.py,89,Fix arrays,
-DeepFaceLab/XSegEditor/XSegEditor.py,155,==============================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,170,==============================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,185,==============================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,228,==============================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,261,==============================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,337,UI init,
-DeepFaceLab/XSegEditor/XSegEditor.py,342,Initial vars,
-DeepFaceLab/XSegEditor/XSegEditor.py,348,Initial state,
-DeepFaceLab/XSegEditor/XSegEditor.py,354,Apply last state,
-DeepFaceLab/XSegEditor/XSegEditor.py,384,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,385,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,386,====================================== GETTERS =====================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,387,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,388,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,405,Calc as scale to fit,
-DeepFaceLab/XSegEditor/XSegEditor.py,468,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,469,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,470,====================================== SETTERS =====================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,471,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,472,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,479,Finalize prev mode,
-DeepFaceLab/XSegEditor/XSegEditor.py,486,Remove unfinished poly,
-DeepFaceLab/XSegEditor/XSegEditor.py,491,Reset pt_edit_move when exit from EDIT_PTS,
-DeepFaceLab/XSegEditor/XSegEditor.py,500,Initialize new mode,
-DeepFaceLab/XSegEditor/XSegEditor.py,523,,
-DeepFaceLab/XSegEditor/XSegEditor.py,577,n = QImage_to_np ( self.q_img ).astype(np.float32) / 255.0,
-DeepFaceLab/XSegEditor/XSegEditor.py,578,"h,w,c = n.shape",
-DeepFaceLab/XSegEditor/XSegEditor.py,580,"mask = np.zeros( (h,w,1), dtype=np.float32 )",
-DeepFaceLab/XSegEditor/XSegEditor.py,581,self.ie_polys.overlay_mask(mask),
-DeepFaceLab/XSegEditor/XSegEditor.py,583,n = (mask*255).astype(np.uint8),
-DeepFaceLab/XSegEditor/XSegEditor.py,585,self.img_baked_pixmap = QPixmap.fromImage(QImage_from_np(n)),
-DeepFaceLab/XSegEditor/XSegEditor.py,592,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,593,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,594,====================================== METHODS =====================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,595,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,596,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,703,Delete current poly,
-DeepFaceLab/XSegEditor/XSegEditor.py,707,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,708,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,709,================================== OVERRIDE QT METHODS =============================,
-DeepFaceLab/XSegEditor/XSegEditor.py,710,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,711,====================================================================================,
-DeepFaceLab/XSegEditor/XSegEditor.py,749,Clicking in NO OPERATION mode,
-DeepFaceLab/XSegEditor/XSegEditor.py,751,Click on wire on any poly -> switch to EDIT_MODE,
-DeepFaceLab/XSegEditor/XSegEditor.py,754,Click on empty space -> create new poly with one point,
-DeepFaceLab/XSegEditor/XSegEditor.py,761,Clicking in DRAW_PTS mode,
-DeepFaceLab/XSegEditor/XSegEditor.py,763,Click on first point -> close poly and switch to edit mode,
-DeepFaceLab/XSegEditor/XSegEditor.py,766,Click on empty space -> add point to current poly,
-DeepFaceLab/XSegEditor/XSegEditor.py,771,Clicking in EDIT_PTS mode,
-DeepFaceLab/XSegEditor/XSegEditor.py,774,Click on point of op_poly,
-DeepFaceLab/XSegEditor/XSegEditor.py,776,with mode -> delete point,
-DeepFaceLab/XSegEditor/XSegEditor.py,779,not enough points -> remove poly,
-DeepFaceLab/XSegEditor/XSegEditor.py,785,otherwise -> start drag,
-DeepFaceLab/XSegEditor/XSegEditor.py,791,Click on edge of op_poly,
-DeepFaceLab/XSegEditor/XSegEditor.py,793,with mode -> insert new point,
-DeepFaceLab/XSegEditor/XSegEditor.py,798,Otherwise do nothing,
-DeepFaceLab/XSegEditor/XSegEditor.py,801,other cases -> unselect poly,
-DeepFaceLab/XSegEditor/XSegEditor.py,806,Start image drag,
-DeepFaceLab/XSegEditor/XSegEditor.py,874,*1.5,
-DeepFaceLab/XSegEditor/XSegEditor.py,955,Circle around poly point,
-DeepFaceLab/XSegEditor/XSegEditor.py,961,Line from last point to mouse,
-DeepFaceLab/XSegEditor/XSegEditor.py,969,Ready to insert point on edge,
-DeepFaceLab/XSegEditor/XSegEditor.py,977,Closing poly line,
-DeepFaceLab/XSegEditor/XSegEditor.py,980,Draw calls,
-DeepFaceLab/XSegEditor/XSegEditor.py,998,else:,
-DeepFaceLab/XSegEditor/XSegEditor.py,999,if poly == op_poly:,
-DeepFaceLab/XSegEditor/XSegEditor.py,1000,qp.setBrush(color_scheme.poly_selected_brush),
-DeepFaceLab/XSegEditor/XSegEditor.py,1120,Loader,
-DeepFaceLab/DFLIMG/DFLJPG.py,94,if is_unk_chunk:,
-DeepFaceLab/DFLIMG/DFLJPG.py,95,"#raise ValueError(f""Unknown chunk {chunk_m_h} in {filename}"")",
-DeepFaceLab/DFLIMG/DFLJPG.py,96,"io.log_info(f""Unknown chunk {chunk_m_h} in {filename}"")",
-DeepFaceLab/DFLIMG/DFLJPG.py,98,variable size,
-DeepFaceLab/DFLIMG/DFLJPG.py,139,if units == 0:,
-DeepFaceLab/DFLIMG/DFLJPG.py,140,"inst.shape = (Ydensity, Xdensity, 3)",
-DeepFaceLab/DFLIMG/DFLJPG.py,172,Remove None keys,
-DeepFaceLab/merger/MergerConfig.py,12,,
-DeepFaceLab/merger/MergerConfig.py,26,default changeable params,
-DeepFaceLab/merger/MergerConfig.py,33,overridable,
-DeepFaceLab/merger/MergerConfig.py,51,overridable,
-DeepFaceLab/merger/MergerConfig.py,57,overridable,
-DeepFaceLab/merger/MergerConfig.py,59,check equality of changeable params,
-DeepFaceLab/merger/MergerConfig.py,67,overridable,
-DeepFaceLab/merger/MergerConfig.py,127,default changeable params,
-DeepFaceLab/merger/MergerConfig.py,235,check equality of changeable params,
-DeepFaceLab/merger/MergerConfig.py,299,changeable params,
-DeepFaceLab/merger/MergerConfig.py,305,override,
-DeepFaceLab/merger/MergerConfig.py,313,override,
-DeepFaceLab/merger/MergerConfig.py,315,check equality of changeable params,
-DeepFaceLab/merger/MergerConfig.py,323,override,
-DeepFaceLab/merger/MergeAvatar.py,29,if cfg.super_resolution_mode != 0:,
-DeepFaceLab/merger/MergeAvatar.py,30,"prd_f = cfg.superres_func(cfg.super_resolution_mode, prd_f)",
-DeepFaceLab/merger/MergeMasked.py,58,dst,
-DeepFaceLab/merger/MergeMasked.py,60,learned-prd,
-DeepFaceLab/merger/MergeMasked.py,62,learned-dst,
-DeepFaceLab/merger/MergeMasked.py,64,learned-prd*learned-dst,
-DeepFaceLab/merger/MergeMasked.py,66,learned-prd+learned-dst,
-DeepFaceLab/merger/MergeMasked.py,68,XSeg modes,
-DeepFaceLab/merger/MergeMasked.py,70,obtain XSeg-prd,
-DeepFaceLab/merger/MergeMasked.py,76,obtain XSeg-dst,
-DeepFaceLab/merger/MergeMasked.py,82,'XSeg-prd',
-DeepFaceLab/merger/MergeMasked.py,84,'XSeg-dst',
-DeepFaceLab/merger/MergeMasked.py,86,'XSeg-prd*XSeg-dst',
-DeepFaceLab/merger/MergeMasked.py,88,learned-prd*learned-dst*XSeg-prd*XSeg-dst,
-DeepFaceLab/merger/MergeMasked.py,91,get rid of noise,
-DeepFaceLab/merger/MergeMasked.py,93,resize to mask_subres_size,
-DeepFaceLab/merger/MergeMasked.py,97,process mask in local predicted space,
-DeepFaceLab/merger/MergeMasked.py,99,add zero pad,
-DeepFaceLab/merger/MergeMasked.py,110,clip eroded/dilated mask in actual predict area,
-DeepFaceLab/merger/MergeMasked.py,111,pad with half blur size in order to accuratelly fade to zero at the boundary,
-DeepFaceLab/merger/MergeMasked.py,129,get rid of noise,
-DeepFaceLab/merger/MergeMasked.py,153,Process if the mask meets minimum size,
-DeepFaceLab/merger/MergeMasked.py,165,rct,
-DeepFaceLab/merger/MergeMasked.py,170,lct,
-DeepFaceLab/merger/MergeMasked.py,172,mkl,
-DeepFaceLab/merger/MergeMasked.py,174,mkl-m,
-DeepFaceLab/merger/MergeMasked.py,176,idt,
-DeepFaceLab/merger/MergeMasked.py,178,idt-m,
-DeepFaceLab/merger/MergeMasked.py,180,sot-m,
-DeepFaceLab/merger/MergeMasked.py,183,mix-m,
-DeepFaceLab/merger/MergeMasked.py,203,mask used for cv2.seamlessClone,
-DeepFaceLab/merger/MergeMasked.py,219,calc same bounding rect and center point as in cv2.seamlessClone to prevent jittering (not flickering),
-DeepFaceLab/merger/MergeMasked.py,225,seamlessClone may fail in some cases,
-DeepFaceLab/merger/MergeMasked.py,229,reraise MemoryError in order to reprocess this data by other processes,
-DeepFaceLab/merger/MergeMasked.py,251,lct,
-DeepFaceLab/merger/MergeMasked.py,253,mkl,
-DeepFaceLab/merger/MergeMasked.py,255,mkl-m,
-DeepFaceLab/merger/MergeMasked.py,257,idt,
-DeepFaceLab/merger/MergeMasked.py,259,idt-m,
-DeepFaceLab/merger/MergeMasked.py,261,sot-m,
-DeepFaceLab/merger/MergeMasked.py,264,mix-m,
-DeepFaceLab/merger/MergeMasked.py,329,Combining multiple face outputs,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,61,override,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,72,transfer and set stdin in order to work code.interact in debug subprocess,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,79,override,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,80,pf=ProcessingFrame,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,134,overridable,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,136,return string identificator of your data,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,142,override,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,183,"Loaded session data, check it",
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,193,frames count must match,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,199,frames filenames must match,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,210,recreate MergerConfig class using constructor with get_config() as dict params,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,211,"so if any new param will be added, old merger session will work properly",
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,219,"model was more trained, recompute all frames",
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,224,all frames are done?,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,235,remove all images in output_path,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,238,remove all images in output_mask_path,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,252,"if some frame does not exist, recompute and rewind",
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,268,override,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,282,overridable optional,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,337,overridable optional,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,359,override,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,393,unable to read? recompute then,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,412,tab,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,415,esc,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,526,initiate solve again,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,536,override,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,542,override,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,550,override,
-DeepFaceLab/merger/InteractiveMergerSubprocessor.py,571,override,
-DeepFaceLab/merger/MergerScreen/MergerScreen.py,109,center window,
-DeepFaceLab/models/ModelBase.py,54,gather all model dat files,
-DeepFaceLab/models/ModelBase.py,61,sort by modified datetime,
-DeepFaceLab/models/ModelBase.py,163,,
-DeepFaceLab/models/ModelBase.py,174,,
-DeepFaceLab/models/ModelBase.py,180,save as default options only for first run model initialize,
-DeepFaceLab/models/ModelBase.py,299,overridable,
-DeepFaceLab/models/ModelBase.py,303,overridable,
-DeepFaceLab/models/ModelBase.py,314,overridable,
-DeepFaceLab/models/ModelBase.py,316,save your models here,
-DeepFaceLab/models/ModelBase.py,319,overridable,
-DeepFaceLab/models/ModelBase.py,321,train your models here,
-DeepFaceLab/models/ModelBase.py,323,return array of losses,
-DeepFaceLab/models/ModelBase.py,326,overridable,
-DeepFaceLab/models/ModelBase.py,328,you can return multiple previews,
-DeepFaceLab/models/ModelBase.py,329,"return [ ('preview_name',preview_rgb), ... ]",
-DeepFaceLab/models/ModelBase.py,332,overridable if you want model name differs from folder name,
-DeepFaceLab/models/ModelBase.py,336,"overridable , return [ [model, filename],... ]  list",
-DeepFaceLab/models/ModelBase.py,340,overridable,
-DeepFaceLab/models/ModelBase.py,342,"return predictor_func, predictor_input_shape, MergerConfig() for the model",
-DeepFaceLab/models/ModelBase.py,358,"first preview, and bgr",
-DeepFaceLab/models/ModelBase.py,513,Generate text summary of model hyperparameters,
-DeepFaceLab/models/ModelBase.py,514,Find the longest key name and value string. Used as column widths.,
-DeepFaceLab/models/ModelBase.py,515,"Single space buffer to left edge. Minimum of 17, the length of the longest static string used ""Current iteration""",
-DeepFaceLab/models/ModelBase.py,516,Single space buffer to right edge,
-DeepFaceLab/models/ModelBase.py,517,Check length of GPU names,
-DeepFaceLab/models/ModelBase.py,519,"Plus 2 for "": """,
-DeepFaceLab/models/ModelBase.py,522,Model/status summary,
-DeepFaceLab/models/ModelBase.py,524,Name,
-DeepFaceLab/models/ModelBase.py,526,Iter,
-DeepFaceLab/models/ModelBase.py,529,Model options,
-DeepFaceLab/models/ModelBase.py,532,self.options key/value pairs,
-DeepFaceLab/models/ModelBase.py,535,Training hardware info,
-DeepFaceLab/models/ModelBase.py,538,cpu_only,
-DeepFaceLab/models/ModelBase.py,541,GPU hardware device index,
-DeepFaceLab/models/ModelBase.py,542,GPU name,
-DeepFaceLab/models/ModelBase.py,543,GPU VRAM - Formated as #.## (or ##.##),
-DeepFaceLab/models/Model_XSeg/Model.py,19,override,
-DeepFaceLab/models/Model_XSeg/Model.py,35,override,
-DeepFaceLab/models/Model_XSeg/Model.py,60,Initializing model classes,
-DeepFaceLab/models/Model_XSeg/Model.py,71,Adjust batch size for multiple GPU,
-DeepFaceLab/models/Model_XSeg/Model.py,77,Compute losses per GPU,
-DeepFaceLab/models/Model_XSeg/Model.py,87,"slice on CPU, otherwise all batch data will be transfered to GPU first",
-DeepFaceLab/models/Model_XSeg/Model.py,92,process model tensors,
-DeepFaceLab/models/Model_XSeg/Model.py,102,"Average losses and gradients, and create optimizer update ops",
-DeepFaceLab/models/Model_XSeg/Model.py,110,Initializing training and view functions,
-DeepFaceLab/models/Model_XSeg/Model.py,120,initializing sample generators,
-DeepFaceLab/models/Model_XSeg/Model.py,150,override,
-DeepFaceLab/models/Model_XSeg/Model.py,154,override,
-DeepFaceLab/models/Model_XSeg/Model.py,158,override,
-DeepFaceLab/models/Model_XSeg/Model.py,167,override,
-DeepFaceLab/models/Model_Quick96/Model.py,14,override,
-DeepFaceLab/models/Model_Quick96/Model.py,45,Place holders on CPU,
-DeepFaceLab/models/Model_Quick96/Model.py,55,Initializing model classes,
-DeepFaceLab/models/Model_Quick96/Model.py,74,Initialize optimizers,
-DeepFaceLab/models/Model_Quick96/Model.py,80,Adjust batch size for multiple GPU,
-DeepFaceLab/models/Model_Quick96/Model.py,85,Compute losses per GPU,
-DeepFaceLab/models/Model_Quick96/Model.py,101,"slice on CPU, otherwise all batch data will be transfered to GPU first",
-DeepFaceLab/models/Model_Quick96/Model.py,109,process model tensors,
-DeepFaceLab/models/Model_Quick96/Model.py,154,"Average losses and gradients, and create optimizer update ops",
-DeepFaceLab/models/Model_Quick96/Model.py,168,Initializing training and view functions,
-DeepFaceLab/models/Model_Quick96/Model.py,191,Initializing merge function,
-DeepFaceLab/models/Model_Quick96/Model.py,203,Loading/initializing all models/optimizers weights,
-DeepFaceLab/models/Model_Quick96/Model.py,223,initializing sample generators,
-DeepFaceLab/models/Model_Quick96/Model.py,252,override,
-DeepFaceLab/models/Model_Quick96/Model.py,256,override,
-DeepFaceLab/models/Model_Quick96/Model.py,261,override,
-DeepFaceLab/models/Model_Quick96/Model.py,279,override,
-DeepFaceLab/models/Model_Quick96/Model.py,313,override,
-DeepFaceLab/models/Model_SAEHD/Model.py,16,override,
-DeepFaceLab/models/Model_SAEHD/Model.py,118,override,
-DeepFaceLab/models/Model_SAEHD/Model.py,161,Place holders on CPU,
-DeepFaceLab/models/Model_SAEHD/Model.py,171,Initializing model classes,
-DeepFaceLab/models/Model_SAEHD/Model.py,219,Initialize optimizers,
-DeepFaceLab/models/Model_SAEHD/Model.py,243,Adjust batch size for multiple GPU,
-DeepFaceLab/models/Model_SAEHD/Model.py,249,Compute losses per GPU,
-DeepFaceLab/models/Model_SAEHD/Model.py,266,"slice on CPU, otherwise all batch data will be transfered to GPU first",
-DeepFaceLab/models/Model_SAEHD/Model.py,275,process model tensors,
-DeepFaceLab/models/Model_SAEHD/Model.py,305,unpack masks from one combined mask,
-DeepFaceLab/models/Model_SAEHD/Model.py,398,"Average losses and gradients, and create optimizer update ops",
-DeepFaceLab/models/Model_SAEHD/Model.py,418,Initializing training and view functions,
-DeepFaceLab/models/Model_SAEHD/Model.py,455,Initializing merge function,
-DeepFaceLab/models/Model_SAEHD/Model.py,478,Loading/initializing all models/optimizers weights,
-DeepFaceLab/models/Model_SAEHD/Model.py,497,initializing sample generators,
-DeepFaceLab/models/Model_SAEHD/Model.py,534,override,
-DeepFaceLab/models/Model_SAEHD/Model.py,538,override,
-DeepFaceLab/models/Model_SAEHD/Model.py,544,override,
-DeepFaceLab/models/Model_SAEHD/Model.py,579,override,
-DeepFaceLab/models/Model_SAEHD/Model.py,662,override,
+DeepFaceLab/main.py,2,Fix for linux,not
+DeepFaceLab/main.py,259,========== XSeg,not
+DeepFaceLab/mainscripts/VideoEd.py,42,highest quality for jpg,not
+DeepFaceLab/mainscripts/VideoEd.py,97,Check extension of all images,not
+DeepFaceLab/mainscripts/VideoEd.py,110,Rename to temporary filenames,not
+DeepFaceLab/mainscripts/VideoEd.py,120,Rename to sequental filenames,not
+DeepFaceLab/mainscripts/VideoEd.py,131,Process image sequence in ffmpeg,not
+DeepFaceLab/mainscripts/VideoEd.py,147,Rename to temporary filenames,not
+DeepFaceLab/mainscripts/VideoEd.py,157,Rename to initial filenames,not
+DeepFaceLab/mainscripts/VideoEd.py,203,probing reference file,not
+DeepFaceLab/mainscripts/VideoEd.py,206,getting first video and audio streams id with fps,not
+DeepFaceLab/mainscripts/VideoEd.py,216,has audio track,not
+DeepFaceLab/mainscripts/VideoEd.py,220,if fps not specified and not overwritten by reference-file,not
+DeepFaceLab/mainscripts/Extractor.py,42,override,not
+DeepFaceLab/mainscripts/Extractor.py,53,transfer and set stdin in order to work code.interact in debug subprocess,not
+DeepFaceLab/mainscripts/Extractor.py,74,"for head type, extract ""3D landmarks""",not
+DeepFaceLab/mainscripts/Extractor.py,80,override,not
+DeepFaceLab/mainscripts/Extractor.py,135,Image is too small,not
+DeepFaceLab/mainscripts/Extractor.py,217,if re-extracting from dflimg and more than 1 or zero faces detected - dont process and just copy it,not
+DeepFaceLab/mainscripts/Extractor.py,228,cannot extract more than 1 face from dflimg,not
+DeepFaceLab/mainscripts/Extractor.py,251,get rid of faces which umeyama-landmark-area > 4*detector-rect-area,not
+DeepFaceLab/mainscripts/Extractor.py,262,if extracting from dflimg and jpg copy it in order not to lose quality,not
+DeepFaceLab/mainscripts/Extractor.py,288,overridable,not
+DeepFaceLab/mainscripts/Extractor.py,290,return string identificator of your data,not
+DeepFaceLab/mainscripts/Extractor.py,348,override,not
+DeepFaceLab/mainscripts/Extractor.py,371,override,not
+DeepFaceLab/mainscripts/Extractor.py,378,override,not
+DeepFaceLab/mainscripts/Extractor.py,396,override,not
+DeepFaceLab/mainscripts/Extractor.py,406,need remark image from input data that already has a marked face?,not
+DeepFaceLab/mainscripts/Extractor.py,408,If there was already a face then lock the rectangle to it until the mouse is clicked,not
+DeepFaceLab/mainscripts/Extractor.py,478,confirm frame,not
+DeepFaceLab/mainscripts/Extractor.py,484,confirm skip frame,not
+DeepFaceLab/mainscripts/Extractor.py,488,go prev frame,not
+DeepFaceLab/mainscripts/Extractor.py,492,Only save the face if the rect is still locked,not
+DeepFaceLab/mainscripts/Extractor.py,503,go next frame,not
+DeepFaceLab/mainscripts/Extractor.py,507,Only save the face if the rect is still locked,not
+DeepFaceLab/mainscripts/Extractor.py,515,skip remaining,not
+DeepFaceLab/mainscripts/Extractor.py,569,override,not
+DeepFaceLab/mainscripts/Extractor.py,574,override,not
+DeepFaceLab/mainscripts/Extractor.py,619,override,not
+DeepFaceLab/mainscripts/Extractor.py,626,override,not
+DeepFaceLab/mainscripts/Extractor.py,631,override,not
+DeepFaceLab/mainscripts/Extractor.py,636,override,not
+DeepFaceLab/mainscripts/Extractor.py,638,return string identificator of your data,not
+DeepFaceLab/mainscripts/Extractor.py,641,override,not
+DeepFaceLab/mainscripts/Extractor.py,648,override,not
+DeepFaceLab/mainscripts/Extractor.py,653,override,not
+DeepFaceLab/mainscripts/Extractor.py,657,override,not
+DeepFaceLab/mainscripts/Extractor.py,661,override,not
+DeepFaceLab/mainscripts/Extractor.py,667,override,not
+DeepFaceLab/mainscripts/Extractor.py,671,override,not
+DeepFaceLab/mainscripts/Extractor.py,677,override,not
+DeepFaceLab/mainscripts/Merger.py,45,Initialize model,not
+DeepFaceLab/mainscripts/Merger.py,54,Preparing MP functions,not
+DeepFaceLab/mainscripts/Merger.py,154,center+up,not
+DeepFaceLab/mainscripts/Merger.py,244,interpolate landmarks,not
+DeepFaceLab/mainscripts/Merger.py,245,from facelib import LandmarksProcessor,not
+DeepFaceLab/mainscripts/Merger.py,246,from facelib import FaceType,not
+DeepFaceLab/mainscripts/Merger.py,247,a = sorted(alignments.keys()),not
+DeepFaceLab/mainscripts/Merger.py,248,a_len = len(a),not
+DeepFaceLab/mainscripts/Merger.py,249,,not
+DeepFaceLab/mainscripts/Merger.py,250,box_pts = 3,not
+DeepFaceLab/mainscripts/Merger.py,251,box = np.ones(box_pts)/box_pts,not
+DeepFaceLab/mainscripts/Merger.py,252,for i in range( a_len ):,not
+DeepFaceLab/mainscripts/Merger.py,253,if i >= box_pts and i <= a_len-box_pts-1:,not
+DeepFaceLab/mainscripts/Merger.py,254,af0 = alignments[ a[i] ][0] ##first face,not
+DeepFaceLab/mainscripts/Merger.py,255,"m0 = LandmarksProcessor.get_transform_mat (af0, 256, face_type=FaceType.FULL)",not
+DeepFaceLab/mainscripts/Merger.py,256,,not
+DeepFaceLab/mainscripts/Merger.py,257,points = [],not
+DeepFaceLab/mainscripts/Merger.py,258,,not
+DeepFaceLab/mainscripts/Merger.py,259,"for j in range(-box_pts, box_pts+1):",not
+DeepFaceLab/mainscripts/Merger.py,260,af = alignments[ a[i+j] ][0] ##first face,not
+DeepFaceLab/mainscripts/Merger.py,261,"m = LandmarksProcessor.get_transform_mat (af, 256, face_type=FaceType.FULL)",not
+DeepFaceLab/mainscripts/Merger.py,262,"p = LandmarksProcessor.transform_points (af, m)",not
+DeepFaceLab/mainscripts/Merger.py,263,points.append (p),not
+DeepFaceLab/mainscripts/Merger.py,264,,not
+DeepFaceLab/mainscripts/Merger.py,265,points = np.array(points),not
+DeepFaceLab/mainscripts/Merger.py,266,points_len = len(points),not
+DeepFaceLab/mainscripts/Merger.py,267,"t_points = np.transpose(points, [1,0,2])",not
+DeepFaceLab/mainscripts/Merger.py,268,,not
+DeepFaceLab/mainscripts/Merger.py,269,"p1 = np.array ( [ int(np.convolve(x[:,0], box, mode='same')[points_len//2]) for x in t_points ] )",not
+DeepFaceLab/mainscripts/Merger.py,270,"p2 = np.array ( [ int(np.convolve(x[:,1], box, mode='same')[points_len//2]) for x in t_points ] )",not
+DeepFaceLab/mainscripts/Merger.py,271,,not
+DeepFaceLab/mainscripts/Merger.py,272,"new_points = np.concatenate( [np.expand_dims(p1,-1),np.expand_dims(p2,-1)], -1 )",not
+DeepFaceLab/mainscripts/Merger.py,273,,not
+DeepFaceLab/mainscripts/Merger.py,274,"alignments[ a[i] ][0]  = LandmarksProcessor.transform_points (new_points, m0, True).astype(np.int32)",not
+DeepFaceLab/mainscripts/Sorter.py,26,override,not
+DeepFaceLab/mainscripts/Sorter.py,39,override,not
+DeepFaceLab/mainscripts/Sorter.py,41,return string identificator of your data,not
+DeepFaceLab/mainscripts/Sorter.py,44,override,not
+DeepFaceLab/mainscripts/Sorter.py,51,override,not
+DeepFaceLab/mainscripts/Sorter.py,55,override,not
+DeepFaceLab/mainscripts/Sorter.py,59,override,not
+DeepFaceLab/mainscripts/Sorter.py,67,override,not
+DeepFaceLab/mainscripts/Sorter.py,74,override,not
+DeepFaceLab/mainscripts/Sorter.py,78,override,not
+DeepFaceLab/mainscripts/Sorter.py,87,override,not
+DeepFaceLab/mainscripts/Sorter.py,177,override,not
+DeepFaceLab/mainscripts/Sorter.py,204,override,not
+DeepFaceLab/mainscripts/Sorter.py,208,override,not
+DeepFaceLab/mainscripts/Sorter.py,227,override,not
+DeepFaceLab/mainscripts/Sorter.py,234,override,not
+DeepFaceLab/mainscripts/Sorter.py,239,override,not
+DeepFaceLab/mainscripts/Sorter.py,243,override,not
+DeepFaceLab/mainscripts/Sorter.py,249,override,not
+DeepFaceLab/mainscripts/Sorter.py,253,override,not
+DeepFaceLab/mainscripts/Sorter.py,258,override,not
+DeepFaceLab/mainscripts/Sorter.py,269,override,not
+DeepFaceLab/mainscripts/Sorter.py,274,override,not
+DeepFaceLab/mainscripts/Sorter.py,285,override,not
+DeepFaceLab/mainscripts/Sorter.py,287,return string identificator of your data,not
+DeepFaceLab/mainscripts/Sorter.py,290,override,not
+DeepFaceLab/mainscripts/Sorter.py,297,override,not
+DeepFaceLab/mainscripts/Sorter.py,301,override,not
+DeepFaceLab/mainscripts/Sorter.py,305,override,not
+DeepFaceLab/mainscripts/Sorter.py,312,override,not
+DeepFaceLab/mainscripts/Sorter.py,319,override,not
+DeepFaceLab/mainscripts/Sorter.py,323,override,not
+DeepFaceLab/mainscripts/Sorter.py,328,override,not
+DeepFaceLab/mainscripts/Sorter.py,426,override,not
+DeepFaceLab/mainscripts/Sorter.py,430,override,not
+DeepFaceLab/mainscripts/Sorter.py,462,override,not
+DeepFaceLab/mainscripts/Sorter.py,464,return string identificator of your data,not
+DeepFaceLab/mainscripts/Sorter.py,467,override,not
+DeepFaceLab/mainscripts/Sorter.py,477,override,not
+DeepFaceLab/mainscripts/Sorter.py,481,override,not
+DeepFaceLab/mainscripts/Sorter.py,485,override,not
+DeepFaceLab/mainscripts/Sorter.py,493,override,not
+DeepFaceLab/mainscripts/Sorter.py,500,override,not
+DeepFaceLab/mainscripts/Sorter.py,504,override,not
+DeepFaceLab/mainscripts/Sorter.py,512,override,not
+DeepFaceLab/mainscripts/Sorter.py,518,override,not
+DeepFaceLab/mainscripts/Sorter.py,538,override,not
+DeepFaceLab/mainscripts/Sorter.py,542,override,not
+DeepFaceLab/mainscripts/Sorter.py,551,override,not
+DeepFaceLab/mainscripts/Sorter.py,558,override,not
+DeepFaceLab/mainscripts/Sorter.py,562,override,not
+DeepFaceLab/mainscripts/Sorter.py,566,override,not
+DeepFaceLab/mainscripts/Sorter.py,574,override,not
+DeepFaceLab/mainscripts/Sorter.py,578,override,not
+DeepFaceLab/mainscripts/Sorter.py,584,override,not
+DeepFaceLab/mainscripts/Sorter.py,604,"instead of math.pi / 2, using -1.2,+1.2 because actually maximum yaw for 2DFAN landmarks are -1.2+1.2",not
+DeepFaceLab/mainscripts/dev_misc.py,221,unused in end user workflow,not
+DeepFaceLab/mainscripts/dev_misc.py,223,process 68 landmarks dataset with .pts files,not
+DeepFaceLab/mainscripts/dev_misc.py,279,"DFLJPG.x(output_filepath, face_type=FaceType.toString(FaceType.MARK_ONLY),",not
+DeepFaceLab/mainscripts/dev_misc.py,280,"landmarks=lmrks,",not
+DeepFaceLab/mainscripts/dev_misc.py,281,"source_filename=filepath.name,",not
+DeepFaceLab/mainscripts/dev_misc.py,282,"source_rect=rect,",not
+DeepFaceLab/mainscripts/dev_misc.py,283,source_landmarks=lmrks,not
+DeepFaceLab/mainscripts/dev_misc.py,284,),not
+DeepFaceLab/mainscripts/dev_misc.py,288,unused in end user workflow,not
+DeepFaceLab/mainscripts/dev_misc.py,293,"extract faces from umdfaces.io dataset csv file with pitch,yaw,roll info.",not
+DeepFaceLab/mainscripts/dev_misc.py,375,"dflimg.x(filename, person_name=dir_name)",not
+DeepFaceLab/mainscripts/dev_misc.py,377,import code,not
+DeepFaceLab/mainscripts/dev_misc.py,378,"code.interact(local=dict(globals(), **locals()))",not
+DeepFaceLab/mainscripts/FacesetEnhancer.py,14,override,not
+DeepFaceLab/mainscripts/FacesetEnhancer.py,24,override,not
+DeepFaceLab/mainscripts/FacesetEnhancer.py,28,override,not
+DeepFaceLab/mainscripts/FacesetEnhancer.py,32,override,not
+DeepFaceLab/mainscripts/FacesetEnhancer.py,44,override,not
+DeepFaceLab/mainscripts/FacesetEnhancer.py,49,override,not
+DeepFaceLab/mainscripts/FacesetEnhancer.py,53,override,not
+DeepFaceLab/mainscripts/FacesetEnhancer.py,59,override,not
+DeepFaceLab/mainscripts/FacesetEnhancer.py,75,override,not
+DeepFaceLab/mainscripts/FacesetEnhancer.py,98,override,not
+DeepFaceLab/mainscripts/Trainer.py,82,Set the GUI Thread as Ready,not
+DeepFaceLab/mainscripts/Trainer.py,217,Wait for inital load to occur.,not
+DeepFaceLab/mainscripts/Trainer.py,265,make all previews size equal,not
+DeepFaceLab/mainscripts/Trainer.py,284,HEAD,not
+DeepFaceLab/samplelib/SampleGeneratorBase.py,24,overridable,not
+DeepFaceLab/samplelib/SampleGeneratorBase.py,26,implement your own iterator,not
+DeepFaceLab/samplelib/SampleGeneratorBase.py,30,implement your own iterator,not
+DeepFaceLab/samplelib/SampleGeneratorBase.py,33,overridable,not
+DeepFaceLab/samplelib/SampleGeneratorFace.py,72,overridable,not
+DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,52,overridable,not
+DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,146,override,not
+DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,155,override,not
+DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,160,override,not
+DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,164,override,not
+DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,168,override,not
+DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,175,override,not
+DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,179,override,not
+DeepFaceLab/samplelib/SampleGeneratorFaceXSeg.py,189,overridable optional,not
+DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,137,overridable,not
+DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,185,"neck_path = masks.get(MaskType.neck, None)",not
+DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,202,if neck_path is not None:,not
+DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,203,neck_path = masks_path / neck_path,not
+DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,204,if neck_path.exists():,not
+DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,205,"neck = cv2_imread(neck_path)[...,0:1].astype(np.float32) / 255.0",not
+DeepFaceLab/samplelib/SampleGeneratorFaceCelebAMaskHQ.py,206,"mask = np.clip(mask+neck, 0, 1)",not
+DeepFaceLab/samplelib/SampleProcessor.py,25,BGR,not
+DeepFaceLab/samplelib/SampleProcessor.py,26,Grayscale,not
+DeepFaceLab/samplelib/SampleProcessor.py,27,3xGrayscale,not
+DeepFaceLab/samplelib/SampleProcessor.py,31,mask all hull as grayscale,not
+DeepFaceLab/samplelib/SampleProcessor.py,32,mask eyes hull as grayscale,not
+DeepFaceLab/samplelib/SampleProcessor.py,33,combo all + eyes as grayscale,not
+DeepFaceLab/samplelib/SampleProcessor.py,184,Apply random color transfer,not
+DeepFaceLab/samplelib/SampleProcessor.py,212,Transform from BGR to desired channel_type,not
+DeepFaceLab/samplelib/SampleProcessor.py,220,Final transformations,not
+DeepFaceLab/samplelib/SampleLoader.py,109,override,not
+DeepFaceLab/samplelib/SampleLoader.py,117,override,not
+DeepFaceLab/samplelib/SampleLoader.py,121,override,not
+DeepFaceLab/samplelib/SampleLoader.py,125,override,not
+DeepFaceLab/samplelib/SampleLoader.py,130,override,not
+DeepFaceLab/samplelib/SampleLoader.py,138,override,not
+DeepFaceLab/samplelib/SampleLoader.py,142,override,not
+DeepFaceLab/samplelib/SampleLoader.py,148,override,not
+DeepFaceLab/samplelib/SampleLoader.py,153,override,not
+DeepFaceLab/samplelib/SampleLoader.py,172,override,not
+DeepFaceLab/samplelib/SampleLoader.py,174,return string identificator of your data,not
+DeepFaceLab/samplelib/Sample.py,13,raw image,not
+DeepFaceLab/samplelib/Sample.py,16,aligned face unsorted,not
+DeepFaceLab/samplelib/Sample.py,17,aligned face person,not
+DeepFaceLab/samplelib/Sample.py,18,sorted by source filename,not
+DeepFaceLab/samplelib/PackedFaceset.py,55,just free mem,not
+DeepFaceLab/samplelib/PackedFaceset.py,59,sample data offset table,not
+DeepFaceLab/core/pathex.py,20,see below for Python 2.x,not
+DeepFaceLab/core/mathlib/umeyama.py,27,Compute mean of src and dst.,not
+DeepFaceLab/core/mathlib/umeyama.py,31,Subtract mean from src and dst.,not
+DeepFaceLab/core/mathlib/umeyama.py,35,Eq. (38).,not
+DeepFaceLab/core/mathlib/umeyama.py,38,Eq. (39).,not
+DeepFaceLab/core/mathlib/umeyama.py,47,Eq. (40) and (43).,not
+DeepFaceLab/core/mathlib/umeyama.py,63,Eq. (41) and (42).,not
+DeepFaceLab/core/leras/nn.py,52,Manipulate environment variables before import tensorflow,not
+DeepFaceLab/core/leras/nn.py,60,Windows specific env vars,not
+DeepFaceLab/core/leras/nn.py,73,512Mb (32mb default),not
+DeepFaceLab/core/leras/nn.py,75,tf log errors only,not
+DeepFaceLab/core/leras/nn.py,84,Disable tensorflow warnings,not
+DeepFaceLab/core/leras/nn.py,87,Initialize framework,not
+DeepFaceLab/core/leras/nn.py,95,Configure tensorflow session-config,not
+DeepFaceLab/core/leras/nn.py,193,Undocumented access to last tf.device(...),not
+DeepFaceLab/core/leras/archis/ArchiBase.py,9,overridable,not
+DeepFaceLab/core/leras/archis/ArchiBase.py,13,overridable,not
+DeepFaceLab/core/leras/layers/Conv2DTranspose.py,36,He init,not
+DeepFaceLab/core/leras/layers/Saveable.py,14,override,not
+DeepFaceLab/core/leras/layers/Saveable.py,16,return tf tensors that should be initialized/loaded/saved,not
+DeepFaceLab/core/leras/layers/Saveable.py,19,override,not
+DeepFaceLab/core/leras/layers/Saveable.py,90,"io.log_err(f""Weight {w.name} was not loaded from file {filename}"")",not
+DeepFaceLab/core/leras/layers/Dense.py,39,He init,not
+DeepFaceLab/core/leras/layers/LayerBase.py,5,override,not
+DeepFaceLab/core/leras/layers/LayerBase.py,9,override,not
+DeepFaceLab/core/leras/ops/__init__.py,144,match NCHW version in order to switch data_format without problems,not
+DeepFaceLab/core/leras/ops/__init__.py,160,match NCHW version in order to switch data_format without problems,not
+DeepFaceLab/core/leras/ops/__init__.py,265,compensation factor,not
+DeepFaceLab/core/leras/ops/__init__.py,279,match NCHW version in order to switch data_format without problems,not
+DeepFaceLab/core/leras/ops/__init__.py,292,match NCHW version in order to switch data_format without problems,not
+DeepFaceLab/core/leras/ops/__init__.py,312,X        Y          Z,not
+DeepFaceLab/core/leras/ops/__init__.py,313,R,not
+DeepFaceLab/core/leras/ops/__init__.py,314,G,not
+DeepFaceLab/core/leras/ops/__init__.py,315,B,not
+DeepFaceLab/core/leras/ops/__init__.py,327,l       a       b,not
+DeepFaceLab/core/leras/ops/__init__.py,328,fx,not
+DeepFaceLab/core/leras/ops/__init__.py,329,fy,not
+DeepFaceLab/core/leras/ops/__init__.py,330,fz,not
+DeepFaceLab/core/leras/initializers/CA.py,45,override,not
+DeepFaceLab/core/leras/initializers/CA.py,51,override,not
+DeepFaceLab/core/leras/initializers/CA.py,58,override,not
+DeepFaceLab/core/leras/initializers/CA.py,63,override,not
+DeepFaceLab/core/leras/initializers/CA.py,71,override,not
+DeepFaceLab/core/leras/initializers/CA.py,75,override,not
+DeepFaceLab/core/leras/initializers/CA.py,80,override,not
+DeepFaceLab/core/leras/initializers/__init__.py,17,"list of (shape, np.dtype)",not
+DeepFaceLab/core/leras/optimizers/OptimizerBase.py,19,if clipnorm == 0 no need to add ops to the graph,not
+DeepFaceLab/core/leras/optimizers/OptimizerBase.py,26,saving the shape to avoid converting sparse tensor to dense,not
+DeepFaceLab/core/leras/optimizers/RMSprop.py,29,Initialize here all trainable variables used in training,not
+DeepFaceLab/core/leras/models/ModelBase.py,70,override,not
+DeepFaceLab/core/leras/models/ModelBase.py,94,override,not
+DeepFaceLab/core/leras/models/ModelBase.py,104,override,not
+DeepFaceLab/core/leras/models/ModelBase.py,106,flow layers/models/tensors here,not
+DeepFaceLab/core/leras/models/ModelBase.py,125,"CPU tensors will not impact any performance, only slightly RAM ""leakage""",not
+DeepFaceLab/core/leras/models/ModelBase.py,185,Get layers names and str lenght for delim,not
+DeepFaceLab/core/leras/models/ModelBase.py,191,Get params for each layer,not
+DeepFaceLab/core/leras/models/ModelBase.py,195,Get str lenght for delim,not
+DeepFaceLab/core/leras/models/ModelBase.py,200,Set delim,not
+DeepFaceLab/core/leras/models/ModelBase.py,206,Format model name str,not
+DeepFaceLab/core/leras/models/ModelBase.py,216,Format layers table,not
+DeepFaceLab/core/leras/models/ModelBase.py,238,Format sum of params,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,33,overridable optional,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,35,initialize your subprocess here using client_dict,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,38,overridable optional,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,40,finalize your subprocess here,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,43,overridable,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,45,process 'data' given from host and return result,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,48,overridable optional,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,50,return string identificator of your 'data',not
+DeepFaceLab/core/joblib/SubprocessorBase.py,94,disable pickling,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,100,overridable,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,111,overridable,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,113,"yield per process (name, host_dict, client_dict)",not
+DeepFaceLab/core/joblib/SubprocessorBase.py,116,overridable optional,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,118,logic when all subprocesses initialized and ready,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,121,overridable optional,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,123,logic when all subprocess finalized,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,126,overridable,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,128,return data for processing here,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,131,overridable,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,133,you have to place returned 'data' back to your queue,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,136,overridable,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,138,your logic what to do with 'result' of 'data',not
+DeepFaceLab/core/joblib/SubprocessorBase.py,141,overridable,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,143,return result that will be returned in func run(),not
+DeepFaceLab/core/joblib/SubprocessorBase.py,146,overridable,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,148,tick in main loop,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,149,"return True if system can be finalized when no data in get_data, orelse False",not
+DeepFaceLab/core/joblib/SubprocessorBase.py,152,overridable,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,162,"getting info about name of subprocesses, host and client dicts, and spawning them",not
+DeepFaceLab/core/joblib/SubprocessorBase.py,198,waiting subprocesses their success(or not) initialization,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,221,"ok some processes survived, initialize host logic",not
+DeepFaceLab/core/joblib/SubprocessorBase.py,225,main loop of data processing,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,232,"success processed data, return data and result to on_result",not
+DeepFaceLab/core/joblib/SubprocessorBase.py,237,"some error occured while process data, returning chunk to on_data_return",not
+DeepFaceLab/core/joblib/SubprocessorBase.py,240,and killing process,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,253,subprocess busy too long,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,261,"free state of subprocess, get some data from get_data",not
+DeepFaceLab/core/joblib/SubprocessorBase.py,264,and send it to subprocess,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,274,"all subprocesses free and no more data available to process, ending loop",not
+DeepFaceLab/core/joblib/SubprocessorBase.py,279,gracefully terminating subprocesses,not
+DeepFaceLab/core/joblib/SubprocessorBase.py,304,finalizing host logic and return result,not
+DeepFaceLab/core/qtex/qtex.py,50,[::-1],not
+DeepFaceLab/core/qtex/QSubprocessor.py,39,overridable optional,not
+DeepFaceLab/core/qtex/QSubprocessor.py,41,initialize your subprocess here using client_dict,not
+DeepFaceLab/core/qtex/QSubprocessor.py,44,overridable optional,not
+DeepFaceLab/core/qtex/QSubprocessor.py,46,finalize your subprocess here,not
+DeepFaceLab/core/qtex/QSubprocessor.py,49,overridable,not
+DeepFaceLab/core/qtex/QSubprocessor.py,51,process 'data' given from host and return result,not
+DeepFaceLab/core/qtex/QSubprocessor.py,54,overridable optional,not
+DeepFaceLab/core/qtex/QSubprocessor.py,56,return string identificator of your 'data',not
+DeepFaceLab/core/qtex/QSubprocessor.py,92,disable pickling,not
+DeepFaceLab/core/qtex/QSubprocessor.py,98,overridable,not
+DeepFaceLab/core/qtex/QSubprocessor.py,110,"getting info about name of subprocesses, host and client dicts, and spawning them",not
+DeepFaceLab/core/qtex/QSubprocessor.py,127,waiting subprocesses their success(or not) initialization,not
+DeepFaceLab/core/qtex/QSubprocessor.py,150,"ok some processes survived, initialize host logic",not
+DeepFaceLab/core/qtex/QSubprocessor.py,157,overridable,not
+DeepFaceLab/core/qtex/QSubprocessor.py,159,"yield per process (name, host_dict, client_dict)",not
+DeepFaceLab/core/qtex/QSubprocessor.py,163,overridable optional,not
+DeepFaceLab/core/qtex/QSubprocessor.py,165,logic when all subprocesses initialized and ready,not
+DeepFaceLab/core/qtex/QSubprocessor.py,168,overridable optional,not
+DeepFaceLab/core/qtex/QSubprocessor.py,170,logic when all subprocess finalized,not
+DeepFaceLab/core/qtex/QSubprocessor.py,173,overridable,not
+DeepFaceLab/core/qtex/QSubprocessor.py,175,return data for processing here,not
+DeepFaceLab/core/qtex/QSubprocessor.py,178,overridable,not
+DeepFaceLab/core/qtex/QSubprocessor.py,180,you have to place returned 'data' back to your queue,not
+DeepFaceLab/core/qtex/QSubprocessor.py,183,overridable,not
+DeepFaceLab/core/qtex/QSubprocessor.py,185,your logic what to do with 'result' of 'data',not
+DeepFaceLab/core/qtex/QSubprocessor.py,194,"success processed data, return data and result to on_result",not
+DeepFaceLab/core/qtex/QSubprocessor.py,199,"some error occured while process data, returning chunk to on_data_return",not
+DeepFaceLab/core/qtex/QSubprocessor.py,202,and killing process,not
+DeepFaceLab/core/qtex/QSubprocessor.py,215,subprocess busy too long,not
+DeepFaceLab/core/qtex/QSubprocessor.py,223,"free state of subprocess, get some data from get_data",not
+DeepFaceLab/core/qtex/QSubprocessor.py,226,and send it to subprocess,not
+DeepFaceLab/core/qtex/QSubprocessor.py,233,gracefully terminating subprocesses,not
+DeepFaceLab/core/qtex/QSubprocessor.py,258,finalizing host logic,not
+DeepFaceLab/core/interact/interact.py,15,if success we are in colab,not
+DeepFaceLab/core/interact/interact.py,88,we will show window only on first show_image,not
+DeepFaceLab/core/interact/interact.py,420,currently it does not work on Colab,not
+DeepFaceLab/core/interact/interact.py,471,fix opencv bug when window size more than screen size,SATD
+DeepFaceLab/core/interact/interact.py,531,clear_output(),not
+DeepFaceLab/core/interact/interact.py,535,clear_output(),not
+DeepFaceLab/core/interact/interact.py,542,# cv2 stores colors as BGR; convert to RGB,not
+DeepFaceLab/core/interact/interact.py,543,if img.ndim == 3:,not
+DeepFaceLab/core/interact/interact.py,544,if img.shape[2] == 4:,not
+DeepFaceLab/core/interact/interact.py,545,"img = cv2.cvtColor(img, cv2.COLOR_BGRA2RGBA)",not
+DeepFaceLab/core/interact/interact.py,546,else:,not
+DeepFaceLab/core/interact/interact.py,547,"img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)",not
+DeepFaceLab/core/interact/interact.py,548,img = PIL.Image.fromarray(img),not
+DeepFaceLab/core/interact/interact.py,549,plt.imshow(img),not
+DeepFaceLab/core/interact/interact.py,550,plt.show(),not
+DeepFaceLab/core/interact/interact.py,554,"print(""on_capture_mouse(): Colab does not support"")",not
+DeepFaceLab/core/interact/interact.py,558,"print(""on_capture_keys(): Colab does not support"")",not
+DeepFaceLab/core/interact/interact.py,565,"print(""on_wait_any_key(): Colab does not support"")",not
+DeepFaceLab/core/mplib/MPSharedList.py,113,override,not
+DeepFaceLab/core/mplib/MPSharedList.py,119,override,not
+DeepFaceLab/core/mplib/MPSharedList.py,124,override,not
+DeepFaceLab/core/mplib/MPSharedList.py,131,override,not
+DeepFaceLab/core/mplib/MPSharedList.py,135,override,not
+DeepFaceLab/core/mplib/MPSharedList.py,140,overridable optional,not
+DeepFaceLab/core/mplib/__init__.py,38,get_1D,not
+DeepFaceLab/core/mplib/__init__.py,48,get_2D,not
+DeepFaceLab/core/mplib/__init__.py,71,disable pickling,not
+DeepFaceLab/core/mplib/__init__.py,139,disable pickling,not
+DeepFaceLab/core/mplib/__init__.py,205,disable pickling,not
+DeepFaceLab/core/mplib/__init__.py,280,disable pickling,not
+DeepFaceLab/core/imagelib/color_transfer.py,218,"convert the images from the RGB to L*ab* color space, being",not
+DeepFaceLab/core/imagelib/color_transfer.py,219,sure to utilizing the floating point data type (note: OpenCV,not
+DeepFaceLab/core/imagelib/color_transfer.py,220,"expects floats to be 32-bit, so use that instead of 64-bit)",not
+DeepFaceLab/core/imagelib/color_transfer.py,224,compute color statistics for the source and target images,not
+DeepFaceLab/core/imagelib/color_transfer.py,230,subtract the means from the target image,not
+DeepFaceLab/core/imagelib/color_transfer.py,237,scale by the standard deviations using paper proposed factor,not
+DeepFaceLab/core/imagelib/color_transfer.py,242,scale by the standard deviations using reciprocal of paper proposed factor,not
+DeepFaceLab/core/imagelib/color_transfer.py,247,add in the source mean,not
+DeepFaceLab/core/imagelib/color_transfer.py,252,"clip/scale the pixel intensities to [0, 255] if they fall",not
+DeepFaceLab/core/imagelib/color_transfer.py,253,outside this range,not
+DeepFaceLab/core/imagelib/color_transfer.py,258,merge the channels together and convert back to the RGB color,not
+DeepFaceLab/core/imagelib/color_transfer.py,259,"space, being sure to utilize the 8-bit unsigned integer data",not
+DeepFaceLab/core/imagelib/color_transfer.py,260,type,not
+DeepFaceLab/core/imagelib/color_transfer.py,264,return the color transferred image,not
+DeepFaceLab/core/imagelib/color_transfer.py,306,compute the mean and standard deviation of each channel,not
+DeepFaceLab/core/imagelib/color_transfer.py,312,return the color statistics,not
+DeepFaceLab/core/imagelib/color_transfer.py,329,Code borrowed from:,not
+DeepFaceLab/core/imagelib/color_transfer.py,330,https://stackoverflow.com/questions/32655686/histogram-matching-of-two-images-in-python-2-x,not
+DeepFaceLab/core/imagelib/SegIEPolys.py,145,Backward comp,not
+DeepFaceLab/core/imagelib/reduce_colors.py,5,n_colors = [0..256],not
+DeepFaceLab/core/imagelib/blursharpen.py,15,box,not
+DeepFaceLab/core/imagelib/blursharpen.py,21,gaussian,not
+DeepFaceLab/core/imagelib/warp.py,15,random warp by grid,not
+DeepFaceLab/core/imagelib/warp.py,31,random transform,not
+DeepFaceLab/core/imagelib/equalize_and_stack_square.py,33,GA,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,39,type: (numpy.ndarray) -> numpy.ndarray,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,47,normalize h1,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,51,Note: https://sourceforge.net/p/octave/image/ci/default/tree/inst/edge.m#l59,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,59,type: (numpy.ndarray) -> numpy.ndarray,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,86,threshold to characterize blocks as edge/non-edge blocks,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,88,fitting parameter,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,90,block size,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,92,just noticeable widths based on the perceptual experiments,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,97,type: (numpy.ndarray) -> float,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,100,convert the image to double for further processing,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,103,edge detection using canny and sobel canny edge detection is done to,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,104,classify the blocks as edge or non-edge blocks and sobel edge,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,105,detection is done for the purpose of edge width measurement.,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,109,edge width calculation,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,112,sharpness metric calculation,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,117,"type: (numpy.ndarray, numpy.ndarray) -> numpy.ndarray",not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,125,`edge_widths` consists of zero and non-zero values. A zero value,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,126,indicates that there is no edge at that position and a non-zero value,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,127,indicates that there is an edge at that position and the value itself,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,128,gives the edge width.,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,131,find the gradient for the image,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,134,dimensions of the image,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,137,holds the angle information of the edges,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,140,calculate the angle of the edges,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,153,quantize the angle,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,160,gradient angle = 180 or -180,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,166,outside image or intensity increasing from left to right,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,176,outside image or intensity increasing from left to right,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,185,gradient angle = 0,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,191,outside image or intensity decreasing from left to right,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,201,outside image or intensity decreasing from left to right,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,213,"type: (numpy.array, numpy.array, numpy.array) -> numpy.float64",not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,215,get the size of image,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,221,maximum block indices,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,225,loop over the blocks,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,229,get the row and col indices for the block pixel positions,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,235,rotate block to simulate column-major boolean indexing,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,242,calculate the probability of blur detection at the edges,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,243,detected in the block,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,246,update the statistics using the block information,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,252,normalize the pdf,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,256,calculate the sharpness metric,not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,261,"type: (numpy.ndarray, float) -> bool",not
+DeepFaceLab/core/imagelib/estimate_sharpness.py,267,type: (numpy.ndarray) -> int,not
+DeepFaceLab/facelib/XSegNet.py,34,Place holders on CPU,not
+DeepFaceLab/facelib/XSegNet.py,38,Initializing model classes,not
+DeepFaceLab/facelib/XSegNet.py,62,Loading/initializing all models/optimizers weights,not
+DeepFaceLab/facelib/XSegNet.py,94,get rid of noise,not
+DeepFaceLab/facelib/LandmarksProcessor.py,15,17,not
+DeepFaceLab/facelib/LandmarksProcessor.py,16,18,not
+DeepFaceLab/facelib/LandmarksProcessor.py,17,19,not
+DeepFaceLab/facelib/LandmarksProcessor.py,18,20,not
+DeepFaceLab/facelib/LandmarksProcessor.py,19,21,not
+DeepFaceLab/facelib/LandmarksProcessor.py,20,22,not
+DeepFaceLab/facelib/LandmarksProcessor.py,21,23,not
+DeepFaceLab/facelib/LandmarksProcessor.py,22,24,not
+DeepFaceLab/facelib/LandmarksProcessor.py,23,25,not
+DeepFaceLab/facelib/LandmarksProcessor.py,24,26,not
+DeepFaceLab/facelib/LandmarksProcessor.py,25,27,not
+DeepFaceLab/facelib/LandmarksProcessor.py,26,28,not
+DeepFaceLab/facelib/LandmarksProcessor.py,27,29,not
+DeepFaceLab/facelib/LandmarksProcessor.py,28,30,not
+DeepFaceLab/facelib/LandmarksProcessor.py,29,31,not
+DeepFaceLab/facelib/LandmarksProcessor.py,30,32,not
+DeepFaceLab/facelib/LandmarksProcessor.py,31,33,not
+DeepFaceLab/facelib/LandmarksProcessor.py,32,34,not
+DeepFaceLab/facelib/LandmarksProcessor.py,33,35,not
+DeepFaceLab/facelib/LandmarksProcessor.py,34,36,not
+DeepFaceLab/facelib/LandmarksProcessor.py,35,37,not
+DeepFaceLab/facelib/LandmarksProcessor.py,36,38,not
+DeepFaceLab/facelib/LandmarksProcessor.py,37,39,not
+DeepFaceLab/facelib/LandmarksProcessor.py,38,40,not
+DeepFaceLab/facelib/LandmarksProcessor.py,39,41,not
+DeepFaceLab/facelib/LandmarksProcessor.py,40,42,not
+DeepFaceLab/facelib/LandmarksProcessor.py,41,43,not
+DeepFaceLab/facelib/LandmarksProcessor.py,42,44,not
+DeepFaceLab/facelib/LandmarksProcessor.py,43,45,not
+DeepFaceLab/facelib/LandmarksProcessor.py,44,46,not
+DeepFaceLab/facelib/LandmarksProcessor.py,45,47,not
+DeepFaceLab/facelib/LandmarksProcessor.py,46,48,not
+DeepFaceLab/facelib/LandmarksProcessor.py,47,49,not
+DeepFaceLab/facelib/LandmarksProcessor.py,48,50,not
+DeepFaceLab/facelib/LandmarksProcessor.py,49,51,not
+DeepFaceLab/facelib/LandmarksProcessor.py,50,52,not
+DeepFaceLab/facelib/LandmarksProcessor.py,51,53,not
+DeepFaceLab/facelib/LandmarksProcessor.py,52,54,not
+DeepFaceLab/facelib/LandmarksProcessor.py,53,55,not
+DeepFaceLab/facelib/LandmarksProcessor.py,54,56,not
+DeepFaceLab/facelib/LandmarksProcessor.py,55,57,not
+DeepFaceLab/facelib/LandmarksProcessor.py,56,58,not
+DeepFaceLab/facelib/LandmarksProcessor.py,57,59,not
+DeepFaceLab/facelib/LandmarksProcessor.py,58,60,not
+DeepFaceLab/facelib/LandmarksProcessor.py,59,61,not
+DeepFaceLab/facelib/LandmarksProcessor.py,60,62,not
+DeepFaceLab/facelib/LandmarksProcessor.py,61,63,not
+DeepFaceLab/facelib/LandmarksProcessor.py,62,64,not
+DeepFaceLab/facelib/LandmarksProcessor.py,63,65,not
+DeepFaceLab/facelib/LandmarksProcessor.py,64,66,not
+DeepFaceLab/facelib/LandmarksProcessor.py,65,67,not
+DeepFaceLab/facelib/LandmarksProcessor.py,70,17,not
+DeepFaceLab/facelib/LandmarksProcessor.py,71,18,not
+DeepFaceLab/facelib/LandmarksProcessor.py,72,19,not
+DeepFaceLab/facelib/LandmarksProcessor.py,73,20,not
+DeepFaceLab/facelib/LandmarksProcessor.py,74,21,not
+DeepFaceLab/facelib/LandmarksProcessor.py,75,22,not
+DeepFaceLab/facelib/LandmarksProcessor.py,76,23,not
+DeepFaceLab/facelib/LandmarksProcessor.py,77,24,not
+DeepFaceLab/facelib/LandmarksProcessor.py,78,25,not
+DeepFaceLab/facelib/LandmarksProcessor.py,79,26,not
+DeepFaceLab/facelib/LandmarksProcessor.py,80,27,not
+DeepFaceLab/facelib/LandmarksProcessor.py,81,28,not
+DeepFaceLab/facelib/LandmarksProcessor.py,82,29,not
+DeepFaceLab/facelib/LandmarksProcessor.py,83,30,not
+DeepFaceLab/facelib/LandmarksProcessor.py,84,31,not
+DeepFaceLab/facelib/LandmarksProcessor.py,85,32,not
+DeepFaceLab/facelib/LandmarksProcessor.py,86,33,not
+DeepFaceLab/facelib/LandmarksProcessor.py,87,34,not
+DeepFaceLab/facelib/LandmarksProcessor.py,88,35,not
+DeepFaceLab/facelib/LandmarksProcessor.py,89,36,not
+DeepFaceLab/facelib/LandmarksProcessor.py,90,37,not
+DeepFaceLab/facelib/LandmarksProcessor.py,91,38,not
+DeepFaceLab/facelib/LandmarksProcessor.py,92,39,not
+DeepFaceLab/facelib/LandmarksProcessor.py,93,40,not
+DeepFaceLab/facelib/LandmarksProcessor.py,94,41,not
+DeepFaceLab/facelib/LandmarksProcessor.py,95,42,not
+DeepFaceLab/facelib/LandmarksProcessor.py,96,43,not
+DeepFaceLab/facelib/LandmarksProcessor.py,97,44,not
+DeepFaceLab/facelib/LandmarksProcessor.py,98,45,not
+DeepFaceLab/facelib/LandmarksProcessor.py,99,46,not
+DeepFaceLab/facelib/LandmarksProcessor.py,100,47,not
+DeepFaceLab/facelib/LandmarksProcessor.py,101,48,not
+DeepFaceLab/facelib/LandmarksProcessor.py,102,54,not
+DeepFaceLab/facelib/LandmarksProcessor.py,106,48,not
+DeepFaceLab/facelib/LandmarksProcessor.py,107,49,not
+DeepFaceLab/facelib/LandmarksProcessor.py,108,50,not
+DeepFaceLab/facelib/LandmarksProcessor.py,109,51,not
+DeepFaceLab/facelib/LandmarksProcessor.py,110,52,not
+DeepFaceLab/facelib/LandmarksProcessor.py,111,53,not
+DeepFaceLab/facelib/LandmarksProcessor.py,112,54,not
+DeepFaceLab/facelib/LandmarksProcessor.py,113,55,not
+DeepFaceLab/facelib/LandmarksProcessor.py,114,56,not
+DeepFaceLab/facelib/LandmarksProcessor.py,115,57,not
+DeepFaceLab/facelib/LandmarksProcessor.py,116,58,not
+DeepFaceLab/facelib/LandmarksProcessor.py,117,59,not
+DeepFaceLab/facelib/LandmarksProcessor.py,118,60,not
+DeepFaceLab/facelib/LandmarksProcessor.py,119,61,not
+DeepFaceLab/facelib/LandmarksProcessor.py,120,62,not
+DeepFaceLab/facelib/LandmarksProcessor.py,121,63,not
+DeepFaceLab/facelib/LandmarksProcessor.py,122,64,not
+DeepFaceLab/facelib/LandmarksProcessor.py,123,65,not
+DeepFaceLab/facelib/LandmarksProcessor.py,124,66,not
+DeepFaceLab/facelib/LandmarksProcessor.py,125,67,not
+DeepFaceLab/facelib/LandmarksProcessor.py,128,68 point landmark definitions,not
+DeepFaceLab/facelib/LandmarksProcessor.py,134,missed one point,not
+DeepFaceLab/facelib/LandmarksProcessor.py,138,00,not
+DeepFaceLab/facelib/LandmarksProcessor.py,139,01,not
+DeepFaceLab/facelib/LandmarksProcessor.py,140,02,not
+DeepFaceLab/facelib/LandmarksProcessor.py,141,03,not
+DeepFaceLab/facelib/LandmarksProcessor.py,142,04,not
+DeepFaceLab/facelib/LandmarksProcessor.py,143,05,not
+DeepFaceLab/facelib/LandmarksProcessor.py,144,06,not
+DeepFaceLab/facelib/LandmarksProcessor.py,145,07,not
+DeepFaceLab/facelib/LandmarksProcessor.py,146,08,not
+DeepFaceLab/facelib/LandmarksProcessor.py,147,09,not
+DeepFaceLab/facelib/LandmarksProcessor.py,148,10,not
+DeepFaceLab/facelib/LandmarksProcessor.py,149,11,not
+DeepFaceLab/facelib/LandmarksProcessor.py,150,12,not
+DeepFaceLab/facelib/LandmarksProcessor.py,151,13,not
+DeepFaceLab/facelib/LandmarksProcessor.py,152,14,not
+DeepFaceLab/facelib/LandmarksProcessor.py,153,15,not
+DeepFaceLab/facelib/LandmarksProcessor.py,154,16,not
+DeepFaceLab/facelib/LandmarksProcessor.py,155,17,not
+DeepFaceLab/facelib/LandmarksProcessor.py,156,18,not
+DeepFaceLab/facelib/LandmarksProcessor.py,157,19,not
+DeepFaceLab/facelib/LandmarksProcessor.py,158,20,not
+DeepFaceLab/facelib/LandmarksProcessor.py,159,21,not
+DeepFaceLab/facelib/LandmarksProcessor.py,160,22,not
+DeepFaceLab/facelib/LandmarksProcessor.py,161,23,not
+DeepFaceLab/facelib/LandmarksProcessor.py,162,24,not
+DeepFaceLab/facelib/LandmarksProcessor.py,163,25,not
+DeepFaceLab/facelib/LandmarksProcessor.py,164,26,not
+DeepFaceLab/facelib/LandmarksProcessor.py,165,27,not
+DeepFaceLab/facelib/LandmarksProcessor.py,166,28,not
+DeepFaceLab/facelib/LandmarksProcessor.py,167,29,not
+DeepFaceLab/facelib/LandmarksProcessor.py,168,00,not
+DeepFaceLab/facelib/LandmarksProcessor.py,169,01,not
+DeepFaceLab/facelib/LandmarksProcessor.py,170,02,not
+DeepFaceLab/facelib/LandmarksProcessor.py,171,03,not
+DeepFaceLab/facelib/LandmarksProcessor.py,172,04,not
+DeepFaceLab/facelib/LandmarksProcessor.py,173,05,not
+DeepFaceLab/facelib/LandmarksProcessor.py,174,06,not
+DeepFaceLab/facelib/LandmarksProcessor.py,175,07,not
+DeepFaceLab/facelib/LandmarksProcessor.py,176,08,not
+DeepFaceLab/facelib/LandmarksProcessor.py,177,09,not
+DeepFaceLab/facelib/LandmarksProcessor.py,178,10,not
+DeepFaceLab/facelib/LandmarksProcessor.py,179,11,not
+DeepFaceLab/facelib/LandmarksProcessor.py,180,12,not
+DeepFaceLab/facelib/LandmarksProcessor.py,181,13,not
+DeepFaceLab/facelib/LandmarksProcessor.py,182,14,not
+DeepFaceLab/facelib/LandmarksProcessor.py,183,15,not
+DeepFaceLab/facelib/LandmarksProcessor.py,184,16,not
+DeepFaceLab/facelib/LandmarksProcessor.py,185,17,not
+DeepFaceLab/facelib/LandmarksProcessor.py,186,18,not
+DeepFaceLab/facelib/LandmarksProcessor.py,187,19,not
+DeepFaceLab/facelib/LandmarksProcessor.py,188,20,not
+DeepFaceLab/facelib/LandmarksProcessor.py,189,21,not
+DeepFaceLab/facelib/LandmarksProcessor.py,190,22,not
+DeepFaceLab/facelib/LandmarksProcessor.py,191,23,not
+DeepFaceLab/facelib/LandmarksProcessor.py,192,24,not
+DeepFaceLab/facelib/LandmarksProcessor.py,193,25,not
+DeepFaceLab/facelib/LandmarksProcessor.py,194,26,not
+DeepFaceLab/facelib/LandmarksProcessor.py,195,27,not
+DeepFaceLab/facelib/LandmarksProcessor.py,196,28,not
+DeepFaceLab/facelib/LandmarksProcessor.py,197,29,not
+DeepFaceLab/facelib/LandmarksProcessor.py,198,30,not
+DeepFaceLab/facelib/LandmarksProcessor.py,199,31,not
+DeepFaceLab/facelib/LandmarksProcessor.py,200,32,not
+DeepFaceLab/facelib/LandmarksProcessor.py,201,33,not
+DeepFaceLab/facelib/LandmarksProcessor.py,202,34,not
+DeepFaceLab/facelib/LandmarksProcessor.py,203,35,not
+DeepFaceLab/facelib/LandmarksProcessor.py,204,36,not
+DeepFaceLab/facelib/LandmarksProcessor.py,205,37,not
+DeepFaceLab/facelib/LandmarksProcessor.py,219,jaw,not
+DeepFaceLab/facelib/LandmarksProcessor.py,228,eyebrows averaging,not
+DeepFaceLab/facelib/LandmarksProcessor.py,243,nose,not
+DeepFaceLab/facelib/LandmarksProcessor.py,246,left eye (from our view),not
+DeepFaceLab/facelib/LandmarksProcessor.py,254,right eye,not
+DeepFaceLab/facelib/LandmarksProcessor.py,262,mouth,not
+DeepFaceLab/facelib/LandmarksProcessor.py,280,estimate landmarks transform from global space to local aligned space with bounds [0..1],not
+DeepFaceLab/facelib/LandmarksProcessor.py,283,get corner points in global space,not
+DeepFaceLab/facelib/LandmarksProcessor.py,287,calc diagonal vectors between corners in global space,not
+DeepFaceLab/facelib/LandmarksProcessor.py,293,calc modifier of diagonal vectors for scale and padding value,not
+DeepFaceLab/facelib/LandmarksProcessor.py,298,"adjust vertical offset for WHOLE_FACE, 7% below in order to cover more forehead",not
+DeepFaceLab/facelib/LandmarksProcessor.py,307,"assuming image_landmarks are 3D_Landmarks extracted for HEAD,",not
+DeepFaceLab/facelib/LandmarksProcessor.py,308,adjust horizontal offset according to estimated yaw,not
+DeepFaceLab/facelib/LandmarksProcessor.py,315,Damp near zero,not
+DeepFaceLab/facelib/LandmarksProcessor.py,319,"adjust vertical offset for HEAD, 50% below",not
+DeepFaceLab/facelib/LandmarksProcessor.py,325,calc 3 points in global space to estimate 2d affine transform,not
+DeepFaceLab/facelib/LandmarksProcessor.py,331,remove_align - face will be centered in the frame but not aligned,not
+DeepFaceLab/facelib/LandmarksProcessor.py,338,get area of face square in global space,not
+DeepFaceLab/facelib/LandmarksProcessor.py,341,calc side of square,not
+DeepFaceLab/facelib/LandmarksProcessor.py,344,calc 3 points with unrotated square,not
+DeepFaceLab/facelib/LandmarksProcessor.py,349,calc affine transform from 3 global space points to 3 local space points size of 'output_size',not
+DeepFaceLab/facelib/LandmarksProcessor.py,368,#nose,not
+DeepFaceLab/facelib/LandmarksProcessor.py,372,mid points between the mid points and eye,not
+DeepFaceLab/facelib/LandmarksProcessor.py,376,Top of the eye arrays,not
+DeepFaceLab/facelib/LandmarksProcessor.py,380,Eyebrow arrays,not
+DeepFaceLab/facelib/LandmarksProcessor.py,384,Adjust eyebrow arrays,not
+DeepFaceLab/facelib/LandmarksProcessor.py,474,calculate signed distance for all points and lines,not
+DeepFaceLab/facelib/LandmarksProcessor.py,535,"eyes_mask = np.clip ( 1- ( np.sqrt( np.maximum(eyes_mask,0) ) / eyes_fall_dist ), 0, 1)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,536,"eyes_mask = np.clip ( 1- ( np.cbrt( np.maximum(eyes_mask,0) ) / eyes_fall_dist ), 0, 1)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,540,"brows_mask = np.clip ( 1- ( np.sqrt( np.maximum(brows_mask,0) ) / brows_fall_dist ), 0, 1)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,544,"mouth_mask = np.clip ( 1- ( np.sqrt( np.maximum(mouth_mask,0) ) / mouth_fall_dist ), 0, 1)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,551,nose_mask = (a-b)*x+b - k*x*(1.0-x),not
+DeepFaceLab/facelib/LandmarksProcessor.py,553,"nose_mask = np.minimum (up_nose_mask , down_nose_mask )",not
+DeepFaceLab/facelib/LandmarksProcessor.py,554,"nose_mask = 1-np.clip( nose_mask / nose_fall_dist, 0, 1)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,561,"up_nose_mask = np.clip ( 1- ( np.cbrt( np.maximum(up_nose_mask,0) ) / nose_fall_dist ), 0, 1)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,565,"down_nose_mask = np.clip ( 1- ( np.cbrt( np.maximum(down_nose_mask,0) ) / nose_fall_dist ), 0, 1)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,567,"nose_mask = np.clip( up_nose_mask + down_nose_mask, 0, 1 )",not
+DeepFaceLab/facelib/LandmarksProcessor.py,568,nose_mask /= np.max(nose_mask),not
+DeepFaceLab/facelib/LandmarksProcessor.py,569,"nose_mask = np.maximum (up_nose_mask , down_nose_mask )",not
+DeepFaceLab/facelib/LandmarksProcessor.py,570,nose_mask = down_nose_mask,not
+DeepFaceLab/facelib/LandmarksProcessor.py,572,nose_mask = np.zeros_like(nose_mask),not
+DeepFaceLab/facelib/LandmarksProcessor.py,580,eyes_mask = eyes_mask * (1-nose_mask),not
+DeepFaceLab/facelib/LandmarksProcessor.py,592,"nose_mask = np.maximum( up_nose_mask, down_nose_mask )",not
+DeepFaceLab/facelib/LandmarksProcessor.py,596,"result = np.clip (result, 0, 1)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,682,open shapes,not
+DeepFaceLab/facelib/LandmarksProcessor.py,685,closed shapes,not
+DeepFaceLab/facelib/LandmarksProcessor.py,690,the rest of the cicles,not
+DeepFaceLab/facelib/LandmarksProcessor.py,693,jaw big circles,not
+DeepFaceLab/facelib/LandmarksProcessor.py,720,"Works much better than solvePnP if landmarks from ""3DFAN""",SATD
+DeepFaceLab/facelib/LandmarksProcessor.py,754,if remove_align:,not
+DeepFaceLab/facelib/LandmarksProcessor.py,755,"bbox = transform_points ( [ (0,0), (0,output_size), (output_size, output_size), (output_size,0) ], mat, True)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,756,#import code,not
+DeepFaceLab/facelib/LandmarksProcessor.py,757,"#code.interact(local=dict(globals(), **locals()))",not
+DeepFaceLab/facelib/LandmarksProcessor.py,758,"area = mathlib.polygon_area(bbox[:,0], bbox[:,1] )",not
+DeepFaceLab/facelib/LandmarksProcessor.py,759,side = math.sqrt(area) / 2,not
+DeepFaceLab/facelib/LandmarksProcessor.py,760,"center = transform_points ( [(output_size/2,output_size/2)], mat, True)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,761,"pts1 = np.float32(( center+[-side,-side], center+[side,-side], center+[side,-side] ))",not
+DeepFaceLab/facelib/LandmarksProcessor.py,762,"pts2 = np.float32([[0,0],[output_size,0],[0,output_size]])",not
+DeepFaceLab/facelib/LandmarksProcessor.py,763,"mat = cv2.getAffineTransform(pts1,pts2)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,764,if full_face_align_top and (face_type == FaceType.FULL or face_type == FaceType.FULL_NO_ALIGN):,not
+DeepFaceLab/facelib/LandmarksProcessor.py,765,#lmrks2 = expand_eyebrows(image_landmarks),not
+DeepFaceLab/facelib/LandmarksProcessor.py,766,"#lmrks2_ = transform_points( [ lmrks2[19], lmrks2[24] ], mat, False )",not
+DeepFaceLab/facelib/LandmarksProcessor.py,767,"#y_diff = np.float32( (0,np.min(lmrks2_[:,1])) )",not
+DeepFaceLab/facelib/LandmarksProcessor.py,768,"#y_diff = transform_points( [ np.float32( (0,0) ), y_diff], mat, True)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,769,#y_diff = y_diff[1]-y_diff[0],not
+DeepFaceLab/facelib/LandmarksProcessor.py,770,,not
+DeepFaceLab/facelib/LandmarksProcessor.py,771,"x_diff = np.float32((0,0))",not
+DeepFaceLab/facelib/LandmarksProcessor.py,772,,not
+DeepFaceLab/facelib/LandmarksProcessor.py,773,"lmrks2_ = transform_points( [ image_landmarks[0], image_landmarks[16] ], mat, False )",not
+DeepFaceLab/facelib/LandmarksProcessor.py,774,"if lmrks2_[0,0] < 0:",not
+DeepFaceLab/facelib/LandmarksProcessor.py,775,"x_diff = lmrks2_[0,0]",not
+DeepFaceLab/facelib/LandmarksProcessor.py,776,"x_diff = transform_points( [ np.float32( (0,0) ), np.float32((x_diff,0)) ], mat, True)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,777,x_diff = x_diff[1]-x_diff[0],not
+DeepFaceLab/facelib/LandmarksProcessor.py,778,"elif lmrks2_[1,0] >= output_size:",not
+DeepFaceLab/facelib/LandmarksProcessor.py,779,"x_diff = lmrks2_[1,0]-(output_size-1)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,780,"x_diff = transform_points( [ np.float32( (0,0) ), np.float32((x_diff,0)) ], mat, True)",not
+DeepFaceLab/facelib/LandmarksProcessor.py,781,x_diff = x_diff[1]-x_diff[0],not
+DeepFaceLab/facelib/LandmarksProcessor.py,782,,not
+DeepFaceLab/facelib/LandmarksProcessor.py,783,"mat = cv2.getAffineTransform( l_t+y_diff+x_diff ,pts2)",not
+DeepFaceLab/facelib/FANExtractor.py,224,dont do second pass if faces != 1 detected in cropped image,not
+DeepFaceLab/facelib/S3FDExtractor.py,153,max-out background label,not
+DeepFaceLab/facelib/S3FDExtractor.py,176,pass exception between __enter__ and __exit__ to outter level,not
+DeepFaceLab/facelib/S3FDExtractor.py,199,filtering faces < 40pix by any side,not
+DeepFaceLab/facelib/S3FDExtractor.py,201,"enlarging bottom line a bit for 2DFAN-4, because default is not enough covering a chin",not
+DeepFaceLab/facelib/S3FDExtractor.py,204,sort by largest area first,not
+DeepFaceLab/facelib/S3FDExtractor.py,224,"4,8,16,32,64,128",not
+DeepFaceLab/facelib/FaceType.py,4,"enumerating in order ""next contains prev""",not
+DeepFaceLab/facelib/FaceType.py,13,"no align at all, just embedded faceinfo",not
+DeepFaceLab/localization/localization.py,5,system_locale may be nil,not
+DeepFaceLab/XSegEditor/XSegEditor.py,93,Fix arrays,not
+DeepFaceLab/XSegEditor/XSegEditor.py,159,==============================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,174,==============================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,189,==============================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,194,==============================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,233,==============================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,266,==============================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,355,UI init,not
+DeepFaceLab/XSegEditor/XSegEditor.py,360,Initial vars,not
+DeepFaceLab/XSegEditor/XSegEditor.py,367,Initial state,not
+DeepFaceLab/XSegEditor/XSegEditor.py,374,Apply last state,not
+DeepFaceLab/XSegEditor/XSegEditor.py,404,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,405,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,406,====================================== GETTERS =====================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,407,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,408,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,428,Calc as scale to fit,not
+DeepFaceLab/XSegEditor/XSegEditor.py,480,QSize_to_np(self.size())/2.0,not
+DeepFaceLab/XSegEditor/XSegEditor.py,491,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,492,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,493,====================================== SETTERS =====================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,494,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,495,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,502,Finalize prev mode,not
+DeepFaceLab/XSegEditor/XSegEditor.py,509,Reset view_lock when exit from DRAW_PTS,not
+DeepFaceLab/XSegEditor/XSegEditor.py,511,Remove unfinished poly,not
+DeepFaceLab/XSegEditor/XSegEditor.py,518,Reset pt_edit_move when exit from EDIT_PTS,not
+DeepFaceLab/XSegEditor/XSegEditor.py,527,Initialize new mode,not
+DeepFaceLab/XSegEditor/XSegEditor.py,621,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,622,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,623,====================================== METHODS =====================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,624,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,625,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,732,Delete current poly,not
+DeepFaceLab/XSegEditor/XSegEditor.py,736,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,737,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,738,================================== OVERRIDE QT METHODS =============================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,739,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,740,====================================================================================,not
+DeepFaceLab/XSegEditor/XSegEditor.py,782,Clicking in NO OPERATION mode,not
+DeepFaceLab/XSegEditor/XSegEditor.py,784,Click on wire on any poly -> switch to EDIT_MODE,not
+DeepFaceLab/XSegEditor/XSegEditor.py,787,Click on empty space -> create new poly with one point,not
+DeepFaceLab/XSegEditor/XSegEditor.py,794,Clicking in DRAW_PTS mode,not
+DeepFaceLab/XSegEditor/XSegEditor.py,796,Click on first point -> close poly and switch to edit mode,not
+DeepFaceLab/XSegEditor/XSegEditor.py,799,Click on empty space -> add point to current poly,not
+DeepFaceLab/XSegEditor/XSegEditor.py,804,Clicking in EDIT_PTS mode,not
+DeepFaceLab/XSegEditor/XSegEditor.py,807,Click on point of op_poly,not
+DeepFaceLab/XSegEditor/XSegEditor.py,809,with mode -> delete point,not
+DeepFaceLab/XSegEditor/XSegEditor.py,812,not enough points -> remove poly,not
+DeepFaceLab/XSegEditor/XSegEditor.py,818,otherwise -> start drag,not
+DeepFaceLab/XSegEditor/XSegEditor.py,824,Click on edge of op_poly,not
+DeepFaceLab/XSegEditor/XSegEditor.py,826,with mode -> insert new point,not
+DeepFaceLab/XSegEditor/XSegEditor.py,831,Otherwise do nothing,not
+DeepFaceLab/XSegEditor/XSegEditor.py,834,other cases -> unselect poly,not
+DeepFaceLab/XSegEditor/XSegEditor.py,839,Start image drag,not
+DeepFaceLab/XSegEditor/XSegEditor.py,913,*1.5,not
+DeepFaceLab/XSegEditor/XSegEditor.py,994,Circle around poly point,not
+DeepFaceLab/XSegEditor/XSegEditor.py,1000,Line from last point to mouse,not
+DeepFaceLab/XSegEditor/XSegEditor.py,1008,Ready to insert point on edge,not
+DeepFaceLab/XSegEditor/XSegEditor.py,1016,Closing poly line,not
+DeepFaceLab/XSegEditor/XSegEditor.py,1019,Draw calls,not
+DeepFaceLab/XSegEditor/XSegEditor.py,1037,else:,not
+DeepFaceLab/XSegEditor/XSegEditor.py,1038,if poly == op_poly:,not
+DeepFaceLab/XSegEditor/XSegEditor.py,1039,qp.setBrush(color_scheme.poly_selected_brush),not
+DeepFaceLab/XSegEditor/XSegEditor.py,1159,Loader,not
+DeepFaceLab/DFLIMG/DFLJPG.py,94,if is_unk_chunk:,not
+DeepFaceLab/DFLIMG/DFLJPG.py,95,"#raise ValueError(f""Unknown chunk {chunk_m_h} in {filename}"")",not
+DeepFaceLab/DFLIMG/DFLJPG.py,96,"io.log_info(f""Unknown chunk {chunk_m_h} in {filename}"")",not
+DeepFaceLab/DFLIMG/DFLJPG.py,98,variable size,not
+DeepFaceLab/DFLIMG/DFLJPG.py,139,if units == 0:,not
+DeepFaceLab/DFLIMG/DFLJPG.py,140,"inst.shape = (Ydensity, Xdensity, 3)",not
+DeepFaceLab/DFLIMG/DFLJPG.py,172,Remove None keys,not
+DeepFaceLab/merger/MergerConfig.py,12,,not
+DeepFaceLab/merger/MergerConfig.py,26,default changeable params,not
+DeepFaceLab/merger/MergerConfig.py,33,overridable,not
+DeepFaceLab/merger/MergerConfig.py,51,overridable,not
+DeepFaceLab/merger/MergerConfig.py,57,overridable,not
+DeepFaceLab/merger/MergerConfig.py,59,check equality of changeable params,not
+DeepFaceLab/merger/MergerConfig.py,67,overridable,not
+DeepFaceLab/merger/MergerConfig.py,127,default changeable params,not
+DeepFaceLab/merger/MergerConfig.py,235,check equality of changeable params,not
+DeepFaceLab/merger/MergerConfig.py,299,changeable params,not
+DeepFaceLab/merger/MergerConfig.py,305,override,not
+DeepFaceLab/merger/MergerConfig.py,313,override,not
+DeepFaceLab/merger/MergerConfig.py,315,check equality of changeable params,not
+DeepFaceLab/merger/MergerConfig.py,323,override,not
+DeepFaceLab/merger/MergeAvatar.py,29,if cfg.super_resolution_mode != 0:,not
+DeepFaceLab/merger/MergeAvatar.py,30,"prd_f = cfg.superres_func(cfg.super_resolution_mode, prd_f)",not
+DeepFaceLab/merger/MergeMasked.py,58,dst,not
+DeepFaceLab/merger/MergeMasked.py,60,learned-prd,not
+DeepFaceLab/merger/MergeMasked.py,62,learned-dst,not
+DeepFaceLab/merger/MergeMasked.py,64,learned-prd*learned-dst,not
+DeepFaceLab/merger/MergeMasked.py,66,learned-prd+learned-dst,not
+DeepFaceLab/merger/MergeMasked.py,68,XSeg modes,not
+DeepFaceLab/merger/MergeMasked.py,70,obtain XSeg-prd,not
+DeepFaceLab/merger/MergeMasked.py,76,obtain XSeg-dst,not
+DeepFaceLab/merger/MergeMasked.py,82,'XSeg-prd',not
+DeepFaceLab/merger/MergeMasked.py,84,'XSeg-dst',not
+DeepFaceLab/merger/MergeMasked.py,86,'XSeg-prd*XSeg-dst',not
+DeepFaceLab/merger/MergeMasked.py,88,learned-prd*learned-dst*XSeg-prd*XSeg-dst,not
+DeepFaceLab/merger/MergeMasked.py,91,get rid of noise,not
+DeepFaceLab/merger/MergeMasked.py,93,resize to mask_subres_size,not
+DeepFaceLab/merger/MergeMasked.py,97,process mask in local predicted space,not
+DeepFaceLab/merger/MergeMasked.py,99,add zero pad,not
+DeepFaceLab/merger/MergeMasked.py,110,clip eroded/dilated mask in actual predict area,not
+DeepFaceLab/merger/MergeMasked.py,111,pad with half blur size in order to accuratelly fade to zero at the boundary,not
+DeepFaceLab/merger/MergeMasked.py,129,get rid of noise,not
+DeepFaceLab/merger/MergeMasked.py,153,Process if the mask meets minimum size,not
+DeepFaceLab/merger/MergeMasked.py,165,rct,not
+DeepFaceLab/merger/MergeMasked.py,170,lct,not
+DeepFaceLab/merger/MergeMasked.py,172,mkl,not
+DeepFaceLab/merger/MergeMasked.py,174,mkl-m,not
+DeepFaceLab/merger/MergeMasked.py,176,idt,not
+DeepFaceLab/merger/MergeMasked.py,178,idt-m,not
+DeepFaceLab/merger/MergeMasked.py,180,sot-m,not
+DeepFaceLab/merger/MergeMasked.py,183,mix-m,not
+DeepFaceLab/merger/MergeMasked.py,203,mask used for cv2.seamlessClone,not
+DeepFaceLab/merger/MergeMasked.py,219,calc same bounding rect and center point as in cv2.seamlessClone to prevent jittering (not flickering),not
+DeepFaceLab/merger/MergeMasked.py,225,seamlessClone may fail in some cases,not
+DeepFaceLab/merger/MergeMasked.py,229,reraise MemoryError in order to reprocess this data by other processes,not
+DeepFaceLab/merger/MergeMasked.py,251,lct,not
+DeepFaceLab/merger/MergeMasked.py,253,mkl,not
+DeepFaceLab/merger/MergeMasked.py,255,mkl-m,not
+DeepFaceLab/merger/MergeMasked.py,257,idt,not
+DeepFaceLab/merger/MergeMasked.py,259,idt-m,not
+DeepFaceLab/merger/MergeMasked.py,261,sot-m,not
+DeepFaceLab/merger/MergeMasked.py,264,mix-m,not
+DeepFaceLab/merger/MergeMasked.py,331,Combining multiple face outputs,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,61,override,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,72,transfer and set stdin in order to work code.interact in debug subprocess,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,79,override,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,80,pf=ProcessingFrame,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,134,overridable,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,136,return string identificator of your data,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,142,override,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,183,"Loaded session data, check it",not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,193,frames count must match,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,199,frames filenames must match,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,210,recreate MergerConfig class using constructor with get_config() as dict params,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,211,"so if any new param will be added, old merger session will work properly",not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,219,"model was more trained, recompute all frames",not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,224,all frames are done?,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,235,remove all images in output_path,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,238,remove all images in output_mask_path,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,252,"if some frame does not exist, recompute and rewind",not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,268,override,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,282,overridable optional,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,337,overridable optional,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,359,override,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,393,unable to read? recompute then,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,413,tab,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,416,esc,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,527,initiate solve again,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,537,override,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,543,override,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,551,override,not
+DeepFaceLab/merger/InteractiveMergerSubprocessor.py,572,override,not
+DeepFaceLab/merger/MergerScreen/MergerScreen.py,109,center window,not
+DeepFaceLab/models/ModelBase.py,54,gather all model dat files,not
+DeepFaceLab/models/ModelBase.py,61,sort by modified datetime,not
+DeepFaceLab/models/ModelBase.py,163,,not
+DeepFaceLab/models/ModelBase.py,174,,not
+DeepFaceLab/models/ModelBase.py,180,save as default options only for first run model initialize,not
+DeepFaceLab/models/ModelBase.py,299,overridable,not
+DeepFaceLab/models/ModelBase.py,303,overridable,not
+DeepFaceLab/models/ModelBase.py,314,overridable,not
+DeepFaceLab/models/ModelBase.py,316,save your models here,not
+DeepFaceLab/models/ModelBase.py,319,overridable,not
+DeepFaceLab/models/ModelBase.py,321,train your models here,not
+DeepFaceLab/models/ModelBase.py,323,return array of losses,not
+DeepFaceLab/models/ModelBase.py,326,overridable,not
+DeepFaceLab/models/ModelBase.py,328,you can return multiple previews,not
+DeepFaceLab/models/ModelBase.py,329,"return [ ('preview_name',preview_rgb), ... ]",not
+DeepFaceLab/models/ModelBase.py,332,overridable if you want model name differs from folder name,not
+DeepFaceLab/models/ModelBase.py,336,"overridable , return [ [model, filename],... ]  list",not
+DeepFaceLab/models/ModelBase.py,340,overridable,not
+DeepFaceLab/models/ModelBase.py,342,"return predictor_func, predictor_input_shape, MergerConfig() for the model",not
+DeepFaceLab/models/ModelBase.py,358,"first preview, and bgr",not
+DeepFaceLab/models/ModelBase.py,513,Generate text summary of model hyperparameters,not
+DeepFaceLab/models/ModelBase.py,514,Find the longest key name and value string. Used as column widths.,not
+DeepFaceLab/models/ModelBase.py,515,"Single space buffer to left edge. Minimum of 17, the length of the longest static string used ""Current iteration""",not
+DeepFaceLab/models/ModelBase.py,516,Single space buffer to right edge,not
+DeepFaceLab/models/ModelBase.py,517,Check length of GPU names,not
+DeepFaceLab/models/ModelBase.py,519,"Plus 2 for "": """,not
+DeepFaceLab/models/ModelBase.py,522,Model/status summary,not
+DeepFaceLab/models/ModelBase.py,524,Name,not
+DeepFaceLab/models/ModelBase.py,526,Iter,not
+DeepFaceLab/models/ModelBase.py,529,Model options,not
+DeepFaceLab/models/ModelBase.py,532,self.options key/value pairs,not
+DeepFaceLab/models/ModelBase.py,535,Training hardware info,not
+DeepFaceLab/models/ModelBase.py,538,cpu_only,not
+DeepFaceLab/models/ModelBase.py,541,GPU hardware device index,not
+DeepFaceLab/models/ModelBase.py,542,GPU name,not
+DeepFaceLab/models/ModelBase.py,543,GPU VRAM - Formated as #.## (or ##.##),not
+DeepFaceLab/models/Model_XSeg/Model.py,19,override,not
+DeepFaceLab/models/Model_XSeg/Model.py,35,override,not
+DeepFaceLab/models/Model_XSeg/Model.py,60,Initializing model classes,not
+DeepFaceLab/models/Model_XSeg/Model.py,71,Adjust batch size for multiple GPU,not
+DeepFaceLab/models/Model_XSeg/Model.py,77,Compute losses per GPU,not
+DeepFaceLab/models/Model_XSeg/Model.py,87,"slice on CPU, otherwise all batch data will be transfered to GPU first",not
+DeepFaceLab/models/Model_XSeg/Model.py,92,process model tensors,not
+DeepFaceLab/models/Model_XSeg/Model.py,102,"Average losses and gradients, and create optimizer update ops",not
+DeepFaceLab/models/Model_XSeg/Model.py,110,Initializing training and view functions,not
+DeepFaceLab/models/Model_XSeg/Model.py,120,initializing sample generators,not
+DeepFaceLab/models/Model_XSeg/Model.py,150,override,not
+DeepFaceLab/models/Model_XSeg/Model.py,154,override,not
+DeepFaceLab/models/Model_XSeg/Model.py,158,override,not
+DeepFaceLab/models/Model_XSeg/Model.py,167,override,not
+DeepFaceLab/models/Model_Quick96/Model.py,14,override,not
+DeepFaceLab/models/Model_Quick96/Model.py,45,Place holders on CPU,not
+DeepFaceLab/models/Model_Quick96/Model.py,55,Initializing model classes,not
+DeepFaceLab/models/Model_Quick96/Model.py,74,Initialize optimizers,not
+DeepFaceLab/models/Model_Quick96/Model.py,80,Adjust batch size for multiple GPU,not
+DeepFaceLab/models/Model_Quick96/Model.py,85,Compute losses per GPU,not
+DeepFaceLab/models/Model_Quick96/Model.py,101,"slice on CPU, otherwise all batch data will be transfered to GPU first",not
+DeepFaceLab/models/Model_Quick96/Model.py,109,process model tensors,not
+DeepFaceLab/models/Model_Quick96/Model.py,154,"Average losses and gradients, and create optimizer update ops",not
+DeepFaceLab/models/Model_Quick96/Model.py,168,Initializing training and view functions,not
+DeepFaceLab/models/Model_Quick96/Model.py,191,Initializing merge function,not
+DeepFaceLab/models/Model_Quick96/Model.py,203,Loading/initializing all models/optimizers weights,not
+DeepFaceLab/models/Model_Quick96/Model.py,223,initializing sample generators,not
+DeepFaceLab/models/Model_Quick96/Model.py,252,override,not
+DeepFaceLab/models/Model_Quick96/Model.py,256,override,not
+DeepFaceLab/models/Model_Quick96/Model.py,261,override,not
+DeepFaceLab/models/Model_Quick96/Model.py,279,override,not
+DeepFaceLab/models/Model_Quick96/Model.py,313,override,not
+DeepFaceLab/models/Model_SAEHD/Model.py,16,override,not
+DeepFaceLab/models/Model_SAEHD/Model.py,118,override,not
+DeepFaceLab/models/Model_SAEHD/Model.py,161,Place holders on CPU,not
+DeepFaceLab/models/Model_SAEHD/Model.py,171,Initializing model classes,not
+DeepFaceLab/models/Model_SAEHD/Model.py,219,Initialize optimizers,not
+DeepFaceLab/models/Model_SAEHD/Model.py,243,Adjust batch size for multiple GPU,not
+DeepFaceLab/models/Model_SAEHD/Model.py,249,Compute losses per GPU,not
+DeepFaceLab/models/Model_SAEHD/Model.py,266,"slice on CPU, otherwise all batch data will be transfered to GPU first",not
+DeepFaceLab/models/Model_SAEHD/Model.py,275,process model tensors,not
+DeepFaceLab/models/Model_SAEHD/Model.py,305,unpack masks from one combined mask,not
+DeepFaceLab/models/Model_SAEHD/Model.py,398,"Average losses and gradients, and create optimizer update ops",not
+DeepFaceLab/models/Model_SAEHD/Model.py,418,Initializing training and view functions,not
+DeepFaceLab/models/Model_SAEHD/Model.py,455,Initializing merge function,not
+DeepFaceLab/models/Model_SAEHD/Model.py,478,Loading/initializing all models/optimizers weights,not
+DeepFaceLab/models/Model_SAEHD/Model.py,497,initializing sample generators,not
+DeepFaceLab/models/Model_SAEHD/Model.py,534,override,not
+DeepFaceLab/models/Model_SAEHD/Model.py,538,override,not
+DeepFaceLab/models/Model_SAEHD/Model.py,544,override,not
+DeepFaceLab/models/Model_SAEHD/Model.py,579,override,not
+DeepFaceLab/models/Model_SAEHD/Model.py,662,override,not

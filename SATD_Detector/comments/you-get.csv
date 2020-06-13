@@ -1,1000 +1,1001 @@
 file path,line #,comment,satd
-you-get/setup.py,1,!/usr/bin/env python3,
-you-get/src/you_get/__main__.py,1,!/usr/bin/env python,
-you-get/src/you_get/__main__.py,23,TBD,
-you-get/src/you_get/__main__.py,29,"Get (branch, commit) if running from a git repo.",
-you-get/src/you_get/__main__.py,32,Get options and arguments.,
-you-get/src/you_get/__main__.py,41,Display help.,
-you-get/src/you_get/__main__.py,43,Enter GUI mode.,
-you-get/src/you_get/__main__.py,44,from .gui import gui_main,
-you-get/src/you_get/__main__.py,45,gui_main(),
-you-get/src/you_get/__main__.py,50,Display help.,
-you-get/src/you_get/__main__.py,54,Display version.,
-you-get/src/you_get/__main__.py,66,Run using GUI.,
-you-get/src/you_get/__main__.py,70,Force download.,
-you-get/src/you_get/__main__.py,74,Download playlist whenever possible.,
-you-get/src/you_get/__main__.py,79,Enter GUI mode.,
-you-get/src/you_get/__main__.py,83,Enter console mode.,
-you-get/src/you_get/__init__.py,1,!/usr/bin/env python,
-you-get/src/you_get/__init__.py,2,This file is Python 2 compliant.,
-you-get/src/you_get/__init__.py,7,"from .extractor import Extractor, VideoExtractor",
-you-get/src/you_get/__init__.py,8,from .util import log,
-you-get/src/you_get/__init__.py,12,from .common import *,
-you-get/src/you_get/__init__.py,13,from .version import *,
-you-get/src/you_get/__init__.py,14,from .cli_wrapper import *,
-you-get/src/you_get/__init__.py,15,from .extractor import *,
-you-get/src/you_get/__init__.py,17,Don't import anything.,
-you-get/src/you_get/json_output.py,4,save info from common.print_info(),
-you-get/src/you_get/json_output.py,36,a fake VideoExtractor object to save info,
-you-get/src/you_get/json_output.py,42,create a VideoExtractor and save info for download_urls(),
-you-get/src/you_get/json_output.py,56,save download info in streams,
-you-get/src/you_get/common.py,1,!/usr/bin/env python,
-you-get/src/you_get/common.py,142,noqa,
-you-get/src/you_get/common.py,146,noqa,
-you-get/src/you_get/common.py,156,all encryption algo should work on bytes,
-you-get/src/you_get/common.py,206,return str(s.encode('utf-8'))[2:-1],
-you-get/src/you_get/common.py,209,DEPRECATED in favor of match1(),
-you-get/src/you_get/common.py,216,DEPRECATED in favor of match1(),
-you-get/src/you_get/common.py,316,DEPRECATED in favor of util.legitimize(),
-you-get/src/you_get/common.py,344,DEPRECATED in favor of get_content(),
-you-get/src/you_get/common.py,348,install cookies,
-you-get/src/you_get/common.py,369,DEPRECATED in favor of get_content(),
-you-get/src/you_get/common.py,375,DEPRECATED in favor of get_content(),
-you-get/src/you_get/common.py,403,ignore ssl errors,
-you-get/src/you_get/common.py,414,try to tackle youku CDN fails,
-you-get/src/you_get/common.py,443,Handle HTTP compression for gzip and deflate (zlib),
-you-get/src/you_get/common.py,450,Decode the response body,
-you-get/src/you_get/common.py,490,Handle HTTP compression for gzip and deflate (zlib),
-you-get/src/you_get/common.py,497,Decode the response body,
-you-get/src/you_get/common.py,556,fix for netease,
-you-get/src/you_get/common.py,627,"When a referer specified with param refer,",
-you-get/src/you_get/common.py,628,the key must be 'Referer' for the hack here,
-you-get/src/you_get/common.py,711,only request a range when not chunked,
-you-get/src/you_get/common.py,739,always append if chunked,
-you-get/src/you_get/common.py,741,is it ever necessary?,
-you-get/src/you_get/common.py,757,Download finished,
-you-get/src/you_get/common.py,759,Unexpected termination. Retry request,
-you-get/src/you_get/common.py,760,when,
-you-get/src/you_get/common.py,777,on Windows rename could fail if destination filepath exists,
-you-get/src/you_get/common.py,795,38 is the size of all statically known size in self.bar,
-you-get/src/you_get/common.py,895,lame hack for the --output-filename option,
-you-get/src/you_get/common.py,997,"print 'Downloading %s [%s/%s]...' % (tr(filename), i + 1, len(urls))",
-you-get/src/you_get/common.py,1081,None or unset -> False,
-you-get/src/you_get/common.py,1105,None or unset ->False,
-you-get/src/you_get/common.py,1180,elif type in ['video/ogg']:,
-you-get/src/you_get/common.py,1181,type_info = 'Ogg video (%s)' % type,
-you-get/src/you_get/common.py,1186,elif type in ['video/x-ms-wmv']:,
-you-get/src/you_get/common.py,1187,type_info = 'Windows Media video (%s)' % type,
-you-get/src/you_get/common.py,1190,elif type in ['video/mpeg']:,
-you-get/src/you_get/common.py,1191,type_info = 'MPEG video (%s)' % type,
-you-get/src/you_get/common.py,1268,DEPRECATED in favor of set_proxy() and unset_proxy(),
-you-get/src/you_get/common.py,1270,Use system default setting,
-you-get/src/you_get/common.py,1272,Don't use any proxy,
-you-get/src/you_get/common.py,1274,Use proxy,
-you-get/src/you_get/common.py,1288,nothing happens on py3.3 and later,
-you-get/src/you_get/common.py,1292,"in lower pyver (e.g. 3.2.x), remove 'flush' keyword and flush it as requested",
-you-get/src/you_get/common.py,1314,MozillaCookieJar treats prefix '#HttpOnly_' as comments incorrectly!,
-you-get/src/you_get/common.py,1315,do not use its load(),
-you-get/src/you_get/common.py,1316,see also:,
-you-get/src/you_get/common.py,1317,- https://docs.python.org/3/library/http.cookiejar.html#http.cookiejar.MozillaCookieJar,
-you-get/src/you_get/common.py,1318,- https://github.com/python/cpython/blob/4b219ce/Lib/http/cookiejar.py#L2014,
-you-get/src/you_get/common.py,1319,- https://curl.haxx.se/libcurl/c/CURLOPT_COOKIELIST.html#EXAMPLE,
-you-get/src/you_get/common.py,1320,cookies = cookiejar.MozillaCookieJar(cookiefile),
-you-get/src/you_get/common.py,1321,cookies.load(),
-you-get/src/you_get/common.py,1328,"last field may be absent, so keep any trailing tab",
-you-get/src/you_get/common.py,1331,skip comments and blank lines XXX what is $ for?,
-you-get/src/you_get/common.py,1334,skip for #HttpOnly_,
-you-get/src/you_get/common.py,1342,cookies.txt regards 'Set-Cookie: foo' as a cookie,
-you-get/src/you_get/common.py,1343,"with no name, whereas http.cookiejar regards it as a",
-you-get/src/you_get/common.py,1344,cookie with no value.,
-you-get/src/you_get/common.py,1349,skip for #HttpOnly_,
-you-get/src/you_get/common.py,1357,assume path_specified is false,
-you-get/src/you_get/common.py,1396,TODO: Chromium Cookies,
-you-get/src/you_get/common.py,1397,"SELECT host_key, path, secure, expires_utc, name, encrypted_value",
-you-get/src/you_get/common.py,1398,FROM cookies,
-you-get/src/you_get/common.py,1399,http://n8henrie.com/2013/11/use-chromes-cookies-for-easier-downloading-with-python-requests/,
-you-get/src/you_get/common.py,1568,Set level of root logger to DEBUG,
-you-get/src/you_get/common.py,1594,to fix extractors not use VideoExtractor,
-you-get/src/you_get/common.py,1610,ignore ssl,
-you-get/src/you_get/common.py,1730,all non-ASCII code points must be quoted (percent-encoded UTF-8),
-you-get/src/you_get/common.py,1743,t.co isn't happy with fake_headers,
-you-get/src/you_get/version.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractor.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractor.py,84,raise NotImplementedError(),
-you-get/src/you_get/extractor.py,88,raise NotImplementedError(),
-you-get/src/you_get/extractor.py,141,Print the stream,
-you-get/src/you_get/extractor.py,146,Print stream with best quality,
-you-get/src/you_get/extractor.py,153,Print DASH streams,
-you-get/src/you_get/extractor.py,160,Print all other available streams,
-you-get/src/you_get/extractor.py,184,Display the stream,
-you-get/src/you_get/extractor.py,191,Display all available streams,
-you-get/src/you_get/extractor.py,200,Download the stream,
-you-get/src/you_get/extractor.py,203,Download stream with the best quality,
-you-get/src/you_get/extractor.py,206,stream_id = list(self.dash_streams)[-1],
-you-get/src/you_get/extractor.py,232,For legacy main(),
-you-get/src/you_get/extractor.py,268,For main_dev(),
-you-get/src/you_get/extractor.py,269,"download_urls(urls, self.title, self.streams[stream_id]['container'], self.streams[stream_id]['size'])",
-you-get/src/you_get/extractors/pixnet.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/pixnet.py,13,http://eric6513.pixnet.net/album/video/206644535,
-you-get/src/you_get/extractors/pixnet.py,22,eric6513,
-you-get/src/you_get/extractors/pixnet.py,24,206644535,
-you-get/src/you_get/extractors/pixnet.py,27,have to be like this,
-you-get/src/you_get/extractors/pixnet.py,29,&sig=edb07258e6a9ff40e375e11d30607983  can be blank for now,
-you-get/src/you_get/extractors/pixnet.py,30,"if required, can be obtained from url like",
-you-get/src/you_get/extractors/pixnet.py,31,http://s.ext.pixnet.tv/user/eric6513/html5/autoplay/206644507.js,
-you-get/src/you_get/extractors/pixnet.py,32,"http://api.pixnet.tv/content?type=json&customData={%22username%22:%22eric6513%22,%22id%22:%22206644535%22,%22time%22:1441823350,%22autoplay%22:0,%22loop%22:0,%22profile%22:7}",
-you-get/src/you_get/extractors/pixnet.py,38,"{""element"":{""video_url"":""http:\/\/cdn-akamai.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_6.mp4"",""backup_video_uri"":""http:\/\/fet-1.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_6.mp4"",""thumb_url"":""\/\/imageproxy.pimg.tw\/zoomcrop?width=480&height=360&url=http%3A%2F%2Fpimg.pixnet.tv%2Fuser%2Feric6513%2F206644507%2Fbg_000000%2F480x360%2Fdefault.jpg%3Fv%3D1422870050"",""profiles"":{""360p"":""http:\/\/cdn-akamai.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567.flv"",""480p"":""http:\/\/cdn-akamai.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_2.mp4"",""720p"":""http:\/\/cdn-akamai.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_3.mp4""},""backup_profiles"":{""360p"":""http:\/\/fet-1.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567.flv"",""480p"":""http:\/\/fet-1.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_2.mp4"",""720p"":""http:\/\/fet-1.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_3.mp4""},""count_play_url"":[""http:\/\/api.v6.pixnet.tv\/count?username=eric6513&amp;file=13541121820567.flv&amp;t=1441819681&amp;type=v6play&amp;sig=3350496782"",""http:\/\/api.pixnet.tv\/count?username=eric6513&amp;file=13541121820567.flv&amp;t=1441819681&amp;type=play&amp;sig=930187858"",""http:\/\/api.pixnet.tv\/count?username=eric6513&amp;file=13541121820567.flv&amp;t=1441819681&amp;type=html5play&amp;sig=4191197761""],""count_finish_url"":[""http:\/\/api.pixnet.tv\/count?username=eric6513&amp;file=13541121820567.flv&amp;t=1441819715&amp;type=finish&amp;sig=638797202"",""http:\/\/api.pixnet.tv\/count?username=eric6513&amp;file=13541121820567.flv&amp;t=1441819715&amp;type=html5finish&amp;sig=3215728991""]}}",
-you-get/src/you_get/extractors/pixnet.py,41,In some rare cases the main URL is IPv6 only...,
-you-get/src/you_get/extractors/pixnet.py,42,Something like #611,
-you-get/src/you_get/extractors/nanagogo.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/nanagogo.py,27,skip stamp images,
-you-get/src/you_get/extractors/nanagogo.py,42,do not fail the whole process,
-you-get/src/you_get/extractors/bilibili.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/bilibili.py,11,"Bilibili media encoding options, in descending quality order.",
-you-get/src/you_get/extractors/bilibili.py,29,'quality': 15?,
-you-get/src/you_get/extractors/bilibili.py,50,a reasonable UA,
-you-get/src/you_get/extractors/bilibili.py,136,live always returns 400 (why?),
-you-get/src/you_get/extractors/bilibili.py,137,"self.title = match1(html_content,",
-you-get/src/you_get/extractors/bilibili.py,138,"r'<h1 title=""([^""]+)""')",
-you-get/src/you_get/extractors/bilibili.py,140,redirect: watchlater,
-you-get/src/you_get/extractors/bilibili.py,147,redirect: bangumi/play/ss -> bangumi/play/ep,
-you-get/src/you_get/extractors/bilibili.py,148,redirect: bangumi.bilibili.com/anime -> bangumi/play/ep,
-you-get/src/you_get/extractors/bilibili.py,151,FIXME,
-you-get/src/you_get/extractors/bilibili.py,157,sort it out,
-you-get/src/you_get/extractors/bilibili.py,176,regular av video,
-you-get/src/you_get/extractors/bilibili.py,178,FIXME,
-you-get/src/you_get/extractors/bilibili.py,181,FIXME,
-you-get/src/you_get/extractors/bilibili.py,185,FIXME,
-you-get/src/you_get/extractors/bilibili.py,188,warn if it is a multi-part video,
-you-get/src/you_get/extractors/bilibili.py,193,set video title,
-you-get/src/you_get/extractors/bilibili.py,195,"refine title for a specific part, if it is a multi-part video",
-you-get/src/you_get/extractors/bilibili.py,197,"use URL to decide p-number, not initial_state['p']",
-you-get/src/you_get/extractors/bilibili.py,202,construct playinfos,
-you-get/src/you_get/extractors/bilibili.py,204,"use p-number, not initial_state['videoData']['cid']",
-you-get/src/you_get/extractors/bilibili.py,207,"0 indicates an error, fallback to None",
-you-get/src/you_get/extractors/bilibili.py,215,get alternative formats from API,
-you-get/src/you_get/extractors/bilibili.py,217,automatic format for durl: qn=0,
-you-get/src/you_get/extractors/bilibili.py,218,"for dash, qn does not matter",
-you-get/src/you_get/extractors/bilibili.py,223,success,
-you-get/src/you_get/extractors/bilibili.py,235,use bilibili error video instead,
-you-get/src/you_get/extractors/bilibili.py,254,DASH formats,
-you-get/src/you_get/extractors/bilibili.py,258,prefer the latter codecs!,
-you-get/src/you_get/extractors/bilibili.py,260,prefix,
-you-get/src/you_get/extractors/bilibili.py,261,enforce MP4 container,
-you-get/src/you_get/extractors/bilibili.py,267,find matching audio track,
-you-get/src/you_get/extractors/bilibili.py,284,get danmaku,
-you-get/src/you_get/extractors/bilibili.py,287,bangumi,
-you-get/src/you_get/extractors/bilibili.py,289,FIXME,
-you-get/src/you_get/extractors/bilibili.py,292,warn if this bangumi has more than 1 video,
-you-get/src/you_get/extractors/bilibili.py,297,set video title,
-you-get/src/you_get/extractors/bilibili.py,300,construct playinfos,
-you-get/src/you_get/extractors/bilibili.py,308,success,
-you-get/src/you_get/extractors/bilibili.py,314,get alternative formats from API,
-you-get/src/you_get/extractors/bilibili.py,316,automatic format for durl: qn=0,
-you-get/src/you_get/extractors/bilibili.py,317,"for dash, qn does not matter",
-you-get/src/you_get/extractors/bilibili.py,322,success,
-you-get/src/you_get/extractors/bilibili.py,338,DASH formats,
-you-get/src/you_get/extractors/bilibili.py,341,playinfo['result']['quality'] does not reflect the correct quality of DASH stream,
-you-get/src/you_get/extractors/bilibili.py,342,convert height to quality code,
-you-get/src/you_get/extractors/bilibili.py,344,prefix,
-you-get/src/you_get/extractors/bilibili.py,345,enforce MP4 container,
-you-get/src/you_get/extractors/bilibili.py,351,find matching audio track,
-you-get/src/you_get/extractors/bilibili.py,362,get danmaku,
-you-get/src/you_get/extractors/bilibili.py,365,vc video,
-you-get/src/you_get/extractors/bilibili.py,372,set video title,
-you-get/src/you_get/extractors/bilibili.py,376,convert height to quality code,
-you-get/src/you_get/extractors/bilibili.py,379,enforce MP4 container,
-you-get/src/you_get/extractors/bilibili.py,387,live,
-you-get/src/you_get/extractors/bilibili.py,400,set video title,
-you-get/src/you_get/extractors/bilibili.py,409,enforce FLV container,
-you-get/src/you_get/extractors/bilibili.py,413,audio,
-you-get/src/you_get/extractors/bilibili.py,421,set audio title,
-you-get/src/you_get/extractors/bilibili.py,424,get lyrics,
-you-get/src/you_get/extractors/bilibili.py,433,enforce MP4 container,
-you-get/src/you_get/extractors/bilibili.py,437,h images,
-you-get/src/you_get/extractors/bilibili.py,452,enforce JPG container,
-you-get/src/you_get/extractors/bilibili.py,457,response for interaction video,
-you-get/src/you_get/extractors/bilibili.py,458,主要针对互动视频，使用cid而不是url来相互区分,
-you-get/src/you_get/extractors/bilibili.py,466,"0 indicates an error, fallback to None",
-you-get/src/you_get/extractors/bilibili.py,474,get alternative formats from API,
-you-get/src/you_get/extractors/bilibili.py,476,automatic format for durl: qn=0,
-you-get/src/you_get/extractors/bilibili.py,477,"for dash, qn does not matter",
-you-get/src/you_get/extractors/bilibili.py,482,success,
-you-get/src/you_get/extractors/bilibili.py,494,use bilibili error video instead,
-you-get/src/you_get/extractors/bilibili.py,513,DASH formats,
-you-get/src/you_get/extractors/bilibili.py,517,prefer the latter codecs!,
-you-get/src/you_get/extractors/bilibili.py,519,prefix,
-you-get/src/you_get/extractors/bilibili.py,520,enforce MP4 container,
-you-get/src/you_get/extractors/bilibili.py,526,find matching audio track,
-you-get/src/you_get/extractors/bilibili.py,544,get danmaku,
-you-get/src/you_get/extractors/bilibili.py,548,set UA and referer for downloading,
-you-get/src/you_get/extractors/bilibili.py,553,no stream is available,
-you-get/src/you_get/extractors/bilibili.py,557,extract the stream,
-you-get/src/you_get/extractors/bilibili.py,564,extract stream with the best quality,
-you-get/src/you_get/extractors/bilibili.py,573,sort it out,
-you-get/src/you_get/extractors/bilibili.py,595,regular av video,
-you-get/src/you_get/extractors/bilibili.py,597,FIXME,
-you-get/src/you_get/extractors/bilibili.py,601,interaction video 互动视频,
-you-get/src/you_get/extractors/bilibili.py,619,FIXME,
-you-get/src/you_get/extractors/bilibili.py,623,FIXME,
-you-get/src/you_get/extractors/bilibili.py,653,FIXME,
-you-get/src/you_get/extractors/bilibili.py,657,FIXME,
-you-get/src/you_get/extractors/bilibili.py,668,"purl = 'https://www.bilibili.com/video/av%s?p=%s' % (aid, pi+1)",
-you-get/src/you_get/extractors/bilibili.py,669,"self.__class__().download_by_url(purl, **kwargs)",
-you-get/src/you_get/extractors/bilibili.py,672,FIXME,
-you-get/src/you_get/extractors/bilibili.py,682,FIXME,
-you-get/src/you_get/extractors/bilibili.py,697,TBD: channel of more than 100 videos,
-you-get/src/you_get/extractors/bilibili.py,748,api_url = self.bilibili_audio_menu_info_api(sid),
-you-get/src/you_get/extractors/bilibili.py,749,"api_content = get_content(api_url, headers=self.bilibili_headers())",
-you-get/src/you_get/extractors/bilibili.py,750,menu_info = json.loads(api_content),
-you-get/src/you_get/extractors/dailymotion.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/kakao.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/kakao.py,12,in this implementation playlist not supported so use url_without_playlist,
-you-get/src/you_get/extractors/kakao.py,13,if want to support playlist need to change that,
-you-get/src/you_get/extractors/suntv.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/suntv.py,19,important!,
-you-get/src/you_get/extractors/suntv.py,22,Ahhhhhhh!,
-you-get/src/you_get/extractors/suntv.py,28,get rid of \r\n s,
-you-get/src/you_get/extractors/miomio.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/miomio.py,40,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/netease.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/netease.py,42,download lyrics,
-you-get/src/you_get/extractors/netease.py,62,download lyrics,
-you-get/src/you_get/extractors/netease.py,71,download lyrics,
-you-get/src/you_get/extractors/netease.py,150,"sd_url = r1(r'(.+)-mobile.mp4', src) + "".flv""",
-you-get/src/you_get/extractors/netease.py,151,"hd_url = re.sub('/SD/', '/HD/', sd_url)",
-you-get/src/you_get/extractors/baidu.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/baidu.py,2,-*- coding: utf-8 -*-,
-you-get/src/you_get/extractors/baidu.py,16,inside china mainland,
-you-get/src/you_get/extractors/baidu.py,19,outside china mainland,
-you-get/src/you_get/extractors/baidu.py,125,embedded videos,
-you-get/src/you_get/extractors/baidu.py,128,images,
-you-get/src/you_get/extractors/baidu.py,147,handle albums,
-you-get/src/you_get/extractors/baidu.py,193,"raise NotImplementedError(""Password required!"")",
-you-get/src/you_get/extractors/zhanqi.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/zhanqi.py,13,"url = ""https://www.zhanqi.tv/huashan?param_s=1_0.2.0""",
-you-get/src/you_get/extractors/zhanqi.py,17,url = 'https://www.zhanqi.tv/videos/Lyingman/2017/01/182308.html',
-you-get/src/you_get/extractors/zhanqi.py,18,https://www.zhanqi.tv/v2/videos/215593.html,
-you-get/src/you_get/extractors/joy.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/archive.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/yinyuetai.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/facebook.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/baomihua.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/baomihua.py,10,a reasonable UA,
-you-get/src/you_get/extractors/tucao.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/tucao.py,5,import re,
-you-get/src/you_get/extractors/tucao.py,9,possible raw list types,
-you-get/src/you_get/extractors/tucao.py,10,1. <li>type=tudou&vid=199687639</li>,
-you-get/src/you_get/extractors/tucao.py,11,2. <li>type=tudou&vid=199506910|</li>,
-you-get/src/you_get/extractors/tucao.py,12,3. <li>type=video&file=http://xiaoshen140731.qiniudn.com/lovestage04.flv|</li>,
-you-get/src/you_get/extractors/tucao.py,13,4 may ? <li>type=video&file=http://xiaoshen140731.qiniudn.com/lovestage04.flv|xx**type=&vid=?</li>,
-you-get/src/you_get/extractors/tucao.py,14,5. <li>type=tudou&vid=200003098|07**type=tudou&vid=200000350|08</li>,
-you-get/src/you_get/extractors/tucao.py,15,6. <li>vid=49454694&type=sina|</li>,
-you-get/src/you_get/extractors/tucao.py,16,7. <li>type=189&vid=513031813243909|</li>,
-you-get/src/you_get/extractors/tucao.py,17,"re_pattern=re.compile(r""(type=(.+?)&(vid|file)=(.*?))[\|<]"")",
-you-get/src/you_get/extractors/tucao.py,26,"fix for 189 video source, see raw list types 7",
-you-get/src/you_get/extractors/tucao.py,51,"fix for raw list that vid goes before type, see raw list types 6",
-you-get/src/you_get/extractors/theplatform.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/nicovideo.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/nicovideo.py,33,necessary!,
-you-get/src/you_get/extractors/nicovideo.py,35,"title = unicodize(r1(r'<span class=""videoHeaderTitle""[^>]*>([^<]+)</span>', html))",
-you-get/src/you_get/extractors/qq.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/qq.py,16,http://v.sports.qq.com/#/cover/t0fqsm1y83r8v5j/a0026nvw5jr https://v.qq.com/x/cover/t0fqsm1y83r8v5j/a0026nvw5jr.html,
-you-get/src/you_get/extractors/qq.py,40,fix json parsing error,
-you-get/src/you_get/extractors/qq.py,41,example:https://v.qq.com/x/page/w0674l9yrrh.html,
-you-get/src/you_get/extractors/qq.py,141,https://kuaibao.qq.com/s/20180521V0Z9MH00,
-you-get/src/you_get/extractors/qq.py,148,http://daxue.qq.com/content/content/id/2321,
-you-get/src/you_get/extractors/qq.py,155,for embedded URLs; don't know what the title is,
-you-get/src/you_get/extractors/qq.py,158,view.inews.qq.com/a/20180521V0Z9MH00,
-you-get/src/you_get/extractors/qq.py,164,vid = parse_qs(urlparse(url).query).get('vid') #for links specified vid  like http://v.qq.com/cover/p/ps6mnfqyrfo7es3.html?vid=q0181hpdvo5,
-you-get/src/you_get/extractors/qq.py,165,https://v.qq.com/x/cover/9hpjiv5fhiyn86u/t0522x58xma.html,
-you-get/src/you_get/extractors/qq.py,169,https://v.qq.com/x/page/d0552xbadkl.html https://y.qq.com/n/yqq/mv/v/g00268vlkzy.html,
-you-get/src/you_get/extractors/qq.py,172,https://v.qq.com/x/cover/ps6mnfqyrfo7es3/q0181hpdvo5.html?,
-you-get/src/you_get/extractors/qq.py,173,general fallback,
-you-get/src/you_get/extractors/qq.py,179,general fallback,
-you-get/src/you_get/extractors/ximalaya.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/ximalaya.py,28,no size data in the json. should it be calculated?,
-you-get/src/you_get/extractors/mixcloud.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/coub.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/ucas.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/ucas.py,32,has to be like this,
-you-get/src/you_get/extractors/ucas.py,52,getResourceJsCode2,
-you-get/src/you_get/extractors/ucas.py,74,main,
-you-get/src/you_get/extractors/ucas.py,77,sub,
-you-get/src/you_get/extractors/ucas.py,93,make real url,
-you-get/src/you_get/extractors/ucas.py,94,credit to a mate in UCAS,
-you-get/src/you_get/extractors/ucas.py,105,resourceID is UUID,
-you-get/src/you_get/extractors/showroom.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/showroom.py,10,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/showroom.py,33,"{'streaming_url_list': [{'url': 'rtmp://52.197.69.198:1935/liveedge', 'id': 1, 'label': 'original spec(low latency)', 'is_default': True, 'type': 'rtmp', 'stream_name': '7656a6d5baa1d77075c971f6d8b6dc61b979fc913dc5fe7cc1318281793436ed'}, {'url': 'http://52.197.69.198:1935/liveedge/7656a6d5baa1d77075c971f6d8b6dc61b979fc913dc5fe7cc1318281793436ed/playlist.m3u8', 'is_default': True, 'id': 2, 'type': 'hls', 'label': 'original spec'}, {'url': 'rtmp://52.197.69.198:1935/liveedge', 'id': 3, 'label': 'low spec(low latency)', 'is_default': False, 'type': 'rtmp', 'stream_name': '7656a6d5baa1d77075c971f6d8b6dc61b979fc913dc5fe7cc1318281793436ed_low'}, {'url': 'http://52.197.69.198:1935/liveedge/7656a6d5baa1d77075c971f6d8b6dc61b979fc913dc5fe7cc1318281793436ed_low/playlist.m3u8', 'is_default': False, 'id': 4, 'type': 'hls', 'label': 'low spec'}]}",
-you-get/src/you_get/extractors/showroom.py,39,This is mainly for testing the M3U FFmpeg parser so I would ignore any non-m3u ones,
-you-get/src/you_get/extractors/showroom.py,44,title,
-you-get/src/you_get/extractors/showroom.py,59,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/xiami.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/xiami.py,2,-*- coding: utf-8 -*-,
-you-get/src/you_get/extractors/xiami.py,122,"in this xml track tag is used for both ""track in a trackList"" and track no",
-you-get/src/you_get/extractors/xiami.py,123,dirty here,
-you-get/src/you_get/extractors/xiami.py,153,FIXME: broken merge,
-you-get/src/you_get/extractors/xiami.py,183,albums,
-you-get/src/you_get/extractors/xiami.py,192,collections,
-you-get/src/you_get/extractors/xiami.py,197,single track,
-you-get/src/you_get/extractors/qingting.py,12,every resource is described by its channel id and program id,
-you-get/src/you_get/extractors/qingting.py,13,"so vid is tuple (chaanel_id, program_id)",
-you-get/src/you_get/extractors/metacafe.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/metacafe.py,14,wont bother to use re,
-you-get/src/you_get/extractors/qie_video.py,48,"width 481, 482... 489 are all 480p here",
-you-get/src/you_get/extractors/freesound.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/iqilu.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/iqilu.py,13,URL in webpage,
-you-get/src/you_get/extractors/iqilu.py,19,grab title,
-you-get/src/you_get/extractors/mtv81.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/mtv81.py,17,mgid%3Auma%3Avideo%3Amtv81.com%3A897974,
-you-get/src/you_get/extractors/mtv81.py,28,,
-you-get/src/you_get/extractors/mtv81.py,29,"rtmpdump  -r 'rtmpe://cp30865.edgefcs.net/ondemand/mtviestor/_!/intlod/MTVInternational/MBUS/GeoLocals/00JP/VIAMTVI/PYC/201304/7122HVAQ4/00JPVIAMTVIPYC7122HVAQ4_640x_360_1200_m30.mp4' -o ""title.mp4"" --swfVfy http://media.mtvnservices.com/player/prime/mediaplayerprime.1.10.8.swf",
-you-get/src/you_get/extractors/mtv81.py,30,,
-you-get/src/you_get/extractors/mtv81.py,31,"because rtmpdump is unstable,may try serveral times",
-you-get/src/you_get/extractors/mtv81.py,32,,
-you-get/src/you_get/extractors/mtv81.py,34,import pdb,
-you-get/src/you_get/extractors/mtv81.py,35,pdb.set_trace(),
-you-get/src/you_get/extractors/xinpianchang.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/xinpianchang.py,21,find key,
-you-get/src/you_get/extractors/xinpianchang.py,26,get videos info,
-you-get/src/you_get/extractors/xinpianchang.py,32,set streams dict,
-you-get/src/you_get/extractors/ifeng.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/ifeng.py,24,old pattern /uuid.shtml,
-you-get/src/you_get/extractors/ifeng.py,25,now it could be #uuid,
-you-get/src/you_get/extractors/longzhu.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/giphy.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/tiktok.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/iwara.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/iwara.py,39,"url_first=re.findall(r""(http[s]?://[^/]+)"",url)",
-you-get/src/you_get/extractors/iwara.py,41,print (url_first),
-you-get/src/you_get/extractors/tudou.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/tudou.py,36,wrong way!,
-you-get/src/you_get/extractors/tudou.py,41,throw you back,
-you-get/src/you_get/extractors/tudou.py,43,Embedded player,
-you-get/src/you_get/extractors/tudou.py,72,obsolete?,
-you-get/src/you_get/extractors/tudou.py,87,url = 'http://www.tudou.com/playlist/service/getZyAlbumItems.html?aid='+aid,
-you-get/src/you_get/extractors/yixia.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/yixia.py,10,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/yixia.py,28,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/yixia.py,46,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/yixia.py,64,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/yixia.py,72,Miaopai,
-you-get/src/you_get/extractors/yixia.py,81,Xiaokaxiu,
-you-get/src/you_get/extractors/yixia.py,85,PC,
-you-get/src/you_get/extractors/yixia.py,87,Mobile,
-you-get/src/you_get/extractors/yixia.py,99,Another way,
-you-get/src/you_get/extractors/yixia.py,100,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/yixia.py,101,"def yixia_miaopai_download_by_scid(scid, output_dir = '.', merge = True, info_only = False):",
-you-get/src/you_get/extractors/yixia.py,102,"""""""""""""",
-you-get/src/you_get/extractors/yixia.py,103,headers = {,
-you-get/src/you_get/extractors/yixia.py,104,"'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25',",
-you-get/src/you_get/extractors/yixia.py,105,"'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',",
-you-get/src/you_get/extractors/yixia.py,106,"'Cache-Control': 'max-age=0',",
-you-get/src/you_get/extractors/yixia.py,107,},
-you-get/src/you_get/extractors/yixia.py,109,"html = get_content('http://m.miaopai.com/show/channel/' + scid, headers)",
-you-get/src/you_get/extractors/yixia.py,111,"title = match1(html, r'<title>(\w+)')",
-you-get/src/you_get/extractors/yixia.py,113,"video_url = match1(html, r'<div class=""vid_img"" data-url=\'(.+)\'')",
-you-get/src/you_get/extractors/yixia.py,115,"type, ext, size = url_info(video_url)",
-you-get/src/you_get/extractors/yixia.py,117,"print_info(site_info, title, type, size)",
-you-get/src/you_get/extractors/yixia.py,118,if not info_only:,
-you-get/src/you_get/extractors/yixia.py,119,"download_urls([video_url], title, ext, size, output_dir, merge=merge)",
-you-get/src/you_get/extractors/missevan.py,108,remove dot,
-you-get/src/you_get/extractors/missevan.py,305,keep the self.streams to download cover,
-you-get/src/you_get/extractors/missevan.py,312,fetch all streams size when output info or json,
-you-get/src/you_get/extractors/missevan.py,320,fetch size of the selected stream only,
-you-get/src/you_get/extractors/naver.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/naver.py,29,size = video_list[-1]['size'],
-you-get/src/you_get/extractors/naver.py,30,result wrong size,
-you-get/src/you_get/extractors/miaopai.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/miaopai.py,107,FIXME!,
-you-get/src/you_get/extractors/yizhibo.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/le.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/le.py,13,@DEPRECATED,
-you-get/src/you_get/extractors/le.py,21,@DEPRECATED,
-you-get/src/you_get/extractors/le.py,35,"return ror(ror(t,773625421%13)^773625421,773625421%17)",
-you-get/src/you_get/extractors/le.py,41,get real m3u8,
-you-get/src/you_get/extractors/le.py,54,directly return,
-you-get/src/you_get/extractors/le.py,85,hold on ! more things to do,
-you-get/src/you_get/extractors/le.py,86,to decode m3u8 (encoded),
-you-get/src/you_get/extractors/le.py,107,"ran = float('0.' + str(random.randint(0, 9999999999999999))) # For ver 2.1",
-you-get/src/you_get/extractors/le.py,108,"str2Hash = 'cfflashformatjsonran{ran}uu{uu}ver2.2vu{vu}bie^#@(%27eib58'.format(vu = vu, uu = uu, ran = ran)  #Magic!/ In ver 2.1",
-you-get/src/you_get/extractors/le.py,110,ALL YOUR BASE ARE BELONG TO US,
-you-get/src/you_get/extractors/iqiyi.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/iqiyi.py,165,Display the stream,
-you-get/src/you_get/extractors/iqiyi.py,172,Display all available streams,
-you-get/src/you_get/extractors/iqiyi.py,181,Download the stream,
-you-get/src/you_get/extractors/iqiyi.py,184,Download stream with the best quality,
-you-get/src/you_get/extractors/iqiyi.py,203,For legacy main(),
-you-get/src/you_get/extractors/iqiyi.py,205,Here's the change!!,
-you-get/src/you_get/extractors/vk.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/vk.py,40,used for title - vk page owner,
-you-get/src/you_get/extractors/vk.py,42,used for title - date when photo was uploaded,
-you-get/src/you_get/extractors/bokecc.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/bokecc.py,10,"we do now know for now, as we have to check the",
-you-get/src/you_get/extractors/bokecc.py,11,output from the API,
-you-get/src/you_get/extractors/bokecc.py,45,return XML,
-you-get/src/you_get/extractors/bokecc.py,78,Extract the stream,
-you-get/src/you_get/extractors/bokecc.py,86,Extract stream with the best quality,
-you-get/src/you_get/extractors/bokecc.py,93,I don't know how to call the player directly so I just put it here,
-you-get/src/you_get/extractors/bokecc.py,94,just in case anyone touchs it -- Beining@Aug.24.2016,
-you-get/src/you_get/extractors/bokecc.py,95,download = site.download_by_url,
-you-get/src/you_get/extractors/bokecc.py,96,download_playlist = site.download_by_url,
-you-get/src/you_get/extractors/qie.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/qie.py,2,-*- coding: utf-8 -*-,
-you-get/src/you_get/extractors/qie.py,13,Last updated: 2015-11-24,
-you-get/src/you_get/extractors/qie.py,61,stream_available = [i['name'] for i in content['data']['stream']],
-you-get/src/you_get/extractors/qie.py,84,Extract the stream,
-you-get/src/you_get/extractors/qie.py,92,Extract stream with the best quality,
-you-get/src/you_get/extractors/sina.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/sina.py,73,Yes they use 1 for success.,
-you-get/src/you_get/extractors/sina.py,112,"title = match1(video_page, r'title\s*:\s*\'([^\']+)\'')",
-you-get/src/you_get/extractors/vimeo.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/vimeo.py,12,By Beining,
-you-get/src/you_get/extractors/vimeo.py,14,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/vimeo.py,17,https://vimeo.com/channels/464686,
-you-get/src/you_get/extractors/vimeo.py,21,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/vimeo.py,28,print(data),
-you-get/src/you_get/extractors/icourses.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/icourses.py,28,use this url only for size,
-you-get/src/you_get/extractors/icourses.py,33,Prevent from blockage,
-you-get/src/you_get/extractors/icourses.py,52,"shard course page could be gbk but with charset=""utf-8""",
-you-get/src/you_get/extractors/icourses.py,103,type 2 shared course,
-you-get/src/you_get/extractors/icourses.py,105,type 1 shared course,
-you-get/src/you_get/extractors/icourses.py,117,Prevent from blockage,
-you-get/src/you_get/extractors/icourses.py,122,2 helpers using same interface in the js code,
-you-get/src/you_get/extractors/icourses.py,157,print(page),
-you-get/src/you_get/extractors/icourses.py,160,print(hit_list),
-you-get/src/you_get/extractors/icourses.py,180,It took really long time to find this...,
-you-get/src/you_get/extractors/icourses.py,265,msvcrt,
-you-get/src/you_get/extractors/icourses.py,362,Do not update content-length here.,
-you-get/src/you_get/extractors/icourses.py,363,Only the 1st segment's content-length is the content-length of the file.,
-you-get/src/you_get/extractors/icourses.py,364,"For other segments, content-length is the standard one, 15 * 1024 * 1024",
-you-get/src/you_get/extractors/icourses.py,368,received - before_this_uri is size of the buf we get from one uri,
-you-get/src/you_get/extractors/icourses.py,373,calc the block size to read -- The server can fail to send an EOF,
-you-get/src/you_get/extractors/icourses.py,391,on Windows rename could fail if destination filepath exists,
-you-get/src/you_get/extractors/toutiao.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/toutiao.py,77,调api获取视频源文件,
-you-get/src/you_get/extractors/douyutv.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/interest.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/interest.py,7,http://ch.interest.me/zhtv/VOD/View/114789,
-you-get/src/you_get/extractors/interest.py,8,http://program.interest.me/zhtv/sonja/8/Vod/View/15794,
-you-get/src/you_get/extractors/interest.py,10,get title,
-you-get/src/you_get/extractors/interest.py,21,"I cannot find any example of ""fileurl"", so i just put it like this for now",
-you-get/src/you_get/extractors/imgur.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/imgur.py,17,album,
-you-get/src/you_get/extractors/imgur.py,41,direct image,
-you-get/src/you_get/extractors/imgur.py,53,gallery image,
-you-get/src/you_get/extractors/embed.py,129,"Try harder, check all iframes",
-you-get/src/you_get/extractors/ted.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/khan.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/mgtv.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/mgtv.py,2,-*- coding: utf-8 -*-,
-you-get/src/you_get/extractors/mgtv.py,15,Last updated: 2016-11-13,
-you-get/src/you_get/extractors/mgtv.py,35,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/mgtv.py,48,"get the REAL M3U url, maybe to be changed later?",
-you-get/src/you_get/extractors/mgtv.py,52,"not the best way, better we use the m3u8 package",
-you-get/src/you_get/extractors/mgtv.py,54,use ext-info for fast size calculate,
-you-get/src/you_get/extractors/mgtv.py,71,stream_available = [i['name'] for i in content['data']['stream']],
-you-get/src/you_get/extractors/mgtv.py,80,Un-Hum,
-you-get/src/you_get/extractors/mgtv.py,87,make pieces,
-you-get/src/you_get/extractors/mgtv.py,105,Extract the stream,
-you-get/src/you_get/extractors/mgtv.py,113,Extract stream with the best quality,
-you-get/src/you_get/extractors/mgtv.py,123,print video info only,
-you-get/src/you_get/extractors/mgtv.py,131,Display all available streams,
-you-get/src/you_get/extractors/mgtv.py,138,default to use the best quality,
-you-get/src/you_get/extractors/mgtv.py,146,with m3u8 format because some video player can process urls automatically (e.g. mpv),
-you-get/src/you_get/extractors/mgtv.py,152,av=stream_id in self.dash_streams),
-you-get/src/you_get/extractors/douyin.py,1,coding=utf-8,
-you-get/src/you_get/extractors/douyin.py,24,fix: https://www.douyin.com/share/video/6553248251821165832,
-you-get/src/you_get/extractors/douyin.py,25,"if there is no title, use desc",
-you-get/src/you_get/extractors/vine.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/vine.py,15,https://vine.co/v/.../card,
-you-get/src/you_get/extractors/ckplayer.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/ckplayer.py,2,coding:utf-8,
-you-get/src/you_get/extractors/ckplayer.py,3,Author:  Beining --<i@cnbeining.com>,
-you-get/src/you_get/extractors/ckplayer.py,4,Purpose: A general extractor for CKPlayer,
-you-get/src/you_get/extractors/ckplayer.py,5,Created: 03/15/2016,
-you-get/src/you_get/extractors/ckplayer.py,12,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/ckplayer.py,18,"'duration': 0,",
-you-get/src/you_get/extractors/ckplayer.py,24,title,
-you-get/src/you_get/extractors/ckplayer.py,27,if dictify(e)['ckplayer']['info'][0]['title'][0]['_text'].strip():  #duration,
-you-get/src/you_get/extractors/ckplayer.py,28,video_dict['title'] = dictify(e)['ckplayer']['info'][0]['title'][0]['_text'].strip(),
-you-get/src/you_get/extractors/ckplayer.py,30,size exists for 1 piece,
-you-get/src/you_get/extractors/ckplayer.py,33,link exist,
-you-get/src/you_get/extractors/ckplayer.py,41,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/ckplayer.py,42,helper,
-you-get/src/you_get/extractors/ckplayer.py,43,https://stackoverflow.com/questions/2148119/how-to-convert-an-xml-string-to-a-dictionary-in-python,
-you-get/src/you_get/extractors/ckplayer.py,56,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/ckplayer.py,58,Info XML,
-you-get/src/you_get/extractors/ckplayer.py,68,has link,
-you-get/src/you_get/extractors/ckplayer.py,69,"use 1st to determine type, ext",
-you-get/src/you_get/extractors/ckplayer.py,74,save 1st one,
-you-get/src/you_get/extractors/ckplayer.py,81,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/ckplayer.py,83,URL is XML URL,
-you-get/src/you_get/extractors/ckplayer.py,89,headers provided,
-you-get/src/you_get/extractors/huomaotv.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/sohu.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/sohu.py,58,assert data['clipsURL'][0].endswith('.mp4'),
-you-get/src/you_get/extractors/ixigua.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/ixigua.py,38,from js,
-you-get/src/you_get/extractors/ixigua.py,79,参数s不能为负数,
-you-get/src/you_get/extractors/ixigua.py,84,example url: https://www.ixigua.com/i6631065141750268420/#mid=63024814422,
-you-get/src/you_get/extractors/ixigua.py,130,"There is not only video_1, there might be video_2",
-you-get/src/you_get/extractors/ixigua.py,132,该网站只有mp4类型文件,
-you-get/src/you_get/extractors/youtube.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/youtube.py,11,"Non-DASH YouTube media encoding options, in descending quality order.",
-you-get/src/you_get/extractors/youtube.py,12,"http://en.wikipedia.org/wiki/YouTube#Quality_and_codecs. Retrieved July 17, 2014.",
-you-get/src/you_get/extractors/youtube.py,17,"{'itag': '85', 'container': 'MP4', 'video_resolution': '1080p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '3-4', 'audio_encoding': 'AAC', 'audio_bitrate': '192'},",
-you-get/src/you_get/extractors/youtube.py,24,"{'itag': '102', 'container': 'WebM', 'video_resolution': '720p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '192'},",
-you-get/src/you_get/extractors/youtube.py,28,"{'itag': '84', 'container': 'MP4', 'video_resolution': '720p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '2-3', 'audio_encoding': 'AAC', 'audio_bitrate': '192'},",
-you-get/src/you_get/extractors/youtube.py,34,Live streaming only,
-you-get/src/you_get/extractors/youtube.py,41,"{'itag': '101', 'container': 'WebM', 'video_resolution': '360p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '192'},",
-you-get/src/you_get/extractors/youtube.py,42,"{'itag': '100', 'container': 'WebM', 'video_resolution': '360p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '128'},",
-you-get/src/you_get/extractors/youtube.py,49,"{'itag': '82', 'container': 'MP4', 'video_resolution': '360p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '0.5', 'audio_encoding': 'AAC', 'audio_bitrate': '96'},",
-you-get/src/you_get/extractors/youtube.py,56,"{'itag': '83', 'container': 'MP4', 'video_resolution': '240p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '0.5', 'audio_encoding': 'AAC', 'audio_bitrate': '96'},",
-you-get/src/you_get/extractors/youtube.py,72,Examples:,
-you-get/src/you_get/extractors/youtube.py,73,- https://www.youtube.com/yts/jsbin/player-da_DK-vflWlK-zq/base.js,
-you-get/src/you_get/extractors/youtube.py,74,- https://www.youtube.com/yts/jsbin/player-vflvABTsY/da_DK/base.js,
-you-get/src/you_get/extractors/youtube.py,75,- https://www.youtube.com/yts/jsbin/player-vfls4aurX/da_DK/base.js,
-you-get/src/you_get/extractors/youtube.py,76,- https://www.youtube.com/yts/jsbin/player_ias-vfl_RGK2l/en_US/base.js,
-you-get/src/you_get/extractors/youtube.py,77,- https://www.youtube.com/yts/jsbin/player-vflRjqq_w/da_DK/base.js,
-you-get/src/you_get/extractors/youtube.py,78,- https://www.youtube.com/yts/jsbin/player_ias-vfl-jbnrr/da_DK/base.js,
-you-get/src/you_get/extractors/youtube.py,102,prefix to avoid potential namespace conflict,
-you-get/src/you_get/extractors/youtube.py,119,prefix to avoid potential namespace conflict,
-you-get/src/you_get/extractors/youtube.py,128,processed size < expected size,
-you-get/src/you_get/extractors/youtube.py,166,Parse browse_ajax page for more videos to load,
-you-get/src/you_get/extractors/youtube.py,202,Get video info,
-you-get/src/you_get/extractors/youtube.py,203,'eurl' is a magic parameter that can bypass age restriction,
-you-get/src/you_get/extractors/youtube.py,204,full form: 'eurl=https%3A%2F%2Fyoutube.googleapis.com%2Fv%2F{VIDEO_ID}',
-you-get/src/you_get/extractors/youtube.py,215,Parse video page (for DASH),
-you-get/src/you_get/extractors/youtube.py,220,Workaround: get_video_info returns bad s. Why?,
-you-get/src/you_get/extractors/youtube.py,225,"stream_list = ytplayer_config['args']['adaptive_fmts'].split(',')",
-you-get/src/you_get/extractors/youtube.py,237,Parse video page instead,
-you-get/src/you_get/extractors/youtube.py,248,FIXME: still relevant?,
-you-get/src/you_get/extractors/youtube.py,250,Load necessary cookies into headers (for age-restricted videos),
-you-get/src/you_get/extractors/youtube.py,274,150 Restricted from playback on certain sites,
-you-get/src/you_get/extractors/youtube.py,275,Parse video page instead,
-you-get/src/you_get/extractors/youtube.py,282,"self.title = re.search('<meta name=""title"" content=""([^""]+)""', video_page).group(1)",
-you-get/src/you_get/extractors/youtube.py,283,stream_list = [],
-you-get/src/you_get/extractors/youtube.py,286,int(video_info['errorcode'][0]),
-you-get/src/you_get/extractors/youtube.py,290,int(video_info['errorcode'][0]),
-you-get/src/you_get/extractors/youtube.py,297,YouTube Live,
-you-get/src/you_get/extractors/youtube.py,321,"'quality': metadata['quality_label'][0] if 'quality_label' in metadata else None,",
-you-get/src/you_get/extractors/youtube.py,342,Prepare caption tracks,
-you-get/src/you_get/extractors/youtube.py,353,empty element,
-you-get/src/you_get/extractors/youtube.py,358,could be ill-formed XML,
-you-get/src/you_get/extractors/youtube.py,373,Prepare DASH streams (NOTE: not every video has DASH streams!),
-you-get/src/you_get/extractors/youtube.py,440,VEVO,
-you-get/src/you_get/extractors/youtube.py,445,Video info from video page (not always available),
-you-get/src/you_get/extractors/youtube.py,459,no DASH stream at all,
-you-get/src/you_get/extractors/youtube.py,461,"streams without contentLength got broken urls, just remove them (#2767)",
-you-get/src/you_get/extractors/youtube.py,489,get over speed limiting,
-you-get/src/you_get/extractors/youtube.py,491,audio,
-you-get/src/you_get/extractors/youtube.py,504,video,
-you-get/src/you_get/extractors/youtube.py,555,No stream is available,
-you-get/src/you_get/extractors/youtube.py,559,Extract the stream,
-you-get/src/you_get/extractors/youtube.py,566,Extract stream with the best quality,
-you-get/src/you_get/extractors/google.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/google.py,9,"YouTube media encoding options, in descending quality order.",
-you-get/src/you_get/extractors/google.py,10,"taken from http://en.wikipedia.org/wiki/YouTube#Quality_and_codecs, 3/22/2013.",
-you-get/src/you_get/extractors/google.py,44,Percent-encoding Unicode URL,
-you-get/src/you_get/extractors/google.py,49,Google Plus,
-you-get/src/you_get/extractors/google.py,51,attempt to extract images first,
-you-get/src/you_get/extractors/google.py,52,TBD: posts with > 4 images,
-you-get/src/you_get/extractors/google.py,53,TBD: album links,
-you-get/src/you_get/extractors/google.py,75,"Look ma, there's really a video!",
-you-get/src/you_get/extractors/google.py,100,Google Docs,
-you-get/src/you_get/extractors/google.py,115,tiny file - get real url here,
-you-get/src/you_get/extractors/google.py,119,huge file - the real_url is a confirm page and real url is in it,
-you-get/src/you_get/extractors/universal.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/universal.py,26,extract an HTML page,
-you-get/src/you_get/extractors/universal.py,66,most common media file extensions on the Internet,
-you-get/src/you_get/extractors/universal.py,68,tumblr,
-you-get/src/you_get/extractors/universal.py,72,blogger,
-you-get/src/you_get/extractors/universal.py,73,oricon?,
-you-get/src/you_get/extractors/universal.py,86,a link href to an image is often an interesting one,
-you-get/src/you_get/extractors/universal.py,91,<img> with high widths,
-you-get/src/you_get/extractors/universal.py,94,relative path,
-you-get/src/you_get/extractors/universal.py,102,site-relative path,
-you-get/src/you_get/extractors/universal.py,110,MPEG-DASH MPD,
-you-get/src/you_get/extractors/universal.py,117,have some candy!,
-you-get/src/you_get/extractors/universal.py,158,direct download,
-you-get/src/you_get/extractors/universal.py,159,strip query string,
-you-get/src/you_get/extractors/instagram.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/tumblr.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/tumblr.py,25,bypass GDPR consent page,
-you-get/src/you_get/extractors/tumblr.py,42,try to extract photos,
-you-get/src/you_get/extractors/tumblr.py,55,FIXME: decide actual quality,
-you-get/src/you_get/extractors/tumblr.py,57,FIXME: decide actual quality,
-you-get/src/you_get/extractors/tumblr.py,92,feed == 'audio' or feed == 'video' or feed is None,
-you-get/src/you_get/extractors/tumblr.py,93,try to extract video / audio,
-you-get/src/you_get/extractors/tumblr.py,132,this is better,
-you-get/src/you_get/extractors/flickr.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/flickr.py,22,"(api_key, method, ext, page)",
-you-get/src/you_get/extractors/flickr.py,26,UNCOMMENT FOR TESTING,
-you-get/src/you_get/extractors/flickr.py,27,'&per_page=5',
-you-get/src/you_get/extractors/flickr.py,29,this parameter CANNOT take control of 'flickr.galleries.getPhotos',
-you-get/src/you_get/extractors/flickr.py,30,though the doc said it should.,
-you-get/src/you_get/extractors/flickr.py,31,it's always considered to be 500,
-you-get/src/you_get/extractors/flickr.py,55,looks that flickr won't return urls for all sizes,
-you-get/src/you_get/extractors/flickr.py,56,we required in 'extras field without a acceptable header,
-you-get/src/you_get/extractors/flickr.py,74,this happens only when the url points to a gallery page,
-you-get/src/you_get/extractors/flickr.py,75,that contains no inline api_key(and never makes xhr api calls),
-you-get/src/you_get/extractors/flickr.py,76,in fact this might be a better approch for getting a temporary api key,
-you-get/src/you_get/extractors/flickr.py,77,since there's no place for a user to add custom information that may,
-you-get/src/you_get/extractors/flickr.py,78,misguide the regex in the homepage,
-you-get/src/you_get/extractors/flickr.py,86,[,
-you-get/src/you_get/extractors/flickr.py,87,(,
-you-get/src/you_get/extractors/flickr.py,88,"regex_match_url,",
-you-get/src/you_get/extractors/flickr.py,89,"remote_api_method,",
-you-get/src/you_get/extractors/flickr.py,90,"additional_query_parameter_for_method,",
-you-get/src/you_get/extractors/flickr.py,91,"parser_for_additional_parameter,",
-you-get/src/you_get/extractors/flickr.py,92,field_where_photourls_are_saved,
-you-get/src/you_get/extractors/flickr.py,93,),
-you-get/src/you_get/extractors/flickr.py,94,],
-you-get/src/you_get/extractors/flickr.py,96,www.flickr.com/photos/{username|NSID}/sets|albums/{album-id},
-you-get/src/you_get/extractors/flickr.py,104,www.flickr.com/photos/{username|NSID}/{pageN}?,
-you-get/src/you_get/extractors/flickr.py,107,"according to flickr api documentation, this method needs to be",
-you-get/src/you_get/extractors/flickr.py,108,authenticated in order to filter photo visible to the calling user,
-you-get/src/you_get/extractors/flickr.py,109,but it seems works fine anonymously as well,
-you-get/src/you_get/extractors/flickr.py,115,www.flickr.com/photos/{username|NSID}/galleries/{gallery-id},
-you-get/src/you_get/extractors/flickr.py,123,www.flickr.com/groups/{groupname|groupNSID}/,
-you-get/src/you_get/extractors/flickr.py,131,www.flickr.com/photos/{username|NSID}/favorites/*,
-you-get/src/you_get/extractors/flickr.py,143,works for collections only,
-you-get/src/you_get/extractors/flickr.py,163,FIXME: fix multiple matching since the match group is dropped,
-you-get/src/you_get/extractors/flickr.py,185,the typeof 'page' and 'pages' may change in different methods,
-you-get/src/you_get/extractors/flickr.py,190,image size suffixes used in inline json 'key' field,
-you-get/src/you_get/extractors/flickr.py,191,listed in descending order,
-you-get/src/you_get/extractors/flickr.py,222,last match always has the best resolution,
-you-get/src/you_get/extractors/ehow.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/bandcamp.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/lizhi.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/lizhi.py,8,,
-you-get/src/you_get/extractors/lizhi.py,9,Worked well but not perfect.,
-you-get/src/you_get/extractors/lizhi.py,10,TODO: add option --format={sd|hd},
-you-get/src/you_get/extractors/lizhi.py,11,,
-you-get/src/you_get/extractors/lizhi.py,16,radio_id: e.g. 549759 from http://www.lizhi.fm/549759/,
-you-get/src/you_get/extractors/lizhi.py,17,,
-you-get/src/you_get/extractors/lizhi.py,18,"Returns a list of tuples (audio_id, title, url) for each episode",
-you-get/src/you_get/extractors/lizhi.py,19,(audio) in the radio playlist. url is the direct link to the audio,
-you-get/src/you_get/extractors/lizhi.py,20,file.,
-you-get/src/you_get/extractors/lizhi.py,22,/api/radio_audios API parameters:,
-you-get/src/you_get/extractors/lizhi.py,23,,
-you-get/src/you_get/extractors/lizhi.py,24,- s: starting episode,
-you-get/src/you_get/extractors/lizhi.py,25,- l: count (per page),
-you-get/src/you_get/extractors/lizhi.py,26,- band: radio_id,
-you-get/src/you_get/extractors/lizhi.py,27,,
-you-get/src/you_get/extractors/lizhi.py,28,"We use l=65535 for poor man's pagination (that is, no pagination",
-you-get/src/you_get/extractors/lizhi.py,29,at all -- hope all fits on a single page).,
-you-get/src/you_get/extractors/lizhi.py,30,,
-you-get/src/you_get/extractors/lizhi.py,31,TODO: Use /api/radio?band={radio_id} to get number of episodes,
-you-get/src/you_get/extractors/lizhi.py,32,"(au_cnt), then handle pagination properly.",
-you-get/src/you_get/extractors/lizhi.py,44,Sample URL: http://www.lizhi.fm/549759/,
-you-get/src/you_get/extractors/lizhi.py,52,Sample URL: http://www.lizhi.fm/549759/18864883431656710/,
-you-get/src/you_get/extractors/lizhi.py,58,Look for the audio_id among the full list of episodes,
-you-get/src/you_get/extractors/fc2video.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/fc2video.py,10,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/fc2video.py,19,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/fc2video.py,45,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/fc2video.py,48,'http://video.fc2.com/en/content/20151021bTVKnbEw',
-you-get/src/you_get/extractors/fc2video.py,49,'http://xiaojiadianvideo.asia/content/20151021bTVKnbEw',
-you-get/src/you_get/extractors/fc2video.py,50,'http://video.fc2.com/ja/content/20151021bTVKnbEw',
-you-get/src/you_get/extractors/fc2video.py,51,'http://video.fc2.com/tw/content/20151021bTVKnbEw',
-you-get/src/you_get/extractors/pptv.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/pptv.py,3,"__all__ = ['pptv_download', 'pptv_download_by_id']",
-you-get/src/you_get/extractors/pptv.py,142,mergs 3 meta_data,
-you-get/src/you_get/extractors/pptv.py,356,"site_info = ""PPTV.com""",
-you-get/src/you_get/extractors/pptv.py,357,download = pptv_download,
-you-get/src/you_get/extractors/veoh.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/veoh.py,18,----------------------------------------------------------------------,
-you-get/src/you_get/extractors/veoh.py,23,grab download URL,
-you-get/src/you_get/extractors/veoh.py,27,grab title,
-you-get/src/you_get/extractors/douban.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/kuwo.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/kuwo.py,11,to get title,
-you-get/src/you_get/extractors/kuwo.py,12,format =aac|mp3 ->to get aac format=mp3 ->to get mp3,
-you-get/src/you_get/extractors/kuwo.py,21,reduce duplicated,
-you-get/src/you_get/extractors/kuwo.py,36,"download_playlist = playlist_not_supported(""kugou"")",
-you-get/src/you_get/extractors/kuwo.py,37,"download_playlist=playlist_not_supported(""kuwo"")",
-you-get/src/you_get/extractors/kuaishou.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/kuaishou.py,16,size = video_list[-1]['size'],
-you-get/src/you_get/extractors/kuaishou.py,17,result wrong size,
-you-get/src/you_get/extractors/kuaishou.py,22,get the one of the best quality,
-you-get/src/you_get/extractors/kuaishou.py,26,video_url.split('.')[-1],
-you-get/src/you_get/extractors/kuaishou.py,30,extract image,
-you-get/src/you_get/extractors/zhihu.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/zhihu.py,11,question or column,
-you-get/src/you_get/extractors/zhihu.py,33,first High Definition,
-you-get/src/you_get/extractors/zhihu.py,34,second Second Standard Definition,
-you-get/src/you_get/extractors/zhihu.py,35,third ld. What is ld ?,
-you-get/src/you_get/extractors/zhihu.py,36,finally continue,
-you-get/src/you_get/extractors/zhihu.py,51,question page,
-you-get/src/you_get/extractors/acfun.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/acfun.py,51,first call the main parasing API,
-you-get/src/you_get/extractors/acfun.py,56,decide sourceId to know which extractor to use,
-you-get/src/you_get/extractors/acfun.py,58,danmakuId = info['danmakuId'],
-you-get/src/you_get/extractors/acfun.py,60,call extractor decided by sourceId,
-you-get/src/you_get/extractors/acfun.py,72,"As in Jul.28.2016, Acfun is using embsig to anti hotlink so we need to pass this",
-you-get/src/you_get/extractors/acfun.py,73,In Mar. 2017 there is a dedicated ``acfun_proxy'' in youku cloud player,
-you-get/src/you_get/extractors/acfun.py,74,old code removed,
-you-get/src/you_get/extractors/acfun.py,82,total_size in the json could be incorrect(F.I. 0),
-you-get/src/you_get/extractors/acfun.py,87,fallback to flvhd is not quite possible,
-you-get/src/you_get/extractors/acfun.py,153,TODO: 应由用户指定清晰度,
-you-get/src/you_get/extractors/twitter.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/twitter.py,23,normalize mobile URL,
-you-get/src/you_get/extractors/twitter.py,26,moments,
-you-get/src/you_get/extractors/twitter.py,37,disable faker to prevent 302 infinite redirect,
-you-get/src/you_get/extractors/twitter.py,44,extract images,
-you-get/src/you_get/extractors/twitter.py,71,extract video,
-you-get/src/you_get/extractors/twitter.py,72,i_url = 'https://twitter.com/i/videos/' + item_id,
-you-get/src/you_get/extractors/twitter.py,73,i_content = get_content(i_url),
-you-get/src/you_get/extractors/twitter.py,74,"js_url = r1(r'src=""([^""]+)""', i_content)",
-you-get/src/you_get/extractors/twitter.py,75,js_content = get_content(js_url),
-you-get/src/you_get/extractors/twitter.py,76,"authorization = r1(r'""(Bearer [^""]+)""', js_content)",
-you-get/src/you_get/extractors/__init__.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/cntv.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/ku6.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/ku6.py,41,http://www.ku6.com/2017/detail-zt.html?vid=xvqTmvZrH8MNvErpvRxFn3,
-you-get/src/you_get/extractors/ku6.py,75,fix #1746,
-you-get/src/you_get/extractors/ku6.py,76,some ku6 urls really ends with three dots? A bug?,
-you-get/src/you_get/extractors/alive.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/cbs.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/pinterest.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/pinterest.py,7,site name,
-you-get/src/you_get/extractors/pinterest.py,10,ordered list of supported stream types / qualities on this site,
-you-get/src/you_get/extractors/pinterest.py,11,order: high quality -> low quality,
-you-get/src/you_get/extractors/pinterest.py,13,contains an 'id' or 'itag' field at minimum,
-you-get/src/you_get/extractors/pinterest.py,18,scrape the html,
-you-get/src/you_get/extractors/pinterest.py,21,extract title,
-you-get/src/you_get/extractors/pinterest.py,25,extract raw urls,
-you-get/src/you_get/extractors/pinterest.py,31,construct available streams,
-you-get/src/you_get/extractors/pinterest.py,37,for each available stream,
-you-get/src/you_get/extractors/pinterest.py,39,fill in 'container' field and 'size' field (optional),
-you-get/src/you_get/extractors/pinterest.py,41,'src' field is a list of processed urls for direct downloading,
-you-get/src/you_get/extractors/pinterest.py,42,usually derived from 'url',
-you-get/src/you_get/extractors/pinterest.py,47,TBD: implement download_playlist,
-you-get/src/you_get/extractors/zhibo.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/zhibo.py,8,http://video.zhibo.tv/video/details/d103057f-663e-11e8-9d83-525400ccac43.html,
-you-get/src/you_get/extractors/zhibo.py,17,"video_guessulike = r1(r""window.xgData =([s\S'\s\.]*)\'\;[\s\S]*window.vouchData"", video_html)",
-you-get/src/you_get/extractors/zhibo.py,32,if 'v.zhibo.tv' in url:,
-you-get/src/you_get/extractors/zhibo.py,33,http://v.zhibo.tv/31609372,
-you-get/src/you_get/extractors/heavymusic.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/wanmen.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/wanmen.py,10,Helper functions,
-you-get/src/you_get/extractors/wanmen.py,36,Parsers,
-you-get/src/you_get/extractors/wanmen.py,87,Main entrance,
-you-get/src/you_get/extractors/wanmen.py,95,without courseID we cannot do anything,
-you-get/src/you_get/extractors/wanmen.py,103,only download ONE single part,
-you-get/src/you_get/extractors/wanmen.py,109,download a topic,
-you-get/src/you_get/extractors/wanmen.py,114,download the whole course,
-you-get/src/you_get/extractors/youku.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/youku.py,2,-*- coding: utf-8 -*-,
-you-get/src/you_get/extractors/youku.py,44,Last updated: 2017-10-13,
-you-get/src/you_get/extractors/youku.py,57,not really equivalent to mp4hd,
-you-get/src/you_get/extractors/youku.py,62,obsolete?,
-you-get/src/you_get/extractors/youku.py,82,Found in http://g.alicdn.com/player/ykplayer/0.5.64/youku-player.min.js,
-you-get/src/you_get/extractors/youku.py,83,"grep -oE '""[0-9a-zA-Z+/=]{256}""' youku-player.min.js",
-you-get/src/you_get/extractors/youku.py,112,"if the cnd_url starts with an ip addr, it should be youku's old CDN",
-you-get/src/you_get/extractors/youku.py,113,which rejects http requests randomly with status code > 400,
-you-get/src/you_get/extractors/youku.py,114,change it to the dispatcher of aliCDN can do better,
-you-get/src/you_get/extractors/youku.py,115,at least a little more recoverable from HTTP 403,
-you-get/src/you_get/extractors/youku.py,126,It's unreliable. check #1633,
-you-get/src/you_get/extractors/youku.py,172,wrong vid parsed from the page,
-you-get/src/you_get/extractors/youku.py,180,wrong password,
-you-get/src/you_get/extractors/youku.py,182,it can be True already(from cli). offer another chance to retry,
-you-get/src/you_get/extractors/youku.py,235,Audio languages,
-you-get/src/you_get/extractors/youku.py,271,http://list.youku.com/show/id_z2ae8ee1c837b11e18195.html,
-you-get/src/you_get/extractors/youku.py,272,official playlist,
-you-get/src/you_get/extractors/youku.py,281,http://list.youku.com/albumlist/show/id_2336634.html,
-you-get/src/you_get/extractors/youku.py,282,UGC playlist,
-you-get/src/you_get/extractors/w56.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/magisto.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/kugou.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/kugou.py,14,for 5sing.kugou.com,
-you-get/src/you_get/extractors/kugou.py,27,for the www.kugou.com/,
-you-get/src/you_get/extractors/kugou.py,29,raise NotImplementedError(url),
-you-get/src/you_get/extractors/kugou.py,33,sample,
-you-get/src/you_get/extractors/kugou.py,34,url_sample:http://www.kugou.com/song/#hash=93F7D2FC6E95424739448218B591AEAF&album_id=9019462,
-you-get/src/you_get/extractors/kugou.py,43,some songs cann't play because of copyright protection,
-you-get/src/you_get/extractors/kugou.py,55,download music leaderboard,
-you-get/src/you_get/extractors/kugou.py,56,sample: http://www.kugou.com/yy/html/rank.html,
-you-get/src/you_get/extractors/kugou.py,69,download album,
-you-get/src/you_get/extractors/kugou.py,70,album sample:   http://www.kugou.com/yy/album/single/1645030.html,
-you-get/src/you_get/extractors/kugou.py,78,download the playlist,
-you-get/src/you_get/extractors/kugou.py,79,playlist sample:http://www.kugou.com/yy/special/single/487279.html,
-you-get/src/you_get/extractors/kugou.py,87,download the list by hash,
-you-get/src/you_get/extractors/kugou.py,94,"download_playlist = playlist_not_supported(""kugou"")",
-you-get/src/you_get/extractors/funshion.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/funshion.py,100,really necessary?,
-you-get/src/you_get/extractors/funshion.py,130,"r'.{27}0' pattern, untested",
-you-get/src/you_get/extractors/funshion.py,189,h.264 -> h264,
-you-get/src/you_get/extractors/infoq.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/infoq.py,31,cookie handler,
-you-get/src/you_get/extractors/bigthink.py,1,!/usr/bin/env python,
-you-get/src/you_get/extractors/bigthink.py,11,this is just a sample. Will make it in prepare(),
-you-get/src/you_get/extractors/bigthink.py,12,"{'id': '1080'},",
-you-get/src/you_get/extractors/bigthink.py,13,"{'id': '720'},",
-you-get/src/you_get/extractors/bigthink.py,14,"{'id': '360'},",
-you-get/src/you_get/extractors/bigthink.py,15,"{'id': '288'},",
-you-get/src/you_get/extractors/bigthink.py,16,"{'id': '190'},",
-you-get/src/you_get/extractors/bigthink.py,17,"{'id': '180'},",
-you-get/src/you_get/extractors/bigthink.py,36,is this somehow related to the time? Magic....,
-you-get/src/you_get/extractors/bigthink.py,45,to avoid KeyError,
-you-get/src/you_get/extractors/soundcloud.py,1,!/usr/bin/env python,
-you-get/src/you_get/processor/rtmpdump.py,1,!/usr/bin/env python,
-you-get/src/you_get/processor/rtmpdump.py,19,,
-you-get/src/you_get/processor/rtmpdump.py,20,"params ={""-y"":""playlist"",""-q"":None,}",
-you-get/src/you_get/processor/rtmpdump.py,21,"if Only Key ,Value should be None",
-you-get/src/you_get/processor/rtmpdump.py,22,-r -o should not be included in params,
-you-get/src/you_get/processor/rtmpdump.py,38,cmdline.append('-y'),
-you-get/src/you_get/processor/rtmpdump.py,39,cmdline.append(playpath),
-you-get/src/you_get/processor/rtmpdump.py,44,,
-you-get/src/you_get/processor/rtmpdump.py,47,construct left side of pipe,
-you-get/src/you_get/processor/rtmpdump.py,51,append other params if exist,
-you-get/src/you_get/processor/rtmpdump.py,60,pipe start,
-you-get/src/you_get/processor/rtmpdump.py,65,logging,
-you-get/src/you_get/processor/rtmpdump.py,68,call RTMPDump!,
-you-get/src/you_get/processor/rtmpdump.py,71,"os.system(""rtmpdump -r '%s' -y '%s' -o - | %s -"" % (url, playpath, player))",
-you-get/src/you_get/processor/join_mp4.py,1,!/usr/bin/env python,
-you-get/src/you_get/processor/join_mp4.py,3,reference: c041828_ISO_IEC_14496-12_2005(E).pdf,
-you-get/src/you_get/processor/join_mp4.py,5,,
-you-get/src/you_get/processor/join_mp4.py,6,reader and writer,
-you-get/src/you_get/processor/join_mp4.py,7,,
-you-get/src/you_get/processor/join_mp4.py,55,"return '<Atom(%s):%s>' % (self.type, repr(self.body))",
-you-get/src/you_get/processor/join_mp4.py,171,new Date(movieTime * 1000 - 2082850791998L);,
-you-get/src/you_get/processor/join_mp4.py,206,new Date(movieTime * 1000 - 2082850791998L);,
-you-get/src/you_get/processor/join_mp4.py,277,assert track_name[-1] == b'\x00',
-you-get/src/you_get/processor/join_mp4.py,308,"return Atom('stsd', size, children)",
-you-get/src/you_get/processor/join_mp4.py,319,TODO: remove,
-you-get/src/you_get/processor/join_mp4.py,321,TODO: remove,
-you-get/src/you_get/processor/join_mp4.py,348,XXX,
-you-get/src/you_get/processor/join_mp4.py,360,assert entry_count == 1,
-you-get/src/you_get/processor/join_mp4.py,371,"return Atom('stts', size, None)",
-you-get/src/you_get/processor/join_mp4.py,383,oldsize = self.size # TODO: remove,
-you-get/src/you_get/processor/join_mp4.py,385,"assert oldsize == self.size, '%s: %d, %d' % (self.type, oldsize, self.size) # TODO: remove",
-you-get/src/you_get/processor/join_mp4.py,403,"return Atom('stss', size, None)",
-you-get/src/you_get/processor/join_mp4.py,430,what is it?,
-you-get/src/you_get/processor/join_mp4.py,433,"chunks, samples = zip(*chunks)",
-you-get/src/you_get/processor/join_mp4.py,434,total = 0,
-you-get/src/you_get/processor/join_mp4.py,435,"for c, s in zip(chunks[1:], samples):",
-you-get/src/you_get/processor/join_mp4.py,436,total += c*s,
-you-get/src/you_get/processor/join_mp4.py,437,"print 'total', total",
-you-get/src/you_get/processor/join_mp4.py,440,"return Atom('stsc', size, None)",
-you-get/src/you_get/processor/join_mp4.py,476,"return Atom('stsz', size, None)",
-you-get/src/you_get/processor/join_mp4.py,506,"return Atom('stco', size, None)",
-you-get/src/you_get/processor/join_mp4.py,610,"return Atom(type, size, None)",
-you-get/src/you_get/processor/join_mp4.py,611,raise NotImplementedError(),
-you-get/src/you_get/processor/join_mp4.py,628,merge duration,
-you-get/src/you_get/processor/join_mp4.py,629,merge duration,
-you-get/src/you_get/processor/join_mp4.py,630,merge duration,
-you-get/src/you_get/processor/join_mp4.py,631,nothing,
-you-get/src/you_get/processor/join_mp4.py,632,nothing,
-you-get/src/you_get/processor/join_mp4.py,633,nothing,
-you-get/src/you_get/processor/join_mp4.py,634,nothing,
-you-get/src/you_get/processor/join_mp4.py,635,nothing,
-you-get/src/you_get/processor/join_mp4.py,636,"sample_count, sample_duration",
-you-get/src/you_get/processor/join_mp4.py,637,join indexes,
-you-get/src/you_get/processor/join_mp4.py,638,merge # sample numbers,
-you-get/src/you_get/processor/join_mp4.py,639,merge # samples,
-you-get/src/you_get/processor/join_mp4.py,640,merge # chunk offsets,
-you-get/src/you_get/processor/join_mp4.py,641,merge,
-you-get/src/you_get/processor/join_mp4.py,642,nothing,
-you-get/src/you_get/processor/join_mp4.py,643,nothing,
-you-get/src/you_get/processor/join_mp4.py,644,noting,
-you-get/src/you_get/processor/join_mp4.py,663,"stsd sample descriptions (codec types, initialization etc.)",
-you-get/src/you_get/processor/join_mp4.py,664,stts (decoding) time-to-sample,
-you-get/src/you_get/processor/join_mp4.py,665,ctts (composition) time to sample,
-you-get/src/you_get/processor/join_mp4.py,666,"stsc sample-to-chunk, partial data-offset information",
-you-get/src/you_get/processor/join_mp4.py,667,stsz sample sizes (framing),
-you-get/src/you_get/processor/join_mp4.py,668,stz2 compact sample sizes (framing),
-you-get/src/you_get/processor/join_mp4.py,669,"stco chunk offset, partial data-offset information",
-you-get/src/you_get/processor/join_mp4.py,670,co64 64-bit chunk offset,
-you-get/src/you_get/processor/join_mp4.py,671,stss sync sample table (random access points),
-you-get/src/you_get/processor/join_mp4.py,672,stsh shadow sync sample table,
-you-get/src/you_get/processor/join_mp4.py,673,padb sample padding bits,
-you-get/src/you_get/processor/join_mp4.py,674,stdp sample degradation priority,
-you-get/src/you_get/processor/join_mp4.py,675,sdtp independent and disposable samples,
-you-get/src/you_get/processor/join_mp4.py,676,sbgp sample-to-group,
-you-get/src/you_get/processor/join_mp4.py,677,sgpd sample group description,
-you-get/src/you_get/processor/join_mp4.py,678,subs sub-sample information,
-you-get/src/you_get/processor/join_mp4.py,726,,
-you-get/src/you_get/processor/join_mp4.py,727,merge,
-you-get/src/you_get/processor/join_mp4.py,728,,
-you-get/src/you_get/processor/join_mp4.py,733,assert len(samples) == 1,
-you-get/src/you_get/processor/join_mp4.py,734,sample_list.append(samples[0]),
-you-get/src/you_get/processor/join_mp4.py,737,"assert len(set(durations)) == 1, 'not all durations equal'",
-you-get/src/you_get/processor/join_mp4.py,804,"mvhd_duration = min(mvhd_duration, tkhd_durations)",
-you-get/src/you_get/processor/join_mp4.py,890,,
-you-get/src/you_get/processor/join_mp4.py,891,main,
-you-get/src/you_get/processor/join_mp4.py,892,,
-you-get/src/you_get/processor/join_mp4.py,894,TODO: FIXME: duplicate of join_flv,
-you-get/src/you_get/processor/join_ts.py,1,!/usr/bin/env python,
-you-get/src/you_get/processor/join_ts.py,6,,
-you-get/src/you_get/processor/join_ts.py,7,main,
-you-get/src/you_get/processor/join_ts.py,8,,
-you-get/src/you_get/processor/join_flv.py,1,!/usr/bin/env python,
-you-get/src/you_get/processor/join_flv.py,8,,
-you-get/src/you_get/processor/join_flv.py,9,AMF0,
-you-get/src/you_get/processor/join_flv.py,10,,
-you-get/src/you_get/processor/join_flv.py,67,dirty fix for the invalid Qiyi flv,
-you-get/src/you_get/processor/join_flv.py,91,dirty fix for the invalid Qiyi flv,
-you-get/src/you_get/processor/join_flv.py,180,,
-you-get/src/you_get/processor/join_flv.py,181,FLV,
-you-get/src/you_get/processor/join_flv.py,182,,
-you-get/src/you_get/processor/join_flv.py,204,header size: 15 bytes,
-you-get/src/you_get/processor/join_flv.py,218,previous_tag_size = read_uint(stream),
-you-get/src/you_get/processor/join_flv.py,219,data_type = read_byte(stream),
-you-get/src/you_get/processor/join_flv.py,220,body_size = read_unsigned_medium_int(stream),
-you-get/src/you_get/processor/join_flv.py,221,"assert body_size < 1024*1024*128, 'tag body size too big (> 128MB)'",
-you-get/src/you_get/processor/join_flv.py,222,timestamp = read_unsigned_medium_int(stream),
-you-get/src/you_get/processor/join_flv.py,223,timestamp += read_byte(stream) << 24,
-you-get/src/you_get/processor/join_flv.py,224,assert read_unsigned_medium_int(stream) == 0,
-you-get/src/you_get/processor/join_flv.py,225,body = stream.read(body_size),
-you-get/src/you_get/processor/join_flv.py,226,"return (data_type, timestamp, body_size, body, previous_tag_size)",
-you-get/src/you_get/processor/join_flv.py,269,"def write_meta_data(stream, meta_type, meta_data):",
-you-get/src/you_get/processor/join_flv.py,270,"assert isinstance(meta_type, basesting)",
-you-get/src/you_get/processor/join_flv.py,271,write_amf(meta_type),
-you-get/src/you_get/processor/join_flv.py,272,write_amf(meta_data),
-you-get/src/you_get/processor/join_flv.py,282,,
-you-get/src/you_get/processor/join_flv.py,283,main,
-you-get/src/you_get/processor/join_flv.py,284,,
-you-get/src/you_get/processor/join_flv.py,313,must merge fields: duration,
-you-get/src/you_get/processor/join_flv.py,314,"TODO: check other meta info, update other meta info",
-you-get/src/you_get/processor/ffmpeg.py,1,!/usr/bin/env python,
-you-get/src/you_get/processor/ffmpeg.py,13,Python 3.2 or below,
-you-get/src/you_get/processor/ffmpeg.py,45,"Given a list of segments and the output path, generates the concat",
-you-get/src/you_get/processor/ffmpeg.py,46,list and returns the path to the concat list.,
-you-get/src/you_get/processor/ffmpeg.py,92,Use concat demuxer on FFmpeg >= 1.1,
-you-get/src/you_get/processor/ffmpeg.py,146,Use concat demuxer on FFmpeg >= 1.1,
-you-get/src/you_get/processor/ffmpeg.py,185,Use concat demuxer on FFmpeg >= 1.1,
-you-get/src/you_get/processor/ffmpeg.py,236,not the same here!!!!,
-you-get/src/you_get/processor/ffmpeg.py,238,who cares?,
-you-get/src/you_get/processor/ffmpeg.py,270,https://stackoverflow.com/questions/38996925/ffmpeg-concat-unsafe-file-name,
-you-get/src/you_get/processor/__init__.py,1,!/usr/bin/env python,
-you-get/src/you_get/cli_wrapper/player/__main__.py,1,!/usr/bin/env python,
-you-get/src/you_get/cli_wrapper/player/vlc.py,1,!/usr/bin/env python,
-you-get/src/you_get/cli_wrapper/player/__init__.py,1,!/usr/bin/env python,
-you-get/src/you_get/util/term.py,1,!/usr/bin/env python,
-you-get/src/you_get/util/term.py,6,fcntl module only available on Unix,
-you-get/src/you_get/util/log.py,1,!/usr/bin/env python,
-you-get/src/you_get/util/log.py,2,This file is Python 2 compliant.,
-you-get/src/you_get/util/log.py,16,ANSI escape code,
-you-get/src/you_get/util/log.py,17,See <http://en.wikipedia.org/wiki/ANSI_escape_code>,
-you-get/src/you_get/util/log.py,43,xterm,
-you-get/src/you_get/util/log.py,44,xterm,
-you-get/src/you_get/util/log.py,45,xterm,
-you-get/src/you_get/util/log.py,46,xterm,
-you-get/src/you_get/util/log.py,47,xterm,
-you-get/src/you_get/util/log.py,48,xterm,
-you-get/src/you_get/util/log.py,49,xterm,
-you-get/src/you_get/util/log.py,50,xterm,
-you-get/src/you_get/util/log.py,51,xterm,
-you-get/src/you_get/util/log.py,52,xterm,
-you-get/src/you_get/util/log.py,53,xterm,
-you-get/src/you_get/util/log.py,54,xterm,
-you-get/src/you_get/util/log.py,55,xterm,
-you-get/src/you_get/util/log.py,56,xterm,
-you-get/src/you_get/util/log.py,57,xterm,
-you-get/src/you_get/util/log.py,58,xterm,
-you-get/src/you_get/util/fs.py,1,!/usr/bin/env python,
-you-get/src/you_get/util/fs.py,9,POSIX systems,
-you-get/src/you_get/util/fs.py,16,FIXME: do some filesystem detection,
-you-get/src/you_get/util/fs.py,18,Windows (non-POSIX namespace),
-you-get/src/you_get/util/fs.py,20,Reserved in Windows VFAT and NTFS,
-you-get/src/you_get/util/fs.py,26,Reserved in Windows VFAT,
-you-get/src/you_get/util/fs.py,35,*nix,
-you-get/src/you_get/util/fs.py,37,Mac OS HFS+,
-you-get/src/you_get/util/fs.py,42,Remove leading .,
-you-get/src/you_get/util/fs.py,46,Trim to 82 Unicode characters long,
-you-get/src/you_get/util/strings.py,2,py 3.4,
-you-get/src/you_get/util/os.py,1,!/usr/bin/env python,
-you-get/src/you_get/util/os.py,9,Inspired by:,
-you-get/src/you_get/util/os.py,10,https://github.com/scivision/pybashutils/blob/78b7f2b339cb03b1c37df94015098bbe462f8526/pybashutils/windows_linux_detect.py,
-you-get/src/you_get/util/os.py,21,detect WSL https://github.com/Microsoft/BashOnWindows/issues/423,
-you-get/src/you_get/util/git.py,1,!/usr/bin/env python,
-you-get/tests/test.py,1,!/usr/bin/env python,
-you-get/tests/test.py,31,noqa,
-you-get/tests/test_common.py,1,!/usr/bin/env python,
-you-get/tests/test_util.py,1,!/usr/bin/env python,
+you-get/setup.py,1,!/usr/bin/env python3,not
+you-get/src/you_get/__main__.py,1,!/usr/bin/env python,not
+you-get/src/you_get/__main__.py,23,TBD,not
+you-get/src/you_get/__main__.py,29,"Get (branch, commit) if running from a git repo.",not
+you-get/src/you_get/__main__.py,32,Get options and arguments.,not
+you-get/src/you_get/__main__.py,41,Display help.,not
+you-get/src/you_get/__main__.py,43,Enter GUI mode.,not
+you-get/src/you_get/__main__.py,44,from .gui import gui_main,not
+you-get/src/you_get/__main__.py,45,gui_main(),not
+you-get/src/you_get/__main__.py,50,Display help.,not
+you-get/src/you_get/__main__.py,54,Display version.,not
+you-get/src/you_get/__main__.py,66,Run using GUI.,not
+you-get/src/you_get/__main__.py,70,Force download.,not
+you-get/src/you_get/__main__.py,74,Download playlist whenever possible.,not
+you-get/src/you_get/__main__.py,79,Enter GUI mode.,not
+you-get/src/you_get/__main__.py,83,Enter console mode.,not
+you-get/src/you_get/__init__.py,1,!/usr/bin/env python,not
+you-get/src/you_get/__init__.py,2,This file is Python 2 compliant.,not
+you-get/src/you_get/__init__.py,7,"from .extractor import Extractor, VideoExtractor",not
+you-get/src/you_get/__init__.py,8,from .util import log,not
+you-get/src/you_get/__init__.py,12,from .common import *,not
+you-get/src/you_get/__init__.py,13,from .version import *,not
+you-get/src/you_get/__init__.py,14,from .cli_wrapper import *,not
+you-get/src/you_get/__init__.py,15,from .extractor import *,not
+you-get/src/you_get/__init__.py,17,Don't import anything.,not
+you-get/src/you_get/json_output.py,4,save info from common.print_info(),not
+you-get/src/you_get/json_output.py,36,a fake VideoExtractor object to save info,not
+you-get/src/you_get/json_output.py,42,create a VideoExtractor and save info for download_urls(),not
+you-get/src/you_get/json_output.py,56,save download info in streams,not
+you-get/src/you_get/common.py,1,!/usr/bin/env python,not
+you-get/src/you_get/common.py,142,noqa,not
+you-get/src/you_get/common.py,146,noqa,not
+you-get/src/you_get/common.py,156,all encryption algo should work on bytes,not
+you-get/src/you_get/common.py,206,return str(s.encode('utf-8'))[2:-1],not
+you-get/src/you_get/common.py,209,DEPRECATED in favor of match1(),not
+you-get/src/you_get/common.py,216,DEPRECATED in favor of match1(),not
+you-get/src/you_get/common.py,316,DEPRECATED in favor of util.legitimize(),not
+you-get/src/you_get/common.py,344,DEPRECATED in favor of get_content(),not
+you-get/src/you_get/common.py,348,install cookies,not
+you-get/src/you_get/common.py,369,DEPRECATED in favor of get_content(),not
+you-get/src/you_get/common.py,375,DEPRECATED in favor of get_content(),not
+you-get/src/you_get/common.py,403,ignore ssl errors,not
+you-get/src/you_get/common.py,414,try to tackle youku CDN fails,not
+you-get/src/you_get/common.py,443,Handle HTTP compression for gzip and deflate (zlib),not
+you-get/src/you_get/common.py,450,Decode the response body,not
+you-get/src/you_get/common.py,490,Handle HTTP compression for gzip and deflate (zlib),not
+you-get/src/you_get/common.py,497,Decode the response body,not
+you-get/src/you_get/common.py,556,fix for netease,not
+you-get/src/you_get/common.py,627,"When a referer specified with param refer,",not
+you-get/src/you_get/common.py,628,the key must be 'Referer' for the hack here,SATD
+you-get/src/you_get/common.py,711,only request a range when not chunked,not
+you-get/src/you_get/common.py,739,always append if chunked,not
+you-get/src/you_get/common.py,741,is it ever necessary?,not
+you-get/src/you_get/common.py,757,Download finished,not
+you-get/src/you_get/common.py,759,Unexpected termination. Retry request,not
+you-get/src/you_get/common.py,760,when,not
+you-get/src/you_get/common.py,777,on Windows rename could fail if destination filepath exists,not
+you-get/src/you_get/common.py,795,38 is the size of all statically known size in self.bar,not
+you-get/src/you_get/common.py,895,lame hack for the --output-filename option,SATD
+you-get/src/you_get/common.py,997,"print 'Downloading %s [%s/%s]...' % (tr(filename), i + 1, len(urls))",not
+you-get/src/you_get/common.py,1081,None or unset -> False,not
+you-get/src/you_get/common.py,1105,None or unset ->False,not
+you-get/src/you_get/common.py,1180,elif type in ['video/ogg']:,not
+you-get/src/you_get/common.py,1181,type_info = 'Ogg video (%s)' % type,not
+you-get/src/you_get/common.py,1186,elif type in ['video/x-ms-wmv']:,not
+you-get/src/you_get/common.py,1187,type_info = 'Windows Media video (%s)' % type,not
+you-get/src/you_get/common.py,1190,elif type in ['video/mpeg']:,not
+you-get/src/you_get/common.py,1191,type_info = 'MPEG video (%s)' % type,not
+you-get/src/you_get/common.py,1268,DEPRECATED in favor of set_proxy() and unset_proxy(),not
+you-get/src/you_get/common.py,1270,Use system default setting,not
+you-get/src/you_get/common.py,1272,Don't use any proxy,not
+you-get/src/you_get/common.py,1274,Use proxy,not
+you-get/src/you_get/common.py,1288,nothing happens on py3.3 and later,not
+you-get/src/you_get/common.py,1292,"in lower pyver (e.g. 3.2.x), remove 'flush' keyword and flush it as requested",not
+you-get/src/you_get/common.py,1314,MozillaCookieJar treats prefix '#HttpOnly_' as comments incorrectly!,not
+you-get/src/you_get/common.py,1315,do not use its load(),not
+you-get/src/you_get/common.py,1316,see also:,not
+you-get/src/you_get/common.py,1317,- https://docs.python.org/3/library/http.cookiejar.html#http.cookiejar.MozillaCookieJar,not
+you-get/src/you_get/common.py,1318,- https://github.com/python/cpython/blob/4b219ce/Lib/http/cookiejar.py#L2014,not
+you-get/src/you_get/common.py,1319,- https://curl.haxx.se/libcurl/c/CURLOPT_COOKIELIST.html#EXAMPLE,not
+you-get/src/you_get/common.py,1320,cookies = cookiejar.MozillaCookieJar(cookiefile),not
+you-get/src/you_get/common.py,1321,cookies.load(),not
+you-get/src/you_get/common.py,1328,"last field may be absent, so keep any trailing tab",not
+you-get/src/you_get/common.py,1331,skip comments and blank lines XXX what is $ for?,SATD
+you-get/src/you_get/common.py,1334,skip for #HttpOnly_,not
+you-get/src/you_get/common.py,1342,cookies.txt regards 'Set-Cookie: foo' as a cookie,not
+you-get/src/you_get/common.py,1343,"with no name, whereas http.cookiejar regards it as a",not
+you-get/src/you_get/common.py,1344,cookie with no value.,not
+you-get/src/you_get/common.py,1349,skip for #HttpOnly_,not
+you-get/src/you_get/common.py,1357,assume path_specified is false,not
+you-get/src/you_get/common.py,1396,TODO: Chromium Cookies,SATD
+you-get/src/you_get/common.py,1397,"SELECT host_key, path, secure, expires_utc, name, encrypted_value",not
+you-get/src/you_get/common.py,1398,FROM cookies,not
+you-get/src/you_get/common.py,1399,http://n8henrie.com/2013/11/use-chromes-cookies-for-easier-downloading-with-python-requests/,not
+you-get/src/you_get/common.py,1568,Set level of root logger to DEBUG,not
+you-get/src/you_get/common.py,1594,to fix extractors not use VideoExtractor,not
+you-get/src/you_get/common.py,1610,ignore ssl,not
+you-get/src/you_get/common.py,1730,all non-ASCII code points must be quoted (percent-encoded UTF-8),not
+you-get/src/you_get/common.py,1743,t.co isn't happy with fake_headers,not
+you-get/src/you_get/version.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractor.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractor.py,84,raise NotImplementedError(),not
+you-get/src/you_get/extractor.py,88,raise NotImplementedError(),not
+you-get/src/you_get/extractor.py,141,Print the stream,not
+you-get/src/you_get/extractor.py,146,Print stream with best quality,not
+you-get/src/you_get/extractor.py,153,Print DASH streams,not
+you-get/src/you_get/extractor.py,160,Print all other available streams,not
+you-get/src/you_get/extractor.py,184,Display the stream,not
+you-get/src/you_get/extractor.py,191,Display all available streams,not
+you-get/src/you_get/extractor.py,200,Download the stream,not
+you-get/src/you_get/extractor.py,203,Download stream with the best quality,not
+you-get/src/you_get/extractor.py,206,stream_id = list(self.dash_streams)[-1],not
+you-get/src/you_get/extractor.py,232,For legacy main(),not
+you-get/src/you_get/extractor.py,268,For main_dev(),not
+you-get/src/you_get/extractor.py,269,"download_urls(urls, self.title, self.streams[stream_id]['container'], self.streams[stream_id]['size'])",not
+you-get/src/you_get/extractors/pixnet.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/pixnet.py,13,http://eric6513.pixnet.net/album/video/206644535,not
+you-get/src/you_get/extractors/pixnet.py,22,eric6513,not
+you-get/src/you_get/extractors/pixnet.py,24,206644535,not
+you-get/src/you_get/extractors/pixnet.py,27,have to be like this,not
+you-get/src/you_get/extractors/pixnet.py,29,&sig=edb07258e6a9ff40e375e11d30607983  can be blank for now,not
+you-get/src/you_get/extractors/pixnet.py,30,"if required, can be obtained from url like",not
+you-get/src/you_get/extractors/pixnet.py,31,http://s.ext.pixnet.tv/user/eric6513/html5/autoplay/206644507.js,not
+you-get/src/you_get/extractors/pixnet.py,32,"http://api.pixnet.tv/content?type=json&customData={%22username%22:%22eric6513%22,%22id%22:%22206644535%22,%22time%22:1441823350,%22autoplay%22:0,%22loop%22:0,%22profile%22:7}",not
+you-get/src/you_get/extractors/pixnet.py,38,"{""element"":{""video_url"":""http:\/\/cdn-akamai.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_6.mp4"",""backup_video_uri"":""http:\/\/fet-1.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_6.mp4"",""thumb_url"":""\/\/imageproxy.pimg.tw\/zoomcrop?width=480&height=360&url=http%3A%2F%2Fpimg.pixnet.tv%2Fuser%2Feric6513%2F206644507%2Fbg_000000%2F480x360%2Fdefault.jpg%3Fv%3D1422870050"",""profiles"":{""360p"":""http:\/\/cdn-akamai.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567.flv"",""480p"":""http:\/\/cdn-akamai.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_2.mp4"",""720p"":""http:\/\/cdn-akamai.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_3.mp4""},""backup_profiles"":{""360p"":""http:\/\/fet-1.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567.flv"",""480p"":""http:\/\/fet-1.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_2.mp4"",""720p"":""http:\/\/fet-1.node1.cache.pixnet.tv\/user\/eric6513\/13541121820567_3.mp4""},""count_play_url"":[""http:\/\/api.v6.pixnet.tv\/count?username=eric6513&amp;file=13541121820567.flv&amp;t=1441819681&amp;type=v6play&amp;sig=3350496782"",""http:\/\/api.pixnet.tv\/count?username=eric6513&amp;file=13541121820567.flv&amp;t=1441819681&amp;type=play&amp;sig=930187858"",""http:\/\/api.pixnet.tv\/count?username=eric6513&amp;file=13541121820567.flv&amp;t=1441819681&amp;type=html5play&amp;sig=4191197761""],""count_finish_url"":[""http:\/\/api.pixnet.tv\/count?username=eric6513&amp;file=13541121820567.flv&amp;t=1441819715&amp;type=finish&amp;sig=638797202"",""http:\/\/api.pixnet.tv\/count?username=eric6513&amp;file=13541121820567.flv&amp;t=1441819715&amp;type=html5finish&amp;sig=3215728991""]}}",not
+you-get/src/you_get/extractors/pixnet.py,41,In some rare cases the main URL is IPv6 only...,not
+you-get/src/you_get/extractors/pixnet.py,42,Something like #611,not
+you-get/src/you_get/extractors/nanagogo.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/nanagogo.py,27,skip stamp images,not
+you-get/src/you_get/extractors/nanagogo.py,42,do not fail the whole process,not
+you-get/src/you_get/extractors/bilibili.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/bilibili.py,11,"Bilibili media encoding options, in descending quality order.",not
+you-get/src/you_get/extractors/bilibili.py,31,'quality': 15?,not
+you-get/src/you_get/extractors/bilibili.py,54,a reasonable UA,not
+you-get/src/you_get/extractors/bilibili.py,140,live always returns 400 (why?),SATD
+you-get/src/you_get/extractors/bilibili.py,141,"self.title = match1(html_content,",not
+you-get/src/you_get/extractors/bilibili.py,142,"r'<h1 title=""([^""]+)""')",not
+you-get/src/you_get/extractors/bilibili.py,144,redirect: watchlater,not
+you-get/src/you_get/extractors/bilibili.py,151,redirect: bangumi/play/ss -> bangumi/play/ep,not
+you-get/src/you_get/extractors/bilibili.py,152,redirect: bangumi.bilibili.com/anime -> bangumi/play/ep,not
+you-get/src/you_get/extractors/bilibili.py,155,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,161,sort it out,not
+you-get/src/you_get/extractors/bilibili.py,180,regular av video,not
+you-get/src/you_get/extractors/bilibili.py,182,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,185,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,189,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,192,warn if it is a multi-part video,not
+you-get/src/you_get/extractors/bilibili.py,197,set video title,not
+you-get/src/you_get/extractors/bilibili.py,199,"refine title for a specific part, if it is a multi-part video",not
+you-get/src/you_get/extractors/bilibili.py,201,"use URL to decide p-number, not initial_state['p']",not
+you-get/src/you_get/extractors/bilibili.py,206,construct playinfos,not
+you-get/src/you_get/extractors/bilibili.py,208,"use p-number, not initial_state['videoData']['cid']",not
+you-get/src/you_get/extractors/bilibili.py,211,"0 indicates an error, fallback to None",not
+you-get/src/you_get/extractors/bilibili.py,219,get alternative formats from API,not
+you-get/src/you_get/extractors/bilibili.py,221,automatic format for durl: qn=0,not
+you-get/src/you_get/extractors/bilibili.py,222,"for dash, qn does not matter",not
+you-get/src/you_get/extractors/bilibili.py,227,success,not
+you-get/src/you_get/extractors/bilibili.py,239,use bilibili error video instead,not
+you-get/src/you_get/extractors/bilibili.py,258,DASH formats,not
+you-get/src/you_get/extractors/bilibili.py,262,prefer the latter codecs!,not
+you-get/src/you_get/extractors/bilibili.py,264,prefix,not
+you-get/src/you_get/extractors/bilibili.py,265,enforce MP4 container,not
+you-get/src/you_get/extractors/bilibili.py,271,find matching audio track,not
+you-get/src/you_get/extractors/bilibili.py,288,get danmaku,not
+you-get/src/you_get/extractors/bilibili.py,291,bangumi,not
+you-get/src/you_get/extractors/bilibili.py,293,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,296,warn if this bangumi has more than 1 video,not
+you-get/src/you_get/extractors/bilibili.py,301,set video title,not
+you-get/src/you_get/extractors/bilibili.py,304,construct playinfos,not
+you-get/src/you_get/extractors/bilibili.py,312,success,not
+you-get/src/you_get/extractors/bilibili.py,318,get alternative formats from API,not
+you-get/src/you_get/extractors/bilibili.py,320,automatic format for durl: qn=0,not
+you-get/src/you_get/extractors/bilibili.py,321,"for dash, qn does not matter",not
+you-get/src/you_get/extractors/bilibili.py,326,success,not
+you-get/src/you_get/extractors/bilibili.py,342,DASH formats,not
+you-get/src/you_get/extractors/bilibili.py,345,playinfo['result']['quality'] does not reflect the correct quality of DASH stream,not
+you-get/src/you_get/extractors/bilibili.py,346,convert height to quality code,not
+you-get/src/you_get/extractors/bilibili.py,348,prefix,not
+you-get/src/you_get/extractors/bilibili.py,349,enforce MP4 container,not
+you-get/src/you_get/extractors/bilibili.py,355,find matching audio track,not
+you-get/src/you_get/extractors/bilibili.py,366,get danmaku,not
+you-get/src/you_get/extractors/bilibili.py,369,vc video,not
+you-get/src/you_get/extractors/bilibili.py,376,set video title,not
+you-get/src/you_get/extractors/bilibili.py,380,convert height to quality code,not
+you-get/src/you_get/extractors/bilibili.py,383,enforce MP4 container,not
+you-get/src/you_get/extractors/bilibili.py,391,live,not
+you-get/src/you_get/extractors/bilibili.py,404,set video title,not
+you-get/src/you_get/extractors/bilibili.py,413,enforce FLV container,not
+you-get/src/you_get/extractors/bilibili.py,417,audio,not
+you-get/src/you_get/extractors/bilibili.py,425,set audio title,not
+you-get/src/you_get/extractors/bilibili.py,428,get lyrics,not
+you-get/src/you_get/extractors/bilibili.py,437,enforce MP4 container,not
+you-get/src/you_get/extractors/bilibili.py,441,h images,not
+you-get/src/you_get/extractors/bilibili.py,456,enforce JPG container,not
+you-get/src/you_get/extractors/bilibili.py,461,response for interaction video,not
+you-get/src/you_get/extractors/bilibili.py,462,主要针对互动视频，使用cid而不是url来相互区分,not
+you-get/src/you_get/extractors/bilibili.py,470,"0 indicates an error, fallback to None",not
+you-get/src/you_get/extractors/bilibili.py,478,get alternative formats from API,not
+you-get/src/you_get/extractors/bilibili.py,480,automatic format for durl: qn=0,not
+you-get/src/you_get/extractors/bilibili.py,481,"for dash, qn does not matter",not
+you-get/src/you_get/extractors/bilibili.py,486,success,not
+you-get/src/you_get/extractors/bilibili.py,498,use bilibili error video instead,not
+you-get/src/you_get/extractors/bilibili.py,517,DASH formats,not
+you-get/src/you_get/extractors/bilibili.py,521,prefer the latter codecs!,not
+you-get/src/you_get/extractors/bilibili.py,523,prefix,not
+you-get/src/you_get/extractors/bilibili.py,524,enforce MP4 container,not
+you-get/src/you_get/extractors/bilibili.py,530,find matching audio track,not
+you-get/src/you_get/extractors/bilibili.py,548,get danmaku,not
+you-get/src/you_get/extractors/bilibili.py,552,set UA and referer for downloading,not
+you-get/src/you_get/extractors/bilibili.py,557,no stream is available,not
+you-get/src/you_get/extractors/bilibili.py,561,extract the stream,not
+you-get/src/you_get/extractors/bilibili.py,568,extract stream with the best quality,not
+you-get/src/you_get/extractors/bilibili.py,577,sort it out,not
+you-get/src/you_get/extractors/bilibili.py,599,regular av video,not
+you-get/src/you_get/extractors/bilibili.py,601,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,605,interaction video 互动视频,not
+you-get/src/you_get/extractors/bilibili.py,623,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,627,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,657,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,661,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,672,"purl = 'https://www.bilibili.com/video/av%s?p=%s' % (aid, pi+1)",not
+you-get/src/you_get/extractors/bilibili.py,673,"self.__class__().download_by_url(purl, **kwargs)",not
+you-get/src/you_get/extractors/bilibili.py,676,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,686,FIXME,SATD
+you-get/src/you_get/extractors/bilibili.py,701,TBD: channel of more than 100 videos,not
+you-get/src/you_get/extractors/bilibili.py,752,api_url = self.bilibili_audio_menu_info_api(sid),not
+you-get/src/you_get/extractors/bilibili.py,753,"api_content = get_content(api_url, headers=self.bilibili_headers())",not
+you-get/src/you_get/extractors/bilibili.py,754,menu_info = json.loads(api_content),not
+you-get/src/you_get/extractors/dailymotion.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/kakao.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/kakao.py,12,in this implementation playlist not supported so use url_without_playlist,not
+you-get/src/you_get/extractors/kakao.py,13,if want to support playlist need to change that,not
+you-get/src/you_get/extractors/suntv.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/suntv.py,19,important!,not
+you-get/src/you_get/extractors/suntv.py,22,Ahhhhhhh!,not
+you-get/src/you_get/extractors/suntv.py,28,get rid of \r\n s,not
+you-get/src/you_get/extractors/miomio.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/miomio.py,40,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/netease.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/netease.py,42,download lyrics,not
+you-get/src/you_get/extractors/netease.py,62,download lyrics,not
+you-get/src/you_get/extractors/netease.py,71,download lyrics,not
+you-get/src/you_get/extractors/netease.py,150,"sd_url = r1(r'(.+)-mobile.mp4', src) + "".flv""",not
+you-get/src/you_get/extractors/netease.py,151,"hd_url = re.sub('/SD/', '/HD/', sd_url)",not
+you-get/src/you_get/extractors/baidu.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/baidu.py,2,-*- coding: utf-8 -*-,not
+you-get/src/you_get/extractors/baidu.py,16,inside china mainland,not
+you-get/src/you_get/extractors/baidu.py,19,outside china mainland,not
+you-get/src/you_get/extractors/baidu.py,125,embedded videos,not
+you-get/src/you_get/extractors/baidu.py,128,images,not
+you-get/src/you_get/extractors/baidu.py,147,handle albums,not
+you-get/src/you_get/extractors/baidu.py,193,"raise NotImplementedError(""Password required!"")",not
+you-get/src/you_get/extractors/zhanqi.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/zhanqi.py,13,"url = ""https://www.zhanqi.tv/huashan?param_s=1_0.2.0""",not
+you-get/src/you_get/extractors/zhanqi.py,17,url = 'https://www.zhanqi.tv/videos/Lyingman/2017/01/182308.html',not
+you-get/src/you_get/extractors/zhanqi.py,18,https://www.zhanqi.tv/v2/videos/215593.html,not
+you-get/src/you_get/extractors/joy.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/archive.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/yinyuetai.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/facebook.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/baomihua.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/baomihua.py,10,a reasonable UA,not
+you-get/src/you_get/extractors/tucao.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/tucao.py,5,import re,not
+you-get/src/you_get/extractors/tucao.py,9,possible raw list types,not
+you-get/src/you_get/extractors/tucao.py,10,1. <li>type=tudou&vid=199687639</li>,not
+you-get/src/you_get/extractors/tucao.py,11,2. <li>type=tudou&vid=199506910|</li>,not
+you-get/src/you_get/extractors/tucao.py,12,3. <li>type=video&file=http://xiaoshen140731.qiniudn.com/lovestage04.flv|</li>,not
+you-get/src/you_get/extractors/tucao.py,13,4 may ? <li>type=video&file=http://xiaoshen140731.qiniudn.com/lovestage04.flv|xx**type=&vid=?</li>,not
+you-get/src/you_get/extractors/tucao.py,14,5. <li>type=tudou&vid=200003098|07**type=tudou&vid=200000350|08</li>,not
+you-get/src/you_get/extractors/tucao.py,15,6. <li>vid=49454694&type=sina|</li>,not
+you-get/src/you_get/extractors/tucao.py,16,7. <li>type=189&vid=513031813243909|</li>,not
+you-get/src/you_get/extractors/tucao.py,17,"re_pattern=re.compile(r""(type=(.+?)&(vid|file)=(.*?))[\|<]"")",not
+you-get/src/you_get/extractors/tucao.py,26,"fix for 189 video source, see raw list types 7",not
+you-get/src/you_get/extractors/tucao.py,51,"fix for raw list that vid goes before type, see raw list types 6",not
+you-get/src/you_get/extractors/theplatform.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/nicovideo.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/nicovideo.py,33,necessary!,not
+you-get/src/you_get/extractors/nicovideo.py,35,"title = unicodize(r1(r'<span class=""videoHeaderTitle""[^>]*>([^<]+)</span>', html))",not
+you-get/src/you_get/extractors/qq.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/qq.py,16,http://v.sports.qq.com/#/cover/t0fqsm1y83r8v5j/a0026nvw5jr https://v.qq.com/x/cover/t0fqsm1y83r8v5j/a0026nvw5jr.html,not
+you-get/src/you_get/extractors/qq.py,40,fix json parsing error,not
+you-get/src/you_get/extractors/qq.py,41,example:https://v.qq.com/x/page/w0674l9yrrh.html,not
+you-get/src/you_get/extractors/qq.py,141,https://kuaibao.qq.com/s/20180521V0Z9MH00,not
+you-get/src/you_get/extractors/qq.py,148,http://daxue.qq.com/content/content/id/2321,not
+you-get/src/you_get/extractors/qq.py,155,for embedded URLs; don't know what the title is,not
+you-get/src/you_get/extractors/qq.py,158,view.inews.qq.com/a/20180521V0Z9MH00,not
+you-get/src/you_get/extractors/qq.py,164,vid = parse_qs(urlparse(url).query).get('vid') #for links specified vid  like http://v.qq.com/cover/p/ps6mnfqyrfo7es3.html?vid=q0181hpdvo5,not
+you-get/src/you_get/extractors/qq.py,165,https://v.qq.com/x/cover/9hpjiv5fhiyn86u/t0522x58xma.html,not
+you-get/src/you_get/extractors/qq.py,169,https://v.qq.com/x/page/d0552xbadkl.html https://y.qq.com/n/yqq/mv/v/g00268vlkzy.html,not
+you-get/src/you_get/extractors/qq.py,172,https://v.qq.com/x/cover/ps6mnfqyrfo7es3/q0181hpdvo5.html?,not
+you-get/src/you_get/extractors/qq.py,173,general fallback,not
+you-get/src/you_get/extractors/qq.py,179,general fallback,not
+you-get/src/you_get/extractors/ximalaya.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/ximalaya.py,28,no size data in the json. should it be calculated?,not
+you-get/src/you_get/extractors/mixcloud.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/coub.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/ucas.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/ucas.py,32,has to be like this,not
+you-get/src/you_get/extractors/ucas.py,52,getResourceJsCode2,not
+you-get/src/you_get/extractors/ucas.py,74,main,not
+you-get/src/you_get/extractors/ucas.py,77,sub,not
+you-get/src/you_get/extractors/ucas.py,93,make real url,not
+you-get/src/you_get/extractors/ucas.py,94,credit to a mate in UCAS,not
+you-get/src/you_get/extractors/ucas.py,105,resourceID is UUID,not
+you-get/src/you_get/extractors/showroom.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/showroom.py,10,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/showroom.py,33,"{'streaming_url_list': [{'url': 'rtmp://52.197.69.198:1935/liveedge', 'id': 1, 'label': 'original spec(low latency)', 'is_default': True, 'type': 'rtmp', 'stream_name': '7656a6d5baa1d77075c971f6d8b6dc61b979fc913dc5fe7cc1318281793436ed'}, {'url': 'http://52.197.69.198:1935/liveedge/7656a6d5baa1d77075c971f6d8b6dc61b979fc913dc5fe7cc1318281793436ed/playlist.m3u8', 'is_default': True, 'id': 2, 'type': 'hls', 'label': 'original spec'}, {'url': 'rtmp://52.197.69.198:1935/liveedge', 'id': 3, 'label': 'low spec(low latency)', 'is_default': False, 'type': 'rtmp', 'stream_name': '7656a6d5baa1d77075c971f6d8b6dc61b979fc913dc5fe7cc1318281793436ed_low'}, {'url': 'http://52.197.69.198:1935/liveedge/7656a6d5baa1d77075c971f6d8b6dc61b979fc913dc5fe7cc1318281793436ed_low/playlist.m3u8', 'is_default': False, 'id': 4, 'type': 'hls', 'label': 'low spec'}]}",not
+you-get/src/you_get/extractors/showroom.py,39,This is mainly for testing the M3U FFmpeg parser so I would ignore any non-m3u ones,not
+you-get/src/you_get/extractors/showroom.py,44,title,not
+you-get/src/you_get/extractors/showroom.py,59,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/xiami.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/xiami.py,2,-*- coding: utf-8 -*-,not
+you-get/src/you_get/extractors/xiami.py,122,"in this xml track tag is used for both ""track in a trackList"" and track no",not
+you-get/src/you_get/extractors/xiami.py,123,dirty here,not
+you-get/src/you_get/extractors/xiami.py,153,FIXME: broken merge,SATD
+you-get/src/you_get/extractors/xiami.py,183,albums,not
+you-get/src/you_get/extractors/xiami.py,192,collections,not
+you-get/src/you_get/extractors/xiami.py,197,single track,not
+you-get/src/you_get/extractors/qingting.py,12,every resource is described by its channel id and program id,not
+you-get/src/you_get/extractors/qingting.py,13,"so vid is tuple (chaanel_id, program_id)",not
+you-get/src/you_get/extractors/metacafe.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/metacafe.py,14,wont bother to use re,not
+you-get/src/you_get/extractors/qie_video.py,48,"width 481, 482... 489 are all 480p here",not
+you-get/src/you_get/extractors/freesound.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/iqilu.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/iqilu.py,13,URL in webpage,not
+you-get/src/you_get/extractors/iqilu.py,19,grab title,not
+you-get/src/you_get/extractors/mtv81.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/mtv81.py,17,mgid%3Auma%3Avideo%3Amtv81.com%3A897974,not
+you-get/src/you_get/extractors/mtv81.py,28,,not
+you-get/src/you_get/extractors/mtv81.py,29,"rtmpdump  -r 'rtmpe://cp30865.edgefcs.net/ondemand/mtviestor/_!/intlod/MTVInternational/MBUS/GeoLocals/00JP/VIAMTVI/PYC/201304/7122HVAQ4/00JPVIAMTVIPYC7122HVAQ4_640x_360_1200_m30.mp4' -o ""title.mp4"" --swfVfy http://media.mtvnservices.com/player/prime/mediaplayerprime.1.10.8.swf",not
+you-get/src/you_get/extractors/mtv81.py,30,,not
+you-get/src/you_get/extractors/mtv81.py,31,"because rtmpdump is unstable,may try serveral times",not
+you-get/src/you_get/extractors/mtv81.py,32,,not
+you-get/src/you_get/extractors/mtv81.py,34,import pdb,not
+you-get/src/you_get/extractors/mtv81.py,35,pdb.set_trace(),not
+you-get/src/you_get/extractors/xinpianchang.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/xinpianchang.py,21,find key,not
+you-get/src/you_get/extractors/xinpianchang.py,26,get videos info,not
+you-get/src/you_get/extractors/xinpianchang.py,32,set streams dict,not
+you-get/src/you_get/extractors/ifeng.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/ifeng.py,24,old pattern /uuid.shtml,not
+you-get/src/you_get/extractors/ifeng.py,25,now it could be #uuid,not
+you-get/src/you_get/extractors/longzhu.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/giphy.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/tiktok.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/iwara.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/iwara.py,39,"url_first=re.findall(r""(http[s]?://[^/]+)"",url)",not
+you-get/src/you_get/extractors/iwara.py,41,print (url_first),not
+you-get/src/you_get/extractors/tudou.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/tudou.py,36,wrong way!,not
+you-get/src/you_get/extractors/tudou.py,41,throw you back,not
+you-get/src/you_get/extractors/tudou.py,43,Embedded player,not
+you-get/src/you_get/extractors/tudou.py,72,obsolete?,not
+you-get/src/you_get/extractors/tudou.py,87,url = 'http://www.tudou.com/playlist/service/getZyAlbumItems.html?aid='+aid,not
+you-get/src/you_get/extractors/yixia.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/yixia.py,10,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/yixia.py,28,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/yixia.py,46,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/yixia.py,64,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/yixia.py,72,Miaopai,not
+you-get/src/you_get/extractors/yixia.py,81,Xiaokaxiu,not
+you-get/src/you_get/extractors/yixia.py,85,PC,not
+you-get/src/you_get/extractors/yixia.py,87,Mobile,not
+you-get/src/you_get/extractors/yixia.py,99,Another way,not
+you-get/src/you_get/extractors/yixia.py,100,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/yixia.py,101,"def yixia_miaopai_download_by_scid(scid, output_dir = '.', merge = True, info_only = False):",not
+you-get/src/you_get/extractors/yixia.py,102,"""""""""""""",not
+you-get/src/you_get/extractors/yixia.py,103,headers = {,not
+you-get/src/you_get/extractors/yixia.py,104,"'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safari/8536.25',",not
+you-get/src/you_get/extractors/yixia.py,105,"'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',",not
+you-get/src/you_get/extractors/yixia.py,106,"'Cache-Control': 'max-age=0',",not
+you-get/src/you_get/extractors/yixia.py,107,},not
+you-get/src/you_get/extractors/yixia.py,109,"html = get_content('http://m.miaopai.com/show/channel/' + scid, headers)",not
+you-get/src/you_get/extractors/yixia.py,111,"title = match1(html, r'<title>(\w+)')",not
+you-get/src/you_get/extractors/yixia.py,113,"video_url = match1(html, r'<div class=""vid_img"" data-url=\'(.+)\'')",not
+you-get/src/you_get/extractors/yixia.py,115,"type, ext, size = url_info(video_url)",not
+you-get/src/you_get/extractors/yixia.py,117,"print_info(site_info, title, type, size)",not
+you-get/src/you_get/extractors/yixia.py,118,if not info_only:,not
+you-get/src/you_get/extractors/yixia.py,119,"download_urls([video_url], title, ext, size, output_dir, merge=merge)",not
+you-get/src/you_get/extractors/missevan.py,108,remove dot,not
+you-get/src/you_get/extractors/missevan.py,305,keep the self.streams to download cover,not
+you-get/src/you_get/extractors/missevan.py,312,fetch all streams size when output info or json,not
+you-get/src/you_get/extractors/missevan.py,320,fetch size of the selected stream only,not
+you-get/src/you_get/extractors/naver.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/naver.py,29,size = video_list[-1]['size'],not
+you-get/src/you_get/extractors/naver.py,30,result wrong size,not
+you-get/src/you_get/extractors/miaopai.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/miaopai.py,107,FIXME!,SATD
+you-get/src/you_get/extractors/yizhibo.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/le.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/le.py,13,@DEPRECATED,not
+you-get/src/you_get/extractors/le.py,21,@DEPRECATED,not
+you-get/src/you_get/extractors/le.py,35,"return ror(ror(t,773625421%13)^773625421,773625421%17)",not
+you-get/src/you_get/extractors/le.py,41,get real m3u8,not
+you-get/src/you_get/extractors/le.py,54,directly return,not
+you-get/src/you_get/extractors/le.py,85,hold on ! more things to do,not
+you-get/src/you_get/extractors/le.py,86,to decode m3u8 (encoded),not
+you-get/src/you_get/extractors/le.py,107,"ran = float('0.' + str(random.randint(0, 9999999999999999))) # For ver 2.1",not
+you-get/src/you_get/extractors/le.py,108,"str2Hash = 'cfflashformatjsonran{ran}uu{uu}ver2.2vu{vu}bie^#@(%27eib58'.format(vu = vu, uu = uu, ran = ran)  #Magic!/ In ver 2.1",not
+you-get/src/you_get/extractors/le.py,110,ALL YOUR BASE ARE BELONG TO US,not
+you-get/src/you_get/extractors/iqiyi.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/iqiyi.py,165,Display the stream,not
+you-get/src/you_get/extractors/iqiyi.py,172,Display all available streams,not
+you-get/src/you_get/extractors/iqiyi.py,181,Download the stream,not
+you-get/src/you_get/extractors/iqiyi.py,184,Download stream with the best quality,not
+you-get/src/you_get/extractors/iqiyi.py,203,For legacy main(),not
+you-get/src/you_get/extractors/iqiyi.py,205,Here's the change!!,not
+you-get/src/you_get/extractors/vk.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/vk.py,40,used for title - vk page owner,not
+you-get/src/you_get/extractors/vk.py,42,used for title - date when photo was uploaded,not
+you-get/src/you_get/extractors/bokecc.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/bokecc.py,10,"we do now know for now, as we have to check the",not
+you-get/src/you_get/extractors/bokecc.py,11,output from the API,not
+you-get/src/you_get/extractors/bokecc.py,45,return XML,not
+you-get/src/you_get/extractors/bokecc.py,78,Extract the stream,not
+you-get/src/you_get/extractors/bokecc.py,86,Extract stream with the best quality,not
+you-get/src/you_get/extractors/bokecc.py,93,I don't know how to call the player directly so I just put it here,not
+you-get/src/you_get/extractors/bokecc.py,94,just in case anyone touchs it -- Beining@Aug.24.2016,not
+you-get/src/you_get/extractors/bokecc.py,95,download = site.download_by_url,not
+you-get/src/you_get/extractors/bokecc.py,96,download_playlist = site.download_by_url,not
+you-get/src/you_get/extractors/qie.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/qie.py,2,-*- coding: utf-8 -*-,not
+you-get/src/you_get/extractors/qie.py,13,Last updated: 2015-11-24,not
+you-get/src/you_get/extractors/qie.py,61,stream_available = [i['name'] for i in content['data']['stream']],not
+you-get/src/you_get/extractors/qie.py,84,Extract the stream,not
+you-get/src/you_get/extractors/qie.py,92,Extract stream with the best quality,not
+you-get/src/you_get/extractors/sina.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/sina.py,73,Yes they use 1 for success.,not
+you-get/src/you_get/extractors/sina.py,112,"title = match1(video_page, r'title\s*:\s*\'([^\']+)\'')",not
+you-get/src/you_get/extractors/vimeo.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/vimeo.py,12,By Beining,not
+you-get/src/you_get/extractors/vimeo.py,14,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/vimeo.py,17,https://vimeo.com/channels/464686,not
+you-get/src/you_get/extractors/vimeo.py,21,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/vimeo.py,28,print(data),not
+you-get/src/you_get/extractors/icourses.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/icourses.py,28,use this url only for size,not
+you-get/src/you_get/extractors/icourses.py,33,Prevent from blockage,not
+you-get/src/you_get/extractors/icourses.py,52,"shard course page could be gbk but with charset=""utf-8""",not
+you-get/src/you_get/extractors/icourses.py,103,type 2 shared course,not
+you-get/src/you_get/extractors/icourses.py,105,type 1 shared course,not
+you-get/src/you_get/extractors/icourses.py,117,Prevent from blockage,not
+you-get/src/you_get/extractors/icourses.py,122,2 helpers using same interface in the js code,not
+you-get/src/you_get/extractors/icourses.py,157,print(page),not
+you-get/src/you_get/extractors/icourses.py,160,print(hit_list),not
+you-get/src/you_get/extractors/icourses.py,180,It took really long time to find this...,not
+you-get/src/you_get/extractors/icourses.py,265,msvcrt,not
+you-get/src/you_get/extractors/icourses.py,362,Do not update content-length here.,not
+you-get/src/you_get/extractors/icourses.py,363,Only the 1st segment's content-length is the content-length of the file.,not
+you-get/src/you_get/extractors/icourses.py,364,"For other segments, content-length is the standard one, 15 * 1024 * 1024",not
+you-get/src/you_get/extractors/icourses.py,368,received - before_this_uri is size of the buf we get from one uri,not
+you-get/src/you_get/extractors/icourses.py,373,calc the block size to read -- The server can fail to send an EOF,not
+you-get/src/you_get/extractors/icourses.py,391,on Windows rename could fail if destination filepath exists,not
+you-get/src/you_get/extractors/toutiao.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/toutiao.py,77,调api获取视频源文件,not
+you-get/src/you_get/extractors/douyutv.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/interest.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/interest.py,7,http://ch.interest.me/zhtv/VOD/View/114789,not
+you-get/src/you_get/extractors/interest.py,8,http://program.interest.me/zhtv/sonja/8/Vod/View/15794,not
+you-get/src/you_get/extractors/interest.py,10,get title,not
+you-get/src/you_get/extractors/interest.py,21,"I cannot find any example of ""fileurl"", so i just put it like this for now",not
+you-get/src/you_get/extractors/imgur.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/imgur.py,17,album,not
+you-get/src/you_get/extractors/imgur.py,41,direct image,not
+you-get/src/you_get/extractors/imgur.py,53,gallery image,not
+you-get/src/you_get/extractors/embed.py,129,"Try harder, check all iframes",not
+you-get/src/you_get/extractors/ted.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/khan.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/mgtv.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/mgtv.py,2,-*- coding: utf-8 -*-,not
+you-get/src/you_get/extractors/mgtv.py,15,Last updated: 2016-11-13,not
+you-get/src/you_get/extractors/mgtv.py,35,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/mgtv.py,48,"get the REAL M3U url, maybe to be changed later?",not
+you-get/src/you_get/extractors/mgtv.py,52,"not the best way, better we use the m3u8 package",SATD
+you-get/src/you_get/extractors/mgtv.py,54,use ext-info for fast size calculate,not
+you-get/src/you_get/extractors/mgtv.py,71,stream_available = [i['name'] for i in content['data']['stream']],not
+you-get/src/you_get/extractors/mgtv.py,80,Un-Hum,not
+you-get/src/you_get/extractors/mgtv.py,87,make pieces,not
+you-get/src/you_get/extractors/mgtv.py,105,Extract the stream,not
+you-get/src/you_get/extractors/mgtv.py,113,Extract stream with the best quality,not
+you-get/src/you_get/extractors/mgtv.py,123,print video info only,not
+you-get/src/you_get/extractors/mgtv.py,131,Display all available streams,not
+you-get/src/you_get/extractors/mgtv.py,138,default to use the best quality,not
+you-get/src/you_get/extractors/mgtv.py,146,with m3u8 format because some video player can process urls automatically (e.g. mpv),not
+you-get/src/you_get/extractors/mgtv.py,152,av=stream_id in self.dash_streams),not
+you-get/src/you_get/extractors/douyin.py,1,coding=utf-8,not
+you-get/src/you_get/extractors/douyin.py,24,fix: https://www.douyin.com/share/video/6553248251821165832,not
+you-get/src/you_get/extractors/douyin.py,25,"if there is no title, use desc",not
+you-get/src/you_get/extractors/vine.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/vine.py,15,https://vine.co/v/.../card,not
+you-get/src/you_get/extractors/ckplayer.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/ckplayer.py,2,coding:utf-8,not
+you-get/src/you_get/extractors/ckplayer.py,3,Author:  Beining --<i@cnbeining.com>,not
+you-get/src/you_get/extractors/ckplayer.py,4,Purpose: A general extractor for CKPlayer,not
+you-get/src/you_get/extractors/ckplayer.py,5,Created: 03/15/2016,not
+you-get/src/you_get/extractors/ckplayer.py,12,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/ckplayer.py,18,"'duration': 0,",not
+you-get/src/you_get/extractors/ckplayer.py,24,title,not
+you-get/src/you_get/extractors/ckplayer.py,27,if dictify(e)['ckplayer']['info'][0]['title'][0]['_text'].strip():  #duration,not
+you-get/src/you_get/extractors/ckplayer.py,28,video_dict['title'] = dictify(e)['ckplayer']['info'][0]['title'][0]['_text'].strip(),not
+you-get/src/you_get/extractors/ckplayer.py,30,size exists for 1 piece,not
+you-get/src/you_get/extractors/ckplayer.py,33,link exist,not
+you-get/src/you_get/extractors/ckplayer.py,41,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/ckplayer.py,42,helper,not
+you-get/src/you_get/extractors/ckplayer.py,43,https://stackoverflow.com/questions/2148119/how-to-convert-an-xml-string-to-a-dictionary-in-python,not
+you-get/src/you_get/extractors/ckplayer.py,56,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/ckplayer.py,58,Info XML,not
+you-get/src/you_get/extractors/ckplayer.py,68,has link,not
+you-get/src/you_get/extractors/ckplayer.py,69,"use 1st to determine type, ext",not
+you-get/src/you_get/extractors/ckplayer.py,74,save 1st one,not
+you-get/src/you_get/extractors/ckplayer.py,81,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/ckplayer.py,83,URL is XML URL,not
+you-get/src/you_get/extractors/ckplayer.py,89,headers provided,not
+you-get/src/you_get/extractors/huomaotv.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/sohu.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/sohu.py,58,assert data['clipsURL'][0].endswith('.mp4'),not
+you-get/src/you_get/extractors/ixigua.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/ixigua.py,38,from js,not
+you-get/src/you_get/extractors/ixigua.py,79,参数s不能为负数,not
+you-get/src/you_get/extractors/ixigua.py,84,example url: https://www.ixigua.com/i6631065141750268420/#mid=63024814422,not
+you-get/src/you_get/extractors/ixigua.py,130,"There is not only video_1, there might be video_2",not
+you-get/src/you_get/extractors/ixigua.py,132,该网站只有mp4类型文件,not
+you-get/src/you_get/extractors/youtube.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/youtube.py,11,"Non-DASH YouTube media encoding options, in descending quality order.",not
+you-get/src/you_get/extractors/youtube.py,12,"http://en.wikipedia.org/wiki/YouTube#Quality_and_codecs. Retrieved July 17, 2014.",not
+you-get/src/you_get/extractors/youtube.py,17,"{'itag': '85', 'container': 'MP4', 'video_resolution': '1080p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '3-4', 'audio_encoding': 'AAC', 'audio_bitrate': '192'},",not
+you-get/src/you_get/extractors/youtube.py,24,"{'itag': '102', 'container': 'WebM', 'video_resolution': '720p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '192'},",not
+you-get/src/you_get/extractors/youtube.py,28,"{'itag': '84', 'container': 'MP4', 'video_resolution': '720p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '2-3', 'audio_encoding': 'AAC', 'audio_bitrate': '192'},",not
+you-get/src/you_get/extractors/youtube.py,34,Live streaming only,not
+you-get/src/you_get/extractors/youtube.py,41,"{'itag': '101', 'container': 'WebM', 'video_resolution': '360p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '192'},",not
+you-get/src/you_get/extractors/youtube.py,42,"{'itag': '100', 'container': 'WebM', 'video_resolution': '360p', 'video_encoding': 'VP8', 'video_profile': '3D', 'video_bitrate': '', 'audio_encoding': 'Vorbis', 'audio_bitrate': '128'},",not
+you-get/src/you_get/extractors/youtube.py,49,"{'itag': '82', 'container': 'MP4', 'video_resolution': '360p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '0.5', 'audio_encoding': 'AAC', 'audio_bitrate': '96'},",not
+you-get/src/you_get/extractors/youtube.py,56,"{'itag': '83', 'container': 'MP4', 'video_resolution': '240p', 'video_encoding': 'H.264', 'video_profile': '3D', 'video_bitrate': '0.5', 'audio_encoding': 'AAC', 'audio_bitrate': '96'},",not
+you-get/src/you_get/extractors/youtube.py,72,Examples:,not
+you-get/src/you_get/extractors/youtube.py,73,- https://www.youtube.com/yts/jsbin/player-da_DK-vflWlK-zq/base.js,not
+you-get/src/you_get/extractors/youtube.py,74,- https://www.youtube.com/yts/jsbin/player-vflvABTsY/da_DK/base.js,not
+you-get/src/you_get/extractors/youtube.py,75,- https://www.youtube.com/yts/jsbin/player-vfls4aurX/da_DK/base.js,not
+you-get/src/you_get/extractors/youtube.py,76,- https://www.youtube.com/yts/jsbin/player_ias-vfl_RGK2l/en_US/base.js,not
+you-get/src/you_get/extractors/youtube.py,77,- https://www.youtube.com/yts/jsbin/player-vflRjqq_w/da_DK/base.js,not
+you-get/src/you_get/extractors/youtube.py,78,- https://www.youtube.com/yts/jsbin/player_ias-vfl-jbnrr/da_DK/base.js,not
+you-get/src/you_get/extractors/youtube.py,102,prefix to avoid potential namespace conflict,not
+you-get/src/you_get/extractors/youtube.py,119,prefix to avoid potential namespace conflict,not
+you-get/src/you_get/extractors/youtube.py,128,processed size < expected size,not
+you-get/src/you_get/extractors/youtube.py,166,Parse browse_ajax page for more videos to load,not
+you-get/src/you_get/extractors/youtube.py,202,Get video info,not
+you-get/src/you_get/extractors/youtube.py,203,'eurl' is a magic parameter that can bypass age restriction,not
+you-get/src/you_get/extractors/youtube.py,204,full form: 'eurl=https%3A%2F%2Fyoutube.googleapis.com%2Fv%2F{VIDEO_ID}',not
+you-get/src/you_get/extractors/youtube.py,215,Parse video page (for DASH),not
+you-get/src/you_get/extractors/youtube.py,220,Workaround: get_video_info returns bad s. Why?,SATD
+you-get/src/you_get/extractors/youtube.py,225,"stream_list = ytplayer_config['args']['adaptive_fmts'].split(',')",not
+you-get/src/you_get/extractors/youtube.py,237,Parse video page instead,not
+you-get/src/you_get/extractors/youtube.py,248,FIXME: still relevant?,SATD
+you-get/src/you_get/extractors/youtube.py,250,Load necessary cookies into headers (for age-restricted videos),not
+you-get/src/you_get/extractors/youtube.py,274,150 Restricted from playback on certain sites,not
+you-get/src/you_get/extractors/youtube.py,275,Parse video page instead,not
+you-get/src/you_get/extractors/youtube.py,282,"self.title = re.search('<meta name=""title"" content=""([^""]+)""', video_page).group(1)",not
+you-get/src/you_get/extractors/youtube.py,283,stream_list = [],not
+you-get/src/you_get/extractors/youtube.py,286,int(video_info['errorcode'][0]),not
+you-get/src/you_get/extractors/youtube.py,290,int(video_info['errorcode'][0]),not
+you-get/src/you_get/extractors/youtube.py,297,YouTube Live,not
+you-get/src/you_get/extractors/youtube.py,321,"'quality': metadata['quality_label'][0] if 'quality_label' in metadata else None,",not
+you-get/src/you_get/extractors/youtube.py,342,Prepare caption tracks,not
+you-get/src/you_get/extractors/youtube.py,353,empty element,not
+you-get/src/you_get/extractors/youtube.py,358,could be ill-formed XML,not
+you-get/src/you_get/extractors/youtube.py,373,Prepare DASH streams (NOTE: not every video has DASH streams!),not
+you-get/src/you_get/extractors/youtube.py,440,VEVO,not
+you-get/src/you_get/extractors/youtube.py,445,Video info from video page (not always available),not
+you-get/src/you_get/extractors/youtube.py,459,no DASH stream at all,not
+you-get/src/you_get/extractors/youtube.py,461,"streams without contentLength got broken urls, just remove them (#2767)",not
+you-get/src/you_get/extractors/youtube.py,489,get over speed limiting,not
+you-get/src/you_get/extractors/youtube.py,491,audio,not
+you-get/src/you_get/extractors/youtube.py,504,video,not
+you-get/src/you_get/extractors/youtube.py,555,No stream is available,not
+you-get/src/you_get/extractors/youtube.py,559,Extract the stream,not
+you-get/src/you_get/extractors/youtube.py,566,Extract stream with the best quality,not
+you-get/src/you_get/extractors/google.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/google.py,9,"YouTube media encoding options, in descending quality order.",not
+you-get/src/you_get/extractors/google.py,10,"taken from http://en.wikipedia.org/wiki/YouTube#Quality_and_codecs, 3/22/2013.",not
+you-get/src/you_get/extractors/google.py,44,Percent-encoding Unicode URL,not
+you-get/src/you_get/extractors/google.py,49,Google Plus,not
+you-get/src/you_get/extractors/google.py,51,attempt to extract images first,not
+you-get/src/you_get/extractors/google.py,52,TBD: posts with > 4 images,not
+you-get/src/you_get/extractors/google.py,53,TBD: album links,not
+you-get/src/you_get/extractors/google.py,75,"Look ma, there's really a video!",not
+you-get/src/you_get/extractors/google.py,100,Google Docs,not
+you-get/src/you_get/extractors/google.py,115,tiny file - get real url here,not
+you-get/src/you_get/extractors/google.py,119,huge file - the real_url is a confirm page and real url is in it,not
+you-get/src/you_get/extractors/universal.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/universal.py,26,extract an HTML page,not
+you-get/src/you_get/extractors/universal.py,66,most common media file extensions on the Internet,not
+you-get/src/you_get/extractors/universal.py,68,tumblr,not
+you-get/src/you_get/extractors/universal.py,72,blogger,not
+you-get/src/you_get/extractors/universal.py,73,oricon?,not
+you-get/src/you_get/extractors/universal.py,86,a link href to an image is often an interesting one,not
+you-get/src/you_get/extractors/universal.py,91,<img> with high widths,not
+you-get/src/you_get/extractors/universal.py,94,relative path,not
+you-get/src/you_get/extractors/universal.py,102,site-relative path,not
+you-get/src/you_get/extractors/universal.py,110,sometimes naive,not
+you-get/src/you_get/extractors/universal.py,115,MPEG-DASH MPD,not
+you-get/src/you_get/extractors/universal.py,122,have some candy!,not
+you-get/src/you_get/extractors/universal.py,163,direct download,not
+you-get/src/you_get/extractors/universal.py,164,strip query string,not
+you-get/src/you_get/extractors/instagram.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/tumblr.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/tumblr.py,25,bypass GDPR consent page,not
+you-get/src/you_get/extractors/tumblr.py,42,try to extract photos,not
+you-get/src/you_get/extractors/tumblr.py,55,FIXME: decide actual quality,SATD
+you-get/src/you_get/extractors/tumblr.py,57,FIXME: decide actual quality,SATD
+you-get/src/you_get/extractors/tumblr.py,92,feed == 'audio' or feed == 'video' or feed is None,not
+you-get/src/you_get/extractors/tumblr.py,93,try to extract video / audio,not
+you-get/src/you_get/extractors/tumblr.py,132,this is better,SATD
+you-get/src/you_get/extractors/flickr.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/flickr.py,22,"(api_key, method, ext, page)",not
+you-get/src/you_get/extractors/flickr.py,26,UNCOMMENT FOR TESTING,not
+you-get/src/you_get/extractors/flickr.py,27,'&per_page=5',not
+you-get/src/you_get/extractors/flickr.py,29,this parameter CANNOT take control of 'flickr.galleries.getPhotos',not
+you-get/src/you_get/extractors/flickr.py,30,though the doc said it should.,not
+you-get/src/you_get/extractors/flickr.py,31,it's always considered to be 500,not
+you-get/src/you_get/extractors/flickr.py,55,looks that flickr won't return urls for all sizes,not
+you-get/src/you_get/extractors/flickr.py,56,we required in 'extras field without a acceptable header,not
+you-get/src/you_get/extractors/flickr.py,74,this happens only when the url points to a gallery page,not
+you-get/src/you_get/extractors/flickr.py,75,that contains no inline api_key(and never makes xhr api calls),not
+you-get/src/you_get/extractors/flickr.py,76,in fact this might be a better approch for getting a temporary api key,SATD
+you-get/src/you_get/extractors/flickr.py,77,since there's no place for a user to add custom information that may,not
+you-get/src/you_get/extractors/flickr.py,78,misguide the regex in the homepage,not
+you-get/src/you_get/extractors/flickr.py,86,[,not
+you-get/src/you_get/extractors/flickr.py,87,(,not
+you-get/src/you_get/extractors/flickr.py,88,"regex_match_url,",not
+you-get/src/you_get/extractors/flickr.py,89,"remote_api_method,",not
+you-get/src/you_get/extractors/flickr.py,90,"additional_query_parameter_for_method,",not
+you-get/src/you_get/extractors/flickr.py,91,"parser_for_additional_parameter,",not
+you-get/src/you_get/extractors/flickr.py,92,field_where_photourls_are_saved,not
+you-get/src/you_get/extractors/flickr.py,93,),not
+you-get/src/you_get/extractors/flickr.py,94,],not
+you-get/src/you_get/extractors/flickr.py,96,www.flickr.com/photos/{username|NSID}/sets|albums/{album-id},not
+you-get/src/you_get/extractors/flickr.py,104,www.flickr.com/photos/{username|NSID}/{pageN}?,not
+you-get/src/you_get/extractors/flickr.py,107,"according to flickr api documentation, this method needs to be",not
+you-get/src/you_get/extractors/flickr.py,108,authenticated in order to filter photo visible to the calling user,not
+you-get/src/you_get/extractors/flickr.py,109,but it seems works fine anonymously as well,not
+you-get/src/you_get/extractors/flickr.py,115,www.flickr.com/photos/{username|NSID}/galleries/{gallery-id},not
+you-get/src/you_get/extractors/flickr.py,123,www.flickr.com/groups/{groupname|groupNSID}/,not
+you-get/src/you_get/extractors/flickr.py,131,www.flickr.com/photos/{username|NSID}/favorites/*,not
+you-get/src/you_get/extractors/flickr.py,143,works for collections only,not
+you-get/src/you_get/extractors/flickr.py,163,FIXME: fix multiple matching since the match group is dropped,SATD
+you-get/src/you_get/extractors/flickr.py,185,the typeof 'page' and 'pages' may change in different methods,not
+you-get/src/you_get/extractors/flickr.py,190,image size suffixes used in inline json 'key' field,not
+you-get/src/you_get/extractors/flickr.py,191,listed in descending order,not
+you-get/src/you_get/extractors/flickr.py,222,last match always has the best resolution,not
+you-get/src/you_get/extractors/ehow.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/bandcamp.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/lizhi.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/lizhi.py,8,,not
+you-get/src/you_get/extractors/lizhi.py,9,Worked well but not perfect.,not
+you-get/src/you_get/extractors/lizhi.py,10,TODO: add option --format={sd|hd},SATD
+you-get/src/you_get/extractors/lizhi.py,11,,not
+you-get/src/you_get/extractors/lizhi.py,16,radio_id: e.g. 549759 from http://www.lizhi.fm/549759/,not
+you-get/src/you_get/extractors/lizhi.py,17,,not
+you-get/src/you_get/extractors/lizhi.py,18,"Returns a list of tuples (audio_id, title, url) for each episode",not
+you-get/src/you_get/extractors/lizhi.py,19,(audio) in the radio playlist. url is the direct link to the audio,not
+you-get/src/you_get/extractors/lizhi.py,20,file.,not
+you-get/src/you_get/extractors/lizhi.py,22,/api/radio_audios API parameters:,not
+you-get/src/you_get/extractors/lizhi.py,23,,not
+you-get/src/you_get/extractors/lizhi.py,24,- s: starting episode,not
+you-get/src/you_get/extractors/lizhi.py,25,- l: count (per page),not
+you-get/src/you_get/extractors/lizhi.py,26,- band: radio_id,not
+you-get/src/you_get/extractors/lizhi.py,27,,not
+you-get/src/you_get/extractors/lizhi.py,28,"We use l=65535 for poor man's pagination (that is, no pagination",not
+you-get/src/you_get/extractors/lizhi.py,29,at all -- hope all fits on a single page).,not
+you-get/src/you_get/extractors/lizhi.py,30,,not
+you-get/src/you_get/extractors/lizhi.py,31,TODO: Use /api/radio?band={radio_id} to get number of episodes,SATD
+you-get/src/you_get/extractors/lizhi.py,32,"(au_cnt), then handle pagination properly.",not
+you-get/src/you_get/extractors/lizhi.py,44,Sample URL: http://www.lizhi.fm/549759/,not
+you-get/src/you_get/extractors/lizhi.py,52,Sample URL: http://www.lizhi.fm/549759/18864883431656710/,not
+you-get/src/you_get/extractors/lizhi.py,58,Look for the audio_id among the full list of episodes,not
+you-get/src/you_get/extractors/fc2video.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/fc2video.py,10,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/fc2video.py,19,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/fc2video.py,45,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/fc2video.py,48,'http://video.fc2.com/en/content/20151021bTVKnbEw',not
+you-get/src/you_get/extractors/fc2video.py,49,'http://xiaojiadianvideo.asia/content/20151021bTVKnbEw',not
+you-get/src/you_get/extractors/fc2video.py,50,'http://video.fc2.com/ja/content/20151021bTVKnbEw',not
+you-get/src/you_get/extractors/fc2video.py,51,'http://video.fc2.com/tw/content/20151021bTVKnbEw',not
+you-get/src/you_get/extractors/pptv.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/pptv.py,3,"__all__ = ['pptv_download', 'pptv_download_by_id']",not
+you-get/src/you_get/extractors/pptv.py,142,mergs 3 meta_data,not
+you-get/src/you_get/extractors/pptv.py,356,"site_info = ""PPTV.com""",not
+you-get/src/you_get/extractors/pptv.py,357,download = pptv_download,not
+you-get/src/you_get/extractors/veoh.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/veoh.py,18,----------------------------------------------------------------------,not
+you-get/src/you_get/extractors/veoh.py,23,grab download URL,not
+you-get/src/you_get/extractors/veoh.py,27,grab title,not
+you-get/src/you_get/extractors/douban.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/kuwo.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/kuwo.py,11,to get title,not
+you-get/src/you_get/extractors/kuwo.py,12,format =aac|mp3 ->to get aac format=mp3 ->to get mp3,not
+you-get/src/you_get/extractors/kuwo.py,21,reduce duplicated,not
+you-get/src/you_get/extractors/kuwo.py,36,"download_playlist = playlist_not_supported(""kugou"")",not
+you-get/src/you_get/extractors/kuwo.py,37,"download_playlist=playlist_not_supported(""kuwo"")",not
+you-get/src/you_get/extractors/kuaishou.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/kuaishou.py,16,size = video_list[-1]['size'],not
+you-get/src/you_get/extractors/kuaishou.py,17,result wrong size,not
+you-get/src/you_get/extractors/kuaishou.py,22,get the one of the best quality,not
+you-get/src/you_get/extractors/kuaishou.py,26,video_url.split('.')[-1],not
+you-get/src/you_get/extractors/kuaishou.py,30,extract image,not
+you-get/src/you_get/extractors/zhihu.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/zhihu.py,11,question or column,not
+you-get/src/you_get/extractors/zhihu.py,33,first High Definition,not
+you-get/src/you_get/extractors/zhihu.py,34,second Second Standard Definition,not
+you-get/src/you_get/extractors/zhihu.py,35,third ld. What is ld ?,not
+you-get/src/you_get/extractors/zhihu.py,36,finally continue,not
+you-get/src/you_get/extractors/zhihu.py,51,question page,not
+you-get/src/you_get/extractors/acfun.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/acfun.py,51,first call the main parasing API,not
+you-get/src/you_get/extractors/acfun.py,56,decide sourceId to know which extractor to use,not
+you-get/src/you_get/extractors/acfun.py,58,danmakuId = info['danmakuId'],not
+you-get/src/you_get/extractors/acfun.py,60,call extractor decided by sourceId,not
+you-get/src/you_get/extractors/acfun.py,72,"As in Jul.28.2016, Acfun is using embsig to anti hotlink so we need to pass this",not
+you-get/src/you_get/extractors/acfun.py,73,In Mar. 2017 there is a dedicated ``acfun_proxy'' in youku cloud player,not
+you-get/src/you_get/extractors/acfun.py,74,old code removed,not
+you-get/src/you_get/extractors/acfun.py,82,total_size in the json could be incorrect(F.I. 0),not
+you-get/src/you_get/extractors/acfun.py,87,fallback to flvhd is not quite possible,not
+you-get/src/you_get/extractors/acfun.py,153,TODO: 应由用户指定清晰度,SATD
+you-get/src/you_get/extractors/twitter.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/twitter.py,23,normalize mobile URL,not
+you-get/src/you_get/extractors/twitter.py,26,moments,not
+you-get/src/you_get/extractors/twitter.py,37,disable faker to prevent 302 infinite redirect,not
+you-get/src/you_get/extractors/twitter.py,44,extract images,not
+you-get/src/you_get/extractors/twitter.py,71,extract video,not
+you-get/src/you_get/extractors/twitter.py,72,i_url = 'https://twitter.com/i/videos/' + item_id,not
+you-get/src/you_get/extractors/twitter.py,73,i_content = get_content(i_url),not
+you-get/src/you_get/extractors/twitter.py,74,"js_url = r1(r'src=""([^""]+)""', i_content)",not
+you-get/src/you_get/extractors/twitter.py,75,js_content = get_content(js_url),not
+you-get/src/you_get/extractors/twitter.py,76,"authorization = r1(r'""(Bearer [^""]+)""', js_content)",not
+you-get/src/you_get/extractors/__init__.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/cntv.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/ku6.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/ku6.py,41,http://www.ku6.com/2017/detail-zt.html?vid=xvqTmvZrH8MNvErpvRxFn3,not
+you-get/src/you_get/extractors/ku6.py,75,fix #1746,not
+you-get/src/you_get/extractors/ku6.py,76,some ku6 urls really ends with three dots? A bug?,not
+you-get/src/you_get/extractors/alive.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/cbs.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/pinterest.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/pinterest.py,7,site name,not
+you-get/src/you_get/extractors/pinterest.py,10,ordered list of supported stream types / qualities on this site,not
+you-get/src/you_get/extractors/pinterest.py,11,order: high quality -> low quality,not
+you-get/src/you_get/extractors/pinterest.py,13,contains an 'id' or 'itag' field at minimum,not
+you-get/src/you_get/extractors/pinterest.py,18,scrape the html,SATD
+you-get/src/you_get/extractors/pinterest.py,21,extract title,not
+you-get/src/you_get/extractors/pinterest.py,25,extract raw urls,not
+you-get/src/you_get/extractors/pinterest.py,31,construct available streams,not
+you-get/src/you_get/extractors/pinterest.py,37,for each available stream,not
+you-get/src/you_get/extractors/pinterest.py,39,fill in 'container' field and 'size' field (optional),not
+you-get/src/you_get/extractors/pinterest.py,41,'src' field is a list of processed urls for direct downloading,not
+you-get/src/you_get/extractors/pinterest.py,42,usually derived from 'url',not
+you-get/src/you_get/extractors/pinterest.py,47,TBD: implement download_playlist,not
+you-get/src/you_get/extractors/zhibo.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/zhibo.py,8,http://video.zhibo.tv/video/details/d103057f-663e-11e8-9d83-525400ccac43.html,not
+you-get/src/you_get/extractors/zhibo.py,17,"video_guessulike = r1(r""window.xgData =([s\S'\s\.]*)\'\;[\s\S]*window.vouchData"", video_html)",not
+you-get/src/you_get/extractors/zhibo.py,32,if 'v.zhibo.tv' in url:,not
+you-get/src/you_get/extractors/zhibo.py,33,http://v.zhibo.tv/31609372,not
+you-get/src/you_get/extractors/heavymusic.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/wanmen.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/wanmen.py,10,Helper functions,not
+you-get/src/you_get/extractors/wanmen.py,36,Parsers,not
+you-get/src/you_get/extractors/wanmen.py,87,Main entrance,not
+you-get/src/you_get/extractors/wanmen.py,95,without courseID we cannot do anything,not
+you-get/src/you_get/extractors/wanmen.py,103,only download ONE single part,not
+you-get/src/you_get/extractors/wanmen.py,109,download a topic,not
+you-get/src/you_get/extractors/wanmen.py,114,download the whole course,not
+you-get/src/you_get/extractors/youku.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/youku.py,2,-*- coding: utf-8 -*-,not
+you-get/src/you_get/extractors/youku.py,44,Last updated: 2017-10-13,not
+you-get/src/you_get/extractors/youku.py,57,not really equivalent to mp4hd,not
+you-get/src/you_get/extractors/youku.py,62,obsolete?,not
+you-get/src/you_get/extractors/youku.py,82,Found in http://g.alicdn.com/player/ykplayer/0.5.64/youku-player.min.js,not
+you-get/src/you_get/extractors/youku.py,83,"grep -oE '""[0-9a-zA-Z+/=]{256}""' youku-player.min.js",not
+you-get/src/you_get/extractors/youku.py,112,"if the cnd_url starts with an ip addr, it should be youku's old CDN",not
+you-get/src/you_get/extractors/youku.py,113,which rejects http requests randomly with status code > 400,not
+you-get/src/you_get/extractors/youku.py,114,change it to the dispatcher of aliCDN can do better,not
+you-get/src/you_get/extractors/youku.py,115,at least a little more recoverable from HTTP 403,not
+you-get/src/you_get/extractors/youku.py,126,It's unreliable. check #1633,not
+you-get/src/you_get/extractors/youku.py,172,wrong vid parsed from the page,not
+you-get/src/you_get/extractors/youku.py,180,wrong password,not
+you-get/src/you_get/extractors/youku.py,182,it can be True already(from cli). offer another chance to retry,not
+you-get/src/you_get/extractors/youku.py,235,Audio languages,not
+you-get/src/you_get/extractors/youku.py,271,http://list.youku.com/show/id_z2ae8ee1c837b11e18195.html,not
+you-get/src/you_get/extractors/youku.py,272,official playlist,not
+you-get/src/you_get/extractors/youku.py,281,http://list.youku.com/albumlist/show/id_2336634.html,not
+you-get/src/you_get/extractors/youku.py,282,UGC playlist,not
+you-get/src/you_get/extractors/w56.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/magisto.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/kugou.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/kugou.py,14,for 5sing.kugou.com,not
+you-get/src/you_get/extractors/kugou.py,27,for the www.kugou.com/,not
+you-get/src/you_get/extractors/kugou.py,29,raise NotImplementedError(url),not
+you-get/src/you_get/extractors/kugou.py,33,sample,not
+you-get/src/you_get/extractors/kugou.py,34,url_sample:http://www.kugou.com/song/#hash=93F7D2FC6E95424739448218B591AEAF&album_id=9019462,not
+you-get/src/you_get/extractors/kugou.py,43,some songs cann't play because of copyright protection,not
+you-get/src/you_get/extractors/kugou.py,55,download music leaderboard,not
+you-get/src/you_get/extractors/kugou.py,56,sample: http://www.kugou.com/yy/html/rank.html,not
+you-get/src/you_get/extractors/kugou.py,69,download album,not
+you-get/src/you_get/extractors/kugou.py,70,album sample:   http://www.kugou.com/yy/album/single/1645030.html,not
+you-get/src/you_get/extractors/kugou.py,78,download the playlist,not
+you-get/src/you_get/extractors/kugou.py,79,playlist sample:http://www.kugou.com/yy/special/single/487279.html,not
+you-get/src/you_get/extractors/kugou.py,87,download the list by hash,not
+you-get/src/you_get/extractors/kugou.py,94,"download_playlist = playlist_not_supported(""kugou"")",not
+you-get/src/you_get/extractors/funshion.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/funshion.py,100,really necessary?,not
+you-get/src/you_get/extractors/funshion.py,130,"r'.{27}0' pattern, untested",not
+you-get/src/you_get/extractors/funshion.py,189,h.264 -> h264,not
+you-get/src/you_get/extractors/infoq.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/infoq.py,31,cookie handler,not
+you-get/src/you_get/extractors/bigthink.py,1,!/usr/bin/env python,not
+you-get/src/you_get/extractors/bigthink.py,11,this is just a sample. Will make it in prepare(),not
+you-get/src/you_get/extractors/bigthink.py,12,"{'id': '1080'},",not
+you-get/src/you_get/extractors/bigthink.py,13,"{'id': '720'},",not
+you-get/src/you_get/extractors/bigthink.py,14,"{'id': '360'},",not
+you-get/src/you_get/extractors/bigthink.py,15,"{'id': '288'},",not
+you-get/src/you_get/extractors/bigthink.py,16,"{'id': '190'},",not
+you-get/src/you_get/extractors/bigthink.py,17,"{'id': '180'},",not
+you-get/src/you_get/extractors/bigthink.py,36,is this somehow related to the time? Magic....,SATD
+you-get/src/you_get/extractors/bigthink.py,45,to avoid KeyError,not
+you-get/src/you_get/extractors/soundcloud.py,1,!/usr/bin/env python,not
+you-get/src/you_get/processor/rtmpdump.py,1,!/usr/bin/env python,not
+you-get/src/you_get/processor/rtmpdump.py,19,,not
+you-get/src/you_get/processor/rtmpdump.py,20,"params ={""-y"":""playlist"",""-q"":None,}",not
+you-get/src/you_get/processor/rtmpdump.py,21,"if Only Key ,Value should be None",not
+you-get/src/you_get/processor/rtmpdump.py,22,-r -o should not be included in params,not
+you-get/src/you_get/processor/rtmpdump.py,38,cmdline.append('-y'),not
+you-get/src/you_get/processor/rtmpdump.py,39,cmdline.append(playpath),not
+you-get/src/you_get/processor/rtmpdump.py,44,,not
+you-get/src/you_get/processor/rtmpdump.py,47,construct left side of pipe,not
+you-get/src/you_get/processor/rtmpdump.py,51,append other params if exist,not
+you-get/src/you_get/processor/rtmpdump.py,60,pipe start,not
+you-get/src/you_get/processor/rtmpdump.py,65,logging,not
+you-get/src/you_get/processor/rtmpdump.py,68,call RTMPDump!,not
+you-get/src/you_get/processor/rtmpdump.py,71,"os.system(""rtmpdump -r '%s' -y '%s' -o - | %s -"" % (url, playpath, player))",not
+you-get/src/you_get/processor/join_mp4.py,1,!/usr/bin/env python,not
+you-get/src/you_get/processor/join_mp4.py,3,reference: c041828_ISO_IEC_14496-12_2005(E).pdf,not
+you-get/src/you_get/processor/join_mp4.py,5,,not
+you-get/src/you_get/processor/join_mp4.py,6,reader and writer,not
+you-get/src/you_get/processor/join_mp4.py,7,,not
+you-get/src/you_get/processor/join_mp4.py,55,"return '<Atom(%s):%s>' % (self.type, repr(self.body))",not
+you-get/src/you_get/processor/join_mp4.py,171,new Date(movieTime * 1000 - 2082850791998L);,not
+you-get/src/you_get/processor/join_mp4.py,206,new Date(movieTime * 1000 - 2082850791998L);,not
+you-get/src/you_get/processor/join_mp4.py,277,assert track_name[-1] == b'\x00',not
+you-get/src/you_get/processor/join_mp4.py,308,"return Atom('stsd', size, children)",not
+you-get/src/you_get/processor/join_mp4.py,319,TODO: remove,SATD
+you-get/src/you_get/processor/join_mp4.py,321,TODO: remove,SATD
+you-get/src/you_get/processor/join_mp4.py,348,XXX,SATD
+you-get/src/you_get/processor/join_mp4.py,360,assert entry_count == 1,not
+you-get/src/you_get/processor/join_mp4.py,371,"return Atom('stts', size, None)",not
+you-get/src/you_get/processor/join_mp4.py,383,oldsize = self.size # TODO: remove,SATD
+you-get/src/you_get/processor/join_mp4.py,385,"assert oldsize == self.size, '%s: %d, %d' % (self.type, oldsize, self.size) # TODO: remove",not
+you-get/src/you_get/processor/join_mp4.py,403,"return Atom('stss', size, None)",not
+you-get/src/you_get/processor/join_mp4.py,430,what is it?,not
+you-get/src/you_get/processor/join_mp4.py,433,"chunks, samples = zip(*chunks)",not
+you-get/src/you_get/processor/join_mp4.py,434,total = 0,not
+you-get/src/you_get/processor/join_mp4.py,435,"for c, s in zip(chunks[1:], samples):",not
+you-get/src/you_get/processor/join_mp4.py,436,total += c*s,not
+you-get/src/you_get/processor/join_mp4.py,437,"print 'total', total",not
+you-get/src/you_get/processor/join_mp4.py,440,"return Atom('stsc', size, None)",not
+you-get/src/you_get/processor/join_mp4.py,476,"return Atom('stsz', size, None)",not
+you-get/src/you_get/processor/join_mp4.py,506,"return Atom('stco', size, None)",not
+you-get/src/you_get/processor/join_mp4.py,610,"return Atom(type, size, None)",not
+you-get/src/you_get/processor/join_mp4.py,611,raise NotImplementedError(),not
+you-get/src/you_get/processor/join_mp4.py,628,merge duration,not
+you-get/src/you_get/processor/join_mp4.py,629,merge duration,not
+you-get/src/you_get/processor/join_mp4.py,630,merge duration,not
+you-get/src/you_get/processor/join_mp4.py,631,nothing,not
+you-get/src/you_get/processor/join_mp4.py,632,nothing,not
+you-get/src/you_get/processor/join_mp4.py,633,nothing,not
+you-get/src/you_get/processor/join_mp4.py,634,nothing,not
+you-get/src/you_get/processor/join_mp4.py,635,nothing,not
+you-get/src/you_get/processor/join_mp4.py,636,"sample_count, sample_duration",not
+you-get/src/you_get/processor/join_mp4.py,637,join indexes,not
+you-get/src/you_get/processor/join_mp4.py,638,merge # sample numbers,not
+you-get/src/you_get/processor/join_mp4.py,639,merge # samples,not
+you-get/src/you_get/processor/join_mp4.py,640,merge # chunk offsets,not
+you-get/src/you_get/processor/join_mp4.py,641,merge,not
+you-get/src/you_get/processor/join_mp4.py,642,nothing,not
+you-get/src/you_get/processor/join_mp4.py,643,nothing,not
+you-get/src/you_get/processor/join_mp4.py,644,noting,not
+you-get/src/you_get/processor/join_mp4.py,663,"stsd sample descriptions (codec types, initialization etc.)",not
+you-get/src/you_get/processor/join_mp4.py,664,stts (decoding) time-to-sample,not
+you-get/src/you_get/processor/join_mp4.py,665,ctts (composition) time to sample,not
+you-get/src/you_get/processor/join_mp4.py,666,"stsc sample-to-chunk, partial data-offset information",not
+you-get/src/you_get/processor/join_mp4.py,667,stsz sample sizes (framing),not
+you-get/src/you_get/processor/join_mp4.py,668,stz2 compact sample sizes (framing),not
+you-get/src/you_get/processor/join_mp4.py,669,"stco chunk offset, partial data-offset information",not
+you-get/src/you_get/processor/join_mp4.py,670,co64 64-bit chunk offset,not
+you-get/src/you_get/processor/join_mp4.py,671,stss sync sample table (random access points),not
+you-get/src/you_get/processor/join_mp4.py,672,stsh shadow sync sample table,not
+you-get/src/you_get/processor/join_mp4.py,673,padb sample padding bits,not
+you-get/src/you_get/processor/join_mp4.py,674,stdp sample degradation priority,not
+you-get/src/you_get/processor/join_mp4.py,675,sdtp independent and disposable samples,not
+you-get/src/you_get/processor/join_mp4.py,676,sbgp sample-to-group,not
+you-get/src/you_get/processor/join_mp4.py,677,sgpd sample group description,not
+you-get/src/you_get/processor/join_mp4.py,678,subs sub-sample information,not
+you-get/src/you_get/processor/join_mp4.py,726,,not
+you-get/src/you_get/processor/join_mp4.py,727,merge,not
+you-get/src/you_get/processor/join_mp4.py,728,,not
+you-get/src/you_get/processor/join_mp4.py,733,assert len(samples) == 1,not
+you-get/src/you_get/processor/join_mp4.py,734,sample_list.append(samples[0]),not
+you-get/src/you_get/processor/join_mp4.py,737,"assert len(set(durations)) == 1, 'not all durations equal'",not
+you-get/src/you_get/processor/join_mp4.py,804,"mvhd_duration = min(mvhd_duration, tkhd_durations)",not
+you-get/src/you_get/processor/join_mp4.py,890,,not
+you-get/src/you_get/processor/join_mp4.py,891,main,not
+you-get/src/you_get/processor/join_mp4.py,892,,not
+you-get/src/you_get/processor/join_mp4.py,894,TODO: FIXME: duplicate of join_flv,SATD
+you-get/src/you_get/processor/join_ts.py,1,!/usr/bin/env python,not
+you-get/src/you_get/processor/join_ts.py,6,,not
+you-get/src/you_get/processor/join_ts.py,7,main,not
+you-get/src/you_get/processor/join_ts.py,8,,not
+you-get/src/you_get/processor/join_flv.py,1,!/usr/bin/env python,not
+you-get/src/you_get/processor/join_flv.py,8,,not
+you-get/src/you_get/processor/join_flv.py,9,AMF0,not
+you-get/src/you_get/processor/join_flv.py,10,,not
+you-get/src/you_get/processor/join_flv.py,67,dirty fix for the invalid Qiyi flv,not
+you-get/src/you_get/processor/join_flv.py,91,dirty fix for the invalid Qiyi flv,not
+you-get/src/you_get/processor/join_flv.py,180,,not
+you-get/src/you_get/processor/join_flv.py,181,FLV,not
+you-get/src/you_get/processor/join_flv.py,182,,not
+you-get/src/you_get/processor/join_flv.py,204,header size: 15 bytes,not
+you-get/src/you_get/processor/join_flv.py,218,previous_tag_size = read_uint(stream),not
+you-get/src/you_get/processor/join_flv.py,219,data_type = read_byte(stream),not
+you-get/src/you_get/processor/join_flv.py,220,body_size = read_unsigned_medium_int(stream),not
+you-get/src/you_get/processor/join_flv.py,221,"assert body_size < 1024*1024*128, 'tag body size too big (> 128MB)'",not
+you-get/src/you_get/processor/join_flv.py,222,timestamp = read_unsigned_medium_int(stream),not
+you-get/src/you_get/processor/join_flv.py,223,timestamp += read_byte(stream) << 24,not
+you-get/src/you_get/processor/join_flv.py,224,assert read_unsigned_medium_int(stream) == 0,not
+you-get/src/you_get/processor/join_flv.py,225,body = stream.read(body_size),not
+you-get/src/you_get/processor/join_flv.py,226,"return (data_type, timestamp, body_size, body, previous_tag_size)",not
+you-get/src/you_get/processor/join_flv.py,269,"def write_meta_data(stream, meta_type, meta_data):",not
+you-get/src/you_get/processor/join_flv.py,270,"assert isinstance(meta_type, basesting)",not
+you-get/src/you_get/processor/join_flv.py,271,write_amf(meta_type),not
+you-get/src/you_get/processor/join_flv.py,272,write_amf(meta_data),not
+you-get/src/you_get/processor/join_flv.py,282,,not
+you-get/src/you_get/processor/join_flv.py,283,main,not
+you-get/src/you_get/processor/join_flv.py,284,,not
+you-get/src/you_get/processor/join_flv.py,313,must merge fields: duration,not
+you-get/src/you_get/processor/join_flv.py,314,"TODO: check other meta info, update other meta info",SATD
+you-get/src/you_get/processor/ffmpeg.py,1,!/usr/bin/env python,not
+you-get/src/you_get/processor/ffmpeg.py,13,Python 3.2 or below,not
+you-get/src/you_get/processor/ffmpeg.py,45,"Given a list of segments and the output path, generates the concat",not
+you-get/src/you_get/processor/ffmpeg.py,46,list and returns the path to the concat list.,not
+you-get/src/you_get/processor/ffmpeg.py,92,Use concat demuxer on FFmpeg >= 1.1,not
+you-get/src/you_get/processor/ffmpeg.py,146,Use concat demuxer on FFmpeg >= 1.1,not
+you-get/src/you_get/processor/ffmpeg.py,185,Use concat demuxer on FFmpeg >= 1.1,not
+you-get/src/you_get/processor/ffmpeg.py,236,not the same here!!!!,not
+you-get/src/you_get/processor/ffmpeg.py,238,who cares?,not
+you-get/src/you_get/processor/ffmpeg.py,270,https://stackoverflow.com/questions/38996925/ffmpeg-concat-unsafe-file-name,not
+you-get/src/you_get/processor/__init__.py,1,!/usr/bin/env python,not
+you-get/src/you_get/cli_wrapper/player/__main__.py,1,!/usr/bin/env python,not
+you-get/src/you_get/cli_wrapper/player/vlc.py,1,!/usr/bin/env python,not
+you-get/src/you_get/cli_wrapper/player/__init__.py,1,!/usr/bin/env python,not
+you-get/src/you_get/util/term.py,1,!/usr/bin/env python,not
+you-get/src/you_get/util/term.py,6,fcntl module only available on Unix,not
+you-get/src/you_get/util/log.py,1,!/usr/bin/env python,not
+you-get/src/you_get/util/log.py,2,This file is Python 2 compliant.,not
+you-get/src/you_get/util/log.py,16,ANSI escape code,not
+you-get/src/you_get/util/log.py,17,See <http://en.wikipedia.org/wiki/ANSI_escape_code>,not
+you-get/src/you_get/util/log.py,43,xterm,not
+you-get/src/you_get/util/log.py,44,xterm,not
+you-get/src/you_get/util/log.py,45,xterm,not
+you-get/src/you_get/util/log.py,46,xterm,not
+you-get/src/you_get/util/log.py,47,xterm,not
+you-get/src/you_get/util/log.py,48,xterm,not
+you-get/src/you_get/util/log.py,49,xterm,not
+you-get/src/you_get/util/log.py,50,xterm,not
+you-get/src/you_get/util/log.py,51,xterm,not
+you-get/src/you_get/util/log.py,52,xterm,not
+you-get/src/you_get/util/log.py,53,xterm,not
+you-get/src/you_get/util/log.py,54,xterm,not
+you-get/src/you_get/util/log.py,55,xterm,not
+you-get/src/you_get/util/log.py,56,xterm,not
+you-get/src/you_get/util/log.py,57,xterm,not
+you-get/src/you_get/util/log.py,58,xterm,not
+you-get/src/you_get/util/fs.py,1,!/usr/bin/env python,not
+you-get/src/you_get/util/fs.py,9,POSIX systems,not
+you-get/src/you_get/util/fs.py,16,FIXME: do some filesystem detection,SATD
+you-get/src/you_get/util/fs.py,18,Windows (non-POSIX namespace),not
+you-get/src/you_get/util/fs.py,20,Reserved in Windows VFAT and NTFS,not
+you-get/src/you_get/util/fs.py,26,Reserved in Windows VFAT,not
+you-get/src/you_get/util/fs.py,35,*nix,not
+you-get/src/you_get/util/fs.py,37,Mac OS HFS+,not
+you-get/src/you_get/util/fs.py,42,Remove leading .,not
+you-get/src/you_get/util/fs.py,46,Trim to 82 Unicode characters long,not
+you-get/src/you_get/util/strings.py,2,py 3.4,not
+you-get/src/you_get/util/os.py,1,!/usr/bin/env python,not
+you-get/src/you_get/util/os.py,9,Inspired by:,not
+you-get/src/you_get/util/os.py,10,https://github.com/scivision/pybashutils/blob/78b7f2b339cb03b1c37df94015098bbe462f8526/pybashutils/windows_linux_detect.py,not
+you-get/src/you_get/util/os.py,21,detect WSL https://github.com/Microsoft/BashOnWindows/issues/423,not
+you-get/src/you_get/util/git.py,1,!/usr/bin/env python,not
+you-get/tests/test.py,1,!/usr/bin/env python,not
+you-get/tests/test.py,31,noqa,not
+you-get/tests/test_common.py,1,!/usr/bin/env python,not
+you-get/tests/test_util.py,1,!/usr/bin/env python,not

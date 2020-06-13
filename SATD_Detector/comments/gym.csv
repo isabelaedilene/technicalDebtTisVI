@@ -1,810 +1,747 @@
 file path,line #,comment,satd
-gym/setup.py,4,"Don't import gym module here, since deps may not be installed",
-gym/setup.py,8,Environment-specific dependencies.,
-gym/setup.py,17,Meta dependency groups.,
-gym/bin/render.py,1,!/usr/bin/env python3,
-gym/,36,DEPRECATED:,
-gym/,6,Local errors,
-gym/,65,API errors,
-gym/,94,Python 2,
-gym/,96,Python 3,
-gym/,120,Video errors,
-gym/,128,Wrapper errors,
-gym/,141,Vectorized environments errors,
-gym/,33,Set this in SOME subclasses,
-gym/,38,Set these in ALL subclasses,
-gym/,154,propagate exception,
-gym/,168,Enforce that each GoalEnv uses a Goal-compatible observation space.,
-gym/,63,Explicitly fetch all monitors first so that they can't disappear while,
-gym/,64,we iterate. cf. http://stackoverflow.com/a/12429620,
-gym/,53,Adapted from https://svn.python.org/projects/python/tags/r32/Lib/random.py,
-gym/,67,TODO: don't hardcode sizeof_int here,
-gym/,80,Special case 0,
-gym/,1,Based on http://stackoverflow.com/questions/2333872/atomic-writing-to-file-with-python,
-gym/,6,We would ideally atomically replace any existing file with the new,
-gym/,7,"version. However, on Windows there's no Python-only solution prior",
-gym/,8,to Python 3.3. (This library includes a C extension to do so:,
-gym/,9,https://pypi.python.org/pypi/pyosreplace/0.1.),
-gym/,10,,
-gym/,11,"Correspondingly, we make a best effort, but on Python < 3.3 use a",
-gym/,12,replace method which could result in the file temporarily,
-gym/,13,disappearing.,
-gym/,16,Python 3.3 and up have a native `replace` method,
-gym/,20,"TODO: on Windows, this will raise if the file is in use,",
-gym/,21,which is possible. We'll need to make this more robust over,
-gym/,22,time.,
-gym/,29,POSIX rename() is always atomic,
-gym/,118,process pygame events,
-gym/,120,"test events, set key states",
-gym/,5,These submodules should not have any import-time dependencies.,
-gym/,6,We want this since we use `utils` during our import-time sanity checks,
-gym/,7,that verify that our dependencies are actually present.,
-gym/,40,The observation and action spaces of a single environment are,
-gym/,41,kept in separate properties,
-gym/,66,"CubeCrash-v0 - observation_space: Box(40, 32, 3)",
-gym/,68,"MemorizeDigits-v0 - observation_space: Box(24, 32, 3)",
-gym/,16,"Special case: if rhs is a list of scalars, lhs must be an np.ndarray",
-gym/,190,"CubeCrash-v0 - observation_space: Box(40, 32, 3)",
-gym/,192,"MemorizeDigits-v0 - observation_space: Box(24, 32, 3)",
-gym/,54,Assert the length of the array,
-gym/,56,Assert the data type,
-gym/,11,"This looks like a pretty trivial, but given our usage of",
-gym/,12,"__new__, it's worth having.",
-gym/,56,Make sure we are testing the right environment for the test.,
-gym/,62,The wrapper should only add one observation.,
-gym/,82,Check that the added space item is consistent with the added observation.,
-gym/,62,buffer of most recent two observations for max pooling,
-gym/,108,NoopReset,
-gym/,125,more efficient in-place pooling,
-gym/,8,mountaincar: action-based rewards,
-gym/,55,Make sure we are testing the right environment for the test.,
-gym/,70,Check that the added space item is consistent with the added observation.,
-gym/,10,TODO: use perf_counter when gym removes Python 2 support,
-gym/,34,"ALE gray scale is slightly different, but no more than by one shade",
-gym/,70,Make sure that now keys in the `pixel_keys` overlap with,
-gym/,71,`observation_keys`,
-gym/,85,Extend observation space with pixels.,
-gym/,11,use case #1: scale,
-gym/,29,use case #2: clip,
-gym/,48,use case #3: sign,
-gym/,79,Check on whether we need to clear anything,
-gym/,93,We use the 'openai-gym' prefix to determine if a file is,
-gym/,94,ours,
-gym/,113,"Give it a very distiguished name, since we need to pick it",
-gym/,114,up from the filesystem later.,
-gym/,118,We need to write relative paths here since people may,
-gym/,119,move the training_dir around. It would be cleaner to,
-gym/,120,already have the basenames rather than basename'ing,
-gym/,121,"manually, but this works for now.",
-gym/,140,Stop tracking this for autoclose,
-gym/,163,"For envs with BlockingReset wrapping VNCEnv, this observation will be the first one of the new episode",
-gym/,168,Record stats,
-gym/,170,Record video,
-gym/,182,Reset the stat count,
-gym/,187,Bump *after* all reset activity has finished,
-gym/,193,Close any existing video recorder,
-gym/,197,Start recording the next video.,
-gym/,198,,
-gym/,199,TODO: calculate a more correct 'episode_id' upon merge,
-gym/,225,Make sure we've closed up shop when garbage collecting,
-gym/,265,This method gets used for a sanity check in scoreboard/api.py. It's,
-gym/,266,not intended for use outside of the gym codebase.,
-gym/,292,Load up stats + video files,
-gym/,300,Make these paths absolute again,
-gym/,333,"so empty file doesn't mess up results, due to null initial_reset_timestamp",
-gym/,338,Recent addition,
-gym/,340,Keep track of where each episode came from.,
-gym/,361,"TODO training_dir isn't used except for error messages, clean up the layering",
-gym/,30,"the edges of the numbers do not render quite the same in the grayscale, so we ignore them",
-gym/,32,the paddle also do not render quite the same,
-gym/,41,arbitrarily chosen number for stepping into env. and ensuring all observations are in the required range,
-gym/,36,Don't bother setting anything else if not enabled,
-gym/,46,"Whoops, turns out we shouldn't be enabled after all",
-gym/,59,"Base path given, append ext",
-gym/,62,"Otherwise, just generate a unique filename",
-gym/,72,"Touch the file in any case, so we know it's present. (This",
-gym/,73,corrects for platform platform differences. Using ffmpeg on,
-gym/,74,"OS X, the file is precreated, but not on Linux.",
-gym/,79,lazily start the process,
-gym/,82,Dump metadata,
-gym/,107,Indicates a bug in the environment: don't want to raise,
-gym/,108,an error here.,
-gym/,128,"No frames captured. Set metadata, and remove the empty output file.",
-gym/,135,"If broken, get rid of the output file, otherwise we'd leak it.",
-gym/,139,"Might have crashed before even starting the output file, don't try to remove in that case.",
-gym/,203,frame_duration = float(1) / self.frames_per_sec,
-gym/,206,Turn frames into events: clear screen beforehand,
-gym/,207,https://rosettacode.org/wiki/Terminal_control/Clear_the_screen#Python,
-gym/,208,https://rosettacode.org/wiki/Terminal_control/Cursor_positioning#Python,
-gym/,210,Decode the bytes as UTF-8 since JSON may only contain UTF-8,
-gym/,213,Calculate frame size from the largest frames.,
-gym/,214,Add some padding since we'll get cut off otherwise.,
-gym/,225,could add some env metadata here,
-gym/,240,"Frame shape should be lines-first, so w and h are swapped",
-gym/,271,suppress warnings,
-gym/,274,input,
-gym/,279,"this used to be /dev/stdin, which is not Windows-friendly",
-gym/,281,output,
-gym/,290,setsid not present on Windows,
-gym/,19,experimental addition,
-gym/,77,We write the type at the beginning of the episode. If a user,
-gym/,78,"changes the type, it's more natural for it to apply next",
-gym/,79,time the user calls reset().,
-gym/,40,Promote list to array for contains check,
-gym/,41,"if nvec is uint32 and space dtype is uint32, then 0 <= x < self.nvec guarantees that x",
-gym/,42,is within correct bounds for space dtype (even though x does not have to be unsigned),
-gym/,10,"takes about 300-400ms to import, so we load lazily",
-gym/,38,"By default, assume identity is JSONable",
-gym/,43,"By default, assume identity is JSONable",
-gym/,52,Boolean arrays which indicate the interval type for each coordinate,
-gym/,86,Masking arrays which classify the coordinates according to interval,
-gym/,87,type,
-gym/,94,Vectorized sampling by interval type,
-gym/,114,Promote list to array for contains check,
-gym/,45,"None for shape and dtype, since it'll require special handling",
-gym/,70,serialize as dict-repr of vectors,
-gym/,26,Promote list to tuple for contains check,
-gym/,34,serialize as list-repr of tuple of vectors,
-gym/,30,Promote list to array for contains check,
-gym/,1,note: ujson fails this test due to float equality,
-gym/,7,"This format is true today, but it's *not* an official spec.",
-gym/,8,"[username/](env-name)-v(version)    env-name is group 1, version is group 2",
-gym/,9,,
-gym/,10,2016-10-31: We're experimentally expanding the environment ID format,
-gym/,11,to include an optional username.,
-gym/,61,Make the environment aware of which spec it came from.,
-gym/,88,We used to have people override _reset/_step rather than,
-gym/,89,reset/step. Set _gym_disable_underscore_compat = True on,
-gym/,90,your environment if you use these methods and don't want,
-gym/,91,compatibility code to be invoked.,
-gym/,107,catch ImportError for python2.7 compatibility,
-gym/,120,Parse the env name and check to see if it matches the non-version,
-gym/,121,part of a valid env (could also check the exact number here),
-gym/,135,Have a global registry,
-gym/,3,Algorithmic,
-gym/,4,----------------------------------------,
-gym/,50,Classic,
-gym/,51,----------------------------------------,
-gym/,94,Box2d,
-gym/,95,----------------------------------------,
-gym/,132,Toy Text,
-gym/,133,----------------------------------------,
-gym/,155,optimum = .8196,
-gym/,163,optimum = 1,
-gym/,186,optimum = 8.46,
-gym/,202,Mujoco,
-gym/,203,----------------------------------------,
-gym/,205,2D,
-gym/,335,Robotics,
-gym/,336,----------------------------------------,
-gym/,348,Fetch,
-gym/,377,Hand,
-gym/,455,"Alias for ""Full""",
-gym/,505,"Alias for ""Full""",
-gym/,555,"Alias for ""Full""",
-gym/,577,Atari,
-gym/,578,----------------------------------------,
-gym/,580,"# print ', '.join([""'{}'"".format(name.split('.')[0]) for name in atari_py.list_games()])",
-gym/,591,space_invaders should yield SpaceInvaders-v0 and SpaceInvaders-ram-v0,
-gym/,598,ElevatorAction-ram-v0 seems to yield slightly,
-gym/,599,non-deterministic observations about 10% of the time. We,
-gym/,600,"should track this down eventually, but for now we just",
-gym/,601,mark it as nondeterministic.,
-gym/,620,Standard Deterministic (as in the original DeepMind paper),
-gym/,626,Use a deterministic frame skip.,
-gym/,646,A frameskip of 1 means we get every frame,
-gym/,651,"No frameskip. (Atari has no entropy source, so these are",
-gym/,652,deterministic environments.),
-gym/,656,A frameskip of 1 means we get every frame,
-gym/,662,Unit test,
-gym/,663,---------,
-gym/,6,Unit test environment for CNNs and CNN+RNN algorithms.,
-gym/,7,Looks like this (RGB observations):,
-gym/,8,,
-gym/,9,---------------------------,
-gym/,10,|                           |,
-gym/,11,|                           |,
-gym/,12,|                           |,
-gym/,13,|          **               |,
-gym/,14,|          **               |,
-gym/,15,|                           |,
-gym/,16,|                           |,
-gym/,17,|                           |,
-gym/,18,|                           |,
-gym/,19,|                           |,
-gym/,20,========     ==============,
-gym/,21,,
-gym/,22,Goal is to go through the hole at the bottom. Agent controls square using Left-Nop-Right actions.,
-gym/,23,"It falls down automatically, episode length is a bit less than FIELD_H",
-gym/,24,,
-gym/,25,CubeCrash-v0                    # shaped reward,
-gym/,26,CubeCrashSparse-v0              # reward 0 or 1 at the end,
-gym/,27,CubeCrashScreenBecomesBlack-v0  # for RNNs,
-gym/,28,,
-gym/,29,"To see how it works, run:",
-gym/,30,,
-gym/,31,python examples/agents/keyboard_agent.py CubeCrashScreen-v0,
-gym/,51,Makes env too hard,
-gym/,6,Unit test environment for CNNs.,
-gym/,7,Looks like this (RGB observations):,
-gym/,8,,
-gym/,9,---------------------------,
-gym/,10,|                           |,
-gym/,11,|         ******            |,
-gym/,12,|         ******            |,
-gym/,13,|       **      **          |,
-gym/,14,|       **      **          |,
-gym/,15,|               **          |,
-gym/,16,|               **          |,
-gym/,17,|           ****            |,
-gym/,18,|           ****            |,
-gym/,19,|       ****                |,
-gym/,20,|       ****                |,
-gym/,21,|       **********          |,
-gym/,22,|       **********          |,
-gym/,23,|                           |,
-gym/,24,---------------------------,
-gym/,25,,
-gym/,26,Agent should hit action 2 to gain reward. Catches off-by-one errors in your agent.,
-gym/,27,,
-gym/,28,"To see how it works, run:",
-gym/,29,,
-gym/,30,python examples/agents/keyboard_agent.py MemorizeDigits-v0,
-gym/,15,"Easiest continuous control task to learn from pixels, a top-down racing environment.",
-gym/,16,"Discrete control is reasonable in this environment as well, on/off discretization is",
-gym/,17,fine.,
-gym/,18,,
-gym/,19,State consists of STATE_W x STATE_H pixels.,
-gym/,20,,
-gym/,21,"Reward is -0.1 every frame and +1000/N for every track tile visited, where N is",
-gym/,22,"the total number of tiles visited in the track. For example, if you have finished in 732 frames,",
-gym/,23,your reward is 1000 - 0.1*732 = 926.8 points.,
-gym/,24,,
-gym/,25,Game is solved when agent consistently gets 900+ points. Track generated is random every episode.,
-gym/,26,,
-gym/,27,"Episode finishes when all tiles are visited. Car also can go outside of PLAYFIELD, that",
-gym/,28,"is far off the track, then it will get -100 and die.",
-gym/,29,,
-gym/,30,Some indicators shown at the bottom of the window and the state RGB buffer. From,
-gym/,31,"left to right: true speed, four ABS sensors, steering wheel position and gyroscope.",
-gym/,32,,
-gym/,33,"To play yourself (it's rather fast for humans), type:",
-gym/,34,,
-gym/,35,python gym/envs/box2d/car_racing.py,
-gym/,36,,
-gym/,37,"Remember it's powerful rear-wheel drive car, don't press accelerator and turn at the",
-gym/,38,same time.,
-gym/,39,,
-gym/,40,Created by Oleg Klimov. Licensed on the same terms as the rest of OpenAI Gym.,
-gym/,42,less than Atari 160x192,
-gym/,49,Track scale,
-gym/,50,Track is heavily morphed circle with this radius,
-gym/,51,Game over boundary,
-gym/,52,Frames per second,
-gym/,53,Camera zoom,
-gym/,54,Set to False for fixed view (don't use zoom),
-gym/,94,"print tile.road_friction, ""ADD"", len(obj.tiles)",
-gym/,101,"print tile.road_friction, ""DEL"", len(obj.tiles) -- should delete to zero when on grass (this works)",
-gym/,126,"steer, gas, brake",
-gym/,144,Create checkpoints,
-gym/,158,"print ""\n"".join(str(h) for h in checkpoints)",
-gym/,159,self.road_poly = [ (    # uncomment this to see checkpoints,
-gym/,160,"[ (tx,ty) for a,tx,ty in checkpoints ],",
-gym/,161,"(0.7,0.7,0.9) ) ]",
-gym/,164,Go from one checkpoint to another to create track,
-gym/,179,Find destination from checkpoints,
-gym/,197,vector towards destination,
-gym/,199,destination vector projected on rad,
-gym/,218,"print ""\n"".join([str(t) for t in enumerate(track)])",
-gym/,220,"Find closed loop range i1..i2, first loop should be ignored, second is OK",
-gym/,226,Failed,
-gym/,243,Length of perpendicular jump to put together head and tail,
-gym/,250,Red-white border on hard turns,
-gym/,266,Create tiles,
-gym/,327,"First step without action, called from reset()",
-gym/,329,"We actually don't want to count fuel spent, we want car to be faster.",
-gym/,330,self.reward -=  10 * self.car.fuel_spent / ENGINE_POWER,
-gym/,353,reset() not called yet,
-gym/,355,Animate zoom first second,
-gym/,388,pylint: disable=protected-access,
-gym/,461,ABS sensors,
-gym/,481,set 1.0 for wheels to block to zero rotation,
-gym/,507,import matplotlib.pyplot as plt,
-gym/,508,plt.imshow(s),
-gym/,509,"plt.savefig(""test.jpeg"")",
-gym/,11,Rocket trajectory optimization is a classic topic in Optimal Control.,
-gym/,12,,
-gym/,13,According to Pontryagin's maximum principle it's optimal to fire engine full throttle or,
-gym/,14,turn it off. That's the reason this environment is OK to have discreet actions (engine on or off).,
-gym/,15,,
-gym/,16,"Landing pad is always at coordinates (0,0). Coordinates are the first two numbers in state vector.",
-gym/,17,Reward for moving from the top of the screen to landing pad and zero speed is about 100..140 points.,
-gym/,18,If lander moves away from landing pad it loses reward back. Episode finishes if the lander crashes or,
-gym/,19,"comes to rest, receiving additional -100 or +100 points. Each leg ground contact is +10. Firing main",
-gym/,20,engine is -0.3 points each frame. Firing side engine is -0.03 points each frame. Solved is 200 points.,
-gym/,21,,
-gym/,22,"Landing outside landing pad is possible. Fuel is infinite, so an agent can learn to fly and then land",
-gym/,23,on its first attempt. Please see source code for details.,
-gym/,24,,
-gym/,25,"To see heuristic landing, run:",
-gym/,26,,
-gym/,27,python gym/envs/box2d/lunar_lander.py,
-gym/,28,,
-gym/,29,"To play yourself, run:",
-gym/,30,,
-gym/,31,python examples/agents/keyboard_agent.py LunarLander-v2,
-gym/,32,,
-gym/,33,Created by Oleg Klimov. Licensed on the same terms as the rest of OpenAI Gym.,
-gym/,36,"affects how fast-paced the game is, forces should be adjusted as well",
-gym/,41,Set 1500 to make game harder,
-gym/,93,"useful range is -1 .. +1, but spikes can be higher",
-gym/,97,"Action is two floats [main engine, left-right engines].",
-gym/,98,"Main engine: -1..0 off, 0..+1 throttle from 50% to 100% power. Engine can't work with less than 50% power.",
-gym/,99,"Left-right:  -1.0..-0.5 fire left engine, +0.5..+1.0 fire right engine, -0.5..0.5 off",
-gym/,102,"Nop, fire left engine, main engine, right engine",
-gym/,132,terrain,
-gym/,169,collide only with ground,
-gym/,170,0.99 bouncy,
-gym/,202,low enough not to jump back into the sky,
-gym/,205,"Yes, the most esoteric numbers here, angles legs have freedom to travel within",
-gym/,226,collide only with ground,
-gym/,244,Engines,
-gym/,251,Main engine,
-gym/,253,0.5..1.0,
-gym/,257,"4 is move a bit downwards, +-2 for randomness",
-gym/,260,"particles are just a decoration, 3.5 is here to make particle speed adequate",
-gym/,266,Orientation engines,
-gym/,301,"And ten points for legs contact, the idea is if you",
-gym/,302,"lose contact again after landing, you get negative reward",
-gym/,307,"less fuel spent is better, about -30 for heurisic landing",
-gym/,365,Heuristic for:,
-gym/,366,1. Testing.,
-gym/,367,2. Demonstration rollout.,
-gym/,368,"angle should point towards center (s[0] is horizontal coordinate, s[2] hor speed)",
-gym/,369,more than 0.4 radians (22 degrees) is bad,
-gym/,371,target y should be proporional to horizontal offset,
-gym/,373,"PID controller: s[4] angle, s[5] angularSpeed",
-gym/,375,"print(""angle_targ=%0.2f, angle_todo=%0.2f"" % (angle_targ, angle_todo))",
-gym/,377,PID controller: s[1] vertical coordinate s[3] vertical speed,
-gym/,379,"print(""hover_targ=%0.2f, hover_todo=%0.2f"" % (hover_targ, hover_todo))",
-gym/,381,legs have contact,
-gym/,383,"override to reduce fall speed, that's all we need after contact",
-gym/,12,This is simple 4-joints walker robot environment.,
-gym/,13,,
-gym/,14,There are two versions:,
-gym/,15,,
-gym/,16,"- Normal, with slightly uneven terrain.",
-gym/,17,,
-gym/,18,"- Hardcore with ladders, stumps, pitfalls.",
-gym/,19,,
-gym/,20,"Reward is given for moving forward, total 300+ points up to the far end. If the robot falls,",
-gym/,21,"it gets -100. Applying motor torque costs a small amount of points, more optimal agent",
-gym/,22,will get better score.,
-gym/,23,,
-gym/,24,"Heuristic is provided for testing, it's also useful to get demonstrations to",
-gym/,25,learn from. To run heuristic:,
-gym/,26,,
-gym/,27,python gym/envs/box2d/bipedal_walker.py,
-gym/,28,,
-gym/,29,"State consists of hull angle speed, angular velocity, horizontal speed, vertical speed,",
-gym/,30,"position of joints and joints angular speed, legs contact with ground, and 10 lidar",
-gym/,31,rangefinder measurements to help to deal with the hardcore version. There's no coordinates,
-gym/,32,"in the state vector. Lidar is less useful in normal version, but it works.",
-gym/,33,,
-gym/,34,To solve the game you need to get 300 points in 1600 time steps.,
-gym/,35,,
-gym/,36,To solve hardcore version you need 300 points in 2000 time steps.,
-gym/,37,,
-gym/,38,Created by Oleg Klimov. Licensed on the same terms as the rest of OpenAI Gym.,
-gym/,41,"affects how fast-paced the game is, forces should be adjusted as well",
-gym/,61,in steps,
-gym/,63,"low long are grass spots, in steps",
-gym/,64,in steps,
-gym/,72,collide only with ground,
-gym/,73,0.99 bouncy,
-gym/,178,1,
-gym/,277,"Sorry for the clouds, couldn't resist",
-gym/,377,"self.hull.ApplyForceToCenter((0, 20), True) -- Uncomment this to receive a bit of stability help",
-gym/,378,Should be easier as well,
-gym/,408,"Normal angles up to 0.5 here, but sure more is possible.",
-gym/,410,Normalized to get -1..1 range,
-gym/,412,"This will give 1.1 on high up, but it's still OK (and there should be spikes on hiting the ground, that's normal too)",
-gym/,428,moving forward is a way to receive reward (normalized to get 300 on completion),
-gym/,429,"keep head straight, other than that and falling, any behavior is unpunished",
-gym/,438,"normalized to about -50.0 using heuristic, more optimal agent should spend less",
-gym/,507,"Heurisic: suboptimal, have no notion of balance.",
-gym/,514,Will fall forward on higher speed,
-gym/,536,-0.8 .. +1.1,
-gym/,537,-0.6 .. +0.9,
-gym/,548,supporting leg is behind,
-gym/,570,PID to keep head strait,
-gym/,572,"vertical speed, to damp oscillations",
-gym/,6,Top-down car dynamics simulation.,
-gym/,7,,
-gym/,8,Some ideas are taken from this great tutorial http://www.iforce2d.net/b2dtut/top-down-car by Chris Campbell.,
-gym/,9,"This simulation is a bit more detailed, with wheels rotation.",
-gym/,10,,
-gym/,11,Created by Oleg Klimov. Licensed on the same terms as the rest of OpenAI Gym.,
-gym/,16,friction ~= mass ~= size^2 (calculated implicitly using density),
-gym/,86,wheel angle,
-gym/,87,angular velocity,
-gym/,114,"gradually increase, but stop immediately",
-gym/,129,Steer each wheel,
-gym/,134,Position => friction_limit,
-gym/,136,Grass friction if no tile,
-gym/,141,Force,
-gym/,145,forward speed,
-gym/,146,side speed,
-gym/,148,WHEEL_MOMENT_OF_INERTIA*np.square(w.omega)/2 = E -- energy,
-gym/,149,WHEEL_MOMENT_OF_INERTIA*w.omega * domega/dt = dE/dt = W -- power,
-gym/,150,domega = dt*W/WHEEL_MOMENT_OF_INERTIA/w.omega,
-gym/,151,small coef not to divide by zero,
-gym/,157,radians per second,
-gym/,160,low speed => same as = 0,
-gym/,164,rotating wheel speed,
-gym/,165,force direction is direction of speed difference,
-gym/,168,Physically correct is to always apply friction_limit until speed is equal.,
-gym/,169,"But dt is finite, that will lead to oscillations if difference is already near zero.",
-gym/,170,Random coefficient to cut oscillations in few steps (have no effect on friction_limit),
-gym/,174,Skid trace,
-gym/,190,Correct physics here,
-gym/,211,radians,
-gym/,10,(JDS 2016/04/15): avoid bug on Anaconda 2.3.0 / Yosemite,
-gym/,104,"In https://github.com/openai/gym-http-api/issues/2, we",
-gym/,105,discovered that someone using Xmonad on Arch was having,
-gym/,106,"a window of size 598 x 398, though a 600 x 400 window",
-gym/,107,was requested. (Guess Xmonad was preserving a pixel for,
-gym/,108,the boundary.) So we use the buffer height/width rather,
-gym/,109,than the requested one.,
-gym/,116,Convenience,
-gym/,188,translate to GL loc ppint,
-gym/,225,draw point,
-gym/,238,draw each vertex,
-gym/,287,draw each vertex,
-gym/,317,================================================================,
-gym/,358,draw,
-gym/,362,"^^^ check sys.meta_path to avoid 'ImportError: sys.meta_path is None, Python is likely shutting down'",
-gym/,1,-*- coding: utf-8 -*-,
-gym/,38,"was 0.5 in gym, 0.45 in Arnaud de Broissia's version",
-gym/,84,Convert a possible numpy bool to a Python bool.,
-gym/,33,th := theta,
-gym/,41,for rendering,
-gym/,46,pylint: disable=E1111,
-gym/,14,SOURCE:,
-gym/,15,https://github.com/rlpy/rlpy/blob/master/rlpy/Domains/Acrobot.py,
-gym/,65,[m],
-gym/,66,[m],
-gym/,67,: [kg] mass of link 1,
-gym/,68,: [kg] mass of link 2,
-gym/,69,: [m] position of the center of mass of link 1,
-gym/,70,: [m] position of the center of mass of link 2,
-gym/,71,: moments of inertia for both links,
-gym/,80,: use dynamics equations from the nips paper or the book,
-gym/,107,Add noise to the force action,
-gym/,111,"Now, augment the state with our force action so it can be passed to",
-gym/,112,_dsdt,
-gym/,116,only care about final timestep of integration returned by integrator,
-gym/,118,omit action,
-gym/,119,ODEINT IS TOO SLOW!,
-gym/,120,"ns_continuous = integrate.odeint(self._dsdt, self.s_continuous, [0, self.dt])",
-gym/,121,self.s_continuous = ns_continuous[-1] # We only care about the state,
-gym/,122,"at the ''final timestep'', self.dt",
-gym/,164,the following line is consistent with the description in the,
-gym/,165,paper,
-gym/,169,the following line is consistent with the java implementation and the,
-gym/,170,book,
-gym/,183,2.2 for default,
-gym/,241,bound x between min (m) and Max (M),
-gym/,122,control with left and right arrow keys,
-gym/,61,actually half the pole's length,
-gym/,64,seconds between state updates,
-gym/,67,Angle at which to fail the episode,
-gym/,71,Angle limit set to 2 * theta_threshold_radians so failing observation is still within bounds,
-gym/,106,semi-implicit euler,
-gym/,121,Pole just fell!,
-gym/,143,TOP OF CART,
-gym/,178,Edit the pole polygon vertex,
-gym/,184,MIDDLE OF CART,
-gym/,45,Only 'promote' the length of generated input strings if the worst of the,
-gym/,46,last n episodes was no more than this far from the maximum reward,
-gym/,58,Keep track of this many past episodes,
-gym/,60,Cumulative reward earned this episode,
-gym/,62,Running tally of reward shortfalls. e.g. if there were 10 points to,
-gym/,63,"earn and we got 8, we'd append -2",
-gym/,70,TODO: Not clear why this is a class variable rather than instance.,
-gym/,71,Could lead to some spooky action at a distance if someone is working,
-gym/,72,with multiple algorithmic envs at once. Also makes testing tricky.,
-gym/,74,Three sub-actions:,
-gym/,75,1. Move read head left or right (or up/down),
-gym/,76,2. Write or not,
-gym/,77,3. Which character to write. (Ignored if should_write=0),
-gym/,81,"Can see just what is on the input tape (one of n characters, or",
-gym/,82,nothing),
-gym/,183,Bail as soon as a wrong character is written to the tape,
-gym/,202,(Seemingly arbitrary),
-gym/,209,This is before the first episode/call to reset(). Nothing to do,
-gym/,22,Quirk preserved for the sake of consistency: add the length of the input,
-gym/,23,rather than the length of the desired output (which may differ if there's,
-gym/,24,an extra carried digit).,
-gym/,25,TODO: It seems like this time limit is so strict as to make Addition3-v0,
-gym/,26,"unsolvable, since agents aren't even given enough time steps to look at",
-gym/,27,all the digits. (The solutions on the scoreboard seem to only work by,
-gym/,28,save-scumming.),
-gym/,4,All concrete subclasses of AlgorithmicEnv,
-gym/,52,Kind of a hack,
-gym/,64,Should have leveled up on the last iteration,
-gym/,70,Walk off the end,
-gym/,75,Walk further off track,
-gym/,79,Return to the first input character,
-gym/,89,Corresponds to a grid that looks like...,
-gym/,90,0 1 2,
-gym/,91,3 4 5,
-gym/,136,Test numerical alphabet rendering,
-gym/,200,"DuplicatedInput needs to generate inputs with even length,",
-gym/,201,so it may be short one,
-gym/,209,"Should get ""size"" sublists, each of length self.rows (not the",
-gym/,210,"opposite, as you might expect)",
-gym/,223,"If requested input size isn't a multiple of duplication, go lower",
-gym/,227,"If requested input size is *less than* duplication, go up",
-gym/,52,Env methods,
-gym/,53,----------------------------,
-gym/,74,"Attempt to reset the simulator. Since we randomize initial conditions, it",
-gym/,75,is possible to get into a state with numerical issues (e.g. due to penetration or,
-gym/,76,Gimbel lock) or we may not achieve an initial condition (e.g. an object is within the hand).,
-gym/,77,"In this case, we just keep randomizing until we eventually achieve a valid initial",
-gym/,78,configuration.,
-gym/,89,self.viewer.finish(),
-gym/,97,window size used for old mujoco-py:,
-gym/,99,"original image is upside-down, so flip it",
-gym/,115,Extension methods,
-gym/,116,----------------------------,
-gym/,87,"obj1 is the mocap, obj2 is the welded body",
-gym/,90,"obj2 is the mocap, obj1 is the welded body",
-gym/,50,GoalEnv methods,
-gym/,51,----------------------------,
-gym/,54,Compute distance between goal and the achieved goal.,
-gym/,61,RobotEnv methods,
-gym/,62,----------------------------,
-gym/,72,ensure that we don't change the action outside of this scope,
-gym/,75,limit maximum change in position,
-gym/,76,"fixed rotation of the end effector, expressed as a quaternion",
-gym/,83,Apply action to simulation.,
-gym/,88,positions,
-gym/,95,rotations,
-gym/,97,velocities,
-gym/,100,gripper state,
-gym/,106,change to a scalar if the gripper is made symmetric,
-gym/,133,Visualize target.,
-gym/,142,Randomize start position of object.,
-gym/,176,Move end effector into position.,
-gym/,184,Extract information for sampling goals.,
-gym/,1,"Copyright (c) 2009-2017, Matthew Brett and Christoph Gohlke",
-gym/,2,All rights reserved.,
-gym/,3,,
-gym/,4,"Redistribution and use in source and binary forms, with or without",
-gym/,5,"modification, are permitted provided that the following conditions are",
-gym/,6,met:,
-gym/,7,,
-gym/,8,"1. Redistributions of source code must retain the above copyright notice,",
-gym/,9,this list of conditions and the following disclaimer.,
-gym/,10,,
-gym/,11,2. Redistributions in binary form must reproduce the above copyright,
-gym/,12,"notice, this list of conditions and the following disclaimer in the",
-gym/,13,documentation and/or other materials provided with the distribution.,
-gym/,14,,
-gym/,15,"THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS",
-gym/,16,"IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,",
-gym/,17,THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR,
-gym/,18,PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR,
-gym/,19,"CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,",
-gym/,20,"EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,",
-gym/,21,"PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR",
-gym/,22,PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF,
-gym/,23,"LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING",
-gym/,24,NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS,
-gym/,25,"SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
-gym/,27,Many methods borrow heavily or entirely from transforms3d:,
-gym/,28,https://github.com/matthew-brett/transforms3d,
-gym/,29,They have mostly been modified to support batched operations.,
-gym/,106,For testing whether a number is close to zero,
-gym/,182,Fill only lower half of symmetric matrix,
-gym/,195,TODO: vectorize this -- probably could be made faster,
-gym/,199,"Use Hermitian eigenvectors, values for speed",
-gym/,201,"Select largest eigenvector, reorder to w,x,y,z quaternion",
-gym/,203,Prefer quaternion with positive w,
-gym/,204,(q * -1 corresponds to same rotation as q),
-gym/,320,"Should be in qw, qx, qy, qz",
-gym/,19,RobotEnv methods,
-gym/,20,----------------------------,
-gym/,6,Ensure we get the path separator correct on windows,
-gym/,6,Ensure we get the path separator correct on windows,
-gym/,8,Ensure we get the path separator correct on windows,
-gym/,6,Ensure we get the path separator correct on windows,
-gym/,46,Ensure we get the path separator correct on windows,
-gym/,72,GoalEnv methods,
-gym/,73,----------------------------,
-gym/,82,RobotEnv methods,
-gym/,83,----------------------------,
-gym/,112,Pick a meeting point above the hand.,
-gym/,116,Slightly move meeting goal towards the respective finger to avoid that they,
-gym/,117,overlap.,
-gym/,125,"With some probability, ask all fingers to move back to the origin.",
-gym/,126,This avoids that the thumb constantly stays near the goal position already.,
-gym/,135,Visualize targets.,
-gym/,143,Visualize finger positions.,
-gym/,7,Ensure we get the path separator correct on windows,
-gym/,50,get touch sensor site names and their ids,
-gym/,55,set touch sensors rgba values,
-gym/,80,this contains the object position + rotation,
-gym/,81,"get touch sensor readings. if there is one, set value to 1",
-gym/,22,Ensure we get the path separator correct on windows,
-gym/,82,Object position and rotation.,
-gym/,101,Special case: We want to ignore the Z component of the rotation.,
-gym/,102,This code here assumes Euler angles with xyz convention. We first transform,
-gym/,103,"to euler, then set the Z component to be equal between the two, and finally",
-gym/,104,transform back into quaternions.,
-gym/,110,Subtract quaternions and extract angle between them.,
-gym/,117,GoalEnv methods,
-gym/,118,----------------------------,
-gym/,126,We weigh the difference in position to avoid that `d_pos` (in meters) is completely,
-gym/,127,dominated by `d_rot` (in radians).,
-gym/,130,RobotEnv methods,
-gym/,131,----------------------------,
-gym/,156,Randomization initial rotation.,
-gym/,180,Randomize initial position.,
-gym/,196,Run the simulation for a bunch of timesteps to let everything settle in.,
-gym/,206,Select a goal for the object position.,
-gym/,220,Select a goal for the object rotation.,
-gym/,243,normalized quaternion,
-gym/,248,Assign current state to target object but offset a bit so that the actual object,
-gym/,249,is not obscured.,
-gym/,253,Move the object to the side since we do not care about it's position.,
-gym/,266,this contains the object position + rotation,
-gym/,27,"This is really bad, str could be same while values change",
-gym/,6,Test that FrozenLake map generation creates valid maps of various sizes.,
-gym/,7,This runs a smoketest on each official registered env. We may want,
-gym/,8,to try also running environments which are not officially registered,
-gym/,9,envs.,
-gym/,12,Capture warnings,
-gym/,16,Check that dtype is explicitly declared for gym.Box spaces,
-gym/,33,Make sure we can render the environment after close.,
-gym/,39,Run a longer rollout on some environments,
-gym/,7,https://github.com/openai/gym/issues/1266,
-gym/,14,bet 20% of the wealth,
-gym/,71,Raises KeyError because the new envs have extra info,
-gym/,75,Raises KeyError because the new envs have extra info,
-gym/,79,Raises KeyError because the new envs have extra info,
-gym/,8,Note that this precludes running this test in multiple,
-gym/,9,"threads. However, we probably already can't do multithreading",
-gym/,10,due to some environments.,
-gym/,38,Don't check rollout equality if it's a a nondeterministic,
-gym/,39,environment.,
-gym/,50,"Go returns a Pachi game board in info, which doesn't",
-gym/,51,"properly check equality. For now, we hack around this by",
-gym/,52,just skipping Go.,
-gym/,18,We skip tests for envs that require dependencies or are otherwise,
-gym/,19,troublesome to run frequently,
-gym/,21,Skip mujoco tests for pull request CI,
-gym/,1,-*- coding: utf-8 -*-,
-gym/,54,must match an env name but not the version above,
-gym/,40,Cliff Location,
-gym/,44,Calculate transition probabilities and rewards,
-gym/,54,Calculate initial state distribution,
-gym/,55,"We always start in state (3, 0)",
-gym/,97,Print terminal state,
-gym/,26,+/- value the randomly select number can be between,
-gym/,27,Action space bounds,
-gym/,43,betting in penny,
-gym/,44,increments,
-gym/,46,"(w,b)",
-gym/,64,action = desired bet in pennies,
-gym/,114,store the hyper-parameters for passing back into __init__() during resets so,
-gym/,115,"the same hyper-parameters govern the next game's parameters, as the user",
-gym/,116,expects:,
-gym/,117,"TODO: this is boilerplate, is there any more elegant way to do this?",
-gym/,129,draw this game's set of parameters:,
-gym/,135,add an additional global variable which is the sufficient statistic for the,
-gym/,136,"Pareto distribution on wealth cap; alpha doesn't update, but x_m does, and",
-gym/,137,simply is the highest wealth count we've seen to date:,
-gym/,139,"for the coinflip edge, it is total wins/losses:",
-gym/,142,"for the number of rounds, we need to remember how many rounds we've played:",
-gym/,145,the rest proceeds as before:,
-gym/,148,current wealth,
-gym/,149,rounds elapsed,
-gym/,150,wins,
-gym/,151,losses,
-gym/,152,maximum observed wealth,
-gym/,189,"re-init everything to draw new parameters etc, but preserve the RNG for",
-gym/,190,reproducibility and pass in the same hyper-parameters as originally specified:,
-gym/,8,"1 = Ace, 2-10 = Number cards, Jack/Queen/King = 10",
-gym/,20,Does this hand have a usable ace?,
-gym/,24,Return current hand total,
-gym/,30,Is this hand a bust?,
-gym/,34,What is the score of this hand (0 if bust),
-gym/,38,Is this hand a natural blackjack?,
-gym/,81,"Flag to payout 1.5 on a ""natural"" blackjack win, like casino rules",
-gym/,82,Ref: http://www.bicyclecards.com/how-to-play/blackjack/,
-gym/,84,Start the first game,
-gym/,93,hit: add a card to players hand and return,
-gym/,101,"stick: play out the dealers hand, and score",
-gym/,34,for rendering,
-gym/,30,"observation, reward, done, info",
-gym/,33,"N.B. np.random.randint draws from [A, B) while random.randint draws from [A,B]",
-gym/,86,+1 for being inside taxi,
-gym/,92,defaults,
-gym/,94,default reward when there is no pickup/dropoff,
-gym/,106,pickup,
-gym/,109,passenger not at location,
-gym/,111,dropoff,
-gym/,118,dropoff at wrong location,
-gym/,129,"(5) 5, 5, 4",
-gym/,164,passenger in taxi,
-gym/,175,No need to return anything for human,
-gym/,41,Randomly selected number is within +/- this value,
-gym/,42,DFS to check that it's a valid path.,
-gym/,26,probability of 'slipping' an action,
-gym/,27,payout for 'backwards' action,
-gym/,28,payout at end of chain for 'forwards' action,
-gym/,29,Start at beginning of the chain,
-gym/,41,"agent slipped, reverse action taken",
-gym/,42,"'backwards': go back to the beginning, get small reward",
-gym/,45,'forwards': go up along the chain,
-gym/,48,"'forwards': stay at the end of the chain, collect large reward",
-gym/,85,methods to override:,
-gym/,86,----------------------------,
-gym/,103,-----------------------------,
-gym/,146,window size used for old mujoco-py:,
-gym/,148,"original image is upside-down, so flip it",
-gym/,152,window size used for old mujoco-py:,
-gym/,153,Extract depth part of the read_pixels() tuple,
-gym/,155,"original image is upside-down, so flip it",
-gym/,162,self.viewer.finish(),
-gym/,2,^^^^^ so that user gets the correct error,
-gym/,3,message if mujoco is not installed correctly,
-gym/,25,cart x pos,
-gym/,26,link angles,
-gym/,43,v.model.stat.center[2],
-gym/,61,Tune (or disable) ALE's action repeat:,
-gym/,62,https://github.com/openai/gym/issues/349,
-gym/,85,"Derive a random seed. This gets passed as a uint, but gets",
-gym/,86,"checked as an int elsewhere, so we need to keep it below",
-gym/,87,2**31.,
-gym/,89,"Empirically, we need to seed before loading the ROM.",
-gym/,142,"return: (states, observations)",
-gym/tests/,88,make sure that unflatten(flatten(original)) == original,
-gym/tests/,94,make sure that the values were flattened in the order they appeared in the,
-gym/tests/,95,OrderedDict,
-gym/tests/,82,Make sure we are testing the right environment for the test.,
-gym/scripts/generate_json.py,28,Skip platform-dependent,
-gym/scripts/generate_json.py,33,Skip environments that are nondeterministic,
-gym/scripts/generate_json.py,43,"If running the env generates an exception, don't write to the rollout file",
-gym/examples/agents/_policies.py,1,Support code for cem.py,
-gym/examples/agents/keyboard_agent.py,1,!/usr/bin/env python,
-gym/examples/agents/keyboard_agent.py,4,,
-gym/examples/agents/keyboard_agent.py,5,"Test yourself as a learning agent! Pass environment name as a command-line argument, for example:",
-gym/examples/agents/keyboard_agent.py,6,,
-gym/examples/agents/keyboard_agent.py,7,python keyboard_agent.py SpaceInvadersNoFrameskip-v4,
-gym/examples/agents/keyboard_agent.py,8,,
-gym/examples/agents/keyboard_agent.py,15,"Use previous control decision SKIP_CONTROL times, that's how you",
-gym/examples/agents/keyboard_agent.py,16,can test what skip is still usable.,
-gym/examples/agents/keyboard_agent.py,50,"print(""taking action {}"".format(human_agent_action))",
-gym/examples/agents/cem.py,7,Different file so it can be unpickled,
-gym/examples/agents/cem.py,58,You provide the directory to write to (can be an existing,
-gym/examples/agents/cem.py,59,"directory, but can't contain previous monitor results. You can",
-gym/examples/agents/cem.py,60,also dump to a tempdir if you'd like: tempfile.mkdtemp().,
-gym/examples/agents/cem.py,64,Prepare snapshotting,
-gym/examples/agents/cem.py,65,----------------------------------------,
-gym/examples/agents/cem.py,72,------------------------------------------,
-gym/examples/agents/cem.py,79,"Train the agent, and snapshot each stage",
-gym/examples/agents/cem.py,87,Write out the env at the end so we store the parameters of this,
-gym/examples/agents/cem.py,88,environment.,
-gym/examples/agents/random_agent.py,20,You can set the level to logger.DEBUG or logger.WARN if you,
-gym/examples/agents/random_agent.py,21,want to change the amount of output.,
-gym/examples/agents/random_agent.py,26,You provide the directory to write to (can be an existing,
-gym/examples/agents/random_agent.py,27,"directory, including one with existing data -- all monitor files",
-gym/examples/agents/random_agent.py,28,will be namespaced). You can also dump to a tempdir if you'd,
-gym/examples/agents/random_agent.py,29,like: tempfile.mkdtemp().,
-gym/examples/agents/random_agent.py,46,Note there's no env.render() here. But the environment still can open window and,
-gym/examples/agents/random_agent.py,47,render if asked by env.monitor: it calls env.render('rgb_array') to record video.,
-gym/examples/agents/random_agent.py,48,"Video is not recorded every episode, see capped_cubic_video_schedule for details.",
-gym/examples/agents/random_agent.py,50,Close the env and write monitor result info to disk,
+gym/setup.py,4,"Don't import gym module here, since deps may not be installed",not
+gym/setup.py,8,Environment-specific dependencies.,not
+gym/setup.py,17,Meta dependency groups.,not
+gym/bin/render.py,1,!/usr/bin/env python3,not
+gym/gym/logger.py,36,DEPRECATED:,not
+gym/gym/error.py,6,Local errors,not
+gym/gym/error.py,65,API errors,not
+gym/gym/error.py,94,Python 2,not
+gym/gym/error.py,96,Python 3,not
+gym/gym/error.py,120,Video errors,not
+gym/gym/error.py,128,Wrapper errors,not
+gym/gym/error.py,141,Vectorized environments errors,not
+gym/gym/core.py,31,Set this in SOME subclasses,not
+gym/gym/core.py,36,Set these in ALL subclasses,not
+gym/gym/core.py,152,propagate exception,not
+gym/gym/core.py,166,Enforce that each GoalEnv uses a Goal-compatible observation space.,not
+gym/gym/utils/closer.py,63,Explicitly fetch all monitors first so that they can't disappear while,not
+gym/gym/utils/closer.py,64,we iterate. cf. http://stackoverflow.com/a/12429620,not
+gym/gym/utils/seeding.py,53,Adapted from https://svn.python.org/projects/python/tags/r32/Lib/random.py,not
+gym/gym/utils/seeding.py,67,TODO: don't hardcode sizeof_int here,SATD
+gym/gym/utils/seeding.py,80,Special case 0,not
+gym/gym/utils/atomic_write.py,1,Based on http://stackoverflow.com/questions/2333872/atomic-writing-to-file-with-python,not
+gym/gym/utils/atomic_write.py,6,We would ideally atomically replace any existing file with the new,not
+gym/gym/utils/atomic_write.py,7,"version. However, on Windows there's no Python-only solution prior",not
+gym/gym/utils/atomic_write.py,8,to Python 3.3. (This library includes a C extension to do so:,not
+gym/gym/utils/atomic_write.py,9,https://pypi.python.org/pypi/pyosreplace/0.1.),not
+gym/gym/utils/atomic_write.py,10,,not
+gym/gym/utils/atomic_write.py,11,"Correspondingly, we make a best effort, but on Python < 3.3 use a",not
+gym/gym/utils/atomic_write.py,12,replace method which could result in the file temporarily,not
+gym/gym/utils/atomic_write.py,13,disappearing.,not
+gym/gym/utils/atomic_write.py,16,Python 3.3 and up have a native `replace` method,not
+gym/gym/utils/atomic_write.py,20,"TODO: on Windows, this will raise if the file is in use,",SATD
+gym/gym/utils/atomic_write.py,21,which is possible. We'll need to make this more robust over,not
+gym/gym/utils/atomic_write.py,22,time.,not
+gym/gym/utils/atomic_write.py,29,POSIX rename() is always atomic,not
+gym/gym/utils/play.py,118,process pygame events,not
+gym/gym/utils/play.py,120,"test events, set key states",not
+gym/gym/utils/__init__.py,5,These submodules should not have any import-time dependencies.,not
+gym/gym/utils/__init__.py,6,We want this since we use `utils` during our import-time sanity checks,not
+gym/gym/utils/__init__.py,7,that verify that our dependencies are actually present.,not
+gym/gym/vector/vector_env.py,40,The observation and action spaces of a single environment are,not
+gym/gym/vector/vector_env.py,41,kept in separate properties,not
+gym/gym/vector/tests/test_sync_vector_env.py,66,"CubeCrash-v0 - observation_space: Box(40, 32, 3)",not
+gym/gym/vector/tests/test_sync_vector_env.py,68,"MemorizeDigits-v0 - observation_space: Box(24, 32, 3)",not
+gym/gym/vector/tests/test_numpy_utils.py,16,"Special case: if rhs is a list of scalars, lhs must be an np.ndarray",not
+gym/gym/vector/tests/test_async_vector_env.py,190,"CubeCrash-v0 - observation_space: Box(40, 32, 3)",not
+gym/gym/vector/tests/test_async_vector_env.py,192,"MemorizeDigits-v0 - observation_space: Box(24, 32, 3)",not
+gym/gym/vector/tests/test_shared_memory.py,54,Assert the length of the array,not
+gym/gym/vector/tests/test_shared_memory.py,56,Assert the data type,not
+gym/gym/tests/test_core.py,11,"This looks like a pretty trivial, but given our usage of",not
+gym/gym/tests/test_core.py,12,"__new__, it's worth having.",not
+gym/gym/wrappers/test_pixel_observation.py,56,Make sure we are testing the right environment for the test.,not
+gym/gym/wrappers/test_pixel_observation.py,62,The wrapper should only add one observation.,not
+gym/gym/wrappers/test_pixel_observation.py,82,Check that the added space item is consistent with the added observation.,not
+gym/gym/wrappers/atari_preprocessing.py,62,buffer of most recent two observations for max pooling,not
+gym/gym/wrappers/atari_preprocessing.py,108,NoopReset,not
+gym/gym/wrappers/atari_preprocessing.py,125,more efficient in-place pooling,not
+gym/gym/wrappers/test_clip_action.py,8,mountaincar: action-based rewards,not
+gym/gym/wrappers/test_filter_observation.py,55,Make sure we are testing the right environment for the test.,not
+gym/gym/wrappers/test_filter_observation.py,70,Check that the added space item is consistent with the added observation.,not
+gym/gym/wrappers/record_episode_statistics.py,10,TODO: use perf_counter when gym removes Python 2 support,SATD
+gym/gym/wrappers/test_gray_scale_observation.py,34,"ALE gray scale is slightly different, but no more than by one shade",not
+gym/gym/wrappers/pixel_observation.py,70,Make sure that now keys in the `pixel_keys` overlap with,not
+gym/gym/wrappers/pixel_observation.py,71,`observation_keys`,not
+gym/gym/wrappers/pixel_observation.py,85,Extend observation space with pixels.,not
+gym/gym/wrappers/test_transform_reward.py,11,use case #1: scale,not
+gym/gym/wrappers/test_transform_reward.py,29,use case #2: clip,not
+gym/gym/wrappers/test_transform_reward.py,48,use case #3: sign,not
+gym/gym/wrappers/monitor.py,79,Check on whether we need to clear anything,not
+gym/gym/wrappers/monitor.py,93,We use the 'openai-gym' prefix to determine if a file is,not
+gym/gym/wrappers/monitor.py,94,ours,not
+gym/gym/wrappers/monitor.py,113,"Give it a very distiguished name, since we need to pick it",not
+gym/gym/wrappers/monitor.py,114,up from the filesystem later.,not
+gym/gym/wrappers/monitor.py,118,We need to write relative paths here since people may,not
+gym/gym/wrappers/monitor.py,119,move the training_dir around. It would be cleaner to,SATD
+gym/gym/wrappers/monitor.py,120,already have the basenames rather than basename'ing,not
+gym/gym/wrappers/monitor.py,121,"manually, but this works for now.",not
+gym/gym/wrappers/monitor.py,140,Stop tracking this for autoclose,not
+gym/gym/wrappers/monitor.py,163,"For envs with BlockingReset wrapping VNCEnv, this observation will be the first one of the new episode",not
+gym/gym/wrappers/monitor.py,168,Record stats,not
+gym/gym/wrappers/monitor.py,170,Record video,not
+gym/gym/wrappers/monitor.py,182,Reset the stat count,not
+gym/gym/wrappers/monitor.py,187,Bump *after* all reset activity has finished,not
+gym/gym/wrappers/monitor.py,193,Close any existing video recorder,not
+gym/gym/wrappers/monitor.py,197,Start recording the next video.,not
+gym/gym/wrappers/monitor.py,198,,not
+gym/gym/wrappers/monitor.py,199,TODO: calculate a more correct 'episode_id' upon merge,SATD
+gym/gym/wrappers/monitor.py,225,Make sure we've closed up shop when garbage collecting,not
+gym/gym/wrappers/monitor.py,265,This method gets used for a sanity check in scoreboard/api.py. It's,not
+gym/gym/wrappers/monitor.py,266,not intended for use outside of the gym codebase.,not
+gym/gym/wrappers/monitor.py,292,Load up stats + video files,not
+gym/gym/wrappers/monitor.py,300,Make these paths absolute again,not
+gym/gym/wrappers/monitor.py,333,"so empty file doesn't mess up results, due to null initial_reset_timestamp",not
+gym/gym/wrappers/monitor.py,338,Recent addition,not
+gym/gym/wrappers/monitor.py,340,Keep track of where each episode came from.,not
+gym/gym/wrappers/monitor.py,361,"TODO training_dir isn't used except for error messages, clean up the layering",SATD
+gym/gym/wrappers/test_atari_preprocessing.py,30,"the edges of the numbers do not render quite the same in the grayscale, so we ignore them",not
+gym/gym/wrappers/test_atari_preprocessing.py,32,the paddle also do not render quite the same,not
+gym/gym/wrappers/test_atari_preprocessing.py,41,arbitrarily chosen number for stepping into env. and ensuring all observations are in the required range,not
+gym/gym/wrappers/monitoring/video_recorder.py,36,Don't bother setting anything else if not enabled,not
+gym/gym/wrappers/monitoring/video_recorder.py,46,"Whoops, turns out we shouldn't be enabled after all",not
+gym/gym/wrappers/monitoring/video_recorder.py,59,"Base path given, append ext",not
+gym/gym/wrappers/monitoring/video_recorder.py,62,"Otherwise, just generate a unique filename",not
+gym/gym/wrappers/monitoring/video_recorder.py,72,"Touch the file in any case, so we know it's present. (This",not
+gym/gym/wrappers/monitoring/video_recorder.py,73,corrects for platform platform differences. Using ffmpeg on,not
+gym/gym/wrappers/monitoring/video_recorder.py,74,"OS X, the file is precreated, but not on Linux.",not
+gym/gym/wrappers/monitoring/video_recorder.py,79,lazily start the process,not
+gym/gym/wrappers/monitoring/video_recorder.py,82,Dump metadata,not
+gym/gym/wrappers/monitoring/video_recorder.py,107,Indicates a bug in the environment: don't want to raise,not
+gym/gym/wrappers/monitoring/video_recorder.py,108,an error here.,not
+gym/gym/wrappers/monitoring/video_recorder.py,128,"No frames captured. Set metadata, and remove the empty output file.",not
+gym/gym/wrappers/monitoring/video_recorder.py,135,"If broken, get rid of the output file, otherwise we'd leak it.",not
+gym/gym/wrappers/monitoring/video_recorder.py,139,"Might have crashed before even starting the output file, don't try to remove in that case.",not
+gym/gym/wrappers/monitoring/video_recorder.py,203,frame_duration = float(1) / self.frames_per_sec,not
+gym/gym/wrappers/monitoring/video_recorder.py,206,Turn frames into events: clear screen beforehand,not
+gym/gym/wrappers/monitoring/video_recorder.py,207,https://rosettacode.org/wiki/Terminal_control/Clear_the_screen#Python,not
+gym/gym/wrappers/monitoring/video_recorder.py,208,https://rosettacode.org/wiki/Terminal_control/Cursor_positioning#Python,not
+gym/gym/wrappers/monitoring/video_recorder.py,210,Decode the bytes as UTF-8 since JSON may only contain UTF-8,not
+gym/gym/wrappers/monitoring/video_recorder.py,213,Calculate frame size from the largest frames.,not
+gym/gym/wrappers/monitoring/video_recorder.py,214,Add some padding since we'll get cut off otherwise.,not
+gym/gym/wrappers/monitoring/video_recorder.py,225,could add some env metadata here,not
+gym/gym/wrappers/monitoring/video_recorder.py,240,"Frame shape should be lines-first, so w and h are swapped",not
+gym/gym/wrappers/monitoring/video_recorder.py,271,suppress warnings,not
+gym/gym/wrappers/monitoring/video_recorder.py,274,input,not
+gym/gym/wrappers/monitoring/video_recorder.py,279,"this used to be /dev/stdin, which is not Windows-friendly",not
+gym/gym/wrappers/monitoring/video_recorder.py,281,output,not
+gym/gym/wrappers/monitoring/video_recorder.py,290,setsid not present on Windows,not
+gym/gym/wrappers/monitoring/stats_recorder.py,19,experimental addition,not
+gym/gym/wrappers/monitoring/stats_recorder.py,77,We write the type at the beginning of the episode. If a user,not
+gym/gym/wrappers/monitoring/stats_recorder.py,78,"changes the type, it's more natural for it to apply next",not
+gym/gym/wrappers/monitoring/stats_recorder.py,79,time the user calls reset().,not
+gym/gym/spaces/multi_discrete.py,40,Promote list to array for contains check,not
+gym/gym/spaces/multi_discrete.py,41,"if nvec is uint32 and space dtype is uint32, then 0 <= x < self.nvec guarantees that x",not
+gym/gym/spaces/multi_discrete.py,42,is within correct bounds for space dtype (even though x does not have to be unsigned),not
+gym/gym/spaces/space.py,10,"takes about 300-400ms to import, so we load lazily",not
+gym/gym/spaces/space.py,38,"By default, assume identity is JSONable",not
+gym/gym/spaces/space.py,43,"By default, assume identity is JSONable",not
+gym/gym/spaces/box.py,28,determine shape if it isn't provided directly,not
+gym/gym/spaces/box.py,65,Boolean arrays which indicate the interval type for each coordinate,not
+gym/gym/spaces/box.py,99,Masking arrays which classify the coordinates according to interval,not
+gym/gym/spaces/box.py,100,type,not
+gym/gym/spaces/box.py,107,Vectorized sampling by interval type,not
+gym/gym/spaces/box.py,127,Promote list to array for contains check,not
+gym/gym/spaces/dict.py,45,"None for shape and dtype, since it'll require special handling",not
+gym/gym/spaces/dict.py,70,serialize as dict-repr of vectors,not
+gym/gym/spaces/tuple.py,26,Promote list to tuple for contains check,not
+gym/gym/spaces/tuple.py,34,serialize as list-repr of tuple of vectors,not
+gym/gym/spaces/multi_binary.py,30,Promote list to array for contains check,not
+gym/gym/spaces/tests/test_spaces.py,1,note: ujson fails this test due to float equality,not
+gym/gym/envs/registration.py,8,"This format is true today, but it's *not* an official spec.",not
+gym/gym/envs/registration.py,9,"[username/](env-name)-v(version)    env-name is group 1, version is group 2",not
+gym/gym/envs/registration.py,10,,not
+gym/gym/envs/registration.py,11,2016-10-31: We're experimentally expanding the environment ID format,not
+gym/gym/envs/registration.py,12,to include an optional username.,not
+gym/gym/envs/registration.py,62,Make the environment aware of which spec it came from.,not
+gym/gym/envs/registration.py,91,We used to have people override _reset/_step rather than,not
+gym/gym/envs/registration.py,92,reset/step. Set _gym_disable_underscore_compat = True on,not
+gym/gym/envs/registration.py,93,your environment if you use these methods and don't want,not
+gym/gym/envs/registration.py,94,compatibility code to be invoked.,not
+gym/gym/envs/registration.py,110,catch ImportError for python2.7 compatibility,not
+gym/gym/envs/registration.py,123,Parse the env name and check to see if it matches the non-version,not
+gym/gym/envs/registration.py,124,part of a valid env (could also check the exact number here),not
+gym/gym/envs/registration.py,138,Have a global registry,not
+gym/gym/envs/__init__.py,3,Algorithmic,not
+gym/gym/envs/__init__.py,4,----------------------------------------,not
+gym/gym/envs/__init__.py,50,Classic,not
+gym/gym/envs/__init__.py,51,----------------------------------------,not
+gym/gym/envs/__init__.py,94,Box2d,not
+gym/gym/envs/__init__.py,95,----------------------------------------,not
+gym/gym/envs/__init__.py,132,Toy Text,not
+gym/gym/envs/__init__.py,133,----------------------------------------,not
+gym/gym/envs/__init__.py,155,optimum = .8196,not
+gym/gym/envs/__init__.py,163,optimum = 1,not
+gym/gym/envs/__init__.py,186,optimum = 8.46,not
+gym/gym/envs/__init__.py,202,Mujoco,not
+gym/gym/envs/__init__.py,203,----------------------------------------,not
+gym/gym/envs/__init__.py,205,2D,not
+gym/gym/envs/__init__.py,335,Robotics,not
+gym/gym/envs/__init__.py,336,----------------------------------------,not
+gym/gym/envs/__init__.py,348,Fetch,not
+gym/gym/envs/__init__.py,377,Hand,not
+gym/gym/envs/__init__.py,455,"Alias for ""Full""",not
+gym/gym/envs/__init__.py,505,"Alias for ""Full""",not
+gym/gym/envs/__init__.py,555,"Alias for ""Full""",not
+gym/gym/envs/__init__.py,577,Atari,not
+gym/gym/envs/__init__.py,578,----------------------------------------,not
+gym/gym/envs/__init__.py,580,"# print ', '.join([""'{}'"".format(name.split('.')[0]) for name in atari_py.list_games()])",not
+gym/gym/envs/__init__.py,591,space_invaders should yield SpaceInvaders-v0 and SpaceInvaders-ram-v0,not
+gym/gym/envs/__init__.py,598,ElevatorAction-ram-v0 seems to yield slightly,not
+gym/gym/envs/__init__.py,599,non-deterministic observations about 10% of the time. We,not
+gym/gym/envs/__init__.py,600,"should track this down eventually, but for now we just",not
+gym/gym/envs/__init__.py,601,mark it as nondeterministic.,not
+gym/gym/envs/__init__.py,620,Standard Deterministic (as in the original DeepMind paper),not
+gym/gym/envs/__init__.py,626,Use a deterministic frame skip.,not
+gym/gym/envs/__init__.py,646,A frameskip of 1 means we get every frame,not
+gym/gym/envs/__init__.py,651,"No frameskip. (Atari has no entropy source, so these are",not
+gym/gym/envs/__init__.py,652,deterministic environments.),not
+gym/gym/envs/__init__.py,656,A frameskip of 1 means we get every frame,not
+gym/gym/envs/__init__.py,662,Unit test,not
+gym/gym/envs/__init__.py,663,---------,not
+gym/gym/envs/unittest/cube_crash.py,6,Unit test environment for CNNs and CNN+RNN algorithms.,not
+gym/gym/envs/unittest/cube_crash.py,7,Looks like this (RGB observations):,not
+gym/gym/envs/unittest/cube_crash.py,8,,not
+gym/gym/envs/unittest/cube_crash.py,9,---------------------------,not
+gym/gym/envs/unittest/cube_crash.py,10,|                           |,not
+gym/gym/envs/unittest/cube_crash.py,11,|                           |,not
+gym/gym/envs/unittest/cube_crash.py,12,|                           |,not
+gym/gym/envs/unittest/cube_crash.py,13,|          **               |,not
+gym/gym/envs/unittest/cube_crash.py,14,|          **               |,not
+gym/gym/envs/unittest/cube_crash.py,15,|                           |,not
+gym/gym/envs/unittest/cube_crash.py,16,|                           |,not
+gym/gym/envs/unittest/cube_crash.py,17,|                           |,not
+gym/gym/envs/unittest/cube_crash.py,18,|                           |,not
+gym/gym/envs/unittest/cube_crash.py,19,|                           |,not
+gym/gym/envs/unittest/cube_crash.py,20,========     ==============,not
+gym/gym/envs/unittest/cube_crash.py,21,,not
+gym/gym/envs/unittest/cube_crash.py,22,Goal is to go through the hole at the bottom. Agent controls square using Left-Nop-Right actions.,not
+gym/gym/envs/unittest/cube_crash.py,23,"It falls down automatically, episode length is a bit less than FIELD_H",not
+gym/gym/envs/unittest/cube_crash.py,24,,not
+gym/gym/envs/unittest/cube_crash.py,25,CubeCrash-v0                    # shaped reward,not
+gym/gym/envs/unittest/cube_crash.py,26,CubeCrashSparse-v0              # reward 0 or 1 at the end,not
+gym/gym/envs/unittest/cube_crash.py,27,CubeCrashScreenBecomesBlack-v0  # for RNNs,not
+gym/gym/envs/unittest/cube_crash.py,28,,not
+gym/gym/envs/unittest/cube_crash.py,29,"To see how it works, run:",not
+gym/gym/envs/unittest/cube_crash.py,30,,not
+gym/gym/envs/unittest/cube_crash.py,31,python examples/agents/keyboard_agent.py CubeCrashScreen-v0,not
+gym/gym/envs/unittest/cube_crash.py,51,Makes env too hard,not
+gym/gym/envs/unittest/memorize_digits.py,6,Unit test environment for CNNs.,not
+gym/gym/envs/unittest/memorize_digits.py,7,Looks like this (RGB observations):,not
+gym/gym/envs/unittest/memorize_digits.py,8,,not
+gym/gym/envs/unittest/memorize_digits.py,9,---------------------------,not
+gym/gym/envs/unittest/memorize_digits.py,10,|                           |,not
+gym/gym/envs/unittest/memorize_digits.py,11,|         ******            |,not
+gym/gym/envs/unittest/memorize_digits.py,12,|         ******            |,not
+gym/gym/envs/unittest/memorize_digits.py,13,|       **      **          |,not
+gym/gym/envs/unittest/memorize_digits.py,14,|       **      **          |,not
+gym/gym/envs/unittest/memorize_digits.py,15,|               **          |,not
+gym/gym/envs/unittest/memorize_digits.py,16,|               **          |,not
+gym/gym/envs/unittest/memorize_digits.py,17,|           ****            |,not
+gym/gym/envs/unittest/memorize_digits.py,18,|           ****            |,not
+gym/gym/envs/unittest/memorize_digits.py,19,|       ****                |,not
+gym/gym/envs/unittest/memorize_digits.py,20,|       ****                |,not
+gym/gym/envs/unittest/memorize_digits.py,21,|       **********          |,not
+gym/gym/envs/unittest/memorize_digits.py,22,|       **********          |,not
+gym/gym/envs/unittest/memorize_digits.py,23,|                           |,not
+gym/gym/envs/unittest/memorize_digits.py,24,---------------------------,not
+gym/gym/envs/unittest/memorize_digits.py,25,,not
+gym/gym/envs/unittest/memorize_digits.py,26,Agent should hit action 2 to gain reward. Catches off-by-one errors in your agent.,not
+gym/gym/envs/unittest/memorize_digits.py,27,,not
+gym/gym/envs/unittest/memorize_digits.py,28,"To see how it works, run:",not
+gym/gym/envs/unittest/memorize_digits.py,29,,not
+gym/gym/envs/unittest/memorize_digits.py,30,python examples/agents/keyboard_agent.py MemorizeDigits-v0,not
+gym/gym/envs/box2d/car_racing.py,45,less than Atari 160x192,not
+gym/gym/envs/box2d/car_racing.py,52,Track scale,not
+gym/gym/envs/box2d/car_racing.py,53,Track is heavily morphed circle with this radius,not
+gym/gym/envs/box2d/car_racing.py,54,Game over boundary,not
+gym/gym/envs/box2d/car_racing.py,55,Frames per second,not
+gym/gym/envs/box2d/car_racing.py,56,Camera zoom,not
+gym/gym/envs/box2d/car_racing.py,57,Set to False for fixed view (don't use zoom),not
+gym/gym/envs/box2d/car_racing.py,132,"steer, gas, brake",not
+gym/gym/envs/box2d/car_racing.py,151,Create checkpoints,not
+gym/gym/envs/box2d/car_racing.py,166,Go from one checkpoint to another to create track,not
+gym/gym/envs/box2d/car_racing.py,181,Find destination from checkpoints,not
+gym/gym/envs/box2d/car_racing.py,199,vector towards destination,not
+gym/gym/envs/box2d/car_racing.py,201,destination vector projected on rad,not
+gym/gym/envs/box2d/car_racing.py,221,"Find closed loop range i1..i2, first loop should be ignored, second is OK",not
+gym/gym/envs/box2d/car_racing.py,227,Failed,not
+gym/gym/envs/box2d/car_racing.py,244,Length of perpendicular jump to put together head and tail,not
+gym/gym/envs/box2d/car_racing.py,251,Red-white border on hard turns,not
+gym/gym/envs/box2d/car_racing.py,267,Create tiles,not
+gym/gym/envs/box2d/car_racing.py,330,"First step without action, called from reset()",not
+gym/gym/envs/box2d/car_racing.py,332,"We actually don't want to count fuel spent, we want car to be faster.",not
+gym/gym/envs/box2d/car_racing.py,333,self.reward -=  10 * self.car.fuel_spent / ENGINE_POWER,not
+gym/gym/envs/box2d/car_racing.py,356,reset() not called yet,not
+gym/gym/envs/box2d/car_racing.py,358,Animate zoom first second,not
+gym/gym/envs/box2d/car_racing.py,389,pylint: disable=protected-access,not
+gym/gym/envs/box2d/car_racing.py,464,ABS sensors,not
+gym/gym/envs/box2d/car_racing.py,485,set 1.0 for wheels to block to zero rotation,not
+gym/gym/envs/box2d/lunar_lander.py,40,"affects how fast-paced the game is, forces should be adjusted as well",not
+gym/gym/envs/box2d/lunar_lander.py,45,Set 1500 to make game harder,not
+gym/gym/envs/box2d/lunar_lander.py,101,"useful range is -1 .. +1, but spikes can be higher",not
+gym/gym/envs/box2d/lunar_lander.py,105,"Action is two floats [main engine, left-right engines].",not
+gym/gym/envs/box2d/lunar_lander.py,106,"Main engine: -1..0 off, 0..+1 throttle from 50% to 100% power. Engine can't work with less than 50% power.",not
+gym/gym/envs/box2d/lunar_lander.py,107,"Left-right:  -1.0..-0.5 fire left engine, +0.5..+1.0 fire right engine, -0.5..0.5 off",not
+gym/gym/envs/box2d/lunar_lander.py,110,"Nop, fire left engine, main engine, right engine",not
+gym/gym/envs/box2d/lunar_lander.py,140,terrain,not
+gym/gym/envs/box2d/lunar_lander.py,177,collide only with ground,not
+gym/gym/envs/box2d/lunar_lander.py,178,0.99 bouncy,not
+gym/gym/envs/box2d/lunar_lander.py,210,low enough not to jump back into the sky,not
+gym/gym/envs/box2d/lunar_lander.py,213,"The most esoteric numbers here, angled legs have freedom to travel within",not
+gym/gym/envs/box2d/lunar_lander.py,234,collide only with ground,not
+gym/gym/envs/box2d/lunar_lander.py,252,Engines,not
+gym/gym/envs/box2d/lunar_lander.py,259,Main engine,not
+gym/gym/envs/box2d/lunar_lander.py,261,0.5..1.0,not
+gym/gym/envs/box2d/lunar_lander.py,266,"4 is move a bit downwards, +-2 for randomness",SATD
+gym/gym/envs/box2d/lunar_lander.py,269,3.5 is here to make particle speed adequate,not
+gym/gym/envs/box2d/lunar_lander.py,272,particles are just a decoration,not
+gym/gym/envs/box2d/lunar_lander.py,282,Orientation engines,not
+gym/gym/envs/box2d/lunar_lander.py,322,"And ten points for legs contact, the idea is if you",not
+gym/gym/envs/box2d/lunar_lander.py,323,"lose contact again after landing, you get negative reward",not
+gym/gym/envs/box2d/lunar_lander.py,328,"less fuel spent is better, about -30 for heuristic landing",SATD
+gym/gym/envs/box2d/lunar_lander.py,408,angle should point towards center,not
+gym/gym/envs/box2d/lunar_lander.py,409,more than 0.4 radians (22 degrees) is bad,not
+gym/gym/envs/box2d/lunar_lander.py,411,target y should be proportional to horizontal offset,not
+gym/gym/envs/box2d/lunar_lander.py,416,legs have contact,not
+gym/gym/envs/box2d/lunar_lander.py,418,"override to reduce fall speed, that's all we need after contact",not
+gym/gym/envs/box2d/bipedal_walker.py,12,This is simple 4-joints walker robot environment.,not
+gym/gym/envs/box2d/bipedal_walker.py,13,,not
+gym/gym/envs/box2d/bipedal_walker.py,14,There are two versions:,not
+gym/gym/envs/box2d/bipedal_walker.py,15,,not
+gym/gym/envs/box2d/bipedal_walker.py,16,"- Normal, with slightly uneven terrain.",not
+gym/gym/envs/box2d/bipedal_walker.py,17,,not
+gym/gym/envs/box2d/bipedal_walker.py,18,"- Hardcore with ladders, stumps, pitfalls.",not
+gym/gym/envs/box2d/bipedal_walker.py,19,,not
+gym/gym/envs/box2d/bipedal_walker.py,20,"Reward is given for moving forward, total 300+ points up to the far end. If the robot falls,",not
+gym/gym/envs/box2d/bipedal_walker.py,21,"it gets -100. Applying motor torque costs a small amount of points, more optimal agent",not
+gym/gym/envs/box2d/bipedal_walker.py,22,will get better score.,SATD
+gym/gym/envs/box2d/bipedal_walker.py,23,,not
+gym/gym/envs/box2d/bipedal_walker.py,24,"Heuristic is provided for testing, it's also useful to get demonstrations to",not
+gym/gym/envs/box2d/bipedal_walker.py,25,learn from. To run heuristic:,not
+gym/gym/envs/box2d/bipedal_walker.py,26,,not
+gym/gym/envs/box2d/bipedal_walker.py,27,python gym/envs/box2d/bipedal_walker.py,not
+gym/gym/envs/box2d/bipedal_walker.py,28,,not
+gym/gym/envs/box2d/bipedal_walker.py,29,"State consists of hull angle speed, angular velocity, horizontal speed, vertical speed,",not
+gym/gym/envs/box2d/bipedal_walker.py,30,"position of joints and joints angular speed, legs contact with ground, and 10 lidar",not
+gym/gym/envs/box2d/bipedal_walker.py,31,rangefinder measurements to help to deal with the hardcore version. There's no coordinates,not
+gym/gym/envs/box2d/bipedal_walker.py,32,"in the state vector. Lidar is less useful in normal version, but it works.",not
+gym/gym/envs/box2d/bipedal_walker.py,33,,not
+gym/gym/envs/box2d/bipedal_walker.py,34,To solve the game you need to get 300 points in 1600 time steps.,not
+gym/gym/envs/box2d/bipedal_walker.py,35,,not
+gym/gym/envs/box2d/bipedal_walker.py,36,To solve hardcore version you need 300 points in 2000 time steps.,not
+gym/gym/envs/box2d/bipedal_walker.py,37,,not
+gym/gym/envs/box2d/bipedal_walker.py,38,Created by Oleg Klimov. Licensed on the same terms as the rest of OpenAI Gym.,not
+gym/gym/envs/box2d/bipedal_walker.py,41,"affects how fast-paced the game is, forces should be adjusted as well",not
+gym/gym/envs/box2d/bipedal_walker.py,61,in steps,not
+gym/gym/envs/box2d/bipedal_walker.py,63,"low long are grass spots, in steps",not
+gym/gym/envs/box2d/bipedal_walker.py,64,in steps,not
+gym/gym/envs/box2d/bipedal_walker.py,72,collide only with ground,not
+gym/gym/envs/box2d/bipedal_walker.py,73,0.99 bouncy,not
+gym/gym/envs/box2d/bipedal_walker.py,178,1,not
+gym/gym/envs/box2d/bipedal_walker.py,277,"Sorry for the clouds, couldn't resist",not
+gym/gym/envs/box2d/bipedal_walker.py,377,"self.hull.ApplyForceToCenter((0, 20), True) -- Uncomment this to receive a bit of stability help",not
+gym/gym/envs/box2d/bipedal_walker.py,378,Should be easier as well,not
+gym/gym/envs/box2d/bipedal_walker.py,408,"Normal angles up to 0.5 here, but sure more is possible.",not
+gym/gym/envs/box2d/bipedal_walker.py,410,Normalized to get -1..1 range,not
+gym/gym/envs/box2d/bipedal_walker.py,412,"This will give 1.1 on high up, but it's still OK (and there should be spikes on hiting the ground, that's normal too)",not
+gym/gym/envs/box2d/bipedal_walker.py,428,moving forward is a way to receive reward (normalized to get 300 on completion),not
+gym/gym/envs/box2d/bipedal_walker.py,429,"keep head straight, other than that and falling, any behavior is unpunished",not
+gym/gym/envs/box2d/bipedal_walker.py,438,"normalized to about -50.0 using heuristic, more optimal agent should spend less",not
+gym/gym/envs/box2d/bipedal_walker.py,507,"Heurisic: suboptimal, have no notion of balance.",not
+gym/gym/envs/box2d/bipedal_walker.py,514,Will fall forward on higher speed,not
+gym/gym/envs/box2d/bipedal_walker.py,536,-0.8 .. +1.1,not
+gym/gym/envs/box2d/bipedal_walker.py,537,-0.6 .. +0.9,not
+gym/gym/envs/box2d/bipedal_walker.py,548,supporting leg is behind,not
+gym/gym/envs/box2d/bipedal_walker.py,570,PID to keep head strait,not
+gym/gym/envs/box2d/bipedal_walker.py,572,"vertical speed, to damp oscillations",not
+gym/gym/envs/box2d/car_dynamics.py,18,friction ~= mass ~= size^2 (calculated implicitly using density),not
+gym/gym/envs/box2d/car_dynamics.py,89,wheel angle,not
+gym/gym/envs/box2d/car_dynamics.py,90,angular velocity,not
+gym/gym/envs/box2d/car_dynamics.py,121,"gradually increase, but stop immediately",not
+gym/gym/envs/box2d/car_dynamics.py,142,Steer each wheel,not
+gym/gym/envs/box2d/car_dynamics.py,147,Position => friction_limit,not
+gym/gym/envs/box2d/car_dynamics.py,149,Grass friction if no tile,not
+gym/gym/envs/box2d/car_dynamics.py,154,Force,not
+gym/gym/envs/box2d/car_dynamics.py,158,forward speed,not
+gym/gym/envs/box2d/car_dynamics.py,159,side speed,not
+gym/gym/envs/box2d/car_dynamics.py,161,WHEEL_MOMENT_OF_INERTIA*np.square(w.omega)/2 = E -- energy,not
+gym/gym/envs/box2d/car_dynamics.py,162,WHEEL_MOMENT_OF_INERTIA*w.omega * domega/dt = dE/dt = W -- power,not
+gym/gym/envs/box2d/car_dynamics.py,163,domega = dt*W/WHEEL_MOMENT_OF_INERTIA/w.omega,not
+gym/gym/envs/box2d/car_dynamics.py,165,add small coef not to divide by zero,not
+gym/gym/envs/box2d/car_dynamics.py,172,radians per second,not
+gym/gym/envs/box2d/car_dynamics.py,175,low speed => same as = 0,not
+gym/gym/envs/box2d/car_dynamics.py,179,rotating wheel speed,not
+gym/gym/envs/box2d/car_dynamics.py,180,force direction is direction of speed difference,not
+gym/gym/envs/box2d/car_dynamics.py,183,Physically correct is to always apply friction_limit until speed is equal.,not
+gym/gym/envs/box2d/car_dynamics.py,184,"But dt is finite, that will lead to oscillations if difference is already near zero.",not
+gym/gym/envs/box2d/car_dynamics.py,186,Random coefficient to cut oscillations in few steps (have no effect on friction_limit),not
+gym/gym/envs/box2d/car_dynamics.py,191,Skid trace,not
+gym/gym/envs/box2d/car_dynamics.py,207,Correct physics here,not
+gym/gym/envs/box2d/car_dynamics.py,228,radians,not
+gym/gym/envs/classic_control/rendering.py,10,(JDS 2016/04/15): avoid bug on Anaconda 2.3.0 / Yosemite,not
+gym/gym/envs/classic_control/rendering.py,47,"returns already available pyglet_display,",not
+gym/gym/envs/classic_control/rendering.py,48,if there is no pyglet display available then it creates one,not
+gym/gym/envs/classic_control/rendering.py,58,available screens,not
+gym/gym/envs/classic_control/rendering.py,59,selecting the first screen,not
+gym/gym/envs/classic_control/rendering.py,60,create GL context,not
+gym/gym/envs/classic_control/rendering.py,116,"In https://github.com/openai/gym-http-api/issues/2, we",not
+gym/gym/envs/classic_control/rendering.py,117,discovered that someone using Xmonad on Arch was having,not
+gym/gym/envs/classic_control/rendering.py,118,"a window of size 598 x 398, though a 600 x 400 window",not
+gym/gym/envs/classic_control/rendering.py,119,was requested. (Guess Xmonad was preserving a pixel for,not
+gym/gym/envs/classic_control/rendering.py,120,the boundary.) So we use the buffer height/width rather,not
+gym/gym/envs/classic_control/rendering.py,121,than the requested one.,not
+gym/gym/envs/classic_control/rendering.py,128,Convenience,not
+gym/gym/envs/classic_control/rendering.py,200,translate to GL loc ppint,not
+gym/gym/envs/classic_control/rendering.py,237,draw point,not
+gym/gym/envs/classic_control/rendering.py,250,draw each vertex,not
+gym/gym/envs/classic_control/rendering.py,299,draw each vertex,not
+gym/gym/envs/classic_control/rendering.py,329,================================================================,not
+gym/gym/envs/classic_control/rendering.py,370,draw,not
+gym/gym/envs/classic_control/rendering.py,374,"^^^ check sys.meta_path to avoid 'ImportError: sys.meta_path is None, Python is likely shutting down'",not
+gym/gym/envs/classic_control/continuous_mountain_car.py,1,-*- coding: utf-8 -*-,not
+gym/gym/envs/classic_control/continuous_mountain_car.py,38,"was 0.5 in gym, 0.45 in Arnaud de Broissia's version",not
+gym/gym/envs/classic_control/continuous_mountain_car.py,84,Convert a possible numpy bool to a Python bool.,not
+gym/gym/envs/classic_control/pendulum.py,42,th := theta,not
+gym/gym/envs/classic_control/pendulum.py,50,for rendering,not
+gym/gym/envs/classic_control/acrobot.py,14,SOURCE:,not
+gym/gym/envs/classic_control/acrobot.py,15,https://github.com/rlpy/rlpy/blob/master/rlpy/Domains/Acrobot.py,not
+gym/gym/envs/classic_control/acrobot.py,65,[m],not
+gym/gym/envs/classic_control/acrobot.py,66,[m],not
+gym/gym/envs/classic_control/acrobot.py,67,: [kg] mass of link 1,not
+gym/gym/envs/classic_control/acrobot.py,68,: [kg] mass of link 2,not
+gym/gym/envs/classic_control/acrobot.py,69,: [m] position of the center of mass of link 1,not
+gym/gym/envs/classic_control/acrobot.py,70,: [m] position of the center of mass of link 2,not
+gym/gym/envs/classic_control/acrobot.py,71,: moments of inertia for both links,not
+gym/gym/envs/classic_control/acrobot.py,80,: use dynamics equations from the nips paper or the book,not
+gym/gym/envs/classic_control/acrobot.py,107,Add noise to the force action,not
+gym/gym/envs/classic_control/acrobot.py,111,"Now, augment the state with our force action so it can be passed to",not
+gym/gym/envs/classic_control/acrobot.py,112,_dsdt,not
+gym/gym/envs/classic_control/acrobot.py,116,only care about final timestep of integration returned by integrator,not
+gym/gym/envs/classic_control/acrobot.py,118,omit action,not
+gym/gym/envs/classic_control/acrobot.py,119,ODEINT IS TOO SLOW!,not
+gym/gym/envs/classic_control/acrobot.py,120,"ns_continuous = integrate.odeint(self._dsdt, self.s_continuous, [0, self.dt])",not
+gym/gym/envs/classic_control/acrobot.py,121,self.s_continuous = ns_continuous[-1] # We only care about the state,not
+gym/gym/envs/classic_control/acrobot.py,122,"at the ''final timestep'', self.dt",not
+gym/gym/envs/classic_control/acrobot.py,164,the following line is consistent with the description in the,not
+gym/gym/envs/classic_control/acrobot.py,165,paper,not
+gym/gym/envs/classic_control/acrobot.py,169,the following line is consistent with the java implementation and the,not
+gym/gym/envs/classic_control/acrobot.py,170,book,not
+gym/gym/envs/classic_control/acrobot.py,183,2.2 for default,not
+gym/gym/envs/classic_control/acrobot.py,249,bound x between min (m) and Max (M),not
+gym/gym/envs/classic_control/mountain_car.py,122,control with left and right arrow keys,not
+gym/gym/envs/classic_control/cartpole.py,71,actually half the pole's length,not
+gym/gym/envs/classic_control/cartpole.py,74,seconds between state updates,not
+gym/gym/envs/classic_control/cartpole.py,77,Angle at which to fail the episode,not
+gym/gym/envs/classic_control/cartpole.py,81,Angle limit set to 2 * theta_threshold_radians so failing observation,not
+gym/gym/envs/classic_control/cartpole.py,82,is still within bounds.,not
+gym/gym/envs/classic_control/cartpole.py,111,For the interested reader:,not
+gym/gym/envs/classic_control/cartpole.py,112,https://coneural.org/florian/papers/05_cart_pole.pdf,not
+gym/gym/envs/classic_control/cartpole.py,122,semi-implicit euler,not
+gym/gym/envs/classic_control/cartpole.py,140,Pole just fell!,not
+gym/gym/envs/classic_control/cartpole.py,167,TOP OF CART,not
+gym/gym/envs/classic_control/cartpole.py,203,Edit the pole polygon vertex,not
+gym/gym/envs/classic_control/cartpole.py,209,MIDDLE OF CART,not
+gym/gym/envs/algorithmic/algorithmic_env.py,45,Only 'promote' the length of generated input strings if the worst of the,not
+gym/gym/envs/algorithmic/algorithmic_env.py,46,last n episodes was no more than this far from the maximum reward,not
+gym/gym/envs/algorithmic/algorithmic_env.py,58,Keep track of this many past episodes,not
+gym/gym/envs/algorithmic/algorithmic_env.py,60,Cumulative reward earned this episode,not
+gym/gym/envs/algorithmic/algorithmic_env.py,62,Running tally of reward shortfalls. e.g. if there were 10 points to,not
+gym/gym/envs/algorithmic/algorithmic_env.py,63,"earn and we got 8, we'd append -2",not
+gym/gym/envs/algorithmic/algorithmic_env.py,70,TODO: Not clear why this is a class variable rather than instance.,SATD
+gym/gym/envs/algorithmic/algorithmic_env.py,71,Could lead to some spooky action at a distance if someone is working,not
+gym/gym/envs/algorithmic/algorithmic_env.py,72,with multiple algorithmic envs at once. Also makes testing tricky.,not
+gym/gym/envs/algorithmic/algorithmic_env.py,74,Three sub-actions:,not
+gym/gym/envs/algorithmic/algorithmic_env.py,75,1. Move read head left or right (or up/down),SATD
+gym/gym/envs/algorithmic/algorithmic_env.py,76,2. Write or not,not
+gym/gym/envs/algorithmic/algorithmic_env.py,77,3. Which character to write. (Ignored if should_write=0),not
+gym/gym/envs/algorithmic/algorithmic_env.py,81,"Can see just what is on the input tape (one of n characters, or",not
+gym/gym/envs/algorithmic/algorithmic_env.py,82,nothing),not
+gym/gym/envs/algorithmic/algorithmic_env.py,183,Bail as soon as a wrong character is written to the tape,not
+gym/gym/envs/algorithmic/algorithmic_env.py,202,(Seemingly arbitrary),not
+gym/gym/envs/algorithmic/algorithmic_env.py,209,This is before the first episode/call to reset(). Nothing to do,not
+gym/gym/envs/algorithmic/reversed_addition.py,22,Quirk preserved for the sake of consistency: add the length of the input,not
+gym/gym/envs/algorithmic/reversed_addition.py,23,rather than the length of the desired output (which may differ if there's,not
+gym/gym/envs/algorithmic/reversed_addition.py,24,an extra carried digit).,not
+gym/gym/envs/algorithmic/reversed_addition.py,25,TODO: It seems like this time limit is so strict as to make Addition3-v0,SATD
+gym/gym/envs/algorithmic/reversed_addition.py,26,"unsolvable, since agents aren't even given enough time steps to look at",not
+gym/gym/envs/algorithmic/reversed_addition.py,27,all the digits. (The solutions on the scoreboard seem to only work by,not
+gym/gym/envs/algorithmic/reversed_addition.py,28,save-scumming.),not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,4,All concrete subclasses of AlgorithmicEnv,not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,52,Kind of a hack,SATD
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,64,Should have leveled up on the last iteration,not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,70,Walk off the end,not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,75,Walk further off track,not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,79,Return to the first input character,not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,89,Corresponds to a grid that looks like...,not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,90,0 1 2,not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,91,3 4 5,not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,136,Test numerical alphabet rendering,not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,200,"DuplicatedInput needs to generate inputs with even length,",not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,201,so it may be short one,not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,209,"Should get ""size"" sublists, each of length self.rows (not the",not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,210,"opposite, as you might expect)",not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,223,"If requested input size isn't a multiple of duplication, go lower",not
+gym/gym/envs/algorithmic/tests/test_algorithmic.py,227,"If requested input size is *less than* duplication, go up",not
+gym/gym/envs/robotics/robot_env.py,52,Env methods,not
+gym/gym/envs/robotics/robot_env.py,53,----------------------------,not
+gym/gym/envs/robotics/robot_env.py,74,"Attempt to reset the simulator. Since we randomize initial conditions, it",not
+gym/gym/envs/robotics/robot_env.py,75,is possible to get into a state with numerical issues (e.g. due to penetration or,not
+gym/gym/envs/robotics/robot_env.py,76,Gimbel lock) or we may not achieve an initial condition (e.g. an object is within the hand).,not
+gym/gym/envs/robotics/robot_env.py,77,"In this case, we just keep randomizing until we eventually achieve a valid initial",not
+gym/gym/envs/robotics/robot_env.py,78,configuration.,not
+gym/gym/envs/robotics/robot_env.py,89,self.viewer.finish(),not
+gym/gym/envs/robotics/robot_env.py,97,window size used for old mujoco-py:,not
+gym/gym/envs/robotics/robot_env.py,99,"original image is upside-down, so flip it",not
+gym/gym/envs/robotics/robot_env.py,115,Extension methods,not
+gym/gym/envs/robotics/robot_env.py,116,----------------------------,not
+gym/gym/envs/robotics/utils.py,87,"obj1 is the mocap, obj2 is the welded body",not
+gym/gym/envs/robotics/utils.py,90,"obj2 is the mocap, obj1 is the welded body",not
+gym/gym/envs/robotics/fetch_env.py,50,GoalEnv methods,not
+gym/gym/envs/robotics/fetch_env.py,51,----------------------------,not
+gym/gym/envs/robotics/fetch_env.py,54,Compute distance between goal and the achieved goal.,not
+gym/gym/envs/robotics/fetch_env.py,61,RobotEnv methods,not
+gym/gym/envs/robotics/fetch_env.py,62,----------------------------,not
+gym/gym/envs/robotics/fetch_env.py,72,ensure that we don't change the action outside of this scope,not
+gym/gym/envs/robotics/fetch_env.py,75,limit maximum change in position,not
+gym/gym/envs/robotics/fetch_env.py,76,"fixed rotation of the end effector, expressed as a quaternion",not
+gym/gym/envs/robotics/fetch_env.py,83,Apply action to simulation.,not
+gym/gym/envs/robotics/fetch_env.py,88,positions,not
+gym/gym/envs/robotics/fetch_env.py,95,rotations,not
+gym/gym/envs/robotics/fetch_env.py,97,velocities,not
+gym/gym/envs/robotics/fetch_env.py,100,gripper state,not
+gym/gym/envs/robotics/fetch_env.py,106,change to a scalar if the gripper is made symmetric,not
+gym/gym/envs/robotics/fetch_env.py,133,Visualize target.,not
+gym/gym/envs/robotics/fetch_env.py,142,Randomize start position of object.,not
+gym/gym/envs/robotics/fetch_env.py,176,Move end effector into position.,not
+gym/gym/envs/robotics/fetch_env.py,184,Extract information for sampling goals.,not
+gym/gym/envs/robotics/rotations.py,1,"Copyright (c) 2009-2017, Matthew Brett and Christoph Gohlke",not
+gym/gym/envs/robotics/rotations.py,2,All rights reserved.,not
+gym/gym/envs/robotics/rotations.py,3,,not
+gym/gym/envs/robotics/rotations.py,4,"Redistribution and use in source and binary forms, with or without",not
+gym/gym/envs/robotics/rotations.py,5,"modification, are permitted provided that the following conditions are",not
+gym/gym/envs/robotics/rotations.py,6,met:,not
+gym/gym/envs/robotics/rotations.py,7,,not
+gym/gym/envs/robotics/rotations.py,8,"1. Redistributions of source code must retain the above copyright notice,",not
+gym/gym/envs/robotics/rotations.py,9,this list of conditions and the following disclaimer.,not
+gym/gym/envs/robotics/rotations.py,10,,not
+gym/gym/envs/robotics/rotations.py,11,2. Redistributions in binary form must reproduce the above copyright,not
+gym/gym/envs/robotics/rotations.py,12,"notice, this list of conditions and the following disclaimer in the",not
+gym/gym/envs/robotics/rotations.py,13,documentation and/or other materials provided with the distribution.,not
+gym/gym/envs/robotics/rotations.py,14,,not
+gym/gym/envs/robotics/rotations.py,15,"THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ""AS",not
+gym/gym/envs/robotics/rotations.py,16,"IS"" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,",not
+gym/gym/envs/robotics/rotations.py,17,THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR,not
+gym/gym/envs/robotics/rotations.py,18,PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR,not
+gym/gym/envs/robotics/rotations.py,19,"CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,",not
+gym/gym/envs/robotics/rotations.py,20,"EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,",not
+gym/gym/envs/robotics/rotations.py,21,"PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR",not
+gym/gym/envs/robotics/rotations.py,22,PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF,not
+gym/gym/envs/robotics/rotations.py,23,"LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING",not
+gym/gym/envs/robotics/rotations.py,24,NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS,not
+gym/gym/envs/robotics/rotations.py,25,"SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",not
+gym/gym/envs/robotics/rotations.py,27,Many methods borrow heavily or entirely from transforms3d:,not
+gym/gym/envs/robotics/rotations.py,28,https://github.com/matthew-brett/transforms3d,not
+gym/gym/envs/robotics/rotations.py,29,They have mostly been modified to support batched operations.,not
+gym/gym/envs/robotics/rotations.py,106,For testing whether a number is close to zero,not
+gym/gym/envs/robotics/rotations.py,182,Fill only lower half of symmetric matrix,not
+gym/gym/envs/robotics/rotations.py,195,TODO: vectorize this -- probably could be made faster,SATD
+gym/gym/envs/robotics/rotations.py,199,"Use Hermitian eigenvectors, values for speed",not
+gym/gym/envs/robotics/rotations.py,201,"Select largest eigenvector, reorder to w,x,y,z quaternion",not
+gym/gym/envs/robotics/rotations.py,203,Prefer quaternion with positive w,not
+gym/gym/envs/robotics/rotations.py,204,(q * -1 corresponds to same rotation as q),not
+gym/gym/envs/robotics/rotations.py,320,"Should be in qw, qx, qy, qz",not
+gym/gym/envs/robotics/hand_env.py,19,RobotEnv methods,not
+gym/gym/envs/robotics/hand_env.py,20,----------------------------,not
+gym/gym/envs/robotics/fetch/reach.py,6,Ensure we get the path separator correct on windows,not
+gym/gym/envs/robotics/fetch/push.py,6,Ensure we get the path separator correct on windows,not
+gym/gym/envs/robotics/fetch/slide.py,8,Ensure we get the path separator correct on windows,not
+gym/gym/envs/robotics/fetch/pick_and_place.py,6,Ensure we get the path separator correct on windows,not
+gym/gym/envs/robotics/hand/reach.py,46,Ensure we get the path separator correct on windows,not
+gym/gym/envs/robotics/hand/reach.py,72,GoalEnv methods,not
+gym/gym/envs/robotics/hand/reach.py,73,----------------------------,not
+gym/gym/envs/robotics/hand/reach.py,82,RobotEnv methods,not
+gym/gym/envs/robotics/hand/reach.py,83,----------------------------,not
+gym/gym/envs/robotics/hand/reach.py,112,Pick a meeting point above the hand.,not
+gym/gym/envs/robotics/hand/reach.py,116,Slightly move meeting goal towards the respective finger to avoid that they,SATD
+gym/gym/envs/robotics/hand/reach.py,117,overlap.,not
+gym/gym/envs/robotics/hand/reach.py,125,"With some probability, ask all fingers to move back to the origin.",not
+gym/gym/envs/robotics/hand/reach.py,126,This avoids that the thumb constantly stays near the goal position already.,not
+gym/gym/envs/robotics/hand/reach.py,135,Visualize targets.,not
+gym/gym/envs/robotics/hand/reach.py,143,Visualize finger positions.,not
+gym/gym/envs/robotics/hand/manipulate_touch_sensors.py,7,Ensure we get the path separator correct on windows,not
+gym/gym/envs/robotics/hand/manipulate_touch_sensors.py,50,get touch sensor site names and their ids,not
+gym/gym/envs/robotics/hand/manipulate_touch_sensors.py,55,set touch sensors rgba values,not
+gym/gym/envs/robotics/hand/manipulate_touch_sensors.py,80,this contains the object position + rotation,not
+gym/gym/envs/robotics/hand/manipulate_touch_sensors.py,81,"get touch sensor readings. if there is one, set value to 1",not
+gym/gym/envs/robotics/hand/manipulate.py,22,Ensure we get the path separator correct on windows,not
+gym/gym/envs/robotics/hand/manipulate.py,82,Object position and rotation.,not
+gym/gym/envs/robotics/hand/manipulate.py,101,Special case: We want to ignore the Z component of the rotation.,not
+gym/gym/envs/robotics/hand/manipulate.py,102,This code here assumes Euler angles with xyz convention. We first transform,not
+gym/gym/envs/robotics/hand/manipulate.py,103,"to euler, then set the Z component to be equal between the two, and finally",not
+gym/gym/envs/robotics/hand/manipulate.py,104,transform back into quaternions.,not
+gym/gym/envs/robotics/hand/manipulate.py,110,Subtract quaternions and extract angle between them.,not
+gym/gym/envs/robotics/hand/manipulate.py,117,GoalEnv methods,not
+gym/gym/envs/robotics/hand/manipulate.py,118,----------------------------,not
+gym/gym/envs/robotics/hand/manipulate.py,126,We weigh the difference in position to avoid that `d_pos` (in meters) is completely,not
+gym/gym/envs/robotics/hand/manipulate.py,127,dominated by `d_rot` (in radians).,not
+gym/gym/envs/robotics/hand/manipulate.py,130,RobotEnv methods,not
+gym/gym/envs/robotics/hand/manipulate.py,131,----------------------------,not
+gym/gym/envs/robotics/hand/manipulate.py,156,Randomization initial rotation.,not
+gym/gym/envs/robotics/hand/manipulate.py,180,Randomize initial position.,not
+gym/gym/envs/robotics/hand/manipulate.py,196,Run the simulation for a bunch of timesteps to let everything settle in.,not
+gym/gym/envs/robotics/hand/manipulate.py,206,Select a goal for the object position.,not
+gym/gym/envs/robotics/hand/manipulate.py,220,Select a goal for the object rotation.,not
+gym/gym/envs/robotics/hand/manipulate.py,243,normalized quaternion,not
+gym/gym/envs/robotics/hand/manipulate.py,248,Assign current state to target object but offset a bit so that the actual object,not
+gym/gym/envs/robotics/hand/manipulate.py,249,is not obscured.,not
+gym/gym/envs/robotics/hand/manipulate.py,253,Move the object to the side since we do not care about it's position.,not
+gym/gym/envs/robotics/hand/manipulate.py,266,this contains the object position + rotation,not
+gym/gym/envs/tests/test_envs_semantics.py,27,"This is really bad, str could be same while values change",not
+gym/gym/envs/tests/test_frozenlake_dfs.py,6,Test that FrozenLake map generation creates valid maps of various sizes.,not
+gym/gym/envs/tests/test_envs.py,7,This runs a smoketest on each official registered env. We may want,not
+gym/gym/envs/tests/test_envs.py,8,to try also running environments which are not officially registered,not
+gym/gym/envs/tests/test_envs.py,9,envs.,not
+gym/gym/envs/tests/test_envs.py,12,Capture warnings,not
+gym/gym/envs/tests/test_envs.py,16,Check that dtype is explicitly declared for gym.Box spaces,not
+gym/gym/envs/tests/test_envs.py,33,Make sure we can render the environment after close.,not
+gym/gym/envs/tests/test_envs.py,39,Run a longer rollout on some environments,not
+gym/gym/envs/tests/test_kellycoinflip.py,7,https://github.com/openai/gym/issues/1266,not
+gym/gym/envs/tests/test_kellycoinflip.py,14,bet 20% of the wealth,not
+gym/gym/envs/tests/test_mujoco_v2_to_v3_conversion.py,71,Raises KeyError because the new envs have extra info,not
+gym/gym/envs/tests/test_mujoco_v2_to_v3_conversion.py,75,Raises KeyError because the new envs have extra info,not
+gym/gym/envs/tests/test_mujoco_v2_to_v3_conversion.py,79,Raises KeyError because the new envs have extra info,not
+gym/gym/envs/tests/test_determinism.py,8,Note that this precludes running this test in multiple,not
+gym/gym/envs/tests/test_determinism.py,9,"threads. However, we probably already can't do multithreading",not
+gym/gym/envs/tests/test_determinism.py,10,due to some environments.,not
+gym/gym/envs/tests/test_determinism.py,38,Don't check rollout equality if it's a a nondeterministic,not
+gym/gym/envs/tests/test_determinism.py,39,environment.,not
+gym/gym/envs/tests/test_determinism.py,50,"Go returns a Pachi game board in info, which doesn't",not
+gym/gym/envs/tests/test_determinism.py,51,"properly check equality. For now, we hack around this by",SATD
+gym/gym/envs/tests/test_determinism.py,52,just skipping Go.,not
+gym/gym/envs/tests/spec_list.py,18,We skip tests for envs that require dependencies or are otherwise,not
+gym/gym/envs/tests/spec_list.py,19,troublesome to run frequently,not
+gym/gym/envs/tests/spec_list.py,21,Skip mujoco tests for pull request CI,not
+gym/gym/envs/tests/test_registration.py,1,-*- coding: utf-8 -*-,not
+gym/gym/envs/tests/test_registration.py,59,must match an env name but not the version above,not
+gym/gym/envs/toy_text/cliffwalking.py,40,Cliff Location,not
+gym/gym/envs/toy_text/cliffwalking.py,44,Calculate transition probabilities and rewards,not
+gym/gym/envs/toy_text/cliffwalking.py,54,Calculate initial state distribution,not
+gym/gym/envs/toy_text/cliffwalking.py,55,"We always start in state (3, 0)",not
+gym/gym/envs/toy_text/cliffwalking.py,97,Print terminal state,not
+gym/gym/envs/toy_text/hotter_colder.py,26,+/- value the randomly select number can be between,not
+gym/gym/envs/toy_text/hotter_colder.py,27,Action space bounds,not
+gym/gym/envs/toy_text/kellycoinflip.py,43,betting in penny,not
+gym/gym/envs/toy_text/kellycoinflip.py,44,increments,not
+gym/gym/envs/toy_text/kellycoinflip.py,46,"(w,b)",not
+gym/gym/envs/toy_text/kellycoinflip.py,64,action = desired bet in pennies,not
+gym/gym/envs/toy_text/kellycoinflip.py,114,store the hyper-parameters for passing back into __init__() during resets so,not
+gym/gym/envs/toy_text/kellycoinflip.py,115,"the same hyper-parameters govern the next game's parameters, as the user",not
+gym/gym/envs/toy_text/kellycoinflip.py,116,expects:,not
+gym/gym/envs/toy_text/kellycoinflip.py,117,"TODO: this is boilerplate, is there any more elegant way to do this?",SATD
+gym/gym/envs/toy_text/kellycoinflip.py,129,draw this game's set of parameters:,not
+gym/gym/envs/toy_text/kellycoinflip.py,135,add an additional global variable which is the sufficient statistic for the,not
+gym/gym/envs/toy_text/kellycoinflip.py,136,"Pareto distribution on wealth cap; alpha doesn't update, but x_m does, and",not
+gym/gym/envs/toy_text/kellycoinflip.py,137,simply is the highest wealth count we've seen to date:,not
+gym/gym/envs/toy_text/kellycoinflip.py,139,"for the coinflip edge, it is total wins/losses:",not
+gym/gym/envs/toy_text/kellycoinflip.py,142,"for the number of rounds, we need to remember how many rounds we've played:",not
+gym/gym/envs/toy_text/kellycoinflip.py,145,the rest proceeds as before:,not
+gym/gym/envs/toy_text/kellycoinflip.py,148,current wealth,not
+gym/gym/envs/toy_text/kellycoinflip.py,149,rounds elapsed,not
+gym/gym/envs/toy_text/kellycoinflip.py,150,wins,not
+gym/gym/envs/toy_text/kellycoinflip.py,151,losses,not
+gym/gym/envs/toy_text/kellycoinflip.py,152,maximum observed wealth,not
+gym/gym/envs/toy_text/kellycoinflip.py,189,"re-init everything to draw new parameters etc, but preserve the RNG for",not
+gym/gym/envs/toy_text/kellycoinflip.py,190,reproducibility and pass in the same hyper-parameters as originally specified:,not
+gym/gym/envs/toy_text/blackjack.py,8,"1 = Ace, 2-10 = Number cards, Jack/Queen/King = 10",not
+gym/gym/envs/toy_text/blackjack.py,20,Does this hand have a usable ace?,not
+gym/gym/envs/toy_text/blackjack.py,24,Return current hand total,not
+gym/gym/envs/toy_text/blackjack.py,30,Is this hand a bust?,not
+gym/gym/envs/toy_text/blackjack.py,34,What is the score of this hand (0 if bust),not
+gym/gym/envs/toy_text/blackjack.py,38,Is this hand a natural blackjack?,not
+gym/gym/envs/toy_text/blackjack.py,81,"Flag to payout 1.5 on a ""natural"" blackjack win, like casino rules",not
+gym/gym/envs/toy_text/blackjack.py,82,Ref: http://www.bicyclecards.com/how-to-play/blackjack/,not
+gym/gym/envs/toy_text/blackjack.py,84,Start the first game,not
+gym/gym/envs/toy_text/blackjack.py,93,hit: add a card to players hand and return,not
+gym/gym/envs/toy_text/blackjack.py,101,"stick: play out the dealers hand, and score",not
+gym/gym/envs/toy_text/discrete.py,34,for rendering,not
+gym/gym/envs/toy_text/roulette.py,30,"observation, reward, done, info",not
+gym/gym/envs/toy_text/roulette.py,33,"N.B. np.random.randint draws from [A, B) while random.randint draws from [A,B]",not
+gym/gym/envs/toy_text/taxi.py,86,+1 for being inside taxi,not
+gym/gym/envs/toy_text/taxi.py,92,defaults,not
+gym/gym/envs/toy_text/taxi.py,94,default reward when there is no pickup/dropoff,not
+gym/gym/envs/toy_text/taxi.py,106,pickup,not
+gym/gym/envs/toy_text/taxi.py,109,passenger not at location,not
+gym/gym/envs/toy_text/taxi.py,111,dropoff,not
+gym/gym/envs/toy_text/taxi.py,118,dropoff at wrong location,not
+gym/gym/envs/toy_text/taxi.py,129,"(5) 5, 5, 4",not
+gym/gym/envs/toy_text/taxi.py,164,passenger in taxi,not
+gym/gym/envs/toy_text/taxi.py,175,No need to return anything for human,not
+gym/gym/envs/toy_text/guessing_game.py,41,Randomly selected number is within +/- this value,not
+gym/gym/envs/toy_text/frozen_lake.py,42,DFS to check that it's a valid path.,not
+gym/gym/envs/toy_text/nchain.py,26,probability of 'slipping' an action,not
+gym/gym/envs/toy_text/nchain.py,27,payout for 'backwards' action,not
+gym/gym/envs/toy_text/nchain.py,28,payout at end of chain for 'forwards' action,not
+gym/gym/envs/toy_text/nchain.py,29,Start at beginning of the chain,not
+gym/gym/envs/toy_text/nchain.py,41,"agent slipped, reverse action taken",not
+gym/gym/envs/toy_text/nchain.py,42,"'backwards': go back to the beginning, get small reward",not
+gym/gym/envs/toy_text/nchain.py,45,'forwards': go up along the chain,not
+gym/gym/envs/toy_text/nchain.py,48,"'forwards': stay at the end of the chain, collect large reward",not
+gym/gym/envs/mujoco/mujoco_env.py,85,methods to override:,not
+gym/gym/envs/mujoco/mujoco_env.py,86,----------------------------,not
+gym/gym/envs/mujoco/mujoco_env.py,103,-----------------------------,not
+gym/gym/envs/mujoco/mujoco_env.py,146,window size used for old mujoco-py:,not
+gym/gym/envs/mujoco/mujoco_env.py,148,"original image is upside-down, so flip it",not
+gym/gym/envs/mujoco/mujoco_env.py,152,window size used for old mujoco-py:,not
+gym/gym/envs/mujoco/mujoco_env.py,153,Extract depth part of the read_pixels() tuple,not
+gym/gym/envs/mujoco/mujoco_env.py,155,"original image is upside-down, so flip it",not
+gym/gym/envs/mujoco/mujoco_env.py,162,self.viewer.finish(),not
+gym/gym/envs/mujoco/__init__.py,2,^^^^^ so that user gets the correct error,not
+gym/gym/envs/mujoco/__init__.py,3,message if mujoco is not installed correctly,not
+gym/gym/envs/mujoco/inverted_double_pendulum.py,25,cart x pos,not
+gym/gym/envs/mujoco/inverted_double_pendulum.py,26,link angles,not
+gym/gym/envs/mujoco/inverted_double_pendulum.py,43,v.model.stat.center[2],not
+gym/gym/envs/atari/atari_env.py,61,Tune (or disable) ALE's action repeat:,not
+gym/gym/envs/atari/atari_env.py,62,https://github.com/openai/gym/issues/349,not
+gym/gym/envs/atari/atari_env.py,85,"Derive a random seed. This gets passed as a uint, but gets",not
+gym/gym/envs/atari/atari_env.py,86,"checked as an int elsewhere, so we need to keep it below",not
+gym/gym/envs/atari/atari_env.py,87,2**31.,not
+gym/gym/envs/atari/atari_env.py,89,"Empirically, we need to seed before loading the ROM.",not
+gym/gym/envs/atari/atari_env.py,142,"return: (states, observations)",not
+gym/tests/gym/wrappers/flatten_test.py,88,make sure that unflatten(flatten(original)) == original,not
+gym/tests/gym/wrappers/flatten_test.py,94,make sure that the values were flattened in the order they appeared in the,not
+gym/tests/gym/wrappers/flatten_test.py,95,OrderedDict,not
+gym/tests/gym/wrappers/nested_dict_test.py,82,Make sure we are testing the right environment for the test.,not
+gym/scripts/generate_json.py,28,Skip platform-dependent,not
+gym/scripts/generate_json.py,33,Skip environments that are nondeterministic,not
+gym/scripts/generate_json.py,43,"If running the env generates an exception, don't write to the rollout file",not
+gym/examples/agents/_policies.py,1,Support code for cem.py,not
+gym/examples/agents/keyboard_agent.py,1,!/usr/bin/env python,not
+gym/examples/agents/keyboard_agent.py,4,,not
+gym/examples/agents/keyboard_agent.py,5,"Test yourself as a learning agent! Pass environment name as a command-line argument, for example:",not
+gym/examples/agents/keyboard_agent.py,6,,not
+gym/examples/agents/keyboard_agent.py,7,python keyboard_agent.py SpaceInvadersNoFrameskip-v4,not
+gym/examples/agents/keyboard_agent.py,8,,not
+gym/examples/agents/keyboard_agent.py,15,"Use previous control decision SKIP_CONTROL times, that's how you",not
+gym/examples/agents/keyboard_agent.py,16,can test what skip is still usable.,not
+gym/examples/agents/keyboard_agent.py,50,"print(""taking action {}"".format(human_agent_action))",not
+gym/examples/agents/cem.py,7,Different file so it can be unpickled,not
+gym/examples/agents/cem.py,66,You provide the directory to write to (can be an existing,not
+gym/examples/agents/cem.py,67,"directory, but can't contain previous monitor results. You can",not
+gym/examples/agents/cem.py,68,also dump to a tempdir if you'd like: tempfile.mkdtemp().,not
+gym/examples/agents/cem.py,72,Prepare snapshotting,not
+gym/examples/agents/cem.py,73,----------------------------------------,not
+gym/examples/agents/cem.py,80,------------------------------------------,not
+gym/examples/agents/cem.py,87,"Train the agent, and snapshot each stage",not
+gym/examples/agents/cem.py,95,Write out the env at the end so we store the parameters of this,not
+gym/examples/agents/cem.py,96,environment.,not
+gym/examples/agents/random_agent.py,20,You can set the level to logger.DEBUG or logger.WARN if you,not
+gym/examples/agents/random_agent.py,21,want to change the amount of output.,not
+gym/examples/agents/random_agent.py,26,You provide the directory to write to (can be an existing,not
+gym/examples/agents/random_agent.py,27,"directory, including one with existing data -- all monitor files",not
+gym/examples/agents/random_agent.py,28,will be namespaced). You can also dump to a tempdir if you'd,not
+gym/examples/agents/random_agent.py,29,like: tempfile.mkdtemp().,not
+gym/examples/agents/random_agent.py,46,Note there's no env.render() here. But the environment still can open window and,not
+gym/examples/agents/random_agent.py,47,render if asked by env.monitor: it calls env.render('rgb_array') to record video.,not
+gym/examples/agents/random_agent.py,48,"Video is not recorded every episode, see capped_cubic_video_schedule for details.",not
+gym/examples/agents/random_agent.py,50,Close the env and write monitor result info to disk,not

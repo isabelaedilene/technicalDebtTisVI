@@ -1,7 +1,6 @@
-from csv import writer
 from datetime import datetime as dt
 from logging import DEBUG, INFO
-from os import getcwd, listdir, makedirs
+from os import getcwd, listdir, makedirs, system
 from os.path import exists
 from shutil import rmtree
 
@@ -34,7 +33,7 @@ def get_comments(index: int, name: str, repo_path: str = repos_path):
     dt_satd = dt.now()
     py_project = Python(f"{repo_path}/{name}")
     py_project.export_csv(f"{comment_path}/{name}.csv")
-    tdelta = str(dt.now() - dt_satd).split('.')[0]
+    tdelta = str(dt.now() - dt_satd).split(".")[0]
 
     log_msg = f"#{index}\t | Analyzed: {name} | Timedelta: {tdelta}"
     log.info(log_msg)
@@ -45,42 +44,64 @@ def get_comments(index: int, name: str, repo_path: str = repos_path):
     return True
 
 
+# Checking CSV type
+df = pd.read_csv("python_repos.csv")
+try:
+    df["name"]
+except KeyError:
+    field = "nameWithOwner"
+else:
+    field = "name"
+
 # Cloning repositories and getting its comments
-df = pd.read_csv("python_repositories.csv")
-for i, repo in enumerate(zip(df["name"], df["url"])):
-    repo_name = repo[0]
+for i, repo in enumerate(zip(df[field], df["url"])):
+    if field == "nameWithOwner":
+        repo_name = repo[0].split("/")[1]
+    else:
+        repo_name = repo[0]
     if f"{repo_name}.csv" in listdir(comment_path):
         log.debug(f"Skipping {repo_name}. Already cloned and indexed.")
         continue
     repo_url = repo[1]
     log.info(f"#{i}\t | Project: {repo_name}")
-    project_path = clone_repository(i, repo_name, repo_url, repos_path)
-    get_comments(i, repo_name)
+    if clone_repository(i, repo_name, repo_url, repos_path):
+        get_comments(i, repo_name)
+    else:
+        log.error(f"Failed to clone repository ({repo_name}). Skipping...")
+        system(
+            f"touch {comment_path}/{repo_name}.csv")  # Adding blank CSV to avoid re-cloning and re-analyzing project
+        continue
 log.info("Done cloning repositories and indexing comments")
 
 # Detecting SATDs in comments
-with open(f"{getcwd()}/ALL_comments.csv", "w") as final_csv:
-    csv_w = writer(final_csv)
-    csv_w.writerow(("project name", "file path", "line #", "comment", "satd"))
-    for i, csv in enumerate(listdir(comment_path)):
-        log.info(f"#{i}\t | SATD detection on project: {csv.strip('.csv')}")
-        df = pd.read_csv(f"{comment_path}/{csv}")
-        if df["comment"].to_string(header = False, index = False) == "Series([], )":
-            log.warning("No comments registered! Skipping...")
-            continue
-        with open(f"{comment_path}/{csv.replace('.csv', '.txt')}", "w") as cf:
-            cf.write(df["comment"].to_string(header = False, index = False))
-        satd_detector(f"{comment_path}/{csv.replace('.csv', '.txt')}")
-        with open(f"{comment_path}/{csv.replace('.csv', '.txt.result')}", "r") as cf:
-            satd_result = cf.read().splitlines()
-        for i, satd in enumerate(satd_result):
-            csv_w.writerow(
-                (
-                    csv.strip(".csv"),
-                    df["file path"][i],
-                    df["line #"][i],
-                    df["comment"][i],
-                    satd
-                )
-            )
+for i, file_ in enumerate(listdir(comment_path)):
+    if not file_.endswith(".csv"):
+        continue
+    elif file_.replace("csv", "txt.result") in listdir(comment_path):
+        continue
+
+    try:
+        df = pd.read_csv(f"{comment_path}/{file_}")
+    except pd.errors.EmptyDataError:
+        log.warning("No comments registered! Skipping...")
+        with open(f"{getcwd()}/no_comments.txt", "a") as nc:
+            nc.write(f"{file_.replace('.csv', '')}\n")
+        continue
+
+    log.info(f"#{i}\t | SATD detection on project: {file_.replace('.csv', '')}")
+
+    if df["comment"].to_string(header=False, index=False) == "Series([], )":
+        log.warning("No comments registered! Skipping...")
+        with open(f"{getcwd()}/no_comments.txt", "a") as nc:
+            nc.write(f"{file_.replace('.csv', '')}\n")
+        continue
+
+    with open(f"{comment_path}/{file_.replace('.csv', '.txt')}", "w") as cf:
+        cf.write(df["comment"].to_string(header=False, index=False))
+    satd_detector(f"{comment_path}/{file_.replace('.csv', '.txt')}")
+    with open(f"{comment_path}/{file_.replace('.csv', '.txt.result')}", "r") as cf:
+        df["satd"] = cf.read().splitlines()
+    df.to_csv(f"{comment_path}/{file_}", mode="w", index=False)
+
 log.info("Finished everything.")
+

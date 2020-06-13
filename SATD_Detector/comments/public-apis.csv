@@ -1,29 +1,29 @@
 file path,line #,comment,satd
-public-apis/build/validate_links.py,1,!/usr/bin/env python3,
-public-apis/build/validate_links.py,29,check if status code is a client or server error,
-public-apis/build/validate_format.py,1,!/usr/bin/env python3,
-public-apis/build/validate_format.py,60,START Title,
-public-apis/build/validate_format.py,63,url should be wrapped in '[TITLE](LINK)' Markdown syntax,
-public-apis/build/validate_format.py,67,"do not allow ""... API"" in the entry title",
-public-apis/build/validate_format.py,71,do not allow duplicate links,
-public-apis/build/validate_format.py,77,END Title,
-public-apis/build/validate_format.py,78,START Description,
-public-apis/build/validate_format.py,79,first character should be capitalized,
-public-apis/build/validate_format.py,83,last character should not punctuation,
-public-apis/build/validate_format.py,90,END Description,
-public-apis/build/validate_format.py,91,START Auth,
-public-apis/build/validate_format.py,92,values should conform to valid options only,
-public-apis/build/validate_format.py,98,END Auth,
-public-apis/build/validate_format.py,99,START HTTPS,
-public-apis/build/validate_format.py,100,values should conform to valid options only,
-public-apis/build/validate_format.py,104,END HTTPS,
-public-apis/build/validate_format.py,105,START CORS,
-public-apis/build/validate_format.py,106,values should conform to valid options only,
-public-apis/build/validate_format.py,110,END CORS,
-public-apis/build/validate_format.py,121,START Check Entries,
-public-apis/build/validate_format.py,128,check each section for the minimum number of entries,
-public-apis/build/validate_format.py,143,skips lines that we do not care about,
-public-apis/build/validate_format.py,152,START Global,
-public-apis/build/validate_format.py,154,every line segment should start and end with exactly 1 space,
-public-apis/build/validate_format.py,157,END Global,
-public-apis/build/validate_format.py,160,END Check Entries,
+public-apis/build/validate_links.py,1,!/usr/bin/env python3,not
+public-apis/build/validate_links.py,29,check if status code is a client or server error,not
+public-apis/build/validate_format.py,1,!/usr/bin/env python3,not
+public-apis/build/validate_format.py,60,START Title,not
+public-apis/build/validate_format.py,63,url should be wrapped in '[TITLE](LINK)' Markdown syntax,not
+public-apis/build/validate_format.py,67,"do not allow ""... API"" in the entry title",not
+public-apis/build/validate_format.py,71,do not allow duplicate links,not
+public-apis/build/validate_format.py,77,END Title,not
+public-apis/build/validate_format.py,78,START Description,not
+public-apis/build/validate_format.py,79,first character should be capitalized,not
+public-apis/build/validate_format.py,83,last character should not punctuation,not
+public-apis/build/validate_format.py,90,END Description,not
+public-apis/build/validate_format.py,91,START Auth,not
+public-apis/build/validate_format.py,92,values should conform to valid options only,not
+public-apis/build/validate_format.py,98,END Auth,not
+public-apis/build/validate_format.py,99,START HTTPS,not
+public-apis/build/validate_format.py,100,values should conform to valid options only,not
+public-apis/build/validate_format.py,104,END HTTPS,not
+public-apis/build/validate_format.py,105,START CORS,not
+public-apis/build/validate_format.py,106,values should conform to valid options only,not
+public-apis/build/validate_format.py,110,END CORS,not
+public-apis/build/validate_format.py,121,START Check Entries,not
+public-apis/build/validate_format.py,128,check each section for the minimum number of entries,not
+public-apis/build/validate_format.py,143,skips lines that we do not care about,not
+public-apis/build/validate_format.py,152,START Global,not
+public-apis/build/validate_format.py,154,every line segment should start and end with exactly 1 space,not
+public-apis/build/validate_format.py,157,END Global,not
+public-apis/build/validate_format.py,160,END Check Entries,not

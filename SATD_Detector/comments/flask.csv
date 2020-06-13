@@ -1,827 +1,827 @@
 file path,line #,comment,satd
-flask/setup.py,8,Metadata goes in setup.cfg. These are here for GitHub's dependency graph.,
-flask/src/,56,In case just a slash was appended we can be extra helpful,
-flask/src/,6,a singleton sentinel value for parameter defaults,
-flask/src/,18,: a reference to the current application,
-flask/src/,21,: a reference to the blueprint that created this setup state.,
-flask/src/,24,: a dictionary with all options that were passed to the,
-flask/src/,25,: :meth:`~flask.Flask.register_blueprint` method.,
-flask/src/,28,: as blueprints can be registered multiple times with the,
-flask/src/,29,: application and not everything wants to be registered,
-flask/src/,30,": multiple times on it, this attribute can be used to figure",
-flask/src/,31,: out if the blueprint was registered in the past already.,
-flask/src/,38,": The subdomain that the blueprint should be active for, ``None``",
-flask/src/,39,: otherwise.,
-flask/src/,45,: The prefix that should be used for all URLs defined on the,
-flask/src/,46,: blueprint.,
-flask/src/,49,: A dictionary with URL defaults that is added to each and every,
-flask/src/,50,: URL that was defined with the blueprint.,
-flask/src/,135,: Blueprint local JSON decoder class to use.,
-flask/src/,136,: Set to ``None`` to use the app's :class:`~flask.app.Flask.json_encoder`.,
-flask/src/,138,: Blueprint local JSON decoder class to use.,
-flask/src/,139,: Set to ``None`` to use the app's :class:`~flask.app.Flask.json_decoder`.,
-flask/src/,142,TODO remove the next three attrs when Sphinx :inherited-members: works,
-flask/src/,143,https://github.com/sphinx-doc/sphinx/issues/741,
-flask/src/,145,: The name of the package or module that this app belongs to. Do not,
-flask/src/,146,: change this once it is set by the constructor.,
-flask/src/,149,: Location of the template files to be added to the template lookup.,
-flask/src/,150,: ``None`` if templates should not be added.,
-flask/src/,153,: Absolute path to the package on the filesystem. Used to look up,
-flask/src/,154,: resources contained in the package.,
-flask/src/,27,: Some implementations can detect whether a session is newly,
-flask/src/,28,": created, but that is not guaranteed. Use with caution. The mixin",
-flask/src/,29,default is hard-coded ``False``.,
-flask/src/,32,: Some implementations can detect changes to the session and set,
-flask/src/,33,: this when that happens. The mixin default is hard coded to,
-flask/src/,34,: ``True``.,
-flask/src/,37,: Some implementations can detect when session data is read or,
-flask/src/,38,: written and set this when that happens. The mixin default is hard,
-flask/src/,39,: coded to ``True``.,
-flask/src/,52,": When data is changed, this is set to ``True``. Only the session",
-flask/src/,53,: dictionary itself is tracked; if the session contains mutable,
-flask/src/,54,: data (for example a nested dict) then this must be set to,
-flask/src/,55,: ``True`` manually when modifying that data. The session cookie,
-flask/src/,56,: will only be written to the response if this is ``True``.,
-flask/src/,59,": When data is read or written, this is set to ``True``. Used by",
-flask/src/,60,:class:`.SecureCookieSessionInterface` to add a ``Vary: Cookie``,
-flask/src/,61,": header, which allows caching proxies to cache different pages for",
-flask/src/,62,: different users.,
-flask/src/,132,: :meth:`make_null_session` will look here for the class that should,
-flask/src/,133,: be created when a null session is requested.  Likewise the,
-flask/src/,134,: :meth:`is_null_session` method will perform a typecheck against,
-flask/src/,135,: this type.,
-flask/src/,138,: A flag that indicates if the session interface is pickle based.,
-flask/src/,139,: This can be used by Flask extensions to make a decision in regards,
-flask/src/,140,: to how to deal with the session object.,
-flask/src/,141,:,
-flask/src/,142,: .. versionadded:: 0.10,
-flask/src/,185,"set explicitly, or cached from SERVER_NAME detection",
-flask/src/,186,"if False, return None",
-flask/src/,192,"server name not set, cache False to return none next time",
-flask/src/,197,chop off the port which is usually not supported by browsers,
-flask/src/,198,remove any leading '.' since we'll add that later,
-flask/src/,202,Chrome doesn't allow names without a '.'. This should only,
-flask/src/,203,come up with localhost. Hack around this by not setting,
-flask/src/,204,"the name, and show a warning.",
-flask/src/,223,"if this is not an ip and app is mounted at the root, allow subdomain",
-flask/src/,224,matching by adding a '.' prefix,
-flask/src/,309,: the salt that should be applied on top of the secret key for the,
-flask/src/,310,: signing of cookie based sessions.,
-flask/src/,312,: the hash function to use for the signature.  The default is sha1,
-flask/src/,314,: the name of the itsdangerous supported key derivation.  The default,
-flask/src/,315,: is hmac.,
-flask/src/,317,: A python serializer for the payload.  The default is a compact,
-flask/src/,318,: JSON derived serializer with support for some extra Python types,
-flask/src/,319,: such as datetime objects or tuples.,
-flask/src/,355,"If the session is modified to be empty, remove the cookie.",
-flask/src/,356,"If the session is empty, return without setting the cookie.",
-flask/src/,363,"Add a ""Vary: Cookie"" header if the session was accessed at all.",
-flask/src/,41,: Log messages to :func:`~flask.logging.wsgi_errors_stream` with the format,
-flask/src/,42,: ``[%(asctime)s] %(levelname)s in %(module)s: %(message)s``.,
-flask/src/,38,"The namespace for code signals.  If you are not Flask code, do",
-flask/src/,39,not put signals in here.  Create your own namespace instead.,
-flask/src/,43,Core signals.  For usage examples grep the source code or consult,
-flask/src/,44,the API documentation in docs/api.rst as well as docs/signals.rst,
-flask/src/,41,: A list of methods this view can handle.,
-flask/src/,44,: Setting this disables or force-enables the automatic options handling.,
-flask/src/,47,: The canonical way to decorate class-based views is to decorate the,
-flask/src/,48,: return value of as_view().  However since this moves parts of the,
-flask/src/,49,: logic from the class declaration to the place where it's hooked,
-flask/src/,50,: into the routing system.,
-flask/src/,51,:,
-flask/src/,52,: You can place one or more decorators in this list and whenever the,
-flask/src/,53,: view function is created the result is automatically decorated.,
-flask/src/,54,:,
-flask/src/,55,: .. versionadded:: 0.8,
-flask/src/,86,We attach the view class to the view function for two reasons:,
-flask/src/,87,first of all it allows us to easily figure out what class-based,
-flask/src/,88,"view this thing came from, secondly it's also used for instantiating",
-flask/src/,89,the view class so you can actually replace it with something else,
-flask/src/,90,for testing purposes and debugging.,
-flask/src/,119,If we have no method at all in there we don't want to add a,
-flask/src/,120,method list. This is for instance the case for the base class,
-flask/src/,121,or another subclass of a base method view that does not introduce,
-flask/src/,122,new methods.,
-flask/src/,146,If the request method is HEAD and we don't have a handler for it,
-flask/src/,147,retry with GET.,
-flask/src/,45,context locals,
-flask/src/,30,sentinel,
-flask/src/,34,what separators does this operating system provide that are not a slash?,
-flask/src/,35,this is used by the send_from_directory function to ensure that nobody is,
-flask/src/,36,able to access files from outside the filesystem.,
-flask/src/,139,Dummy sentinel.  Has to be inside the context block or we're,
-flask/src/,140,not actually keeping the context around.,
-flask/src/,143,The try/finally is here so that if someone passes a WSGI level,
-flask/src/,144,iterator in we're still running the cleanup logic.  Generators,
-flask/src/,145,don't need that because they are closed on their destruction,
-flask/src/,146,automatically.,
-flask/src/,153,The trick is to start the generator.  Then the code execution runs until,
-flask/src/,154,the first dummy None is yielded at which point the context was already,
-flask/src/,155,pushed.  This item is discarded.  Then when the iteration continues the,
-flask/src/,156,real generator is executed.,
-flask/src/,297,If request specific information is available we have some extra,
-flask/src/,298,"features that support ""relative"" URLs.",
-flask/src/,311,Otherwise go with the url adapter from the appctx and make,
-flask/src/,312,the URLs external by default.,
-flask/src/,330,This is not the best way to deal with this but currently the,
-flask/src/,331,underlying Werkzeug router does not support overriding the scheme on,
-flask/src/,332,a per build call basis.,
-flask/src/,349,We need to inject the values again so that the app callback can,
-flask/src/,350,deal with that sort of stuff.,
-flask/src/,399,Original implementation:,
-flask/src/,400,,
-flask/src/,401,"session.setdefault('_flashes', []).append((category, message))",
-flask/src/,402,,
-flask/src/,403,This assumed that changes made to mutable structures in the session are,
-flask/src/,404,"always in sync with the session object, which is not true for session",
-flask/src/,405,implementations that use external storage for keeping their keys/values.,
-flask/src/,679,make sure we don't send x-sendfile for servers that,
-flask/src/,680,ignore the 304 status code for x-sendfile.,
-flask/src/,770,Module already imported and has a file attribute.  Use that first.,
-flask/src/,775,Next attempt: check the loader.,
-flask/src/,778,Loader does not exist or we're referring to an unloaded main module,
-flask/src/,779,"or a main module without path (interactive sessions), go with the",
-flask/src/,780,current working directory.,
-flask/src/,787,Fall back to imports.,
-flask/src/,792,If we don't have a filepath it might be because we are a,
-flask/src/,793,namespace package.  In this case we pick the root path from the,
-flask/src/,794,first module that is contained in our package.,
-flask/src/,805,"filepath is import_name.py for a module, or __init__.py for a package.",
-flask/src/,814,"If the loader can tell us if something is a package, we can",
-flask/src/,815,directly ask the loader.,
-flask/src/,818,importlib's namespace loaders do not have this functionality but,
-flask/src/,819,"all the modules it loads are packages, so we can take advantage of",
-flask/src/,820,this information.,
-flask/src/,823,Otherwise we need to fail with an error that explains what went,
-flask/src/,824,wrong.,
-flask/src/,839,ImportError: the machinery told us it does not exist,
-flask/src/,840,ValueError:,
-flask/src/,841,- the module name was invalid,
-flask/src/,842,- the module name is __main__,
-flask/src/,843,- *we* raised `ValueError` due to `spec` being `None`,
-flask/src/,845,handled below,
-flask/src/,847,namespace package,
-flask/src/,850,a package (with __init__.py),
-flask/src/,853,just a normal module,
-flask/src/,857,we were unable to find the `package_path` using PEP 451 loaders,
-flask/src/,860,"import name is not found, or interactive/main module",
-flask/src/,866,zipimporter's loader.archive points to the .egg or .zip,
-flask/src/,867,archive filename is dropped in call to dirname below.,
-flask/src/,870,At least one loader is missing both get_filename and archive:,
-flask/src/,871,Google App Engine's HardenedModulesHook,
-flask/src/,872,,
-flask/src/,873,Fall back to imports.,
-flask/src/,878,In case the root module is a package we need to chop of the,
-flask/src/,879,rightmost part. This needs to go through a helper function,
-flask/src/,880,because of namespace packages.,
-flask/src/,903,Windows like installations,
-flask/src/,906,UNIX like installations,
-flask/src/,942,: The name of the package or module that this app belongs to. Do not,
-flask/src/,943,: change this once it is set by the constructor.,
-flask/src/,946,: Location of the template files to be added to the template lookup.,
-flask/src/,947,: ``None`` if templates should not be added.,
-flask/src/,950,: Absolute path to the package on the filesystem. Used to look up,
-flask/src/,951,: resources contained in the package.,
-flask/src/,965,circular import,
-flask/src/,968,: The Click command group for registration of CLI commands,
-flask/src/,969,: on the application and associated blueprints. These commands,
-flask/src/,970,: are accessible via the :command:`flask` command once the,
-flask/src/,971,: application has been discovered and blueprints registered.,
-flask/src/,1059,Ensure get_send_file_max_age is called in all cases.,
-flask/src/,1060,"Here, we ensure get_send_file_max_age is called for Blueprints.",
-flask/src/,56,a singleton sentinel value for parameter defaults,
-flask/src/,184,: The class that is used for request objects.  See :class:`~flask.Request`,
-flask/src/,185,: for more information.,
-flask/src/,188,: The class that is used for response objects.  See,
-flask/src/,189,: :class:`~flask.Response` for more information.,
-flask/src/,192,: The class that is used for the Jinja environment.,
-flask/src/,193,:,
-flask/src/,194,: .. versionadded:: 0.11,
-flask/src/,197,: The class that is used for the :data:`~flask.g` instance.,
-flask/src/,198,:,
-flask/src/,199,: Example use cases for a custom class:,
-flask/src/,200,:,
-flask/src/,201,: 1. Store arbitrary attributes on flask.g.,
-flask/src/,202,: 2. Add a property for lazy per-request database connectors.,
-flask/src/,203,: 3. Return None instead of AttributeError on unexpected attributes.,
-flask/src/,204,": 4. Raise exception if an unexpected attr is set, a ""controlled"" flask.g.",
-flask/src/,205,:,
-flask/src/,206,: In Flask 0.9 this property was called `request_globals_class` but it,
-flask/src/,207,: was changed in 0.10 to :attr:`app_ctx_globals_class` because the,
-flask/src/,208,: flask.g object is now application context scoped.,
-flask/src/,209,:,
-flask/src/,210,: .. versionadded:: 0.10,
-flask/src/,213,: The class that is used for the ``config`` attribute of this app.,
-flask/src/,214,: Defaults to :class:`~flask.Config`.,
-flask/src/,215,:,
-flask/src/,216,: Example use cases for a custom class:,
-flask/src/,217,:,
-flask/src/,218,: 1. Default values for certain config options.,
-flask/src/,219,: 2. Access to config values through attributes in addition to keys.,
-flask/src/,220,:,
-flask/src/,221,: .. versionadded:: 0.11,
-flask/src/,224,: The testing flag.  Set this to ``True`` to enable the test mode of,
-flask/src/,225,: Flask extensions (and in the future probably also Flask itself).,
-flask/src/,226,: For example this might activate test helpers that have an,
-flask/src/,227,: additional runtime cost which should not be enabled by default.,
-flask/src/,228,:,
-flask/src/,229,: If this is enabled and PROPAGATE_EXCEPTIONS is not changed from the,
-flask/src/,230,: default it's implicitly enabled.,
-flask/src/,231,:,
-flask/src/,232,: This attribute can also be configured from the config with the,
-flask/src/,233,: ``TESTING`` configuration key.  Defaults to ``False``.,
-flask/src/,236,": If a secret key is set, cryptographic components can use this to",
-flask/src/,237,: sign cookies and other things. Set this to a complex random value,
-flask/src/,238,: when you want to use the secure cookie for instance.,
-flask/src/,239,:,
-flask/src/,240,: This attribute can also be configured from the config with the,
-flask/src/,241,: :data:`SECRET_KEY` configuration key. Defaults to ``None``.,
-flask/src/,244,: The secure cookie uses this for the name of the session cookie.,
-flask/src/,245,:,
-flask/src/,246,: This attribute can also be configured from the config with the,
-flask/src/,247,: ``SESSION_COOKIE_NAME`` configuration key.  Defaults to ``'session'``,
-flask/src/,250,: A :class:`~datetime.timedelta` which is used to set the expiration,
-flask/src/,251,: date of a permanent session.  The default is 31 days which makes a,
-flask/src/,252,: permanent session survive for roughly one month.,
-flask/src/,253,:,
-flask/src/,254,: This attribute can also be configured from the config with the,
-flask/src/,255,: ``PERMANENT_SESSION_LIFETIME`` configuration key.  Defaults to,
-flask/src/,256,: ``timedelta(days=31)``,
-flask/src/,261,: A :class:`~datetime.timedelta` which is used as default cache_timeout,
-flask/src/,262,: for the :func:`send_file` functions. The default is 12 hours.,
-flask/src/,263,:,
-flask/src/,264,: This attribute can also be configured from the config with the,
-flask/src/,265,: ``SEND_FILE_MAX_AGE_DEFAULT`` configuration key. This configuration,
-flask/src/,266,: variable can also be set with an integer value used as seconds.,
-flask/src/,267,: Defaults to ``timedelta(hours=12)``,
-flask/src/,272,: Enable this if you want to use the X-Sendfile feature.  Keep in,
-flask/src/,273,: mind that the server has to support this.  This only affects files,
-flask/src/,274,: sent with the :func:`send_file` method.,
-flask/src/,275,:,
-flask/src/,276,: .. versionadded:: 0.2,
-flask/src/,277,:,
-flask/src/,278,: This attribute can also be configured from the config with the,
-flask/src/,279,: ``USE_X_SENDFILE`` configuration key.  Defaults to ``False``.,
-flask/src/,282,: The JSON encoder class to use.  Defaults to :class:`~flask.json.JSONEncoder`.,
-flask/src/,283,:,
-flask/src/,284,: .. versionadded:: 0.10,
-flask/src/,287,: The JSON decoder class to use.  Defaults to :class:`~flask.json.JSONDecoder`.,
-flask/src/,288,:,
-flask/src/,289,: .. versionadded:: 0.10,
-flask/src/,292,: Options that are passed to the Jinja environment in,
-flask/src/,293,: :meth:`create_jinja_environment`. Changing these options after,
-flask/src/,294,: the environment is created (accessing :attr:`jinja_env`) will,
-flask/src/,295,: have no effect.,
-flask/src/,296,:,
-flask/src/,297,: .. versionchanged:: 1.1.0,
-flask/src/,298,:     This is a ``dict`` instead of an ``ImmutableDict`` to allow,
-flask/src/,299,:     easier configuration.,
-flask/src/,300,:,
-flask/src/,303,: Default configuration parameters.,
-flask/src/,338,: The rule object to use for URL rules created.  This is used by,
-flask/src/,339,: :meth:`add_url_rule`.  Defaults to :class:`werkzeug.routing.Rule`.,
-flask/src/,340,:,
-flask/src/,341,: .. versionadded:: 0.7,
-flask/src/,344,: The map object to use for storing the URL rules and routing,
-flask/src/,345,: configuration parameters. Defaults to :class:`werkzeug.routing.Map`.,
-flask/src/,346,:,
-flask/src/,347,: .. versionadded:: 1.1.0,
-flask/src/,350,: the test client that is used with when `test_client` is used.,
-flask/src/,351,:,
-flask/src/,352,: .. versionadded:: 0.7,
-flask/src/,355,": The :class:`~click.testing.CliRunner` subclass, by default",
-flask/src/,356,: :class:`~flask.testing.FlaskCliRunner` that is used by,
-flask/src/,357,: :meth:`test_cli_runner`. Its ``__init__`` method should take a,
-flask/src/,358,: Flask app object as the first argument.,
-flask/src/,359,:,
-flask/src/,360,: .. versionadded:: 1.0,
-flask/src/,363,: the session interface to use.  By default an instance of,
-flask/src/,364,: :class:`~flask.sessions.SecureCookieSessionInterface` is used here.,
-flask/src/,365,:,
-flask/src/,366,: .. versionadded:: 0.8,
-flask/src/,369,TODO remove the next three attrs when Sphinx :inherited-members: works,
-flask/src/,370,https://github.com/sphinx-doc/sphinx/issues/741,
-flask/src/,372,: The name of the package or module that this app belongs to. Do not,
-flask/src/,373,: change this once it is set by the constructor.,
-flask/src/,376,: Location of the template files to be added to the template lookup.,
-flask/src/,377,: ``None`` if templates should not be added.,
-flask/src/,380,: Absolute path to the package on the filesystem. Used to look up,
-flask/src/,381,: resources contained in the package.,
-flask/src/,412,: Holds the path to the instance folder.,
-flask/src/,413,:,
-flask/src/,414,: .. versionadded:: 0.8,
-flask/src/,417,: The configuration dictionary as :class:`Config`.  This behaves,
-flask/src/,418,: exactly like a regular dictionary but supports additional methods,
-flask/src/,419,: to load a config from files.,
-flask/src/,422,: A dictionary of all view functions registered.  The keys will,
-flask/src/,423,: be function names which are also used to generate URLs and,
-flask/src/,424,: the values are the function objects themselves.,
-flask/src/,425,": To register a view function, use the :meth:`route` decorator.",
-flask/src/,428,: A dictionary of all registered error handlers.  The key is ``None``,
-flask/src/,429,": for error handlers active on the application, otherwise the key is",
-flask/src/,430,: the name of the blueprint.  Each key points to another dictionary,
-flask/src/,431,: where the key is the status code of the http exception.  The,
-flask/src/,432,: special key ``None`` points to a list of tuples where the first item,
-flask/src/,433,: is the class for the instance check and the second the error handler,
-flask/src/,434,: function.,
-flask/src/,435,:,
-flask/src/,436,": To register an error handler, use the :meth:`errorhandler`",
-flask/src/,437,: decorator.,
-flask/src/,440,: A list of functions that are called when :meth:`url_for` raises a,
-flask/src/,441,: :exc:`~werkzeug.routing.BuildError`.  Each function registered here,
-flask/src/,442,": is called with `error`, `endpoint` and `values`.  If a function",
-flask/src/,443,: returns ``None`` or raises a :exc:`BuildError` the next function is,
-flask/src/,444,: tried.,
-flask/src/,445,:,
-flask/src/,446,: .. versionadded:: 0.9,
-flask/src/,449,: A dictionary with lists of functions that will be called at the,
-flask/src/,450,: beginning of each request. The key of the dictionary is the name of,
-flask/src/,451,": the blueprint this function is active for, or ``None`` for all",
-flask/src/,452,": requests. To register a function, use the :meth:`before_request`",
-flask/src/,453,: decorator.,
-flask/src/,456,: A list of functions that will be called at the beginning of the,
-flask/src/,457,": first request to this instance. To register a function, use the",
-flask/src/,458,: :meth:`before_first_request` decorator.,
-flask/src/,459,:,
-flask/src/,460,: .. versionadded:: 0.8,
-flask/src/,463,: A dictionary with lists of functions that should be called after,
-flask/src/,464,: each request.  The key of the dictionary is the name of the blueprint,
-flask/src/,465,": this function is active for, ``None`` for all requests.  This can for",
-flask/src/,466,: example be used to close database connections. To register a function,
-flask/src/,467,": here, use the :meth:`after_request` decorator.",
-flask/src/,470,: A dictionary with lists of functions that are called after,
-flask/src/,471,": each request, even if an exception has occurred. The key of the",
-flask/src/,472,": dictionary is the name of the blueprint this function is active for,",
-flask/src/,473,: ``None`` for all requests. These functions are not allowed to modify,
-flask/src/,474,": the request, and their return values are ignored. If an exception",
-flask/src/,475,": occurred while processing the request, it gets passed to each",
-flask/src/,476,": teardown_request function. To register a function here, use the",
-flask/src/,477,: :meth:`teardown_request` decorator.,
-flask/src/,478,:,
-flask/src/,479,: .. versionadded:: 0.7,
-flask/src/,482,: A list of functions that are called when the application context,
-flask/src/,483,: is destroyed.  Since the application context is also torn down,
-flask/src/,484,: if the request ends this is the place to store code that disconnects,
-flask/src/,485,: from databases.,
-flask/src/,486,:,
-flask/src/,487,: .. versionadded:: 0.9,
-flask/src/,490,: A dictionary with lists of functions that are called before the,
-flask/src/,491,: :attr:`before_request_funcs` functions. The key of the dictionary is,
-flask/src/,492,": the name of the blueprint this function is active for, or ``None``",
-flask/src/,493,": for all requests. To register a function, use",
-flask/src/,494,: :meth:`url_value_preprocessor`.,
-flask/src/,495,:,
-flask/src/,496,: .. versionadded:: 0.7,
-flask/src/,499,: A dictionary with lists of functions that can be used as URL value,
-flask/src/,500,: preprocessors.  The key ``None`` here is used for application wide,
-flask/src/,501,": callbacks, otherwise the key is the name of the blueprint.",
-flask/src/,502,: Each of these functions has the chance to modify the dictionary,
-flask/src/,503,: of URL values before they are used as the keyword arguments of the,
-flask/src/,504,: view function.  For each function registered this one should also,
-flask/src/,505,: provide a :meth:`url_defaults` function that adds the parameters,
-flask/src/,506,: automatically again that were removed that way.,
-flask/src/,507,:,
-flask/src/,508,: .. versionadded:: 0.7,
-flask/src/,511,: A dictionary with list of functions that are called without argument,
-flask/src/,512,: to populate the template context.  The key of the dictionary is the,
-flask/src/,513,": name of the blueprint this function is active for, ``None`` for all",
-flask/src/,514,: requests.  Each returns a dictionary that the template context is,
-flask/src/,515,": updated with.  To register a function here, use the",
-flask/src/,516,: :meth:`context_processor` decorator.,
-flask/src/,519,: A list of shell context processor functions that should be run,
-flask/src/,520,: when a shell context is created.,
-flask/src/,521,:,
-flask/src/,522,: .. versionadded:: 0.11,
-flask/src/,525,: all the attached blueprints in a dictionary by name.  Blueprints,
-flask/src/,526,: can be attached multiple times so this dictionary does not tell,
-flask/src/,527,: you how often they got attached.,
-flask/src/,528,:,
-flask/src/,529,: .. versionadded:: 0.7,
-flask/src/,533,: a place where extensions can store application specific state.  For,
-flask/src/,534,: example this is where an extension could store database engines and,
-flask/src/,535,: similar things.,
-flask/src/,536,:,
-flask/src/,537,: The key must match the name of the extension module. For example in,
-flask/src/,538,": case of a ""Flask-Foo"" extension in `flask_foo`, the key would be",
-flask/src/,539,: ``'foo'``.,
-flask/src/,540,:,
-flask/src/,541,: .. versionadded:: 0.7,
-flask/src/,544,: The :class:`~werkzeug.routing.Map` for this instance.  You can use,
-flask/src/,545,: this to change the routing converters after the class was created,
-flask/src/,546,: but before any routes are connected.  Example::,
-flask/src/,547,:,
-flask/src/,548,:    from werkzeug.routing import BaseConverter,
-flask/src/,549,:,
-flask/src/,550,:    class ListConverter(BaseConverter):,
-flask/src/,551,":        def to_python(self, value):",
-flask/src/,552,":            return value.split(',')",
-flask/src/,553,":        def to_url(self, values):",
-flask/src/,554,":            return ','.join(super(ListConverter, self).to_url(value)",
-flask/src/,555,:                            for value in values),
-flask/src/,556,:,
-flask/src/,557,:    app = Flask(__name__),
-flask/src/,558,:    app.url_map.converters['list'] = ListConverter,
-flask/src/,564,tracks internally if the application already handled at least one,
-flask/src/,565,request.,
-flask/src/,569,"Add a static route using the provided static_url_path, static_host,",
-flask/src/,570,and static_folder if there is a configured static_folder.,
-flask/src/,571,Note we do this without checking if static_folder exists.,
-flask/src/,572,"For one, it might be created while the server is running (e.g. during",
-flask/src/,573,"development). Also, Google App Engine stores static files somewhere",
-flask/src/,585,Set the name of the Click group in case someone wants to add,
-flask/src/,586,the app's commands to another CLI tool.,
-flask/src/,763,"request, session and g are normally added with the",
-flask/src/,764,context processor for efficiency reasons but for imported,
-flask/src/,765,templates we also want the proxies in there.,
-flask/src/,816,make sure the original values win.  This makes it possible to,
-flask/src/,817,easier add new variables in context processors without breaking,
-flask/src/,818,existing views.,
-flask/src/,833,: What environment the app is running in. Flask and extensions may,
-flask/src/,834,": enable behaviors based on the environment, such as enabling debug",
-flask/src/,835,: mode. This maps to the :data:`ENV` config key. This is set by the,
-flask/src/,836,: :envvar:`FLASK_ENV` environment variable and may not behave as,
-flask/src/,837,: expected if set in code.,
-flask/src/,838,:,
-flask/src/,839,: **Do not enable development when deploying in production.**,
-flask/src/,840,:,
-flask/src/,841,: Default: ``'production'``,
-flask/src/,924,Change this into a no-op if the server is invoked from the,
-flask/src/,925,command line. Have a look at cli.py for more information.,
-flask/src/,935,"if set, let env vars override previous values",
-flask/src/,942,debug passed to method overrides all other sources,
-flask/src/,976,reset the first request information if the development server,
-flask/src/,977,reset normally.  This makes it possible to restart the server,
-flask/src/,978,without reloader and that stuff from an interactive shell.,
-flask/src/,1164,if the methods are not given and the view_func object knows its,
-flask/src/,1165,"methods we can use that instead.  If neither exists, we go with",
-flask/src/,1166,a tuple of only ``GET`` as default.,
-flask/src/,1176,Methods that should always be added,
-flask/src/,1179,starting with Flask 0.8 the view_func object can disable and,
-flask/src/,1180,force-enable the automatic options handling.,
-flask/src/,1193,Add the required methods now.,
-flask/src/,1334,old broken behavior,
-flask/src/,1652,Proxy exceptions don't have error codes.  We want to always return,
-flask/src/,1653,those unchanged as errors,
-flask/src/,1657,RoutingExceptions are used internally to trigger routing,
-flask/src/,1658,"actions, such as slash redirects raising RequestRedirect. They",
-flask/src/,1659,are not raised or handled in user code.,
-flask/src/,1690,"if unset, trap key errors in debug mode",
-flask/src/,1722,Werkzeug < 0.15 doesn't add the KeyError to the 400,
-flask/src/,1723,"message, add it in manually.",
-flask/src/,1724,TODO: clean up once Werkzeug >= 0.15.5 is required,
-flask/src/,1778,"Re-raise if called with an active exception, otherwise",
-flask/src/,1779,raise the passed in exception.,
-flask/src/,1787,TODO: pass as param when Werkzeug>=1.0.0 is required,
-flask/src/,1788,TODO: also remove note about this from docstring and docs,
-flask/src/,1842,if we provide automatic options for this URL and the,
-flask/src/,1843,"request came with the OPTIONS method, reply automatically",
-flask/src/,1849,otherwise dispatch to the handler for that endpoint,
-flask/src/,1978,unpack tuple returns,
-flask/src/,1982,a 3-tuple is unpacked directly,
-flask/src/,1985,decide if a 2-tuple has status or headers,
-flask/src/,1991,other sized tuples are not allowed,
-flask/src/,1999,the body must not be None,
-flask/src/,2007,make sure the body is an instance of the response class,
-flask/src/,2010,let the response class set the status and headers instead of,
-flask/src/,2011,"waiting to do it manually, so that the class can handle any",
-flask/src/,2012,special logic,
-flask/src/,2018,"evaluate a WSGI callable, or coerce a different response",
-flask/src/,2019,class to the correct type,
-flask/src/,2037,prefer the status if it was provided,
-flask/src/,2044,extend existing headers with provided headers,
-flask/src/,2066,"If subdomain matching is disabled (the default), use the",
-flask/src/,2067,default subdomain in all cases. This should be the default,
-flask/src/,2068,in Werkzeug but it currently does not have that feature.,
-flask/src/,2079,We need at the very least the server name to be set for this,
-flask/src/,2080,to work.,
-flask/src/,2110,make error available outside except block,
-flask/src/,2116,"Re-raise if called with an active exception, otherwise raise",
-flask/src/,2117,the passed in exception.,
-flask/src/,2355,noqa: B001,
-flask/src/,43,Search for the most common names first.,
-flask/src/,50,Otherwise find the only object that is a Flask instance.,
-flask/src/,62,Search for app factory functions.,
-flask/src/,134,"In the function, it was called successfully.",
-flask/src/,139,Didn't reach the function.,
-flask/src/,142,Delete tb to break a circular reference.,
-flask/src/,143,https://docs.python.org/2/library/sys.html#sys.exc_info,
-flask/src/,153,Parse app_name as a single expression to determine if it's a valid,
-flask/src/,154,attribute name or function call.,
-flask/src/,166,Ensure the function name is an attribute name only.,
-flask/src/,174,Parse the positional and keyword arguments as literals.,
-flask/src/,179,"literal_eval gives cryptic error messages, show a generic",
-flask/src/,180,message with the full expression instead.,
-flask/src/,196,"If the attribute is a function, call it with any args and kwargs",
-flask/src/,197,to get the real application.,
-flask/src/,237,move up until outside package structure (no __init__.py),
-flask/src/,252,noqa: F841,
-flask/src/,257,Reraise the ImportError if it occurred within the imported module.,
-flask/src/,258,Determine this by checking whether the trace has a depth > 1.,
-flask/src/,326,noqa: F841,
-flask/src/,337,noqa: F841,
-flask/src/,344,noqa: F841,
-flask/src/,350,noqa: F841,
-flask/src/,372,: Optionally the import path for the Flask application.,
-flask/src/,374,: Optionally a function that is passed the script info to create,
-flask/src/,375,: the instance of the application.,
-flask/src/,377,: A dictionary with arbitrary data that can be associated with,
-flask/src/,378,: this script info.,
-flask/src/,388,noqa: F841,
-flask/src/,418,Update the app's debug flag through the descriptor so that,
-flask/src/,419,other values repopulate as well.,
-flask/src/,540,We load built-in commands first as these should always be the,
-flask/src/,541,same no matter what the app does.  If the app does want to,
-flask/src/,542,override this it needs to make a custom instance of this group,
-flask/src/,543,and not attach the default commands.,
-flask/src/,544,,
-flask/src/,545,This also means that the script stays functional in case the,
-flask/src/,546,application completely fails.,
-flask/src/,562,The commands available is the list of both the application (if,
-flask/src/,563,available) plus the builtin commands.,
-flask/src/,569,Here we intentionally swallow all exceptions as we don't,
-flask/src/,570,want the help page to break if the app does not exist.,
-flask/src/,571,If someone attempts to use the command we try to create,
-flask/src/,572,the app again and this will give us the error.,
-flask/src/,573,"However, we will not do so silently because that would confuse",
-flask/src/,574,users.,
-flask/src/,579,Set a global flag that indicates that we were invoked from the,
-flask/src/,580,command line interface. This is detected by Flask.run to make the,
-flask/src/,581,call into a no-op. This is necessary to avoid ugly errors when the,
-flask/src/,582,script that is loaded here also attempts to start a server.,
-flask/src/,641,"if the given path specifies the actual file then return True,",
-flask/src/,642,else False,
-flask/src/,665,at least one file was located and loaded,
-flask/src/,723,noqa: F401,
-flask/src/,887,Support the regular Python interpreter startup script if someone,
-flask/src/,888,is using it.,
-flask/src/,966,TODO omit sys.argv once https://github.com/pallets/click/issues/536 is fixed,
-flask/src/,33,: The internal URL rule that matched the request.  This can be,
-flask/src/,34,: useful to inspect which methods are allowed for the URL from,
-flask/src/,35,: a before/after handler (``request.url_rule.methods``) etc.,
-flask/src/,36,": Though if the request's method was invalid for the URL rule,",
-flask/src/,37,: the valid list is available in ``routing_exception.valid_methods``,
-flask/src/,38,: instead (an attribute of the Werkzeug exception,
-flask/src/,39,: :exc:`~werkzeug.exceptions.MethodNotAllowed`),
-flask/src/,40,: because the request was never internally bound.,
-flask/src/,41,:,
-flask/src/,42,: .. versionadded:: 0.6,
-flask/src/,45,: A dict of view arguments that matched the request.  If an exception,
-flask/src/,46,": happened when matching, this will be ``None``.",
-flask/src/,49,": If matching the URL failed, this is the exception that will be",
-flask/src/,50,: raised / was raised as part of the request handling.  This is,
-flask/src/,51,: usually a :exc:`~werkzeug.exceptions.NotFound` exception or,
-flask/src/,52,: something similar.,
-flask/src/,80,In debug mode we're replacing the files multidict with an ad-hoc,
-flask/src/,81,subclass that raises a different error for key errors.,
-flask/src/,126,return Werkzeug's default when not in an app context,
-flask/src/,143,Since we have to open a new request context for the session,
-flask/src/,144,handling we want to make sure that we hide out own context,
-flask/src/,145,from the caller.  By pushing the original request context,
-flask/src/,146,(or None) on top of this and popping it we get exactly that,
-flask/src/,147,behavior.  It's important to not use the push and pop,
-flask/src/,148,methods of the actual request context object since that would,
-flask/src/,149,mean that cleanup handlers are called,
-flask/src/,209,Normally the request context is preserved until the next,
-flask/src/,210,request in the same thread comes. When the client exits we,
-flask/src/,211,want to clean up earlier. Pop request contexts until the stack,
-flask/src/,212,is empty or a non-preserved one is found.,
-flask/src/,12,a singleton sentinel value for parameter defaults,
-flask/src/,207,"Like request context, app contexts can be pushed multiple times",
-flask/src/,208,"but there a basic ""refcount"" is enough to track them.",
-flask/src/,281,Request contexts can be pushed multiple times and interleaved with,
-flask/src/,282,other request contexts.  Now only if the last level is popped we,
-flask/src/,283,get rid of them.  Additionally if an application context is missing,
-flask/src/,284,one is created implicitly so for each level we add this information,
-flask/src/,287,indicator if the context was preserved.  Next time another context,
-flask/src/,288,is pushed the preserved context is popped.,
-flask/src/,291,remembers the exception for pop if there is one in case the context,
-flask/src/,292,preservation kicks in.,
-flask/src/,295,Functions that should be executed after the request on the response,
-flask/src/,296,"object.  These will be called before the regular ""after_request""",
-flask/src/,297,functions.,
-flask/src/,340,If an exception occurs in debug mode or if context preservation is,
-flask/src/,341,activated under exception situations exactly one context stays,
-flask/src/,342,on the stack.  The rationale is that you want to access that,
-flask/src/,343,information under debug situations.  However if someone forgets to,
-flask/src/,344,pop that context again we want to make sure that on the next push,
-flask/src/,345,"it's invalidated, otherwise we run at risk that something leaks",
-flask/src/,346,memory.  This is usually only a problem in test suite since this,
-flask/src/,347,functionality is not active in production environments.,
-flask/src/,352,Before we push the request context we have to ensure that there,
-flask/src/,353,is an application context.,
-flask/src/,364,Open the session at the moment that the request context is available.,
-flask/src/,365,This allows a custom open_session method to use the request context.,
-flask/src/,366,Only open a new session if this is the first time the request was,
-flask/src/,367,"pushed, otherwise stream_with_context loses the session.",
-flask/src/,404,get rid of circular dependencies at the end of the request,
-flask/src/,405,so that we don't require the GC to be active.,
-flask/src/,409,Get rid of the app as well if necessary.,
-flask/src/,431,do not pop the request stack if we are in debug mode and an,
-flask/src/,432,exception happened.  This will allow the debugger to still,
-flask/src/,433,access the request object in the interactive shell.  Furthermore,
-flask/src/,434,the context can be force kept alive for the test client.,
-flask/src/,435,See flask.testing for how this works.,
-flask/src/,17,Python < 3.7,
-flask/src/,329,single args are passed directly to dumps(),
-flask/src/,61,": The tag to mark the serialized object with. If ``None``, this tag is",
-flask/src/,62,: only used as an intermediate step during tagging.,
-flask/src/,122,"JSON objects may only have string keys, so don't bother tagging the",
-flask/src/,123,key here.,
-flask/src/,232,: Tag classes to bind when creating the serializer. Other tags can be,
-flask/src/,233,: added later using :meth:`~register`.,
-flask/tests/test_reqctx.py,83,suppress Werkzeug 0.15 warning about name mismatch,
-flask/tests/test_reqctx.py,214,shouldn't get here,
-flask/tests/test_reqctx.py,225,This session interface will use a cookie with a different name if the,
-flask/tests/test_reqctx.py,226,"requested url ends with the string ""dynamic_cookie""",
-flask/tests/test_reqctx.py,262,first set the cookie in both /set urls but each with a different value,
-flask/tests/test_reqctx.py,269,now check that the relevant values come back - meaning that different,
-flask/tests/test_reqctx.py,270,"cookies are being used for the urls that end with ""dynamic cookie""",
-flask/tests/test_reqctx.py,283,use a non-printable character in the Host - this is key to this test,
-flask/tests/test_reqctx.py,303,these characters are all IDNA-compatible,
-flask/tests/test_helpers.py,251,"noqa: B903, for Python2 compatibility",
-flask/tests/test_helpers.py,590,https://github.com/pallets/flask/issues/2526,
-flask/tests/test_helpers.py,651,""":/"" are not safe in filename* value",
-flask/tests/test_helpers.py,668,default cache timeout is 12 hours,
-flask/tests/test_helpers.py,670,Test with static file handler.,
-flask/tests/test_helpers.py,675,Test again with direct use of send_file utility.,
-flask/tests/test_helpers.py,682,Test with static file handler.,
-flask/tests/test_helpers.py,687,Test again with direct use of send_file utility.,
-flask/tests/test_helpers.py,693,Test with static file handler.,
-flask/tests/test_helpers.py,705,Test with static file handler.,
-flask/tests/test_helpers.py,710,Test again with direct use of send_file utility.,
-flask/tests/test_helpers.py,902,Valid combinations of *args and expected joined paths.,
-flask/tests/test_helpers.py,910,If last path is '' add a slash,
-flask/tests/test_helpers.py,912,Preserve dot slash,
-flask/tests/test_helpers.py,915,Base directory is always considered safe,
-flask/tests/test_helpers.py,924,Should raise werkzeug.exceptions.NotFound on unsafe joins.,
-flask/tests/test_helpers.py,926,path.isabs and ``..'' checks,
-flask/tests/test_helpers.py,930,Boundaries violations after path normalization,
-flask/tests/test_json_tag.py,43,"noqa: B903, for Python2 compatibility",
-flask/tests/test_templating.py,341,should skip this one,
-flask/tests/test_templating.py,342,should render this,
-flask/tests/test_templating.py,353,"debug is False, config option is None",
-flask/tests/test_templating.py,357,"debug is False, config option is False",
-flask/tests/test_templating.py,362,"debug is False, config option is True",
-flask/tests/test_templating.py,367,"debug is True, config option is None",
-flask/tests/test_templating.py,372,"debug is True, config option is False",
-flask/tests/test_templating.py,377,"debug is True, config option is True",
-flask/tests/test_regression.py,19,Force Python to track this dictionary at all times.,
-flask/tests/test_regression.py,20,This is necessary since Python only starts tracking,
-flask/tests/test_regression.py,21,"dicts if they contain mutable objects.  It's a horrible,",
-flask/tests/test_regression.py,22,horrible hack but makes this kinda testable.,
-flask/tests/test_regression.py,51,Trigger caches,
-flask/tests/test_blueprints.py,196,"try/finally, in case other tests use this app for Blueprint tests.",
-flask/tests/test_blueprints.py,233,"try/finally, in case other tests use this app for Blueprint tests.",
-flask/tests/test_blueprints.py,397,The rule's didn't actually made it through,
-flask/tests/test_blueprints.py,696,noqa: E731,
-flask/tests/test_blueprints.py,701,App global context processor,
-flask/tests/test_blueprints.py,706,Blueprint local context processor,
-flask/tests/test_blueprints.py,711,Setup endpoints for testing,
-flask/tests/test_blueprints.py,720,Register the blueprint,
-flask/tests/test_blueprints.py,740,Make sure the function is not in the jinja_env already,
-flask/tests/test_blueprints.py,744,Tests,
-flask/tests/test_blueprints.py,772,Setup routes for testing,
-flask/tests/test_blueprints.py,809,Setup routes for testing,
-flask/tests/test_blueprints.py,814,before first request,
-flask/tests/test_blueprints.py,817,first request,
-flask/tests/test_blueprints.py,822,second request,
-flask/tests/test_blueprints.py,831,Register app-wide url defaults and preprocessor on blueprint,
-flask/tests/test_blueprints.py,840,Register route rules at the app level,
-flask/tests/conftest.py,85,make sure we're not leaking a request context since we are,
-flask/tests/conftest.py,86,testing flask internally in debug mode in a few cases,
-flask/tests/test_views.py,185,But these tests should still pass. We just log a warning.,
-flask/tests/test_testing.py,301,Request should be in JSON,
-flask/tests/test_testing.py,305,Response should be in JSON,
-flask/tests/test_testing.py,386,invoke with command name,
-flask/tests/test_testing.py,389,invoke with command object,
-flask/tests/test_testing.py,415,"stream_with_context pushes a third context, preserved by client",
-flask/tests/test_testing.py,418,"req_ctx fixture pushed an initial context, not marked preserved",
-flask/tests/test_testing.py,420,"request pushes a second request context, preserved by client",
-flask/tests/test_testing.py,423,only req_ctx fixture should still be pushed,
-flask/tests/test_appctx.py,133,get,
-flask/tests/test_appctx.py,136,__contains__,
-flask/tests/test_appctx.py,140,setdefault,
-flask/tests/test_appctx.py,144,pop,
-flask/tests/test_appctx.py,149,__iter__,
-flask/tests/test_appctx.py,151,__repr__,
-flask/tests/test_cli.py,1,This file was part of Flask-CLI and was modified under the terms of,
-flask/tests/test_cli.py,2,its Revised BSD License. Copyright © 2015 CERN.,
-flask/tests/test_cli.py,47,noqa: B950,
-flask/tests/test_cli.py,157,nested package,
-flask/tests/test_cli.py,168,dotted name,
-flask/tests/test_cli.py,171,"not a Python file, will be caught during import",
-flask/tests/test_cli.py,207,trailing comma space,
-flask/tests/test_cli.py,209,strip whitespace,
-flask/tests/test_cli.py,224,not enough arguments,
-flask/tests/test_cli.py,226,invalid identifier,
-flask/tests/test_cli.py,228,no app returned,
-flask/tests/test_cli.py,230,nested import error,
-flask/tests/test_cli.py,232,not a Python file,
-flask/tests/test_cli.py,248,only direct import error is suppressed,
-flask/tests/test_cli.py,280,import app with module's absolute path,
-flask/tests/test_cli.py,304,import app from wsgi.py in current directory,
-flask/tests/test_cli.py,314,import app from app.py in current directory,
-flask/tests/test_cli.py,458,skip the header and match the start of each row,
-flask/tests/test_cli.py,460,do this instead of startswith for nicer pytest output,
-flask/tests/test_cli.py,502,can't use monkeypatch.delitem since the keys don't exist yet,
-flask/tests/test_cli.py,510,.flaskenv doesn't overwrite .env,
-flask/tests/test_cli.py,512,set only in .flaskenv,
-flask/tests/test_cli.py,514,set only in .env,
-flask/tests/test_cli.py,516,"set manually, files don't overwrite",
-flask/tests/test_cli.py,519,Non existent file should not load,
-flask/tests/test_cli.py,550,no key,
-flask/tests/test_cli.py,554,no cert,
-flask/tests/test_cli.py,565,cryptography not installed,
-flask/tests/test_cli.py,569,cryptography installed,
-flask/tests/test_cli.py,574,no key with adhoc,
-flask/tests/test_cli.py,582,ImportError,
-flask/tests/test_cli.py,589,SSLContext,
-flask/tests/test_cli.py,596,no --key with SSLContext,
-flask/tests/test_user_error_handler.py,199,Don't handle RequestRedirect raised when adding slash.,
-flask/tests/test_config.py,11,config keys used for the TestConfig,
-flask/tests/test_basic.py,89,head truncates,
-flask/tests/test_basic.py,116,head truncates,
-flask/tests/test_basic.py,147,Issue 1288: Test that automatic options are not added,
-flask/tests/test_basic.py,148,when non-uppercase 'options' in methods,
-flask/tests/test_basic.py,157,head truncates,
-flask/tests/test_basic.py,543,The 'Vary' key should exist in the headers only once.,
-flask/tests/test_basic.py,568,"Be sure app.testing=True below, else tests can fail silently.",
-flask/tests/test_basic.py,569,,
-flask/tests/test_basic.py,570,"Specifically, if app.testing is not set to True, the AssertionErrors",
-flask/tests/test_basic.py,571,in the view functions will cause a 500 response to the test client,
-flask/tests/test_basic.py,572,instead of propagating exceptions.,
-flask/tests/test_basic.py,629,Create new test client on each test to clean flashed messages.,
-flask/tests/test_basic.py,759,"This raises a new error and blows away sys.exc_info(), so we can",
-flask/tests/test_basic.py,760,test that all teardown_requests get passed the same original,
-flask/tests/test_basic.py,761,exception.,
-flask/tests/test_basic.py,771,"This raises a new error and blows away sys.exc_info(), so we can",
-flask/tests/test_basic.py,772,test that all teardown_requests get passed the same original,
-flask/tests/test_basic.py,773,exception.,
-flask/tests/test_basic.py,1082,with statement is important because we leave an exception on the,
-flask/tests/test_basic.py,1083,stack otherwise and we want to ensure that this is not the case,
-flask/tests/test_basic.py,1084,to not negatively affect other tests.,
-flask/tests/test_basic.py,1313,"Test base case, a URL which results in a BuildError.",
-flask/tests/test_basic.py,1317,Verify the error is re-raised if not the current exception.,
-flask/tests/test_basic.py,1328,Test a custom handler.,
-flask/tests/test_basic.py,1330,Just a test.,
-flask/tests/test_basic.py,1339,Test a custom handler which reraises the BuildError,
-flask/tests/test_basic.py,1429,Providing static_host without host_matching=True should error.,
-flask/tests/test_basic.py,1432,Providing host_matching=True with static_folder,
-flask/tests/test_basic.py,1433,but without static_host should error.,
-flask/tests/test_basic.py,1436,Providing host_matching=True without static_host,
-flask/tests/test_basic.py,1437,but with static_folder=None should not error.,
-flask/tests/test_basic.py,1471,Werkzeug 1.0 fixes matching https scheme with 443 port,
-flask/tests/test_basic.py,1479,suppress Werkzeug 1.0 warning about name mismatch,
-flask/tests/test_basic.py,1501,we have to run this test in an isolated thread because if the,
-flask/tests/test_basic.py,1502,debug flag is set to true and an exception happens the context is,
-flask/tests/test_basic.py,1503,not torn down.  This causes other tests that run after this fail,
-flask/tests/test_basic.py,1504,when they expect no exception on the stack.,
-flask/tests/test_basic.py,1520,Mocks werkzeug.serving.run_simple method,
-flask/tests/test_basic.py,1734,implicit appctx disappears too,
-flask/tests/test_basic.py,1756,After this failure we did not yet call the teardown handler,
-flask/tests/test_basic.py,1761,"But this request triggers it, and it's an error",
-flask/tests/test_basic.py,1766,At this point another request does nothing.,
-flask/tests/test_basic.py,1844,suppress Werkzeug 0.15 warning about name mismatch,
-flask/tests/test_basic.py,1846,ip address can't match name,
-flask/tests/test_basic.py,1850,allow all subdomains if matching is disabled,
-flask/tests/test_basic.py,1886,Mocks werkzeug.serving.run_simple method,
-flask/tests/test_basic.py,1898,Mocks werkzeug.serving.run_simple method,
-flask/tests/test_basic.py,1935,"outside app context, default to Werkzeug static value,",
-flask/tests/test_basic.py,1936,which is also the default config,
-flask/tests/test_basic.py,1941,"inside app context, use app config",
-flask/tests/test_apps/helloworld/wsgi.py,1,noqa: F401,
-flask/examples/tutorial/tests/conftest.py,10,read in SQL for populating test data,
-flask/examples/tutorial/tests/conftest.py,18,create a temporary file to isolate the database for each test,
-flask/examples/tutorial/tests/conftest.py,20,create the app with common test config,
-flask/examples/tutorial/tests/conftest.py,23,create the database and load test data,
-flask/examples/tutorial/tests/conftest.py,30,close and remove the temporary database,
-flask/examples/tutorial/tests/test_auth.py,9,test that viewing the page renders without template errors,
-flask/examples/tutorial/tests/test_auth.py,12,test that successful registration redirects to the login page,
-flask/examples/tutorial/tests/test_auth.py,16,test that the user was inserted into the database,
-flask/examples/tutorial/tests/test_auth.py,40,test that viewing the page renders without template errors,
-flask/examples/tutorial/tests/test_auth.py,43,test that successful login redirects to the index page,
-flask/examples/tutorial/tests/test_auth.py,47,login request set the user_id in the session,
-flask/examples/tutorial/tests/test_auth.py,48,check that the user is loaded from the session,
-flask/examples/tutorial/tests/test_blog.py,26,change the post author to another user,
-flask/examples/tutorial/tests/test_blog.py,33,current user can't modify other user's post,
-flask/examples/tutorial/tests/test_blog.py,36,current user doesn't see edit link,
-flask/examples/tutorial/,70,"the name is available, store it in the database and go to",
-flask/examples/tutorial/,71,the login page,
-flask/examples/tutorial/,102,store the user id in a new session and return to the index,
-flask/examples/tutorial/,10,a default secret that should be overridden by instance config,
-flask/examples/tutorial/,12,store the database in the instance folder,
-flask/examples/tutorial/,17,"load the instance config, if it exists, when not testing",
-flask/examples/tutorial/,20,load the test config if passed in,
-flask/examples/tutorial/,23,ensure the instance folder exists,
-flask/examples/tutorial/,33,register the database commands,
-flask/examples/tutorial/,38,apply the blueprints to the app,
-flask/examples/tutorial/,44,make url_for('index') == url_for('blog.index'),
-flask/examples/tutorial/,45,"in another app, you might define a separate main index here with",
-flask/examples/tutorial/,46,"app.route, while giving the blog blueprint a url_prefix, but for",
-flask/examples/tutorial/,47,the tutorial the blog will be the main index,
-flask/examples/javascript/js_example/__init__.py,5,noqa: F401,
-flask/docs/conf.py,5,Project --------------------------------------------------------------,
-flask/docs/conf.py,12,General --------------------------------------------------------------,
-flask/docs/conf.py,34,HTML -----------------------------------------------------------------,
-flask/docs/conf.py,58,LaTeX ----------------------------------------------------------------,
-flask/docs/conf.py,62,Local Extensions -----------------------------------------------------,
+flask/setup.py,8,Metadata goes in setup.cfg. These are here for GitHub's dependency graph.,not
+flask/src/flask/debughelpers.py,56,In case just a slash was appended we can be extra helpful,not
+flask/src/flask/blueprints.py,6,a singleton sentinel value for parameter defaults,not
+flask/src/flask/blueprints.py,18,: a reference to the current application,not
+flask/src/flask/blueprints.py,21,: a reference to the blueprint that created this setup state.,not
+flask/src/flask/blueprints.py,24,: a dictionary with all options that were passed to the,not
+flask/src/flask/blueprints.py,25,: :meth:`~flask.Flask.register_blueprint` method.,not
+flask/src/flask/blueprints.py,28,: as blueprints can be registered multiple times with the,not
+flask/src/flask/blueprints.py,29,: application and not everything wants to be registered,not
+flask/src/flask/blueprints.py,30,": multiple times on it, this attribute can be used to figure",not
+flask/src/flask/blueprints.py,31,: out if the blueprint was registered in the past already.,not
+flask/src/flask/blueprints.py,38,": The subdomain that the blueprint should be active for, ``None``",not
+flask/src/flask/blueprints.py,39,: otherwise.,not
+flask/src/flask/blueprints.py,45,: The prefix that should be used for all URLs defined on the,not
+flask/src/flask/blueprints.py,46,: blueprint.,not
+flask/src/flask/blueprints.py,49,: A dictionary with URL defaults that is added to each and every,not
+flask/src/flask/blueprints.py,50,: URL that was defined with the blueprint.,not
+flask/src/flask/blueprints.py,135,: Blueprint local JSON decoder class to use.,not
+flask/src/flask/blueprints.py,136,: Set to ``None`` to use the app's :class:`~flask.app.Flask.json_encoder`.,not
+flask/src/flask/blueprints.py,138,: Blueprint local JSON decoder class to use.,not
+flask/src/flask/blueprints.py,139,: Set to ``None`` to use the app's :class:`~flask.app.Flask.json_decoder`.,not
+flask/src/flask/blueprints.py,142,TODO remove the next three attrs when Sphinx :inherited-members: works,SATD
+flask/src/flask/blueprints.py,143,https://github.com/sphinx-doc/sphinx/issues/741,not
+flask/src/flask/blueprints.py,145,: The name of the package or module that this app belongs to. Do not,not
+flask/src/flask/blueprints.py,146,: change this once it is set by the constructor.,not
+flask/src/flask/blueprints.py,149,: Location of the template files to be added to the template lookup.,not
+flask/src/flask/blueprints.py,150,: ``None`` if templates should not be added.,not
+flask/src/flask/blueprints.py,153,: Absolute path to the package on the filesystem. Used to look up,not
+flask/src/flask/blueprints.py,154,: resources contained in the package.,not
+flask/src/flask/sessions.py,27,: Some implementations can detect whether a session is newly,not
+flask/src/flask/sessions.py,28,": created, but that is not guaranteed. Use with caution. The mixin",not
+flask/src/flask/sessions.py,29,default is hard-coded ``False``.,not
+flask/src/flask/sessions.py,32,: Some implementations can detect changes to the session and set,not
+flask/src/flask/sessions.py,33,: this when that happens. The mixin default is hard coded to,not
+flask/src/flask/sessions.py,34,: ``True``.,not
+flask/src/flask/sessions.py,37,: Some implementations can detect when session data is read or,not
+flask/src/flask/sessions.py,38,: written and set this when that happens. The mixin default is hard,not
+flask/src/flask/sessions.py,39,: coded to ``True``.,not
+flask/src/flask/sessions.py,52,": When data is changed, this is set to ``True``. Only the session",not
+flask/src/flask/sessions.py,53,: dictionary itself is tracked; if the session contains mutable,not
+flask/src/flask/sessions.py,54,: data (for example a nested dict) then this must be set to,not
+flask/src/flask/sessions.py,55,: ``True`` manually when modifying that data. The session cookie,not
+flask/src/flask/sessions.py,56,: will only be written to the response if this is ``True``.,not
+flask/src/flask/sessions.py,59,": When data is read or written, this is set to ``True``. Used by",not
+flask/src/flask/sessions.py,60,:class:`.SecureCookieSessionInterface` to add a ``Vary: Cookie``,not
+flask/src/flask/sessions.py,61,": header, which allows caching proxies to cache different pages for",not
+flask/src/flask/sessions.py,62,: different users.,not
+flask/src/flask/sessions.py,132,: :meth:`make_null_session` will look here for the class that should,not
+flask/src/flask/sessions.py,133,: be created when a null session is requested.  Likewise the,not
+flask/src/flask/sessions.py,134,: :meth:`is_null_session` method will perform a typecheck against,not
+flask/src/flask/sessions.py,135,: this type.,not
+flask/src/flask/sessions.py,138,: A flag that indicates if the session interface is pickle based.,not
+flask/src/flask/sessions.py,139,: This can be used by Flask extensions to make a decision in regards,not
+flask/src/flask/sessions.py,140,: to how to deal with the session object.,not
+flask/src/flask/sessions.py,141,:,not
+flask/src/flask/sessions.py,142,: .. versionadded:: 0.10,not
+flask/src/flask/sessions.py,185,"set explicitly, or cached from SERVER_NAME detection",not
+flask/src/flask/sessions.py,186,"if False, return None",not
+flask/src/flask/sessions.py,192,"server name not set, cache False to return none next time",not
+flask/src/flask/sessions.py,197,chop off the port which is usually not supported by browsers,not
+flask/src/flask/sessions.py,198,remove any leading '.' since we'll add that later,not
+flask/src/flask/sessions.py,202,Chrome doesn't allow names without a '.'. This should only,not
+flask/src/flask/sessions.py,203,come up with localhost. Hack around this by not setting,SATD
+flask/src/flask/sessions.py,204,"the name, and show a warning.",not
+flask/src/flask/sessions.py,223,"if this is not an ip and app is mounted at the root, allow subdomain",not
+flask/src/flask/sessions.py,224,matching by adding a '.' prefix,not
+flask/src/flask/sessions.py,309,: the salt that should be applied on top of the secret key for the,not
+flask/src/flask/sessions.py,310,: signing of cookie based sessions.,not
+flask/src/flask/sessions.py,312,: the hash function to use for the signature.  The default is sha1,not
+flask/src/flask/sessions.py,314,: the name of the itsdangerous supported key derivation.  The default,not
+flask/src/flask/sessions.py,315,: is hmac.,not
+flask/src/flask/sessions.py,317,: A python serializer for the payload.  The default is a compact,not
+flask/src/flask/sessions.py,318,: JSON derived serializer with support for some extra Python types,not
+flask/src/flask/sessions.py,319,: such as datetime objects or tuples.,not
+flask/src/flask/sessions.py,355,"If the session is modified to be empty, remove the cookie.",not
+flask/src/flask/sessions.py,356,"If the session is empty, return without setting the cookie.",not
+flask/src/flask/sessions.py,363,"Add a ""Vary: Cookie"" header if the session was accessed at all.",not
+flask/src/flask/logging.py,41,: Log messages to :func:`~flask.logging.wsgi_errors_stream` with the format,not
+flask/src/flask/logging.py,42,: ``[%(asctime)s] %(levelname)s in %(module)s: %(message)s``.,not
+flask/src/flask/signals.py,38,"The namespace for code signals.  If you are not Flask code, do",not
+flask/src/flask/signals.py,39,not put signals in here.  Create your own namespace instead.,not
+flask/src/flask/signals.py,43,Core signals.  For usage examples grep the source code or consult,not
+flask/src/flask/signals.py,44,the API documentation in docs/api.rst as well as docs/signals.rst,not
+flask/src/flask/views.py,41,: A list of methods this view can handle.,not
+flask/src/flask/views.py,44,: Setting this disables or force-enables the automatic options handling.,not
+flask/src/flask/views.py,47,: The canonical way to decorate class-based views is to decorate the,not
+flask/src/flask/views.py,48,: return value of as_view().  However since this moves parts of the,not
+flask/src/flask/views.py,49,: logic from the class declaration to the place where it's hooked,not
+flask/src/flask/views.py,50,: into the routing system.,not
+flask/src/flask/views.py,51,:,not
+flask/src/flask/views.py,52,: You can place one or more decorators in this list and whenever the,not
+flask/src/flask/views.py,53,: view function is created the result is automatically decorated.,not
+flask/src/flask/views.py,54,:,not
+flask/src/flask/views.py,55,: .. versionadded:: 0.8,not
+flask/src/flask/views.py,86,We attach the view class to the view function for two reasons:,not
+flask/src/flask/views.py,87,first of all it allows us to easily figure out what class-based,not
+flask/src/flask/views.py,88,"view this thing came from, secondly it's also used for instantiating",not
+flask/src/flask/views.py,89,the view class so you can actually replace it with something else,not
+flask/src/flask/views.py,90,for testing purposes and debugging.,not
+flask/src/flask/views.py,119,If we have no method at all in there we don't want to add a,not
+flask/src/flask/views.py,120,method list. This is for instance the case for the base class,not
+flask/src/flask/views.py,121,or another subclass of a base method view that does not introduce,not
+flask/src/flask/views.py,122,new methods.,not
+flask/src/flask/views.py,146,If the request method is HEAD and we don't have a handler for it,not
+flask/src/flask/views.py,147,retry with GET.,not
+flask/src/flask/globals.py,45,context locals,not
+flask/src/flask/helpers.py,30,sentinel,not
+flask/src/flask/helpers.py,34,what separators does this operating system provide that are not a slash?,not
+flask/src/flask/helpers.py,35,this is used by the send_from_directory function to ensure that nobody is,not
+flask/src/flask/helpers.py,36,able to access files from outside the filesystem.,not
+flask/src/flask/helpers.py,139,Dummy sentinel.  Has to be inside the context block or we're,not
+flask/src/flask/helpers.py,140,not actually keeping the context around.,not
+flask/src/flask/helpers.py,143,The try/finally is here so that if someone passes a WSGI level,not
+flask/src/flask/helpers.py,144,iterator in we're still running the cleanup logic.  Generators,not
+flask/src/flask/helpers.py,145,don't need that because they are closed on their destruction,not
+flask/src/flask/helpers.py,146,automatically.,not
+flask/src/flask/helpers.py,153,The trick is to start the generator.  Then the code execution runs until,not
+flask/src/flask/helpers.py,154,the first dummy None is yielded at which point the context was already,not
+flask/src/flask/helpers.py,155,pushed.  This item is discarded.  Then when the iteration continues the,not
+flask/src/flask/helpers.py,156,real generator is executed.,not
+flask/src/flask/helpers.py,297,If request specific information is available we have some extra,not
+flask/src/flask/helpers.py,298,"features that support ""relative"" URLs.",not
+flask/src/flask/helpers.py,311,Otherwise go with the url adapter from the appctx and make,not
+flask/src/flask/helpers.py,312,the URLs external by default.,not
+flask/src/flask/helpers.py,330,This is not the best way to deal with this but currently the,not
+flask/src/flask/helpers.py,331,underlying Werkzeug router does not support overriding the scheme on,not
+flask/src/flask/helpers.py,332,a per build call basis.,not
+flask/src/flask/helpers.py,349,We need to inject the values again so that the app callback can,not
+flask/src/flask/helpers.py,350,deal with that sort of stuff.,not
+flask/src/flask/helpers.py,399,Original implementation:,not
+flask/src/flask/helpers.py,400,,not
+flask/src/flask/helpers.py,401,"session.setdefault('_flashes', []).append((category, message))",not
+flask/src/flask/helpers.py,402,,not
+flask/src/flask/helpers.py,403,This assumed that changes made to mutable structures in the session are,not
+flask/src/flask/helpers.py,404,"always in sync with the session object, which is not true for session",not
+flask/src/flask/helpers.py,405,implementations that use external storage for keeping their keys/values.,not
+flask/src/flask/helpers.py,679,make sure we don't send x-sendfile for servers that,not
+flask/src/flask/helpers.py,680,ignore the 304 status code for x-sendfile.,not
+flask/src/flask/helpers.py,770,Module already imported and has a file attribute.  Use that first.,not
+flask/src/flask/helpers.py,775,Next attempt: check the loader.,not
+flask/src/flask/helpers.py,778,Loader does not exist or we're referring to an unloaded main module,not
+flask/src/flask/helpers.py,779,"or a main module without path (interactive sessions), go with the",not
+flask/src/flask/helpers.py,780,current working directory.,not
+flask/src/flask/helpers.py,787,Fall back to imports.,not
+flask/src/flask/helpers.py,792,If we don't have a filepath it might be because we are a,not
+flask/src/flask/helpers.py,793,namespace package.  In this case we pick the root path from the,not
+flask/src/flask/helpers.py,794,first module that is contained in our package.,not
+flask/src/flask/helpers.py,805,"filepath is import_name.py for a module, or __init__.py for a package.",not
+flask/src/flask/helpers.py,814,"If the loader can tell us if something is a package, we can",not
+flask/src/flask/helpers.py,815,directly ask the loader.,not
+flask/src/flask/helpers.py,818,importlib's namespace loaders do not have this functionality but,not
+flask/src/flask/helpers.py,819,"all the modules it loads are packages, so we can take advantage of",not
+flask/src/flask/helpers.py,820,this information.,not
+flask/src/flask/helpers.py,823,Otherwise we need to fail with an error that explains what went,not
+flask/src/flask/helpers.py,824,wrong.,not
+flask/src/flask/helpers.py,839,ImportError: the machinery told us it does not exist,not
+flask/src/flask/helpers.py,840,ValueError:,not
+flask/src/flask/helpers.py,841,- the module name was invalid,not
+flask/src/flask/helpers.py,842,- the module name is __main__,not
+flask/src/flask/helpers.py,843,- *we* raised `ValueError` due to `spec` being `None`,not
+flask/src/flask/helpers.py,845,handled below,not
+flask/src/flask/helpers.py,847,namespace package,not
+flask/src/flask/helpers.py,850,a package (with __init__.py),not
+flask/src/flask/helpers.py,853,just a normal module,not
+flask/src/flask/helpers.py,857,we were unable to find the `package_path` using PEP 451 loaders,not
+flask/src/flask/helpers.py,860,"import name is not found, or interactive/main module",not
+flask/src/flask/helpers.py,866,zipimporter's loader.archive points to the .egg or .zip,not
+flask/src/flask/helpers.py,867,archive filename is dropped in call to dirname below.,not
+flask/src/flask/helpers.py,870,At least one loader is missing both get_filename and archive:,not
+flask/src/flask/helpers.py,871,Google App Engine's HardenedModulesHook,not
+flask/src/flask/helpers.py,872,,not
+flask/src/flask/helpers.py,873,Fall back to imports.,not
+flask/src/flask/helpers.py,878,In case the root module is a package we need to chop of the,not
+flask/src/flask/helpers.py,879,rightmost part. This needs to go through a helper function,not
+flask/src/flask/helpers.py,880,because of namespace packages.,not
+flask/src/flask/helpers.py,903,Windows like installations,not
+flask/src/flask/helpers.py,906,UNIX like installations,not
+flask/src/flask/helpers.py,942,: The name of the package or module that this app belongs to. Do not,not
+flask/src/flask/helpers.py,943,: change this once it is set by the constructor.,not
+flask/src/flask/helpers.py,946,: Location of the template files to be added to the template lookup.,not
+flask/src/flask/helpers.py,947,: ``None`` if templates should not be added.,not
+flask/src/flask/helpers.py,950,: Absolute path to the package on the filesystem. Used to look up,not
+flask/src/flask/helpers.py,951,: resources contained in the package.,not
+flask/src/flask/helpers.py,965,circular import,not
+flask/src/flask/helpers.py,968,: The Click command group for registration of CLI commands,not
+flask/src/flask/helpers.py,969,: on the application and associated blueprints. These commands,not
+flask/src/flask/helpers.py,970,: are accessible via the :command:`flask` command once the,not
+flask/src/flask/helpers.py,971,: application has been discovered and blueprints registered.,not
+flask/src/flask/helpers.py,1059,Ensure get_send_file_max_age is called in all cases.,not
+flask/src/flask/helpers.py,1060,"Here, we ensure get_send_file_max_age is called for Blueprints.",not
+flask/src/flask/app.py,56,a singleton sentinel value for parameter defaults,not
+flask/src/flask/app.py,184,: The class that is used for request objects.  See :class:`~flask.Request`,not
+flask/src/flask/app.py,185,: for more information.,not
+flask/src/flask/app.py,188,: The class that is used for response objects.  See,not
+flask/src/flask/app.py,189,: :class:`~flask.Response` for more information.,not
+flask/src/flask/app.py,192,: The class that is used for the Jinja environment.,not
+flask/src/flask/app.py,193,:,not
+flask/src/flask/app.py,194,: .. versionadded:: 0.11,not
+flask/src/flask/app.py,197,: The class that is used for the :data:`~flask.g` instance.,not
+flask/src/flask/app.py,198,:,not
+flask/src/flask/app.py,199,: Example use cases for a custom class:,not
+flask/src/flask/app.py,200,:,not
+flask/src/flask/app.py,201,: 1. Store arbitrary attributes on flask.g.,not
+flask/src/flask/app.py,202,: 2. Add a property for lazy per-request database connectors.,not
+flask/src/flask/app.py,203,: 3. Return None instead of AttributeError on unexpected attributes.,not
+flask/src/flask/app.py,204,": 4. Raise exception if an unexpected attr is set, a ""controlled"" flask.g.",not
+flask/src/flask/app.py,205,:,not
+flask/src/flask/app.py,206,: In Flask 0.9 this property was called `request_globals_class` but it,not
+flask/src/flask/app.py,207,: was changed in 0.10 to :attr:`app_ctx_globals_class` because the,not
+flask/src/flask/app.py,208,: flask.g object is now application context scoped.,not
+flask/src/flask/app.py,209,:,not
+flask/src/flask/app.py,210,: .. versionadded:: 0.10,not
+flask/src/flask/app.py,213,: The class that is used for the ``config`` attribute of this app.,not
+flask/src/flask/app.py,214,: Defaults to :class:`~flask.Config`.,not
+flask/src/flask/app.py,215,:,not
+flask/src/flask/app.py,216,: Example use cases for a custom class:,not
+flask/src/flask/app.py,217,:,not
+flask/src/flask/app.py,218,: 1. Default values for certain config options.,not
+flask/src/flask/app.py,219,: 2. Access to config values through attributes in addition to keys.,not
+flask/src/flask/app.py,220,:,not
+flask/src/flask/app.py,221,: .. versionadded:: 0.11,not
+flask/src/flask/app.py,224,: The testing flag.  Set this to ``True`` to enable the test mode of,not
+flask/src/flask/app.py,225,: Flask extensions (and in the future probably also Flask itself).,not
+flask/src/flask/app.py,226,: For example this might activate test helpers that have an,not
+flask/src/flask/app.py,227,: additional runtime cost which should not be enabled by default.,not
+flask/src/flask/app.py,228,:,not
+flask/src/flask/app.py,229,: If this is enabled and PROPAGATE_EXCEPTIONS is not changed from the,not
+flask/src/flask/app.py,230,: default it's implicitly enabled.,not
+flask/src/flask/app.py,231,:,not
+flask/src/flask/app.py,232,: This attribute can also be configured from the config with the,not
+flask/src/flask/app.py,233,: ``TESTING`` configuration key.  Defaults to ``False``.,not
+flask/src/flask/app.py,236,": If a secret key is set, cryptographic components can use this to",not
+flask/src/flask/app.py,237,: sign cookies and other things. Set this to a complex random value,not
+flask/src/flask/app.py,238,: when you want to use the secure cookie for instance.,not
+flask/src/flask/app.py,239,:,not
+flask/src/flask/app.py,240,: This attribute can also be configured from the config with the,not
+flask/src/flask/app.py,241,: :data:`SECRET_KEY` configuration key. Defaults to ``None``.,not
+flask/src/flask/app.py,244,: The secure cookie uses this for the name of the session cookie.,not
+flask/src/flask/app.py,245,:,not
+flask/src/flask/app.py,246,: This attribute can also be configured from the config with the,not
+flask/src/flask/app.py,247,: ``SESSION_COOKIE_NAME`` configuration key.  Defaults to ``'session'``,not
+flask/src/flask/app.py,250,: A :class:`~datetime.timedelta` which is used to set the expiration,not
+flask/src/flask/app.py,251,: date of a permanent session.  The default is 31 days which makes a,not
+flask/src/flask/app.py,252,: permanent session survive for roughly one month.,not
+flask/src/flask/app.py,253,:,not
+flask/src/flask/app.py,254,: This attribute can also be configured from the config with the,not
+flask/src/flask/app.py,255,: ``PERMANENT_SESSION_LIFETIME`` configuration key.  Defaults to,not
+flask/src/flask/app.py,256,: ``timedelta(days=31)``,not
+flask/src/flask/app.py,261,: A :class:`~datetime.timedelta` which is used as default cache_timeout,not
+flask/src/flask/app.py,262,: for the :func:`send_file` functions. The default is 12 hours.,not
+flask/src/flask/app.py,263,:,not
+flask/src/flask/app.py,264,: This attribute can also be configured from the config with the,not
+flask/src/flask/app.py,265,: ``SEND_FILE_MAX_AGE_DEFAULT`` configuration key. This configuration,not
+flask/src/flask/app.py,266,: variable can also be set with an integer value used as seconds.,not
+flask/src/flask/app.py,267,: Defaults to ``timedelta(hours=12)``,not
+flask/src/flask/app.py,272,: Enable this if you want to use the X-Sendfile feature.  Keep in,not
+flask/src/flask/app.py,273,: mind that the server has to support this.  This only affects files,not
+flask/src/flask/app.py,274,: sent with the :func:`send_file` method.,not
+flask/src/flask/app.py,275,:,not
+flask/src/flask/app.py,276,: .. versionadded:: 0.2,not
+flask/src/flask/app.py,277,:,not
+flask/src/flask/app.py,278,: This attribute can also be configured from the config with the,not
+flask/src/flask/app.py,279,: ``USE_X_SENDFILE`` configuration key.  Defaults to ``False``.,not
+flask/src/flask/app.py,282,: The JSON encoder class to use.  Defaults to :class:`~flask.json.JSONEncoder`.,not
+flask/src/flask/app.py,283,:,not
+flask/src/flask/app.py,284,: .. versionadded:: 0.10,not
+flask/src/flask/app.py,287,: The JSON decoder class to use.  Defaults to :class:`~flask.json.JSONDecoder`.,not
+flask/src/flask/app.py,288,:,not
+flask/src/flask/app.py,289,: .. versionadded:: 0.10,not
+flask/src/flask/app.py,292,: Options that are passed to the Jinja environment in,not
+flask/src/flask/app.py,293,: :meth:`create_jinja_environment`. Changing these options after,not
+flask/src/flask/app.py,294,: the environment is created (accessing :attr:`jinja_env`) will,not
+flask/src/flask/app.py,295,: have no effect.,not
+flask/src/flask/app.py,296,:,not
+flask/src/flask/app.py,297,: .. versionchanged:: 1.1.0,not
+flask/src/flask/app.py,298,:     This is a ``dict`` instead of an ``ImmutableDict`` to allow,not
+flask/src/flask/app.py,299,:     easier configuration.,not
+flask/src/flask/app.py,300,:,not
+flask/src/flask/app.py,303,: Default configuration parameters.,not
+flask/src/flask/app.py,338,: The rule object to use for URL rules created.  This is used by,not
+flask/src/flask/app.py,339,: :meth:`add_url_rule`.  Defaults to :class:`werkzeug.routing.Rule`.,not
+flask/src/flask/app.py,340,:,not
+flask/src/flask/app.py,341,: .. versionadded:: 0.7,not
+flask/src/flask/app.py,344,: The map object to use for storing the URL rules and routing,not
+flask/src/flask/app.py,345,: configuration parameters. Defaults to :class:`werkzeug.routing.Map`.,not
+flask/src/flask/app.py,346,:,not
+flask/src/flask/app.py,347,: .. versionadded:: 1.1.0,not
+flask/src/flask/app.py,350,: the test client that is used with when `test_client` is used.,not
+flask/src/flask/app.py,351,:,not
+flask/src/flask/app.py,352,: .. versionadded:: 0.7,not
+flask/src/flask/app.py,355,": The :class:`~click.testing.CliRunner` subclass, by default",not
+flask/src/flask/app.py,356,: :class:`~flask.testing.FlaskCliRunner` that is used by,not
+flask/src/flask/app.py,357,: :meth:`test_cli_runner`. Its ``__init__`` method should take a,not
+flask/src/flask/app.py,358,: Flask app object as the first argument.,not
+flask/src/flask/app.py,359,:,not
+flask/src/flask/app.py,360,: .. versionadded:: 1.0,not
+flask/src/flask/app.py,363,: the session interface to use.  By default an instance of,not
+flask/src/flask/app.py,364,: :class:`~flask.sessions.SecureCookieSessionInterface` is used here.,not
+flask/src/flask/app.py,365,:,not
+flask/src/flask/app.py,366,: .. versionadded:: 0.8,not
+flask/src/flask/app.py,369,TODO remove the next three attrs when Sphinx :inherited-members: works,SATD
+flask/src/flask/app.py,370,https://github.com/sphinx-doc/sphinx/issues/741,not
+flask/src/flask/app.py,372,: The name of the package or module that this app belongs to. Do not,not
+flask/src/flask/app.py,373,: change this once it is set by the constructor.,not
+flask/src/flask/app.py,376,: Location of the template files to be added to the template lookup.,not
+flask/src/flask/app.py,377,: ``None`` if templates should not be added.,not
+flask/src/flask/app.py,380,: Absolute path to the package on the filesystem. Used to look up,not
+flask/src/flask/app.py,381,: resources contained in the package.,not
+flask/src/flask/app.py,412,: Holds the path to the instance folder.,not
+flask/src/flask/app.py,413,:,not
+flask/src/flask/app.py,414,: .. versionadded:: 0.8,not
+flask/src/flask/app.py,417,: The configuration dictionary as :class:`Config`.  This behaves,not
+flask/src/flask/app.py,418,: exactly like a regular dictionary but supports additional methods,not
+flask/src/flask/app.py,419,: to load a config from files.,not
+flask/src/flask/app.py,422,: A dictionary of all view functions registered.  The keys will,not
+flask/src/flask/app.py,423,: be function names which are also used to generate URLs and,not
+flask/src/flask/app.py,424,: the values are the function objects themselves.,not
+flask/src/flask/app.py,425,": To register a view function, use the :meth:`route` decorator.",not
+flask/src/flask/app.py,428,: A dictionary of all registered error handlers.  The key is ``None``,not
+flask/src/flask/app.py,429,": for error handlers active on the application, otherwise the key is",not
+flask/src/flask/app.py,430,: the name of the blueprint.  Each key points to another dictionary,not
+flask/src/flask/app.py,431,: where the key is the status code of the http exception.  The,not
+flask/src/flask/app.py,432,: special key ``None`` points to a list of tuples where the first item,not
+flask/src/flask/app.py,433,: is the class for the instance check and the second the error handler,not
+flask/src/flask/app.py,434,: function.,not
+flask/src/flask/app.py,435,:,not
+flask/src/flask/app.py,436,": To register an error handler, use the :meth:`errorhandler`",not
+flask/src/flask/app.py,437,: decorator.,not
+flask/src/flask/app.py,440,: A list of functions that are called when :meth:`url_for` raises a,not
+flask/src/flask/app.py,441,: :exc:`~werkzeug.routing.BuildError`.  Each function registered here,not
+flask/src/flask/app.py,442,": is called with `error`, `endpoint` and `values`.  If a function",not
+flask/src/flask/app.py,443,: returns ``None`` or raises a :exc:`BuildError` the next function is,not
+flask/src/flask/app.py,444,: tried.,not
+flask/src/flask/app.py,445,:,not
+flask/src/flask/app.py,446,: .. versionadded:: 0.9,not
+flask/src/flask/app.py,449,: A dictionary with lists of functions that will be called at the,not
+flask/src/flask/app.py,450,: beginning of each request. The key of the dictionary is the name of,not
+flask/src/flask/app.py,451,": the blueprint this function is active for, or ``None`` for all",not
+flask/src/flask/app.py,452,": requests. To register a function, use the :meth:`before_request`",not
+flask/src/flask/app.py,453,: decorator.,not
+flask/src/flask/app.py,456,: A list of functions that will be called at the beginning of the,not
+flask/src/flask/app.py,457,": first request to this instance. To register a function, use the",not
+flask/src/flask/app.py,458,: :meth:`before_first_request` decorator.,not
+flask/src/flask/app.py,459,:,not
+flask/src/flask/app.py,460,: .. versionadded:: 0.8,not
+flask/src/flask/app.py,463,: A dictionary with lists of functions that should be called after,not
+flask/src/flask/app.py,464,: each request.  The key of the dictionary is the name of the blueprint,not
+flask/src/flask/app.py,465,": this function is active for, ``None`` for all requests.  This can for",not
+flask/src/flask/app.py,466,: example be used to close database connections. To register a function,not
+flask/src/flask/app.py,467,": here, use the :meth:`after_request` decorator.",not
+flask/src/flask/app.py,470,: A dictionary with lists of functions that are called after,not
+flask/src/flask/app.py,471,": each request, even if an exception has occurred. The key of the",not
+flask/src/flask/app.py,472,": dictionary is the name of the blueprint this function is active for,",not
+flask/src/flask/app.py,473,: ``None`` for all requests. These functions are not allowed to modify,not
+flask/src/flask/app.py,474,": the request, and their return values are ignored. If an exception",not
+flask/src/flask/app.py,475,": occurred while processing the request, it gets passed to each",not
+flask/src/flask/app.py,476,": teardown_request function. To register a function here, use the",not
+flask/src/flask/app.py,477,: :meth:`teardown_request` decorator.,not
+flask/src/flask/app.py,478,:,not
+flask/src/flask/app.py,479,: .. versionadded:: 0.7,not
+flask/src/flask/app.py,482,: A list of functions that are called when the application context,not
+flask/src/flask/app.py,483,: is destroyed.  Since the application context is also torn down,not
+flask/src/flask/app.py,484,: if the request ends this is the place to store code that disconnects,not
+flask/src/flask/app.py,485,: from databases.,not
+flask/src/flask/app.py,486,:,not
+flask/src/flask/app.py,487,: .. versionadded:: 0.9,not
+flask/src/flask/app.py,490,: A dictionary with lists of functions that are called before the,not
+flask/src/flask/app.py,491,: :attr:`before_request_funcs` functions. The key of the dictionary is,not
+flask/src/flask/app.py,492,": the name of the blueprint this function is active for, or ``None``",not
+flask/src/flask/app.py,493,": for all requests. To register a function, use",not
+flask/src/flask/app.py,494,: :meth:`url_value_preprocessor`.,not
+flask/src/flask/app.py,495,:,not
+flask/src/flask/app.py,496,: .. versionadded:: 0.7,not
+flask/src/flask/app.py,499,: A dictionary with lists of functions that can be used as URL value,not
+flask/src/flask/app.py,500,: preprocessors.  The key ``None`` here is used for application wide,not
+flask/src/flask/app.py,501,": callbacks, otherwise the key is the name of the blueprint.",not
+flask/src/flask/app.py,502,: Each of these functions has the chance to modify the dictionary,not
+flask/src/flask/app.py,503,: of URL values before they are used as the keyword arguments of the,not
+flask/src/flask/app.py,504,: view function.  For each function registered this one should also,not
+flask/src/flask/app.py,505,: provide a :meth:`url_defaults` function that adds the parameters,not
+flask/src/flask/app.py,506,: automatically again that were removed that way.,not
+flask/src/flask/app.py,507,:,not
+flask/src/flask/app.py,508,: .. versionadded:: 0.7,not
+flask/src/flask/app.py,511,: A dictionary with list of functions that are called without argument,not
+flask/src/flask/app.py,512,: to populate the template context.  The key of the dictionary is the,not
+flask/src/flask/app.py,513,": name of the blueprint this function is active for, ``None`` for all",not
+flask/src/flask/app.py,514,: requests.  Each returns a dictionary that the template context is,not
+flask/src/flask/app.py,515,": updated with.  To register a function here, use the",not
+flask/src/flask/app.py,516,: :meth:`context_processor` decorator.,not
+flask/src/flask/app.py,519,: A list of shell context processor functions that should be run,not
+flask/src/flask/app.py,520,: when a shell context is created.,not
+flask/src/flask/app.py,521,:,not
+flask/src/flask/app.py,522,: .. versionadded:: 0.11,not
+flask/src/flask/app.py,525,: all the attached blueprints in a dictionary by name.  Blueprints,not
+flask/src/flask/app.py,526,: can be attached multiple times so this dictionary does not tell,not
+flask/src/flask/app.py,527,: you how often they got attached.,not
+flask/src/flask/app.py,528,:,not
+flask/src/flask/app.py,529,: .. versionadded:: 0.7,not
+flask/src/flask/app.py,533,: a place where extensions can store application specific state.  For,not
+flask/src/flask/app.py,534,: example this is where an extension could store database engines and,not
+flask/src/flask/app.py,535,: similar things.,not
+flask/src/flask/app.py,536,:,not
+flask/src/flask/app.py,537,: The key must match the name of the extension module. For example in,not
+flask/src/flask/app.py,538,": case of a ""Flask-Foo"" extension in `flask_foo`, the key would be",not
+flask/src/flask/app.py,539,: ``'foo'``.,not
+flask/src/flask/app.py,540,:,not
+flask/src/flask/app.py,541,: .. versionadded:: 0.7,not
+flask/src/flask/app.py,544,: The :class:`~werkzeug.routing.Map` for this instance.  You can use,not
+flask/src/flask/app.py,545,: this to change the routing converters after the class was created,not
+flask/src/flask/app.py,546,: but before any routes are connected.  Example::,not
+flask/src/flask/app.py,547,:,not
+flask/src/flask/app.py,548,:    from werkzeug.routing import BaseConverter,not
+flask/src/flask/app.py,549,:,not
+flask/src/flask/app.py,550,:    class ListConverter(BaseConverter):,not
+flask/src/flask/app.py,551,":        def to_python(self, value):",not
+flask/src/flask/app.py,552,":            return value.split(',')",not
+flask/src/flask/app.py,553,":        def to_url(self, values):",not
+flask/src/flask/app.py,554,":            return ','.join(super(ListConverter, self).to_url(value)",not
+flask/src/flask/app.py,555,:                            for value in values),not
+flask/src/flask/app.py,556,:,not
+flask/src/flask/app.py,557,:    app = Flask(__name__),not
+flask/src/flask/app.py,558,:    app.url_map.converters['list'] = ListConverter,not
+flask/src/flask/app.py,564,tracks internally if the application already handled at least one,not
+flask/src/flask/app.py,565,request.,not
+flask/src/flask/app.py,569,"Add a static route using the provided static_url_path, static_host,",not
+flask/src/flask/app.py,570,and static_folder if there is a configured static_folder.,not
+flask/src/flask/app.py,571,Note we do this without checking if static_folder exists.,not
+flask/src/flask/app.py,572,"For one, it might be created while the server is running (e.g. during",not
+flask/src/flask/app.py,573,"development). Also, Google App Engine stores static files somewhere",not
+flask/src/flask/app.py,585,Set the name of the Click group in case someone wants to add,not
+flask/src/flask/app.py,586,the app's commands to another CLI tool.,not
+flask/src/flask/app.py,763,"request, session and g are normally added with the",not
+flask/src/flask/app.py,764,context processor for efficiency reasons but for imported,not
+flask/src/flask/app.py,765,templates we also want the proxies in there.,not
+flask/src/flask/app.py,816,make sure the original values win.  This makes it possible to,not
+flask/src/flask/app.py,817,easier add new variables in context processors without breaking,not
+flask/src/flask/app.py,818,existing views.,not
+flask/src/flask/app.py,833,: What environment the app is running in. Flask and extensions may,not
+flask/src/flask/app.py,834,": enable behaviors based on the environment, such as enabling debug",not
+flask/src/flask/app.py,835,: mode. This maps to the :data:`ENV` config key. This is set by the,not
+flask/src/flask/app.py,836,: :envvar:`FLASK_ENV` environment variable and may not behave as,not
+flask/src/flask/app.py,837,: expected if set in code.,not
+flask/src/flask/app.py,838,:,not
+flask/src/flask/app.py,839,: **Do not enable development when deploying in production.**,not
+flask/src/flask/app.py,840,:,not
+flask/src/flask/app.py,841,: Default: ``'production'``,not
+flask/src/flask/app.py,924,Change this into a no-op if the server is invoked from the,not
+flask/src/flask/app.py,925,command line. Have a look at cli.py for more information.,not
+flask/src/flask/app.py,935,"if set, let env vars override previous values",not
+flask/src/flask/app.py,942,debug passed to method overrides all other sources,not
+flask/src/flask/app.py,976,reset the first request information if the development server,not
+flask/src/flask/app.py,977,reset normally.  This makes it possible to restart the server,not
+flask/src/flask/app.py,978,without reloader and that stuff from an interactive shell.,not
+flask/src/flask/app.py,1164,if the methods are not given and the view_func object knows its,not
+flask/src/flask/app.py,1165,"methods we can use that instead.  If neither exists, we go with",not
+flask/src/flask/app.py,1166,a tuple of only ``GET`` as default.,not
+flask/src/flask/app.py,1176,Methods that should always be added,not
+flask/src/flask/app.py,1179,starting with Flask 0.8 the view_func object can disable and,not
+flask/src/flask/app.py,1180,force-enable the automatic options handling.,not
+flask/src/flask/app.py,1193,Add the required methods now.,not
+flask/src/flask/app.py,1336,old broken behavior,not
+flask/src/flask/app.py,1654,Proxy exceptions don't have error codes.  We want to always return,not
+flask/src/flask/app.py,1655,those unchanged as errors,not
+flask/src/flask/app.py,1659,RoutingExceptions are used internally to trigger routing,not
+flask/src/flask/app.py,1660,"actions, such as slash redirects raising RequestRedirect. They",not
+flask/src/flask/app.py,1661,are not raised or handled in user code.,not
+flask/src/flask/app.py,1692,"if unset, trap key errors in debug mode",not
+flask/src/flask/app.py,1724,Werkzeug < 0.15 doesn't add the KeyError to the 400,not
+flask/src/flask/app.py,1725,"message, add it in manually.",not
+flask/src/flask/app.py,1726,TODO: clean up once Werkzeug >= 0.15.5 is required,SATD
+flask/src/flask/app.py,1780,"Re-raise if called with an active exception, otherwise",not
+flask/src/flask/app.py,1781,raise the passed in exception.,not
+flask/src/flask/app.py,1789,TODO: pass as param when Werkzeug>=1.0.0 is required,SATD
+flask/src/flask/app.py,1790,TODO: also remove note about this from docstring and docs,SATD
+flask/src/flask/app.py,1844,if we provide automatic options for this URL and the,not
+flask/src/flask/app.py,1845,"request came with the OPTIONS method, reply automatically",not
+flask/src/flask/app.py,1851,otherwise dispatch to the handler for that endpoint,not
+flask/src/flask/app.py,1980,unpack tuple returns,not
+flask/src/flask/app.py,1984,a 3-tuple is unpacked directly,not
+flask/src/flask/app.py,1987,decide if a 2-tuple has status or headers,not
+flask/src/flask/app.py,1993,other sized tuples are not allowed,not
+flask/src/flask/app.py,2001,the body must not be None,not
+flask/src/flask/app.py,2009,make sure the body is an instance of the response class,not
+flask/src/flask/app.py,2012,let the response class set the status and headers instead of,not
+flask/src/flask/app.py,2013,"waiting to do it manually, so that the class can handle any",not
+flask/src/flask/app.py,2014,special logic,not
+flask/src/flask/app.py,2020,"evaluate a WSGI callable, or coerce a different response",not
+flask/src/flask/app.py,2021,class to the correct type,not
+flask/src/flask/app.py,2039,prefer the status if it was provided,not
+flask/src/flask/app.py,2046,extend existing headers with provided headers,not
+flask/src/flask/app.py,2068,"If subdomain matching is disabled (the default), use the",not
+flask/src/flask/app.py,2069,default subdomain in all cases. This should be the default,not
+flask/src/flask/app.py,2070,in Werkzeug but it currently does not have that feature.,not
+flask/src/flask/app.py,2081,We need at the very least the server name to be set for this,not
+flask/src/flask/app.py,2082,to work.,not
+flask/src/flask/app.py,2112,make error available outside except block,not
+flask/src/flask/app.py,2118,"Re-raise if called with an active exception, otherwise raise",not
+flask/src/flask/app.py,2119,the passed in exception.,not
+flask/src/flask/app.py,2357,noqa: B001,not
+flask/src/flask/cli.py,43,Search for the most common names first.,not
+flask/src/flask/cli.py,50,Otherwise find the only object that is a Flask instance.,not
+flask/src/flask/cli.py,62,Search for app factory functions.,not
+flask/src/flask/cli.py,134,"In the function, it was called successfully.",not
+flask/src/flask/cli.py,139,Didn't reach the function.,not
+flask/src/flask/cli.py,142,Delete tb to break a circular reference.,not
+flask/src/flask/cli.py,143,https://docs.python.org/2/library/sys.html#sys.exc_info,not
+flask/src/flask/cli.py,153,Parse app_name as a single expression to determine if it's a valid,not
+flask/src/flask/cli.py,154,attribute name or function call.,not
+flask/src/flask/cli.py,166,Ensure the function name is an attribute name only.,not
+flask/src/flask/cli.py,174,Parse the positional and keyword arguments as literals.,not
+flask/src/flask/cli.py,179,"literal_eval gives cryptic error messages, show a generic",not
+flask/src/flask/cli.py,180,message with the full expression instead.,not
+flask/src/flask/cli.py,196,"If the attribute is a function, call it with any args and kwargs",not
+flask/src/flask/cli.py,197,to get the real application.,not
+flask/src/flask/cli.py,237,move up until outside package structure (no __init__.py),not
+flask/src/flask/cli.py,252,noqa: F841,not
+flask/src/flask/cli.py,257,Reraise the ImportError if it occurred within the imported module.,not
+flask/src/flask/cli.py,258,Determine this by checking whether the trace has a depth > 1.,not
+flask/src/flask/cli.py,326,noqa: F841,not
+flask/src/flask/cli.py,337,noqa: F841,not
+flask/src/flask/cli.py,344,noqa: F841,not
+flask/src/flask/cli.py,350,noqa: F841,not
+flask/src/flask/cli.py,372,: Optionally the import path for the Flask application.,not
+flask/src/flask/cli.py,374,: Optionally a function that is passed the script info to create,not
+flask/src/flask/cli.py,375,: the instance of the application.,not
+flask/src/flask/cli.py,377,: A dictionary with arbitrary data that can be associated with,not
+flask/src/flask/cli.py,378,: this script info.,not
+flask/src/flask/cli.py,388,noqa: F841,not
+flask/src/flask/cli.py,418,Update the app's debug flag through the descriptor so that,not
+flask/src/flask/cli.py,419,other values repopulate as well.,not
+flask/src/flask/cli.py,540,We load built-in commands first as these should always be the,not
+flask/src/flask/cli.py,541,same no matter what the app does.  If the app does want to,not
+flask/src/flask/cli.py,542,override this it needs to make a custom instance of this group,not
+flask/src/flask/cli.py,543,and not attach the default commands.,not
+flask/src/flask/cli.py,544,,not
+flask/src/flask/cli.py,545,This also means that the script stays functional in case the,not
+flask/src/flask/cli.py,546,application completely fails.,not
+flask/src/flask/cli.py,562,The commands available is the list of both the application (if,not
+flask/src/flask/cli.py,563,available) plus the builtin commands.,not
+flask/src/flask/cli.py,569,Here we intentionally swallow all exceptions as we don't,not
+flask/src/flask/cli.py,570,want the help page to break if the app does not exist.,not
+flask/src/flask/cli.py,571,If someone attempts to use the command we try to create,not
+flask/src/flask/cli.py,572,the app again and this will give us the error.,not
+flask/src/flask/cli.py,573,"However, we will not do so silently because that would confuse",not
+flask/src/flask/cli.py,574,users.,not
+flask/src/flask/cli.py,579,Set a global flag that indicates that we were invoked from the,not
+flask/src/flask/cli.py,580,command line interface. This is detected by Flask.run to make the,not
+flask/src/flask/cli.py,581,call into a no-op. This is necessary to avoid ugly errors when the,not
+flask/src/flask/cli.py,582,script that is loaded here also attempts to start a server.,not
+flask/src/flask/cli.py,641,"if the given path specifies the actual file then return True,",not
+flask/src/flask/cli.py,642,else False,not
+flask/src/flask/cli.py,665,at least one file was located and loaded,not
+flask/src/flask/cli.py,723,noqa: F401,not
+flask/src/flask/cli.py,887,Support the regular Python interpreter startup script if someone,not
+flask/src/flask/cli.py,888,is using it.,not
+flask/src/flask/cli.py,966,TODO omit sys.argv once https://github.com/pallets/click/issues/536 is fixed,SATD
+flask/src/flask/wrappers.py,33,: The internal URL rule that matched the request.  This can be,not
+flask/src/flask/wrappers.py,34,: useful to inspect which methods are allowed for the URL from,not
+flask/src/flask/wrappers.py,35,: a before/after handler (``request.url_rule.methods``) etc.,not
+flask/src/flask/wrappers.py,36,": Though if the request's method was invalid for the URL rule,",not
+flask/src/flask/wrappers.py,37,: the valid list is available in ``routing_exception.valid_methods``,not
+flask/src/flask/wrappers.py,38,: instead (an attribute of the Werkzeug exception,not
+flask/src/flask/wrappers.py,39,: :exc:`~werkzeug.exceptions.MethodNotAllowed`),not
+flask/src/flask/wrappers.py,40,: because the request was never internally bound.,not
+flask/src/flask/wrappers.py,41,:,not
+flask/src/flask/wrappers.py,42,: .. versionadded:: 0.6,not
+flask/src/flask/wrappers.py,45,: A dict of view arguments that matched the request.  If an exception,not
+flask/src/flask/wrappers.py,46,": happened when matching, this will be ``None``.",not
+flask/src/flask/wrappers.py,49,": If matching the URL failed, this is the exception that will be",not
+flask/src/flask/wrappers.py,50,: raised / was raised as part of the request handling.  This is,not
+flask/src/flask/wrappers.py,51,: usually a :exc:`~werkzeug.exceptions.NotFound` exception or,not
+flask/src/flask/wrappers.py,52,: something similar.,not
+flask/src/flask/wrappers.py,80,In debug mode we're replacing the files multidict with an ad-hoc,not
+flask/src/flask/wrappers.py,81,subclass that raises a different error for key errors.,not
+flask/src/flask/wrappers.py,126,return Werkzeug's default when not in an app context,not
+flask/src/flask/testing.py,143,Since we have to open a new request context for the session,not
+flask/src/flask/testing.py,144,handling we want to make sure that we hide out own context,not
+flask/src/flask/testing.py,145,from the caller.  By pushing the original request context,not
+flask/src/flask/testing.py,146,(or None) on top of this and popping it we get exactly that,not
+flask/src/flask/testing.py,147,behavior.  It's important to not use the push and pop,not
+flask/src/flask/testing.py,148,methods of the actual request context object since that would,not
+flask/src/flask/testing.py,149,mean that cleanup handlers are called,not
+flask/src/flask/testing.py,209,Normally the request context is preserved until the next,not
+flask/src/flask/testing.py,210,request in the same thread comes. When the client exits we,not
+flask/src/flask/testing.py,211,want to clean up earlier. Pop request contexts until the stack,not
+flask/src/flask/testing.py,212,is empty or a non-preserved one is found.,not
+flask/src/flask/ctx.py,12,a singleton sentinel value for parameter defaults,not
+flask/src/flask/ctx.py,207,"Like request context, app contexts can be pushed multiple times",not
+flask/src/flask/ctx.py,208,"but there a basic ""refcount"" is enough to track them.",not
+flask/src/flask/ctx.py,281,Request contexts can be pushed multiple times and interleaved with,not
+flask/src/flask/ctx.py,282,other request contexts.  Now only if the last level is popped we,not
+flask/src/flask/ctx.py,283,get rid of them.  Additionally if an application context is missing,not
+flask/src/flask/ctx.py,284,one is created implicitly so for each level we add this information,not
+flask/src/flask/ctx.py,287,indicator if the context was preserved.  Next time another context,not
+flask/src/flask/ctx.py,288,is pushed the preserved context is popped.,not
+flask/src/flask/ctx.py,291,remembers the exception for pop if there is one in case the context,not
+flask/src/flask/ctx.py,292,preservation kicks in.,not
+flask/src/flask/ctx.py,295,Functions that should be executed after the request on the response,not
+flask/src/flask/ctx.py,296,"object.  These will be called before the regular ""after_request""",not
+flask/src/flask/ctx.py,297,functions.,not
+flask/src/flask/ctx.py,340,If an exception occurs in debug mode or if context preservation is,not
+flask/src/flask/ctx.py,341,activated under exception situations exactly one context stays,not
+flask/src/flask/ctx.py,342,on the stack.  The rationale is that you want to access that,not
+flask/src/flask/ctx.py,343,information under debug situations.  However if someone forgets to,not
+flask/src/flask/ctx.py,344,pop that context again we want to make sure that on the next push,not
+flask/src/flask/ctx.py,345,"it's invalidated, otherwise we run at risk that something leaks",not
+flask/src/flask/ctx.py,346,memory.  This is usually only a problem in test suite since this,not
+flask/src/flask/ctx.py,347,functionality is not active in production environments.,not
+flask/src/flask/ctx.py,352,Before we push the request context we have to ensure that there,not
+flask/src/flask/ctx.py,353,is an application context.,not
+flask/src/flask/ctx.py,364,Open the session at the moment that the request context is available.,not
+flask/src/flask/ctx.py,365,This allows a custom open_session method to use the request context.,not
+flask/src/flask/ctx.py,366,Only open a new session if this is the first time the request was,not
+flask/src/flask/ctx.py,367,"pushed, otherwise stream_with_context loses the session.",not
+flask/src/flask/ctx.py,404,get rid of circular dependencies at the end of the request,not
+flask/src/flask/ctx.py,405,so that we don't require the GC to be active.,not
+flask/src/flask/ctx.py,409,Get rid of the app as well if necessary.,not
+flask/src/flask/ctx.py,431,do not pop the request stack if we are in debug mode and an,not
+flask/src/flask/ctx.py,432,exception happened.  This will allow the debugger to still,not
+flask/src/flask/ctx.py,433,access the request object in the interactive shell.  Furthermore,not
+flask/src/flask/ctx.py,434,the context can be force kept alive for the test client.,not
+flask/src/flask/ctx.py,435,See flask.testing for how this works.,not
+flask/src/flask/json/__init__.py,17,Python < 3.7,not
+flask/src/flask/json/__init__.py,329,single args are passed directly to dumps(),not
+flask/src/flask/json/tag.py,61,": The tag to mark the serialized object with. If ``None``, this tag is",not
+flask/src/flask/json/tag.py,62,: only used as an intermediate step during tagging.,not
+flask/src/flask/json/tag.py,122,"JSON objects may only have string keys, so don't bother tagging the",not
+flask/src/flask/json/tag.py,123,key here.,not
+flask/src/flask/json/tag.py,232,: Tag classes to bind when creating the serializer. Other tags can be,not
+flask/src/flask/json/tag.py,233,: added later using :meth:`~register`.,not
+flask/tests/test_reqctx.py,83,suppress Werkzeug 0.15 warning about name mismatch,not
+flask/tests/test_reqctx.py,214,shouldn't get here,not
+flask/tests/test_reqctx.py,225,This session interface will use a cookie with a different name if the,not
+flask/tests/test_reqctx.py,226,"requested url ends with the string ""dynamic_cookie""",not
+flask/tests/test_reqctx.py,262,first set the cookie in both /set urls but each with a different value,not
+flask/tests/test_reqctx.py,269,now check that the relevant values come back - meaning that different,not
+flask/tests/test_reqctx.py,270,"cookies are being used for the urls that end with ""dynamic cookie""",not
+flask/tests/test_reqctx.py,283,use a non-printable character in the Host - this is key to this test,not
+flask/tests/test_reqctx.py,303,these characters are all IDNA-compatible,not
+flask/tests/test_helpers.py,251,"noqa: B903, for Python2 compatibility",not
+flask/tests/test_helpers.py,590,https://github.com/pallets/flask/issues/2526,not
+flask/tests/test_helpers.py,651,""":/"" are not safe in filename* value",not
+flask/tests/test_helpers.py,668,default cache timeout is 12 hours,not
+flask/tests/test_helpers.py,670,Test with static file handler.,not
+flask/tests/test_helpers.py,675,Test again with direct use of send_file utility.,not
+flask/tests/test_helpers.py,682,Test with static file handler.,not
+flask/tests/test_helpers.py,687,Test again with direct use of send_file utility.,not
+flask/tests/test_helpers.py,693,Test with static file handler.,not
+flask/tests/test_helpers.py,705,Test with static file handler.,not
+flask/tests/test_helpers.py,710,Test again with direct use of send_file utility.,not
+flask/tests/test_helpers.py,902,Valid combinations of *args and expected joined paths.,not
+flask/tests/test_helpers.py,910,If last path is '' add a slash,not
+flask/tests/test_helpers.py,912,Preserve dot slash,not
+flask/tests/test_helpers.py,915,Base directory is always considered safe,not
+flask/tests/test_helpers.py,924,Should raise werkzeug.exceptions.NotFound on unsafe joins.,not
+flask/tests/test_helpers.py,926,path.isabs and ``..'' checks,not
+flask/tests/test_helpers.py,930,Boundaries violations after path normalization,not
+flask/tests/test_json_tag.py,43,"noqa: B903, for Python2 compatibility",not
+flask/tests/test_templating.py,341,should skip this one,not
+flask/tests/test_templating.py,342,should render this,not
+flask/tests/test_templating.py,353,"debug is False, config option is None",not
+flask/tests/test_templating.py,357,"debug is False, config option is False",not
+flask/tests/test_templating.py,362,"debug is False, config option is True",not
+flask/tests/test_templating.py,367,"debug is True, config option is None",not
+flask/tests/test_templating.py,372,"debug is True, config option is False",not
+flask/tests/test_templating.py,377,"debug is True, config option is True",not
+flask/tests/test_regression.py,19,Force Python to track this dictionary at all times.,not
+flask/tests/test_regression.py,20,This is necessary since Python only starts tracking,not
+flask/tests/test_regression.py,21,"dicts if they contain mutable objects.  It's a horrible,",not
+flask/tests/test_regression.py,22,horrible hack but makes this kinda testable.,SATD
+flask/tests/test_regression.py,51,Trigger caches,not
+flask/tests/test_blueprints.py,196,"try/finally, in case other tests use this app for Blueprint tests.",not
+flask/tests/test_blueprints.py,233,"try/finally, in case other tests use this app for Blueprint tests.",not
+flask/tests/test_blueprints.py,397,The rule's didn't actually made it through,not
+flask/tests/test_blueprints.py,696,noqa: E731,not
+flask/tests/test_blueprints.py,701,App global context processor,not
+flask/tests/test_blueprints.py,706,Blueprint local context processor,not
+flask/tests/test_blueprints.py,711,Setup endpoints for testing,not
+flask/tests/test_blueprints.py,720,Register the blueprint,not
+flask/tests/test_blueprints.py,740,Make sure the function is not in the jinja_env already,not
+flask/tests/test_blueprints.py,744,Tests,not
+flask/tests/test_blueprints.py,772,Setup routes for testing,not
+flask/tests/test_blueprints.py,809,Setup routes for testing,not
+flask/tests/test_blueprints.py,814,before first request,not
+flask/tests/test_blueprints.py,817,first request,not
+flask/tests/test_blueprints.py,822,second request,not
+flask/tests/test_blueprints.py,831,Register app-wide url defaults and preprocessor on blueprint,not
+flask/tests/test_blueprints.py,840,Register route rules at the app level,not
+flask/tests/conftest.py,85,make sure we're not leaking a request context since we are,not
+flask/tests/conftest.py,86,testing flask internally in debug mode in a few cases,not
+flask/tests/test_views.py,185,But these tests should still pass. We just log a warning.,not
+flask/tests/test_testing.py,301,Request should be in JSON,not
+flask/tests/test_testing.py,305,Response should be in JSON,not
+flask/tests/test_testing.py,386,invoke with command name,not
+flask/tests/test_testing.py,389,invoke with command object,not
+flask/tests/test_testing.py,415,"stream_with_context pushes a third context, preserved by client",not
+flask/tests/test_testing.py,418,"req_ctx fixture pushed an initial context, not marked preserved",not
+flask/tests/test_testing.py,420,"request pushes a second request context, preserved by client",not
+flask/tests/test_testing.py,423,only req_ctx fixture should still be pushed,not
+flask/tests/test_appctx.py,133,get,not
+flask/tests/test_appctx.py,136,__contains__,not
+flask/tests/test_appctx.py,140,setdefault,not
+flask/tests/test_appctx.py,144,pop,not
+flask/tests/test_appctx.py,149,__iter__,not
+flask/tests/test_appctx.py,151,__repr__,not
+flask/tests/test_cli.py,1,This file was part of Flask-CLI and was modified under the terms of,not
+flask/tests/test_cli.py,2,its Revised BSD License. Copyright © 2015 CERN.,not
+flask/tests/test_cli.py,47,noqa: B950,not
+flask/tests/test_cli.py,157,nested package,not
+flask/tests/test_cli.py,168,dotted name,not
+flask/tests/test_cli.py,171,"not a Python file, will be caught during import",not
+flask/tests/test_cli.py,207,trailing comma space,not
+flask/tests/test_cli.py,209,strip whitespace,not
+flask/tests/test_cli.py,224,not enough arguments,not
+flask/tests/test_cli.py,226,invalid identifier,not
+flask/tests/test_cli.py,228,no app returned,not
+flask/tests/test_cli.py,230,nested import error,not
+flask/tests/test_cli.py,232,not a Python file,not
+flask/tests/test_cli.py,248,only direct import error is suppressed,not
+flask/tests/test_cli.py,280,import app with module's absolute path,not
+flask/tests/test_cli.py,304,import app from wsgi.py in current directory,not
+flask/tests/test_cli.py,314,import app from app.py in current directory,not
+flask/tests/test_cli.py,458,skip the header and match the start of each row,not
+flask/tests/test_cli.py,460,do this instead of startswith for nicer pytest output,not
+flask/tests/test_cli.py,502,can't use monkeypatch.delitem since the keys don't exist yet,not
+flask/tests/test_cli.py,510,.flaskenv doesn't overwrite .env,not
+flask/tests/test_cli.py,512,set only in .flaskenv,not
+flask/tests/test_cli.py,514,set only in .env,not
+flask/tests/test_cli.py,516,"set manually, files don't overwrite",not
+flask/tests/test_cli.py,519,Non existent file should not load,not
+flask/tests/test_cli.py,550,no key,not
+flask/tests/test_cli.py,554,no cert,not
+flask/tests/test_cli.py,565,cryptography not installed,not
+flask/tests/test_cli.py,569,cryptography installed,not
+flask/tests/test_cli.py,574,no key with adhoc,not
+flask/tests/test_cli.py,582,ImportError,not
+flask/tests/test_cli.py,589,SSLContext,not
+flask/tests/test_cli.py,596,no --key with SSLContext,not
+flask/tests/test_user_error_handler.py,207,Don't handle RequestRedirect raised when adding slash.,not
+flask/tests/test_config.py,11,config keys used for the TestConfig,not
+flask/tests/test_basic.py,89,head truncates,not
+flask/tests/test_basic.py,116,head truncates,not
+flask/tests/test_basic.py,147,Issue 1288: Test that automatic options are not added,not
+flask/tests/test_basic.py,148,when non-uppercase 'options' in methods,not
+flask/tests/test_basic.py,157,head truncates,not
+flask/tests/test_basic.py,543,The 'Vary' key should exist in the headers only once.,not
+flask/tests/test_basic.py,568,"Be sure app.testing=True below, else tests can fail silently.",not
+flask/tests/test_basic.py,569,,not
+flask/tests/test_basic.py,570,"Specifically, if app.testing is not set to True, the AssertionErrors",not
+flask/tests/test_basic.py,571,in the view functions will cause a 500 response to the test client,not
+flask/tests/test_basic.py,572,instead of propagating exceptions.,not
+flask/tests/test_basic.py,629,Create new test client on each test to clean flashed messages.,not
+flask/tests/test_basic.py,759,"This raises a new error and blows away sys.exc_info(), so we can",not
+flask/tests/test_basic.py,760,test that all teardown_requests get passed the same original,not
+flask/tests/test_basic.py,761,exception.,not
+flask/tests/test_basic.py,771,"This raises a new error and blows away sys.exc_info(), so we can",not
+flask/tests/test_basic.py,772,test that all teardown_requests get passed the same original,not
+flask/tests/test_basic.py,773,exception.,not
+flask/tests/test_basic.py,1082,with statement is important because we leave an exception on the,not
+flask/tests/test_basic.py,1083,stack otherwise and we want to ensure that this is not the case,not
+flask/tests/test_basic.py,1084,to not negatively affect other tests.,not
+flask/tests/test_basic.py,1313,"Test base case, a URL which results in a BuildError.",not
+flask/tests/test_basic.py,1317,Verify the error is re-raised if not the current exception.,not
+flask/tests/test_basic.py,1328,Test a custom handler.,not
+flask/tests/test_basic.py,1330,Just a test.,not
+flask/tests/test_basic.py,1339,Test a custom handler which reraises the BuildError,not
+flask/tests/test_basic.py,1429,Providing static_host without host_matching=True should error.,not
+flask/tests/test_basic.py,1432,Providing host_matching=True with static_folder,not
+flask/tests/test_basic.py,1433,but without static_host should error.,not
+flask/tests/test_basic.py,1436,Providing host_matching=True without static_host,not
+flask/tests/test_basic.py,1437,but with static_folder=None should not error.,not
+flask/tests/test_basic.py,1471,Werkzeug 1.0 fixes matching https scheme with 443 port,not
+flask/tests/test_basic.py,1479,suppress Werkzeug 1.0 warning about name mismatch,not
+flask/tests/test_basic.py,1501,we have to run this test in an isolated thread because if the,not
+flask/tests/test_basic.py,1502,debug flag is set to true and an exception happens the context is,not
+flask/tests/test_basic.py,1503,not torn down.  This causes other tests that run after this fail,not
+flask/tests/test_basic.py,1504,when they expect no exception on the stack.,not
+flask/tests/test_basic.py,1520,Mocks werkzeug.serving.run_simple method,not
+flask/tests/test_basic.py,1734,implicit appctx disappears too,not
+flask/tests/test_basic.py,1756,After this failure we did not yet call the teardown handler,not
+flask/tests/test_basic.py,1761,"But this request triggers it, and it's an error",not
+flask/tests/test_basic.py,1766,At this point another request does nothing.,not
+flask/tests/test_basic.py,1844,suppress Werkzeug 0.15 warning about name mismatch,not
+flask/tests/test_basic.py,1846,ip address can't match name,not
+flask/tests/test_basic.py,1850,allow all subdomains if matching is disabled,not
+flask/tests/test_basic.py,1886,Mocks werkzeug.serving.run_simple method,not
+flask/tests/test_basic.py,1898,Mocks werkzeug.serving.run_simple method,not
+flask/tests/test_basic.py,1935,"outside app context, default to Werkzeug static value,",not
+flask/tests/test_basic.py,1936,which is also the default config,not
+flask/tests/test_basic.py,1941,"inside app context, use app config",not
+flask/tests/test_apps/helloworld/wsgi.py,1,noqa: F401,not
+flask/examples/tutorial/tests/conftest.py,10,read in SQL for populating test data,not
+flask/examples/tutorial/tests/conftest.py,18,create a temporary file to isolate the database for each test,not
+flask/examples/tutorial/tests/conftest.py,20,create the app with common test config,not
+flask/examples/tutorial/tests/conftest.py,23,create the database and load test data,not
+flask/examples/tutorial/tests/conftest.py,30,close and remove the temporary database,not
+flask/examples/tutorial/tests/test_auth.py,9,test that viewing the page renders without template errors,not
+flask/examples/tutorial/tests/test_auth.py,12,test that successful registration redirects to the login page,not
+flask/examples/tutorial/tests/test_auth.py,16,test that the user was inserted into the database,not
+flask/examples/tutorial/tests/test_auth.py,40,test that viewing the page renders without template errors,not
+flask/examples/tutorial/tests/test_auth.py,43,test that successful login redirects to the index page,not
+flask/examples/tutorial/tests/test_auth.py,47,login request set the user_id in the session,not
+flask/examples/tutorial/tests/test_auth.py,48,check that the user is loaded from the session,not
+flask/examples/tutorial/tests/test_blog.py,26,change the post author to another user,not
+flask/examples/tutorial/tests/test_blog.py,33,current user can't modify other user's post,not
+flask/examples/tutorial/tests/test_blog.py,36,current user doesn't see edit link,not
+flask/examples/tutorial/flaskr/auth.py,70,"the name is available, store it in the database and go to",not
+flask/examples/tutorial/flaskr/auth.py,71,the login page,not
+flask/examples/tutorial/flaskr/auth.py,102,store the user id in a new session and return to the index,not
+flask/examples/tutorial/flaskr/__init__.py,10,a default secret that should be overridden by instance config,not
+flask/examples/tutorial/flaskr/__init__.py,12,store the database in the instance folder,not
+flask/examples/tutorial/flaskr/__init__.py,17,"load the instance config, if it exists, when not testing",not
+flask/examples/tutorial/flaskr/__init__.py,20,load the test config if passed in,not
+flask/examples/tutorial/flaskr/__init__.py,23,ensure the instance folder exists,not
+flask/examples/tutorial/flaskr/__init__.py,33,register the database commands,not
+flask/examples/tutorial/flaskr/__init__.py,38,apply the blueprints to the app,not
+flask/examples/tutorial/flaskr/__init__.py,44,make url_for('index') == url_for('blog.index'),not
+flask/examples/tutorial/flaskr/__init__.py,45,"in another app, you might define a separate main index here with",not
+flask/examples/tutorial/flaskr/__init__.py,46,"app.route, while giving the blog blueprint a url_prefix, but for",not
+flask/examples/tutorial/flaskr/__init__.py,47,the tutorial the blog will be the main index,not
+flask/examples/javascript/js_example/__init__.py,5,noqa: F401,not
+flask/docs/conf.py,5,Project --------------------------------------------------------------,not
+flask/docs/conf.py,12,General --------------------------------------------------------------,not
+flask/docs/conf.py,34,HTML -----------------------------------------------------------------,not
+flask/docs/conf.py,58,LaTeX ----------------------------------------------------------------,not
+flask/docs/conf.py,62,Local Extensions -----------------------------------------------------,not

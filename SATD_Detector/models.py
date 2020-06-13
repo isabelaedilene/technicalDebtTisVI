@@ -1,11 +1,11 @@
 from csv import writer
-from os import walk
+from os import system, walk
+from re import sub
 from typing import List, Optional
 
 from logzero import logger as log
 
 from parsers import PythonParser
-from tools import satd_detector
 
 
 class Project:
@@ -64,23 +64,25 @@ class Python(Project):
             log.error(
                 f"Did not find any Python files in this project ({self.project_root})"
             )
+            system(f"touch {file_path}")  # Adding blank CSV to avoid re-cloning and re-analyzing project
             return
         with open(file_path, "w") as c:
             csv = writer(c)
             csv.writerow(("file path", "line #", "comment", "satd"))
             for file_ in self.py_files_list:
-                py = PythonParser(file_)
+                try:
+                    py = PythonParser(file_)
+                except FileNotFoundError:
+                    continue
                 py.get_loc()
                 py.get_lo_comment()
                 for com in py.hash_mark_comments:
                     com_tup = com.tuple()
                     line = com_tup[0]
                     comment = com_tup[1]
-                    # satd = satd_detector(comment)
-                    short_path = self.project_name
-                    split_point = file_.count(self.project_name)
-                    short_path += file_.split(self.project_name)[split_point]
+                    short_path = sub(
+                        f"^{self.project_root}", self.project_name, file_
+                    )
                     csv.writerow((short_path, line, comment, None))
-                    # csv.writerow((file_path, line, comment, satd))
 
         return file_path

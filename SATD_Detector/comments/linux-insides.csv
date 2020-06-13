@@ -1,5 +1,5 @@
 file path,line #,comment,satd
-linux-insides/Scripts/get_all_links.py,1,!/usr/bin/env python,
-linux-insides/Scripts/get_all_links.py,14,compatible for python2,
-linux-insides/Scripts/get_all_links.py,19,compatible for python3,
-linux-insides/Scripts/get_all_links.py,60,print(len(urls)),
+linux-insides/Scripts/get_all_links.py,1,!/usr/bin/env python,not
+linux-insides/Scripts/get_all_links.py,14,compatible for python2,not
+linux-insides/Scripts/get_all_links.py,19,compatible for python3,not
+linux-insides/Scripts/get_all_links.py,60,print(len(urls)),not

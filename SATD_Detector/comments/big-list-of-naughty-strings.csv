@@ -1,15 +1,15 @@
 file path,line #,comment,satd
-big-list-of-naughty-strings/naughtystrings/__init__.py,23,put all lines in the file into a Python list,
-big-list-of-naughty-strings/naughtystrings/__init__.py,26,above line leaves trailing newline characters; strip them out,
-big-list-of-naughty-strings/naughtystrings/__init__.py,29,remove empty-lines and comments,
-big-list-of-naughty-strings/naughtystrings/__init__.py,32,insert empty string since all are being removed,
-big-list-of-naughty-strings/scripts/txt_to_json.py,1,Quick Python Script to convert the Big List of Naughty Strings into a JSON file,
-big-list-of-naughty-strings/scripts/txt_to_json.py,2,,
-big-list-of-naughty-strings/scripts/txt_to_json.py,3,By Max Woolf,
-big-list-of-naughty-strings/scripts/txt_to_json.py,9,put all lines in the file into a Python list,
-big-list-of-naughty-strings/scripts/txt_to_json.py,12,above line leaves trailing newline characters; strip them out,
-big-list-of-naughty-strings/scripts/txt_to_json.py,15,remove empty-lines and comments,
-big-list-of-naughty-strings/scripts/txt_to_json.py,18,insert empty string since all are being removed,
-big-list-of-naughty-strings/scripts/txt_to_json.py,21,"special case: convert ""\"" to ""\\"" for valid JSON",
-big-list-of-naughty-strings/scripts/txt_to_json.py,22,"content = map(lambda x: x.replace('\','\\'), content)",
-big-list-of-naughty-strings/scripts/txt_to_json.py,26,write JSON to file; note the ensure_ascii parameter,
+big-list-of-naughty-strings/naughtystrings/__init__.py,23,put all lines in the file into a Python list,not
+big-list-of-naughty-strings/naughtystrings/__init__.py,26,above line leaves trailing newline characters; strip them out,not
+big-list-of-naughty-strings/naughtystrings/__init__.py,29,remove empty-lines and comments,not
+big-list-of-naughty-strings/naughtystrings/__init__.py,32,insert empty string since all are being removed,not
+big-list-of-naughty-strings/scripts/txt_to_json.py,1,Quick Python Script to convert the Big List of Naughty Strings into a JSON file,not
+big-list-of-naughty-strings/scripts/txt_to_json.py,2,,not
+big-list-of-naughty-strings/scripts/txt_to_json.py,3,By Max Woolf,not
+big-list-of-naughty-strings/scripts/txt_to_json.py,9,put all lines in the file into a Python list,not
+big-list-of-naughty-strings/scripts/txt_to_json.py,12,above line leaves trailing newline characters; strip them out,not
+big-list-of-naughty-strings/scripts/txt_to_json.py,15,remove empty-lines and comments,not
+big-list-of-naughty-strings/scripts/txt_to_json.py,18,insert empty string since all are being removed,not
+big-list-of-naughty-strings/scripts/txt_to_json.py,21,"special case: convert ""\"" to ""\\"" for valid JSON",not
+big-list-of-naughty-strings/scripts/txt_to_json.py,22,"content = map(lambda x: x.replace('\','\\'), content)",not
+big-list-of-naughty-strings/scripts/txt_to_json.py,26,write JSON to file; note the ensure_ascii parameter,not

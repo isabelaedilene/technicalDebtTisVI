@@ -1,33 +1,33 @@
 file path,line #,comment,satd
-NLP-progress/structured/export.py,90,Use the line before the table,
-NLP-progress/structured/export.py,94,exceptions:,
-NLP-progress/structured/export.py,135,only has author name,
-NLP-progress/structured/export.py,202,find the model name column (usually the first one),
-NLP-progress/structured/export.py,234,now parse the table rows,
-NLP-progress/structured/export.py,243,extract all the metrics,
-NLP-progress/structured/export.py,248,extract paper references,
-NLP-progress/structured/export.py,251,extract model_name and author,
-NLP-progress/structured/export.py,263,and code links if they exist,
-NLP-progress/structured/export.py,295,"Main assumption is that the Sota table will minimally have a ""Model"" column",
-NLP-progress/structured/export.py,332,Assumptions:,
-NLP-progress/structured/export.py,333,1) H1 are tasks,
-NLP-progress/structured/export.py,334,2) Everything until the next heading is the task description,
-NLP-progress/structured/export.py,335,"3) H2 are subtasks, H3 are datasets, H4 are subdatasets",
-NLP-progress/structured/export.py,337,Algorithm:,
-NLP-progress/structured/export.py,338,1) Split the document by headings,
-NLP-progress/structured/export.py,355,2) Parse each heading section one-by-one,
-NLP-progress/structured/export.py,356,whole parsed output,
-NLP-progress/structured/export.py,357,current task element being parsed,
-NLP-progress/structured/export.py,358,current subtask being parsed,
-NLP-progress/structured/export.py,359,current dataset being parsed,
-NLP-progress/structured/export.py,364,Task definition,
-NLP-progress/structured/export.py,372,reset subtasks and datasets,
-NLP-progress/structured/export.py,376,Subtask definition,
-NLP-progress/structured/export.py,385,new substask,
-NLP-progress/structured/export.py,396,reset the last dataset,
-NLP-progress/structured/export.py,399,Dataset definition,
-NLP-progress/structured/export.py,406,"we are in a subtask, add everything here",
-NLP-progress/structured/export.py,410,new dataset and add,
-NLP-progress/structured/export.py,414,"we are in a task, add here",
-NLP-progress/structured/export.py,422,dataset description is everything that's not a table,
-NLP-progress/structured/export.py,426,see if there is an arxiv link in the first paragraph of the description,
+NLP-progress/structured/export.py,90,Use the line before the table,not
+NLP-progress/structured/export.py,94,exceptions:,not
+NLP-progress/structured/export.py,135,only has author name,not
+NLP-progress/structured/export.py,202,find the model name column (usually the first one),not
+NLP-progress/structured/export.py,234,now parse the table rows,not
+NLP-progress/structured/export.py,243,extract all the metrics,not
+NLP-progress/structured/export.py,248,extract paper references,not
+NLP-progress/structured/export.py,251,extract model_name and author,not
+NLP-progress/structured/export.py,263,and code links if they exist,not
+NLP-progress/structured/export.py,295,"Main assumption is that the Sota table will minimally have a ""Model"" column",not
+NLP-progress/structured/export.py,332,Assumptions:,not
+NLP-progress/structured/export.py,333,1) H1 are tasks,not
+NLP-progress/structured/export.py,334,2) Everything until the next heading is the task description,not
+NLP-progress/structured/export.py,335,"3) H2 are subtasks, H3 are datasets, H4 are subdatasets",not
+NLP-progress/structured/export.py,337,Algorithm:,not
+NLP-progress/structured/export.py,338,1) Split the document by headings,not
+NLP-progress/structured/export.py,355,2) Parse each heading section one-by-one,not
+NLP-progress/structured/export.py,356,whole parsed output,not
+NLP-progress/structured/export.py,357,current task element being parsed,not
+NLP-progress/structured/export.py,358,current subtask being parsed,not
+NLP-progress/structured/export.py,359,current dataset being parsed,not
+NLP-progress/structured/export.py,364,Task definition,not
+NLP-progress/structured/export.py,372,reset subtasks and datasets,not
+NLP-progress/structured/export.py,376,Subtask definition,not
+NLP-progress/structured/export.py,385,new substask,not
+NLP-progress/structured/export.py,396,reset the last dataset,not
+NLP-progress/structured/export.py,399,Dataset definition,not
+NLP-progress/structured/export.py,406,"we are in a subtask, add everything here",not
+NLP-progress/structured/export.py,410,new dataset and add,not
+NLP-progress/structured/export.py,414,"we are in a task, add here",not
+NLP-progress/structured/export.py,422,dataset description is everything that's not a table,not
+NLP-progress/structured/export.py,426,see if there is an arxiv link in the first paragraph of the description,not

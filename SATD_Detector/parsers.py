@@ -51,23 +51,24 @@ class LanguageParser:
     def load_src_file(self, file_path: str, file_encoding: str = "utf-8"):
         """Loads programming language source file."""
         if not exists(file_path):
-            log.error(f"Source file not found at provided path ({file_path})")
-            raise FileNotFoundError
+            error_msg = f"Source file not found at provided path ({file_path})"
+            log.error(error_msg)
+            raise FileNotFoundError(error_msg)
         log.debug(f"Loading source file ({file_path})")
         try:
             with open(file_path, "r", encoding=file_encoding) as src_file:
                 self.src_file_string = src_file.read()
         except UnicodeDecodeError as e:
-            log.warning(
-                f"Failed to load due to different character encoding. | {e}"
-            )
+            log.warning(f"Failed to load due to different character encoding. | {e}")
             encoding = sys_cmd(["file", "-bi", file_path]).split("charset=")[1].strip()
+            if encoding == "binary":
+                self.src_file_string = "binary"
+                return
             log.debug(f"Trying to load ({file_path}) using coding: {encoding}")
             with open(file_path, "r", encoding=encoding) as src_file:
                 self.src_file_string = src_file.read()
         finally:
             self.src_file_path = file_path
-
 
 
 class PythonParser(LanguageParser):
@@ -169,17 +170,33 @@ class PythonParser(LanguageParser):
             return -1
         lo_comment = 0
         try:
-            tokenized = tokenize.tokenize(BytesIO(self.src_file_string.encode()).readline)
+            tokenized = tokenize.tokenize(
+                BytesIO(self.src_file_string.encode()).readline
+            )
+        except IndentationError as e:
+            log.error(f"IndentationError. File may not be a Python code file. | {e}")
+            return -1
         except SyntaxError as e:
-            encoding = sys_cmd(["file", "-bi", self.src_file_path]).split("charset=")[1].strip()
+            encoding = (
+                sys_cmd(["file", "-bi", self.src_file_path])
+                .split("charset=")[1]
+                .strip()
+            )
             log.warning(f"Encoding LookupError. Found charset={encoding} | {e}")
             return -1
-        for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
-            if t_type is tokenize.COMMENT:
-                lo_comment += 1
-                self.hash_mark_comments.append(
-                    self.HashMark(t_xy_start[0], t_string, line)
-                )
+        try:
+            for t_type, t_string, t_xy_start, t_xy_end, line in tokenized:
+                if t_type is tokenize.COMMENT:
+                    lo_comment += 1
+                    self.hash_mark_comments.append(
+                        self.HashMark(t_xy_start[0], t_string, line)
+                    )
+        except tokenize.TokenError:
+            log.error(f"TokenError @ {self.src_file_path} | Returning lo_comment=-1")
+            lo_comment = -1
+        except IndentationError as e:
+            log.error(f"Indentation@ {self.src_file_path} | Returning lo_comment=-1 | {e}")
+            lo_comment = -1
         log.debug(f"Lines of comment: {lo_comment}")
         self.lo_comment = lo_comment
         return lo_comment

@@ -1,1034 +1,1034 @@
 file path,line #,comment,satd
-fabric/tasks.py,15,"Neuter the normal release.publish task to prevent accidents, then reinstate",
-fabric/tasks.py,16,it as a custom task that does dual fabric-xxx and fabric2-xxx releases.,
-fabric/tasks.py,17,TODO: tweak this once release.all_ actually works right...sigh,
-fabric/tasks.py,18,"TODO: if possible, try phrasing as a custom build that builds x2, and then",
-fabric/tasks.py,19,convince the vanilla publish() to use that custom build instead of its local,
-fabric/tasks.py,20,build?,
-fabric/tasks.py,21,"NOTE: this skips the dual_wheels, alt_python bits the upstream task has,",
-fabric/tasks.py,22,which are at the moment purely for Invoke's sake (as it must publish explicit,
-fabric/tasks.py,23,py2 vs py3 wheels due to some vendored dependencies),
-fabric/tasks.py,35,TODO: better pattern for merging kwargs + config,
-fabric/tasks.py,40,"Initial sanity check, if needed. Will die usefully.",
-fabric/tasks.py,41,TODO: this could also get factored out harder in invocations. shrug. it's,
-fabric/tasks.py,42,like 3 lines total...,
-fabric/tasks.py,46,"Doesn't reeeeally need to be a partial, but if we start having to add",
-fabric/tasks.py,47,"a kwarg to one call or the other, it's nice",
-fabric/tasks.py,51,Vanilla build,
-fabric/tasks.py,53,Fabric 2 build,
-fabric/tasks.py,56,Upload,
-fabric/tasks.py,60,"TODO: as usual, this just wants a good pattern for ""that other task, with a",
-fabric/tasks.py,61,"tweaked default arg value""",
-fabric/tasks.py,77,"Better than nothing, since we haven't solved ""pretend I have some other",
-fabric/tasks.py,78,"task's signature"" yet...",
-fabric/tasks.py,99,TODO: have pytest tasks honor these?,
-fabric/tasks.py,104,NOTE: this is currently for identifying the source directory.,
-fabric/tasks.py,105,"Should it get used for actual releasing, needs changing.",
-fabric/tasks.py,112,"TODO: perhaps move this into a tertiary, non automatically loaded,",
-fabric/tasks.py,113,conf file so that both this & the code under test can reference it?,
-fabric/tasks.py,114,Meh.,
-fabric/setup.py,1,!/usr/bin/env python,
-fabric/setup.py,6,"Enable the option of building/installing Fabric 2.x as ""fabric2"". This allows",
-fabric/setup.py,7,users migrating from 1.x to 2.x to have both in the same process space and,
-fabric/setup.py,8,migrate piecemeal.,
-fabric/setup.py,9,,
-fabric/setup.py,10,NOTE: this requires some irritating tomfoolery; to wit:,
-fabric/setup.py,11,- the repo has a fabric2/ symlink to fabric/ so that things looking for,
-fabric/setup.py,12,"fabric2/<whatever> will find it OK, whether that's code in here or deeper in",
-fabric/setup.py,13,setuptools/wheel/etc,
-fabric/setup.py,14,"- wheels do _not_ execute this on install, only on generation, so maintainers",
-fabric/setup.py,15,"just build wheels with the env var below turned on, and those wheels install",
-fabric/setup.py,16,'fabric2' no problem,
-fabric/setup.py,17,"- sdists execute this _both_ on package creation _and_ on install, so the env",
-fabric/setup.py,18,"var only helps with inbound package metadata; on install by a user, if they",
-fabric/setup.py,19,"don't have the env var, they'd end up with errors because this file tries to",
-fabric/setup.py,20,"look in fabric/, not fabric2/",
-fabric/setup.py,21,"- thus, we use a different test that looks locally to see if only one dir",
-fabric/setup.py,22,"is present, and that overrides the env var test.",
-fabric/setup.py,23,,
-fabric/setup.py,24,See also sites/www/installing.txt.,
-fabric/setup.py,42,Version info -- read without importing,
-fabric/setup.py,48,Frankenstein long_description: changelog note + README,
-fabric/,5,"Ape the half-assed logging junk from Invoke, but ensuring the logger reflects",
-fabric/,6,"our name, not theirs. (Assume most contexts will rely on Invoke itself to",
-fabric/,7,"literally enable/disable logging, for now.)",
-fabric/,22,TODO: I don't understand why these lines were added outside the,
-fabric/,23,"try/except, since presumably it means the attempt at catching ImportError",
-fabric/,24,"wouldn't work. However, that's how the contributing user committed it.",
-fabric/,25,"Need an older Windows box to test it out, most likely.",
-fabric/,29,All Unix and most Windows systems support the getpass module.,
-fabric/,32,"Some SaaS platforms raise KeyError, implying there is no real user",
-fabric/,33,involved. They get the default value of None.,
-fabric/,36,Older (?) Windows systems don't support getpass well; they should,
-fabric/,37,have the `win32` module instead.,
-fabric/,38,pragma: nocover,
-fabric/,41,noqa,
-fabric/,42,noqa,
-fabric/,37,"Same as OpenSSH, can give >1 key",
-fabric/,38,TODO: automatically add hint about iterable-ness to Invoke,
-fabric/,39,help display machinery?,
-fabric/,40,noqa,
-fabric/,42,TODO: worth having short flags for these prompt args?,
-fabric/,58,"No 'unparsed' (i.e. tokens intended for task contexts), and remainder",
-fabric/,59,(text after a double-dash) implies a contextless/taskless remainder,
-fabric/,60,execution of the style 'fab -H host -- command'.,
-fabric/,61,NOTE: must ALSO check to ensure the double dash isn't being used for,
-fabric/,62,tab completion machinery...,
-fabric/,70,Stick in a dummy Collection if it looks like we were invoked w/o any,
-fabric/,71,"tasks, and with a remainder.",
-fabric/,72,"This isn't super ideal, but Invoke proper has no obvious ""just run my",
-fabric/,73,"remainder"" use case, so having it be capable of running w/o any task",
-fabric/,74,"module, makes no sense. But we want that capability for testing &",
-fabric/,75,"things like 'fab -H x,y,z -- mycommand'.",
-fabric/,77,TODO: hm we're probably not honoring project-specific configs in,
-fabric/,78,"this branch; is it worth having it assume CWD==project, since",
-fabric/,79,that's often what users expect? Even tho no task collection to,
-fabric/,80,"honor the real ""lives by task coll""?",
-fabric/,86,"As above, neuter the usual ""hey you didn't give me any tasks, let me",
-fabric/,87,"print help for you"" behavior, if necessary.",
-fabric/,92,"Create config, as parent does, but with lazy=True to avoid our own",
-fabric/,93,"SSH config autoload. (Otherwise, we can't correctly load _just_ the",
-fabric/,94,runtime file if one's being given later.),
-fabric/,96,"However, we don't really want the parent class' lazy behavior (which",
-fabric/,97,skips loading system/global invoke-type conf files) so we manually do,
-fabric/,98,that here to match upstream behavior.,
-fabric/,100,And merge again so that data is available.,
-fabric/,101,TODO: really need to either A) stop giving fucks about calling,
-fabric/,102,"merge() ""too many times"", or B) make merge() itself determine whether",
-fabric/,103,"it needs to run and/or just merge stuff that's changed, so log spam",
-fabric/,104,isn't as bad.,
-fabric/,108,"Note runtime SSH path, if given, and load SSH configurations.",
-fabric/,109,"NOTE: must do parent before our work, in case users want to disable",
-fabric/,110,SSH config loading within a runtime-level conf file/flag.,
-fabric/,114,"Load -i identity file, if given, into connect_kwargs, at overrides",
-fabric/,115,level.,
-fabric/,116,"TODO: this feels a little gross, but since the parent has already",
-fabric/,117,"called load_overrides, this is best we can do for now w/o losing",
-fabric/,118,data. Still feels correct; just might be cleaner to have even more,
-fabric/,119,Config API members around this sort of thing. Shrug.,
-fabric/,124,Secrets prompts that want to happen at handoff time instead of,
-fabric/,125,later/at user-time.,
-fabric/,126,TODO: should this become part of Invoke proper in case other,
-fabric/,127,downstreams have need of it? E.g. a prompt Argument 'type'? We're,
-fabric/,128,already doing a similar thing there for sudo password...,
-fabric/,136,"Since we gave merge=False above, we must do it ourselves here. (Also",
-fabric/,137,allows us to 'compile' our overrides manipulation.),
-fabric/,141,Mostly a concession to testing.,
-fabric/,104,NOTE: these are initialized here to hint to invoke.Config.__setattr__,
-fabric/,105,that they should be treated as real attributes instead of config proxies.,
-fabric/,106,"(Additionally, we're doing this instead of using invoke.Config._set() so",
-fabric/,107,we can take advantage of Sphinx's attribute-doc-comment static analysis.),
-fabric/,108,"Once an instance is created, these values will usually be non-None",
-fabric/,109,because they default to the default config values.,
-fabric/,124,"TODO: should ""reopening"" an existing Connection object that has been",
-fabric/,125,"closed, be allowed? (See e.g. how v1 detects closed/semi-closed",
-fabric/,126,connections & nukes them before creating a new client to the same host.),
-fabric/,127,TODO: push some of this into paramiko.client.Client? e.g. expand what,
-fabric/,128,"Client.exec_command does, it already allows configuring a subset of what",
-fabric/,129,we do / will eventually do / did in 1.x. It's silly to have to do,
-fabric/,130,.get_transport().open_session().,
-fabric/,248,NOTE: parent __init__ sets self._config; for now we simply overwrite,
-fabric/,249,that below. If it's somehow problematic we would want to break parent,
-fabric/,250,__init__ up in a manner that is more cleanly overrideable.,
-fabric/,253,: The .Config object referenced when handling default values (for e.g.,
-fabric/,254,": user or port, when not explicitly given) or deciding how to behave.",
-fabric/,257,"Handle 'vanilla' Invoke config objects, which need cloning 'into' one",
-fabric/,258,"of our own Configs (which grants the new defaults, etc, while not",
-fabric/,259,squashing them if the Invoke-level config already accounted for them),
-fabric/,263,"TODO: when/how to run load_files, merge, load_shell_env, etc?",
-fabric/,264,TODO: i.e. what is the lib use case here (and honestly in invoke too),
-fabric/,268,noqa,
-fabric/,278,NOTE: we load SSH config data as early as possible as it has,
-fabric/,279,potential to affect nearly every other attribute.,
-fabric/,280,": The per-host SSH config data, if any. (See :ref:`ssh-config`.)",
-fabric/,284,: The hostname of the target server.,
-fabric/,287,TODO: log that this occurred?,
-fabric/,290,: The username this connection will use to connect to the remote end.,
-fabric/,292,TODO: is it _ever_ possible to give an empty user value (e.g.,
-fabric/,293,user='')? E.g. do some SSH server specs allow for that?,
-fabric/,295,: The network port to connect on.,
-fabric/,298,"Gateway/proxy/bastion/jump setting: non-None values - string,",
-fabric/,299,"Connection, even eg False - get set directly; None triggers seek in",
-fabric/,300,config/ssh_config,
-fabric/,301,": The gateway `.Connection` or ``ProxyCommand`` string to be used,",
-fabric/,302,: if any.,
-fabric/,304,"NOTE: we use string above, vs ProxyCommand obj, to avoid spinning up",
-fabric/,305,"the ProxyCommand subprocess at init time, vs open() time.",
-fabric/,306,TODO: make paramiko.proxy.ProxyCommand lazy instead?,
-fabric/,309,Default to config...,
-fabric/,311,"But if ssh_config is present, it wins",
-fabric/,313,"TODO: SSHConfig really, seriously needs some love here, god",
-fabric/,316,: Whether agent forwarding is enabled.,
-fabric/,325,: Connection timeout,
-fabric/,328,: Keyword arguments given to `paramiko.client.SSHClient.connect` when,
-fabric/,329,: `open` is called.,
-fabric/,332,: The `paramiko.client.SSHClient` instance this connection wraps.,
-fabric/,337,: A convenience handle onto the return value of,
-fabric/,338,: ``self.client.get_transport()``.,
-fabric/,342,Grab connect_kwargs from config if not explicitly given.,
-fabric/,344,TODO: is it better to pre-empt conflicts w/ manually-handled,
-fabric/,345,"connect() kwargs (hostname, username, etc) here or in open()?",
-fabric/,346,We're doing open() for now in case e.g. someone manually modifies,
-fabric/,347,".connect_kwargs attributewise, but otherwise it feels better to",
-fabric/,348,do it early instead of late.,
-fabric/,350,Special case: key_filename gets merged instead of overridden.,
-fabric/,351,"TODO: probably want some sorta smart merging generally, special cases",
-fabric/,352,are bad.,
-fabric/,356,Config value comes before kwarg value (because it may contain,
-fabric/,357,CLI flag value.),
-fabric/,360,SSH config identityfile values come last in the key_filename,
-fabric/,361,'hierarchy'.,
-fabric/,371,SSH config wins over Invoke-style config,
-fabric/,373,"Reverse hop1,hop2,hop3 style ProxyJump directive so we start",
-fabric/,374,with the final (itself non-gatewayed) hop and work up to,
-fabric/,375,"the front (actual, supplied as our own gateway) hop",
-fabric/,379,"Short-circuit if we appear to be our own proxy, which would",
-fabric/,380,be a RecursionError. Implies SSH config wildcards.,
-fabric/,381,TODO: in an ideal world we'd check user/port too in case they,
-fabric/,382,"differ, but...seriously? They can file a PR with those extra",
-fabric/,383,"half dozen test cases in play, E_NOTIME",
-fabric/,386,"Happily, ProxyJump uses identical format to our host",
-fabric/,387,shorthand...,
-fabric/,395,"Just a string, which we interpret as a proxy command..",
-fabric/,397,Fallback: config value (may be None).,
-fabric/,401,Host comes first as it's the most common differentiator by far,
-fabric/,403,TODO: maybe always show user regardless? Explicit is good...,
-fabric/,406,TODO: harder to make case for 'always show port'; maybe if it's,
-fabric/,407,non-22 (even if config has overridden the local default)?,
-fabric/,410,NOTE: sometimes self.gateway may be eg False if someone wants to,
-fabric/,411,explicitly override a configured non-None value (as otherwise it's,
-fabric/,412,"impossible for __init__ to tell if a None means ""nothing given"" or",
-fabric/,413,"""seriously please no gatewaying"". So, this must always be a vanilla",
-fabric/,414,"truth test and not eg ""is not None"".",
-fabric/,416,Displaying type because gw params would probs be too verbose,
-fabric/,426,TODO: consider including gateway and maybe even other init kwargs?,
-fabric/,427,Whether two cxns w/ same user/host/port but different,
-fabric/,428,"gateway/keys/etc, should be considered ""the same"", is unclear.",
-fabric/,440,"NOTE: this departs from Context/DataProxy, which is not usefully",
-fabric/,441,hashable.,
-fabric/,449,"IPv6: can't reliably tell where addr ends and port begins, so don't",
-fabric/,450,"try (and don't bother adding special syntax either, user should avoid",
-fabric/,451,this situation by using port=).,
-fabric/,455,IPv4: can split on ':' reliably.,
-fabric/,491,Short-circuit,
-fabric/,494,noqa,
-fabric/,495,"These may not be given, period",
-fabric/,503,"These may be given one way or the other, but not both",
-fabric/,509,No conflicts -> merge 'em together,
-fabric/,520,Strip out empty defaults for less noisy debugging,
-fabric/,523,Actually connect!,
-fabric/,538,"ProxyCommand is faster to set up, so do it first.",
-fabric/,540,Leverage a dummy SSHConfig to ensure %h/%p/etc are parsed.,
-fabric/,541,TODO: use real SSH config once loading one properly is,
-fabric/,542,implemented.,
-fabric/,547,Handle inner-Connection gateway type here.,
-fabric/,548,TODO: logging,
-fabric/,550,TODO: expose the opened channel itself as an attribute? (another,
-fabric/,551,possible argument for separating the two gateway types...) e.g. if,
-fabric/,552,someone wanted to piggyback on it for other same-interpreter socket,
-fabric/,553,needs...,
-fabric/,554,TODO: and the inverse? allow users to supply their own socket/like,
-fabric/,555,object they got via $WHEREEVER?,
-fabric/,556,TODO: how best to expose timeout param? reuse general connection,
-fabric/,557,timeout from config?,
-fabric/,561,NOTE: src_addr needs to be 'empty but not None' values to,
-fabric/,562,correctly encode into a network message. Theoretically Paramiko,
-fabric/,563,could auto-interpret None sometime & save us the trouble.,
-fabric/,635,"Superclass run() uses runners.local, so we can literally just call it",
-fabric/,636,straight.,
-fabric/,677,TODO: yield the socket for advanced users? Other advanced use cases,
-fabric/,678,(perhaps factor out socket creation itself)?,
-fabric/,679,TODO: probably push some of this down into Paramiko,
-fabric/,732,"TunnelManager does all of the work, sitting in the background (so we",
-fabric/,733,can yield) and spawning threads every time somebody connects to our,
-fabric/,734,local port.,
-fabric/,741,"TODO: not a huge fan of handing in our transport, but...?",
-fabric/,747,Return control to caller now that things ought to be operational,
-fabric/,750,Teardown once user exits block,
-fabric/,752,Signal to manager that it should close all open tunnels,
-fabric/,754,Then wait for it to do so,
-fabric/,756,"Raise threading errors from within the manager, which would be",
-fabric/,757,one of:,
-fabric/,758,"- an inner ThreadException, which was created by the manager on",
-fabric/,759,behalf of its Tunnels; this gets directly raised.,
-fabric/,760,"- some other exception, which would thus have occurred in the",
-fabric/,761,manager itself; we wrap this in a new ThreadException.,
-fabric/,762,"NOTE: in these cases, some of the metadata tracking in",
-fabric/,763,ExceptionHandlingThread/ExceptionWrapper/ThreadException (which,
-fabric/,764,is useful when dealing with multiple nearly-identical sibling IO,
-fabric/,765,"threads) is superfluous, but it doesn't feel worth breaking",
-fabric/,766,things up further; we just ignore it for now.,
-fabric/,774,TODO: cancel port forward on transport? Does that even make sense,
-fabric/,775,here (where we used direct-tcpip) vs the opposite method (which,
-fabric/,776,is what uses forward-tcpip)?,
-fabric/,778,TODO: probably push some of this down into Paramiko,
-fabric/,834,Callback executes on each connection to the remote port and is given,
-fabric/,835,a Channel hooked up to said port. (We don't actually care about the,
-fabric/,836,source/dest host/port pairs at all; only whether the channel has data,
-fabric/,837,to read and suchlike.),
-fabric/,838,We then pair that channel with a new 'outbound' socket connection to,
-fabric/,839,"the local host/port being forwarded, in a new Tunnel.",
-fabric/,840,That Tunnel is then added to a shared data structure so we can track,
-fabric/,841,& close them during shutdown.,
-fabric/,842,,
-fabric/,843,TODO: this approach is less than ideal because we have to share state,
-fabric/,844,between ourselves & the callback handed into the transport's own,
-fabric/,845,thread handling (which is roughly analogous to our self-controlled,
-fabric/,846,TunnelManager for local forwarding). See if we can use more of,
-fabric/,847,Paramiko's API (or improve it and then do so) so that isn't,
-fabric/,848,necessary.,
-fabric/,853,"TODO: handle connection failure such that channel, etc get closed",
-fabric/,855,"TODO: we don't actually need to generate the Events at our level,",
-fabric/,856,"do we? Just let Tunnel.__init__ do it; all we do is ""press its",
-fabric/,857,"button"" on shutdown...",
-fabric/,860,Communication between ourselves & the Paramiko handling subthread,
-fabric/,863,"Ask Paramiko (really, the remote sshd) to call our callback whenever",
-fabric/,864,connections are established on the remote iface/port.,
-fabric/,865,"transport.request_port_forward(remote_host, remote_port, callback)",
-fabric/,872,TODO: see above re: lack of a TunnelManager,
-fabric/,873,TODO: and/or also refactor with TunnelManager re: shutdown logic.,
-fabric/,874,E.g. maybe have a non-thread TunnelManager-alike with a method,
-fabric/,875,that acts as the callback? At least then there's a tiny bit more,
-fabric/,876,encapsulation...meh.,
-fabric/,69,Tease out our own kwargs.,
-fabric/,70,TODO: consider moving more stuff out of __init__ and into methods so,
-fabric/,71,there's less of this sort of splat-args + pop thing? Eh.,
-fabric/,79,Record whether we were given an explicit object (so other steps know,
-fabric/,80,whether to bother loading from disk or not),
-fabric/,81,This needs doing before super __init__ as that calls our post_init,
-fabric/,85,Arrive at some non-None SSHConfig object (upon which to run .parse(),
-fabric/,86,"later, in _load_ssh_file())",
-fabric/,91,"Now that our own attributes have been prepared & kwargs yanked, we",
-fabric/,92,can fall up into parent __init__(),
-fabric/,95,And finally perform convenience non-lazy bits if needed,
-fabric/,119,Update the runtime SSH config path (assumes enough regular config,
-fabric/,120,levels have been loaded that anyone wanting to transmit this info,
-fabric/,121,"from a 'vanilla' Invoke config, has gotten it set.)",
-fabric/,124,Load files from disk if we weren't given an explicit SSHConfig in,
-fabric/,125,__init__,
-fabric/,130,TODO: clone() at this point kinda-sorta feels like it's retreading,
-fabric/,131,__reduce__ and the related (un)pickling stuff...,
-fabric/,132,Get cloned obj.,
-fabric/,133,"NOTE: Because we also extend .init_kwargs, the actual core SSHConfig",
-fabric/,134,"data is passed in at init time (ensuring no files get loaded a 2nd,",
-fabric/,135,"etc time) and will already be present, so we don't need to set",
-fabric/,136,".base_ssh_config ourselves. Similarly, there's no need to worry about",
-fabric/,137,how the SSH config paths may be inaccurate until below; nothing will,
-fabric/,138,be referencing them.,
-fabric/,140,"Copy over our custom attributes, so that the clone still resembles us",
-fabric/,141,re: recording where the data originally came from (in case anything,
-fabric/,142,"re-runs ._load_ssh_files(), for example).",
-fabric/,149,"Load SSH configs, in case they weren't prior to now (e.g. a vanilla",
-fabric/,150,"Invoke clone(into), instead of a us-to-us clone.)",
-fabric/,152,All done,
-fabric/,156,Parent kwargs,
-fabric/,158,"Transmit our internal SSHConfig via explicit-obj kwarg, thus",
-fabric/,159,bypassing any file loading. (Our extension of clone() above copies,
-fabric/,160,over other attributes as well so that the end result looks consistent,
-fabric/,161,with reality.),
-fabric/,163,"TODO: as with other spots, this implies SSHConfig needs a cleaner",
-fabric/,164,public API re: creating and updating its core data.,
-fabric/,177,TODO: does this want to more closely ape the behavior of,
-fabric/,178,InvokeConfig.load_files? re: having a _found attribute for each that,
-fabric/,179,determines whether to load or skip,
-fabric/,182,Manually blow up like open() (_load_ssh_file normally doesn't),
-fabric/,224,TODO: hrm should the run-related things actually be derived from the,
-fabric/,225,"runner_class? E.g. Local defines local stuff, Remote defines remote",
-fabric/,226,stuff? Doesn't help with the final config tree tho...,
-fabric/,227,"TODO: as to that, this is a core problem, Fabric wants split",
-fabric/,228,"local/remote stuff, eg replace_env wants to be False for local and",
-fabric/,229,True remotely; shell wants to differ depending on target (and either,
-fabric/,230,"way, does not want to use local interrogation for remote)",
-fabric/,231,TODO: is it worth moving all of our 'new' settings to a discrete,
-fabric/,232,"namespace for cleanliness' sake? e.g. ssh.port, ssh.user etc.",
-fabric/,233,"It wouldn't actually simplify this code any, but it would make it",
-fabric/,234,easier for users to determine what came from which library/repo.,
-fabric/,237,New settings,
-fabric/,247,TODO: this becomes an override/extend once Invoke grows execution,
-fabric/,248,timeouts (which should be timeouts.execute),
-fabric/,8,TODO: come up w/ a better name heh,
-fabric/,11,Generate new call list with per-host variants & Connections inserted,
-fabric/,13,TODO: mesh well with Invoke list-type args helper (inv #132),
-fabric/,21,"TODO: expand this to allow multiple types of execution plans,",
-fabric/,22,"pending outcome of invoke#461 (which, if flexible enough to",
-fabric/,23,"handle intersect of dependencies+parameterization, just becomes",
-fabric/,24,'honor that new feature of Invoke'),
-fabric/,25,"TODO: roles, other non-runtime host parameterizations, etc",
-fabric/,26,"Pre-tasks get added only once, not once per host.",
-fabric/,28,"Main task, per host",
-fabric/,31,Deal with lack of hosts arg (acts same as `inv` in that case),
-fabric/,32,TODO: no tests for this branch?,
-fabric/,35,"Post-tasks added once, not once per host.",
-fabric/,37,Add remainder as anonymous task,
-fabric/,39,TODO: this will need to change once there are more options for,
-fabric/,40,"setting host lists besides ""-H or 100% within-task""",
-fabric/,43,noqa,
-fabric/,47,TODO: how to make all our tests configure in_stream=False?,
-fabric/,51,"TODO: see above TODOs about non-parameterized setups, roles etc",
-fabric/,52,TODO: will likely need to refactor that logic some more so it can,
-fabric/,53,be used both there and here.,
-fabric/,63,Generate a custom ConnectionCall that knows how to yield a Connection,
-fabric/,64,"in its make_context(), specifically one to the host requested here.",
-fabric/,66,"TODO: using bag-of-attrs is mildly gross but whatever, I'll take it.",
-fabric/,71,"Don't perform deduping, we will often have ""duplicate"" tasks w/",
-fabric/,72,distinct host values/etc.,
-fabric/,73,TODO: might want some deduplication later on though - falls under,
-fabric/,74,"""how to mesh parameterization with pre/post/etc deduping"".",
-fabric/,23,TODO: consider adding an option to conditionally turn this,
-fabric/,24,update_environment call into a command-string prefixing behavior,
-fabric/,25,instead (e.g. when one isn't able/willing to update remote server's,
-fabric/,26,AcceptEnv setting). OR: rely on higher-level generic command,
-fabric/,27,"prefixing functionality, when implemented.",
-fabric/,28,TODO: honor SendEnv from ssh_config,
-fabric/,30,TODO: pass in timeout= here when invoke grows timeout functionality,
-fabric/,31,in Runner/Local.,
-fabric/,48,"NOTE: in v1, we just reraised the KeyboardInterrupt unless a PTY was",
-fabric/,49,"present; this seems to have been because without a PTY, the",
-fabric/,50,"below escape sequence is ignored, so all we can do is immediately",
-fabric/,51,terminate on our end.,
-fabric/,52,"NOTE: also in v1, the raising of the KeyboardInterrupt completely",
-fabric/,53,skipped all thread joining & cleanup; presumably regular interpreter,
-fabric/,54,shutdown suffices to tie everything off well enough.,
-fabric/,56,"Submit hex ASCII character 3, aka ETX, which most Unix PTYs",
-fabric/,57,interpret as a foreground SIGINT.,
-fabric/,58,TODO: is there anything else we can do here to be more portable?,
-fabric/,74,TODO: shit that is in fab 1 run() but could apply to invoke.Local too:,
-fabric/,75,* command timeout control,
-fabric/,76,* see rest of stuff in _run_command/_execute in operations.py...there is,
-fabric/,77,"a bunch that applies generally like optional exit codes, etc",
-fabric/,79,TODO: general shit not done yet,
-fabric/,80,* stdin; Local relies on local process management to ensure stdin is,
-fabric/,81,hooked up; we cannot do that.,
-fabric/,82,* output prefixing,
-fabric/,83,* agent forwarding,
-fabric/,84,"* reading at 4096 bytes/time instead of whatever inv defaults to (also,",
-fabric/,85,"document why we are doing that, iirc it changed recentlyish via ticket)",
-fabric/,86,"* TODO: oh god so much more, go look it up",
-fabric/,88,TODO: shit that has no Local equivalent that we probs need to backfill,
-fabric/,89,"into Runner, probably just as a ""finish()"" or ""stop()"" (to mirror",
-fabric/,90,start()):,
-fabric/,91,* channel close(),
-fabric/,92,* agent-forward close(),
-fabric/,111,"TODO: have useful str/repr differentiation from invoke.Result,",
-fabric/,112,transfer.Result etc.,
-fabric/,69,"TODO: #563, #388 (could be here or higher up in Program area)",
-fabric/,79,TODO: *args here too; or maybe just fold into __init__ and type,
-fabric/,80,check?,
-fabric/,93,TODO: probably best to suck it up & match actual run() sig?,
-fabric/,94,"TODO: how to change method of execution across contents? subclass,",
-fabric/,95,"kwargs, additional methods, inject an executor? Doing subclass for",
-fabric/,96,"now, but not 100% sure it's the best route.",
-fabric/,97,TODO: also need way to deal with duplicate connections (see THOUGHTS),
-fabric/,98,"TODO: and errors - probably FailureSet? How to handle other,",
-fabric/,99,"regular, non Failure, exceptions though? Still need an aggregate",
-fabric/,100,"exception type either way, whether it is FailureSet or what...",
-fabric/,101,"TODO: OTOH, users may well want to be able to operate on the hosts",
-fabric/,102,that did not fail (esp if failure % is low) so we really _do_ want,
-fabric/,103,"something like a result object mixing success and failure, or maybe a",
-fabric/,104,golang style two-tuple of successes and failures?,
-fabric/,105,"TODO: or keep going w/ a ""return or except"", but the object is",
-fabric/,106,"largely similar (if not identical) in both situations, with the",
-fabric/,107,exception just being the signal that Shit Broke?,
-fabric/,110,TODO: how to handle sudo? Probably just an inner worker method that takes,
-fabric/,111,"the method name to actually call (run, sudo, etc)?",
-fabric/,113,TODO: this all needs to mesh well with similar strategies applied to,
-fabric/,114,entire tasks - so that may still end up factored out into Executors or,
-fabric/,115,something lower level than both those and these?,
-fabric/,117,"TODO: local? Invoke wants ability to do that on its own though, which",
-fabric/,118,"would be distinct from Group. (May want to switch Group to use that,",
-fabric/,119,"though, whatever it ends up being?)",
-fabric/,121,TODO: mirror Connection's close()?,
-fabric/,131,TODO: probably best to suck it up & match actual get() sig?,
-fabric/,132,TODO: actually implement on subclasses,
-fabric/,159,TODO: namedtuple or attrs object?,
-fabric/,183,TODO: configurable join timeout,
-fabric/,184,TODO: (in sudo's version) configurability around interactive,
-fabric/,185,"prompting resulting in an exception instead, as in v1",
-fabric/,187,Get non-exception results from queue,
-fabric/,189,TODO: io-sleep? shouldn't matter if all threads are now joined,
-fabric/,191,TODO: outstanding musings about how exactly aggregate results,
-fabric/,192,"ought to ideally operate...heterogenous obj like this, multiple",
-fabric/,193,"objs, ??",
-fabric/,195,Get exceptions from the threads themselves.,
-fabric/,196,"TODO: in a non-thread setup, this would differ, e.g.:",
-fabric/,197,- a queue if using multiprocessing,
-fabric/,198,- some other state-passing mechanism if using e.g. coroutines,
-fabric/,199,- ???,
-fabric/,204,"Outer kwargs is Thread instantiation kwargs, inner is kwargs",
-fabric/,205,passed to thread target/body.,
-fabric/,241,Short-circuit to avoid reprocessing every access.,
-fabric/,244,TODO: if we ever expect .succeeded/.failed to be useful before a,
-fabric/,245,"GroupResult is fully initialized, this needs to become smarter.",
-fabric/,9,TODO: actual logging! LOL,
-fabric/,11,"TODO: figure out best way to direct folks seeking rsync, to patchwork's rsync",
-fabric/,12,"call (which needs updating to use invoke.run() & fab 2 connection methods,",
-fabric/,13,but is otherwise suitable).,
-fabric/,14,UNLESS we want to try and shoehorn it into this module after all? Delegate,
-fabric/,15,any recursive get/put to it? Requires users to have rsync available of,
-fabric/,16,course.,
-fabric/,26,"TODO: SFTP clear default, but how to do SCP? subclass? init kwarg?",
-fabric/,91,TODO: how does this API change if we want to implement,
-fabric/,92,remote-to-remote file transfer? (Is that even realistic?),
-fabric/,93,"TODO: handle v1's string interpolation bits, especially the default",
-fabric/,94,"one, or at least think about how that would work re: split between",
-fabric/,95,single and multiple server targets.,
-fabric/,96,TODO: callback support,
-fabric/,97,TODO: how best to allow changing the behavior/semantics of,
-fabric/,98,remote/local (e.g. users might want 'safer' behavior that complains,
-fabric/,99,instead of overwriting existing files) - this likely ties into the,
-fabric/,100,"""how to handle recursive/rsync"" and ""how to handle scp"" questions",
-fabric/,102,Massage remote path,
-fabric/,110,Massage local path:,
-fabric/,111,- handle file-ness,
-fabric/,112,"- if path, fill with remote name if empty, & make absolute",
-fabric/,120,Run Paramiko-level .get() (side-effects only. womp.),
-fabric/,121,TODO: push some of the path handling into Paramiko; it should be,
-fabric/,122,responsible for dealing with path cleaning etc.,
-fabric/,123,TODO: probably preserve warning message from v1 when overwriting,
-fabric/,124,existing files. Use logging for that obviously.,
-fabric/,125,,
-fabric/,126,"If local appears to be a file-like object, use sftp.getfo, not get",
-fabric/,131,Set mode to same as remote end,
-fabric/,132,TODO: Push this down into SFTPClient sometime (requires backwards,
-fabric/,133,incompat release.),
-fabric/,138,Return something useful,
-fabric/,198,Massage remote path,
-fabric/,207,noqa,
-fabric/,213,non-empty local_base implies a) text file path or b) FLO which,
-fabric/,214,had a non-empty .name attribute. huzzah!,
-fabric/,220,noqa,
-fabric/,223,TODO: can we ever really end up here? implies we want to,
-fabric/,224,reorganize all this logic so it has fewer potential holes,
-fabric/,226,noqa,
-fabric/,239,Massage local path,
-fabric/,248,noqa,
-fabric/,250,Run Paramiko-level .put() (side-effects only. womp.),
-fabric/,251,TODO: push some of the path handling into Paramiko; it should be,
-fabric/,252,responsible for dealing with path cleaning etc.,
-fabric/,253,TODO: probably preserve warning message from v1 when overwriting,
-fabric/,254,existing files. Use logging for that obviously.,
-fabric/,255,,
-fabric/,256,"If local appears to be a file-like object, use sftp.putfo, not put",
-fabric/,269,Set mode to same as local end,
-fabric/,270,TODO: Push this down into SFTPClient sometime (requires backwards,
-fabric/,271,incompat release.),
-fabric/,276,Return something useful,
-fabric/,302,TODO: how does this differ from put vs get? field stating which? (feels,
-fabric/,303,"meh) distinct classes differing, for now, solely by name? (also meh)",
-fabric/,305,": The local path the file was saved as, or the object it was saved",
-fabric/,306,: into if a file-like object was given instead.,
-fabric/,307,:,
-fabric/,308,": If a string path, this value is massaged to be absolute; see",
-fabric/,309,: `.orig_local` for the original argument value.,
-fabric/,311,: The original value given as the returning method's ``local``,
-fabric/,312,: argument.,
-fabric/,314,: The remote path downloaded from. Massaged to be absolute; see,
-fabric/,315,: `.orig_remote` for the original argument value.,
-fabric/,317,: The original argument value given as the returning method's,
-fabric/,318,: ``remote`` argument.,
-fabric/,320,: The `.Connection` object this result was obtained from.,
-fabric/,323,TODO: ensure str/repr makes it easily differentiable from run() or,
-fabric/,324,local() result objects (and vice versa).,
-fabric/,1,TODO: this may want to move to Invoke if we can find a use for it there too?,
-fabric/,2,Or make it _more_ narrowly focused and stay here?,
-fabric/,15,": The `.GroupResult` object which would have been returned, had there",
-fabric/,16,: been no errors. See its docstring (and that of `.Group`) for,
-fabric/,17,: details.,
-fabric/,1,flake8: noqa,
-fabric/,49,Track each tunnel that gets opened during our lifetime,
-fabric/,52,Set up OS-level listener socket on forwarded port,
-fabric/,54,TODO: why do we want REUSEADDR exactly? and is it portable?,
-fabric/,56,"NOTE: choosing to deal with nonblocking semantics and a fast loop,",
-fabric/,57,versus an older approach which blocks & expects outer scope to cause,
-fabric/,58,a socket exception by close()ing the socket.,
-fabric/,64,Main loop-wait: accept connections on the local listener,
-fabric/,65,"NOTE: EAGAIN means ""you're nonblocking and nobody happened to",
-fabric/,66,"connect at this point in time""",
-fabric/,69,Set TCP_NODELAY to match OpenSSH's forwarding socket behavior,
-fabric/,73,TODO: make configurable,
-fabric/,78,Set up direct-tcpip channel on server end,
-fabric/,79,TODO: refactor w/ what's used for gateways,
-fabric/,84,Set up 'worker' thread for this specific connection to our,
-fabric/,85,"tunnel, plus its dedicated signal event (which will appear as a",
-fabric/,86,"public attr, no need to track both independently).",
-fabric/,93,Propogate shutdown signal to all tunnels & wait for closure,
-fabric/,94,"TODO: would be nice to have some output or at least logging here,",
-fabric/,95,"especially for ""sets up a handful of tunnels"" use cases like",
-fabric/,96,forwarding nontrivial HTTP traffic.,
-fabric/,103,Handle exceptions,
-fabric/,107,All we have left to close is our own sock.,
-fabric/,108,TODO: use try/finally?,
-fabric/sites/shared_conf.py,8,Alabaster theme + mini-extension,
-fabric/sites/shared_conf.py,12,Paths relative to invoking conf.py - not this shared file,
-fabric/sites/shared_conf.py,28,Wide enough that 80-col code snippets aren't truncated on default font,
-fabric/sites/shared_conf.py,29,settings (at least for bitprophet's Chrome-on-OSX-Yosemite setup),
-fabric/sites/shared_conf.py,36,Enable & configure doctest,
-fabric/sites/shared_conf.py,38,Import mock tooling from unit tests' _util.py,
-fabric/sites/shared_conf.py,48,Invoke (docs + www),
-fabric/sites/shared_conf.py,59,Paramiko (docs),
-fabric/sites/shared_conf.py,72,Regular settings,
-fabric/sites/www/conf.py,1,Obtain shared config values,
-fabric/sites/www/conf.py,10,Releases changelog extension,
-fabric/sites/www/conf.py,15,Intersphinx for referencing API/usage docs,
-fabric/sites/www/conf.py,17,"Default is 'local' building, but reference the public docs site when building",
-fabric/sites/www/conf.py,18,under RTD.,
-fabric/sites/www/conf.py,24,Sister-site links to API docs,
-fabric/sites/docs/conf.py,1,Obtain shared config values,
-fabric/sites/docs/conf.py,9,Enable & configure autodoc,
-fabric/sites/docs/conf.py,13,"Default is 'local' building, but reference the public WWW site when building",
-fabric/sites/docs/conf.py,14,under RTD.,
-fabric/sites/docs/conf.py,19,Intersphinx connection to www site,
-fabric/sites/docs/conf.py,22,Sister-site links to WWW,
-fabric/integration/concurrency.py,24,TODO: still useful to use Group API here? Where does this responsibility,
-fabric/integration/concurrency.py,25,fall between Group and Executor (e.g. phrasing this specifically as a,
-fabric/integration/concurrency.py,26,generic subcase of Invoke level task parameterization)?,
-fabric/integration/concurrency.py,28,TODO: spin up multiple temp SSHDs / Paramiko servers / ???,
-fabric/integration/concurrency.py,39,"Prove no exterior connection caching, socket reuse, etc",
-fabric/integration/concurrency.py,40,NOTE: would phrase these as chained 'is not' but pep8 linter is being,
-fabric/integration/concurrency.py,41,stupid :(,
-fabric/integration/concurrency.py,50,TODO: needs https://github.com/pyinvoke/invoke/issues/438 fixed,
-fabric/integration/concurrency.py,51,before it will reliably pass,
-fabric/integration/concurrency.py,53,"Kind of silly but a nice base case for ""how would someone thread this",
-fabric/integration/concurrency.py,54,stuff; and are there any bizarre gotchas lurking in default,
-fabric/integration/concurrency.py,55,"config/context/connection state?""",
-fabric/integration/concurrency.py,56,"Specifically, cut up the local (usually 100k's long) words dict into",
-fabric/integration/concurrency.py,57,"per-thread chunks, then read those chunks via shell command, as a",
-fabric/integration/concurrency.py,58,"crummy ""make sure each thread isn't polluting things like stored",
-fabric/integration/concurrency.py,59,"stdout"" sanity test",
-fabric/integration/concurrency.py,61,TODO: skip test on Windows or find suitable alternative file,
-fabric/integration/concurrency.py,66,"will be an int, which is fine",
-fabric/integration/concurrency.py,84,"Kinda slow, but hey, maybe the test runner is hot",
-fabric/integration/connection.py,9,TODO: use pytest markers,
-fabric/integration/connection.py,25,"Handy shortcut - open things up, then return Connection for us to",
-fabric/integration/connection.py,26,close,
-fabric/integration/connection.py,46,"Most Unix systems should have stty, which asplodes when not run",
-fabric/integration/connection.py,47,"under a pty, and prints useful info otherwise",
-fabric/integration/connection.py,54,"PTYs use \r\n, not \n, line separation",
-fabric/integration/connection.py,60,NOTE: most of the interesting tests about this are in,
-fabric/integration/connection.py,61,invoke.runners / invoke.integration.,
-fabric/integration/connection.py,65,meh way of proving it didn't use SSH,
-fabric/integration/connection.py,74,meh way of proving it didn't use SSH yet,
-fabric/integration/connection.py,76,NOW it's using SSH,
-fabric/integration/connection.py,81,NOTE: assumes a user configured for passworded (NOT,
-fabric/integration/connection.py,82,"passwordless)_sudo, whose password is 'mypass', is executing the",
-fabric/integration/connection.py,83,test suite. I.e. our travis-ci setup.,
-fabric/integration/connection.py,106,Guards against e.g. cleanup finishing before actually reading all,
-fabric/integration/connection.py,107,data from the remote end. Which is largely an issue in Invoke-level,
-fabric/integration/connection.py,108,code but one that only really manifests when doing stuff over the,
-fabric/integration/connection.py,109,network. Yay computers!,
-fabric/integration/connection.py,116,"When bug present, # lines received is significantly fewer than the",
-fabric/integration/connection.py,117,true count in the file (by thousands).,
-fabric/integration/group.py,19,GroupException.result -> GroupResult;,
-fabric/integration/group.py,20,GroupResult values will be UnexpectedExit in this case;,
-fabric/integration/group.py,21,"UnexpectedExit.result -> Result, and thus .exited etc.",
-fabric/integration/transfer.py,21,Copy file from support to tempdir,
-fabric/integration/transfer.py,25,Make sure it arrived,
-fabric/integration/transfer.py,29,Sanity check result object,
-fabric/integration/transfer.py,43,"Use a dummy file which is given an unusual, highly unlikely to be",
-fabric/integration/transfer.py,44,"default umask, set of permissions (oct 641, aka -rw-r----x)",
-fabric/integration/transfer.py,58,Copy file from 'local' (support dir) to 'remote' (tempdir),
-fabric/integration/transfer.py,62,TODO: wrap chdir at the Connection level,
-fabric/integration/transfer.py,65,Make sure it arrived,
-fabric/integration/transfer.py,68,Sanity check result object,
-fabric/integration/transfer.py,84,"Use a dummy file which is given an unusual, highly unlikely to be",
-fabric/integration/transfer.py,85,"default umask, set of permissions (oct 641, aka -rw-r----x)",
-fabric/tests/_util.py,17,TODO: revert to asserts,
-fabric/tests/_util.py,22,"TODO: this could become a fixture in conftest.py, presumably, and just yield",
-fabric/tests/_util.py,23,"stdout, allowing the tests themselves to assert more naturally",
-fabric/tests/_util.py,79,TODO: worth accepting strings and doing the BytesIO setup ourselves?,
-fabric/tests/_util.py,80,Stored privately to avoid any possible collisions ever. shrug.,
-fabric/tests/_util.py,83,Stdin less private so it can be asserted about,
-fabric/tests/_util.py,88,Don't return our own class on sub-mocks.,
-fabric/tests/_util.py,144,Sanity check,
-fabric/tests/_util.py,150,noqa,
-fabric/tests/_util.py,151,Fill in values,
-fabric/tests/_util.py,157,"Honestly dunno which is dumber, this or duplicating Command's",
-fabric/tests/_util.py,158,default kwarg values in this method's signature...sigh,
-fabric/tests/_util.py,195,another Mock,
-fabric/tests/_util.py,197,"NOTE: this originally did chain([False], repeat(True)) so that",
-fabric/tests/_util.py,198,"get_transport().active was False initially, then True. However,",
-fabric/tests/_util.py,199,because we also have to consider when get_transport() comes back None,
-fabric/tests/_util.py,200,"(which it does initially), the case where we get back a non-None",
-fabric/tests/_util.py,201,"transport _and_ it's not active yet, isn't useful to test, and",
-fabric/tests/_util.py,202,"complicates text expectations. So we don't, for now.",
-fabric/tests/_util.py,204,NOTE: setting PropertyMocks on a mock's type() is apparently,
-fabric/tests/_util.py,205,"How It Must Be Done, otherwise it sets the real attr value.",
-fabric/tests/_util.py,210,"Mock of a Channel instance, not e.g. Channel-the-class.",
-fabric/tests/_util.py,211,"Specifically, one that can track individual state for recv*().",
-fabric/tests/_util.py,217,"If requested, make exit_status_ready return False the first N",
-fabric/tests/_util.py,218,times it is called in the wait() loop.,
-fabric/tests/_util.py,224,Have our transport yield those channel mocks in order when,
-fabric/tests/_util.py,225,open_session() is called.,
-fabric/tests/_util.py,232,Per-session we expect a single transport get,
-fabric/tests/_util.py,235,And a single connect to our target host.,
-fabric/tests/_util.py,242,"Calls to open_session will be 1-per-command but are on transport, not",
-fabric/tests/_util.py,243,"channel, so we can only really inspect how many happened in",
-fabric/tests/_util.py,244,aggregate. Save a list for later comparison to call_args.,
-fabric/tests/_util.py,248,Expect an open_session for each command exec,
-fabric/tests/_util.py,250,Expect that the channel gets an exec_command,
-fabric/tests/_util.py,252,"Expect written stdin, if given",
-fabric/tests/_util.py,256,Make sure open_session was called expected number of times.,
-fabric/tests/_util.py,277,TODO: make it easier to assume single session w/ >1 command?,
-fabric/tests/_util.py,293,"First, stop the default session to clean up its state, if it seems to",
-fabric/tests/_util.py,294,be running.,
-fabric/tests/_util.py,296,Update sessions list with new session(s),
-fabric/tests/_util.py,298,"And start patching again, returning mocked channels",
-fabric/tests/_util.py,305,Patch SSHClient so the sessions' generated mocks can be set as its,
-fabric/tests/_util.py,306,return values,
-fabric/tests/_util.py,309,"Mock clients, to be inspected afterwards during sanity-checks",
-fabric/tests/_util.py,314,"Each time the mocked SSHClient class is instantiated, it will",
-fabric/tests/_util.py,315,yield one of our mocked clients (w/ mocked transport & channel),
-fabric/tests/_util.py,316,generated above.,
-fabric/tests/_util.py,324,Short circuit if we don't seem to have start()ed yet.,
-fabric/tests/_util.py,327,Stop patching SSHClient,
-fabric/tests/_util.py,335,"Basic sanity tests about transport, channel etc",
-fabric/tests/_util.py,339,"TODO: unify with the stuff in paramiko itself (now in its tests/conftest.py),",
-fabric/tests/_util.py,340,they're quite distinct and really shouldn't be.,
-fabric/tests/_util.py,354,Set up mocks,
-fabric/tests/_util.py,361,Handle common filepath massage actions; tests will assume these.,
-fabric/tests/_util.py,367,Ensure stat st_mode is a real number; Python 2 stat.S_IMODE doesn't,
-fabric/tests/_util.py,368,"appear to care if it's handed a MagicMock, but Python 3's does (?!)",
-fabric/tests/_util.py,369,arbitrary real-ish mode,
-fabric/tests/_util.py,372,Not super clear to me why the 'wraps' functionality in mock isn't,
-fabric/tests/_util.py,373,working for this :(,
-fabric/tests/_util.py,375,Return the sftp and OS mocks for use by decorator use case.,
-fabric/tests/util.py,10,"Basically implementation tests, because it's not feasible to do a ""real"" test",
-fabric/tests/util.py,11,on random platforms (where we have no idea what the actual invoking user is),
-fabric/tests/util.py,23,TODO: test for ImportError+win32 once appveyor is set up as w/ invoke,
-fabric/tests/main.py,10,because WHY would you expose @skip normally? -_-,
-fabric/tests/main.py,20,Designate a runtime config file intended for the test environment; it does,
-fabric/tests/main.py,21,things like automatically mute stdin so test harnesses that care about stdin,
-fabric/tests/main.py,22,don't get upset.,
-fabric/tests/main.py,23,NOTE: this requires the test environment to have Invoke 1.1.0 or above; for,
-fabric/tests/main.py,24,"now this is fine as we don't do a big serious matrix, we typically use Invoke",
-fabric/tests/main.py,25,master to allow testing in-dev changes.,
-fabric/tests/main.py,26,TODO: if that _changes_ then we may have to rethink this so that it goes back,
-fabric/tests/main.py,27,to being testable on Invoke >=1.0 instead of >=1.1...,
-fabric/tests/main.py,61,Sanity,
-fabric/tests/main.py,64,Real test,
-fabric/tests/main.py,96,"This task, in each subdir, expects data present in a",
-fabric/tests/main.py,97,fabric.<ext> nearby to show up in the config.,
-fabric/tests/main.py,108,"Relies on asserts within the task, which will bubble up as",
-fabric/tests/main.py,109,it's executed in-process,
-fabric/tests/main.py,125,Task that doesn't make assertions about the config (since the,
-fabric/tests/main.py,126,_actual_ config it gets is empty as we had to mock out the loader,
-fabric/tests/main.py,127,method...sigh),
-fabric/tests/main.py,129,"Called only once (initial __init__) with runtime conf, instead of",
-fabric/tests/main.py,130,that plus a few more pairs of calls against the default files,
-fabric/tests/main.py,131,(which is what happens when clone() isn't preserving the,
-fabric/tests/main.py,132,already-parsed/loaded SSHConfig),
-fabric/tests/main.py,136,NOTE: many of these just rely on MockRemote's builtin,
-fabric/tests/main.py,137,"""channel.exec_command called with given command string"" asserts.",
-fabric/tests/main.py,141,"In addition to just testing a base case, this checks for a really",
-fabric/tests/main.py,142,"dumb bug where one appends to, instead of replacing, the task",
-fabric/tests/main.py,143,list during parameterization/expansion XD,
-fabric/tests/main.py,164,"NOTE: no mocking because no actual run() under test, only",
-fabric/tests/main.py,165,parameterization,
-fabric/tests/main.py,166,TODO: avoiding for now because implementing this requires more work,
-fabric/tests/main.py,167,at the Invoke level re: deciding when to _not_ pass in the,
-fabric/tests/main.py,168,"session-global config object (Executor's self.config). At the moment,",
-fabric/tests/main.py,169,"our threading-concurrency API is oriented around Group, and we're not",
-fabric/tests/main.py,170,"using it for --hosts, so it's not broken...yet.",
-fabric/tests/main.py,185,"Expect pre once, 3x main, post once, as opposed to e.g. both",
-fabric/tests/main.py,186,pre and main task,
-fabric/tests/main.py,206,Mostly a guard against Executor subclass tweaks breaking Invoke,
-fabric/tests/main.py,207,behavior added in pyinvoke/invoke#309,
-fabric/tests/main.py,213,NOTE: the expect-identity task in tests/_support/fabfile.py,
-fabric/tests/main.py,214,"performs asserts about its context's .connect_kwargs value,",
-fabric/tests/main.py,215,relying on other tests to prove connect_kwargs makes its way into,
-fabric/tests/main.py,216,that context.,
-fabric/tests/main.py,237,Expect that the given key was found in the context.,
-fabric/tests/main.py,238,noqa,
-fabric/tests/main.py,240,Then we also expect that getpass was called w/ expected prompt,
-fabric/tests/main.py,261,"Proves/protects against #1762, where eg key_filenames gets",
-fabric/tests/main.py,262,'reset' to an empty list. Arbitrarily uses the 'yml' level of,
-fabric/tests/main.py,263,"test fixtures, which has a fabric.yml w/ a",
-fabric/tests/main.py,264,"connect_kwargs.key_filename value of [private.key, other.key].",
-fabric/tests/main.py,273,NOTE: most completion tests are in Invoke too; this is just an,
-fabric/tests/main.py,274,irritating corner case driven by Fabric's 'remainder' functionality.,
-fabric/tests/main.py,277,"When bug present, 'fab --complete -- fab' fails to load any",
-fabric/tests/main.py,278,"collections because it thinks it's in remainder-only,",
-fabric/tests/main.py,279,work-without-a-collection mode.,
-fabric/tests/main.py,282,Cherry-picked sanity checks looking for tasks from fixture,
-fabric/tests/main.py,283,fabfile,
-fabric/tests/conftest.py,41,TODO: old mock_sftp() lacked any 'stop'...why? feels bad man,
-fabric/tests/conftest.py,110,"An ugly, but effective, hack. I am not proud. I also don't see anything",
-fabric/tests/conftest.py,111,that's >= as bulletproof and less ugly?,
-fabric/tests/conftest.py,112,"TODO: ideally this should expand to cover system config paths too, but",
-fabric/tests/conftest.py,113,that's even less likely to be an issue.,
-fabric/tests/connection.py,15,for mark,
-fabric/tests/connection.py,28,"Remote is woven in as a config default, so must be patched there",
-fabric/tests/connection.py,42,select.select() returns three N-tuples. Have it just act like a single,
-fabric/tests/connection.py,43,"read event happened, then quiet after. So chain a single-item iterable to",
-fabric/tests/connection.py,44,a repeat(). (Mock has no built-in way to do this apparently.),
-fabric/tests/connection.py,65,TODO: change Paramiko API so this isn't a private access,
-fabric/tests/connection.py,66,TODO: maybe just merge with the __init__ test that is similar,
-fabric/tests/connection.py,78,buffalo buffalo,
-fabric/tests/connection.py,109,Tautology-tastic!,
-fabric/tests/connection.py,193,NOTE: behavior local to Config itself is tested in its own test,
-fabric/tests/connection.py,194,module; below is solely about Connection's config kwarg and its,
-fabric/tests/connection.py,195,handling of that value,
-fabric/tests/connection.py,208,Scenario: user has Fabric-level data present at vanilla,
-fabric/tests/connection.py,209,"Invoke config level, and is then creating Connection objects",
-fabric/tests/connection.py,210,with those vanilla invoke Configs.,
-fabric/tests/connection.py,211,"(Could also _not_ have any Fabric-level data, but then that's",
-fabric/tests/connection.py,212,just a base case...),
-fabric/tests/connection.py,213,TODO: adjust this if we ever switch to all our settings being,
-fabric/tests/connection.py,214,namespaced...,
-fabric/tests/connection.py,217,"not False, which is default",
-fabric/tests/connection.py,236,"TODO: the fact that they will be eq, but _not_ necessarily be",
-fabric/tests/connection.py,237,"the same object, could be problematic in some cases...",
-fabric/tests/connection.py,249,TODO: should make the policy configurable early on,
-fabric/tests/connection.py,257,NOTE: client is SSHClient.return_value,
-fabric/tests/connection.py,277,NOTE: paramiko always injects this even if you look up a host,
-fabric/tests/connection.py,278,"that has no rules, even wildcard ones.",
-fabric/tests/connection.py,301,TODO: not 100% convinced this is the absolute most,
-fabric/tests/connection.py,302,obvious API for 'translation' of given hostname to,
-fabric/tests/connection.py,303,"ssh-configured hostname, but it feels okay for now.",
-fabric/tests/connection.py,322,"Would be 'abaddon', as above",
-fabric/tests/connection.py,336,"Would be 666, as above",
-fabric/tests/connection.py,345,"Of course, this ""config override"" is also the same as the",
-fabric/tests/connection.py,346,default. Meh.,
-fabric/tests/connection.py,351,"Would be True, as above",
-fabric/tests/connection.py,367,"Would be ""my gateway"", as above",
-fabric/tests/connection.py,375,"This isn't as necessary for things like user/port, which",
-fabric/tests/connection.py,376,_may not_ be None in the end - this setting could be.,
-fabric/tests/connection.py,396,"Would be a Connection equal to self._expected_gw, as",
-fabric/tests/connection.py,397,above,
-fabric/tests/connection.py,423,"When #1850 is present, this will RecursionError.",
-fabric/tests/connection.py,446,Sanity,
-fabric/tests/connection.py,449,Real check,
-fabric/tests/connection.py,451,Prove copy not reference,
-fabric/tests/connection.py,452,TODO: would we ever WANT a reference? can't imagine...,
-fabric/tests/connection.py,473,NOTE: ssh_config value gets merged w/ (instead of overridden,
-fabric/tests/connection.py,474,by) config and kwarg values; that is tested in the tests for,
-fabric/tests/connection.py,475,open().,
-fabric/tests/connection.py,477,"By default, key_filename will be empty, and the data from",
-fabric/tests/connection.py,478,the runtime ssh config will be all that appears.,
-fabric/tests/connection.py,496,TODO: should this be more of a merge-down?,
-fabric/tests/connection.py,539,Just host,
-fabric/tests/connection.py,541,Host + user,
-fabric/tests/connection.py,545,Host + user + port,
-fabric/tests/connection.py,557,Hostname...,
-fabric/tests/connection.py,559,User...,
-fabric/tests/connection.py,563,then port...,
-fabric/tests/connection.py,588,Core connection args should definitely not get overwritten!,
-fabric/tests/connection.py,589,NOTE: recall that these keys are the SSHClient.connect(),
-fabric/tests/connection.py,590,"kwarg names, NOT our own config/kwarg names!",
-fabric/tests/connection.py,594,"These might arguably still be allowed to work, but let's head",
-fabric/tests/connection.py,595,off confusion anyways.,
-fabric/tests/connection.py,603,noqa,
-fabric/tests/connection.py,630,First call will set self.transport to fixture's mock,
-fabric/tests/connection.py,632,"Second call will check .is_connected which will see active==True,",
-fabric/tests/connection.py,633,and short circuit,
-fabric/tests/connection.py,652,"NOTE: does more involved stuff so can't use ""client"" fixture",
-fabric/tests/connection.py,656,Setup,
-fabric/tests/connection.py,664,Expect gateway is also open()'d,
-fabric/tests/connection.py,666,Expect direct-tcpip channel open on 1st client,
-fabric/tests/connection.py,671,Expect result of that channel open as sock arg to connect(),
-fabric/tests/connection.py,678,Setup,
-fabric/tests/connection.py,681,Expect ProxyCommand instantiation,
-fabric/tests/connection.py,683,Expect result of that as sock arg to connect(),
-fabric/tests/connection.py,687,"TODO: all the various connect-time options such as agent forwarding,",
-fabric/tests/connection.py,688,"host acceptance policies, how to auth, etc etc. These are all aspects",
-fabric/tests/connection.py,689,of a given session and not necessarily the same for entire lifetime,
-fabric/tests/connection.py,690,"of a Connection object, should it ever disconnect/reconnect.",
-fabric/tests/connection.py,691,TODO: though some/all of those things might want to be set to,
-fabric/tests/connection.py,692,defaults at initialization time...,
-fabric/tests/connection.py,697,TODO: it'd be nice to truly separate CLI from regular (non override,
-fabric/tests/connection.py,698,"level) invoke config; as it is, invoke config comes first in expected",
-fabric/tests/connection.py,699,"outputs since otherwise there's no way for --identity to ""come",
-fabric/tests/connection.py,700,"first"".",
-fabric/tests/connection.py,764,SSH config with 2x IdentityFile directives.,
-fabric/tests/connection.py,769,Use overrides config level to mimic --identity use NOTE: (the,
-fabric/tests/connection.py,770,"fact that --identity is an override, and thus overrides eg",
-fabric/tests/connection.py,771,invoke config file values is part of invoke's config test,
-fabric/tests/connection.py,772,suite),
-fabric/tests/connection.py,779,Stitch in connect_kwargs value,
-fabric/tests/connection.py,781,Tie in all sources that were configured & open(),
-fabric/tests/connection.py,785,Ensure we got the expected list of keys,
-fabric/tests/connection.py,790,No key filenames -> it's not even passed in as connect_kwargs,
-fabric/tests/connection.py,791,is gonna be a blank dict,
-fabric/tests/connection.py,812,"NOTE: this will need to change if, for w/e reason, we ever want",
-fabric/tests/connection.py,813,to run multiple handlers at once,
-fabric/tests/connection.py,818,Won't trigger close() on client because it'll already think it's,
-fabric/tests/connection.py,819,closed (due to no .transport & the behavior of .is_connected),
-fabric/tests/connection.py,832,so create_session no asplode,
-fabric/tests/connection.py,845,NOTE: most actual run related tests live in the runners module's,
-fabric/tests/connection.py,846,tests. Here we are just testing the outer interface a bit.,
-fabric/tests/connection.py,865,"NOTE: somehow, .call_args & the methods built on it (like",
-fabric/tests/connection.py,866,".assert_called_with()) stopped working, apparently triggered by",
-fabric/tests/connection.py,867,our code...somehow...after commit (roughly) 80906c7.,
-fabric/tests/connection.py,868,"And yet, .call_args_list and its brethren work fine. Wha?",
-fabric/tests/connection.py,877,NOTE: most tests for this functionality live in Invoke's runner,
-fabric/tests/connection.py,878,tests.,
-fabric/tests/connection.py,882,NOTE: yet another casualty of the bizarre mock issues,
-fabric/tests/connection.py,895,"Technically duplicates Invoke-level tests, but ensures things",
-fabric/tests/connection.py,896,still work correctly at our level.,
-fabric/tests/connection.py,900,NOTE: this is another spot where Mock.call_args is inexplicably,
-fabric/tests/connection.py,901,"None despite call_args_list being populated. WTF. (Also,",
-fabric/tests/connection.py,902,"Remote.return_value is two different Mocks now, despite Remote's",
-fabric/tests/connection.py,903,own Mock having the same ID here and in code under test. WTF!!),
-fabric/tests/connection.py,906,"NOTE: we used to have a ""sudo return value is literally the same",
-fabric/tests/connection.py,907,"return value from Remote.run()"" sanity check here, which is",
-fabric/tests/connection.py,908,completely impossible now thanks to the above issue.,
-fabric/tests/connection.py,911,"TODO: needs clearly defined ""per-host"" config API, if a distinct",
-fabric/tests/connection.py,912,"one is necessary besides ""the config obj handed in when",
-fabric/tests/connection.py,913,"instantiating the Connection"".",
-fabric/tests/connection.py,914,E.g. generate a Connection pulling in a sudo.password value from,
-fabric/tests/connection.py,915,"what would be a generic conf file or similar, *and* one more",
-fabric/tests/connection.py,916,specific to that particular Connection (perhaps simply the,
-fabric/tests/connection.py,917,"'override' level?), w/ test asserting the more-specific value is",
-fabric/tests/connection.py,918,what's submitted.,
-fabric/tests/connection.py,934,TODO: why aren't we just asserting about calls of open_sftp???,
-fabric/tests/connection.py,963,Tease out bits of kwargs for use in the mocking/expecting.,
-fabric/tests/connection.py,964,But leave it alone for raw passthru to the API call itself.,
-fabric/tests/connection.py,965,TODO: unhappy with how much this apes the real code & its sig...,
-fabric/tests/connection.py,970,"These aren't part of the real sig, but this is easier than trying",
-fabric/tests/connection.py,971,to reconcile the mock decorators + optional-value kwargs. meh.,
-fabric/tests/connection.py,974,Mock setup,
-fabric/tests/connection.py,984,socket.socket is only called once directly,
-fabric/tests/connection.py,986,The 2nd socket is obtained via an accept() (which should only,
-fabric/tests/connection.py,987,fire once & raise EAGAIN after),
-fabric/tests/connection.py,995,Make sure we give listener thread enough time to boot up :(,
-fabric/tests/connection.py,996,Otherwise we might assert before it does things. (NOTE:,
-fabric/tests/connection.py,997,"doesn't need to be much, even at 0.01s, 0/100 trials failed",
-fabric/tests/connection.py,998,(vs 45/100 with no sleep),
-fabric/tests/connection.py,1013,Local write to tunnel_sock is implied by its mocked-out,
-fabric/tests/connection.py,1014,recv() call above...,
-fabric/tests/connection.py,1015,"NOTE: don't assert if explodey; we want to mimic ""the only",
-fabric/tests/connection.py,1016,"error that occurred was within the thread"" behavior being",
-fabric/tests/connection.py,1017,tested by thread-exception-handling tests,
-fabric/tests/connection.py,1020,"Shutdown, with another sleep because threads.",
-fabric/tests/connection.py,1055,NOTE: ensures that we're getting what we expected and not,
-fabric/tests/connection.py,1056,"some deeper, test-bug related error",
-fabric/tests/connection.py,1062,no exception happened :( implies the thread went boom but,
-fabric/tests/connection.py,1063,nobody noticed,
-fabric/tests/connection.py,1073,TODO: these require additional refactoring of _forward_local to be,
-fabric/tests/connection.py,1074,more like the decorators in _util,
-fabric/tests/connection.py,1083,TODO: unhappy with how much this duplicates of the code under,
-fabric/tests/connection.py,1084,"test, re: sig/default vals",
-fabric/tests/connection.py,1085,Set up parameter values/defaults,
-fabric/tests/connection.py,1090,"Mock/etc setup, anything that can be prepped before the forward",
-fabric/tests/connection.py,1091,occurs (which is most things),
-fabric/tests/connection.py,1094,Channel that will yield data when read from,
-fabric/tests/connection.py,1097,"And make select() yield it as being ready once, when called",
-fabric/tests/connection.py,1100,At this point Connection.open() has run and generated a,
-fabric/tests/connection.py,1101,Transport mock for us (because SSHClient is mocked). Let's,
-fabric/tests/connection.py,1102,first make sure we asked it for the port forward...,
-fabric/tests/connection.py,1103,"NOTE: this feels like it's too limited/tautological a test,",
-fabric/tests/connection.py,1104,until you realize that it's functionally impossible to mock,
-fabric/tests/connection.py,1105,out everything required for Paramiko's inner guts to run,
-fabric/tests/connection.py,1106,_parse_channel_open() and suchlike :(,
-fabric/tests/connection.py,1110,Pretend the Transport called our callback with mock Channel,
-fabric/tests/connection.py,1112,Then have to sleep a bit to make sure we give the tunnel,
-fabric/tests/connection.py,1113,created by that callback to spin up; otherwise ~5% of the,
-fabric/tests/connection.py,1114,"time we exit the contextmanager so fast, the tunnel's ""you're",
-fabric/tests/connection.py,1115,"done!"" flag is set before it even gets a chance to select()",
-fabric/tests/connection.py,1116,once.,
-fabric/tests/connection.py,1118,And make sure we hooked up to the local socket OK,
-fabric/tests/connection.py,1121,Expect that our socket got written to by the tunnel (due to the,
-fabric/tests/connection.py,1122,above-setup select() and channel mocking). Need to do this after,
-fabric/tests/connection.py,1123,tunnel shutdown or we risk thread ordering issues.,
-fabric/tests/connection.py,1125,Ensure we closed down the mock socket,
-fabric/tests/connection.py,1127,And that the transport canceled the port forward on the remote,
-fabric/tests/connection.py,1128,end.,
-fabric/tests/connection.py,1147,TODO: these require additional refactoring of _forward_remote to be,
-fabric/tests/connection.py,1148,more like the decorators in _util,
-fabric/tests/config.py,16,I.e. our global_defaults + Invoke's global_defaults,
-fabric/tests/config.py,18,From invoke's global_defaults,
-fabric/tests/config.py,20,From ours,
-fabric/tests/config.py,30,NOTE: Config requires these to be present to instantiate,
-fabric/tests/config.py,31,happily,
-fabric/tests/config.py,36,"If our global_defaults didn't win, this would still",
-fabric/tests/config.py,37,resolve to False.,
-fabric/tests/config.py,51,This value defaults to False in Invoke proper.,
-fabric/tests/config.py,56,NOTE: see also the integration-esque tests in tests/main.py; this,
-fabric/tests/config.py,57,just tests the underlying data/attribute driving the behavior.,
-fabric/tests/config.py,64,NOTE: actual _behavior_ of loaded SSH configs is tested in Connection's,
-fabric/tests/config.py,65,tests; these tests just prove that the loading itself works & the data is,
-fabric/tests/config.py,66,correctly available.,
-fabric/tests/config.py,77,TODO: Currently no great public API that lets us figure out if,
-fabric/tests/config.py,78,"one of these is 'empty' or not. So for now, expect an empty inner",
-fabric/tests/config.py,79,"SSHConfig._config from an un-.parse()d such object. (AFAIK, such",
-fabric/tests/config.py,80,"objects work fine re: .lookup, .get_hostnames etc.)",
-fabric/tests/config.py,119,TODO: skip on windows,
-fabric/tests/config.py,146,"Expect the user value (321), not the system one (123)",
-fabric/tests/config.py,152,TODO: other expansion types? no real need for abspath...,
-fabric/tests/config.py,159,TODO: other expansion types? no real need for abspath...,
-fabric/tests/config.py,174,Implicit loading still doesn't happen...sanity check,
-fabric/tests/config.py,176,Real test: the obj we passed in is present as usual,
-fabric/tests/config.py,185,"Expect that loader method did still run (and, as usual, that",
-fabric/tests/config.py,186,it did not load any other files),
-fabric/tests/runners.py,11,On most systems this will explode if actually executed as a shell command;,
-fabric/tests/runners.py,12,this lets us detect holes in our network mocking.,
-fabric/tests/runners.py,15,"TODO: see TODO in tests/main.py above _run_fab(), this is the same thing.",
-fabric/tests/runners.py,28,"remote mocking makes generic sanity checks like ""were",
-fabric/tests/runners.py,29,"get_transport and open_session called"", but we also want to make",
-fabric/tests/runners.py,30,sure that exec_command got run with our arg to run().,
-fabric/tests/runners.py,64,Mild sanity test for other Result superclass bits,
-fabric/tests/runners.py,67,Test the attr our own subclass adds,
-fabric/tests/runners.py,72,I.e. Remote.stop() closes the channel automatically,
-fabric/tests/runners.py,80,I.e. Remote.stop() is called within a try/finally.,
-fabric/tests/runners.py,81,"Technically is just testing invoke.Runner, but meh.",
-fabric/tests/runners.py,98,I.e. if obtaining self.channel doesn't even happen (i.e. if,
-fabric/tests/runners.py,99,"Connection.create_session() dies), we need to account for that",
-fabric/tests/runners.py,100,case...,
-fabric/tests/runners.py,110,"When bug present, this will result in AttributeError because",
-fabric/tests/runners.py,111,Remote has no 'channel',
-fabric/tests/runners.py,119,TODO: how much of Invoke's tests re: the upper level run() (re:,
-fabric/tests/runners.py,120,"things like returning Result, behavior of Result, etc) to",
-fabric/tests/runners.py,121,duplicate here? Ideally none or very few core ones.,
-fabric/tests/runners.py,123,"TODO: only test guts of our stuff, Invoke's Runner tests should",
-fabric/tests/runners.py,124,handle all the normal shit like stdout/err print and capture.,
-fabric/tests/runners.py,125,"Implies we want a way to import & run those tests ourselves, though,",
-fabric/tests/runners.py,126,with the Runner instead being a Remote. Or do we just replicate the,
-fabric/tests/runners.py,127,basics?,
-fabric/tests/runners.py,129,TODO: all other run() tests from fab1...,
-fabric/tests/group.py,45,Don't care about doing anything with our own args.,
-fabric/tests/group.py,69,"Sanity check, e.g. in case none of them were actually run",
-fabric/tests/group.py,124,Make sure .exception() doesn't yield truthy Mocks. Otherwise we,
-fabric/tests/group.py,125,end up with 'exceptions' that cause errors due to all being the,
-fabric/tests/group.py,126,same.,
-fabric/tests/group.py,129,Testing that threads were used the way we expect is mediocre but,
-fabric/tests/group.py,130,"I honestly can't think of another good way to assert ""threading",
-fabric/tests/group.py,131,"was used & concurrency occurred""...",
-fabric/tests/group.py,145,These ought to work as by default a Mock.return_value is a,
-fabric/tests/group.py,146,singleton mock object,
-fabric/tests/group.py,154,noqa,
-fabric/tests/group.py,160,"Regular, explicit, mocks for Connections",
-fabric/tests/group.py,162,Set up Queue with enough behavior to work / assert,
-fabric/tests/group.py,164,Ending w/ a True will terminate a while-not-empty loop,
-fabric/tests/group.py,168,Execute & inspect results,
-fabric/tests/group.py,173,Make sure queue was used as expected within worker &,
-fabric/tests/group.py,174,ThreadingGroup.run(),
-fabric/tests/group.py,182,TODO: I feel like this is the first spot where a raw,
-fabric/tests/group.py,183,"ThreadException might need tweaks, at least presentation-wise,",
-fabric/tests/group.py,184,since we're no longer dealing with truly background threads (IO,
-fabric/tests/group.py,185,"workers and tunnels), but ""middle-ground"" threads the user is",
-fabric/tests/group.py,186,kind of expecting (and which they might expect to encounter,
-fabric/tests/group.py,187,failures).,
-fabric/tests/group.py,214,TODO: update if/when we implement ResultSet,
-fabric/tests/transfer.py,8,noqa,
-fabric/tests/transfer.py,15,TODO: pull in all edge/corner case tests from fabric v1,
-fabric/tests/transfer.py,23,Transfer() -> explodes,
-fabric/tests/transfer.py,30,"Transfer(Connection()) -> happy, exposes an attribute",
-fabric/tests/transfer.py,37,Default mocked st_mode is file-like (first octal digit is 1),
-fabric/tests/transfer.py,39,Set mode directory-ish (first octal digit is 4),
-fabric/tests/transfer.py,73,TODO: timing info,
-fabric/tests/transfer.py,74,TODO: bytes-transferred info,
-fabric/tests/transfer.py,102,"Note: getfo, not get",
-fabric/tests/transfer.py,123,Attributes obj reflecting a realistic 'extended' octal mode,
-fabric/tests/transfer.py,126,Expect os.chmod to be called with the scrubbed/shifted,
-fabric/tests/transfer.py,127,version of same.,
-fabric/tests/transfer.py,147,"NOTE: default mock stat is file-ish, so path won't be munged",
-fabric/tests/transfer.py,161,TODO: timing info,
-fabric/tests/transfer.py,162,TODO: bytes-transferred info,
-fabric/tests/transfer.py,225,"Note: putfo, not put",
-fabric/tests/transfer.py,249,This is a realistic stat for 0o644,
-fabric/tests/_support/runtime_fabfile.py,6,NOTE: assumes it's run with host='runtime' + ssh_configs/runtime.conf,
-fabric/tests/_support/runtime_fabfile.py,7,TODO: SSHConfig should really learn to turn certain things into ints,
-fabric/tests/_support/runtime_fabfile.py,8,automatically...,
-fabric/tests/_support/fabfile.py,33,If user level config changes are preserved between parameterized per-host,
-fabric/tests/_support/fabfile.py,34,"task calls, this would assert on subsequent invocations...",
-fabric/tests/_support/fabfile.py,36,... because of this:,
+fabric/tasks.py,15,"Neuter the normal release.publish task to prevent accidents, then reinstate",not
+fabric/tasks.py,16,it as a custom task that does dual fabric-xxx and fabric2-xxx releases.,not
+fabric/tasks.py,17,TODO: tweak this once release.all_ actually works right...sigh,SATD
+fabric/tasks.py,18,"TODO: if possible, try phrasing as a custom build that builds x2, and then",SATD
+fabric/tasks.py,19,convince the vanilla publish() to use that custom build instead of its local,not
+fabric/tasks.py,20,build?,not
+fabric/tasks.py,21,"NOTE: this skips the dual_wheels, alt_python bits the upstream task has,",not
+fabric/tasks.py,22,which are at the moment purely for Invoke's sake (as it must publish explicit,not
+fabric/tasks.py,23,py2 vs py3 wheels due to some vendored dependencies),not
+fabric/tasks.py,35,TODO: better pattern for merging kwargs + config,SATD
+fabric/tasks.py,40,"Initial sanity check, if needed. Will die usefully.",not
+fabric/tasks.py,41,TODO: this could also get factored out harder in invocations. shrug. it's,SATD
+fabric/tasks.py,42,like 3 lines total...,not
+fabric/tasks.py,46,"Doesn't reeeeally need to be a partial, but if we start having to add",not
+fabric/tasks.py,47,"a kwarg to one call or the other, it's nice",not
+fabric/tasks.py,51,Vanilla build,not
+fabric/tasks.py,53,Fabric 2 build,not
+fabric/tasks.py,56,Upload,not
+fabric/tasks.py,60,"TODO: as usual, this just wants a good pattern for ""that other task, with a",SATD
+fabric/tasks.py,61,"tweaked default arg value""",not
+fabric/tasks.py,77,"Better than nothing, since we haven't solved ""pretend I have some other",SATD
+fabric/tasks.py,78,"task's signature"" yet...",not
+fabric/tasks.py,99,TODO: have pytest tasks honor these?,SATD
+fabric/tasks.py,104,NOTE: this is currently for identifying the source directory.,not
+fabric/tasks.py,105,"Should it get used for actual releasing, needs changing.",not
+fabric/tasks.py,112,"TODO: perhaps move this into a tertiary, non automatically loaded,",SATD
+fabric/tasks.py,113,conf file so that both this & the code under test can reference it?,not
+fabric/tasks.py,114,Meh.,not
+fabric/setup.py,1,!/usr/bin/env python,not
+fabric/setup.py,6,"Enable the option of building/installing Fabric 2.x as ""fabric2"". This allows",not
+fabric/setup.py,7,users migrating from 1.x to 2.x to have both in the same process space and,not
+fabric/setup.py,8,migrate piecemeal.,not
+fabric/setup.py,9,,not
+fabric/setup.py,10,NOTE: this requires some irritating tomfoolery; to wit:,not
+fabric/setup.py,11,- the repo has a fabric2/ symlink to fabric/ so that things looking for,not
+fabric/setup.py,12,"fabric2/<whatever> will find it OK, whether that's code in here or deeper in",not
+fabric/setup.py,13,setuptools/wheel/etc,not
+fabric/setup.py,14,"- wheels do _not_ execute this on install, only on generation, so maintainers",not
+fabric/setup.py,15,"just build wheels with the env var below turned on, and those wheels install",not
+fabric/setup.py,16,'fabric2' no problem,not
+fabric/setup.py,17,"- sdists execute this _both_ on package creation _and_ on install, so the env",not
+fabric/setup.py,18,"var only helps with inbound package metadata; on install by a user, if they",not
+fabric/setup.py,19,"don't have the env var, they'd end up with errors because this file tries to",not
+fabric/setup.py,20,"look in fabric/, not fabric2/",not
+fabric/setup.py,21,"- thus, we use a different test that looks locally to see if only one dir",not
+fabric/setup.py,22,"is present, and that overrides the env var test.",not
+fabric/setup.py,23,,not
+fabric/setup.py,24,See also sites/www/installing.txt.,not
+fabric/setup.py,42,Version info -- read without importing,not
+fabric/setup.py,48,Frankenstein long_description: changelog note + README,not
+fabric/fabric/util.py,5,"Ape the half-assed logging junk from Invoke, but ensuring the logger reflects",not
+fabric/fabric/util.py,6,"our name, not theirs. (Assume most contexts will rely on Invoke itself to",not
+fabric/fabric/util.py,7,"literally enable/disable logging, for now.)",not
+fabric/fabric/util.py,22,TODO: I don't understand why these lines were added outside the,SATD
+fabric/fabric/util.py,23,"try/except, since presumably it means the attempt at catching ImportError",not
+fabric/fabric/util.py,24,"wouldn't work. However, that's how the contributing user committed it.",SATD
+fabric/fabric/util.py,25,"Need an older Windows box to test it out, most likely.",not
+fabric/fabric/util.py,29,All Unix and most Windows systems support the getpass module.,not
+fabric/fabric/util.py,32,"Some SaaS platforms raise KeyError, implying there is no real user",not
+fabric/fabric/util.py,33,involved. They get the default value of None.,not
+fabric/fabric/util.py,36,Older (?) Windows systems don't support getpass well; they should,not
+fabric/fabric/util.py,37,have the `win32` module instead.,not
+fabric/fabric/util.py,38,pragma: nocover,not
+fabric/fabric/util.py,41,noqa,not
+fabric/fabric/util.py,42,noqa,not
+fabric/fabric/main.py,37,"Same as OpenSSH, can give >1 key",not
+fabric/fabric/main.py,38,TODO: automatically add hint about iterable-ness to Invoke,SATD
+fabric/fabric/main.py,39,help display machinery?,not
+fabric/fabric/main.py,40,noqa,not
+fabric/fabric/main.py,42,TODO: worth having short flags for these prompt args?,SATD
+fabric/fabric/main.py,58,"No 'unparsed' (i.e. tokens intended for task contexts), and remainder",not
+fabric/fabric/main.py,59,(text after a double-dash) implies a contextless/taskless remainder,not
+fabric/fabric/main.py,60,execution of the style 'fab -H host -- command'.,not
+fabric/fabric/main.py,61,NOTE: must ALSO check to ensure the double dash isn't being used for,not
+fabric/fabric/main.py,62,tab completion machinery...,not
+fabric/fabric/main.py,70,Stick in a dummy Collection if it looks like we were invoked w/o any,not
+fabric/fabric/main.py,71,"tasks, and with a remainder.",not
+fabric/fabric/main.py,72,"This isn't super ideal, but Invoke proper has no obvious ""just run my",SATD
+fabric/fabric/main.py,73,"remainder"" use case, so having it be capable of running w/o any task",not
+fabric/fabric/main.py,74,"module, makes no sense. But we want that capability for testing &",not
+fabric/fabric/main.py,75,"things like 'fab -H x,y,z -- mycommand'.",not
+fabric/fabric/main.py,77,TODO: hm we're probably not honoring project-specific configs in,SATD
+fabric/fabric/main.py,78,"this branch; is it worth having it assume CWD==project, since",not
+fabric/fabric/main.py,79,that's often what users expect? Even tho no task collection to,SATD
+fabric/fabric/main.py,80,"honor the real ""lives by task coll""?",not
+fabric/fabric/main.py,86,"As above, neuter the usual ""hey you didn't give me any tasks, let me",not
+fabric/fabric/main.py,87,"print help for you"" behavior, if necessary.",not
+fabric/fabric/main.py,92,"Create config, as parent does, but with lazy=True to avoid our own",not
+fabric/fabric/main.py,93,"SSH config autoload. (Otherwise, we can't correctly load _just_ the",not
+fabric/fabric/main.py,94,runtime file if one's being given later.),not
+fabric/fabric/main.py,96,"However, we don't really want the parent class' lazy behavior (which",not
+fabric/fabric/main.py,97,skips loading system/global invoke-type conf files) so we manually do,not
+fabric/fabric/main.py,98,that here to match upstream behavior.,not
+fabric/fabric/main.py,100,And merge again so that data is available.,not
+fabric/fabric/main.py,101,TODO: really need to either A) stop giving fucks about calling,SATD
+fabric/fabric/main.py,102,"merge() ""too many times"", or B) make merge() itself determine whether",not
+fabric/fabric/main.py,103,"it needs to run and/or just merge stuff that's changed, so log spam",not
+fabric/fabric/main.py,104,isn't as bad.,not
+fabric/fabric/main.py,108,"Note runtime SSH path, if given, and load SSH configurations.",not
+fabric/fabric/main.py,109,"NOTE: must do parent before our work, in case users want to disable",not
+fabric/fabric/main.py,110,SSH config loading within a runtime-level conf file/flag.,not
+fabric/fabric/main.py,114,"Load -i identity file, if given, into connect_kwargs, at overrides",not
+fabric/fabric/main.py,115,level.,not
+fabric/fabric/main.py,116,"TODO: this feels a little gross, but since the parent has already",SATD
+fabric/fabric/main.py,117,"called load_overrides, this is best we can do for now w/o losing",not
+fabric/fabric/main.py,118,data. Still feels correct; just might be cleaner to have even more,not
+fabric/fabric/main.py,119,Config API members around this sort of thing. Shrug.,SATD
+fabric/fabric/main.py,124,Secrets prompts that want to happen at handoff time instead of,not
+fabric/fabric/main.py,125,later/at user-time.,not
+fabric/fabric/main.py,126,TODO: should this become part of Invoke proper in case other,SATD
+fabric/fabric/main.py,127,downstreams have need of it? E.g. a prompt Argument 'type'? We're,not
+fabric/fabric/main.py,128,already doing a similar thing there for sudo password...,not
+fabric/fabric/main.py,136,"Since we gave merge=False above, we must do it ourselves here. (Also",not
+fabric/fabric/main.py,137,allows us to 'compile' our overrides manipulation.),not
+fabric/fabric/main.py,141,Mostly a concession to testing.,not
+fabric/fabric/connection.py,104,NOTE: these are initialized here to hint to invoke.Config.__setattr__,not
+fabric/fabric/connection.py,105,that they should be treated as real attributes instead of config proxies.,not
+fabric/fabric/connection.py,106,"(Additionally, we're doing this instead of using invoke.Config._set() so",not
+fabric/fabric/connection.py,107,we can take advantage of Sphinx's attribute-doc-comment static analysis.),not
+fabric/fabric/connection.py,108,"Once an instance is created, these values will usually be non-None",not
+fabric/fabric/connection.py,109,because they default to the default config values.,not
+fabric/fabric/connection.py,124,"TODO: should ""reopening"" an existing Connection object that has been",SATD
+fabric/fabric/connection.py,125,"closed, be allowed? (See e.g. how v1 detects closed/semi-closed",not
+fabric/fabric/connection.py,126,connections & nukes them before creating a new client to the same host.),SATD
+fabric/fabric/connection.py,127,TODO: push some of this into paramiko.client.Client? e.g. expand what,SATD
+fabric/fabric/connection.py,128,"Client.exec_command does, it already allows configuring a subset of what",not
+fabric/fabric/connection.py,129,we do / will eventually do / did in 1.x. It's silly to have to do,not
+fabric/fabric/connection.py,130,.get_transport().open_session().,not
+fabric/fabric/connection.py,248,NOTE: parent __init__ sets self._config; for now we simply overwrite,not
+fabric/fabric/connection.py,249,that below. If it's somehow problematic we would want to break parent,not
+fabric/fabric/connection.py,250,__init__ up in a manner that is more cleanly overrideable.,not
+fabric/fabric/connection.py,253,: The .Config object referenced when handling default values (for e.g.,not
+fabric/fabric/connection.py,254,": user or port, when not explicitly given) or deciding how to behave.",not
+fabric/fabric/connection.py,257,"Handle 'vanilla' Invoke config objects, which need cloning 'into' one",not
+fabric/fabric/connection.py,258,"of our own Configs (which grants the new defaults, etc, while not",not
+fabric/fabric/connection.py,259,squashing them if the Invoke-level config already accounted for them),not
+fabric/fabric/connection.py,263,"TODO: when/how to run load_files, merge, load_shell_env, etc?",SATD
+fabric/fabric/connection.py,264,TODO: i.e. what is the lib use case here (and honestly in invoke too),SATD
+fabric/fabric/connection.py,268,noqa,not
+fabric/fabric/connection.py,278,NOTE: we load SSH config data as early as possible as it has,not
+fabric/fabric/connection.py,279,potential to affect nearly every other attribute.,not
+fabric/fabric/connection.py,280,": The per-host SSH config data, if any. (See :ref:`ssh-config`.)",not
+fabric/fabric/connection.py,284,: The hostname of the target server.,not
+fabric/fabric/connection.py,287,TODO: log that this occurred?,SATD
+fabric/fabric/connection.py,290,: The username this connection will use to connect to the remote end.,not
+fabric/fabric/connection.py,292,TODO: is it _ever_ possible to give an empty user value (e.g.,SATD
+fabric/fabric/connection.py,293,user='')? E.g. do some SSH server specs allow for that?,not
+fabric/fabric/connection.py,295,: The network port to connect on.,not
+fabric/fabric/connection.py,298,"Gateway/proxy/bastion/jump setting: non-None values - string,",not
+fabric/fabric/connection.py,299,"Connection, even eg False - get set directly; None triggers seek in",not
+fabric/fabric/connection.py,300,config/ssh_config,not
+fabric/fabric/connection.py,301,": The gateway `.Connection` or ``ProxyCommand`` string to be used,",not
+fabric/fabric/connection.py,302,: if any.,not
+fabric/fabric/connection.py,304,"NOTE: we use string above, vs ProxyCommand obj, to avoid spinning up",not
+fabric/fabric/connection.py,305,"the ProxyCommand subprocess at init time, vs open() time.",not
+fabric/fabric/connection.py,306,TODO: make paramiko.proxy.ProxyCommand lazy instead?,SATD
+fabric/fabric/connection.py,309,Default to config...,not
+fabric/fabric/connection.py,311,"But if ssh_config is present, it wins",not
+fabric/fabric/connection.py,313,"TODO: SSHConfig really, seriously needs some love here, god",SATD
+fabric/fabric/connection.py,316,: Whether agent forwarding is enabled.,not
+fabric/fabric/connection.py,325,: Connection timeout,not
+fabric/fabric/connection.py,328,: Keyword arguments given to `paramiko.client.SSHClient.connect` when,not
+fabric/fabric/connection.py,329,: `open` is called.,not
+fabric/fabric/connection.py,332,: The `paramiko.client.SSHClient` instance this connection wraps.,not
+fabric/fabric/connection.py,337,: A convenience handle onto the return value of,not
+fabric/fabric/connection.py,338,: ``self.client.get_transport()``.,not
+fabric/fabric/connection.py,342,Grab connect_kwargs from config if not explicitly given.,not
+fabric/fabric/connection.py,344,TODO: is it better to pre-empt conflicts w/ manually-handled,SATD
+fabric/fabric/connection.py,345,"connect() kwargs (hostname, username, etc) here or in open()?",not
+fabric/fabric/connection.py,346,We're doing open() for now in case e.g. someone manually modifies,not
+fabric/fabric/connection.py,347,".connect_kwargs attributewise, but otherwise it feels better to",not
+fabric/fabric/connection.py,348,do it early instead of late.,not
+fabric/fabric/connection.py,350,Special case: key_filename gets merged instead of overridden.,not
+fabric/fabric/connection.py,351,"TODO: probably want some sorta smart merging generally, special cases",SATD
+fabric/fabric/connection.py,352,are bad.,not
+fabric/fabric/connection.py,356,Config value comes before kwarg value (because it may contain,not
+fabric/fabric/connection.py,357,CLI flag value.),not
+fabric/fabric/connection.py,360,SSH config identityfile values come last in the key_filename,not
+fabric/fabric/connection.py,361,'hierarchy'.,not
+fabric/fabric/connection.py,371,SSH config wins over Invoke-style config,not
+fabric/fabric/connection.py,373,"Reverse hop1,hop2,hop3 style ProxyJump directive so we start",not
+fabric/fabric/connection.py,374,with the final (itself non-gatewayed) hop and work up to,not
+fabric/fabric/connection.py,375,"the front (actual, supplied as our own gateway) hop",not
+fabric/fabric/connection.py,379,"Short-circuit if we appear to be our own proxy, which would",not
+fabric/fabric/connection.py,380,be a RecursionError. Implies SSH config wildcards.,not
+fabric/fabric/connection.py,381,TODO: in an ideal world we'd check user/port too in case they,SATD
+fabric/fabric/connection.py,382,"differ, but...seriously? They can file a PR with those extra",not
+fabric/fabric/connection.py,383,"half dozen test cases in play, E_NOTIME",not
+fabric/fabric/connection.py,386,"Happily, ProxyJump uses identical format to our host",not
+fabric/fabric/connection.py,387,shorthand...,not
+fabric/fabric/connection.py,395,"Just a string, which we interpret as a proxy command..",not
+fabric/fabric/connection.py,397,Fallback: config value (may be None).,not
+fabric/fabric/connection.py,401,Host comes first as it's the most common differentiator by far,not
+fabric/fabric/connection.py,403,TODO: maybe always show user regardless? Explicit is good...,SATD
+fabric/fabric/connection.py,406,TODO: harder to make case for 'always show port'; maybe if it's,SATD
+fabric/fabric/connection.py,407,non-22 (even if config has overridden the local default)?,not
+fabric/fabric/connection.py,410,NOTE: sometimes self.gateway may be eg False if someone wants to,not
+fabric/fabric/connection.py,411,explicitly override a configured non-None value (as otherwise it's,not
+fabric/fabric/connection.py,412,"impossible for __init__ to tell if a None means ""nothing given"" or",not
+fabric/fabric/connection.py,413,"""seriously please no gatewaying"". So, this must always be a vanilla",not
+fabric/fabric/connection.py,414,"truth test and not eg ""is not None"".",not
+fabric/fabric/connection.py,416,Displaying type because gw params would probs be too verbose,not
+fabric/fabric/connection.py,426,TODO: consider including gateway and maybe even other init kwargs?,SATD
+fabric/fabric/connection.py,427,Whether two cxns w/ same user/host/port but different,not
+fabric/fabric/connection.py,428,"gateway/keys/etc, should be considered ""the same"", is unclear.",not
+fabric/fabric/connection.py,440,"NOTE: this departs from Context/DataProxy, which is not usefully",not
+fabric/fabric/connection.py,441,hashable.,not
+fabric/fabric/connection.py,449,"IPv6: can't reliably tell where addr ends and port begins, so don't",not
+fabric/fabric/connection.py,450,"try (and don't bother adding special syntax either, user should avoid",not
+fabric/fabric/connection.py,451,this situation by using port=).,not
+fabric/fabric/connection.py,455,IPv4: can split on ':' reliably.,not
+fabric/fabric/connection.py,491,Short-circuit,not
+fabric/fabric/connection.py,494,noqa,not
+fabric/fabric/connection.py,495,"These may not be given, period",not
+fabric/fabric/connection.py,503,"These may be given one way or the other, but not both",not
+fabric/fabric/connection.py,509,No conflicts -> merge 'em together,not
+fabric/fabric/connection.py,520,Strip out empty defaults for less noisy debugging,not
+fabric/fabric/connection.py,523,Actually connect!,not
+fabric/fabric/connection.py,538,"ProxyCommand is faster to set up, so do it first.",not
+fabric/fabric/connection.py,540,Leverage a dummy SSHConfig to ensure %h/%p/etc are parsed.,not
+fabric/fabric/connection.py,541,TODO: use real SSH config once loading one properly is,SATD
+fabric/fabric/connection.py,542,implemented.,not
+fabric/fabric/connection.py,547,Handle inner-Connection gateway type here.,not
+fabric/fabric/connection.py,548,TODO: logging,SATD
+fabric/fabric/connection.py,550,TODO: expose the opened channel itself as an attribute? (another,SATD
+fabric/fabric/connection.py,551,possible argument for separating the two gateway types...) e.g. if,not
+fabric/fabric/connection.py,552,someone wanted to piggyback on it for other same-interpreter socket,not
+fabric/fabric/connection.py,553,needs...,not
+fabric/fabric/connection.py,554,TODO: and the inverse? allow users to supply their own socket/like,SATD
+fabric/fabric/connection.py,555,object they got via $WHEREEVER?,not
+fabric/fabric/connection.py,556,TODO: how best to expose timeout param? reuse general connection,SATD
+fabric/fabric/connection.py,557,timeout from config?,not
+fabric/fabric/connection.py,561,NOTE: src_addr needs to be 'empty but not None' values to,not
+fabric/fabric/connection.py,562,correctly encode into a network message. Theoretically Paramiko,not
+fabric/fabric/connection.py,563,could auto-interpret None sometime & save us the trouble.,not
+fabric/fabric/connection.py,635,"Superclass run() uses runners.local, so we can literally just call it",not
+fabric/fabric/connection.py,636,straight.,not
+fabric/fabric/connection.py,677,TODO: yield the socket for advanced users? Other advanced use cases,SATD
+fabric/fabric/connection.py,678,(perhaps factor out socket creation itself)?,not
+fabric/fabric/connection.py,679,TODO: probably push some of this down into Paramiko,SATD
+fabric/fabric/connection.py,732,"TunnelManager does all of the work, sitting in the background (so we",not
+fabric/fabric/connection.py,733,can yield) and spawning threads every time somebody connects to our,not
+fabric/fabric/connection.py,734,local port.,not
+fabric/fabric/connection.py,741,"TODO: not a huge fan of handing in our transport, but...?",SATD
+fabric/fabric/connection.py,747,Return control to caller now that things ought to be operational,not
+fabric/fabric/connection.py,750,Teardown once user exits block,not
+fabric/fabric/connection.py,752,Signal to manager that it should close all open tunnels,not
+fabric/fabric/connection.py,754,Then wait for it to do so,not
+fabric/fabric/connection.py,756,"Raise threading errors from within the manager, which would be",not
+fabric/fabric/connection.py,757,one of:,not
+fabric/fabric/connection.py,758,"- an inner ThreadException, which was created by the manager on",not
+fabric/fabric/connection.py,759,behalf of its Tunnels; this gets directly raised.,not
+fabric/fabric/connection.py,760,"- some other exception, which would thus have occurred in the",not
+fabric/fabric/connection.py,761,manager itself; we wrap this in a new ThreadException.,not
+fabric/fabric/connection.py,762,"NOTE: in these cases, some of the metadata tracking in",not
+fabric/fabric/connection.py,763,ExceptionHandlingThread/ExceptionWrapper/ThreadException (which,not
+fabric/fabric/connection.py,764,is useful when dealing with multiple nearly-identical sibling IO,not
+fabric/fabric/connection.py,765,"threads) is superfluous, but it doesn't feel worth breaking",not
+fabric/fabric/connection.py,766,things up further; we just ignore it for now.,not
+fabric/fabric/connection.py,774,TODO: cancel port forward on transport? Does that even make sense,SATD
+fabric/fabric/connection.py,775,here (where we used direct-tcpip) vs the opposite method (which,not
+fabric/fabric/connection.py,776,is what uses forward-tcpip)?,not
+fabric/fabric/connection.py,778,TODO: probably push some of this down into Paramiko,SATD
+fabric/fabric/connection.py,834,Callback executes on each connection to the remote port and is given,not
+fabric/fabric/connection.py,835,a Channel hooked up to said port. (We don't actually care about the,not
+fabric/fabric/connection.py,836,source/dest host/port pairs at all; only whether the channel has data,not
+fabric/fabric/connection.py,837,to read and suchlike.),not
+fabric/fabric/connection.py,838,We then pair that channel with a new 'outbound' socket connection to,not
+fabric/fabric/connection.py,839,"the local host/port being forwarded, in a new Tunnel.",not
+fabric/fabric/connection.py,840,That Tunnel is then added to a shared data structure so we can track,not
+fabric/fabric/connection.py,841,& close them during shutdown.,not
+fabric/fabric/connection.py,842,,not
+fabric/fabric/connection.py,843,TODO: this approach is less than ideal because we have to share state,SATD
+fabric/fabric/connection.py,844,between ourselves & the callback handed into the transport's own,not
+fabric/fabric/connection.py,845,thread handling (which is roughly analogous to our self-controlled,not
+fabric/fabric/connection.py,846,TunnelManager for local forwarding). See if we can use more of,not
+fabric/fabric/connection.py,847,Paramiko's API (or improve it and then do so) so that isn't,not
+fabric/fabric/connection.py,848,necessary.,not
+fabric/fabric/connection.py,853,"TODO: handle connection failure such that channel, etc get closed",SATD
+fabric/fabric/connection.py,855,"TODO: we don't actually need to generate the Events at our level,",SATD
+fabric/fabric/connection.py,856,"do we? Just let Tunnel.__init__ do it; all we do is ""press its",not
+fabric/fabric/connection.py,857,"button"" on shutdown...",not
+fabric/fabric/connection.py,860,Communication between ourselves & the Paramiko handling subthread,not
+fabric/fabric/connection.py,863,"Ask Paramiko (really, the remote sshd) to call our callback whenever",not
+fabric/fabric/connection.py,864,connections are established on the remote iface/port.,not
+fabric/fabric/connection.py,865,"transport.request_port_forward(remote_host, remote_port, callback)",not
+fabric/fabric/connection.py,872,TODO: see above re: lack of a TunnelManager,SATD
+fabric/fabric/connection.py,873,TODO: and/or also refactor with TunnelManager re: shutdown logic.,SATD
+fabric/fabric/connection.py,874,E.g. maybe have a non-thread TunnelManager-alike with a method,not
+fabric/fabric/connection.py,875,that acts as the callback? At least then there's a tiny bit more,not
+fabric/fabric/connection.py,876,encapsulation...meh.,not
+fabric/fabric/config.py,69,Tease out our own kwargs.,not
+fabric/fabric/config.py,70,TODO: consider moving more stuff out of __init__ and into methods so,SATD
+fabric/fabric/config.py,71,there's less of this sort of splat-args + pop thing? Eh.,not
+fabric/fabric/config.py,79,Record whether we were given an explicit object (so other steps know,not
+fabric/fabric/config.py,80,whether to bother loading from disk or not),not
+fabric/fabric/config.py,81,This needs doing before super __init__ as that calls our post_init,not
+fabric/fabric/config.py,85,Arrive at some non-None SSHConfig object (upon which to run .parse(),not
+fabric/fabric/config.py,86,"later, in _load_ssh_file())",not
+fabric/fabric/config.py,91,"Now that our own attributes have been prepared & kwargs yanked, we",not
+fabric/fabric/config.py,92,can fall up into parent __init__(),not
+fabric/fabric/config.py,95,And finally perform convenience non-lazy bits if needed,not
+fabric/fabric/config.py,119,Update the runtime SSH config path (assumes enough regular config,not
+fabric/fabric/config.py,120,levels have been loaded that anyone wanting to transmit this info,not
+fabric/fabric/config.py,121,"from a 'vanilla' Invoke config, has gotten it set.)",not
+fabric/fabric/config.py,124,Load files from disk if we weren't given an explicit SSHConfig in,not
+fabric/fabric/config.py,125,__init__,not
+fabric/fabric/config.py,130,TODO: clone() at this point kinda-sorta feels like it's retreading,SATD
+fabric/fabric/config.py,131,__reduce__ and the related (un)pickling stuff...,not
+fabric/fabric/config.py,132,Get cloned obj.,not
+fabric/fabric/config.py,133,"NOTE: Because we also extend .init_kwargs, the actual core SSHConfig",not
+fabric/fabric/config.py,134,"data is passed in at init time (ensuring no files get loaded a 2nd,",not
+fabric/fabric/config.py,135,"etc time) and will already be present, so we don't need to set",not
+fabric/fabric/config.py,136,".base_ssh_config ourselves. Similarly, there's no need to worry about",not
+fabric/fabric/config.py,137,how the SSH config paths may be inaccurate until below; nothing will,not
+fabric/fabric/config.py,138,be referencing them.,not
+fabric/fabric/config.py,140,"Copy over our custom attributes, so that the clone still resembles us",not
+fabric/fabric/config.py,141,re: recording where the data originally came from (in case anything,not
+fabric/fabric/config.py,142,"re-runs ._load_ssh_files(), for example).",not
+fabric/fabric/config.py,149,"Load SSH configs, in case they weren't prior to now (e.g. a vanilla",not
+fabric/fabric/config.py,150,"Invoke clone(into), instead of a us-to-us clone.)",not
+fabric/fabric/config.py,152,All done,not
+fabric/fabric/config.py,156,Parent kwargs,not
+fabric/fabric/config.py,158,"Transmit our internal SSHConfig via explicit-obj kwarg, thus",not
+fabric/fabric/config.py,159,bypassing any file loading. (Our extension of clone() above copies,not
+fabric/fabric/config.py,160,over other attributes as well so that the end result looks consistent,not
+fabric/fabric/config.py,161,with reality.),not
+fabric/fabric/config.py,163,"TODO: as with other spots, this implies SSHConfig needs a cleaner",SATD
+fabric/fabric/config.py,164,public API re: creating and updating its core data.,not
+fabric/fabric/config.py,177,TODO: does this want to more closely ape the behavior of,SATD
+fabric/fabric/config.py,178,InvokeConfig.load_files? re: having a _found attribute for each that,not
+fabric/fabric/config.py,179,determines whether to load or skip,not
+fabric/fabric/config.py,182,Manually blow up like open() (_load_ssh_file normally doesn't),not
+fabric/fabric/config.py,224,TODO: hrm should the run-related things actually be derived from the,SATD
+fabric/fabric/config.py,225,"runner_class? E.g. Local defines local stuff, Remote defines remote",not
+fabric/fabric/config.py,226,stuff? Doesn't help with the final config tree tho...,not
+fabric/fabric/config.py,227,"TODO: as to that, this is a core problem, Fabric wants split",SATD
+fabric/fabric/config.py,228,"local/remote stuff, eg replace_env wants to be False for local and",not
+fabric/fabric/config.py,229,True remotely; shell wants to differ depending on target (and either,not
+fabric/fabric/config.py,230,"way, does not want to use local interrogation for remote)",not
+fabric/fabric/config.py,231,TODO: is it worth moving all of our 'new' settings to a discrete,SATD
+fabric/fabric/config.py,232,"namespace for cleanliness' sake? e.g. ssh.port, ssh.user etc.",not
+fabric/fabric/config.py,233,"It wouldn't actually simplify this code any, but it would make it",not
+fabric/fabric/config.py,234,easier for users to determine what came from which library/repo.,not
+fabric/fabric/config.py,237,New settings,not
+fabric/fabric/config.py,247,TODO: this becomes an override/extend once Invoke grows execution,SATD
+fabric/fabric/config.py,248,timeouts (which should be timeouts.execute),not
+fabric/fabric/executor.py,8,TODO: come up w/ a better name heh,SATD
+fabric/fabric/executor.py,11,Generate new call list with per-host variants & Connections inserted,not
+fabric/fabric/executor.py,13,TODO: mesh well with Invoke list-type args helper (inv #132),SATD
+fabric/fabric/executor.py,21,"TODO: expand this to allow multiple types of execution plans,",SATD
+fabric/fabric/executor.py,22,"pending outcome of invoke#461 (which, if flexible enough to",not
+fabric/fabric/executor.py,23,"handle intersect of dependencies+parameterization, just becomes",not
+fabric/fabric/executor.py,24,'honor that new feature of Invoke'),not
+fabric/fabric/executor.py,25,"TODO: roles, other non-runtime host parameterizations, etc",SATD
+fabric/fabric/executor.py,26,"Pre-tasks get added only once, not once per host.",not
+fabric/fabric/executor.py,28,"Main task, per host",not
+fabric/fabric/executor.py,31,Deal with lack of hosts arg (acts same as `inv` in that case),not
+fabric/fabric/executor.py,32,TODO: no tests for this branch?,SATD
+fabric/fabric/executor.py,35,"Post-tasks added once, not once per host.",not
+fabric/fabric/executor.py,37,Add remainder as anonymous task,not
+fabric/fabric/executor.py,39,TODO: this will need to change once there are more options for,SATD
+fabric/fabric/executor.py,40,"setting host lists besides ""-H or 100% within-task""",not
+fabric/fabric/executor.py,43,noqa,not
+fabric/fabric/executor.py,47,TODO: how to make all our tests configure in_stream=False?,SATD
+fabric/fabric/executor.py,51,"TODO: see above TODOs about non-parameterized setups, roles etc",SATD
+fabric/fabric/executor.py,52,TODO: will likely need to refactor that logic some more so it can,SATD
+fabric/fabric/executor.py,53,be used both there and here.,not
+fabric/fabric/executor.py,63,Generate a custom ConnectionCall that knows how to yield a Connection,not
+fabric/fabric/executor.py,64,"in its make_context(), specifically one to the host requested here.",not
+fabric/fabric/executor.py,66,"TODO: using bag-of-attrs is mildly gross but whatever, I'll take it.",SATD
+fabric/fabric/executor.py,71,"Don't perform deduping, we will often have ""duplicate"" tasks w/",not
+fabric/fabric/executor.py,72,distinct host values/etc.,not
+fabric/fabric/executor.py,73,TODO: might want some deduplication later on though - falls under,SATD
+fabric/fabric/executor.py,74,"""how to mesh parameterization with pre/post/etc deduping"".",not
+fabric/fabric/runners.py,23,TODO: consider adding an option to conditionally turn this,SATD
+fabric/fabric/runners.py,24,update_environment call into a command-string prefixing behavior,not
+fabric/fabric/runners.py,25,instead (e.g. when one isn't able/willing to update remote server's,not
+fabric/fabric/runners.py,26,AcceptEnv setting). OR: rely on higher-level generic command,not
+fabric/fabric/runners.py,27,"prefixing functionality, when implemented.",not
+fabric/fabric/runners.py,28,TODO: honor SendEnv from ssh_config,SATD
+fabric/fabric/runners.py,30,TODO: pass in timeout= here when invoke grows timeout functionality,SATD
+fabric/fabric/runners.py,31,in Runner/Local.,not
+fabric/fabric/runners.py,48,"NOTE: in v1, we just reraised the KeyboardInterrupt unless a PTY was",not
+fabric/fabric/runners.py,49,"present; this seems to have been because without a PTY, the",not
+fabric/fabric/runners.py,50,"below escape sequence is ignored, so all we can do is immediately",not
+fabric/fabric/runners.py,51,terminate on our end.,not
+fabric/fabric/runners.py,52,"NOTE: also in v1, the raising of the KeyboardInterrupt completely",not
+fabric/fabric/runners.py,53,skipped all thread joining & cleanup; presumably regular interpreter,not
+fabric/fabric/runners.py,54,shutdown suffices to tie everything off well enough.,not
+fabric/fabric/runners.py,56,"Submit hex ASCII character 3, aka ETX, which most Unix PTYs",not
+fabric/fabric/runners.py,57,interpret as a foreground SIGINT.,not
+fabric/fabric/runners.py,58,TODO: is there anything else we can do here to be more portable?,SATD
+fabric/fabric/runners.py,74,TODO: shit that is in fab 1 run() but could apply to invoke.Local too:,SATD
+fabric/fabric/runners.py,75,* command timeout control,not
+fabric/fabric/runners.py,76,* see rest of stuff in _run_command/_execute in operations.py...there is,not
+fabric/fabric/runners.py,77,"a bunch that applies generally like optional exit codes, etc",not
+fabric/fabric/runners.py,79,TODO: general shit not done yet,SATD
+fabric/fabric/runners.py,80,* stdin; Local relies on local process management to ensure stdin is,not
+fabric/fabric/runners.py,81,hooked up; we cannot do that.,not
+fabric/fabric/runners.py,82,* output prefixing,not
+fabric/fabric/runners.py,83,* agent forwarding,not
+fabric/fabric/runners.py,84,"* reading at 4096 bytes/time instead of whatever inv defaults to (also,",not
+fabric/fabric/runners.py,85,"document why we are doing that, iirc it changed recentlyish via ticket)",SATD
+fabric/fabric/runners.py,86,"* TODO: oh god so much more, go look it up",SATD
+fabric/fabric/runners.py,88,TODO: shit that has no Local equivalent that we probs need to backfill,SATD
+fabric/fabric/runners.py,89,"into Runner, probably just as a ""finish()"" or ""stop()"" (to mirror",not
+fabric/fabric/runners.py,90,start()):,not
+fabric/fabric/runners.py,91,* channel close(),not
+fabric/fabric/runners.py,92,* agent-forward close(),not
+fabric/fabric/runners.py,111,"TODO: have useful str/repr differentiation from invoke.Result,",SATD
+fabric/fabric/runners.py,112,transfer.Result etc.,not
+fabric/fabric/group.py,69,"TODO: #563, #388 (could be here or higher up in Program area)",SATD
+fabric/fabric/group.py,79,TODO: *args here too; or maybe just fold into __init__ and type,SATD
+fabric/fabric/group.py,80,check?,not
+fabric/fabric/group.py,93,TODO: probably best to suck it up & match actual run() sig?,SATD
+fabric/fabric/group.py,94,"TODO: how to change method of execution across contents? subclass,",SATD
+fabric/fabric/group.py,95,"kwargs, additional methods, inject an executor? Doing subclass for",not
+fabric/fabric/group.py,96,"now, but not 100% sure it's the best route.",not
+fabric/fabric/group.py,97,TODO: also need way to deal with duplicate connections (see THOUGHTS),SATD
+fabric/fabric/group.py,98,"TODO: and errors - probably FailureSet? How to handle other,",SATD
+fabric/fabric/group.py,99,"regular, non Failure, exceptions though? Still need an aggregate",not
+fabric/fabric/group.py,100,"exception type either way, whether it is FailureSet or what...",not
+fabric/fabric/group.py,101,"TODO: OTOH, users may well want to be able to operate on the hosts",SATD
+fabric/fabric/group.py,102,that did not fail (esp if failure % is low) so we really _do_ want,not
+fabric/fabric/group.py,103,"something like a result object mixing success and failure, or maybe a",not
+fabric/fabric/group.py,104,golang style two-tuple of successes and failures?,not
+fabric/fabric/group.py,105,"TODO: or keep going w/ a ""return or except"", but the object is",SATD
+fabric/fabric/group.py,106,"largely similar (if not identical) in both situations, with the",not
+fabric/fabric/group.py,107,exception just being the signal that Shit Broke?,not
+fabric/fabric/group.py,110,TODO: how to handle sudo? Probably just an inner worker method that takes,SATD
+fabric/fabric/group.py,111,"the method name to actually call (run, sudo, etc)?",not
+fabric/fabric/group.py,113,TODO: this all needs to mesh well with similar strategies applied to,SATD
+fabric/fabric/group.py,114,entire tasks - so that may still end up factored out into Executors or,not
+fabric/fabric/group.py,115,something lower level than both those and these?,not
+fabric/fabric/group.py,117,"TODO: local? Invoke wants ability to do that on its own though, which",SATD
+fabric/fabric/group.py,118,"would be distinct from Group. (May want to switch Group to use that,",not
+fabric/fabric/group.py,119,"though, whatever it ends up being?)",not
+fabric/fabric/group.py,121,TODO: mirror Connection's close()?,SATD
+fabric/fabric/group.py,131,TODO: probably best to suck it up & match actual get() sig?,SATD
+fabric/fabric/group.py,132,TODO: actually implement on subclasses,SATD
+fabric/fabric/group.py,159,TODO: namedtuple or attrs object?,SATD
+fabric/fabric/group.py,183,TODO: configurable join timeout,SATD
+fabric/fabric/group.py,184,TODO: (in sudo's version) configurability around interactive,SATD
+fabric/fabric/group.py,185,"prompting resulting in an exception instead, as in v1",not
+fabric/fabric/group.py,187,Get non-exception results from queue,not
+fabric/fabric/group.py,189,TODO: io-sleep? shouldn't matter if all threads are now joined,SATD
+fabric/fabric/group.py,191,TODO: outstanding musings about how exactly aggregate results,SATD
+fabric/fabric/group.py,192,"ought to ideally operate...heterogenous obj like this, multiple",not
+fabric/fabric/group.py,193,"objs, ??",not
+fabric/fabric/group.py,195,Get exceptions from the threads themselves.,not
+fabric/fabric/group.py,196,"TODO: in a non-thread setup, this would differ, e.g.:",SATD
+fabric/fabric/group.py,197,- a queue if using multiprocessing,not
+fabric/fabric/group.py,198,- some other state-passing mechanism if using e.g. coroutines,not
+fabric/fabric/group.py,199,- ???,not
+fabric/fabric/group.py,204,"Outer kwargs is Thread instantiation kwargs, inner is kwargs",not
+fabric/fabric/group.py,205,passed to thread target/body.,not
+fabric/fabric/group.py,241,Short-circuit to avoid reprocessing every access.,not
+fabric/fabric/group.py,244,TODO: if we ever expect .succeeded/.failed to be useful before a,SATD
+fabric/fabric/group.py,245,"GroupResult is fully initialized, this needs to become smarter.",not
+fabric/fabric/transfer.py,9,TODO: actual logging! LOL,SATD
+fabric/fabric/transfer.py,11,"TODO: figure out best way to direct folks seeking rsync, to patchwork's rsync",SATD
+fabric/fabric/transfer.py,12,"call (which needs updating to use invoke.run() & fab 2 connection methods,",not
+fabric/fabric/transfer.py,13,but is otherwise suitable).,not
+fabric/fabric/transfer.py,14,UNLESS we want to try and shoehorn it into this module after all? Delegate,not
+fabric/fabric/transfer.py,15,any recursive get/put to it? Requires users to have rsync available of,not
+fabric/fabric/transfer.py,16,course.,not
+fabric/fabric/transfer.py,26,"TODO: SFTP clear default, but how to do SCP? subclass? init kwarg?",SATD
+fabric/fabric/transfer.py,91,TODO: how does this API change if we want to implement,SATD
+fabric/fabric/transfer.py,92,remote-to-remote file transfer? (Is that even realistic?),not
+fabric/fabric/transfer.py,93,"TODO: handle v1's string interpolation bits, especially the default",SATD
+fabric/fabric/transfer.py,94,"one, or at least think about how that would work re: split between",not
+fabric/fabric/transfer.py,95,single and multiple server targets.,not
+fabric/fabric/transfer.py,96,TODO: callback support,SATD
+fabric/fabric/transfer.py,97,TODO: how best to allow changing the behavior/semantics of,SATD
+fabric/fabric/transfer.py,98,remote/local (e.g. users might want 'safer' behavior that complains,not
+fabric/fabric/transfer.py,99,instead of overwriting existing files) - this likely ties into the,not
+fabric/fabric/transfer.py,100,"""how to handle recursive/rsync"" and ""how to handle scp"" questions",not
+fabric/fabric/transfer.py,102,Massage remote path,not
+fabric/fabric/transfer.py,110,Massage local path:,not
+fabric/fabric/transfer.py,111,- handle file-ness,not
+fabric/fabric/transfer.py,112,"- if path, fill with remote name if empty, & make absolute",not
+fabric/fabric/transfer.py,120,Run Paramiko-level .get() (side-effects only. womp.),not
+fabric/fabric/transfer.py,121,TODO: push some of the path handling into Paramiko; it should be,SATD
+fabric/fabric/transfer.py,122,responsible for dealing with path cleaning etc.,not
+fabric/fabric/transfer.py,123,TODO: probably preserve warning message from v1 when overwriting,SATD
+fabric/fabric/transfer.py,124,existing files. Use logging for that obviously.,not
+fabric/fabric/transfer.py,125,,not
+fabric/fabric/transfer.py,126,"If local appears to be a file-like object, use sftp.getfo, not get",not
+fabric/fabric/transfer.py,131,Set mode to same as remote end,not
+fabric/fabric/transfer.py,132,TODO: Push this down into SFTPClient sometime (requires backwards,SATD
+fabric/fabric/transfer.py,133,incompat release.),not
+fabric/fabric/transfer.py,138,Return something useful,not
+fabric/fabric/transfer.py,198,Massage remote path,not
+fabric/fabric/transfer.py,207,noqa,not
+fabric/fabric/transfer.py,213,non-empty local_base implies a) text file path or b) FLO which,not
+fabric/fabric/transfer.py,214,had a non-empty .name attribute. huzzah!,not
+fabric/fabric/transfer.py,220,noqa,not
+fabric/fabric/transfer.py,223,TODO: can we ever really end up here? implies we want to,SATD
+fabric/fabric/transfer.py,224,reorganize all this logic so it has fewer potential holes,not
+fabric/fabric/transfer.py,226,noqa,not
+fabric/fabric/transfer.py,239,Massage local path,not
+fabric/fabric/transfer.py,248,noqa,not
+fabric/fabric/transfer.py,250,Run Paramiko-level .put() (side-effects only. womp.),not
+fabric/fabric/transfer.py,251,TODO: push some of the path handling into Paramiko; it should be,SATD
+fabric/fabric/transfer.py,252,responsible for dealing with path cleaning etc.,not
+fabric/fabric/transfer.py,253,TODO: probably preserve warning message from v1 when overwriting,SATD
+fabric/fabric/transfer.py,254,existing files. Use logging for that obviously.,not
+fabric/fabric/transfer.py,255,,not
+fabric/fabric/transfer.py,256,"If local appears to be a file-like object, use sftp.putfo, not put",not
+fabric/fabric/transfer.py,269,Set mode to same as local end,not
+fabric/fabric/transfer.py,270,TODO: Push this down into SFTPClient sometime (requires backwards,SATD
+fabric/fabric/transfer.py,271,incompat release.),not
+fabric/fabric/transfer.py,276,Return something useful,not
+fabric/fabric/transfer.py,302,TODO: how does this differ from put vs get? field stating which? (feels,SATD
+fabric/fabric/transfer.py,303,"meh) distinct classes differing, for now, solely by name? (also meh)",not
+fabric/fabric/transfer.py,305,": The local path the file was saved as, or the object it was saved",not
+fabric/fabric/transfer.py,306,: into if a file-like object was given instead.,not
+fabric/fabric/transfer.py,307,:,not
+fabric/fabric/transfer.py,308,": If a string path, this value is massaged to be absolute; see",not
+fabric/fabric/transfer.py,309,: `.orig_local` for the original argument value.,not
+fabric/fabric/transfer.py,311,: The original value given as the returning method's ``local``,not
+fabric/fabric/transfer.py,312,: argument.,not
+fabric/fabric/transfer.py,314,: The remote path downloaded from. Massaged to be absolute; see,not
+fabric/fabric/transfer.py,315,: `.orig_remote` for the original argument value.,not
+fabric/fabric/transfer.py,317,: The original argument value given as the returning method's,not
+fabric/fabric/transfer.py,318,: ``remote`` argument.,not
+fabric/fabric/transfer.py,320,: The `.Connection` object this result was obtained from.,not
+fabric/fabric/transfer.py,323,TODO: ensure str/repr makes it easily differentiable from run() or,SATD
+fabric/fabric/transfer.py,324,local() result objects (and vice versa).,not
+fabric/fabric/exceptions.py,1,TODO: this may want to move to Invoke if we can find a use for it there too?,SATD
+fabric/fabric/exceptions.py,2,Or make it _more_ narrowly focused and stay here?,not
+fabric/fabric/exceptions.py,15,": The `.GroupResult` object which would have been returned, had there",not
+fabric/fabric/exceptions.py,16,: been no errors. See its docstring (and that of `.Group`) for,not
+fabric/fabric/exceptions.py,17,: details.,not
+fabric/fabric/__init__.py,1,flake8: noqa,not
+fabric/fabric/tunnels.py,49,Track each tunnel that gets opened during our lifetime,not
+fabric/fabric/tunnels.py,52,Set up OS-level listener socket on forwarded port,not
+fabric/fabric/tunnels.py,54,TODO: why do we want REUSEADDR exactly? and is it portable?,SATD
+fabric/fabric/tunnels.py,56,"NOTE: choosing to deal with nonblocking semantics and a fast loop,",not
+fabric/fabric/tunnels.py,57,versus an older approach which blocks & expects outer scope to cause,not
+fabric/fabric/tunnels.py,58,a socket exception by close()ing the socket.,not
+fabric/fabric/tunnels.py,64,Main loop-wait: accept connections on the local listener,not
+fabric/fabric/tunnels.py,65,"NOTE: EAGAIN means ""you're nonblocking and nobody happened to",not
+fabric/fabric/tunnels.py,66,"connect at this point in time""",not
+fabric/fabric/tunnels.py,69,Set TCP_NODELAY to match OpenSSH's forwarding socket behavior,not
+fabric/fabric/tunnels.py,73,TODO: make configurable,SATD
+fabric/fabric/tunnels.py,78,Set up direct-tcpip channel on server end,not
+fabric/fabric/tunnels.py,79,TODO: refactor w/ what's used for gateways,SATD
+fabric/fabric/tunnels.py,84,Set up 'worker' thread for this specific connection to our,not
+fabric/fabric/tunnels.py,85,"tunnel, plus its dedicated signal event (which will appear as a",not
+fabric/fabric/tunnels.py,86,"public attr, no need to track both independently).",not
+fabric/fabric/tunnels.py,93,Propogate shutdown signal to all tunnels & wait for closure,not
+fabric/fabric/tunnels.py,94,"TODO: would be nice to have some output or at least logging here,",SATD
+fabric/fabric/tunnels.py,95,"especially for ""sets up a handful of tunnels"" use cases like",not
+fabric/fabric/tunnels.py,96,forwarding nontrivial HTTP traffic.,not
+fabric/fabric/tunnels.py,103,Handle exceptions,not
+fabric/fabric/tunnels.py,107,All we have left to close is our own sock.,not
+fabric/fabric/tunnels.py,108,TODO: use try/finally?,SATD
+fabric/sites/shared_conf.py,8,Alabaster theme + mini-extension,not
+fabric/sites/shared_conf.py,12,Paths relative to invoking conf.py - not this shared file,not
+fabric/sites/shared_conf.py,28,Wide enough that 80-col code snippets aren't truncated on default font,not
+fabric/sites/shared_conf.py,29,settings (at least for bitprophet's Chrome-on-OSX-Yosemite setup),not
+fabric/sites/shared_conf.py,36,Enable & configure doctest,not
+fabric/sites/shared_conf.py,38,Import mock tooling from unit tests' _util.py,not
+fabric/sites/shared_conf.py,48,Invoke (docs + www),not
+fabric/sites/shared_conf.py,59,Paramiko (docs),not
+fabric/sites/shared_conf.py,72,Regular settings,not
+fabric/sites/www/conf.py,1,Obtain shared config values,not
+fabric/sites/www/conf.py,10,Releases changelog extension,not
+fabric/sites/www/conf.py,15,Intersphinx for referencing API/usage docs,not
+fabric/sites/www/conf.py,17,"Default is 'local' building, but reference the public docs site when building",not
+fabric/sites/www/conf.py,18,under RTD.,not
+fabric/sites/www/conf.py,24,Sister-site links to API docs,not
+fabric/sites/docs/conf.py,1,Obtain shared config values,not
+fabric/sites/docs/conf.py,9,Enable & configure autodoc,not
+fabric/sites/docs/conf.py,13,"Default is 'local' building, but reference the public WWW site when building",not
+fabric/sites/docs/conf.py,14,under RTD.,not
+fabric/sites/docs/conf.py,19,Intersphinx connection to www site,not
+fabric/sites/docs/conf.py,22,Sister-site links to WWW,not
+fabric/integration/concurrency.py,24,TODO: still useful to use Group API here? Where does this responsibility,SATD
+fabric/integration/concurrency.py,25,fall between Group and Executor (e.g. phrasing this specifically as a,not
+fabric/integration/concurrency.py,26,generic subcase of Invoke level task parameterization)?,not
+fabric/integration/concurrency.py,28,TODO: spin up multiple temp SSHDs / Paramiko servers / ???,SATD
+fabric/integration/concurrency.py,39,"Prove no exterior connection caching, socket reuse, etc",not
+fabric/integration/concurrency.py,40,NOTE: would phrase these as chained 'is not' but pep8 linter is being,not
+fabric/integration/concurrency.py,41,stupid :(,SATD
+fabric/integration/concurrency.py,50,TODO: needs https://github.com/pyinvoke/invoke/issues/438 fixed,SATD
+fabric/integration/concurrency.py,51,before it will reliably pass,not
+fabric/integration/concurrency.py,53,"Kind of silly but a nice base case for ""how would someone thread this",SATD
+fabric/integration/concurrency.py,54,stuff; and are there any bizarre gotchas lurking in default,not
+fabric/integration/concurrency.py,55,"config/context/connection state?""",not
+fabric/integration/concurrency.py,56,"Specifically, cut up the local (usually 100k's long) words dict into",not
+fabric/integration/concurrency.py,57,"per-thread chunks, then read those chunks via shell command, as a",not
+fabric/integration/concurrency.py,58,"crummy ""make sure each thread isn't polluting things like stored",not
+fabric/integration/concurrency.py,59,"stdout"" sanity test",not
+fabric/integration/concurrency.py,61,TODO: skip test on Windows or find suitable alternative file,SATD
+fabric/integration/concurrency.py,66,"will be an int, which is fine",not
+fabric/integration/concurrency.py,84,"Kinda slow, but hey, maybe the test runner is hot",not
+fabric/integration/connection.py,9,TODO: use pytest markers,SATD
+fabric/integration/connection.py,25,"Handy shortcut - open things up, then return Connection for us to",not
+fabric/integration/connection.py,26,close,not
+fabric/integration/connection.py,46,"Most Unix systems should have stty, which asplodes when not run",not
+fabric/integration/connection.py,47,"under a pty, and prints useful info otherwise",not
+fabric/integration/connection.py,54,"PTYs use \r\n, not \n, line separation",not
+fabric/integration/connection.py,60,NOTE: most of the interesting tests about this are in,not
+fabric/integration/connection.py,61,invoke.runners / invoke.integration.,not
+fabric/integration/connection.py,65,meh way of proving it didn't use SSH,not
+fabric/integration/connection.py,74,meh way of proving it didn't use SSH yet,not
+fabric/integration/connection.py,76,NOW it's using SSH,not
+fabric/integration/connection.py,81,NOTE: assumes a user configured for passworded (NOT,not
+fabric/integration/connection.py,82,"passwordless)_sudo, whose password is 'mypass', is executing the",not
+fabric/integration/connection.py,83,test suite. I.e. our travis-ci setup.,not
+fabric/integration/connection.py,106,Guards against e.g. cleanup finishing before actually reading all,not
+fabric/integration/connection.py,107,data from the remote end. Which is largely an issue in Invoke-level,not
+fabric/integration/connection.py,108,code but one that only really manifests when doing stuff over the,not
+fabric/integration/connection.py,109,network. Yay computers!,not
+fabric/integration/connection.py,116,"When bug present, # lines received is significantly fewer than the",SATD
+fabric/integration/connection.py,117,true count in the file (by thousands).,not
+fabric/integration/group.py,19,GroupException.result -> GroupResult;,not
+fabric/integration/group.py,20,GroupResult values will be UnexpectedExit in this case;,not
+fabric/integration/group.py,21,"UnexpectedExit.result -> Result, and thus .exited etc.",not
+fabric/integration/transfer.py,21,Copy file from support to tempdir,not
+fabric/integration/transfer.py,25,Make sure it arrived,not
+fabric/integration/transfer.py,29,Sanity check result object,not
+fabric/integration/transfer.py,43,"Use a dummy file which is given an unusual, highly unlikely to be",not
+fabric/integration/transfer.py,44,"default umask, set of permissions (oct 641, aka -rw-r----x)",not
+fabric/integration/transfer.py,58,Copy file from 'local' (support dir) to 'remote' (tempdir),not
+fabric/integration/transfer.py,62,TODO: wrap chdir at the Connection level,SATD
+fabric/integration/transfer.py,65,Make sure it arrived,not
+fabric/integration/transfer.py,68,Sanity check result object,not
+fabric/integration/transfer.py,84,"Use a dummy file which is given an unusual, highly unlikely to be",not
+fabric/integration/transfer.py,85,"default umask, set of permissions (oct 641, aka -rw-r----x)",not
+fabric/tests/_util.py,17,TODO: revert to asserts,SATD
+fabric/tests/_util.py,22,"TODO: this could become a fixture in conftest.py, presumably, and just yield",SATD
+fabric/tests/_util.py,23,"stdout, allowing the tests themselves to assert more naturally",not
+fabric/tests/_util.py,79,TODO: worth accepting strings and doing the BytesIO setup ourselves?,SATD
+fabric/tests/_util.py,80,Stored privately to avoid any possible collisions ever. shrug.,not
+fabric/tests/_util.py,83,Stdin less private so it can be asserted about,not
+fabric/tests/_util.py,88,Don't return our own class on sub-mocks.,not
+fabric/tests/_util.py,144,Sanity check,not
+fabric/tests/_util.py,150,noqa,not
+fabric/tests/_util.py,151,Fill in values,not
+fabric/tests/_util.py,157,"Honestly dunno which is dumber, this or duplicating Command's",not
+fabric/tests/_util.py,158,default kwarg values in this method's signature...sigh,not
+fabric/tests/_util.py,195,another Mock,not
+fabric/tests/_util.py,197,"NOTE: this originally did chain([False], repeat(True)) so that",not
+fabric/tests/_util.py,198,"get_transport().active was False initially, then True. However,",not
+fabric/tests/_util.py,199,because we also have to consider when get_transport() comes back None,not
+fabric/tests/_util.py,200,"(which it does initially), the case where we get back a non-None",not
+fabric/tests/_util.py,201,"transport _and_ it's not active yet, isn't useful to test, and",not
+fabric/tests/_util.py,202,"complicates text expectations. So we don't, for now.",not
+fabric/tests/_util.py,204,NOTE: setting PropertyMocks on a mock's type() is apparently,not
+fabric/tests/_util.py,205,"How It Must Be Done, otherwise it sets the real attr value.",not
+fabric/tests/_util.py,210,"Mock of a Channel instance, not e.g. Channel-the-class.",not
+fabric/tests/_util.py,211,"Specifically, one that can track individual state for recv*().",not
+fabric/tests/_util.py,217,"If requested, make exit_status_ready return False the first N",not
+fabric/tests/_util.py,218,times it is called in the wait() loop.,not
+fabric/tests/_util.py,224,Have our transport yield those channel mocks in order when,not
+fabric/tests/_util.py,225,open_session() is called.,not
+fabric/tests/_util.py,232,Per-session we expect a single transport get,not
+fabric/tests/_util.py,235,And a single connect to our target host.,not
+fabric/tests/_util.py,242,"Calls to open_session will be 1-per-command but are on transport, not",not
+fabric/tests/_util.py,243,"channel, so we can only really inspect how many happened in",not
+fabric/tests/_util.py,244,aggregate. Save a list for later comparison to call_args.,not
+fabric/tests/_util.py,248,Expect an open_session for each command exec,not
+fabric/tests/_util.py,250,Expect that the channel gets an exec_command,not
+fabric/tests/_util.py,252,"Expect written stdin, if given",not
+fabric/tests/_util.py,256,Make sure open_session was called expected number of times.,not
+fabric/tests/_util.py,277,TODO: make it easier to assume single session w/ >1 command?,SATD
+fabric/tests/_util.py,293,"First, stop the default session to clean up its state, if it seems to",not
+fabric/tests/_util.py,294,be running.,not
+fabric/tests/_util.py,296,Update sessions list with new session(s),not
+fabric/tests/_util.py,298,"And start patching again, returning mocked channels",not
+fabric/tests/_util.py,305,Patch SSHClient so the sessions' generated mocks can be set as its,not
+fabric/tests/_util.py,306,return values,not
+fabric/tests/_util.py,309,"Mock clients, to be inspected afterwards during sanity-checks",not
+fabric/tests/_util.py,314,"Each time the mocked SSHClient class is instantiated, it will",not
+fabric/tests/_util.py,315,yield one of our mocked clients (w/ mocked transport & channel),not
+fabric/tests/_util.py,316,generated above.,not
+fabric/tests/_util.py,324,Short circuit if we don't seem to have start()ed yet.,not
+fabric/tests/_util.py,327,Stop patching SSHClient,not
+fabric/tests/_util.py,335,"Basic sanity tests about transport, channel etc",not
+fabric/tests/_util.py,339,"TODO: unify with the stuff in paramiko itself (now in its tests/conftest.py),",SATD
+fabric/tests/_util.py,340,they're quite distinct and really shouldn't be.,not
+fabric/tests/_util.py,354,Set up mocks,not
+fabric/tests/_util.py,361,Handle common filepath massage actions; tests will assume these.,not
+fabric/tests/_util.py,367,Ensure stat st_mode is a real number; Python 2 stat.S_IMODE doesn't,not
+fabric/tests/_util.py,368,"appear to care if it's handed a MagicMock, but Python 3's does (?!)",not
+fabric/tests/_util.py,369,arbitrary real-ish mode,not
+fabric/tests/_util.py,372,Not super clear to me why the 'wraps' functionality in mock isn't,not
+fabric/tests/_util.py,373,working for this :(,not
+fabric/tests/_util.py,375,Return the sftp and OS mocks for use by decorator use case.,not
+fabric/tests/util.py,10,"Basically implementation tests, because it's not feasible to do a ""real"" test",not
+fabric/tests/util.py,11,on random platforms (where we have no idea what the actual invoking user is),not
+fabric/tests/util.py,23,TODO: test for ImportError+win32 once appveyor is set up as w/ invoke,SATD
+fabric/tests/main.py,10,because WHY would you expose @skip normally? -_-,SATD
+fabric/tests/main.py,20,Designate a runtime config file intended for the test environment; it does,not
+fabric/tests/main.py,21,things like automatically mute stdin so test harnesses that care about stdin,not
+fabric/tests/main.py,22,don't get upset.,not
+fabric/tests/main.py,23,NOTE: this requires the test environment to have Invoke 1.1.0 or above; for,not
+fabric/tests/main.py,24,"now this is fine as we don't do a big serious matrix, we typically use Invoke",not
+fabric/tests/main.py,25,master to allow testing in-dev changes.,not
+fabric/tests/main.py,26,TODO: if that _changes_ then we may have to rethink this so that it goes back,SATD
+fabric/tests/main.py,27,to being testable on Invoke >=1.0 instead of >=1.1...,not
+fabric/tests/main.py,61,Sanity,not
+fabric/tests/main.py,64,Real test,not
+fabric/tests/main.py,96,"This task, in each subdir, expects data present in a",not
+fabric/tests/main.py,97,fabric.<ext> nearby to show up in the config.,not
+fabric/tests/main.py,108,"Relies on asserts within the task, which will bubble up as",not
+fabric/tests/main.py,109,it's executed in-process,not
+fabric/tests/main.py,125,Task that doesn't make assertions about the config (since the,not
+fabric/tests/main.py,126,_actual_ config it gets is empty as we had to mock out the loader,not
+fabric/tests/main.py,127,method...sigh),not
+fabric/tests/main.py,129,"Called only once (initial __init__) with runtime conf, instead of",not
+fabric/tests/main.py,130,that plus a few more pairs of calls against the default files,not
+fabric/tests/main.py,131,(which is what happens when clone() isn't preserving the,not
+fabric/tests/main.py,132,already-parsed/loaded SSHConfig),not
+fabric/tests/main.py,136,NOTE: many of these just rely on MockRemote's builtin,not
+fabric/tests/main.py,137,"""channel.exec_command called with given command string"" asserts.",not
+fabric/tests/main.py,141,"In addition to just testing a base case, this checks for a really",not
+fabric/tests/main.py,142,"dumb bug where one appends to, instead of replacing, the task",SATD
+fabric/tests/main.py,143,list during parameterization/expansion XD,not
+fabric/tests/main.py,164,"NOTE: no mocking because no actual run() under test, only",not
+fabric/tests/main.py,165,parameterization,not
+fabric/tests/main.py,166,TODO: avoiding for now because implementing this requires more work,SATD
+fabric/tests/main.py,167,at the Invoke level re: deciding when to _not_ pass in the,not
+fabric/tests/main.py,168,"session-global config object (Executor's self.config). At the moment,",not
+fabric/tests/main.py,169,"our threading-concurrency API is oriented around Group, and we're not",not
+fabric/tests/main.py,170,"using it for --hosts, so it's not broken...yet.",not
+fabric/tests/main.py,185,"Expect pre once, 3x main, post once, as opposed to e.g. both",not
+fabric/tests/main.py,186,pre and main task,not
+fabric/tests/main.py,206,Mostly a guard against Executor subclass tweaks breaking Invoke,not
+fabric/tests/main.py,207,behavior added in pyinvoke/invoke#309,not
+fabric/tests/main.py,213,NOTE: the expect-identity task in tests/_support/fabfile.py,not
+fabric/tests/main.py,214,"performs asserts about its context's .connect_kwargs value,",not
+fabric/tests/main.py,215,relying on other tests to prove connect_kwargs makes its way into,not
+fabric/tests/main.py,216,that context.,not
+fabric/tests/main.py,237,Expect that the given key was found in the context.,not
+fabric/tests/main.py,238,noqa,not
+fabric/tests/main.py,240,Then we also expect that getpass was called w/ expected prompt,not
+fabric/tests/main.py,261,"Proves/protects against #1762, where eg key_filenames gets",not
+fabric/tests/main.py,262,'reset' to an empty list. Arbitrarily uses the 'yml' level of,not
+fabric/tests/main.py,263,"test fixtures, which has a fabric.yml w/ a",not
+fabric/tests/main.py,264,"connect_kwargs.key_filename value of [private.key, other.key].",not
+fabric/tests/main.py,273,NOTE: most completion tests are in Invoke too; this is just an,not
+fabric/tests/main.py,274,irritating corner case driven by Fabric's 'remainder' functionality.,not
+fabric/tests/main.py,277,"When bug present, 'fab --complete -- fab' fails to load any",not
+fabric/tests/main.py,278,"collections because it thinks it's in remainder-only,",not
+fabric/tests/main.py,279,work-without-a-collection mode.,not
+fabric/tests/main.py,282,Cherry-picked sanity checks looking for tasks from fixture,not
+fabric/tests/main.py,283,fabfile,not
+fabric/tests/conftest.py,41,TODO: old mock_sftp() lacked any 'stop'...why? feels bad man,SATD
+fabric/tests/conftest.py,110,"An ugly, but effective, hack. I am not proud. I also don't see anything",SATD
+fabric/tests/conftest.py,111,that's >= as bulletproof and less ugly?,SATD
+fabric/tests/conftest.py,112,"TODO: ideally this should expand to cover system config paths too, but",SATD
+fabric/tests/conftest.py,113,that's even less likely to be an issue.,not
+fabric/tests/connection.py,15,for mark,not
+fabric/tests/connection.py,28,"Remote is woven in as a config default, so must be patched there",not
+fabric/tests/connection.py,42,select.select() returns three N-tuples. Have it just act like a single,not
+fabric/tests/connection.py,43,"read event happened, then quiet after. So chain a single-item iterable to",not
+fabric/tests/connection.py,44,a repeat(). (Mock has no built-in way to do this apparently.),not
+fabric/tests/connection.py,65,TODO: change Paramiko API so this isn't a private access,SATD
+fabric/tests/connection.py,66,TODO: maybe just merge with the __init__ test that is similar,SATD
+fabric/tests/connection.py,78,buffalo buffalo,not
+fabric/tests/connection.py,109,Tautology-tastic!,not
+fabric/tests/connection.py,193,NOTE: behavior local to Config itself is tested in its own test,SATD
+fabric/tests/connection.py,194,module; below is solely about Connection's config kwarg and its,not
+fabric/tests/connection.py,195,handling of that value,not
+fabric/tests/connection.py,208,Scenario: user has Fabric-level data present at vanilla,not
+fabric/tests/connection.py,209,"Invoke config level, and is then creating Connection objects",not
+fabric/tests/connection.py,210,with those vanilla invoke Configs.,not
+fabric/tests/connection.py,211,"(Could also _not_ have any Fabric-level data, but then that's",not
+fabric/tests/connection.py,212,just a base case...),not
+fabric/tests/connection.py,213,TODO: adjust this if we ever switch to all our settings being,SATD
+fabric/tests/connection.py,214,namespaced...,not
+fabric/tests/connection.py,217,"not False, which is default",not
+fabric/tests/connection.py,236,"TODO: the fact that they will be eq, but _not_ necessarily be",SATD
+fabric/tests/connection.py,237,"the same object, could be problematic in some cases...",not
+fabric/tests/connection.py,249,TODO: should make the policy configurable early on,SATD
+fabric/tests/connection.py,257,NOTE: client is SSHClient.return_value,not
+fabric/tests/connection.py,277,NOTE: paramiko always injects this even if you look up a host,not
+fabric/tests/connection.py,278,"that has no rules, even wildcard ones.",not
+fabric/tests/connection.py,301,TODO: not 100% convinced this is the absolute most,SATD
+fabric/tests/connection.py,302,obvious API for 'translation' of given hostname to,not
+fabric/tests/connection.py,303,"ssh-configured hostname, but it feels okay for now.",not
+fabric/tests/connection.py,322,"Would be 'abaddon', as above",not
+fabric/tests/connection.py,336,"Would be 666, as above",not
+fabric/tests/connection.py,345,"Of course, this ""config override"" is also the same as the",not
+fabric/tests/connection.py,346,default. Meh.,not
+fabric/tests/connection.py,351,"Would be True, as above",not
+fabric/tests/connection.py,367,"Would be ""my gateway"", as above",not
+fabric/tests/connection.py,375,"This isn't as necessary for things like user/port, which",not
+fabric/tests/connection.py,376,_may not_ be None in the end - this setting could be.,not
+fabric/tests/connection.py,396,"Would be a Connection equal to self._expected_gw, as",not
+fabric/tests/connection.py,397,above,not
+fabric/tests/connection.py,423,"When #1850 is present, this will RecursionError.",not
+fabric/tests/connection.py,446,Sanity,not
+fabric/tests/connection.py,449,Real check,not
+fabric/tests/connection.py,451,Prove copy not reference,not
+fabric/tests/connection.py,452,TODO: would we ever WANT a reference? can't imagine...,SATD
+fabric/tests/connection.py,473,NOTE: ssh_config value gets merged w/ (instead of overridden,not
+fabric/tests/connection.py,474,by) config and kwarg values; that is tested in the tests for,not
+fabric/tests/connection.py,475,open().,not
+fabric/tests/connection.py,477,"By default, key_filename will be empty, and the data from",not
+fabric/tests/connection.py,478,the runtime ssh config will be all that appears.,not
+fabric/tests/connection.py,496,TODO: should this be more of a merge-down?,SATD
+fabric/tests/connection.py,539,Just host,not
+fabric/tests/connection.py,541,Host + user,not
+fabric/tests/connection.py,545,Host + user + port,not
+fabric/tests/connection.py,557,Hostname...,not
+fabric/tests/connection.py,559,User...,not
+fabric/tests/connection.py,563,then port...,not
+fabric/tests/connection.py,588,Core connection args should definitely not get overwritten!,not
+fabric/tests/connection.py,589,NOTE: recall that these keys are the SSHClient.connect(),not
+fabric/tests/connection.py,590,"kwarg names, NOT our own config/kwarg names!",not
+fabric/tests/connection.py,594,"These might arguably still be allowed to work, but let's head",not
+fabric/tests/connection.py,595,off confusion anyways.,not
+fabric/tests/connection.py,603,noqa,not
+fabric/tests/connection.py,630,First call will set self.transport to fixture's mock,not
+fabric/tests/connection.py,632,"Second call will check .is_connected which will see active==True,",not
+fabric/tests/connection.py,633,and short circuit,not
+fabric/tests/connection.py,652,"NOTE: does more involved stuff so can't use ""client"" fixture",not
+fabric/tests/connection.py,656,Setup,not
+fabric/tests/connection.py,664,Expect gateway is also open()'d,not
+fabric/tests/connection.py,666,Expect direct-tcpip channel open on 1st client,not
+fabric/tests/connection.py,671,Expect result of that channel open as sock arg to connect(),not
+fabric/tests/connection.py,678,Setup,not
+fabric/tests/connection.py,681,Expect ProxyCommand instantiation,not
+fabric/tests/connection.py,683,Expect result of that as sock arg to connect(),not
+fabric/tests/connection.py,687,"TODO: all the various connect-time options such as agent forwarding,",SATD
+fabric/tests/connection.py,688,"host acceptance policies, how to auth, etc etc. These are all aspects",not
+fabric/tests/connection.py,689,of a given session and not necessarily the same for entire lifetime,not
+fabric/tests/connection.py,690,"of a Connection object, should it ever disconnect/reconnect.",not
+fabric/tests/connection.py,691,TODO: though some/all of those things might want to be set to,SATD
+fabric/tests/connection.py,692,defaults at initialization time...,not
+fabric/tests/connection.py,697,TODO: it'd be nice to truly separate CLI from regular (non override,SATD
+fabric/tests/connection.py,698,"level) invoke config; as it is, invoke config comes first in expected",not
+fabric/tests/connection.py,699,"outputs since otherwise there's no way for --identity to ""come",not
+fabric/tests/connection.py,700,"first"".",not
+fabric/tests/connection.py,764,SSH config with 2x IdentityFile directives.,not
+fabric/tests/connection.py,769,Use overrides config level to mimic --identity use NOTE: (the,not
+fabric/tests/connection.py,770,"fact that --identity is an override, and thus overrides eg",not
+fabric/tests/connection.py,771,invoke config file values is part of invoke's config test,not
+fabric/tests/connection.py,772,suite),not
+fabric/tests/connection.py,779,Stitch in connect_kwargs value,not
+fabric/tests/connection.py,781,Tie in all sources that were configured & open(),not
+fabric/tests/connection.py,785,Ensure we got the expected list of keys,not
+fabric/tests/connection.py,790,No key filenames -> it's not even passed in as connect_kwargs,not
+fabric/tests/connection.py,791,is gonna be a blank dict,not
+fabric/tests/connection.py,812,"NOTE: this will need to change if, for w/e reason, we ever want",not
+fabric/tests/connection.py,813,to run multiple handlers at once,not
+fabric/tests/connection.py,818,Won't trigger close() on client because it'll already think it's,not
+fabric/tests/connection.py,819,closed (due to no .transport & the behavior of .is_connected),not
+fabric/tests/connection.py,832,so create_session no asplode,not
+fabric/tests/connection.py,845,NOTE: most actual run related tests live in the runners module's,not
+fabric/tests/connection.py,846,tests. Here we are just testing the outer interface a bit.,not
+fabric/tests/connection.py,865,"NOTE: somehow, .call_args & the methods built on it (like",SATD
+fabric/tests/connection.py,866,".assert_called_with()) stopped working, apparently triggered by",not
+fabric/tests/connection.py,867,our code...somehow...after commit (roughly) 80906c7.,not
+fabric/tests/connection.py,868,"And yet, .call_args_list and its brethren work fine. Wha?",not
+fabric/tests/connection.py,877,NOTE: most tests for this functionality live in Invoke's runner,not
+fabric/tests/connection.py,878,tests.,not
+fabric/tests/connection.py,882,NOTE: yet another casualty of the bizarre mock issues,not
+fabric/tests/connection.py,895,"Technically duplicates Invoke-level tests, but ensures things",not
+fabric/tests/connection.py,896,still work correctly at our level.,not
+fabric/tests/connection.py,900,NOTE: this is another spot where Mock.call_args is inexplicably,not
+fabric/tests/connection.py,901,"None despite call_args_list being populated. WTF. (Also,",not
+fabric/tests/connection.py,902,"Remote.return_value is two different Mocks now, despite Remote's",not
+fabric/tests/connection.py,903,own Mock having the same ID here and in code under test. WTF!!),not
+fabric/tests/connection.py,906,"NOTE: we used to have a ""sudo return value is literally the same",not
+fabric/tests/connection.py,907,"return value from Remote.run()"" sanity check here, which is",not
+fabric/tests/connection.py,908,completely impossible now thanks to the above issue.,not
+fabric/tests/connection.py,911,"TODO: needs clearly defined ""per-host"" config API, if a distinct",SATD
+fabric/tests/connection.py,912,"one is necessary besides ""the config obj handed in when",not
+fabric/tests/connection.py,913,"instantiating the Connection"".",not
+fabric/tests/connection.py,914,E.g. generate a Connection pulling in a sudo.password value from,not
+fabric/tests/connection.py,915,"what would be a generic conf file or similar, *and* one more",not
+fabric/tests/connection.py,916,specific to that particular Connection (perhaps simply the,SATD
+fabric/tests/connection.py,917,"'override' level?), w/ test asserting the more-specific value is",not
+fabric/tests/connection.py,918,what's submitted.,not
+fabric/tests/connection.py,934,TODO: why aren't we just asserting about calls of open_sftp???,SATD
+fabric/tests/connection.py,963,Tease out bits of kwargs for use in the mocking/expecting.,not
+fabric/tests/connection.py,964,But leave it alone for raw passthru to the API call itself.,not
+fabric/tests/connection.py,965,TODO: unhappy with how much this apes the real code & its sig...,SATD
+fabric/tests/connection.py,970,"These aren't part of the real sig, but this is easier than trying",not
+fabric/tests/connection.py,971,to reconcile the mock decorators + optional-value kwargs. meh.,not
+fabric/tests/connection.py,974,Mock setup,not
+fabric/tests/connection.py,984,socket.socket is only called once directly,not
+fabric/tests/connection.py,986,The 2nd socket is obtained via an accept() (which should only,not
+fabric/tests/connection.py,987,fire once & raise EAGAIN after),not
+fabric/tests/connection.py,995,Make sure we give listener thread enough time to boot up :(,not
+fabric/tests/connection.py,996,Otherwise we might assert before it does things. (NOTE:,not
+fabric/tests/connection.py,997,"doesn't need to be much, even at 0.01s, 0/100 trials failed",not
+fabric/tests/connection.py,998,(vs 45/100 with no sleep),not
+fabric/tests/connection.py,1013,Local write to tunnel_sock is implied by its mocked-out,not
+fabric/tests/connection.py,1014,recv() call above...,not
+fabric/tests/connection.py,1015,"NOTE: don't assert if explodey; we want to mimic ""the only",not
+fabric/tests/connection.py,1016,"error that occurred was within the thread"" behavior being",not
+fabric/tests/connection.py,1017,tested by thread-exception-handling tests,not
+fabric/tests/connection.py,1020,"Shutdown, with another sleep because threads.",not
+fabric/tests/connection.py,1055,NOTE: ensures that we're getting what we expected and not,not
+fabric/tests/connection.py,1056,"some deeper, test-bug related error",not
+fabric/tests/connection.py,1062,no exception happened :( implies the thread went boom but,not
+fabric/tests/connection.py,1063,nobody noticed,not
+fabric/tests/connection.py,1073,TODO: these require additional refactoring of _forward_local to be,SATD
+fabric/tests/connection.py,1074,more like the decorators in _util,not
+fabric/tests/connection.py,1083,TODO: unhappy with how much this duplicates of the code under,SATD
+fabric/tests/connection.py,1084,"test, re: sig/default vals",not
+fabric/tests/connection.py,1085,Set up parameter values/defaults,not
+fabric/tests/connection.py,1090,"Mock/etc setup, anything that can be prepped before the forward",not
+fabric/tests/connection.py,1091,occurs (which is most things),not
+fabric/tests/connection.py,1094,Channel that will yield data when read from,not
+fabric/tests/connection.py,1097,"And make select() yield it as being ready once, when called",not
+fabric/tests/connection.py,1100,At this point Connection.open() has run and generated a,not
+fabric/tests/connection.py,1101,Transport mock for us (because SSHClient is mocked). Let's,not
+fabric/tests/connection.py,1102,first make sure we asked it for the port forward...,not
+fabric/tests/connection.py,1103,"NOTE: this feels like it's too limited/tautological a test,",not
+fabric/tests/connection.py,1104,until you realize that it's functionally impossible to mock,not
+fabric/tests/connection.py,1105,out everything required for Paramiko's inner guts to run,not
+fabric/tests/connection.py,1106,_parse_channel_open() and suchlike :(,not
+fabric/tests/connection.py,1110,Pretend the Transport called our callback with mock Channel,not
+fabric/tests/connection.py,1112,Then have to sleep a bit to make sure we give the tunnel,not
+fabric/tests/connection.py,1113,created by that callback to spin up; otherwise ~5% of the,not
+fabric/tests/connection.py,1114,"time we exit the contextmanager so fast, the tunnel's ""you're",not
+fabric/tests/connection.py,1115,"done!"" flag is set before it even gets a chance to select()",not
+fabric/tests/connection.py,1116,once.,not
+fabric/tests/connection.py,1118,And make sure we hooked up to the local socket OK,not
+fabric/tests/connection.py,1121,Expect that our socket got written to by the tunnel (due to the,not
+fabric/tests/connection.py,1122,above-setup select() and channel mocking). Need to do this after,not
+fabric/tests/connection.py,1123,tunnel shutdown or we risk thread ordering issues.,not
+fabric/tests/connection.py,1125,Ensure we closed down the mock socket,not
+fabric/tests/connection.py,1127,And that the transport canceled the port forward on the remote,not
+fabric/tests/connection.py,1128,end.,not
+fabric/tests/connection.py,1147,TODO: these require additional refactoring of _forward_remote to be,SATD
+fabric/tests/connection.py,1148,more like the decorators in _util,not
+fabric/tests/config.py,16,I.e. our global_defaults + Invoke's global_defaults,not
+fabric/tests/config.py,18,From invoke's global_defaults,not
+fabric/tests/config.py,20,From ours,not
+fabric/tests/config.py,30,NOTE: Config requires these to be present to instantiate,not
+fabric/tests/config.py,31,happily,not
+fabric/tests/config.py,36,"If our global_defaults didn't win, this would still",not
+fabric/tests/config.py,37,resolve to False.,not
+fabric/tests/config.py,51,This value defaults to False in Invoke proper.,not
+fabric/tests/config.py,56,NOTE: see also the integration-esque tests in tests/main.py; this,not
+fabric/tests/config.py,57,just tests the underlying data/attribute driving the behavior.,not
+fabric/tests/config.py,64,NOTE: actual _behavior_ of loaded SSH configs is tested in Connection's,not
+fabric/tests/config.py,65,tests; these tests just prove that the loading itself works & the data is,not
+fabric/tests/config.py,66,correctly available.,not
+fabric/tests/config.py,77,TODO: Currently no great public API that lets us figure out if,SATD
+fabric/tests/config.py,78,"one of these is 'empty' or not. So for now, expect an empty inner",not
+fabric/tests/config.py,79,"SSHConfig._config from an un-.parse()d such object. (AFAIK, such",not
+fabric/tests/config.py,80,"objects work fine re: .lookup, .get_hostnames etc.)",not
+fabric/tests/config.py,119,TODO: skip on windows,SATD
+fabric/tests/config.py,146,"Expect the user value (321), not the system one (123)",not
+fabric/tests/config.py,152,TODO: other expansion types? no real need for abspath...,SATD
+fabric/tests/config.py,159,TODO: other expansion types? no real need for abspath...,SATD
+fabric/tests/config.py,174,Implicit loading still doesn't happen...sanity check,not
+fabric/tests/config.py,176,Real test: the obj we passed in is present as usual,not
+fabric/tests/config.py,185,"Expect that loader method did still run (and, as usual, that",not
+fabric/tests/config.py,186,it did not load any other files),not
+fabric/tests/runners.py,11,On most systems this will explode if actually executed as a shell command;,not
+fabric/tests/runners.py,12,this lets us detect holes in our network mocking.,not
+fabric/tests/runners.py,15,"TODO: see TODO in tests/main.py above _run_fab(), this is the same thing.",SATD
+fabric/tests/runners.py,28,"remote mocking makes generic sanity checks like ""were",not
+fabric/tests/runners.py,29,"get_transport and open_session called"", but we also want to make",not
+fabric/tests/runners.py,30,sure that exec_command got run with our arg to run().,not
+fabric/tests/runners.py,64,Mild sanity test for other Result superclass bits,not
+fabric/tests/runners.py,67,Test the attr our own subclass adds,not
+fabric/tests/runners.py,72,I.e. Remote.stop() closes the channel automatically,not
+fabric/tests/runners.py,80,I.e. Remote.stop() is called within a try/finally.,not
+fabric/tests/runners.py,81,"Technically is just testing invoke.Runner, but meh.",not
+fabric/tests/runners.py,98,I.e. if obtaining self.channel doesn't even happen (i.e. if,not
+fabric/tests/runners.py,99,"Connection.create_session() dies), we need to account for that",not
+fabric/tests/runners.py,100,case...,not
+fabric/tests/runners.py,110,"When bug present, this will result in AttributeError because",not
+fabric/tests/runners.py,111,Remote has no 'channel',not
+fabric/tests/runners.py,119,TODO: how much of Invoke's tests re: the upper level run() (re:,SATD
+fabric/tests/runners.py,120,"things like returning Result, behavior of Result, etc) to",not
+fabric/tests/runners.py,121,duplicate here? Ideally none or very few core ones.,not
+fabric/tests/runners.py,123,"TODO: only test guts of our stuff, Invoke's Runner tests should",SATD
+fabric/tests/runners.py,124,handle all the normal shit like stdout/err print and capture.,not
+fabric/tests/runners.py,125,"Implies we want a way to import & run those tests ourselves, though,",not
+fabric/tests/runners.py,126,with the Runner instead being a Remote. Or do we just replicate the,not
+fabric/tests/runners.py,127,basics?,not
+fabric/tests/runners.py,129,TODO: all other run() tests from fab1...,SATD
+fabric/tests/group.py,45,Don't care about doing anything with our own args.,not
+fabric/tests/group.py,69,"Sanity check, e.g. in case none of them were actually run",not
+fabric/tests/group.py,124,Make sure .exception() doesn't yield truthy Mocks. Otherwise we,not
+fabric/tests/group.py,125,end up with 'exceptions' that cause errors due to all being the,not
+fabric/tests/group.py,126,same.,not
+fabric/tests/group.py,129,Testing that threads were used the way we expect is mediocre but,not
+fabric/tests/group.py,130,"I honestly can't think of another good way to assert ""threading",not
+fabric/tests/group.py,131,"was used & concurrency occurred""...",not
+fabric/tests/group.py,145,These ought to work as by default a Mock.return_value is a,not
+fabric/tests/group.py,146,singleton mock object,not
+fabric/tests/group.py,154,noqa,not
+fabric/tests/group.py,160,"Regular, explicit, mocks for Connections",not
+fabric/tests/group.py,162,Set up Queue with enough behavior to work / assert,not
+fabric/tests/group.py,164,Ending w/ a True will terminate a while-not-empty loop,not
+fabric/tests/group.py,168,Execute & inspect results,not
+fabric/tests/group.py,173,Make sure queue was used as expected within worker &,not
+fabric/tests/group.py,174,ThreadingGroup.run(),not
+fabric/tests/group.py,182,TODO: I feel like this is the first spot where a raw,SATD
+fabric/tests/group.py,183,"ThreadException might need tweaks, at least presentation-wise,",not
+fabric/tests/group.py,184,since we're no longer dealing with truly background threads (IO,not
+fabric/tests/group.py,185,"workers and tunnels), but ""middle-ground"" threads the user is",not
+fabric/tests/group.py,186,kind of expecting (and which they might expect to encounter,not
+fabric/tests/group.py,187,failures).,not
+fabric/tests/group.py,214,TODO: update if/when we implement ResultSet,SATD
+fabric/tests/transfer.py,8,noqa,not
+fabric/tests/transfer.py,15,TODO: pull in all edge/corner case tests from fabric v1,SATD
+fabric/tests/transfer.py,23,Transfer() -> explodes,not
+fabric/tests/transfer.py,30,"Transfer(Connection()) -> happy, exposes an attribute",not
+fabric/tests/transfer.py,37,Default mocked st_mode is file-like (first octal digit is 1),not
+fabric/tests/transfer.py,39,Set mode directory-ish (first octal digit is 4),not
+fabric/tests/transfer.py,73,TODO: timing info,SATD
+fabric/tests/transfer.py,74,TODO: bytes-transferred info,SATD
+fabric/tests/transfer.py,102,"Note: getfo, not get",not
+fabric/tests/transfer.py,123,Attributes obj reflecting a realistic 'extended' octal mode,not
+fabric/tests/transfer.py,126,Expect os.chmod to be called with the scrubbed/shifted,not
+fabric/tests/transfer.py,127,version of same.,not
+fabric/tests/transfer.py,147,"NOTE: default mock stat is file-ish, so path won't be munged",not
+fabric/tests/transfer.py,161,TODO: timing info,SATD
+fabric/tests/transfer.py,162,TODO: bytes-transferred info,SATD
+fabric/tests/transfer.py,225,"Note: putfo, not put",not
+fabric/tests/transfer.py,249,This is a realistic stat for 0o644,not
+fabric/tests/_support/runtime_fabfile.py,6,NOTE: assumes it's run with host='runtime' + ssh_configs/runtime.conf,not
+fabric/tests/_support/runtime_fabfile.py,7,TODO: SSHConfig should really learn to turn certain things into ints,SATD
+fabric/tests/_support/runtime_fabfile.py,8,automatically...,not
+fabric/tests/_support/fabfile.py,33,If user level config changes are preserved between parameterized per-host,not
+fabric/tests/_support/fabfile.py,34,"task calls, this would assert on subsequent invocations...",not
+fabric/tests/_support/fabfile.py,36,... because of this:,not

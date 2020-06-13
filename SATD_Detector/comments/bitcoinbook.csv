@@ -1,88 +1,88 @@
 file path,line #,comment,satd
-bitcoinbook/code/rpc_transaction.py,5,Alice's transaction ID,
-bitcoinbook/code/rpc_transaction.py,8,"First, retrieve the raw transaction in hex",
-bitcoinbook/code/rpc_transaction.py,11,Decode the transaction hex into a JSON object,
-bitcoinbook/code/rpc_transaction.py,14,Retrieve each of the outputs from the transaction,
-bitcoinbook/code/rpc_example.py,3,Create a connection to local Bitcoin Core node,
-bitcoinbook/code/rpc_example.py,6,"Run the getblockchaininfo command, store the resulting data in info",
-bitcoinbook/code/rpc_example.py,9,Retrieve the 'blocks' element from the info,
-bitcoinbook/code/get-utxo.py,1,get unspent outputs from blockchain API,
-bitcoinbook/code/get-utxo.py,6,example address,
-bitcoinbook/code/get-utxo.py,9,The API URL is https://blockchain.info/unspent?active=<address>,
-bitcoinbook/code/get-utxo.py,10,"It returns a JSON object with a list ""unspent_outputs"", containing UTXO, like this:",
-bitcoinbook/code/get-utxo.py,11,"{	""unspent_outputs"":[",
-bitcoinbook/code/get-utxo.py,12,{,
-bitcoinbook/code/get-utxo.py,13,"""tx_hash"":""ebadfaa92f1fd29e2fe296eda702c48bd11ffd52313e986e99ddad9084062167"",",
-bitcoinbook/code/get-utxo.py,14,"""tx_index"":51919767,",
-bitcoinbook/code/get-utxo.py,15,"""tx_output_n"": 1,",
-bitcoinbook/code/get-utxo.py,16,"""script"":""76a9148c7e252f8d64b0b6e313985915110fcfefcf4a2d88ac"",",
-bitcoinbook/code/get-utxo.py,17,"""value"": 8000000,",
-bitcoinbook/code/get-utxo.py,18,"""value_hex"": ""7a1200"",",
-bitcoinbook/code/get-utxo.py,19,"""confirmations"":28691",
-bitcoinbook/code/get-utxo.py,20,"},",
-bitcoinbook/code/get-utxo.py,21,...,
-bitcoinbook/code/get-utxo.py,22,]},
-bitcoinbook/code/get-utxo.py,30,Or try...,
-bitcoinbook/code/get-utxo.py,31,"print(""{tx_hash}:{tx_output_n} - {value} Satoshis"".format(**utxo))",
-bitcoinbook/code/hash_example.py,1,example of iterating a nonce in a hashing algorithm's input,
-bitcoinbook/code/hash_example.py,8,iterate nonce from 0 to 19,
-bitcoinbook/code/hash_example.py,11,add the nonce to the end of the text,
-bitcoinbook/code/hash_example.py,14,calculate the SHA-256 hash of the input (text+nonce),
-bitcoinbook/code/hash_example.py,17,show the input and hash result,
-bitcoinbook/code/max_money.py,1,Original block reward for miners was 50 BTC = 50 0000 0000 Satoshis,
-bitcoinbook/code/max_money.py,3,210000 is around every 4 years with a 10 minute block interval,
-bitcoinbook/code/pycoin_example.py,1,!/usr/bin/env python,
-bitcoinbook/code/key-to-address-ecc-example.py,4,Generate a random private key,
-bitcoinbook/code/key-to-address-ecc-example.py,14,Convert private key to WIF format,
-bitcoinbook/code/key-to-address-ecc-example.py,18,"Add suffix ""01"" to indicate a compressed private key",
-bitcoinbook/code/key-to-address-ecc-example.py,22,Generate a WIF format from the compressed private key (WIF-compressed),
-bitcoinbook/code/key-to-address-ecc-example.py,27,Multiply the EC generator point G with the private key to get a public key point,
-bitcoinbook/code/key-to-address-ecc-example.py,31,"Encode as hex, prefix 04",
-bitcoinbook/code/key-to-address-ecc-example.py,35,"Compress public key, adjust prefix depending on whether y is even or odd",
-bitcoinbook/code/key-to-address-ecc-example.py,41,Generate bitcoin address from public key,
-bitcoinbook/code/key-to-address-ecc-example.py,44,Generate compressed bitcoin address from compressed public key,
-bitcoinbook/code/proof-of-work-example.py,1,!/usr/bin/env python,
-bitcoinbook/code/proof-of-work-example.py,2,example of proof-of-work algorithm,
-bitcoinbook/code/proof-of-work-example.py,8,Python 2,
-bitcoinbook/code/proof-of-work-example.py,11,Python 3,
-bitcoinbook/code/proof-of-work-example.py,14,4 billion,
-bitcoinbook/code/proof-of-work-example.py,18,calculate the difficulty target,
-bitcoinbook/code/proof-of-work-example.py,24,"check if this is a valid result, below the target",
-bitcoinbook/code/proof-of-work-example.py,38,difficulty from 0 to 31 bits,
-bitcoinbook/code/proof-of-work-example.py,44,checkpoint the current time,
-bitcoinbook/code/proof-of-work-example.py,47,make a new block which includes the hash from the previous block,
-bitcoinbook/code/proof-of-work-example.py,48,we fake a block of transactions - just a string,
-bitcoinbook/code/proof-of-work-example.py,51,find a valid nonce for the new block,
-bitcoinbook/code/proof-of-work-example.py,54,checkpoint how long it took to find a result,
-bitcoinbook/code/proof-of-work-example.py,62,estimate the hashes per second,
-bitcoinbook/code/select-utxo.py,1,Selects outputs from a UTXO list using a greedy algorithm.,
-bitcoinbook/code/select-utxo.py,6,Python 2,
-bitcoinbook/code/select-utxo.py,8,Python 3,
-bitcoinbook/code/select-utxo.py,22,Select optimal outputs for a send from unspent outputs list.,
-bitcoinbook/code/select-utxo.py,23,Returns output list and remaining change to be sent to,
-bitcoinbook/code/select-utxo.py,24,a change address.,
-bitcoinbook/code/select-utxo.py,26,Fail if empty.,
-bitcoinbook/code/select-utxo.py,29,Partition into 2 lists.,
-bitcoinbook/code/select-utxo.py,34,Not-empty. Find the smallest greater.,
-bitcoinbook/code/select-utxo.py,38,Not found in greaters. Try several lessers instead.,
-bitcoinbook/code/select-utxo.py,39,Rearrange them from biggest to smallest. We want to use the least,
-bitcoinbook/code/select-utxo.py,40,amount of inputs as possible.,
-bitcoinbook/code/select-utxo.py,50,No results found.,
-bitcoinbook/code/bip-table.py,2,Convert mediawiki list of BIPs to asciidoc table for book appendix,
-bitcoinbook/code/bip-table.py,3,Gnarly hack of regex with no error checking - it worked once,
-bitcoinbook/code/ec-math.py,4,"secp256k1, http://www.oid-info.com/get/1.3.132.0.10",
-bitcoinbook/code/ec-math.py,23,Collect 256 bits of random data from the OS's cryptographically secure,
-bitcoinbook/code/ec-math.py,24,random number generator,
-bitcoinbook/code/ec-math.py,43,Generate a new private key.,
-bitcoinbook/code/ec-math.py,47,Get the public key point.,
-bitcoinbook/code/ec-math.py,53,"Given the point (x, y) we can create the object using:",
-bitcoinbook/code/rpc_block.py,5,The block height where Alice's transaction was recorded,
-bitcoinbook/code/rpc_block.py,8,Get the block hash of block with height 277316,
-bitcoinbook/code/rpc_block.py,11,Retrieve the block by its hash,
-bitcoinbook/code/rpc_block.py,14,Element tx contains the list of all transaction IDs in the block,
-bitcoinbook/code/rpc_block.py,19,Iterate through each transaction ID in the block,
-bitcoinbook/code/rpc_block.py,22,Retrieve the raw transaction by ID,
-bitcoinbook/code/rpc_block.py,24,Decode the transaction,
-bitcoinbook/code/rpc_block.py,26,Iterate through each output in the transaction,
-bitcoinbook/code/rpc_block.py,28,Add up the value of each output,
-bitcoinbook/code/rpc_block.py,31,Add the value of this transaction to the total,
+bitcoinbook/code/rpc_transaction.py,5,Alice's transaction ID,not
+bitcoinbook/code/rpc_transaction.py,8,"First, retrieve the raw transaction in hex",not
+bitcoinbook/code/rpc_transaction.py,11,Decode the transaction hex into a JSON object,not
+bitcoinbook/code/rpc_transaction.py,14,Retrieve each of the outputs from the transaction,not
+bitcoinbook/code/rpc_example.py,3,Create a connection to local Bitcoin Core node,not
+bitcoinbook/code/rpc_example.py,6,"Run the getblockchaininfo command, store the resulting data in info",not
+bitcoinbook/code/rpc_example.py,9,Retrieve the 'blocks' element from the info,not
+bitcoinbook/code/get-utxo.py,1,get unspent outputs from blockchain API,not
+bitcoinbook/code/get-utxo.py,6,example address,not
+bitcoinbook/code/get-utxo.py,9,The API URL is https://blockchain.info/unspent?active=<address>,not
+bitcoinbook/code/get-utxo.py,10,"It returns a JSON object with a list ""unspent_outputs"", containing UTXO, like this:",not
+bitcoinbook/code/get-utxo.py,11,"{	""unspent_outputs"":[",not
+bitcoinbook/code/get-utxo.py,12,{,not
+bitcoinbook/code/get-utxo.py,13,"""tx_hash"":""ebadfaa92f1fd29e2fe296eda702c48bd11ffd52313e986e99ddad9084062167"",",not
+bitcoinbook/code/get-utxo.py,14,"""tx_index"":51919767,",not
+bitcoinbook/code/get-utxo.py,15,"""tx_output_n"": 1,",not
+bitcoinbook/code/get-utxo.py,16,"""script"":""76a9148c7e252f8d64b0b6e313985915110fcfefcf4a2d88ac"",",not
+bitcoinbook/code/get-utxo.py,17,"""value"": 8000000,",not
+bitcoinbook/code/get-utxo.py,18,"""value_hex"": ""7a1200"",",not
+bitcoinbook/code/get-utxo.py,19,"""confirmations"":28691",not
+bitcoinbook/code/get-utxo.py,20,"},",not
+bitcoinbook/code/get-utxo.py,21,...,not
+bitcoinbook/code/get-utxo.py,22,]},not
+bitcoinbook/code/get-utxo.py,30,Or try...,not
+bitcoinbook/code/get-utxo.py,31,"print(""{tx_hash}:{tx_output_n} - {value} Satoshis"".format(**utxo))",not
+bitcoinbook/code/hash_example.py,1,example of iterating a nonce in a hashing algorithm's input,not
+bitcoinbook/code/hash_example.py,8,iterate nonce from 0 to 19,not
+bitcoinbook/code/hash_example.py,11,add the nonce to the end of the text,not
+bitcoinbook/code/hash_example.py,14,calculate the SHA-256 hash of the input (text+nonce),not
+bitcoinbook/code/hash_example.py,17,show the input and hash result,not
+bitcoinbook/code/max_money.py,1,Original block reward for miners was 50 BTC = 50 0000 0000 Satoshis,not
+bitcoinbook/code/max_money.py,3,210000 is around every 4 years with a 10 minute block interval,not
+bitcoinbook/code/pycoin_example.py,1,!/usr/bin/env python,not
+bitcoinbook/code/key-to-address-ecc-example.py,4,Generate a random private key,not
+bitcoinbook/code/key-to-address-ecc-example.py,14,Convert private key to WIF format,not
+bitcoinbook/code/key-to-address-ecc-example.py,18,"Add suffix ""01"" to indicate a compressed private key",not
+bitcoinbook/code/key-to-address-ecc-example.py,22,Generate a WIF format from the compressed private key (WIF-compressed),not
+bitcoinbook/code/key-to-address-ecc-example.py,27,Multiply the EC generator point G with the private key to get a public key point,not
+bitcoinbook/code/key-to-address-ecc-example.py,31,"Encode as hex, prefix 04",not
+bitcoinbook/code/key-to-address-ecc-example.py,35,"Compress public key, adjust prefix depending on whether y is even or odd",not
+bitcoinbook/code/key-to-address-ecc-example.py,41,Generate bitcoin address from public key,not
+bitcoinbook/code/key-to-address-ecc-example.py,44,Generate compressed bitcoin address from compressed public key,not
+bitcoinbook/code/proof-of-work-example.py,1,!/usr/bin/env python,not
+bitcoinbook/code/proof-of-work-example.py,2,example of proof-of-work algorithm,not
+bitcoinbook/code/proof-of-work-example.py,8,Python 2,not
+bitcoinbook/code/proof-of-work-example.py,11,Python 3,not
+bitcoinbook/code/proof-of-work-example.py,14,4 billion,not
+bitcoinbook/code/proof-of-work-example.py,18,calculate the difficulty target,not
+bitcoinbook/code/proof-of-work-example.py,24,"check if this is a valid result, below the target",not
+bitcoinbook/code/proof-of-work-example.py,38,difficulty from 0 to 31 bits,not
+bitcoinbook/code/proof-of-work-example.py,44,checkpoint the current time,not
+bitcoinbook/code/proof-of-work-example.py,47,make a new block which includes the hash from the previous block,not
+bitcoinbook/code/proof-of-work-example.py,48,we fake a block of transactions - just a string,not
+bitcoinbook/code/proof-of-work-example.py,51,find a valid nonce for the new block,not
+bitcoinbook/code/proof-of-work-example.py,54,checkpoint how long it took to find a result,not
+bitcoinbook/code/proof-of-work-example.py,62,estimate the hashes per second,not
+bitcoinbook/code/select-utxo.py,1,Selects outputs from a UTXO list using a greedy algorithm.,not
+bitcoinbook/code/select-utxo.py,6,Python 2,not
+bitcoinbook/code/select-utxo.py,8,Python 3,not
+bitcoinbook/code/select-utxo.py,22,Select optimal outputs for a send from unspent outputs list.,not
+bitcoinbook/code/select-utxo.py,23,Returns output list and remaining change to be sent to,not
+bitcoinbook/code/select-utxo.py,24,a change address.,not
+bitcoinbook/code/select-utxo.py,26,Fail if empty.,not
+bitcoinbook/code/select-utxo.py,29,Partition into 2 lists.,not
+bitcoinbook/code/select-utxo.py,34,Not-empty. Find the smallest greater.,not
+bitcoinbook/code/select-utxo.py,38,Not found in greaters. Try several lessers instead.,not
+bitcoinbook/code/select-utxo.py,39,Rearrange them from biggest to smallest. We want to use the least,not
+bitcoinbook/code/select-utxo.py,40,amount of inputs as possible.,not
+bitcoinbook/code/select-utxo.py,50,No results found.,not
+bitcoinbook/code/bip-table.py,2,Convert mediawiki list of BIPs to asciidoc table for book appendix,not
+bitcoinbook/code/bip-table.py,3,Gnarly hack of regex with no error checking - it worked once,SATD
+bitcoinbook/code/ec-math.py,4,"secp256k1, http://www.oid-info.com/get/1.3.132.0.10",not
+bitcoinbook/code/ec-math.py,23,Collect 256 bits of random data from the OS's cryptographically secure,not
+bitcoinbook/code/ec-math.py,24,random number generator,not
+bitcoinbook/code/ec-math.py,43,Generate a new private key.,not
+bitcoinbook/code/ec-math.py,47,Get the public key point.,not
+bitcoinbook/code/ec-math.py,53,"Given the point (x, y) we can create the object using:",not
+bitcoinbook/code/rpc_block.py,5,The block height where Alice's transaction was recorded,not
+bitcoinbook/code/rpc_block.py,8,Get the block hash of block with height 277316,not
+bitcoinbook/code/rpc_block.py,11,Retrieve the block by its hash,not
+bitcoinbook/code/rpc_block.py,14,Element tx contains the list of all transaction IDs in the block,not
+bitcoinbook/code/rpc_block.py,19,Iterate through each transaction ID in the block,not
+bitcoinbook/code/rpc_block.py,22,Retrieve the raw transaction by ID,not
+bitcoinbook/code/rpc_block.py,24,Decode the transaction,not
+bitcoinbook/code/rpc_block.py,26,Iterate through each output in the transaction,not
+bitcoinbook/code/rpc_block.py,28,Add up the value of each output,not
+bitcoinbook/code/rpc_block.py,31,Add the value of this transaction to the total,not
